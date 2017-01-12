@@ -1,0 +1,235 @@
+﻿`<%@ WebHandler Language="C#" Class="ExtGetData" %>
+
+using System;
+using System.Web;
+using Srvtools;
+using AjaxTools;
+using System.Data;
+using System.Text;
+using System.Collections.Generic;
+using System.Web.Script.Serialization;
+
+public class ExtGetData : IHttpHandler, System.Web.SessionState.IRequiresSessionState
+{
+    const string SQL_INSERT = "INSERT INTO [{0}] ({1}) VALUES ({2})";
+    const string SQL_UPDATE = "UPDATE [{0}] SET {1} WHERE {2}";
+    const string SQL_DELETE = "DELETE [{0}] WHERE {1}";
+
+
+    public void ProcessRequest(HttpContext context)
+    {
+        string module = context.Request["module"];
+        string cmd = context.Request["command"];
+        bool sevmod = Convert.ToBoolean(context.Request["sevmod"]);
+        string oper = context.Request["oper"];
+
+        bool allowPage = (!string.IsNullOrEmpty(context.Request["limit"]) && !string.IsNullOrEmpty(context.Request["start"]));
+
+        // 从Session中获取CacheDataSet
+        DataSet cacheData = context.Session[context.Request["cacheDataSet"]] as DataSet;
+        DataTable cacheTable = cacheData.Tables[cmd];
+        string where = context.Request["where"];
+        if (oper == "select")
+        {
+            string fields = context.Request["fields"];
+            string query = context.Request["query"]; //combobox内有输入值时会自动传入
+            string keyFilterField = context.Request["keyFilterField"]; //combobox
+
+            string json = "";
+            if (allowPage)
+            {
+                int pagesize = int.Parse(context.Request["limit"]);
+                int start = int.Parse(context.Request["start"]);
+                int packetCount = start / pagesize + 1;
+                
+                int totalRecordCount = CliUtils.GetRecordsCount(module, cmd, "", CliUtils.fCurrentProject);
+                int requiredRecordCount = pagesize * packetCount;
+
+                if ((requiredRecordCount < totalRecordCount && requiredRecordCount > cacheTable.Rows.Count) 
+                    || (requiredRecordCount >= totalRecordCount && totalRecordCount > cacheTable.Rows.Count))
+                {
+                    // 创建InfoDataSet
+                    InfoDataSet ds = new InfoDataSet();
+                    ds.AlwaysClose = false;
+                    ds.RemoteName = string.Format("{0}.{1}", module, cmd);
+                    ds.ServerModify = sevmod;
+                    ds.PacketRecords = pagesize * packetCount;
+                    ds.WhereStr = where;
+                    ds.Active = true;
+                    if (cacheData != null)
+                    {
+                        cacheData.Merge(ds.RealDataSet, true);
+                    }
+                }
+                json = string.Format("{{total:{0},data:{1}}}",
+                    CliUtils.GetRecordsCount(module, cmd, where, CliUtils.fCurrentProject),
+                    JsonSerializer.TableToJsonArray(GetPageTable(cacheTable, start, pagesize), fields.Split(',')));
+            }
+            else
+            {
+                if (Convert.ToBoolean(context.Request["isDetails"]))
+                {
+                    if (!string.IsNullOrEmpty(where))
+                    {
+                        DataRow[] rows = cacheTable.Select(where);
+                        json = string.Format("{{total:{0},data:{1}}}",
+                            rows.Length,
+                            JsonSerializer.RowsToJsonArray(rows, fields.Split(',')));
+                    }
+                }
+                else
+                {
+                    if (!string.IsNullOrEmpty(query) &&
+                        !string.IsNullOrEmpty(keyFilterField) &&
+                        cacheTable.Columns[keyFilterField].DataType == typeof(string))
+                    {
+                        DataRow[] rows = cacheTable.Select(string.Format("{0} like '{1}%'", keyFilterField, query));
+                        json = string.Format("{{total:{0},data:{1}}}",
+                            rows.Length,
+                            JsonSerializer.RowsToJsonArray(rows, fields.Split(',')));
+                    }
+                    else
+                    {
+                        json = string.Format("{{total:{0},data:{1}}}",
+                            cacheTable.Rows.Count,
+                            JsonSerializer.TableToJsonArray(cacheTable, fields.Split(',')));
+                    }
+                }
+            }
+            context.Response.Write(json);
+        }
+        else if (oper == "save")
+        {
+            string sEditTypes = context.Request["editTypes"];
+            string sChanges = context.Request["changes"];
+            if (!string.IsNullOrEmpty(sEditTypes))
+            {
+                // 创建InfoDataSet
+                InfoDataSet ds = new InfoDataSet();
+                ds.AlwaysClose = false;
+                ds.RemoteName = string.Format("{0}.{1}", module, cmd);
+                ds.ServerModify = sevmod;
+                ds.WhereStr = where;
+                if (allowPage)
+                {
+                    int pagesize = int.Parse(context.Request["limit"]);
+                    int start = int.Parse(context.Request["start"]);
+                    int packetCount = start / pagesize + 1;
+                    ds.PacketRecords = pagesize * packetCount;
+                    ds.Active = true;
+                }
+                else
+                {
+                    ds.PacketRecords = -1;
+                    ds.Active = true;
+                }
+                DataTable tab = ds.RealDataSet.Tables[cmd];
+                
+                JavaScriptSerializer serializer = new JavaScriptSerializer();
+                object[] editTypes = serializer.DeserializeObject(sEditTypes) as object[];
+                object[] records = serializer.DeserializeObject(sChanges) as object[];
+                if (editTypes.Length > 0)
+                {
+                    int j = 0;
+                    for (int i = 0; i < editTypes.Length; i++)
+                    {
+                        Dictionary<string, object> dicKey = editTypes[i] as Dictionary<string, object>;
+                        if (dicKey["editType"].ToString() == "delete")
+                        {
+                            string single = this.GenWhereString(tab, dicKey);
+                            DataRow[] cacheRows = cacheTable.Select(single);
+                            DataRow[] rows = tab.Select(single);
+                            if (rows.Length == 1)
+                            {
+                                cacheRows[0].Delete();
+                                rows[0].Delete();
+                            }
+                            j++;
+                        }
+                        else
+                        {
+                            Dictionary<string, object> dicRecord = records[i - j] as Dictionary<string, object>;
+                            if (dicKey["editType"].ToString() == "insert")
+                            {
+                                DataRow row = tab.NewRow();
+                                foreach (KeyValuePair<string, object> record in dicRecord)
+                                {
+                                    row[record.Key] = record.Value;
+                                }
+                                tab.Rows.Add(row);
+                            }
+                            else if (dicKey["editType"].ToString() == "edit")
+                            {
+                                string single = this.GenWhereString(tab, dicKey);
+                                DataRow[] rows = tab.Select(single);
+                                if (rows.Length == 1)
+                                {
+                                    foreach (KeyValuePair<string, object> record in dicRecord)
+                                    {
+                                        rows[0][record.Key] = record.Value;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    if (ds.RealDataSet.HasChanges())
+                    {
+                        DataSet changedDs = ds.RealDataSet.GetChanges();
+                        ds.ApplyUpdates();
+                        cacheData.Merge(changedDs);
+                        cacheData.AcceptChanges();
+                    }
+                }
+            }
+        }
+    }
+
+    DataTable GetPageTable(DataTable srcTable, int startIndex, int pagesize)
+    {
+        int rowCount = srcTable.Rows.Count;
+        DataTable tab = srcTable.Clone();
+        int maxIndex = Math.Min(startIndex + pagesize, rowCount);
+        for (int i = startIndex; i < maxIndex; i++)
+        {
+            tab.ImportRow(srcTable.Rows[i]);
+        }
+        return tab;
+    }
+
+    string GenWhereString(DataTable table, Dictionary<string, object> dicKey)
+    {
+        StringBuilder whereBuilder = new StringBuilder();
+        foreach (KeyValuePair<string, object> wherePair in dicKey)
+        {
+            if (wherePair.Key != "editType")
+            {
+                Type colType = table.Columns[wherePair.Key].DataType;
+                if (GloFix.IsNumeric(colType))
+                {
+                    whereBuilder.AppendFormat("{0}={1} AND ", wherePair.Key, wherePair.Value);
+                }
+                else if (colType == typeof(Boolean))
+                {
+                    whereBuilder.AppendFormat("{0}={1} AND ", wherePair.Key, wherePair.Value.ToString().ToLower());
+                }
+                else
+                {
+                    whereBuilder.AppendFormat("{0}='{1}' AND ", wherePair.Key, wherePair.Value);
+                }
+            }
+        }
+        if (whereBuilder.ToString().EndsWith(" AND "))
+        {
+            whereBuilder.Remove(whereBuilder.Length - 5, 5);
+        }
+        return whereBuilder.ToString();
+    }
+
+    public bool IsReusable
+    {
+        get
+        {
+            return false;
+        }
+    }
+}

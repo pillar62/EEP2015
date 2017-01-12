@@ -1,0 +1,25 @@
+﻿/*masked edit焦点离开时负数符的样式*/
+.MaskedEditBlurNegative
+{
+    color: #ff0000;
+}
+
+/*masked edit获取焦点时的样式*/
+.MaskedEditFocus
+{
+    background-color: #ffffcc;
+    color: #000000;
+}
+
+/*masked edit获取焦点时负数符的样式*/
+.MaskedEditFocusNegative
+{
+    background-color: #ffffcc;
+    color: #000000;
+}
+
+/*masked edit验证有误时的样式*/
+.MaskedEditError
+{
+    background-color: #ffcccc;
+}

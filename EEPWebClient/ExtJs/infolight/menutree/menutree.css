@@ -1,0 +1,20 @@
+﻿.x-tree-node-leaf .icon-none
+{
+	background-image:none;
+	width:0px;
+	height:0px;
+}
+
+.x-tree-node-expanded .icon-none
+{
+	background-image:none;
+	width:0px;
+	height:0px;
+}
+
+.x-tree-node-collapsed .icon-none
+{
+	background-image:none;
+	width:0px;
+	height:0px;
+}

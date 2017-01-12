@@ -1,0 +1,486 @@
+/*內頁*/
+.ui-body-e,
+.ui-overlay-e {
+    border: 1px solid #f7c942 /*{e-body-border}*/;
+    color: #111 /*{e-body-color}*/;
+    text-shadow: 0 /*{e-body-shadow-x}*/ 1px /*{e-body-shadow-y}*/ 0 /*{e-body-shadow-radius}*/ rgba(255,255,255,0.5) /*{e-body-shadow-color}*/;
+}
+
+.ui-body-b,
+.ui-overlay-b {
+    border: 1px solid #22537f /*{b-body-border}*/;
+    color: #0d2a44 /*{b-body-color}*/;
+    text-shadow: 1px /*{b-body-shadow-x}*/ 1px /*{b-body-shadow-y}*/ 1px /*{b-body-shadow-radius}*/ rgba(255,255,255,0.6) /*{b-body-shadow-color}*/;
+    font-weight: normal;
+}
+/*header 和 footer*/
+.ui-bar-b {
+    border: 1px solid #296d9d /*{b-bar-border}*/;
+    background: #5e87b0 /*{b-bar-background-color}*/;
+    color: #fff /*{b-bar-color}*/;
+    font-weight: bold;
+    text-shadow: 0 /*{b-bar-shadow-x}*/ 1px /*{b-bar-shadow-y}*/ 0 /*{b-bar-shadow-radius}*/ #3e6790 /*{b-bar-shadow-color}*/;
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #4a94c6 /*{b-bar-background-start}*/ ), to( #113e73 /*{b-bar-background-end}*/ )); /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient( #4a94c6 /*{b-bar-background-start}*/, #113e73 /*{b-bar-background-end}*/ ); /* Chrome 10+, Saf5.1+ */
+    background-image: -moz-linear-gradient( #4a94c6 /*{b-bar-background-start}*/, #113e73 /*{b-bar-background-end}*/ ); /* FF3.6 */
+    background-image: -ms-linear-gradient( #4a94c6 /*{b-bar-background-start}*/, #113e73 /*{b-bar-background-end}*/ ); /* IE10 */
+    background-image: -o-linear-gradient( #4a94c6 /*{b-bar-background-start}*/, #113e73 /*{b-bar-background-end}*/ ); /* Opera 11.10+ */
+    background-image: linear-gradient( #4a94c6 /*{b-bar-background-start}*/, #113e73 /*{b-bar-background-end}*/ );
+    -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.6);
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.6);
+}
+/*首頁背景*/
+.indexbg {
+    background-image: url(images/indexbg.jpg) !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*首頁內文*/
+.ui-content {
+    border-width: 0;
+    overflow: visible;
+    overflow-x: auto;
+    padding: 15px;
+    background: none;
+}
+
+.ui-popup {
+    background-color: #F3F3F3;
+}
+
+/*輸入框*/
+.ui-shadow-inset {
+    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,.8);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,.8);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.8);
+    background: rgba(255,255,255,0.8);
+}
+/*下拉式選單*/
+.ui-btn-corner-all {
+    -webkit-border-radius: 0.6em /*{global-radii-buttons}*/;
+    border-radius: 0.6em /*{global-radii-buttons}*/;
+}
+
+.ui-btn-up-c {
+    border: 1px solid #a2a2a2 /*{c-bup-border}*/;
+    background: #eee /*{c-bup-background-color}*/;
+    font-weight: bold;
+    color: #222 /*{c-bup-color}*/;
+    text-shadow: 0 /*{c-bup-shadow-x}*/ 1px /*{c-bup-shadow-y}*/ 0 /*{c-bup-shadow-radius}*/ #fff /*{c-bup-shadow-color}*/;
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #fcfcfc /*{c-bup-background-start}*/ ), to( #d3d3d3 /*{c-bup-background-end}*/ )); /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient( #fcfcfc /*{c-bup-background-start}*/, #d3d3d3 /*{c-bup-background-end}*/ ); /* Chrome 10+, Saf5.1+ */
+    background-image: -moz-linear-gradient( #fcfcfc /*{c-bup-background-start}*/, #d3d3d3 /*{c-bup-background-end}*/ ); /* FF3.6 */
+    background-image: -ms-linear-gradient( #fcfcfc /*{c-bup-background-start}*/, #d3d3d3 /*{c-bup-background-end}*/ ); /* IE10 */
+    background-image: -o-linear-gradient( #fcfcfc /*{c-bup-background-start}*/, #d3d3d3 /*{c-bup-background-end}*/ ); /* Opera 11.10+ */
+    background-image: linear-gradient( #fcfcfc /*{c-bup-background-start}*/, #d3d3d3 /*{c-bup-background-end}*/ );
+}
+/*長型按鈕*/
+.ui-btn-up-b {
+    border: 1px solid #044062 /*{b-bup-border}*/;
+    background: #396b9e /*{b-bup-background-color}*/;
+    font-weight: bold;
+    color: #fff /*{b-bup-color}*/;
+    text-shadow: 0 /*{b-bup-shadow-x}*/ 1px /*{b-bup-shadow-y}*/ 0 /*{b-bup-shadow-radius}*/ #194b7e /*{b-bup-shadow-color}*/;
+    background: rgb(82,113,158); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(82,113,158,1) 0%, rgba(1,30,52,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(82,113,158,1)), color-stop(100%,rgba(1,30,52,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(82,113,158,1) 0%,rgba(1,30,52,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(82,113,158,1) 0%,rgba(1,30,52,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(82,113,158,1) 0%,rgba(1,30,52,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(82,113,158,1) 0%,rgba(1,30,52,1) 100%); /* W3C */
+    -pie-background: linear-gradient(#52719e, #011e34);
+    behavior: url(js/PIE.htc);
+}
+
+.ui-btn-inner {
+    border-top: none;
+    border-color: rgba(255,255,255,.3);
+}
+
+.ui-btn-hover-b, .ui-btn-up-b:hover {
+    border: 1px solid #00415e /*{b-bhover-border}*/;
+    background: #4b88b6 /*{b-bhover-background-color}*/;
+    font-weight: bold;
+    color: #fff /*{b-bhover-color}*/;
+    text-shadow: 0 /*{b-bhover-shadow-x}*/ 1px /*{b-bhover-shadow-y}*/ 0 /*{b-bhover-shadow-radius}*/ #194b7e /*{b-bhover-shadow-color}*/;
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #4a94c6 /*{b-bar-background-start}*/ ), to( #113e73 /*{b-bar-background-end}*/ )); /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient( #4a94c6 /*{b-bar-background-start}*/, #113e73 /*{b-bar-background-end}*/ ); /* Chrome 10+, Saf5.1+ */
+    background-image: -moz-linear-gradient( #4a94c6 /*{b-bar-background-start}*/, #113e73 /*{b-bar-background-end}*/ ); /* FF3.6 */
+    background-image: -ms-linear-gradient( #4a94c6 /*{b-bar-background-start}*/, #113e73 /*{b-bar-background-end}*/ ); /* IE10 */
+    background-image: -o-linear-gradient( #4a94c6 /*{b-bar-background-start}*/, #113e73 /*{b-bar-background-end}*/ ); /* Opera 11.10+ */
+    background-image: linear-gradient( #4a94c6 /*{b-bar-background-start}*/, #113e73 /*{b-bar-background-end}*/ );
+    -pie-background: linear-gradient(#4a94c6, #113e73);
+    behavior: url(js/PIE.htc);
+}
+
+    .ui-btn-hover-b:visited,
+    .ui-btn-hover-b:hover,
+    .ui-btn-hover-b a.ui-link-inherit {
+        color: #fff /*{b-bhover-color}*/;
+    }
+
+.ui-btn-down-b, .ui-btn-up-b:active {
+    border: 1px solid #225377 /*{b-bdown-border}*/;
+    background: #4e89c5 /*{b-bdown-background-color}*/;
+    font-weight: bold;
+    color: #fff /*{b-bdown-color}*/;
+    text-shadow: 0 /*{b-bdown-shadow-x}*/ 1px /*{b-bdown-shadow-y}*/ 0 /*{b-bdown-shadow-radius}*/ #194b7e /*{b-bdown-shadow-color}*/;
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #113e73 /*{b-bar-background-start}*/ ), to( #4a94c6 /*{b-bar-background-end}*/ )); /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient( #113e73 /*{b-bar-background-start}*/, #4a94c6 /*{b-bar-background-end}*/ ); /* Chrome 10+, Saf5.1+ */
+    background-image: -moz-linear-gradient( #113e73 /*{b-bar-background-start}*/, #4a94c6 /*{b-bar-background-end}*/ ); /* FF3.6 */
+    background-image: -ms-linear-gradient( #113e73 /*{b-bar-background-start}*/, #4a94c6 /*{b-bar-background-end}*/ ); /* IE10 */
+    background-image: -o-linear-gradient( #113e73 /*{b-bar-background-start}*/, #4a94c6 /*{b-bar-background-end}*/ ); /* Opera 11.10+ */
+    background-image: linear-gradient( #113e73 /*{b-bar-background-start}*/, #4a94c6 /*{b-bar-background-end}*/ );
+    -pie-background: linear-gradient(#113e73, #4a94c6);
+    behavior: url(js/PIE.htc);
+}
+/*下拉選單旁的icon*/
+.ui-br {
+    border-color: #06273f;
+    border-style: solid;
+}
+
+.ui-select .ui-mini.ui-btn-icon-right .ui-icon {
+    right: 7px;
+    background: none;
+}
+/*內頁背景*/
+@media screen and (orientation: landscape) {
+    .ui-mobile .ui-page {
+        min-height: 300px;
+        background-image: url(images/bg.jpg);
+    }
+}
+
+@media screen and (orientation: portrait) {
+    .ui-mobile .ui-page {
+        min-height: 420px;
+        background-image: url(images/bg.jpg);
+    }
+}
+/*logo header*/
+.logo {
+    width: 100%;
+    height: 4em;
+    background: -moz-linear-gradient(top, rgba(30,87,153,0) 0%, rgba(30,87,153,0.8) 15%, rgba(30,87,153,1) 19%, rgba(30,87,153,1) 20%, rgba(41,137,216,1) 50%, rgba(30,87,153,1) 80%, rgba(30,87,153,1) 81%, rgba(30,87,153,0.8) 85%, rgba(30,87,153,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,0)), color-stop(15%,rgba(30,87,153,0.8)), color-stop(19%,rgba(30,87,153,1)), color-stop(20%,rgba(30,87,153,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(80%,rgba(30,87,153,1)), color-stop(81%,rgba(30,87,153,1)), color-stop(85%,rgba(30,87,153,0.8)), color-stop(100%,rgba(30,87,153,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(30,87,153,0) 0%,rgba(30,87,153,0.8) 15%,rgba(30,87,153,1) 19%,rgba(30,87,153,1) 20%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 80%,rgba(30,87,153,1) 81%,rgba(30,87,153,0.8) 85%,rgba(30,87,153,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(30,87,153,0) 0%,rgba(30,87,153,0.8) 15%,rgba(30,87,153,1) 19%,rgba(30,87,153,1) 20%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 80%,rgba(30,87,153,1) 81%,rgba(30,87,153,0.8) 85%,rgba(30,87,153,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(30,87,153,0) 0%,rgba(30,87,153,0.8) 15%,rgba(30,87,153,1) 19%,rgba(30,87,153,1) 20%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 80%,rgba(30,87,153,1) 81%,rgba(30,87,153,0.8) 85%,rgba(30,87,153,0) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(30,87,153,0.8) 15%,rgba(30,87,153,1) 19%,rgba(30,87,153,1) 20%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 80%,rgba(30,87,153,1) 81%,rgba(30,87,153,0.8) 85%,rgba(30,87,153,0) 100%); /* W3C */
+}
+
+    .logo img {
+        width: 160px;
+        height: 53px;
+        position: absolute;
+        left: 50%;
+        margin-left: -80px;
+        margin-top: .3em;
+    }
+/*搜尋框*/
+.ui-bar-c {
+    border: 1px solid #333 /*{c-bar-border}*/;
+    background: #eee /*{c-bar-background-color}*/;
+    color: #fff /*{c-bar-color}*/;
+    font-weight: bold;
+    text-shadow: 0 /*{c-bar-shadow-x}*/ 1px /*{c-bar-shadow-y}*/ 0 /*{c-bar-shadow-radius}*/ #111 /*{c-bar-shadow-color}*/;
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #4a94c6 /*{b-bar-background-start}*/ ), to( #113e73 /*{b-bar-background-end}*/ )); /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient( #4a94c6 /*{b-bar-background-start}*/, #113e73 /*{b-bar-background-end}*/ ); /* Chrome 10+, Saf5.1+ */
+    background-image: -moz-linear-gradient( #4a94c6 /*{b-bar-background-start}*/, #113e73 /*{b-bar-background-end}*/ ); /* FF3.6 */
+    background-image: -ms-linear-gradient( #4a94c6 /*{b-bar-background-start}*/, #113e73 /*{b-bar-background-end}*/ ); /* IE10 */
+    background-image: -o-linear-gradient( #4a94c6 /*{b-bar-background-start}*/, #113e73 /*{b-bar-background-end}*/ ); /* Opera 11.10+ */
+    background-image: linear-gradient( #4a94c6 /*{b-bar-background-start}*/, #113e73 /*{b-bar-background-end}*/ );
+}
+/*搜尋列表*/
+.ui-li, .ui-li.ui-field-contain {
+    display: block;
+    margin: 0;
+    position: relative;
+    overflow: visible;
+    text-align: left;
+    border-width: 0;
+    border-top-width: 1px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+    .ui-li.ui-btn, .ui-li.ui-field-contain, .ui-li-divider, .ui-li-static {
+        margin: 0;
+    }
+
+        .ui-li .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li {
+            padding: .2em .2em;
+            display: block;
+        }
+
+.ui-btn-inner {
+    font-size: 14px;
+    padding: .6em 20px;
+    min-width: .75em;
+    display: block;
+    position: relative;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    zoom: 1;
+}
+
+.ui-listview > .ui-li.ui-first-child {
+    -webkit-border-top-left-radius: 10px;
+    border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.ui-listview > .ui-li.ui-last-child {
+    -webkit-border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.ui-btn-up-d {
+    background: #fff /*{d-bup-background-color}*/;
+    font-weight: bold;
+    color: #333 /*{d-bup-color}*/;
+    text-shadow: 0 /*{d-bup-shadow-x}*/ 0px /*{d-bup-shadow-y}*/ 0 /*{d-bup-shadow-radius}*/ #fff /*{d-bup-shadow-color}*/;
+}
+
+.ui-btn-hover-d {
+    background: #56a8e3 /*{d-bhover-background-color}*/;
+    font-weight: bold;
+    color: #333 /*{d-bhover-color}*/;
+    cursor: pointer;
+    text-shadow: 0 /*{d-bhover-shadow-x}*/ 1px /*{d-bhover-shadow-y}*/ 0 /*{d-bhover-shadow-radius}*/ #fff /*{d-bhover-shadow-color}*/;
+    background-image: none;
+}
+
+.ui-btn-up-d,
+.ui-btn-hover-d,
+.ui-btn-down-d {
+    font-family: Helvetica, Arial, sans-serif /*{global-font-family}*/;
+    text-decoration: none;
+}
+/*icon*/
+.ui-icon,
+.ui-icon-searchfield:after {
+    background: none;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 9px;
+    border-radius: 9px;
+    width: 24px;
+    height: 20px;
+}
+
+.ui-icon-shadow {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.ui-btn-icon-notext .ui-btn-inner .ui-icon {
+    margin-left: auto;
+    margin-top: 1.4px;
+    height: 20px;
+}
+
+.ui-btn-up-e {
+    border: 1px solid #044062 /*{b-bup-border}*/;
+    background: #52719e /*{b-bup-background-color}*/;
+    font-weight: bold;
+    color: #fff /*{b-bup-color}*/;
+    text-shadow: 0 /*{b-bup-shadow-x}*/ 1px /*{b-bup-shadow-y}*/ 0 /*{b-bup-shadow-radius}*/ #194b7e /*{b-bup-shadow-color}*/;
+    background-image: -webkit-gradient(linear, left top, left bottom, from( #52719e /*{e-bhover-background-start}*/ ), to( #011e34 /*{e-bhover-background-end}*/ )); /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient( #52719e /*{e-bhover-background-start}*/, #011e34 /*{e-bhover-background-end}*/ ); /* Chrome 10+, Saf5.1+ */
+    background-image: -moz-linear-gradient( #52719e /*{e-bhover-background-start}*/, #011e34 /*{e-bhover-background-end}*/ ); /* FF3.6 */
+    background-image: -ms-linear-gradient( #52719e /*{e-bhover-background-start}*/, #011e34 /*{e-bhover-background-end}*/ ); /* IE10 */
+    background-image: -o-linear-gradient( #52719e /*{e-bhover-background-start}*/, #011e34 /*{e-bhover-background-end}*/ ); /* Opera 11.10+ */
+    background-image: linear-gradient( #52719e /*{e-bhover-background-start}*/, #011e34 /*{e-bhover-background-end}*/ );
+    -pie-background: linear-gradient(#52719e, #011e34);
+    behavior: url(js/PIE.htc);
+}
+
+    .ui-btn-hover-e, .ui-btn-up-e:hover {
+        border: 1px solid #113e73 /*{e-bhover-border}*/;
+        background: #4a94c6 /*{e-bhover-background-color}*/;
+        font-weight: bold;
+        color: #111 /*{e-bhover-color}*/;
+        text-shadow: 0 /*{e-bhover-shadow-x}*/ 1px /*{e-bhover-shadow-y}*/ 0 /*{e-bhover-shadow-radius}*/ #fff /*{e-bhover-shadow-color}*/;
+        background-image: -webkit-gradient(linear, left top, left bottom, from( #4a94c6 /*{b-bar-background-start}*/ ), to( #113e73 /*{b-bar-background-end}*/ )); /* Saf4+, Chrome */
+        background-image: -webkit-linear-gradient( #4a94c6 /*{b-bar-background-start}*/, #113e73 /*{b-bar-background-end}*/ ); /* Chrome 10+, Saf5.1+ */
+        background-image: -moz-linear-gradient( #4a94c6 /*{b-bar-background-start}*/, #113e73 /*{b-bar-background-end}*/ ); /* FF3.6 */
+        background-image: -ms-linear-gradient( #4a94c6 /*{b-bar-background-start}*/, #113e73 /*{b-bar-background-end}*/ ); /* IE10 */
+        background-image: -o-linear-gradient( #4a94c6 /*{b-bar-background-start}*/, #113e73 /*{b-bar-background-end}*/ ); /* Opera 11.10+ */
+        background-image: linear-gradient( #4a94c6 /*{b-bar-background-start}*/, #113e73 /*{b-bar-background-end}*/ );
+        -pie-background: linear-gradient(#4a94c6, #113e73);
+        behavior: url(js/PIE.htc);
+    }
+
+    .ui-btn-down-e, .ui-btn-up-e:active {
+        border: 1px solid #4a94c6 /*{e-bdown-border}*/;
+        background: #113e73 /*{e-bdown-background-color}*/;
+        font-weight: bold;
+        color: #111 /*{e-bdown-color}*/;
+        text-shadow: 0 /*{e-bdown-shadow-x}*/ 1px /*{e-bdown-shadow-y}*/ 0 /*{e-bdown-shadow-radius}*/ #fff /*{e-bdown-shadow-color}*/;
+        background-image: -webkit-gradient(linear, left top, left bottom, from( #113e73 /*{b-bar-background-start}*/ ), to( #4a94c6 /*{b-bar-background-end}*/ )); /* Saf4+, Chrome */
+        background-image: -webkit-linear-gradient( #113e73 /*{b-bar-background-start}*/, #4a94c6 /*{b-bar-background-end}*/ ); /* Chrome 10+, Saf5.1+ */
+        background-image: -moz-linear-gradient( #113e73 /*{b-bar-background-start}*/, #4a94c6 /*{b-bar-background-end}*/ ); /* FF3.6 */
+        background-image: -ms-linear-gradient( #113e73 /*{b-bar-background-start}*/, #4a94c6 /*{b-bar-background-end}*/ ); /* IE10 */
+        background-image: -o-linear-gradient( #113e73 /*{b-bar-background-start}*/, #4a94c6 /*{b-bar-background-end}*/ ); /* Opera 11.10+ */
+        background-image: linear-gradient( #113e73 /*{b-bar-background-start}*/, #4a94c6 /*{b-bar-background-end}*/ );
+        -pie-background: linear-gradient(#113e73, #4a94c6);
+        behavior: url(js/PIE.htc);
+    }
+
+.ui-icon,
+.ui-icon-searchfield:after {
+    background-image: url(images/icons-18-white.png) /*{global-icon-set}*/;
+    background-repeat: no-repeat;
+    -webkit-border-radius: 9px;
+    border-radius: 9px;
+}
+/*重整icon*/
+.ui-icon-refresh {
+    background-image: url(images/refresh.png);
+    background-position: -0.7px;
+}
+/*登出icon*/
+.ui-icon-back {
+    background-image: url(images/logout.png);
+}
+/*搜尋框icon*/
+.ui-icon-search,
+.ui-icon-searchfield:after {
+    background: url(images/icons-18-black.png);
+    background-position: -607px -1px;
+}
+/*回首頁icon*/
+.ui-icon-home {
+    background-image: url(images/home.png);
+}
+/*新增icon*/
+.ui-icon-plus {
+    background-position: 3px 0px;
+}
+/*'向右icon*/
+.ui-icon-arrow-r {
+    background-position: -105px 0px;
+}
+/*向左icon*/
+.ui-icon-arrow-l {
+    background-position: -141px 0px;
+}
+/*搜尋icon*/
+.ui-btn-inner .ui-icon-search,
+.ui-btn-inner .ui-icon-searchfield:after {
+    background: url(images/icons-18-white.png);
+    background-position: -608px -0.5px;
+}
+/*確定icon*/
+.ui-icon-check {
+    background-position: -249px 0px;
+}
+/*編輯icon*/
+.ui-icon-edit {
+    background-image: url(images/edit.png);
+    background-repeat: no-repeat;
+    background-position: 3px -1px;
+}
+/*刪除icon*/
+.ui-icon-delete {
+    background-position: -69.5px 0px;
+}
+
+.ui-icon-grid {
+    background-position: -429px -1px;
+}
+
+.ui-icon-gear {
+	background-position: 	-285px -1px;
+}
+
+.ui-icon-star {
+	background-position: 	-464px -1px;
+}
+.ui-icon-alert {
+	background-position: 	-500px -1px;
+}
+
+.ui-icon-minus {
+	background-position: 	-34px -1px;
+}
+
+.ui-icon-info {
+	background-position: 	-536px -1px;
+}
+
+.ui-icon-checkbox-on {
+    background-position: -644px 0px;
+}
+
+.ui-icon-checkbox-off {
+    background-position: -680px 0px;
+}
+
+.ui-icon-radio-on {
+    background-position: -715px 50%;
+}
+
+.ui-icon-radio-off {
+    background-position: -751px 50%;
+}
+
+/*表格title*/
+.table-stripe thead th,
+.table-stripe tbody tr:last-child {
+    border-bottom: 1px solid #d6d6d6; /* non-RGBA fallback  */
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    background: rgb(109,179,242); /* Old browsers */
+    background: rgb(222,239,255); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(222,239,255,1) 0%, rgba(152,190,222,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(222,239,255,1)), color-stop(100%,rgba(152,190,222,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(222,239,255,1) 0%,rgba(152,190,222,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(222,239,255,1) 0%,rgba(152,190,222,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(222,239,255,1) 0%,rgba(152,190,222,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(222,239,255,1) 0%,rgba(152,190,222,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#deefff', endColorstr='#98bede',GradientType=0 ); /* IE6-9 */
+}
+
+@media only all {
+    /* Hide the table headers */
+    .ui-table-reflow thead td,
+    .ui-table-reflow thead th {
+        display: none;
+        text-align: center;
+    }
+}
+/*表格列表*/
+.table-stripe tbody tr td,
+.table-stripe tbody tr th {
+    background-color: #e2e2e2;
+}
+
+.table-stripe tbody tr:nth-child(odd) td,
+.table-stripe tbody tr:nth-child(odd) th {
+    background-color: #cdcdcd;
+}
+
+.table-stripe tbody tr td:first-child {
+    text-align: center;
+}
+
+
+.ui-listview-filter .ui-input-search input.ui-input-text {
+    font-size: 12px;
+}
+
+.ui-li-divider {
+    font-size: 14px;
+}
+
+.ui-li .ui-btn-text {
+    font-size: 16px;
+}

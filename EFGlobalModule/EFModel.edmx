@@ -1,0 +1,1816 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EFModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="EFModelStoreContainer">
+          <EntitySet Name="COLDEF" EntityType="EFModel.Store.COLDEF" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GROUPMENUCONTROL" EntityType="EFModel.Store.GROUPMENUCONTROL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GROUPMENUS" EntityType="EFModel.Store.GROUPMENUS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="GROUPS" EntityType="EFModel.Store.GROUPS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MENUITEMTYPE" EntityType="EFModel.Store.MENUITEMTYPE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MENUTABLE" EntityType="EFModel.Store.MENUTABLE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MENUTABLECONTROL" EntityType="EFModel.Store.MENUTABLECONTROL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_LANGUAGE" EntityType="EFModel.Store.SYS_LANGUAGE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_ORGKIND" EntityType="EFModel.Store.SYS_ORGKIND" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_PERSONAL" EntityType="EFModel.Store.SYS_PERSONAL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_REFVAL" EntityType="EFModel.Store.SYS_REFVAL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_REPORT" EntityType="EFModel.Store.SYS_REPORT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_ROLES_AGENT" EntityType="EFModel.Store.SYS_ROLES_AGENT" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_SDALIAS" EntityType="EFModel.Store.SYS_SDALIAS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_SDGROUPS" EntityType="EFModel.Store.SYS_SDGROUPS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_SDQUEUE" EntityType="EFModel.Store.SYS_SDQUEUE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_SDQUEUEPAGE" EntityType="EFModel.Store.SYS_SDQUEUEPAGE" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_SDSOLUTIONS" EntityType="EFModel.Store.SYS_SDSOLUTIONS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_SDUSERS" EntityType="EFModel.Store.SYS_SDUSERS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_SDUSERS_LOG" EntityType="EFModel.Store.SYS_SDUSERS_LOG" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_TODOHIS" EntityType="EFModel.Store.SYS_TODOHIS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_TODOLIST" EntityType="EFModel.Store.SYS_TODOLIST" store:Type="Tables" store:Schema="dbo" store:Name="SYS_TODOLIST">
+            <DefiningQuery>SELECT 
+      [SYS_TODOLIST].[LISTID] AS [LISTID], 
+      [SYS_TODOLIST].[FLOW_ID] AS [FLOW_ID], 
+      [SYS_TODOLIST].[FLOW_DESC] AS [FLOW_DESC], 
+      [SYS_TODOLIST].[APPLICANT] AS [APPLICANT], 
+      [SYS_TODOLIST].[S_USER_ID] AS [S_USER_ID], 
+      [SYS_TODOLIST].[S_STEP_ID] AS [S_STEP_ID], 
+      [SYS_TODOLIST].[S_STEP_DESC] AS [S_STEP_DESC], 
+      [SYS_TODOLIST].[D_STEP_ID] AS [D_STEP_ID], 
+      [SYS_TODOLIST].[D_STEP_DESC] AS [D_STEP_DESC], 
+      [SYS_TODOLIST].[EXP_TIME] AS [EXP_TIME], 
+      [SYS_TODOLIST].[URGENT_TIME] AS [URGENT_TIME], 
+      [SYS_TODOLIST].[TIME_UNIT] AS [TIME_UNIT], 
+      [SYS_TODOLIST].[USERNAME] AS [USERNAME], 
+      [SYS_TODOLIST].[FORM_NAME] AS [FORM_NAME], 
+      [SYS_TODOLIST].[NAVIGATOR_MODE] AS [NAVIGATOR_MODE], 
+      [SYS_TODOLIST].[FLNAVIGATOR_MODE] AS [FLNAVIGATOR_MODE], 
+      [SYS_TODOLIST].[PARAMETERS] AS [PARAMETERS], 
+      [SYS_TODOLIST].[SENDTO_KIND] AS [SENDTO_KIND], 
+      [SYS_TODOLIST].[SENDTO_ID] AS [SENDTO_ID], 
+      [SYS_TODOLIST].[FLOWIMPORTANT] AS [FLOWIMPORTANT], 
+      [SYS_TODOLIST].[FLOWURGENT] AS [FLOWURGENT], 
+      [SYS_TODOLIST].[STATUS] AS [STATUS], 
+      [SYS_TODOLIST].[FORM_TABLE] AS [FORM_TABLE], 
+      [SYS_TODOLIST].[FORM_KEYS] AS [FORM_KEYS], 
+      [SYS_TODOLIST].[FORM_PRESENTATION] AS [FORM_PRESENTATION], 
+      [SYS_TODOLIST].[FORM_PRESENT_CT] AS [FORM_PRESENT_CT], 
+      [SYS_TODOLIST].[REMARK] AS [REMARK], 
+      [SYS_TODOLIST].[PROVIDER_NAME] AS [PROVIDER_NAME], 
+      [SYS_TODOLIST].[VERSION] AS [VERSION], 
+      [SYS_TODOLIST].[EMAIL_ADD] AS [EMAIL_ADD], 
+      [SYS_TODOLIST].[EMAIL_STATUS] AS [EMAIL_STATUS], 
+      [SYS_TODOLIST].[VDSNAME] AS [VDSNAME], 
+      [SYS_TODOLIST].[SENDBACKSTEP] AS [SENDBACKSTEP], 
+      [SYS_TODOLIST].[LEVEL_NO] AS [LEVEL_NO], 
+      [SYS_TODOLIST].[WEBFORM_NAME] AS [WEBFORM_NAME], 
+      [SYS_TODOLIST].[UPDATE_DATE] AS [UPDATE_DATE], 
+      [SYS_TODOLIST].[UPDATE_TIME] AS [UPDATE_TIME], 
+      [SYS_TODOLIST].[FLOWPATH] AS [FLOWPATH], 
+      [SYS_TODOLIST].[PLUSAPPROVE] AS [PLUSAPPROVE], 
+      [SYS_TODOLIST].[PLUSROLES] AS [PLUSROLES], 
+      [SYS_TODOLIST].[MULTISTEPRETURN] AS [MULTISTEPRETURN], 
+      [SYS_TODOLIST].[SENDTO_NAME] AS [SENDTO_NAME], 
+      [SYS_TODOLIST].[ATTACHMENTS] AS [ATTACHMENTS], 
+      [SYS_TODOLIST].[CREATE_TIME] AS [CREATE_TIME]
+      FROM [dbo].[SYS_TODOLIST] AS [SYS_TODOLIST]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="SYS_WEBPAGES" EntityType="EFModel.Store.SYS_WEBPAGES" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_WEBPAGES_LOG" EntityType="EFModel.Store.SYS_WEBPAGES_LOG" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYS_WEBRUNTIME" EntityType="EFModel.Store.SYS_WEBRUNTIME" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SYSEEPLOG" EntityType="EFModel.Store.SYSEEPLOG" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="USERGROUPS" EntityType="EFModel.Store.USERGROUPS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="USERMENUCONTROL" EntityType="EFModel.Store.USERMENUCONTROL" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="USERMENUS" EntityType="EFModel.Store.USERMENUS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="USERS" EntityType="EFModel.Store.USERS" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_SYS_SDQUEUEPAGE_SYS_SDQUEUE" Association="EFModel.Store.FK_SYS_SDQUEUEPAGE_SYS_SDQUEUE">
+            <End Role="SYS_SDQUEUE" EntitySet="SYS_SDQUEUE" />
+            <End Role="SYS_SDQUEUEPAGE" EntitySet="SYS_SDQUEUEPAGE" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="COLDEF">
+          <Key>
+            <PropertyRef Name="TABLE_NAME" />
+            <PropertyRef Name="FIELD_NAME" />
+          </Key>
+          <Property Name="TABLE_NAME" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="FIELD_NAME" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="SEQ" Type="decimal" Precision="12" />
+          <Property Name="FIELD_TYPE" Type="nvarchar" MaxLength="20" />
+          <Property Name="IS_KEY" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="FIELD_LENGTH" Type="decimal" Precision="12" />
+          <Property Name="CAPTION" Type="nvarchar" MaxLength="40" />
+          <Property Name="EDITMASK" Type="nvarchar" MaxLength="10" />
+          <Property Name="NEEDBOX" Type="nvarchar" MaxLength="13" />
+          <Property Name="CANREPORT" Type="nvarchar" MaxLength="1" />
+          <Property Name="EXT_MENUID" Type="nvarchar" MaxLength="20" />
+          <Property Name="FIELD_SCALE" Type="decimal" Precision="12" />
+          <Property Name="DD_NAME" Type="nvarchar" MaxLength="40" />
+          <Property Name="DEFAULT_VALUE" Type="nvarchar" MaxLength="100" />
+          <Property Name="CHECK_NULL" Type="nvarchar" MaxLength="1" />
+          <Property Name="QUERYMODE" Type="nvarchar" MaxLength="20" />
+          <Property Name="CAPTION1" Type="nvarchar" MaxLength="40" />
+          <Property Name="CAPTION2" Type="nvarchar" MaxLength="40" />
+          <Property Name="CAPTION3" Type="nvarchar" MaxLength="40" />
+          <Property Name="CAPTION4" Type="nvarchar" MaxLength="40" />
+          <Property Name="CAPTION5" Type="nvarchar" MaxLength="40" />
+          <Property Name="CAPTION6" Type="nvarchar" MaxLength="40" />
+          <Property Name="CAPTION7" Type="nvarchar" MaxLength="40" />
+          <Property Name="CAPTION8" Type="nvarchar" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="GROUPMENUCONTROL">
+          <Key>
+            <PropertyRef Name="GROUPID" />
+            <PropertyRef Name="MENUID" />
+            <PropertyRef Name="CONTROLNAME" />
+          </Key>
+          <Property Name="GROUPID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="MENUID" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="CONTROLNAME" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TYPE" Type="varchar" MaxLength="20" />
+          <Property Name="ENABLED" Type="char" MaxLength="1" />
+          <Property Name="VISIBLE" Type="char" MaxLength="1" />
+          <Property Name="ALLOWADD" Type="char" MaxLength="1" />
+          <Property Name="ALLOWUPDATE" Type="char" MaxLength="1" />
+          <Property Name="ALLOWDELETE" Type="char" MaxLength="1" />
+          <Property Name="ALLOWPRINT" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="GROUPMENUS">
+          <Key>
+            <PropertyRef Name="GROUPID" />
+            <PropertyRef Name="MENUID" />
+          </Key>
+          <Property Name="GROUPID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="MENUID" Type="nvarchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="GROUPS">
+          <Key>
+            <PropertyRef Name="GROUPID" />
+          </Key>
+          <Property Name="GROUPID" Type="nvarchar" Nullable="false" MaxLength="6" />
+          <Property Name="GROUPNAME" Type="nvarchar" MaxLength="150" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="200" />
+          <Property Name="MSAD" Type="nvarchar" MaxLength="1" />
+          <Property Name="ISROLE" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="MENUITEMTYPE">
+          <Key>
+            <PropertyRef Name="ITEMTYPE" />
+          </Key>
+          <Property Name="ITEMTYPE" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="ITEMNAME" Type="nvarchar" MaxLength="20" />
+          <Property Name="DBALIAS" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MENUTABLE">
+          <Key>
+            <PropertyRef Name="MENUID" />
+          </Key>
+          <Property Name="MENUID" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="CAPTION" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PARENT" Type="nvarchar" MaxLength="30" />
+          <Property Name="PACKAGE" Type="nvarchar" MaxLength="20" />
+          <Property Name="MODULETYPE" Type="nvarchar" MaxLength="1" />
+          <Property Name="ITEMPARAM" Type="nvarchar" MaxLength="200" />
+          <Property Name="FORM" Type="nvarchar" MaxLength="32" />
+          <Property Name="ISSHOWMODAL" Type="nvarchar" MaxLength="1" />
+          <Property Name="ITEMTYPE" Type="nvarchar" MaxLength="20" />
+          <Property Name="SEQ_NO" Type="nvarchar" MaxLength="4" />
+          <Property Name="PACKAGEDATE" Type="datetime" />
+          <Property Name="ISSERVER" Type="nvarchar" MaxLength="1" />
+          <Property Name="VERSIONNO" Type="nvarchar" MaxLength="20" />
+          <Property Name="CHECKOUT" Type="nvarchar" MaxLength="20" />
+          <Property Name="CHECKOUTDATE" Type="datetime" />
+          <Property Name="CAPTION0" Type="nvarchar" MaxLength="50" />
+          <Property Name="CAPTION1" Type="nvarchar" MaxLength="50" />
+          <Property Name="CAPTION2" Type="nvarchar" MaxLength="50" />
+          <Property Name="CAPTION3" Type="nvarchar" MaxLength="50" />
+          <Property Name="CAPTION4" Type="nvarchar" MaxLength="50" />
+          <Property Name="CAPTION5" Type="nvarchar" MaxLength="50" />
+          <Property Name="CAPTION6" Type="nvarchar" MaxLength="50" />
+          <Property Name="CAPTION7" Type="nvarchar" MaxLength="50" />
+          <Property Name="IMAGE" Type="varbinary(max)" />
+          <Property Name="IMAGEURL" Type="nvarchar" MaxLength="100" />
+          <Property Name="OWNER" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="MENUTABLECONTROL">
+          <Key>
+            <PropertyRef Name="MENUID" />
+            <PropertyRef Name="CONTROLNAME" />
+          </Key>
+          <Property Name="MENUID" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="CONTROLNAME" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DESCRIPTION" Type="varchar" MaxLength="50" />
+          <Property Name="TYPE" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="SYS_LANGUAGE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IDENTIFICATION" Type="nvarchar" MaxLength="80" />
+          <Property Name="KEYS" Type="nvarchar" MaxLength="80" />
+          <Property Name="EN" Type="nvarchar" MaxLength="80" />
+          <Property Name="CHT" Type="nvarchar" MaxLength="80" />
+          <Property Name="CHS" Type="nvarchar" MaxLength="80" />
+          <Property Name="HK" Type="nvarchar" MaxLength="80" />
+          <Property Name="JA" Type="nvarchar" MaxLength="80" />
+          <Property Name="KO" Type="nvarchar" MaxLength="80" />
+          <Property Name="LAN1" Type="nvarchar" MaxLength="80" />
+          <Property Name="LAN2" Type="nvarchar" MaxLength="80" />
+        </EntityType>
+        <EntityType Name="SYS_ORGKIND">
+          <Key>
+            <PropertyRef Name="ORG_KIND" />
+          </Key>
+          <Property Name="ORG_KIND" Type="nvarchar" Nullable="false" MaxLength="4" />
+          <Property Name="KIND_DESC" Type="nvarchar" Nullable="false" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="SYS_PERSONAL">
+          <Key>
+            <PropertyRef Name="FORMNAME" />
+            <PropertyRef Name="COMPNAME" />
+            <PropertyRef Name="USERID" />
+          </Key>
+          <Property Name="FORMNAME" Type="nvarchar" Nullable="false" MaxLength="60" />
+          <Property Name="COMPNAME" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="USERID" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="REMARK" Type="nvarchar" MaxLength="30" />
+          <Property Name="PROPCONTENT" Type="nvarchar(max)" />
+          <Property Name="CREATEDATE" Type="datetime" />
+        </EntityType>
+        <EntityType Name="SYS_REFVAL">
+          <Key>
+            <PropertyRef Name="REFVAL_NO" />
+          </Key>
+          <Property Name="REFVAL_NO" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="DESCRIPTION" Type="varchar" MaxLength="250" />
+          <Property Name="TABLE_NAME" Type="varchar" MaxLength="100" />
+          <Property Name="CAPTION" Type="varchar" MaxLength="30" />
+          <Property Name="DISPLAY_MEMBER" Type="varchar" MaxLength="100" />
+          <Property Name="SELECT_ALIAS" Type="varchar" MaxLength="50" />
+          <Property Name="SELECT_COMMAND" Type="varchar" MaxLength="250" />
+          <Property Name="VALUE_MEMBER" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="SYS_REPORT">
+          <Key>
+            <PropertyRef Name="REPORTID" />
+            <PropertyRef Name="FILENAME" />
+          </Key>
+          <Property Name="REPORTID" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="FILENAME" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="REPORTNAME" Type="nvarchar(max)" />
+          <Property Name="DESCRIPTION" Type="nvarchar(max)" />
+          <Property Name="FILEPATH" Type="nvarchar(max)" />
+          <Property Name="OUTPUTMODE" Type="nvarchar" MaxLength="20" />
+          <Property Name="HEADERFONT" Type="varbinary(max)" />
+          <Property Name="HEADERITEMS" Type="varbinary(max)" />
+          <Property Name="FOOTERFONT" Type="varbinary(max)" />
+          <Property Name="FOOTERITEMS" Type="varbinary(max)" />
+          <Property Name="FIELDFONT" Type="varbinary(max)" />
+          <Property Name="FIELDITEMS" Type="varbinary(max)" />
+          <Property Name="SETTING" Type="varbinary(max)" />
+          <Property Name="FORMAT" Type="varbinary(max)" />
+          <Property Name="PARAMETERS" Type="varbinary(max)" />
+          <Property Name="IMAGES" Type="varbinary(max)" />
+          <Property Name="MAILSETTING" Type="varbinary(max)" />
+          <Property Name="HEADERREPEAT" Type="nvarchar" MaxLength="5" />
+          <Property Name="HEADER_DATASOURCEID" Type="nvarchar" MaxLength="50" />
+          <Property Name="DATASOURCES" Type="varbinary(max)" />
+          <Property Name="CLIENT_QUERY" Type="varbinary(max)" />
+          <Property Name="REPORT_TYPE" Type="nvarchar" MaxLength="1" />
+          <Property Name="TEMPLATE_DESC" Type="nvarchar" MaxLength="50" />
+          <Property Name="DATASOURCE_PROVIDER" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SYS_ROLES_AGENT">
+          <Key>
+            <PropertyRef Name="ROLE_ID" />
+            <PropertyRef Name="AGENT" />
+          </Key>
+          <Property Name="ROLE_ID" Type="nvarchar" Nullable="false" MaxLength="12" />
+          <Property Name="AGENT" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="FLOW_DESC" Type="nvarchar" Nullable="false" MaxLength="40" />
+          <Property Name="START_DATE" Type="nvarchar" Nullable="false" MaxLength="8" />
+          <Property Name="START_TIME" Type="nvarchar" MaxLength="6" />
+          <Property Name="END_DATE" Type="nvarchar" Nullable="false" MaxLength="8" />
+          <Property Name="END_TIME" Type="nvarchar" MaxLength="6" />
+          <Property Name="PAR_AGENT" Type="nvarchar" Nullable="false" MaxLength="4" />
+          <Property Name="REMARK" Type="nvarchar" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="SYS_SDALIAS">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="ALIASNAME" />
+            <PropertyRef Name="DBNAME" />
+          </Key>
+          <Property Name="USERID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ALIASNAME" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="SYSTEMALIAS" Type="varchar" MaxLength="30" />
+          <Property Name="DBNAME" Type="varchar" Nullable="false" MaxLength="25" />
+          <Property Name="SPLIT" Type="bit" />
+          <Property Name="DBTYPE" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="SYS_SDGROUPS">
+          <Key>
+            <PropertyRef Name="GROUPID" />
+          </Key>
+          <Property Name="GROUPID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="GROUPNAME" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="SYS_SDQUEUE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="USERID" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="PAGETYPE" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="CREATETIME" Type="datetime" />
+          <Property Name="FINISHTIME" Type="datetime" />
+          <Property Name="FINISHFLAG" Type="bit" Nullable="false" />
+          <Property Name="DOCUMENT" Type="varbinary(max)" />
+          <Property Name="FILENAME" Type="varchar" MaxLength="40" />
+          <Property Name="PRINTSETTING" Type="varchar" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="SYS_SDQUEUEPAGE">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="PAGENAME" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="DOCUMENT" Type="varbinary(max)" Nullable="false" />
+          <Property Name="PHOTO" Type="varbinary(max)" />
+          <Property Name="PAGENAME" Type="varchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="SYS_SDSOLUTIONS">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="SOLUTIONID" />
+          </Key>
+          <Property Name="USERID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SOLUTIONID" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="SOLUTIONNAME" Type="nvarchar" MaxLength="30" />
+          <Property Name="MOUDLEXMLTEXT" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="SETTING" Type="varbinary(max)" />
+          <Property Name="ALIASOPTIONS" Type="varchar" MaxLength="250" />
+          <Property Name="LOGONIMAGE" Type="varbinary(max)" />
+          <Property Name="BGSTARTCOLOR" Type="varchar" MaxLength="9" />
+          <Property Name="BGENDCOLOR" Type="varchar" MaxLength="9" />
+          <Property Name="THEME" Type="varchar" MaxLength="20" />
+          <Property Name="COMPANY" Type="nvarchar" MaxLength="30" />
+          <Property Name="PAGESAVEOPTION" Type="int" />
+          <Property Name="COMPANYIMAGE" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="SYS_SDUSERS">
+          <Key>
+            <PropertyRef Name="USERID" />
+          </Key>
+          <Property Name="USERID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="USERNAME" Type="nvarchar" MaxLength="30" />
+          <Property Name="PASSWORD" Type="varchar" MaxLength="20" />
+          <Property Name="GROUPID" Type="varchar" MaxLength="20" />
+          <Property Name="LASTDATE" Type="datetime" />
+          <Property Name="EMAIL" Type="nvarchar" MaxLength="50" />
+          <Property Name="SYSTYPE" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="SYS_SDUSERS_LOG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="IPADDRESS" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="LOGINTIME" Type="datetime" Nullable="false" />
+          <Property Name="LOGOUTTIME" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SYS_TODOHIS">
+          <Key>
+            <PropertyRef Name="LISTID" />
+            <PropertyRef Name="FLOW_ID" />
+            <PropertyRef Name="ROLE_ID" />
+            <PropertyRef Name="S_ROLE_ID" />
+            <PropertyRef Name="S_STEP_ID" />
+            <PropertyRef Name="D_STEP_ID" />
+            <PropertyRef Name="S_USER_ID" />
+            <PropertyRef Name="USER_ID" />
+            <PropertyRef Name="WEBFORM_NAME" />
+            <PropertyRef Name="NAVIGATOR_MODE" />
+            <PropertyRef Name="FLNAVIGATOR_MODE" />
+            <PropertyRef Name="PROC_TIME" />
+            <PropertyRef Name="EXP_TIME" />
+            <PropertyRef Name="TIME_UNIT" />
+            <PropertyRef Name="FLOWIMPORTANT" />
+            <PropertyRef Name="FLOWURGENT" />
+          </Key>
+          <Property Name="LISTID" Type="nvarchar" Nullable="false" MaxLength="40" />
+          <Property Name="FLOW_ID" Type="nvarchar" Nullable="false" MaxLength="40" />
+          <Property Name="FLOW_DESC" Type="nvarchar" MaxLength="40" />
+          <Property Name="ROLE_ID" Type="nvarchar" Nullable="false" MaxLength="12" />
+          <Property Name="S_ROLE_ID" Type="nvarchar" Nullable="false" MaxLength="12" />
+          <Property Name="S_STEP_ID" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="D_STEP_ID" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="S_STEP_DESC" Type="nvarchar" MaxLength="64" />
+          <Property Name="S_USER_ID" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="USER_ID" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="USERNAME" Type="nvarchar" MaxLength="30" />
+          <Property Name="FORM_NAME" Type="nvarchar" MaxLength="30" />
+          <Property Name="WEBFORM_NAME" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="S_USERNAME" Type="nvarchar" MaxLength="30" />
+          <Property Name="NAVIGATOR_MODE" Type="nvarchar" Nullable="false" MaxLength="2" />
+          <Property Name="FLNAVIGATOR_MODE" Type="nvarchar" Nullable="false" MaxLength="2" />
+          <Property Name="PARAMETERS" Type="nvarchar" MaxLength="254" />
+          <Property Name="STATUS" Type="nvarchar" MaxLength="4" />
+          <Property Name="PROC_TIME" Type="decimal" Nullable="false" Precision="8" Scale="2" />
+          <Property Name="EXP_TIME" Type="decimal" Nullable="false" Precision="8" Scale="2" />
+          <Property Name="TIME_UNIT" Type="nvarchar" Nullable="false" MaxLength="4" />
+          <Property Name="FLOWIMPORTANT" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="FLOWURGENT" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="FORM_TABLE" Type="nvarchar" MaxLength="30" />
+          <Property Name="FORM_KEYS" Type="nvarchar" MaxLength="254" />
+          <Property Name="FORM_PRESENTATION" Type="nvarchar" MaxLength="254" />
+          <Property Name="REMARK" Type="nvarchar" MaxLength="254" />
+          <Property Name="VERSION" Type="nvarchar" MaxLength="2" />
+          <Property Name="VDSNAME" Type="nvarchar" MaxLength="40" />
+          <Property Name="SENDBACKSTEP" Type="nvarchar" MaxLength="2" />
+          <Property Name="LEVEL_NO" Type="nvarchar" MaxLength="6" />
+          <Property Name="UPDATE_DATE" Type="nvarchar" MaxLength="10" />
+          <Property Name="UPDATE_TIME" Type="nvarchar" MaxLength="8" />
+          <Property Name="FORM_PRESENT_CT" Type="nvarchar" MaxLength="254" />
+          <Property Name="ATTACHMENTS" Type="nvarchar" MaxLength="255" />
+          <Property Name="CREATE_TIME" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--生成过程中发现错误:
+      警告 6002: 表/视图“Northwind.dbo.SYS_TODOLIST”未定义主键。已推断出该键，并将定义创建为只读的表/视图。
+      -->
+        <EntityType Name="SYS_TODOLIST">
+          <Key>
+            <PropertyRef Name="LISTID" />
+            <PropertyRef Name="FLOW_ID" />
+            <PropertyRef Name="APPLICANT" />
+            <PropertyRef Name="S_USER_ID" />
+            <PropertyRef Name="S_STEP_ID" />
+            <PropertyRef Name="D_STEP_ID" />
+            <PropertyRef Name="EXP_TIME" />
+            <PropertyRef Name="URGENT_TIME" />
+            <PropertyRef Name="TIME_UNIT" />
+            <PropertyRef Name="NAVIGATOR_MODE" />
+            <PropertyRef Name="FLNAVIGATOR_MODE" />
+            <PropertyRef Name="SENDTO_KIND" />
+            <PropertyRef Name="SENDTO_ID" />
+            <PropertyRef Name="FLOWIMPORTANT" />
+            <PropertyRef Name="FLOWURGENT" />
+            <PropertyRef Name="FORM_PRESENT_CT" />
+            <PropertyRef Name="WEBFORM_NAME" />
+            <PropertyRef Name="FLOWPATH" />
+            <PropertyRef Name="PLUSAPPROVE" />
+            <PropertyRef Name="PLUSROLES" />
+          </Key>
+          <Property Name="LISTID" Type="nvarchar" Nullable="false" MaxLength="40" />
+          <Property Name="FLOW_ID" Type="nvarchar" Nullable="false" MaxLength="40" />
+          <Property Name="FLOW_DESC" Type="nvarchar" MaxLength="40" />
+          <Property Name="APPLICANT" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="S_USER_ID" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="S_STEP_ID" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="S_STEP_DESC" Type="nvarchar" MaxLength="64" />
+          <Property Name="D_STEP_ID" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="D_STEP_DESC" Type="nvarchar" MaxLength="64" />
+          <Property Name="EXP_TIME" Type="decimal" Nullable="false" Precision="8" Scale="2" />
+          <Property Name="URGENT_TIME" Type="decimal" Nullable="false" Precision="8" Scale="2" />
+          <Property Name="TIME_UNIT" Type="nvarchar" Nullable="false" MaxLength="4" />
+          <Property Name="USERNAME" Type="nvarchar" MaxLength="30" />
+          <Property Name="FORM_NAME" Type="nvarchar" MaxLength="30" />
+          <Property Name="NAVIGATOR_MODE" Type="nvarchar" Nullable="false" MaxLength="2" />
+          <Property Name="FLNAVIGATOR_MODE" Type="nvarchar" Nullable="false" MaxLength="2" />
+          <Property Name="PARAMETERS" Type="nvarchar" MaxLength="254" />
+          <Property Name="SENDTO_KIND" Type="nvarchar" Nullable="false" MaxLength="4" />
+          <Property Name="SENDTO_ID" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="FLOWIMPORTANT" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="FLOWURGENT" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="STATUS" Type="nvarchar" MaxLength="4" />
+          <Property Name="FORM_TABLE" Type="nvarchar" MaxLength="30" />
+          <Property Name="FORM_KEYS" Type="nvarchar" MaxLength="254" />
+          <Property Name="FORM_PRESENTATION" Type="nvarchar" MaxLength="254" />
+          <Property Name="FORM_PRESENT_CT" Type="nvarchar" Nullable="false" MaxLength="254" />
+          <Property Name="REMARK" Type="nvarchar" MaxLength="254" />
+          <Property Name="PROVIDER_NAME" Type="nvarchar" MaxLength="254" />
+          <Property Name="VERSION" Type="nvarchar" MaxLength="2" />
+          <Property Name="EMAIL_ADD" Type="nvarchar" MaxLength="40" />
+          <Property Name="EMAIL_STATUS" Type="varchar" MaxLength="1" />
+          <Property Name="VDSNAME" Type="nvarchar" MaxLength="40" />
+          <Property Name="SENDBACKSTEP" Type="nvarchar" MaxLength="2" />
+          <Property Name="LEVEL_NO" Type="nvarchar" MaxLength="6" />
+          <Property Name="WEBFORM_NAME" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="UPDATE_DATE" Type="nvarchar" MaxLength="10" />
+          <Property Name="UPDATE_TIME" Type="nvarchar" MaxLength="8" />
+          <Property Name="FLOWPATH" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="PLUSAPPROVE" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="PLUSROLES" Type="nvarchar" Nullable="false" MaxLength="254" />
+          <Property Name="MULTISTEPRETURN" Type="varchar" MaxLength="1" />
+          <Property Name="SENDTO_NAME" Type="nvarchar" MaxLength="30" />
+          <Property Name="ATTACHMENTS" Type="nvarchar" MaxLength="255" />
+          <Property Name="CREATE_TIME" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="SYS_WEBPAGES">
+          <Key>
+            <PropertyRef Name="PAGENAME" />
+            <PropertyRef Name="PAGETYPE" />
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="SOLUTIONID" />
+          </Key>
+          <Property Name="PAGENAME" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="PAGETYPE" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="DESCRIPTION" Type="varchar" MaxLength="60" />
+          <Property Name="CONTENT" Type="varbinary(max)" />
+          <Property Name="USERID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SOLUTIONID" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="SERVERDLL" Type="varbinary(max)" />
+          <Property Name="CHECKOUT" Type="bit" />
+          <Property Name="CHECKOUTDATE" Type="datetime" />
+          <Property Name="CHECKOUTUSER" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="SYS_WEBPAGES_LOG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="PAGENAME" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="PAGETYPE" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="DESCRIPTION" Type="varchar" MaxLength="60" />
+          <Property Name="CONTENT" Type="varbinary(max)" />
+          <Property Name="USERID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SOLUTIONID" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="SERVERDLL" Type="varbinary(max)" />
+          <Property Name="CHECKINDATE" Type="datetime" Nullable="false" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CHECKINUSER" Type="varchar" MaxLength="20" />
+          <Property Name="CHECKINDESCRIPTION" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="SYS_WEBRUNTIME">
+          <Key>
+            <PropertyRef Name="PAGENAME" />
+            <PropertyRef Name="PAGETYPE" />
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="SOLUTIONID" />
+          </Key>
+          <Property Name="PAGENAME" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="PAGETYPE" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="CONTENT" Type="varbinary(max)" />
+          <Property Name="USERID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="SOLUTIONID" Type="varchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="SYSEEPLOG">
+          <Key>
+            <PropertyRef Name="CONNID" />
+            <PropertyRef Name="LOGID" />
+          </Key>
+          <Property Name="CONNID" Type="nvarchar" Nullable="false" MaxLength="20" />
+          <Property Name="LOGID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="LOGSTYLE" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="LOGDATETIME" Type="datetime" Nullable="false" />
+          <Property Name="DOMAINID" Type="nvarchar" MaxLength="30" />
+          <Property Name="USERID" Type="varchar" MaxLength="20" />
+          <Property Name="LOGTYPE" Type="nvarchar" MaxLength="1" />
+          <Property Name="TITLE" Type="nvarchar" MaxLength="64" />
+          <Property Name="DESCRIPTION" Type="nvarchar(max)" />
+          <Property Name="COMPUTERIP" Type="nvarchar" MaxLength="16" />
+          <Property Name="COMPUTERNAME" Type="nvarchar" MaxLength="64" />
+          <Property Name="EXECUTIONTIME" Type="int" />
+        </EntityType>
+        <EntityType Name="USERGROUPS">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="GROUPID" />
+          </Key>
+          <Property Name="USERID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="GROUPID" Type="nvarchar" Nullable="false" MaxLength="6" />
+        </EntityType>
+        <EntityType Name="USERMENUCONTROL">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="MENUID" />
+            <PropertyRef Name="CONTROLNAME" />
+          </Key>
+          <Property Name="USERID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="MENUID" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="CONTROLNAME" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="TYPE" Type="varchar" MaxLength="20" />
+          <Property Name="ENABLED" Type="char" MaxLength="1" />
+          <Property Name="VISIBLE" Type="char" MaxLength="1" />
+          <Property Name="ALLOWADD" Type="char" MaxLength="1" />
+          <Property Name="ALLOWUPDATE" Type="char" MaxLength="1" />
+          <Property Name="ALLOWDELETE" Type="char" MaxLength="1" />
+          <Property Name="ALLOWPRINT" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="USERMENUS">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="MENUID" />
+          </Key>
+          <Property Name="USERID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="MENUID" Type="nvarchar" Nullable="false" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="USERS">
+          <Key>
+            <PropertyRef Name="USERID" />
+          </Key>
+          <Property Name="USERID" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="USERNAME" Type="nvarchar" MaxLength="30" />
+          <Property Name="AGENT" Type="nvarchar" MaxLength="20" />
+          <Property Name="PWD" Type="nvarchar" MaxLength="20" />
+          <Property Name="CREATEDATE" Type="nvarchar" MaxLength="8" />
+          <Property Name="CREATER" Type="nvarchar" MaxLength="20" />
+          <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="100" />
+          <Property Name="EMAIL" Type="nvarchar" MaxLength="40" />
+          <Property Name="LASTTIME" Type="nvarchar" MaxLength="8" />
+          <Property Name="AUTOLOGIN" Type="nvarchar" MaxLength="1" />
+          <Property Name="LASTDATE" Type="nvarchar" MaxLength="8" />
+          <Property Name="SIGNATURE" Type="nvarchar" MaxLength="30" />
+          <Property Name="MSAD" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <Association Name="FK_SYS_SDQUEUEPAGE_SYS_SDQUEUE">
+          <End Role="SYS_SDQUEUE" Type="EFModel.Store.SYS_SDQUEUE" Multiplicity="1" />
+          <End Role="SYS_SDQUEUEPAGE" Type="EFModel.Store.SYS_SDQUEUEPAGE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_SDQUEUE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SYS_SDQUEUEPAGE">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EFModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="Entities">
+          <EntitySet Name="USERGROUPS" EntityType="EFModel.USERGROUPS" />
+          <EntitySet Name="COLDEF" EntityType="EFModel.COLDEF" />
+          <EntitySet Name="MENUITEMTYPE" EntityType="EFModel.MENUITEMTYPE" />
+          <EntitySet Name="MENUTABLE" EntityType="EFModel.MENUTABLE" />
+          <EntitySet Name="SYS_ROLES_AGENT" EntityType="EFModel.SYS_ROLES_AGENT" />
+          <EntitySet Name="GROUPMENUS" EntityType="EFModel.GROUPMENUS" />
+          <EntitySet Name="USERMENUS" EntityType="EFModel.USERMENUS" />
+          <EntitySet Name="SYS_ORGKIND" EntityType="EFModel.SYS_ORGKIND" />
+          <AssociationSet Name="FK_MENUTABLE_MENUTABLE" Association="EFModel.FK_MENUTABLE_MENUTABLE">
+            <End Role="MENUTABLE" EntitySet="MENUTABLE" />
+            <End Role="MENUTABLE1" EntitySet="MENUTABLE" />
+          </AssociationSet>
+          <EntitySet Name="SYS_REFVAL" EntityType="EFModel.SYS_REFVAL" />
+          <EntitySet Name="GROUPMENUCONTROL" EntityType="EFModel.GROUPMENUCONTROL" />
+          <EntitySet Name="MENUTABLECONTROL" EntityType="EFModel.MENUTABLECONTROL" />
+          <EntitySet Name="USERMENUCONTROL" EntityType="EFModel.USERMENUCONTROL" />
+          <EntitySet Name="GROUPS" EntityType="EFModel.GROUPS" />
+          <EntitySet Name="USERS" EntityType="EFModel.USER" />
+          <EntitySet Name="SYS_PERSONAL" EntityType="EFModel.SYS_PERSONAL" />
+          <EntitySet Name="SYSEEPLOG" EntityType="EFModel.SYSEEPLOG" />
+          <EntitySet Name="SYS_TODOHIS" EntityType="EFModel.SYS_TODOHIS" />
+          <EntitySet Name="SYS_TODOLIST" EntityType="EFModel.SYS_TODOLIST" />
+          <EntitySet Name="SYS_REPORT" EntityType="EFModel.SYS_REPORT" />
+          <EntitySet Name="SYS_SDGROUPS" EntityType="EFModel.SYS_SDGROUPS" />
+          <EntitySet Name="SYS_SDQUEUE" EntityType="EFModel.SYS_SDQUEUE" />
+          <EntitySet Name="SYS_SDQUEUEPAGE" EntityType="EFModel.SYS_SDQUEUEPAGE" />
+          <EntitySet Name="SYS_SDUSERS" EntityType="EFModel.SYS_SDUSERS" />
+          <EntitySet Name="SYS_WEBPAGES_LOG" EntityType="EFModel.SYS_WEBPAGES_LOG" />
+          <EntitySet Name="SYS_WEBRUNTIME" EntityType="EFModel.SYS_WEBRUNTIME" />
+          <AssociationSet Name="FK_SYS_SDQUEUEPAGE_SYS_SDQUEUE" Association="EFModel.FK_SYS_SDQUEUEPAGE_SYS_SDQUEUE">
+            <End Role="SYS_SDQUEUE" EntitySet="SYS_SDQUEUE" />
+            <End Role="SYS_SDQUEUEPAGE" EntitySet="SYS_SDQUEUEPAGE" />
+          </AssociationSet>
+          <EntitySet Name="SYS_SDUSERS_LOG" EntityType="EFModel.SYS_SDUSERS_LOG" />
+          <EntitySet Name="SYS_WEBPAGES" EntityType="EFModel.SYS_WEBPAGES" />
+          <EntitySet Name="SYS_SDALIAS" EntityType="EFModel.SYS_SDALIAS" />
+          <EntitySet Name="SYS_SDSOLUTIONS" EntityType="EFModel.SYS_SDSOLUTIONS" />
+          <EntitySet Name="SYS_LANGUAGE" EntityType="EFModel.SYS_LANGUAGE" />
+        </EntityContainer>
+        <EntityType Name="USERGROUPS">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="GROUPID" />
+          </Key>
+          <Property Type="String" Name="USERID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GROUPID" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="COLDEF">
+          <Key>
+            <PropertyRef Name="TABLE_NAME" />
+            <PropertyRef Name="FIELD_NAME" />
+          </Key>
+          <Property Type="String" Name="TABLE_NAME" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FIELD_NAME" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="SEQ" Precision="12" Scale="0" />
+          <Property Type="String" Name="FIELD_TYPE" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="IS_KEY" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="FIELD_LENGTH" Precision="12" Scale="0" />
+          <Property Type="String" Name="CAPTION" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EDITMASK" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NEEDBOX" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CANREPORT" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EXT_MENUID" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="FIELD_SCALE" Precision="12" Scale="0" />
+          <Property Type="String" Name="DD_NAME" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DEFAULT_VALUE" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CHECK_NULL" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="QUERYMODE" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CAPTION1" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CAPTION2" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CAPTION3" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CAPTION4" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CAPTION5" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CAPTION6" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CAPTION7" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CAPTION8" MaxLength="40" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MENUITEMTYPE">
+          <Key>
+            <PropertyRef Name="ITEMTYPE" />
+          </Key>
+          <Property Type="String" Name="ITEMTYPE" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ITEMNAME" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DBALIAS" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MENUTABLE">
+          <Key>
+            <PropertyRef Name="MENUID" />
+          </Key>
+          <Property Type="String" Name="MENUID" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CAPTION" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PARENT" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PACKAGE" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MODULETYPE" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ITEMPARAM" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FORM" MaxLength="32" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ISSHOWMODAL" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ITEMTYPE" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SEQ_NO" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="PACKAGEDATE" Precision="3" />
+          <Property Type="String" Name="ISSERVER" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VERSIONNO" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CHECKOUT" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CHECKOUTDATE" Precision="3" />
+          <Property Type="String" Name="CAPTION0" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CAPTION1" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CAPTION2" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CAPTION3" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CAPTION4" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CAPTION5" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CAPTION6" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CAPTION7" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Binary" Name="IMAGE" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="IMAGEURL" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OWNER" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="MENUTABLE1" Relationship="EFModel.FK_MENUTABLE_MENUTABLE" FromRole="MENUTABLE" ToRole="MENUTABLE1" />
+          <NavigationProperty Name="MENUTABLE2" Relationship="EFModel.FK_MENUTABLE_MENUTABLE" FromRole="MENUTABLE1" ToRole="MENUTABLE" />
+        </EntityType>
+        <EntityType Name="SYS_ROLES_AGENT">
+          <Key>
+            <PropertyRef Name="ROLE_ID" />
+            <PropertyRef Name="AGENT" />
+          </Key>
+          <Property Type="String" Name="ROLE_ID" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AGENT" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FLOW_DESC" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="START_DATE" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="START_TIME" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="END_DATE" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="END_TIME" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PAR_AGENT" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="REMARK" MaxLength="254" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="GROUPMENUS">
+          <Key>
+            <PropertyRef Name="GROUPID" />
+            <PropertyRef Name="MENUID" />
+          </Key>
+          <Property Type="String" Name="GROUPID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MENUID" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="USERMENUS">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="MENUID" />
+          </Key>
+          <Property Type="String" Name="USERID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MENUID" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SYS_ORGKIND">
+          <Key>
+            <PropertyRef Name="ORG_KIND" />
+          </Key>
+          <Property Type="String" Name="ORG_KIND" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="KIND_DESC" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_MENUTABLE_MENUTABLE">
+          <End Type="EFModel.MENUTABLE" Role="MENUTABLE" Multiplicity="0..1" />
+          <End Type="EFModel.MENUTABLE" Role="MENUTABLE1" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MENUTABLE">
+              <PropertyRef Name="MENUID" />
+            </Principal>
+            <Dependent Role="MENUTABLE1">
+              <PropertyRef Name="PARENT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SYS_REFVAL">
+          <Key>
+            <PropertyRef Name="REFVAL_NO" />
+          </Key>
+          <Property Type="String" Name="REFVAL_NO" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DESCRIPTION" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TABLE_NAME" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CAPTION" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DISPLAY_MEMBER" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SELECT_ALIAS" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SELECT_COMMAND" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VALUE_MEMBER" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="GROUPMENUCONTROL">
+          <Key>
+            <PropertyRef Name="GROUPID" />
+            <PropertyRef Name="MENUID" />
+            <PropertyRef Name="CONTROLNAME" />
+          </Key>
+          <Property Type="String" Name="GROUPID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MENUID" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CONTROLNAME" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TYPE" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ENABLED" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="VISIBLE" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="ALLOWADD" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="ALLOWUPDATE" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="ALLOWDELETE" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="ALLOWPRINT" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MENUTABLECONTROL">
+          <Key>
+            <PropertyRef Name="MENUID" />
+            <PropertyRef Name="CONTROLNAME" />
+          </Key>
+          <Property Type="String" Name="MENUID" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CONTROLNAME" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DESCRIPTION" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TYPE" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="USERMENUCONTROL">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="MENUID" />
+            <PropertyRef Name="CONTROLNAME" />
+          </Key>
+          <Property Type="String" Name="USERID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MENUID" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CONTROLNAME" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TYPE" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ENABLED" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="VISIBLE" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="ALLOWADD" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="ALLOWUPDATE" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="ALLOWDELETE" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="ALLOWPRINT" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="GROUPS">
+          <Key>
+            <PropertyRef Name="GROUPID" />
+          </Key>
+          <Property Type="String" Name="GROUPID" Nullable="false" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GROUPNAME" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DESCRIPTION" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MSAD" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ISROLE" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="USER">
+          <Key>
+            <PropertyRef Name="USERID" />
+          </Key>
+          <Property Type="String" Name="USERID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="USERNAME" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AGENT" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PWD" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CREATEDATE" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CREATER" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DESCRIPTION" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EMAIL" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LASTTIME" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AUTOLOGIN" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LASTDATE" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SIGNATURE" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MSAD" MaxLength="1" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SYS_PERSONAL">
+          <Key>
+            <PropertyRef Name="FORMNAME" />
+            <PropertyRef Name="COMPNAME" />
+            <PropertyRef Name="USERID" />
+          </Key>
+          <Property Type="String" Name="FORMNAME" Nullable="false" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="COMPNAME" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="USERID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="REMARK" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PROPCONTENT" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CREATEDATE" Precision="3" />
+        </EntityType>
+        <EntityType Name="SYSEEPLOG">
+          <Key>
+            <PropertyRef Name="CONNID" />
+            <PropertyRef Name="LOGID" />
+          </Key>
+          <Property Type="String" Name="CONNID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="LOGID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="LOGSTYLE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="LOGDATETIME" Nullable="false" Precision="3" />
+          <Property Type="String" Name="DOMAINID" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="USERID" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LOGTYPE" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TITLE" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DESCRIPTION" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="COMPUTERIP" MaxLength="16" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="COMPUTERNAME" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="EXECUTIONTIME" />
+        </EntityType>
+        <EntityType Name="SYS_TODOHIS">
+          <Key>
+            <PropertyRef Name="LISTID" />
+            <PropertyRef Name="FLOW_ID" />
+            <PropertyRef Name="ROLE_ID" />
+            <PropertyRef Name="S_ROLE_ID" />
+            <PropertyRef Name="S_STEP_ID" />
+            <PropertyRef Name="D_STEP_ID" />
+            <PropertyRef Name="S_USER_ID" />
+            <PropertyRef Name="USER_ID" />
+            <PropertyRef Name="WEBFORM_NAME" />
+            <PropertyRef Name="NAVIGATOR_MODE" />
+            <PropertyRef Name="FLNAVIGATOR_MODE" />
+            <PropertyRef Name="PROC_TIME" />
+            <PropertyRef Name="EXP_TIME" />
+            <PropertyRef Name="TIME_UNIT" />
+            <PropertyRef Name="FLOWIMPORTANT" />
+            <PropertyRef Name="FLOWURGENT" />
+          </Key>
+          <Property Type="String" Name="LISTID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FLOW_ID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FLOW_DESC" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ROLE_ID" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="S_ROLE_ID" Nullable="false" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="S_STEP_ID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="D_STEP_ID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="S_STEP_DESC" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="S_USER_ID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="USER_ID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="USERNAME" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FORM_NAME" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="WEBFORM_NAME" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="S_USERNAME" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NAVIGATOR_MODE" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FLNAVIGATOR_MODE" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PARAMETERS" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="STATUS" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="PROC_TIME" Nullable="false" Precision="8" Scale="2" />
+          <Property Type="Decimal" Name="EXP_TIME" Nullable="false" Precision="8" Scale="2" />
+          <Property Type="String" Name="TIME_UNIT" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FLOWIMPORTANT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FLOWURGENT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FORM_TABLE" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FORM_KEYS" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FORM_PRESENTATION" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="REMARK" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VERSION" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VDSNAME" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SENDBACKSTEP" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LEVEL_NO" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UPDATE_DATE" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UPDATE_TIME" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FORM_PRESENT_CT" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ATTACHMENTS" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CREATE_TIME" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SYS_TODOLIST">
+          <Key>
+            <PropertyRef Name="LISTID" />
+            <PropertyRef Name="FLOW_ID" />
+            <PropertyRef Name="APPLICANT" />
+            <PropertyRef Name="S_USER_ID" />
+            <PropertyRef Name="S_STEP_ID" />
+            <PropertyRef Name="D_STEP_ID" />
+            <PropertyRef Name="EXP_TIME" />
+            <PropertyRef Name="URGENT_TIME" />
+            <PropertyRef Name="TIME_UNIT" />
+            <PropertyRef Name="NAVIGATOR_MODE" />
+            <PropertyRef Name="FLNAVIGATOR_MODE" />
+            <PropertyRef Name="SENDTO_KIND" />
+            <PropertyRef Name="SENDTO_ID" />
+            <PropertyRef Name="FLOWIMPORTANT" />
+            <PropertyRef Name="FLOWURGENT" />
+            <PropertyRef Name="FORM_PRESENT_CT" />
+            <PropertyRef Name="WEBFORM_NAME" />
+            <PropertyRef Name="FLOWPATH" />
+            <PropertyRef Name="PLUSAPPROVE" />
+            <PropertyRef Name="PLUSROLES" />
+          </Key>
+          <Property Type="String" Name="LISTID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FLOW_ID" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FLOW_DESC" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="APPLICANT" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="S_USER_ID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="S_STEP_ID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="S_STEP_DESC" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="D_STEP_ID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="D_STEP_DESC" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="Decimal" Name="EXP_TIME" Nullable="false" Precision="8" Scale="2" />
+          <Property Type="Decimal" Name="URGENT_TIME" Nullable="false" Precision="8" Scale="2" />
+          <Property Type="String" Name="TIME_UNIT" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="USERNAME" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FORM_NAME" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NAVIGATOR_MODE" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FLNAVIGATOR_MODE" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PARAMETERS" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SENDTO_KIND" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SENDTO_ID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FLOWIMPORTANT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FLOWURGENT" Nullable="false" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="STATUS" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FORM_TABLE" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FORM_KEYS" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FORM_PRESENTATION" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FORM_PRESENT_CT" Nullable="false" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="REMARK" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PROVIDER_NAME" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="VERSION" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EMAIL_ADD" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EMAIL_STATUS" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="VDSNAME" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SENDBACKSTEP" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LEVEL_NO" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="WEBFORM_NAME" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UPDATE_DATE" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UPDATE_TIME" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FLOWPATH" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PLUSAPPROVE" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PLUSROLES" Nullable="false" MaxLength="254" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MULTISTEPRETURN" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SENDTO_NAME" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ATTACHMENTS" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CREATE_TIME" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SYS_REPORT">
+          <Key>
+            <PropertyRef Name="REPORTID" />
+            <PropertyRef Name="FILENAME" />
+          </Key>
+          <Property Type="String" Name="REPORTID" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FILENAME" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="REPORTNAME" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DESCRIPTION" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FILEPATH" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="OUTPUTMODE" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Type="Binary" Name="HEADERFONT" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="HEADERITEMS" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="FOOTERFONT" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="FOOTERITEMS" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="FIELDFONT" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="FIELDITEMS" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="SETTING" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="FORMAT" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="PARAMETERS" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="IMAGES" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="MAILSETTING" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="HEADERREPEAT" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="HEADER_DATASOURCEID" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Binary" Name="DATASOURCES" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="CLIENT_QUERY" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="REPORT_TYPE" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TEMPLATE_DESC" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DATASOURCE_PROVIDER" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SYS_SDGROUPS">
+          <Key>
+            <PropertyRef Name="GROUPID" />
+          </Key>
+          <Property Type="String" Name="GROUPID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GROUPNAME" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SYS_SDQUEUE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="USERID" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PAGETYPE" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="DateTime" Name="CREATETIME" Precision="3" />
+          <Property Type="DateTime" Name="FINISHTIME" Precision="3" />
+          <Property Type="Boolean" Name="FINISHFLAG" Nullable="false" />
+          <Property Type="Binary" Name="DOCUMENT" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="FILENAME" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PRINTSETTING" MaxLength="40" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="SYS_SDQUEUEPAGE" Relationship="EFModel.FK_SYS_SDQUEUEPAGE_SYS_SDQUEUE" FromRole="SYS_SDQUEUE" ToRole="SYS_SDQUEUEPAGE" />
+        </EntityType>
+        <EntityType Name="SYS_SDQUEUEPAGE">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="PAGENAME" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Binary" Name="DOCUMENT" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Type="Binary" Name="PHOTO" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="PAGENAME" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="SYS_SDQUEUE" Relationship="EFModel.FK_SYS_SDQUEUEPAGE_SYS_SDQUEUE" FromRole="SYS_SDQUEUEPAGE" ToRole="SYS_SDQUEUE" />
+        </EntityType>
+        <EntityType Name="SYS_SDUSERS">
+          <Key>
+            <PropertyRef Name="USERID" />
+          </Key>
+          <Property Type="String" Name="USERID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="USERNAME" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PASSWORD" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="GROUPID" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="LASTDATE" Precision="3" />
+          <Property Type="String" Name="EMAIL" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SYSTYPE" MaxLength="1" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SYS_WEBPAGES_LOG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="String" Name="PAGENAME" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PAGETYPE" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="DESCRIPTION" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="CONTENT" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="USERID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SOLUTIONID" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="SERVERDLL" MaxLength="Max" FixedLength="false" />
+          <Property Type="DateTime" Name="CHECKINDATE" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="CHECKINUSER" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CHECKINDESCRIPTION" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SYS_WEBRUNTIME">
+          <Key>
+            <PropertyRef Name="PAGENAME" />
+            <PropertyRef Name="PAGETYPE" />
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="SOLUTIONID" />
+          </Key>
+          <Property Type="String" Name="PAGENAME" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PAGETYPE" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Binary" Name="CONTENT" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="USERID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SOLUTIONID" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_SYS_SDQUEUEPAGE_SYS_SDQUEUE">
+          <End Type="EFModel.SYS_SDQUEUE" Role="SYS_SDQUEUE" Multiplicity="1" />
+          <End Type="EFModel.SYS_SDQUEUEPAGE" Role="SYS_SDQUEUEPAGE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SYS_SDQUEUE">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="SYS_SDQUEUEPAGE">
+              <PropertyRef Name="ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="SYS_SDUSERS_LOG">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="USERID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IPADDRESS" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="LOGINTIME" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="LOGOUTTIME" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="SYS_WEBPAGES">
+          <Key>
+            <PropertyRef Name="PAGENAME" />
+            <PropertyRef Name="PAGETYPE" />
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="SOLUTIONID" />
+          </Key>
+          <Property Type="String" Name="PAGENAME" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PAGETYPE" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="DESCRIPTION" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="CONTENT" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="USERID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SOLUTIONID" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="SERVERDLL" MaxLength="Max" FixedLength="false" />
+          <Property Type="Boolean" Name="CHECKOUT" />
+          <Property Type="DateTime" Name="CHECKOUTDATE" Precision="3" />
+          <Property Type="String" Name="CHECKOUTUSER" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SYS_SDALIAS">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="ALIASNAME" />
+            <PropertyRef Name="DBNAME" />
+          </Key>
+          <Property Type="String" Name="USERID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ALIASNAME" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SYSTEMALIAS" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DBNAME" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="SPLIT" />
+          <Property Type="String" Name="DBTYPE" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SYS_SDSOLUTIONS">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="SOLUTIONID" />
+          </Key>
+          <Property Type="String" Name="USERID" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SOLUTIONID" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SOLUTIONNAME" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MOUDLEXMLTEXT" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Binary" Name="SETTING" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="ALIASOPTIONS" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Type="Binary" Name="LOGONIMAGE" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="BGSTARTCOLOR" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BGENDCOLOR" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="THEME" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMPANY" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="PAGESAVEOPTION" />
+          <Property Type="Binary" Name="COMPANYIMAGE" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="SYS_LANGUAGE">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="IDENTIFICATION" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="KEYS" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EN" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CHT" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="CHS" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="HK" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="JA" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="KO" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAN1" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LAN2" MaxLength="80" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EFModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="USERGROUPS">
+            <EntityTypeMapping TypeName="EFModel.USERGROUPS">
+              <MappingFragment StoreEntitySet="USERGROUPS">
+                <ScalarProperty Name="GROUPID" ColumnName="GROUPID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="COLDEF">
+            <EntityTypeMapping TypeName="EFModel.COLDEF">
+              <MappingFragment StoreEntitySet="COLDEF">
+                <ScalarProperty Name="CAPTION8" ColumnName="CAPTION8" />
+                <ScalarProperty Name="CAPTION7" ColumnName="CAPTION7" />
+                <ScalarProperty Name="CAPTION6" ColumnName="CAPTION6" />
+                <ScalarProperty Name="CAPTION5" ColumnName="CAPTION5" />
+                <ScalarProperty Name="CAPTION4" ColumnName="CAPTION4" />
+                <ScalarProperty Name="CAPTION3" ColumnName="CAPTION3" />
+                <ScalarProperty Name="CAPTION2" ColumnName="CAPTION2" />
+                <ScalarProperty Name="CAPTION1" ColumnName="CAPTION1" />
+                <ScalarProperty Name="QUERYMODE" ColumnName="QUERYMODE" />
+                <ScalarProperty Name="CHECK_NULL" ColumnName="CHECK_NULL" />
+                <ScalarProperty Name="DEFAULT_VALUE" ColumnName="DEFAULT_VALUE" />
+                <ScalarProperty Name="DD_NAME" ColumnName="DD_NAME" />
+                <ScalarProperty Name="FIELD_SCALE" ColumnName="FIELD_SCALE" />
+                <ScalarProperty Name="EXT_MENUID" ColumnName="EXT_MENUID" />
+                <ScalarProperty Name="CANREPORT" ColumnName="CANREPORT" />
+                <ScalarProperty Name="NEEDBOX" ColumnName="NEEDBOX" />
+                <ScalarProperty Name="EDITMASK" ColumnName="EDITMASK" />
+                <ScalarProperty Name="CAPTION" ColumnName="CAPTION" />
+                <ScalarProperty Name="FIELD_LENGTH" ColumnName="FIELD_LENGTH" />
+                <ScalarProperty Name="IS_KEY" ColumnName="IS_KEY" />
+                <ScalarProperty Name="FIELD_TYPE" ColumnName="FIELD_TYPE" />
+                <ScalarProperty Name="SEQ" ColumnName="SEQ" />
+                <ScalarProperty Name="FIELD_NAME" ColumnName="FIELD_NAME" />
+                <ScalarProperty Name="TABLE_NAME" ColumnName="TABLE_NAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MENUITEMTYPE">
+            <EntityTypeMapping TypeName="EFModel.MENUITEMTYPE">
+              <MappingFragment StoreEntitySet="MENUITEMTYPE">
+                <ScalarProperty Name="DBALIAS" ColumnName="DBALIAS" />
+                <ScalarProperty Name="ITEMNAME" ColumnName="ITEMNAME" />
+                <ScalarProperty Name="ITEMTYPE" ColumnName="ITEMTYPE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MENUTABLE">
+            <EntityTypeMapping TypeName="EFModel.MENUTABLE">
+              <MappingFragment StoreEntitySet="MENUTABLE">
+                <ScalarProperty Name="OWNER" ColumnName="OWNER" />
+                <ScalarProperty Name="IMAGEURL" ColumnName="IMAGEURL" />
+                <ScalarProperty Name="IMAGE" ColumnName="IMAGE" />
+                <ScalarProperty Name="CAPTION7" ColumnName="CAPTION7" />
+                <ScalarProperty Name="CAPTION6" ColumnName="CAPTION6" />
+                <ScalarProperty Name="CAPTION5" ColumnName="CAPTION5" />
+                <ScalarProperty Name="CAPTION4" ColumnName="CAPTION4" />
+                <ScalarProperty Name="CAPTION3" ColumnName="CAPTION3" />
+                <ScalarProperty Name="CAPTION2" ColumnName="CAPTION2" />
+                <ScalarProperty Name="CAPTION1" ColumnName="CAPTION1" />
+                <ScalarProperty Name="CAPTION0" ColumnName="CAPTION0" />
+                <ScalarProperty Name="CHECKOUTDATE" ColumnName="CHECKOUTDATE" />
+                <ScalarProperty Name="CHECKOUT" ColumnName="CHECKOUT" />
+                <ScalarProperty Name="VERSIONNO" ColumnName="VERSIONNO" />
+                <ScalarProperty Name="ISSERVER" ColumnName="ISSERVER" />
+                <ScalarProperty Name="PACKAGEDATE" ColumnName="PACKAGEDATE" />
+                <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+                <ScalarProperty Name="ITEMTYPE" ColumnName="ITEMTYPE" />
+                <ScalarProperty Name="ISSHOWMODAL" ColumnName="ISSHOWMODAL" />
+                <ScalarProperty Name="FORM" ColumnName="FORM" />
+                <ScalarProperty Name="ITEMPARAM" ColumnName="ITEMPARAM" />
+                <ScalarProperty Name="MODULETYPE" ColumnName="MODULETYPE" />
+                <ScalarProperty Name="PACKAGE" ColumnName="PACKAGE" />
+                <ScalarProperty Name="PARENT" ColumnName="PARENT" />
+                <ScalarProperty Name="CAPTION" ColumnName="CAPTION" />
+                <ScalarProperty Name="MENUID" ColumnName="MENUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_ROLES_AGENT">
+            <EntityTypeMapping TypeName="EFModel.SYS_ROLES_AGENT">
+              <MappingFragment StoreEntitySet="SYS_ROLES_AGENT">
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="PAR_AGENT" ColumnName="PAR_AGENT" />
+                <ScalarProperty Name="END_TIME" ColumnName="END_TIME" />
+                <ScalarProperty Name="END_DATE" ColumnName="END_DATE" />
+                <ScalarProperty Name="START_TIME" ColumnName="START_TIME" />
+                <ScalarProperty Name="START_DATE" ColumnName="START_DATE" />
+                <ScalarProperty Name="FLOW_DESC" ColumnName="FLOW_DESC" />
+                <ScalarProperty Name="AGENT" ColumnName="AGENT" />
+                <ScalarProperty Name="ROLE_ID" ColumnName="ROLE_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GROUPMENUS">
+            <EntityTypeMapping TypeName="EFModel.GROUPMENUS">
+              <MappingFragment StoreEntitySet="GROUPMENUS">
+                <ScalarProperty Name="MENUID" ColumnName="MENUID" />
+                <ScalarProperty Name="GROUPID" ColumnName="GROUPID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERMENUS">
+            <EntityTypeMapping TypeName="EFModel.USERMENUS">
+              <MappingFragment StoreEntitySet="USERMENUS">
+                <ScalarProperty Name="MENUID" ColumnName="MENUID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_ORGKIND">
+            <EntityTypeMapping TypeName="EFModel.SYS_ORGKIND">
+              <MappingFragment StoreEntitySet="SYS_ORGKIND">
+                <ScalarProperty Name="KIND_DESC" ColumnName="KIND_DESC" />
+                <ScalarProperty Name="ORG_KIND" ColumnName="ORG_KIND" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_REFVAL">
+            <EntityTypeMapping TypeName="EFModel.SYS_REFVAL">
+              <MappingFragment StoreEntitySet="SYS_REFVAL">
+                <ScalarProperty Name="VALUE_MEMBER" ColumnName="VALUE_MEMBER" />
+                <ScalarProperty Name="SELECT_COMMAND" ColumnName="SELECT_COMMAND" />
+                <ScalarProperty Name="SELECT_ALIAS" ColumnName="SELECT_ALIAS" />
+                <ScalarProperty Name="DISPLAY_MEMBER" ColumnName="DISPLAY_MEMBER" />
+                <ScalarProperty Name="CAPTION" ColumnName="CAPTION" />
+                <ScalarProperty Name="TABLE_NAME" ColumnName="TABLE_NAME" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="REFVAL_NO" ColumnName="REFVAL_NO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GROUPMENUCONTROL">
+            <EntityTypeMapping TypeName="EFModel.GROUPMENUCONTROL">
+              <MappingFragment StoreEntitySet="GROUPMENUCONTROL">
+                <ScalarProperty Name="ALLOWPRINT" ColumnName="ALLOWPRINT" />
+                <ScalarProperty Name="ALLOWDELETE" ColumnName="ALLOWDELETE" />
+                <ScalarProperty Name="ALLOWUPDATE" ColumnName="ALLOWUPDATE" />
+                <ScalarProperty Name="ALLOWADD" ColumnName="ALLOWADD" />
+                <ScalarProperty Name="VISIBLE" ColumnName="VISIBLE" />
+                <ScalarProperty Name="ENABLED" ColumnName="ENABLED" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="CONTROLNAME" ColumnName="CONTROLNAME" />
+                <ScalarProperty Name="MENUID" ColumnName="MENUID" />
+                <ScalarProperty Name="GROUPID" ColumnName="GROUPID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MENUTABLECONTROL">
+            <EntityTypeMapping TypeName="EFModel.MENUTABLECONTROL">
+              <MappingFragment StoreEntitySet="MENUTABLECONTROL">
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="CONTROLNAME" ColumnName="CONTROLNAME" />
+                <ScalarProperty Name="MENUID" ColumnName="MENUID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERMENUCONTROL">
+            <EntityTypeMapping TypeName="EFModel.USERMENUCONTROL">
+              <MappingFragment StoreEntitySet="USERMENUCONTROL">
+                <ScalarProperty Name="ALLOWPRINT" ColumnName="ALLOWPRINT" />
+                <ScalarProperty Name="ALLOWDELETE" ColumnName="ALLOWDELETE" />
+                <ScalarProperty Name="ALLOWUPDATE" ColumnName="ALLOWUPDATE" />
+                <ScalarProperty Name="ALLOWADD" ColumnName="ALLOWADD" />
+                <ScalarProperty Name="VISIBLE" ColumnName="VISIBLE" />
+                <ScalarProperty Name="ENABLED" ColumnName="ENABLED" />
+                <ScalarProperty Name="TYPE" ColumnName="TYPE" />
+                <ScalarProperty Name="CONTROLNAME" ColumnName="CONTROLNAME" />
+                <ScalarProperty Name="MENUID" ColumnName="MENUID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GROUPS">
+            <EntityTypeMapping TypeName="EFModel.GROUPS">
+              <MappingFragment StoreEntitySet="GROUPS">
+                <ScalarProperty Name="ISROLE" ColumnName="ISROLE" />
+                <ScalarProperty Name="MSAD" ColumnName="MSAD" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="GROUPNAME" ColumnName="GROUPNAME" />
+                <ScalarProperty Name="GROUPID" ColumnName="GROUPID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USERS">
+            <EntityTypeMapping TypeName="EFModel.USER">
+              <MappingFragment StoreEntitySet="USERS">
+                <ScalarProperty Name="MSAD" ColumnName="MSAD" />
+                <ScalarProperty Name="SIGNATURE" ColumnName="SIGNATURE" />
+                <ScalarProperty Name="LASTDATE" ColumnName="LASTDATE" />
+                <ScalarProperty Name="AUTOLOGIN" ColumnName="AUTOLOGIN" />
+                <ScalarProperty Name="LASTTIME" ColumnName="LASTTIME" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="CREATER" ColumnName="CREATER" />
+                <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+                <ScalarProperty Name="PWD" ColumnName="PWD" />
+                <ScalarProperty Name="AGENT" ColumnName="AGENT" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_PERSONAL">
+            <EntityTypeMapping TypeName="EFModel.SYS_PERSONAL">
+              <MappingFragment StoreEntitySet="SYS_PERSONAL">
+                <ScalarProperty Name="CREATEDATE" ColumnName="CREATEDATE" />
+                <ScalarProperty Name="PROPCONTENT" ColumnName="PROPCONTENT" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="COMPNAME" ColumnName="COMPNAME" />
+                <ScalarProperty Name="FORMNAME" ColumnName="FORMNAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYSEEPLOG">
+            <EntityTypeMapping TypeName="EFModel.SYSEEPLOG">
+              <MappingFragment StoreEntitySet="SYSEEPLOG">
+                <ScalarProperty Name="EXECUTIONTIME" ColumnName="EXECUTIONTIME" />
+                <ScalarProperty Name="COMPUTERNAME" ColumnName="COMPUTERNAME" />
+                <ScalarProperty Name="COMPUTERIP" ColumnName="COMPUTERIP" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="TITLE" ColumnName="TITLE" />
+                <ScalarProperty Name="LOGTYPE" ColumnName="LOGTYPE" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="DOMAINID" ColumnName="DOMAINID" />
+                <ScalarProperty Name="LOGDATETIME" ColumnName="LOGDATETIME" />
+                <ScalarProperty Name="LOGSTYLE" ColumnName="LOGSTYLE" />
+                <ScalarProperty Name="LOGID" ColumnName="LOGID" />
+                <ScalarProperty Name="CONNID" ColumnName="CONNID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_TODOHIS">
+            <EntityTypeMapping TypeName="EFModel.SYS_TODOHIS">
+              <MappingFragment StoreEntitySet="SYS_TODOHIS">
+                <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+                <ScalarProperty Name="ATTACHMENTS" ColumnName="ATTACHMENTS" />
+                <ScalarProperty Name="FORM_PRESENT_CT" ColumnName="FORM_PRESENT_CT" />
+                <ScalarProperty Name="UPDATE_TIME" ColumnName="UPDATE_TIME" />
+                <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+                <ScalarProperty Name="LEVEL_NO" ColumnName="LEVEL_NO" />
+                <ScalarProperty Name="SENDBACKSTEP" ColumnName="SENDBACKSTEP" />
+                <ScalarProperty Name="VDSNAME" ColumnName="VDSNAME" />
+                <ScalarProperty Name="VERSION" ColumnName="VERSION" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="FORM_PRESENTATION" ColumnName="FORM_PRESENTATION" />
+                <ScalarProperty Name="FORM_KEYS" ColumnName="FORM_KEYS" />
+                <ScalarProperty Name="FORM_TABLE" ColumnName="FORM_TABLE" />
+                <ScalarProperty Name="FLOWURGENT" ColumnName="FLOWURGENT" />
+                <ScalarProperty Name="FLOWIMPORTANT" ColumnName="FLOWIMPORTANT" />
+                <ScalarProperty Name="TIME_UNIT" ColumnName="TIME_UNIT" />
+                <ScalarProperty Name="EXP_TIME" ColumnName="EXP_TIME" />
+                <ScalarProperty Name="PROC_TIME" ColumnName="PROC_TIME" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="PARAMETERS" ColumnName="PARAMETERS" />
+                <ScalarProperty Name="FLNAVIGATOR_MODE" ColumnName="FLNAVIGATOR_MODE" />
+                <ScalarProperty Name="NAVIGATOR_MODE" ColumnName="NAVIGATOR_MODE" />
+                <ScalarProperty Name="S_USERNAME" ColumnName="S_USERNAME" />
+                <ScalarProperty Name="WEBFORM_NAME" ColumnName="WEBFORM_NAME" />
+                <ScalarProperty Name="FORM_NAME" ColumnName="FORM_NAME" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="S_USER_ID" ColumnName="S_USER_ID" />
+                <ScalarProperty Name="S_STEP_DESC" ColumnName="S_STEP_DESC" />
+                <ScalarProperty Name="D_STEP_ID" ColumnName="D_STEP_ID" />
+                <ScalarProperty Name="S_STEP_ID" ColumnName="S_STEP_ID" />
+                <ScalarProperty Name="S_ROLE_ID" ColumnName="S_ROLE_ID" />
+                <ScalarProperty Name="ROLE_ID" ColumnName="ROLE_ID" />
+                <ScalarProperty Name="FLOW_DESC" ColumnName="FLOW_DESC" />
+                <ScalarProperty Name="FLOW_ID" ColumnName="FLOW_ID" />
+                <ScalarProperty Name="LISTID" ColumnName="LISTID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_TODOLIST">
+            <EntityTypeMapping TypeName="EFModel.SYS_TODOLIST">
+              <MappingFragment StoreEntitySet="SYS_TODOLIST">
+                <ScalarProperty Name="CREATE_TIME" ColumnName="CREATE_TIME" />
+                <ScalarProperty Name="ATTACHMENTS" ColumnName="ATTACHMENTS" />
+                <ScalarProperty Name="SENDTO_NAME" ColumnName="SENDTO_NAME" />
+                <ScalarProperty Name="MULTISTEPRETURN" ColumnName="MULTISTEPRETURN" />
+                <ScalarProperty Name="PLUSROLES" ColumnName="PLUSROLES" />
+                <ScalarProperty Name="PLUSAPPROVE" ColumnName="PLUSAPPROVE" />
+                <ScalarProperty Name="FLOWPATH" ColumnName="FLOWPATH" />
+                <ScalarProperty Name="UPDATE_TIME" ColumnName="UPDATE_TIME" />
+                <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+                <ScalarProperty Name="WEBFORM_NAME" ColumnName="WEBFORM_NAME" />
+                <ScalarProperty Name="LEVEL_NO" ColumnName="LEVEL_NO" />
+                <ScalarProperty Name="SENDBACKSTEP" ColumnName="SENDBACKSTEP" />
+                <ScalarProperty Name="VDSNAME" ColumnName="VDSNAME" />
+                <ScalarProperty Name="EMAIL_STATUS" ColumnName="EMAIL_STATUS" />
+                <ScalarProperty Name="EMAIL_ADD" ColumnName="EMAIL_ADD" />
+                <ScalarProperty Name="VERSION" ColumnName="VERSION" />
+                <ScalarProperty Name="PROVIDER_NAME" ColumnName="PROVIDER_NAME" />
+                <ScalarProperty Name="REMARK" ColumnName="REMARK" />
+                <ScalarProperty Name="FORM_PRESENT_CT" ColumnName="FORM_PRESENT_CT" />
+                <ScalarProperty Name="FORM_PRESENTATION" ColumnName="FORM_PRESENTATION" />
+                <ScalarProperty Name="FORM_KEYS" ColumnName="FORM_KEYS" />
+                <ScalarProperty Name="FORM_TABLE" ColumnName="FORM_TABLE" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="FLOWURGENT" ColumnName="FLOWURGENT" />
+                <ScalarProperty Name="FLOWIMPORTANT" ColumnName="FLOWIMPORTANT" />
+                <ScalarProperty Name="SENDTO_ID" ColumnName="SENDTO_ID" />
+                <ScalarProperty Name="SENDTO_KIND" ColumnName="SENDTO_KIND" />
+                <ScalarProperty Name="PARAMETERS" ColumnName="PARAMETERS" />
+                <ScalarProperty Name="FLNAVIGATOR_MODE" ColumnName="FLNAVIGATOR_MODE" />
+                <ScalarProperty Name="NAVIGATOR_MODE" ColumnName="NAVIGATOR_MODE" />
+                <ScalarProperty Name="FORM_NAME" ColumnName="FORM_NAME" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="TIME_UNIT" ColumnName="TIME_UNIT" />
+                <ScalarProperty Name="URGENT_TIME" ColumnName="URGENT_TIME" />
+                <ScalarProperty Name="EXP_TIME" ColumnName="EXP_TIME" />
+                <ScalarProperty Name="D_STEP_DESC" ColumnName="D_STEP_DESC" />
+                <ScalarProperty Name="D_STEP_ID" ColumnName="D_STEP_ID" />
+                <ScalarProperty Name="S_STEP_DESC" ColumnName="S_STEP_DESC" />
+                <ScalarProperty Name="S_STEP_ID" ColumnName="S_STEP_ID" />
+                <ScalarProperty Name="S_USER_ID" ColumnName="S_USER_ID" />
+                <ScalarProperty Name="APPLICANT" ColumnName="APPLICANT" />
+                <ScalarProperty Name="FLOW_DESC" ColumnName="FLOW_DESC" />
+                <ScalarProperty Name="FLOW_ID" ColumnName="FLOW_ID" />
+                <ScalarProperty Name="LISTID" ColumnName="LISTID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_REPORT">
+            <EntityTypeMapping TypeName="EFModel.SYS_REPORT">
+              <MappingFragment StoreEntitySet="SYS_REPORT">
+                <ScalarProperty Name="DATASOURCE_PROVIDER" ColumnName="DATASOURCE_PROVIDER" />
+                <ScalarProperty Name="TEMPLATE_DESC" ColumnName="TEMPLATE_DESC" />
+                <ScalarProperty Name="REPORT_TYPE" ColumnName="REPORT_TYPE" />
+                <ScalarProperty Name="CLIENT_QUERY" ColumnName="CLIENT_QUERY" />
+                <ScalarProperty Name="DATASOURCES" ColumnName="DATASOURCES" />
+                <ScalarProperty Name="HEADER_DATASOURCEID" ColumnName="HEADER_DATASOURCEID" />
+                <ScalarProperty Name="HEADERREPEAT" ColumnName="HEADERREPEAT" />
+                <ScalarProperty Name="MAILSETTING" ColumnName="MAILSETTING" />
+                <ScalarProperty Name="IMAGES" ColumnName="IMAGES" />
+                <ScalarProperty Name="PARAMETERS" ColumnName="PARAMETERS" />
+                <ScalarProperty Name="FORMAT" ColumnName="FORMAT" />
+                <ScalarProperty Name="SETTING" ColumnName="SETTING" />
+                <ScalarProperty Name="FIELDITEMS" ColumnName="FIELDITEMS" />
+                <ScalarProperty Name="FIELDFONT" ColumnName="FIELDFONT" />
+                <ScalarProperty Name="FOOTERITEMS" ColumnName="FOOTERITEMS" />
+                <ScalarProperty Name="FOOTERFONT" ColumnName="FOOTERFONT" />
+                <ScalarProperty Name="HEADERITEMS" ColumnName="HEADERITEMS" />
+                <ScalarProperty Name="HEADERFONT" ColumnName="HEADERFONT" />
+                <ScalarProperty Name="OUTPUTMODE" ColumnName="OUTPUTMODE" />
+                <ScalarProperty Name="FILEPATH" ColumnName="FILEPATH" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="REPORTNAME" ColumnName="REPORTNAME" />
+                <ScalarProperty Name="FILENAME" ColumnName="FILENAME" />
+                <ScalarProperty Name="REPORTID" ColumnName="REPORTID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_SDGROUPS">
+            <EntityTypeMapping TypeName="EFModel.SYS_SDGROUPS">
+              <MappingFragment StoreEntitySet="SYS_SDGROUPS">
+                <ScalarProperty Name="GROUPNAME" ColumnName="GROUPNAME" />
+                <ScalarProperty Name="GROUPID" ColumnName="GROUPID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_SDQUEUE">
+            <EntityTypeMapping TypeName="EFModel.SYS_SDQUEUE">
+              <MappingFragment StoreEntitySet="SYS_SDQUEUE">
+                <ScalarProperty Name="PRINTSETTING" ColumnName="PRINTSETTING" />
+                <ScalarProperty Name="FILENAME" ColumnName="FILENAME" />
+                <ScalarProperty Name="DOCUMENT" ColumnName="DOCUMENT" />
+                <ScalarProperty Name="FINISHFLAG" ColumnName="FINISHFLAG" />
+                <ScalarProperty Name="FINISHTIME" ColumnName="FINISHTIME" />
+                <ScalarProperty Name="CREATETIME" ColumnName="CREATETIME" />
+                <ScalarProperty Name="PAGETYPE" ColumnName="PAGETYPE" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_SDQUEUEPAGE">
+            <EntityTypeMapping TypeName="EFModel.SYS_SDQUEUEPAGE">
+              <MappingFragment StoreEntitySet="SYS_SDQUEUEPAGE">
+                <ScalarProperty Name="PAGENAME" ColumnName="PAGENAME" />
+                <ScalarProperty Name="PHOTO" ColumnName="PHOTO" />
+                <ScalarProperty Name="DOCUMENT" ColumnName="DOCUMENT" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_SDUSERS">
+            <EntityTypeMapping TypeName="EFModel.SYS_SDUSERS">
+              <MappingFragment StoreEntitySet="SYS_SDUSERS">
+                <ScalarProperty Name="SYSTYPE" ColumnName="SYSTYPE" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="LASTDATE" ColumnName="LASTDATE" />
+                <ScalarProperty Name="GROUPID" ColumnName="GROUPID" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_WEBPAGES_LOG">
+            <EntityTypeMapping TypeName="EFModel.SYS_WEBPAGES_LOG">
+              <MappingFragment StoreEntitySet="SYS_WEBPAGES_LOG">
+                <ScalarProperty Name="CHECKINDESCRIPTION" ColumnName="CHECKINDESCRIPTION" />
+                <ScalarProperty Name="CHECKINUSER" ColumnName="CHECKINUSER" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CHECKINDATE" ColumnName="CHECKINDATE" />
+                <ScalarProperty Name="SERVERDLL" ColumnName="SERVERDLL" />
+                <ScalarProperty Name="SOLUTIONID" ColumnName="SOLUTIONID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="PAGETYPE" ColumnName="PAGETYPE" />
+                <ScalarProperty Name="PAGENAME" ColumnName="PAGENAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_WEBRUNTIME">
+            <EntityTypeMapping TypeName="EFModel.SYS_WEBRUNTIME">
+              <MappingFragment StoreEntitySet="SYS_WEBRUNTIME">
+                <ScalarProperty Name="SOLUTIONID" ColumnName="SOLUTIONID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+                <ScalarProperty Name="PAGETYPE" ColumnName="PAGETYPE" />
+                <ScalarProperty Name="PAGENAME" ColumnName="PAGENAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_SDUSERS_LOG">
+            <EntityTypeMapping TypeName="EFModel.SYS_SDUSERS_LOG">
+              <MappingFragment StoreEntitySet="SYS_SDUSERS_LOG">
+                <ScalarProperty Name="LOGOUTTIME" ColumnName="LOGOUTTIME" />
+                <ScalarProperty Name="LOGINTIME" ColumnName="LOGINTIME" />
+                <ScalarProperty Name="IPADDRESS" ColumnName="IPADDRESS" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_WEBPAGES">
+            <EntityTypeMapping TypeName="EFModel.SYS_WEBPAGES">
+              <MappingFragment StoreEntitySet="SYS_WEBPAGES">
+                <ScalarProperty Name="CHECKOUTUSER" ColumnName="CHECKOUTUSER" />
+                <ScalarProperty Name="CHECKOUTDATE" ColumnName="CHECKOUTDATE" />
+                <ScalarProperty Name="CHECKOUT" ColumnName="CHECKOUT" />
+                <ScalarProperty Name="SERVERDLL" ColumnName="SERVERDLL" />
+                <ScalarProperty Name="SOLUTIONID" ColumnName="SOLUTIONID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="CONTENT" ColumnName="CONTENT" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="PAGETYPE" ColumnName="PAGETYPE" />
+                <ScalarProperty Name="PAGENAME" ColumnName="PAGENAME" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_SDALIAS">
+            <EntityTypeMapping TypeName="EFModel.SYS_SDALIAS">
+              <MappingFragment StoreEntitySet="SYS_SDALIAS">
+                <ScalarProperty Name="DBTYPE" ColumnName="DBTYPE" />
+                <ScalarProperty Name="SPLIT" ColumnName="SPLIT" />
+                <ScalarProperty Name="DBNAME" ColumnName="DBNAME" />
+                <ScalarProperty Name="SYSTEMALIAS" ColumnName="SYSTEMALIAS" />
+                <ScalarProperty Name="ALIASNAME" ColumnName="ALIASNAME" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_SDSOLUTIONS">
+            <EntityTypeMapping TypeName="EFModel.SYS_SDSOLUTIONS">
+              <MappingFragment StoreEntitySet="SYS_SDSOLUTIONS">
+                <ScalarProperty Name="COMPANYIMAGE" ColumnName="COMPANYIMAGE" />
+                <ScalarProperty Name="PAGESAVEOPTION" ColumnName="PAGESAVEOPTION" />
+                <ScalarProperty Name="COMPANY" ColumnName="COMPANY" />
+                <ScalarProperty Name="THEME" ColumnName="THEME" />
+                <ScalarProperty Name="BGENDCOLOR" ColumnName="BGENDCOLOR" />
+                <ScalarProperty Name="BGSTARTCOLOR" ColumnName="BGSTARTCOLOR" />
+                <ScalarProperty Name="LOGONIMAGE" ColumnName="LOGONIMAGE" />
+                <ScalarProperty Name="ALIASOPTIONS" ColumnName="ALIASOPTIONS" />
+                <ScalarProperty Name="SETTING" ColumnName="SETTING" />
+                <ScalarProperty Name="MOUDLEXMLTEXT" ColumnName="MOUDLEXMLTEXT" />
+                <ScalarProperty Name="SOLUTIONNAME" ColumnName="SOLUTIONNAME" />
+                <ScalarProperty Name="SOLUTIONID" ColumnName="SOLUTIONID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_LANGUAGE">
+            <EntityTypeMapping TypeName="EFModel.SYS_LANGUAGE">
+              <MappingFragment StoreEntitySet="SYS_LANGUAGE">
+                <ScalarProperty Name="LAN2" ColumnName="LAN2" />
+                <ScalarProperty Name="LAN1" ColumnName="LAN1" />
+                <ScalarProperty Name="KO" ColumnName="KO" />
+                <ScalarProperty Name="JA" ColumnName="JA" />
+                <ScalarProperty Name="HK" ColumnName="HK" />
+                <ScalarProperty Name="CHS" ColumnName="CHS" />
+                <ScalarProperty Name="CHT" ColumnName="CHT" />
+                <ScalarProperty Name="EN" ColumnName="EN" />
+                <ScalarProperty Name="KEYS" ColumnName="KEYS" />
+                <ScalarProperty Name="IDENTIFICATION" ColumnName="IDENTIFICATION" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="EFModel" ZoomLevel="89">
+        <EntityTypeShape EntityType="EFModel.USERGROUPS" Width="1.5" PointX="2.75" PointY="4.75" Height="1.3969734700520822" />
+        <EntityTypeShape EntityType="EFModel.COLDEF" Width="1.5" PointX="4.75" PointY="4.75" Height="5.59940673828125" />
+        <EntityTypeShape EntityType="EFModel.MENUITEMTYPE" Width="1.5" PointX="6.75" PointY="4.75" Height="1.4279589843749996" />
+        <EntityTypeShape EntityType="EFModel.MENUTABLE" Width="1.5" PointX="0.75" PointY="0.75" Height="6.3634855143229156" />
+        <EntityTypeShape EntityType="EFModel.SYS_ROLES_AGENT" Width="1.5" PointX="7.75" PointY="0.75" Height="2.7341113281249996" />
+        <EntityTypeShape EntityType="EFModel.GROUPMENUS" Width="1.5" PointX="6.75" PointY="7.75" Height="1.3969734700520746" />
+        <EntityTypeShape EntityType="EFModel.USERMENUS" Width="1.5" PointX="0.75" PointY="8.75" Height="1.3969734700520746" />
+        <EntityTypeShape EntityType="EFModel.SYS_ORGKIND" Width="1.5" PointX="8.75" PointY="4.75" Height="1.3969734700520888" />
+        <AssociationConnector Association="EFModel.FK_MENUTABLE_MENUTABLE" >
+          <ConnectorPoint PointX="8.6569230769230767" PointY="7.1134855143229156" />
+          <ConnectorPoint PointX="8.6569230769230767" PointY="7.3634855143229156" />
+          <ConnectorPoint PointX="9.1034615384615378" PointY="7.3634855143229156" />
+          <ConnectorPoint PointX="9.1034615384615378" PointY="7.1134855143229156" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="EFModel.SYS_REFVAL" Width="1.5" PointX="8.75" PointY="7.75" Height="2.5430916341145888" />
+        <EntityTypeShape EntityType="EFModel.GROUPMENUCONTROL" Width="1.5" PointX="9.75" PointY="0.75" Height="2.9251310221354174" />
+        <EntityTypeShape EntityType="EFModel.MENUTABLECONTROL" Width="1.5" PointX="10.75" PointY="4.75" Height="1.7790128580729174" />
+        <EntityTypeShape EntityType="EFModel.USERMENUCONTROL" Width="1.5" PointX="10.75" PointY="7.75" Height="2.9251310221354174" />
+        <EntityTypeShape EntityType="EFModel.GROUPS" Width="1.5" PointX="11.75" PointY="0.75" Height="1.9700325520833331" />
+        <EntityTypeShape EntityType="EFModel.USER" Width="1.5" PointX="0.75" PointY="11.75" Height="3.4981901041666656" />
+        <EntityTypeShape EntityType="EFModel.SYS_PERSONAL" Width="1.5" PointX="2.75" PointY="11.75" Height="2.1610522460937602" />
+        <EntityTypeShape EntityType="EFModel.SYSEEPLOG" Width="1.5" PointX="4.75" PointY="11.75" Height="3.3071704101562531" />
+        <EntityTypeShape EntityType="EFModel.SYS_TODOHIS" Width="1.5" PointX="6.75" PointY="11.75" Height="7.8916430664062567" />
+        <EntityTypeShape EntityType="EFModel.SYS_TODOLIST" Width="1.5" PointX="8.75" PointY="11.75" Height="9.4198006184895782" />
+        <EntityTypeShape EntityType="EFModel.SYS_REPORT" Width="1.5" PointX="10.75" PointY="11.75" Height="5.5994067382812531" />
+        <EntityTypeShape EntityType="EFModel.SYS_SDGROUPS" Width="1.5" PointX="12.75" PointY="3.75" />
+        <EntityTypeShape EntityType="EFModel.SYS_SDQUEUE" Width="1.5" PointX="2.75" PointY="1" />
+        <EntityTypeShape EntityType="EFModel.SYS_SDQUEUEPAGE" Width="1.5" PointX="5" PointY="1.5" />
+        <EntityTypeShape EntityType="EFModel.SYS_SDUSERS" Width="1.5" PointX="12.75" PointY="11.75" />
+        <EntityTypeShape EntityType="EFModel.SYS_WEBPAGES_LOG" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="EFModel.SYS_WEBRUNTIME" Width="1.5" PointX="14.75" PointY="4.75" />
+        <AssociationConnector Association="EFModel.FK_SYS_SDQUEUEPAGE_SYS_SDQUEUE" />
+        <EntityTypeShape EntityType="EFModel.SYS_SDUSERS_LOG" Width="1.5" PointX="14.75" PointY="7.75" />
+        <EntityTypeShape EntityType="EFModel.SYS_WEBPAGES" Width="1.5" PointX="14.75" PointY="10.75" />
+        <EntityTypeShape EntityType="EFModel.SYS_SDALIAS" Width="1.5" PointX="14.75" PointY="14.75" />
+        <EntityTypeShape EntityType="EFModel.SYS_SDSOLUTIONS" Width="1.5" PointX="7.15560702008922" PointY="5.5113117422495561" />
+        <EntityTypeShape EntityType="EFModel.SYS_LANGUAGE" Width="1.5" PointX="1.9507242766910811" PointY="31.927051871981032" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

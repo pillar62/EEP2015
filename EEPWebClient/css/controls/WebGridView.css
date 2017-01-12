@@ -1,0 +1,48 @@
+﻿/*gridview的外观样式Office Blue*/
+.gridview_1 {
+    font-family: Microsoft JhengHei;
+    font-size: 9pt;
+    filter: progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3) ;
+    filter: alpha(opacity=85);
+    -moz-opacity: 0.85;
+    -khtml-opacity: 0.85;
+    opacity: 0.85;
+}
+
+/*gridview的header样式*/
+.gridview_header_1 {
+    background-image: url('../../Image/ControlImage/gridHeader1.png');
+    height: 30px;
+    color: black;
+    background-repeat: repeat;
+}
+
+/*gridview的row样式*/
+.gridview_row_1 {
+    background-image: url('../../Image/ControlImage/gridRow1.png');
+    background-repeat: repeat;
+}
+
+/*gridview的altrow样式*/
+.gridview_altrow_1 {
+    background-image: url('../../Image/ControlImage/gridAltRow1.png');
+    background-repeat: repeat;
+}
+
+/*gridview的footer样式*/
+.gridview_footer_1 {
+    background-image: url('../../Image/ControlImage/gridFooter1.png');
+    background-repeat: repeat;
+}
+
+/*gridview的pager样式*/
+.gridview_pager_1 {
+    background-image: url('../../Image/ControlImage/gridPager1.png');
+    background-repeat: repeat;
+}
+
+/*gridview的selected row样式*/
+.gridview_selectedrow_1 {
+    background-image: url('../../Image/ControlImage/gridSelected1.png');
+    background-repeat: repeat;
+}

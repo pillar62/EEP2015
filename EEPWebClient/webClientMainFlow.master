@@ -1,0 +1,741 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="webClientMainFlow.master.cs" Inherits="webClientMainFlowMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="css/mpClientMain.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" type="text/javascript">
+        function hidImg(imgs, tds)
+        {
+            var images = tds[0].getElementsByTagName('img');
+            for(var x=0; x<images.length; x++)
+            {
+                for(var y=0;y<imgs.length;y++)
+                {
+                    if(imgs[y] == images[x].id)
+                    {
+                    images[x].style.display = 'none';
+                    images[x].style.visibility = 'hidden';
+                    }
+                }
+            }
+        }
+
+function todolist_onload()
+{
+    if(document.getElementById("<%= this.dgvToDoList.ClientID %>"))
+    {
+        var trs = document.getElementById("<%= this.dgvToDoList.ClientID %>").getElementsByTagName("tr");
+        for(var i=0;i<trs.length;i++)
+        {
+            if(i==0)
+            {
+                var ths = trs[i].getElementsByTagName("th");
+                setListDisplay(ths);
+            }
+            else
+            {
+                var tds = trs[i].getElementsByTagName("td");
+                if(tds.length >= 40)
+                {
+                    setListDisplay(tds);
+                    var x = tds.length;
+                    var LISTID = tds[x-42].innerHTML == '&nbsp;' ? '' : tds[x-42].innerHTML;
+                    var FLOWPATH = tds[x-5].innerHTML == '&nbsp;' ? '' : tds[x-5].innerHTML;
+                    var openA = tds[0].getElementsByTagName('a')[0];
+                    if(openA)
+                    {
+                        var NAVIGATOR_MODE = tds[x-28].innerHTML == '&nbsp;' ? '' : tds[x-28].innerHTML;
+                        var FLNAVIGATOR_MODE = tds[x-27].innerHTML == '&nbsp;' ? '' : tds[x-27].innerHTML;
+                        var PARAMETERS = tds[x-26].innerHTML =='&nbsp;' ? '' : ConvertUserParameters(tds[x-26].innerHTML);
+                        var SENDTOID = tds[x-24].innerHTML == '&nbsp;' ? '' : tds[x-24].innerHTML;
+                        var FLOWIMPORTANT = tds[x-22].innerHTML == '&nbsp;' ? '' : tds[x-22].innerHTML;
+                        var FLOWURGENT = tds[x-21].innerHTML == '&nbsp;' ? '' : tds[x-21].innerHTML;
+                        var STATUS = tds[x-20].innerHTML == '&nbsp;' ? '' : tds[x-20].innerHTML;
+                        var FORM_PRESENTATION = tds[x-17].innerHTML == '&nbsp;' ? '' : tds[x-17].innerHTML;
+                        var FORM_NAME = tds[x-7].innerHTML == '&nbsp;' ? '' : tds[x-7].innerHTML;
+                        var PLUSAPPROVE = tds[x-4].innerHTML == '&nbsp;' ? '' : tds[x-4].innerHTML;
+                        var PLUSROLES = tds[x-3].innerHTML == '&nbsp;' ? '' : tds[x-3].innerHTML;
+                        var MULTISTEPRETURN = tds[x-2].innerHTML == '&nbsp;' ? '' : tds[x-2].innerHTML;
+                        var ATTACHMENTS = tds[x-1].innerHTML == '&nbsp;' ? '' : tds[x-1].innerHTML;
+                        
+                        var packageName = FORM_NAME.substring(0, FORM_NAME.indexOf('.'));
+                        var formName = FORM_NAME.substring(FORM_NAME.indexOf('.') + 1);
+                        
+                        if(STATUS)
+                        {
+                            if(STATUS == "A")
+                            {
+                                FLNAVIGATOR_MODE = '7';
+                                hidImg(new Array("returnImg"),tds);
+                            }
+                            if(STATUS == "F")
+                            {
+                                hidImg(new Array("approveImg", "returnImg"),tds);
+                            }
+                        }
+                        if(PLUSROLES && PLUSROLES != "")
+                        {
+                            FLNAVIGATOR_MODE = '8';
+                            hidImg(new Array("approveImg", "returnImg"),tds);
+                        }
+                        openA.href = packageName + "\\" + formName + ".aspx?LISTID=" + LISTID + "&FLOWPATH=" + encodeURI(FLOWPATH) + "&WHERESTRING=" + encodeURI(FORM_PRESENTATION) + "&NAVMODE=" + NAVIGATOR_MODE + "&FLNAVMODE=" + FLNAVIGATOR_MODE + "&ISIMPORTANT=" + FLOWIMPORTANT + "&ISURGENT=" + FLOWURGENT + "&STATUS=" + STATUS + "&PLUSAPPROVE=" + PLUSAPPROVE + "&MULTISTEPRETURN=" + MULTISTEPRETURN + "&ATTACHMENTS=" + encodeURI(ATTACHMENTS) + "&SENDTOID=" + encodeURI(SENDTOID) + PARAMETERS;
+                        //openA.target = "main";
+                    }
+                }
+            }
+        }
+    }
+}
+
+function todohis_onload()
+{
+    if(document.getElementById("<%= this.dgvToDoHis.ClientID %>"))
+    {
+        var trs = document.getElementById("<%= this.dgvToDoHis.ClientID %>").getElementsByTagName("tr");
+        for(var i=0;i<trs.length;i++)
+        {
+            if(i==0)
+            {
+                var ths = trs[i].getElementsByTagName("th");
+                setHisDisplay(ths);
+            }
+            else
+            {
+                var tds = trs[i].getElementsByTagName("td");
+                if(tds.length >= 40)
+                {
+                    setHisDisplay(tds);
+                    var x = tds.length;
+                    var LISTID = tds[x-42].innerHTML == '&nbsp;' ? '' : tds[x-42].innerHTML;
+                    var FLOWPATH = tds[x-5].innerHTML == '&nbsp;' ? '' : tds[x-5].innerHTML;
+                    var openA = tds[0].getElementsByTagName('a')[0];
+                    if(openA)
+                    {
+                        var FORM_NAME = tds[x-7].innerHTML == '&nbsp;' ? '' : tds[x-7].innerHTML;
+                        var FORM_PRESENTATION = tds[x-17].innerHTML == '&nbsp;' ? '' : tds[x-17].innerHTML;
+                        var packageName = FORM_NAME.substring(0, FORM_NAME.indexOf('.'));
+                        var formName = FORM_NAME.substring(FORM_NAME.indexOf('.') + 1);
+                        var PARAMETERS = tds[x-26].innerHTML == '&nbsp;' ? '' : ConvertUserParameters(tds[x-26].innerHTML);
+                        openA.href = packageName + "\\" + formName + ".aspx?LISTID=" + LISTID + "&FLOWPATH=" + encodeURI(FLOWPATH) + "&WHERESTRING=" 
+                        + encodeURI(FORM_PRESENTATION) + "&NAVMODE=0&FLNAVMODE=6" + PARAMETERS;
+                        //openA.target = "main";
+                    }
+                }
+                else if(tds.length >= 11)
+                {
+                    setHisDisplay(tds);
+                    var x = tds.length;
+                    var openA = tds[0].getElementsByTagName('a')[0];
+                    if(openA)
+                    {
+                        var LISTID = tds[x-9].innerHTML == '&nbsp;' ? '' : tds[x-9].innerHTML;
+                        var FORM_NAME = tds[x-5].innerHTML == '&nbsp;' ? '' : tds[x-5].innerHTML;
+                        var FORM_PRESENTATION = tds[x-4].innerHTML == '&nbsp;' ? '' : tds[x-4].innerHTML;
+                        var packageName = FORM_NAME.substring(0, FORM_NAME.indexOf('.'));
+                        var formName = FORM_NAME.substring(FORM_NAME.indexOf('.') + 1);
+                        openA.href = packageName + "\\" + formName + ".aspx?LISTID=" + LISTID + "&WHERESTRING=" + FORM_PRESENTATION + "&NAVMODE=0&FLNAVMODE=6";
+                        openA.target = "main";
+                    }
+                }
+            }
+        }
+    }
+}
+
+function overtimeActive_onload()
+{
+    if(document.getElementById("<%= this.dgvOvertime.ClientID %>"))
+    {
+        var trs = document.getElementById("<%= this.dgvOvertime.ClientID %>").getElementsByTagName("tr");
+        for(var i=0;i<trs.length;i++)
+        {
+            if(i==0)
+            {
+                var ths = trs[i].getElementsByTagName("th");
+                setOvertimeDisplay(ths);
+            }
+            else
+            {
+                var tds = trs[i].getElementsByTagName("td");
+                if(tds.length >= 40)
+                {
+                    setOvertimeDisplay(tds);
+                    
+                    var x = tds.length;
+                    var openA = tds[0].getElementsByTagName('a')[0];
+                    if(openA)
+                    {
+                        var FORM_NAME = tds[x-9].innerHTML == '&nbsp;' ? '' : tds[x-9].innerHTML;
+                        var FORM_PRESENTATION = tds[x-19].innerHTML == '&nbsp;' ? '' : tds[x-19].innerHTML;
+                        var packageName = FORM_NAME.substring(0, FORM_NAME.indexOf('.'));
+                        var formName = FORM_NAME.substring(FORM_NAME.indexOf('.') + 1);
+                        openA.href = packageName + "\\" + formName + ".aspx?WHERESTRING=" 
+                        + encodeURI(FORM_PRESENTATION) + "&NAVMODE=0&FLNAVMODE=6";
+                        //openA.target = "main";
+                    }
+                }
+            }
+        }
+    }
+}
+
+function setListDisplay(tds)
+{
+    var i = tds.length;
+    if(i >= 39)
+    {
+    tds[i-42].style.display = 'none'; // LISTID,1
+    tds[i-41].style.display = 'none'; // FLOW_ID,2
+//    tds[i-40].style.display = 'none'; // FLOW_DESC,3
+    tds[i-39].style.display = 'none'; // APPLICANT,4
+    tds[i-38].style.display = 'none'; // S_USER_ID,5
+    tds[i-37].style.display = 'none'; // S_STEP_ID,6
+    tds[i-36].style.display = 'none'; // S_STEP_DESC,7
+//    tds[i-35].style.display = 'none'; // D_STEP_ID,8
+    tds[i-34].style.display = 'none'; // D_STEP_DESC,9
+    tds[i-33].style.display = 'none'; // EXP_TIME,10
+    tds[i-32].style.display = 'none'; // URGENT_TIME,11
+    tds[i-31].style.display = 'none'; // TIME_UNIT,12
+//    tds[i-30].style.display = 'none'; // USERNAME,13
+    tds[i-29].style.display = 'none'; // FORM_NAME,14
+    tds[i-28].style.display = 'none'; // NAVIGATOR_MODE,15
+    tds[i-27].style.display = 'none'; // FLNAVIGATOR_MODE,16
+    tds[i-26].style.display = 'none'; // PARAMETERS,17
+    tds[i-25].style.display = 'none'; // SENDTO_KIND,18
+    tds[i-24].style.display = 'none'; // SENDTO_ID,19
+    tds[i-23].style.display = 'none'; // SENDTO_NAME,20
+    tds[i-22].style.display = 'none'; // FLOWIMPORTANT,21
+    tds[i-21].style.display = 'none'; // FLOWURGENT,22
+//    tds[i-20].style.display = 'none'; // STATUS,23
+    tds[i-19].style.display = 'none'; // FORM_TABLE,24
+    tds[i-18].style.display = 'none'; // FORM_KEYS,25
+    tds[i-17].style.display = 'none'; // FORM_PRESENTATION,26
+//    tds[i-16].style.display = 'none'; // FORM_PRESENT_CT,27
+//    tds[i-15].style.display = 'none'; // REMARK,28
+    tds[i-14].style.display = 'none'; // PROVIDER_NAME,29
+    tds[i-13].style.display = 'none'; // VERSION,30
+    tds[i-12].style.display = 'none'; // EMAIL_ADD,31
+    tds[i-11].style.display = 'none'; // EMAIL_STATUS,32
+    tds[i-10].style.display = 'none'; // VDSNAME,33
+    tds[i-9].style.display = 'none'; // SENDBACKSTEP,34
+    tds[i-8].style.display = 'none'; // LEVEL_NO,35
+    tds[i-7].style.display = 'none'; // WEBFORMNAME,36
+//    tds[i-6].style.display = 'none'; // UPDATE_WHOLE_TIME,37
+    tds[i-5].style.display = 'none'; // FLOWPATH,38
+    tds[i-4].style.display = 'none'; // PLUSAPPROVE 39
+    tds[i-3].style.display = 'none'; // PLUSROLES 40
+    tds[i-2].style.display = 'none'; // MULTISTEPRETURN 41
+    tds[i-1].style.display = 'none'; // ATTACHMENTS 42
+    }
+}
+
+function setHisDisplay(tds)
+{
+    var i = tds.length;
+    if(i >= 39)
+    {
+    tds[i-42].style.display = 'none'; // LISTID,1
+    tds[i-41].style.display = 'none'; // FLOW_ID,2
+//    tds[i-40].style.display = 'none'; // FLOW_DESC,3
+    tds[i-39].style.display = 'none'; // APPLICANT,4
+    tds[i-38].style.display = 'none'; // S_USER_ID,5
+    tds[i-37].style.display = 'none'; // S_STEP_ID,6
+    tds[i-36].style.display = 'none'; // S_STEP_DESC,7
+//    tds[i-35].style.display = 'none'; // D_STEP_ID,8
+    tds[i-34].style.display = 'none'; // D_STEP_DESC,9
+    tds[i-33].style.display = 'none'; // EXP_TIME,10
+    tds[i-32].style.display = 'none'; // URGENT_TIME,11
+    tds[i-31].style.display = 'none'; // TIME_UNIT,12
+    tds[i-30].style.display = 'none'; // USERNAME,13
+    tds[i-29].style.display = 'none'; // FORM_NAME,14
+    tds[i-28].style.display = 'none'; // NAVIGATOR_MODE,15
+    tds[i-27].style.display = 'none'; // FLNAVIGATOR_MODE,16
+    tds[i-26].style.display = 'none'; // PARAMETERS,17
+    tds[i-25].style.display = 'none'; // SENDTO_KIND,18
+    tds[i-24].style.display = 'none'; // SENDTO_ID,19
+//    tds[i-23].style.display = 'none'; // SENDTO_NAME,20
+    tds[i-22].style.display = 'none'; // FLOWIMPORTANT,21
+    tds[i-21].style.display = 'none'; // FLOWURGENT,22
+//    tds[i-20].style.display = 'none'; // STATUS,23
+    tds[i-19].style.display = 'none'; // FORM_TABLE,24
+    tds[i-18].style.display = 'none'; // FORM_KEYS,25
+    tds[i-17].style.display = 'none'; // FORM_PRESENTATION,26
+//    tds[i-16].style.display = 'none'; // FORM_PRESENT_CT,27
+//    tds[i-15].style.display = 'none'; // REMARK,28
+    tds[i-14].style.display = 'none'; // PROVIDER_NAME,29
+    tds[i-13].style.display = 'none'; // VERSION,30
+    tds[i-12].style.display = 'none'; // EMAIL_ADD,31
+    tds[i-11].style.display = 'none'; // EMAIL_STATUS,32
+    tds[i-10].style.display = 'none'; // VDSNAME,33
+    tds[i-9].style.display = 'none'; // SENDBACKSTEP,34
+    tds[i-8].style.display = 'none'; // LEVEL_NO,35
+    tds[i-7].style.display = 'none'; // WebFormName,36
+//    tds[i-6].style.display = 'none'; // UPDATE_WHOLE_TIME,37
+    tds[i-5].style.display = 'none'; // FLOWPATH,38
+    tds[i-4].style.display = 'none'; // PLUSAPPROVE 39
+    tds[i-3].style.display = 'none'; // PLUSROLES 40
+    tds[i-2].style.display = 'none'; // MULTISTEPRETURN 41
+    tds[i-1].style.display = 'none'; // ATTACHMENTS 42
+    }
+    else if(i >= 8)
+    {
+        tds[i-9].style.display = 'none'; //LISTID
+        //tds[i-8].style.display = 'none'; //FLOW_DESC 流程
+        //tds[i-7].style.display = 'none'; //D_STEP_ID 作業名稱
+        tds[i-6].style.display = 'none'; //FORM_NAME
+        tds[i-5].style.display = 'none'; //WEBFORM_NAME
+        tds[i-4].style.display = 'none'; //FORM_PRESENTATION
+        //tds[i-3].style.display = 'none'; //FORM_PRESENT_CT 單據號碼
+        //tds[i-2].style.display = 'none'; //REMARK 訊息
+        //tds[i-1].style.display = 'none'; //UPDATE_WHOLE_TIME 日期
+    }
+}
+function setOvertimeDisplay(tds)
+{
+    var i = tds.length;
+    if(i >= 40)
+    {
+    tds[i-43].style.display = 'none'; // LISTID,1
+    tds[i-42].style.display = 'none'; // FLOW_ID,2
+//    tds[i-41].style.display = 'none'; // FLOW_DESC,3
+    tds[i-40].style.display = 'none'; // APPLICANT,4
+    tds[i-39].style.display = 'none'; // S_USER_ID,5
+    tds[i-38].style.display = 'none'; // S_STEP_ID,6
+    tds[i-37].style.display = 'none'; // S_STEP_DESC,7
+//    tds[i-36].style.display = 'none'; // D_STEP_ID,8
+    tds[i-35].style.display = 'none'; // D_STEP_DESC,9
+    tds[i-34].style.display = 'none'; // EXP_TIME,10
+    tds[i-33].style.display = 'none'; // URGENT_TIME,11
+    tds[i-32].style.display = 'none'; // TIME_UNIT,12
+    tds[i-31].style.display = 'none'; // USERNAME,13
+    tds[i-30].style.display = 'none'; // FORM_NAME,14
+    tds[i-29].style.display = 'none'; // NAVIGATOR_MODE,15
+    tds[i-28].style.display = 'none'; // FLNAVIGATOR_MODE,16
+    tds[i-27].style.display = 'none'; // PARAMETERS,17
+    tds[i-26].style.display = 'none'; // SENDTO_KIND,18
+    tds[i-25].style.display = 'none'; // SENDTO_ID,19
+    tds[i-24].style.display = 'none'; // FLOWIMPORTANT,20
+    tds[i-23].style.display = 'none'; // FLOWURGENT,21
+    tds[i-22].style.display = 'none'; // STATUS,22
+    tds[i-21].style.display = 'none'; // FORM_TABLE,23
+    tds[i-20].style.display = 'none'; // FORM_KEYS,24
+    tds[i-19].style.display = 'none'; // FORM_PRESENTATION,25
+//    tds[i-18].style.display = 'none'; // FORM_PRESENT_CT,26
+//    tds[i-17].style.display = 'none'; // REMARK,27
+    tds[i-16].style.display = 'none'; // PROVIDER_NAME,28
+    tds[i-15].style.display = 'none'; // VERSION,29
+    tds[i-14].style.display = 'none'; // EMAIL_ADD,30
+    tds[i-13].style.display = 'none'; // EMAIL_STATUS,31
+    tds[i-12].style.display = 'none'; // VDSNAME,32
+    tds[i-11].style.display = 'none'; // SENDBACKSTEP,33
+    tds[i-10].style.display = 'none'; // LEVEL_NO,34
+    tds[i-9].style.display = 'none'; // WEBFORMNAME,35
+    tds[i-8].style.display = 'none'; // UPDATE_DATE,36
+    tds[i-7].style.display = 'none'; // UPDATE_TIME,37
+    tds[i-6].style.display = 'none'; // FLOWPATH,38
+    tds[i-5].style.display = 'none'; // PLUSAPPROVE,39
+    tds[i-4].style.display = 'none'; // PLUSROLES 40
+    
+//    tds[i-3].style.display = 'none'; // SENDTO_DETAIL,41
+//    tds[i-2].style.display = 'none'; // UPDATE_WHOLE_TIME,42
+//    tds[i-1].style.display = 'none'; // OVERTIME,43
+    }
+}
+
+function ConvertUserParameters(userParameters)
+{
+    var retValue= '';
+    var lstUserParameters = userParameters.split(';');
+    for(i=0;i<lstUserParameters.length;i++)
+    {
+        var userParameter = lstUserParameters[i];
+        if (userParameter != "" && userParameter.indexOf('=') != -1)
+        {
+            var key = userParameter.substring(0, userParameter.indexOf('=') + 1);
+            var value = encodeURI(userParameter.substring(userParameter.indexOf('=') + 1));
+            retValue += "&" + key + value;
+        }
+    }
+    return retValue;
+}
+
+function approveClick()
+{
+    var approveImg = event.srcElement;
+    var rowElement = approveImg.parentNode;
+    var tds = rowElement.getElementsByTagName("td");
+    while(tds.length < 40 && rowElement)
+    {
+        rowElement = rowElement.parentNode;
+        tds = rowElement.getElementsByTagName("td");
+    }
+    if(tds.length >= 40)
+    {
+        var x = tds.length;
+        var approveImg = tds[0].getElementsByTagName('img')[1];
+        var LISTID = tds[x-42].innerHTML;
+        var FLOWPATH = tds[x-5].innerHTML;
+        var KEYS = tds[x-18].innerHTML;
+        var VALUES = tds[x-17].innerHTML;
+        var PROVIDER = tds[x-14].innerHTML;
+        var replaceText = '$$$$$';
+        VALUES = VALUES.replace(/'/g, replaceText);
+        var FLOWIMPORTANT = tds[x-22].innerHTML;
+        var FLOWURGENT = tds[x-21].innerHTML;
+        var STATUS = tds[x-20].innerHTML;
+        var MULTISTEPRETURN = tds[x-2].innerHTML;
+        var ATTACHMENTS = tds[x-1].innerHTML;
+        if(approveImg && approveImg.id=="approveImg")
+        {
+            var OPERATETYPE = "Approve";
+            var url = 'InnerPages/FlowSubmitConfirm.aspx?LISTID=' + LISTID + '&OPERATETYPE=' + OPERATETYPE + '&KEYS=' + encodeURI(KEYS) + '&VALUES='
+             + encodeURI(VALUES) + '&FLOWPATH=' + encodeURI(FLOWPATH) + '&PROVIDER=' + encodeURI(PROVIDER) + '&ISIMPORTANT=' + FLOWIMPORTANT + '&ISURGENT=' + FLOWURGENT + '&STATUS=' + STATUS + '&MULTISTEPRETURN=' + MULTISTEPRETURN + '&ATTACHMENTS=' + encodeURI(ATTACHMENTS);
+            window.open(url, '', 'resizable=yes,scrollbars=yes,width=500,height=410,top=200,left=200');
+
+        }
+    }
+}
+
+function returnClick()
+{
+    var returnImg = event.srcElement;
+    var rowElement = returnImg.parentNode;
+    var tds = rowElement.getElementsByTagName("td");
+    while(tds.length < 40 && rowElement)
+    {
+        rowElement = rowElement.parentNode;
+        tds = rowElement.getElementsByTagName("td");
+    }
+    if(tds.length >= 40)
+    {
+        var x = tds.length;
+        var returnImg = tds[0].getElementsByTagName('img')[2];
+        var LISTID = tds[x-42].innerHTML;
+        var FLOWPATH = tds[x-5].innerHTML;
+        var KEYS = tds[x-18].innerHTML;
+        var VALUES = tds[x-17].innerHTML;
+        var PROVIDER = tds[x-14].innerHTML;
+        var replaceText = '$$$$$';
+        VALUES = VALUES.replace(/'/g, replaceText);
+        var FLOWIMPORTANT = tds[x-22].innerHTML;
+        var FLOWURGENT = tds[x-21].innerHTML;
+        var MULTISTEPRETURN = tds[x-2].innerHTML;
+        var ATTACHMENTS = tds[x-1].innerHTML;
+        if(returnImg && returnImg.id=="returnImg")
+        {
+            var OPERATETYPE = "Return";
+            var url = 'InnerPages/FlowSubmitConfirm.aspx?LISTID=' + LISTID + '&OPERATETYPE=' + OPERATETYPE + '&KEYS=' + encodeURI(KEYS) + '&VALUES='
+             + encodeURI(VALUES) + '&FLOWPATH=' + encodeURI(FLOWPATH) + '&PROVIDER=' + encodeURI(PROVIDER) + '&ISIMPORTANT=' + FLOWIMPORTANT + '&ISURGENT=' + FLOWURGENT + '&MULTISTEPRETURN=' + MULTISTEPRETURN + '&ATTACHMENTS=' + encodeURI(ATTACHMENTS);
+            window.open(url, '', 'resizable=yes,scrollbars=yes,width=500,height=410,top=200,left=200');
+
+        }
+    }
+}
+    </script>
+
+    <script language="javascript" type="text/javascript">
+    var leftFrameWidth, rightFrameWidth, frameHeight;
+function adjustSize()
+{
+    var width = window.screen.width;
+    if(width >= 800 && width <1024)
+    {
+    }
+    else if(width >= 1024 && width < 1152)
+    {
+        leftFrameWidth = 730;
+        rightFrameWidth = 250;
+        frameHeight = 458;
+    }
+    else if(width >= 1152 && width < 1280)
+    {
+        leftFrameWidth = 833;
+        rightFrameWidth = 250;
+        frameHeight = 570;
+    }
+    else if(width >= 1280)
+    {
+        leftFrameWidth = 960;
+        rightFrameWidth = 250;
+        frameHeight = 730;
+    }
+    $get("leftframe").style.width = leftFrameWidth;
+    $get("leftframe").style.height = frameHeight;
+    $get("rightframe").style.width = rightFrameWidth;
+    $get("rightframe").style.height = frameHeight;
+    adjustDefaultImgPostion();
+}
+
+function adjustDefaultImgPostion()
+{
+    var def_img = $get('img');
+    var left_frame = $get('leftframe');
+    if(def_img && left_frame)
+    {
+        //var height = left_frame.style.height
+//        def_img.style.top=left_frame.style.height/2 -234;
+//        def_img.style.left=left_frame.style.width/2 -374;
+    }
+}
+
+function IMG1_onclick() {
+    var img1 = event.srcElement;
+    var img2 = $get('IMG2');
+    if (img1.alt == "middle")
+    {
+        $get('leftframe').style.width = leftFrameWidth - 200;
+        $get('rightframe').style.width = rightFrameWidth + 200;
+        img1.alt = "left";
+        img1.src = getUrlRoot("Image/main/open.gif");
+        img2.style.display = "none";
+    }
+    else
+    {
+        $get('leftframe').style.width = leftFrameWidth;
+        $get('rightframe').style.width = rightFrameWidth;
+        img1.alt = "middle";
+        img1.src = getUrlRoot("Image/main/close.gif");
+        img2.style.display = "";
+    }
+}
+
+function IMG2_onclick() {
+    var img2 = event.srcElement;
+    var img1 = $get('IMG1');
+    if (img2.alt == "middle")
+    {
+        $get('leftframe').style.width = leftFrameWidth + 250;
+        $get('rightframe').style.width = "0px";
+        img2.alt = "right";
+        img2.src = getUrlRoot("Image/main/close.gif");
+        img1.style.display = "none";
+    }
+    else
+    {
+        $get('leftframe').style.width = leftFrameWidth;
+        $get('rightframe').style.width = rightFrameWidth;
+        img2.alt = "middle";
+        img2.src = getUrlRoot("Image/main/open.gif");
+        img1.style.display = "";
+    }
+}
+
+function getUrlRoot(relurl)
+{
+    var loc = location.href;
+    return loc.substring(0, loc.indexOf('EEPWebClient/') +13) + relurl;
+}
+    </script>
+
+</head>
+<body onload="adjustSize()">
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <table class="mainTable">
+        <tr>
+            <%--<td class="mainMarginTd" rowspan="4">
+            </td>--%>
+            <td colspan="3" id="title_bg">
+                <table border="0" cellpadding="0" cellspacing="0" class="fullWidthTable">
+                    <tr>
+                        <td id="headerLogo_bg">
+                            <div id="headerLogo">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <%--<td class="mainMarginTd" rowspan="4">
+            </td>--%>
+        </tr>
+        <tr>
+            <td id="menu_container" colspan="3">
+                <table style="width: 100%" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <asp:Menu ID="menu1" runat="server" Orientation="Horizontal">
+                                <StaticMenuItemStyle CssClass="static_menuitem" />
+                                <DynamicHoverStyle CssClass="dynamic_hover" />
+                                <DynamicMenuItemStyle CssClass="dynamic_menuitem" />
+                                <StaticHoverStyle CssClass="static_hover" />
+                            </asp:Menu>
+                        </td>
+                        <td class="solution_container">
+                            <asp:DropDownList ID="ddlSolution" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlSolution_SelectedIndexChanged">
+                            </asp:DropDownList>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td id="leftframe_container">
+                <div id="leftframe">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </td>
+            <td id="split_container">
+                <img height="16" src="<%= GetImgUrl("Image/main/close.gif") %>" width="10" alt="middle"
+                    id="IMG1" onclick="IMG1_onclick()" />
+                <img height="16" src="<%= GetImgUrl("Image/main/open.gif") %>" width="10" alt="middle"
+                    id="IMG2" onclick="IMG2_onclick()" />
+            </td>
+            <td id="rightframe_container">
+                <div id="rightframe">
+                    <table>
+                        <tr>
+                            <td>
+                                <fieldset>
+                                    <legend runat="server" id="legLst">To Do List</legend>
+                                    <div class="fs">
+                                    <asp:UpdatePanel ID="UpdatePanel1" runat="server" OnLoad="UpdatePanel1_Load" OnPreRender="UpdatePanel1_PreRender"
+                                        UpdateMode="Conditional">
+                                        <ContentTemplate>
+                                            <asp:DropDownList ID="ddlToDoListFilter" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlToDoListFilter_SelectedIndexChanged">
+                                            </asp:DropDownList>
+                                            <asp:GridView ID="dgvToDoList" runat="server" SkinID="FlowClientMainGrid" EmptyDataText="there's no to do list!">
+                                                <Columns>
+                                                    <asp:TemplateField>
+                                                        <ItemTemplate>
+                                                            <table cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>
+                                                                        <asp:HyperLink ID="openA" ImageUrl="Image/UIPics/Select.gif" runat="server" Target="_self"></asp:HyperLink>
+                                                                    </td>
+                                                                    <td>
+                                                                        <img id="approveImg" alt="approve" src="<%= GetImgUrl("Image/UIPics/Approve.gif") %>"
+                                                                            onclick="approveClick()" />
+                                                                    </td>
+                                                                    <td>
+                                                                        <img id="returnImg" alt="return" src="<%= GetImgUrl("Image/UIPics/Return.gif") %>"
+                                                                            onclick="returnClick()" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField>
+                                                        <ItemTemplate>
+                                                            <asp:Image ID="imgImportant" runat="server" ImageUrl="Image/UIPics/important.gif"
+                                                                Visible='<%# ConvertStringToBoolean(Eval("FLOWIMPORTANT")) %>' />
+                                                            <asp:Image ID="imgUrgent" runat="server" ImageUrl="Image/UIPics/urgent.gif" Visible='<%# ConvertStringToBoolean(Eval("FLOWURGENT")) %>' />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                </Columns>
+                                            </asp:GridView>
+                                            <asp:LinkButton ID="lnkRefresh" runat="server" OnClick="lnkRefresh_Click">Refresh</asp:LinkButton>
+                                        </ContentTemplate>
+                                        <Triggers>
+                                            <asp:AsyncPostBackTrigger ControlID="tmFlow" EventName="Tick" />
+                                        </Triggers>
+                                    </asp:UpdatePanel>
+                                    </div>
+                                </fieldset>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <fieldset>
+                                    <legend runat="server" id="legHis">To Do His</legend>
+                                    <div class="fs">
+                                    <asp:UpdatePanel ID="UpdatePanel2" runat="server" OnLoad="UpdatePanel2_Load" OnPreRender="UpdatePanel2_PreRender"
+                                        UpdateMode="Conditional">
+                                        <ContentTemplate>
+                                            <asp:DropDownList ID="ddlToDoHisFilter" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlToDoHisFilter_SelectedIndexChanged">
+                                            </asp:DropDownList>
+                                            <asp:CheckBox ID="chkSubmitted" runat="server" AutoPostBack="True" OnCheckedChanged="chkSubmitted_CheckedChanged" />
+                                            <asp:GridView ID="dgvToDoHis" runat="server" SkinID="FlowClientMainGrid" EmptyDataText="there's no to do history" OnRowCommand="dgvToDoHis_RowCommand">
+                                                <Columns>
+                                                    <asp:TemplateField>
+                                                        <ItemTemplate>
+                                                            <table cellpadding="0" cellspacing="0">
+                                                                <tr>
+                                                                    <td>
+                                                                        <asp:HyperLink ID="openA" ImageUrl="Image/UIPics/Select.gif" runat="server" Target="_self"></asp:HyperLink>
+                                                                    </td>
+                                                                    <td>
+                                                                        <asp:ImageButton runat="server" ID="returnImg" AlternateText="return" ImageUrl="Image/UIPics/Return.gif"
+                                                                            CommandName="Return" CommandArgument='<%# DataBinder.Eval(Container, "RowIndex") %>'
+                                                                            Visible='<%# ReturnVisible() %>' />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:TemplateField>
+                                                        <ItemTemplate>
+                                                            <asp:Image ID="imgImportant" runat="server" ImageUrl="~/Image/UIPics/important.gif"
+                                                                Visible='<%# ConvertStringToBoolean(Eval("FLOWIMPORTANT")) %>' />
+                                                            <asp:Image ID="imgUrgent" runat="server" ImageUrl="Image/UIPics/urgent.gif" Visible='<%# ConvertStringToBoolean(Eval("FLOWURGENT")) %>' />
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                </Columns>
+                                            </asp:GridView>
+                                            <asp:LinkButton ID="lnkHisRefresh" runat="server" OnClick="lnkHisRefresh_Click">Refresh</asp:LinkButton>
+                                        </ContentTemplate>
+                                        <Triggers>
+                                            <asp:AsyncPostBackTrigger ControlID="tmFlow" EventName="Tick" />
+                                        </Triggers>
+                                    </asp:UpdatePanel>
+                                    </div>
+                                </fieldset>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <fieldset>
+                                    <legend runat="server" id="legOvertime">Overtime</legend>
+                                    <div class="fs">
+                                    <asp:UpdatePanel ID="UpdatePanel3" runat="server" OnLoad="UpdatePanel3_Load" UpdateMode="Conditional">
+                                        <ContentTemplate>
+                                            <asp:CheckBox ID="chkOvertimeActive" AutoPostBack="true" runat="server" Text="active"
+                                                OnCheckedChanged="chkOvertimeActive_CheckedChanged" /><br />
+                                            <asp:Label ID="lblLevel" runat="server" Text="level"></asp:Label><asp:DropDownList
+                                                ID="ddlLevel" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlLevel_SelectedIndexChanged">
+                                                <asp:ListItem Value="0"></asp:ListItem>
+                                                <asp:ListItem Value="1"></asp:ListItem>
+                                                <asp:ListItem Value="2"></asp:ListItem>
+                                                <asp:ListItem Value="3"></asp:ListItem>
+                                                <asp:ListItem Value="4"></asp:ListItem>
+                                                <asp:ListItem Value="5"></asp:ListItem>
+                                                <asp:ListItem Value="6"></asp:ListItem>
+                                                <asp:ListItem Value="7"></asp:ListItem>
+                                                <asp:ListItem Value="8"></asp:ListItem>
+                                                <asp:ListItem Value="9"></asp:ListItem>
+                                                <asp:ListItem Value="10"></asp:ListItem>
+                                            </asp:DropDownList>
+                                            <asp:GridView ID="dgvOvertime" runat="server" SkinID="FlowClientMainGrid" ForeColor="Red">
+                                                <Columns>
+                                                    <asp:TemplateField>
+                                                        <ItemTemplate>
+                                                            <asp:HyperLink ID="openA" ImageUrl="Image/UIPics/Select.gif" runat="server" Target="_self"></asp:HyperLink>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                </Columns>
+                                            </asp:GridView>
+                                        </ContentTemplate>
+                                    </asp:UpdatePanel>
+                                    </div>
+                                </fieldset>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <fltools:flwebwizard ID="wizToDoList" runat="server" BindingObjectID="dgvToDoList"
+        SqlMode="ToDoList" Active="True">
+    </fltools:flwebwizard>
+    <fltools:flwebwizard ID="wizToDoHis" runat="server" BindingObjectID="dgvToDoHis"
+        SqlMode="ToDoHis" Active="True">
+    </fltools:flwebwizard>
+    <asp:Timer ID="tmFlow" runat="server" OnTick="tmFlow_Tick" Interval="180000">
+    </asp:Timer>
+    </form>
+</body>
+</html>

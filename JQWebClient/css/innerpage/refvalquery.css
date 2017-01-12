@@ -1,0 +1,140 @@
+﻿/**/
+/*页面主体样式*/
+body
+{
+	font-family:Microsoft JhengHei;
+	font-size: 9pt;
+	background-image: url( '../../Image/innerpage/bg.jpg' );
+	background-repeat: repeat-x;
+	background-color:#405765;
+}
+
+/*主div样式*/
+#main_div
+{
+	width:100%;
+	text-align:center;
+	position : relative;
+	top:50px;
+}
+
+/*查询主区域样式*/
+#Panel1
+{
+	 overflow:auto;
+	 width:400px;
+	 /*filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#deecf1', endColorStr='#9bb1d5', gradientType='1') progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);
+	 progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);*/
+}
+
+/*ok和cancel按钮区域样式*/
+#Panel2
+{
+	/*position:relative;
+	top:-32px;
+	left:60px;*/
+}
+
+/*生成查询label样式*/
+.gen_label
+{
+}
+
+/*生成查询textbox样式*/
+.gen_textbox
+{
+}
+
+/*鼠标离开按钮时，按钮的样式*/
+.btn_mouseout 
+{
+    border: 1px solid #286699;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-family:Microsoft JhengHei; 
+    font-weight: bold;
+    font-size: 12px;
+    background-color:#95c3e9;
+    background-image: url('../../Image/innerpage/btn1.png');
+    background-repeat: repeat-x;
+}
+
+/*鼠标移动到按钮上时，按钮的样式*/
+.btn_mouseover
+{
+    border: 1px solid #051723;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-family:Microsoft JhengHei; 
+    font-weight: bold;
+    font-size: 12px;
+    background-color:#64757f;
+    background-image:url( '../../Image/innerpage/btn2.png' );
+    background-repeat: repeat-x;	
+}
+.left-top
+{
+    background-image: url('../../Image/innerpage/left-top.png');
+    width:20px;
+    height:20px;
+    border:0px;
+}
+.right-top
+{
+    background-image: url('../../Image/innerpage/right-top.png');    
+    width:20px;
+    height:20px;    
+    border:0px;
+}
+.left-bottom
+{
+    background-image: url('../../Image/innerpage/left-bottom.png');    
+    width:20px;
+    height:20px;    
+    border:0px;
+}
+.right-bottom
+{
+    background-image: url('../../Image/innerpage/right-bottom.png');    
+    width:20px;
+    height:20px;    
+    border:0px;
+}
+.top
+{
+    background-image: url('../../Image/innerpage/top.png');    
+    background-repeat:repeat-x;
+    height:20px;
+    border:0px;
+}
+.bottom
+{
+    background-image: url('../../Image/innerpage/bottom.png');
+    background-repeat: repeat-x;
+    height: 20px;
+    border: 0px;
+}
+.left
+{
+    background-image: url('../../Image/innerpage/left.png');   
+    background-repeat:repeat-y; 
+    width:20px;
+}
+.right
+{
+    background-image: url('../../Image/innerpage/right.png');    
+    background-repeat:repeat-y;
+    width:20px;
+    border:0px
+
+}
+.center
+{
+    background-image: url('../../Image/innerpage/center.png');
+    background-repeat: repeat;
+    border: 0px;
+}

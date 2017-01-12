@@ -1,0 +1,156 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="WMasterDetail4.aspx.cs" Inherits="Template_WMasterDetail4" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<script runat="server">
+
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="../StyleSheet.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <InfoLight:webdatasource id="Master" runat="server" autoapply="True" WebDataSetID="WMaster"></InfoLight:webdatasource>
+    
+    </div>
+        <InfoLight:webdatasource id="Detail" runat="server" MasterDataSource="Master" WebDataSetID="WMaster"></InfoLight:webdatasource>
+        <InfoLight:WebStatusStrip ID="WebStatusStrip1" runat="server" BackColor="PowderBlue"
+            BorderColor="LightGray" BorderStyle="Groove" BorderWidth="2px" ContentBackColor=""
+            ContentForeColor="White" Font-Bold="True" ForeColor="MediumBlue" ShowCompany="False"
+            ShowDate="True" ShowEEPAlias="True" ShowNavigatorStatus="True" ShowSolution="False"
+            ShowTitle="True" ShowUserID="True" ShowUserName="True" Width="100%" StatusBackColor="White" StatusForeColor="MediumBlue" TitleBackColor="MediumBlue" TitleForeColor="White" />
+        <InfoLight:WebNavigator ID="WebNavigator1" runat="server" BindingObject="wfvMaster"
+            OnCommand="WebNavigator1_Command" ShowDataStyle="FormViewStyle" Width="100%" BackColor="PowderBlue" BorderColor="#E0E0E0" BorderStyle="Groove" BorderWidth="2px" StatusStrip="WebStatusStrip1" OnBeforeCommand="WebNavigator1_BeforeCommand">
+            <NavControls>
+                <InfoLight:ControlItem ControlName="First" ControlText="首筆" ControlType="Image" ControlVisible="True"
+                    ImageUrl="../image/uipics/first.gif" MouseOverImageUrl="../image/uipics/first2.gif"
+                    Size="25" />
+                <InfoLight:ControlItem ControlName="Previous" ControlText="上筆" ControlType="Image"
+                    ControlVisible="True" ImageUrl="../image/uipics/previous.gif" MouseOverImageUrl="../image/uipics/previous2.gif"
+                    Size="25" />
+                <InfoLight:ControlItem ControlName="Next" ControlText="下筆" ControlType="Image" ControlVisible="True"
+                    ImageUrl="../image/uipics/next.gif" MouseOverImageUrl="../image/uipics/next2.gif"
+                    Size="25" />
+                <InfoLight:ControlItem ControlName="Last" ControlText="末筆" ControlType="Image" ControlVisible="True"
+                    ImageUrl="../image/uipics/last.gif" MouseOverImageUrl="../image/uipics/last2.gif"
+                    Size="25" />
+                <InfoLight:ControlItem ControlName="Add" ControlText="新增" ControlType="Image" ControlVisible="True"
+                    ImageUrl="../image/uipics/add.gif" MouseOverImageUrl="../image/uipics/add2.gif"
+                    Size="25" />
+                <InfoLight:ControlItem ControlName="Update" ControlText="更改" ControlType="Image"
+                    ControlVisible="True" ImageUrl="../image/uipics/edit.gif" MouseOverImageUrl="../image/uipics/edit2.gif"
+                    Size="25" />
+                <InfoLight:ControlItem ControlName="Delete" ControlText="刪除" ControlType="Image"
+                    ControlVisible="True" ImageUrl="../image/uipics/delete.gif" MouseOverImageUrl="../image/uipics/delete2.gif"
+                    Size="25" />
+                <InfoLight:ControlItem ControlName="OK" ControlText="確認" ControlType="Image" ControlVisible="True"
+                    ImageUrl="../image/uipics/ok.gif" MouseOverImageUrl="../image/uipics/ok2.gif"
+                    Size="25" />
+                <InfoLight:ControlItem ControlName="Cancel" ControlText="取消" ControlType="Image"
+                    ControlVisible="True" ImageUrl="../image/uipics/cancel.gif" MouseOverImageUrl="../image/uipics/cancel2.gif"
+                    Size="25" />
+                <InfoLight:ControlItem ControlName="Apply" ControlText="存檔" ControlType="Image" ControlVisible="True"
+                    ImageUrl="../image/uipics/apply.gif" MouseOverImageUrl="../image/uipics/apply2.gif"
+                    Size="25" />
+                <InfoLight:ControlItem ControlName="Abort" ControlText="放棄" ControlType="Image" ControlVisible="True"
+                    ImageUrl="../image/uipics/abort.gif" MouseOverImageUrl="../image/uipics/abort2.gif"
+                    Size="25" />
+                <InfoLight:ControlItem ControlName="Query" ControlText="查詢" ControlType="Image" ControlVisible="True"
+                    ImageUrl="../image/uipics/query.gif" MouseOverImageUrl="../image/uipics/query2.gif"
+                    Size="25" />
+                <InfoLight:ControlItem ControlName="Print" ControlText="打印" ControlType="Image" ControlVisible="True"
+                    ImageUrl="../image/uipics/print.gif" MouseOverImageUrl="../image/uipics/print2.gif"
+                    Size="25" />
+            </NavControls>
+        </InfoLight:WebNavigator>
+        <InfoLight:WebFormView ID="wfvMaster" runat="server" OnPageIndexChanged="wfvMaster_PageIndexChanged" AllowPaging="True" AllValidateSucess="True" CellPadding="4" DataHasChanged="False" DataSourceID="Master" InsertBack="False" LayOutColNum="2" OnAfterInsertLocate="wfvMaster_AfterInsertLocate" OnCanceled="wfvMaster_Canceled" AutoEmptyDataText="False" ForeColor="#333333" Height="87px" KeyValues="" NeedExecuteAdd="True" OldPageIndex="-1" ValidateFailed="False" Width="100%" BackColor="Silver" BorderColor="White" BorderStyle="Groove" BorderWidth="2px">
+            <FooterStyle BackColor="#507CD1" ForeColor="White" Font-Bold="True" />
+            <EditRowStyle BackColor="LightCyan" ForeColor="Blue" />
+            <RowStyle BackColor="#EFF3FB" ForeColor="Navy" />
+            <PagerStyle ForeColor="White" HorizontalAlign="Center" BackColor="PowderBlue" />
+            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <InsertRowStyle BackColor="LightCyan" ForeColor="Blue" />
+        </InfoLight:WebFormView>
+        <InfoLight:WebMultiViewCaptions ID="WebMultiViewCaptions1" runat="server" MultiViewID="MultiView1"
+            TableStyle="Style3" Width="100%">
+            <Captions>
+                <InfoLight:WebMultiViewCaption Caption="資料瀏覽" />
+                <InfoLight:WebMultiViewCaption Caption="資料編輯" />
+            </Captions>
+        </InfoLight:WebMultiViewCaptions>
+        <asp:MultiView ID="MultiView1" runat="server">
+            <asp:View ID="View1" runat="server">
+                &nbsp;</asp:View>
+            <asp:View ID="View2" runat="server">
+                <br />
+                <br />
+                <asp:ImageButton ID="ImageButton10" runat="server" __designer:wfdid="w23" 
+                    CausesValidation="True" CommandName="Update" ImageUrl="~/Image/UIPics/OK.gif" 
+                    onclick="ImageButton10_Click" Text="Update" />
+                &nbsp;<asp:ImageButton ID="ImageButton11" runat="server" __designer:wfdid="w24" 
+                    CausesValidation="False" CommandName="Cancel" 
+                    ImageUrl="~/Image/UIPics/Cancel.gif" onclick="ImageButton11_Click" 
+                    Text="Cancel" />
+            </asp:View>
+        </asp:MultiView>&nbsp;<InfoLight:WebGridView ID="wgvDetail" runat="server" AbortIconUrl="../Image/UIPics/Abort.gif"
+            AddIconUrl="../Image/UIPics/Add.gif" AddIndentityField="False" AllowPaging="True"
+            ApplyIconUrl="../Image/UIPics/Apply.gif" AutoEmptyDataText="False" AutoGenerateColumns="False"
+            BackColor="White" BorderStyle="Groove" BorderWidth="2px" 
+        ButtonTooltip="" CancelIconUrl="../Image/UIPics/Cancel.gif"
+            CellPadding="1" CellSpacing="1" DataHasChanged="False" DataSourceID="Detail"
+            EditReturn="True" EditURL="" ExpressionFieldCount="0" 
+        ForeColor="#333333" GetServerText="True"
+            GridInserting="False" HeaderStyleWrap="False" 
+        InnerNavigatorLinkLabel="" InnerNavigatorShowStyle="Image"
+            MouseOverAbortIconUrl="../Image/UIPics/Abort2.gif" MouseOverAddIconUrl="../Image/UIPics/Add2.gif"
+            MouseOverApplyIconUrl="../Image/UIPics/Apply2.gif" MouseOverCancelIconUrl="../Image/UIPics/Cancel2.gif"
+            MouseOverOKIconUrl="../Image/UIPics/OK2.gif" MouseOverQueryIconUrl="../Image/UIPics/Query2.gif"
+            MultiCheckColumn="" MultiCheckColumnIndexToTranslate="-1" NeedExecuteAdd="True"
+            OKIconUrl="../Image/UIPics/OK.gif" OpenEditHeight="400" OpenEditUrlInServerMode="True"
+            OpenEditWidth="500" QueryIconUrl="../Image/UIPics/Query.gif" SkipInsert="False"
+            TotalActive="False" TotalCaption="" ValidateFailed="False" 
+        Width="100%" OnRowEditing="wgvDetail_RowEditing" 
+        CreateInnerNavigator="False" ShowFooter="True">
+            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <RowStyle BackColor="#EFF3FB" />
+            <EditRowStyle BackColor="#2461BF" />
+            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+            <PagerStyle BackColor="PowderBlue" ForeColor="Blue" HorizontalAlign="Center" />
+            <HeaderStyle BackColor="DarkTurquoise" Font-Bold="True" ForeColor="White" />
+            <AlternatingRowStyle BackColor="White" />
+            <Columns>
+                <asp:TemplateField ShowHeader="False">
+                    <edititemtemplate>
+<asp:ImageButton id="ImageButton6" runat="server" Text="Update" CausesValidation="True" ImageUrl="~/Image/UIPics/OK.gif" CommandName="Update" __designer:wfdid="w23"></asp:ImageButton>&nbsp;<asp:ImageButton id="ImageButton7" runat="server" Text="Cancel" CausesValidation="False" ImageUrl="~/Image/UIPics/Cancel.gif" CommandName="Cancel" __designer:wfdid="w24"></asp:ImageButton> 
+</edititemtemplate>
+                    <FooterTemplate>
+                        <asp:ImageButton ID="ImageButton1" runat="server" __designer:wfdid="w19" 
+                            CausesValidation="False" CommandName="Add" ImageUrl="~/Image/UIPics/Add.gif" 
+                            onclick="ImageButton1_Click1" Text="Edit" />
+                    </FooterTemplate>
+                    <itemtemplate>
+<asp:ImageButton id="ImageButton8" runat="server" Text="Edit" CausesValidation="False" ImageUrl="~/Image/UIPics/Edit.gif" CommandName="Edit" __designer:wfdid="w21"></asp:ImageButton>&nbsp;<asp:ImageButton id="ImageButton9" runat="server" Text="Delete" CausesValidation="False" ImageUrl="~/Image/UIPics/Delete.gif" CommandName="Delete" __designer:wfdid="w22"></asp:ImageButton> 
+</itemtemplate>
+                    <headerstyle wrap="False" />
+                </asp:TemplateField>
+            </Columns>
+            <PagerSettings Mode="NumericFirstLast" />
+        </InfoLight:WebGridView>
+        <InfoLight:WebFormView ID="wfvDetail" runat="server" AllValidateSucess="True" AutoEmptyDataText="False"
+            CellPadding="4" DataHasChanged="False" DataSourceID="Detail" ForeColor="#333333"
+            InsertBack="False" KeyValues="" LayOutColNum="2" NeedExecuteAdd="True" OldPageIndex="-1"
+            ValidateFailed="False" Width="100%">
+            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <EditRowStyle BackColor="DarkTurquoise" />
+            <RowStyle BackColor="#EFF3FB" />
+            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <InsertRowStyle BackColor="DarkTurquoise" />
+        </InfoLight:WebFormView>
+    </form>
+</body>
+</html>

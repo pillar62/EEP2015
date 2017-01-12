@@ -1,0 +1,96 @@
+﻿
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><script type="text/javascript" src="../cordova.js"></script><script type="text/javascript" src="../scripts/platformOverrides.js"></script><script type="text/javascript" src="../scripts/index.js"></script><script type="text/javascript" src="../js/jquery-1.11.3.js"></script><script type="text/javascript" src="../js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script><script type="text/javascript" src="../js/jquery.json.js"></script><script type="text/javascript" src="../js/jquery.infolight.mobile.js"></script><script type="text/javascript" src="../js/jquery.infolight.mobile.wf.js"></script><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+
+</title><link href="../css/index.css" rel="stylesheet" /><link href="../js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet" /><link href="../css/themes/my-custom-theme.min.css" rel="stylesheet" /><link href="../css/themes/jquery.mobile.icons.min.css" rel="stylesheet" /></head>
+<body>
+    <form name="form1" method="post" action="JQMEmployee.aspx?Cordova=true" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEyNDU3NDMyNzNkZFsvTUPQFXp6LaMz2ROzwc3P6Yu/3b6bbI3Q1ZfunHh+" />
+</div>
+
+        
+        <div id="dataGridView" data-role="page">
+	<div data-theme="b" data-role="content">
+		<table class="info-datagrid table-stripe infolight-breakpoint" data-role="table" data-mode="reflow" data-theme="b" infolight-options="remoteName:'SBasic.Employees',tableName:'Employees',pageSize:10,editPage:'#dataFormMaster',editMode:'dialog',toolItemObjectID:'#dataGridView_toolitem',title:'JQMEmployee',alwaysClose:false,allowAdd:true,allowUpdate:true,allowDelete:true,allowView:true,toolItemsPosition:'both',listColumnCount:2,listCaptionWidth:120,queryMode:'window',reportFileName:''">
+			<thead>
+				<tr>
+					<th nowrap="nowrap" infolight-options="field:'EmployeeID',width:120,align:'left',nowrap:false">EmployeeID</th><th nowrap="nowrap" infolight-options="field:'LastName',width:120,align:'left',nowrap:false">LastName</th><th nowrap="nowrap" infolight-options="field:'FirstName',width:120,align:'left',nowrap:false">FirstName</th><th nowrap="nowrap" infolight-options="field:'Title',width:120,align:'left',nowrap:false">Title</th><th nowrap="nowrap" infolight-options="field:'TitleOfCourtesy',width:120,align:'left',nowrap:false">TitleOfCourtesy</th><th nowrap="nowrap" infolight-options="field:'BirthDate',width:120,align:'left',nowrap:false">BirthDate</th><th nowrap="nowrap" infolight-options="field:'HireDate',width:120,align:'left',nowrap:false">HireDate</th><th nowrap="nowrap" infolight-options="field:'Address',width:120,align:'left',nowrap:false">Address</th><th nowrap="nowrap" infolight-options="field:'City',width:120,align:'left',nowrap:false">City</th><th nowrap="nowrap" infolight-options="field:'Region',width:120,align:'left',nowrap:false">Region</th><th nowrap="nowrap" infolight-options="field:'PostalCode',width:120,align:'left',nowrap:false">PostalCode</th><th nowrap="nowrap" infolight-options="field:'Country',width:120,align:'left',nowrap:false">Country</th><th nowrap="nowrap" infolight-options="field:'HomePhone',width:120,align:'left',nowrap:false">HomePhone</th><th nowrap="nowrap" infolight-options="field:'Extension',width:120,align:'left',nowrap:false">Extension</th><th nowrap="nowrap" infolight-options="field:'Photo',width:120,align:'left',nowrap:false">Photo</th><th nowrap="nowrap" infolight-options="field:'Notes',width:120,align:'left',nowrap:false">Notes</th><th nowrap="nowrap" infolight-options="field:'ReportsTo',width:120,align:'left',nowrap:false">ReportsTo</th><th nowrap="nowrap" infolight-options="field:'PhotoPath',width:120,align:'left',nowrap:false">PhotoPath</th>
+				</tr>
+			</thead>
+		</table><div class="ui-content" id="dataGridView_popup" data-role="popup" data-theme="d" data-overlay-theme="a">
+			<a data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><p></p>
+		</div><div id="dataGridView_toolitem" data-role="none" style="display:none">
+			<a class="grid-insert" data-mini="true" data-inline="true" data-role="none" data-icon="plus" data-iconpos="notext">Insert</a><a class="grid-previous" data-mini="true" data-inline="true" data-role="none" data-icon="arrow-l" data-iconpos="notext">Previous page</a><a class="grid-next" data-mini="true" data-inline="true" data-role="none" data-icon="arrow-r" data-iconpos="notext">Next page</a><a class="grid-query" data-mini="true" data-inline="true" data-role="none" data-icon="search" data-iconpos="notext">Query</a><a class="grid-refresh" data-mini="true" data-inline="true" data-role="none" data-icon="refresh" data-iconpos="notext">Refresh</a><a class="grid-return" data-mini="true" data-inline="true" data-role="none" data-icon="back" data-iconpos="notext">Back</a>
+		</div>
+	</div>
+</div>
+        <div id="dataFormMaster" data-overlay-theme="b" data-role="page">
+	<div data-role="header" data-theme="b">
+		<h1>
+			JQMEmployee
+		</h1>
+	</div><div data-theme="b" data-role="content">
+		<div data-theme="b" class="info-form" infolight-options="id: 'dataFormMaster',remoteName:'SBasic.Employees',tableName:'Employees',duplicateCheck:false,appliedClose:true,autoSubmit:false,autoPause:false">
+			<div data-role="fieldcontain">
+				<label for="dataFormMaster_EmployeeID">EmployeeID</label><input id="dataFormMaster_EmployeeID" name="EmployeeID" data-mini="true" infolight-options="field:'EmployeeID',width:120,align:'left',readOnly:false" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="dataFormMaster_LastName">LastName</label><input id="dataFormMaster_LastName" name="LastName" data-mini="true" infolight-options="field:'LastName',width:120,align:'left',readOnly:false" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="dataFormMaster_FirstName">FirstName</label><input id="dataFormMaster_FirstName" name="FirstName" data-mini="true" infolight-options="field:'FirstName',width:120,align:'left',readOnly:false" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="dataFormMaster_Title">Title</label><input id="dataFormMaster_Title" name="Title" data-mini="true" infolight-options="field:'Title',width:120,align:'left',readOnly:false" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="dataFormMaster_TitleOfCourtesy">TitleOfCourtesy</label><input id="dataFormMaster_TitleOfCourtesy" name="TitleOfCourtesy" data-mini="true" infolight-options="field:'TitleOfCourtesy',width:120,align:'left',readOnly:false" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="dataFormMaster_BirthDate">BirthDate</label><input id="dataFormMaster_BirthDate" name="BirthDate" data-mini="true" infolight-options="field:'BirthDate',width:120,align:'left',readOnly:false" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="dataFormMaster_HireDate">HireDate</label><input id="dataFormMaster_HireDate" name="HireDate" data-mini="true" infolight-options="field:'HireDate',width:120,align:'left',readOnly:false" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="dataFormMaster_Address">Address</label><input id="dataFormMaster_Address" name="Address" data-mini="true" infolight-options="field:'Address',width:120,align:'left',readOnly:false" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="dataFormMaster_City">City</label><input id="dataFormMaster_City" name="City" data-mini="true" infolight-options="field:'City',width:120,align:'left',readOnly:false" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="dataFormMaster_Region">Region</label><input id="dataFormMaster_Region" name="Region" data-mini="true" infolight-options="field:'Region',width:120,align:'left',readOnly:false" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="dataFormMaster_PostalCode">PostalCode</label><input id="dataFormMaster_PostalCode" name="PostalCode" data-mini="true" infolight-options="field:'PostalCode',width:120,align:'left',readOnly:false" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="dataFormMaster_Country">Country</label><input id="dataFormMaster_Country" name="Country" data-mini="true" infolight-options="field:'Country',width:120,align:'left',readOnly:false" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="dataFormMaster_HomePhone">HomePhone</label><input id="dataFormMaster_HomePhone" name="HomePhone" data-mini="true" infolight-options="field:'HomePhone',width:120,align:'left',readOnly:false" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="dataFormMaster_Extension">Extension</label><input id="dataFormMaster_Extension" name="Extension" data-mini="true" infolight-options="field:'Extension',width:120,align:'left',readOnly:false" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="dataFormMaster_Photo">Photo</label><input id="dataFormMaster_Photo" name="Photo" data-mini="true" infolight-options="field:'Photo',width:120,align:'left',readOnly:false" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="dataFormMaster_Notes">Notes</label><input id="dataFormMaster_Notes" name="Notes" data-mini="true" infolight-options="field:'Notes',width:120,align:'left',readOnly:false" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="dataFormMaster_ReportsTo">ReportsTo</label><input id="dataFormMaster_ReportsTo" name="ReportsTo" data-mini="true" infolight-options="field:'ReportsTo',width:120,align:'left',readOnly:false" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="dataFormMaster_PhotoPath">PhotoPath</label><input id="dataFormMaster_PhotoPath" name="PhotoPath" data-mini="true" infolight-options="field:'PhotoPath',width:120,align:'left',readOnly:false,directory:'File',fileSizeLimited:500" class="info-file" type="file" />
+			</div>
+		</div><div class="ui-content" id="dataFormMaster_popup" data-role="popup" data-theme="d" data-overlay-theme="a">
+			<a data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><p></p>
+		</div>
+	</div>
+</div>
+    
+
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="83B0E70D" />
+</div></form>
+
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Internet Explorer","requestId":"0a1583d7c1bb40b5802cba685a5eee9c"}
+</script>
+<script type="text/javascript" src="http://localhost:49763/dadab92304e74055b5bbf51e7d055cdb/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+</html>
+

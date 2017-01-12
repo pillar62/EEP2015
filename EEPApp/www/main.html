@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>EEPApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Cordova 參考，建置後會加入您的應用程式。 -->
+    <script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+    <script src="scripts/index.js"></script>
+
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="js/jquery.json.js"></script>
+    <script type="text/javascript" src="js/jquery.infolight.mobile.js"></script>
+    <script type="text/javascript" src="js/jquery.infolight.mobile.wf.js"></script>
+
+    <link href="js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/themes/my-custom-theme.min.css" />
+    <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/index.css" rel="stylesheet" />
+    <script type="text/javascript" charset="utf-8">
+
+    </script>
+    <!-- EEPApp 參考 -->
+
+</head>
+<body>
+    <div data-role="page" class="pagebg">
+        <div data-role="header" data-theme="b">
+            <!--<div class="title">
+                EEP Mobile APP
+            </div>
+            <div class="btn_menu"><a href="#popupMenu" data-rel="popup" data-position-to="origin" data-transition="pop"> </a></div>
+            <input type="search" data-mini="true"/>-->
+            <!--<div class="btn_search"><a href="#"></a></div>-->
+
+            <div class="ui-grid-b">
+                <div class="ui-block-a" style="width:15%"><div class="btn_menu"><a href="#popupMenu" data-rel="popup" data-position-to="origin" data-transition="pop"> </a></div></div>
+                <div class="ui-block-b" style="width:45%">
+                    <div class="title">
+                        EEP Mobile APP
+                    </div>
+                </div>
+                <div class="ui-block-c" style="width:40%"><input id="menuSearch" type="search" data-mini="true" /></div>
+            </div><!-- /grid-b -->
+        </div>
+        <div id="mainC" class="info-main content" data-role="content" style="height: 1000px;overflow-x:hidden">
+            <div class="logo"><img src="images/logo.png" /></div>
+            <ul id="menu" data-role="listview" data-theme="b" data-divider-theme="b" data-filter="true"  data-input="#menuSearch" data-mini="true" data-inset="true"
+                data-filter-placeholder="Search menu"></ul>
+            <div data-role="popup" id="popupMenu" data-theme="b" data-overlay-theme="a">
+                <ul data-role="listview" data-inset="true" style="min-width:120px;">
+                    <li><a class="flow" href="#" onclick="javascript:$.mobile.changePage('mainflow.html', { transition: 'slide', role: 'page' });">My work</a></li>
+                    <li><a class="password" href="#" onclick="javascript: $.mobile.changePage('password.html', { transition: 'slide', role: 'page' });">Edit</a></li>
+                    <li><a class="message" href="#" onclick="javascript: $.mobile.changePage('message.html', { transition: 'slide', role: 'page' });">Message</a></li>
+                    <li><a class="logout" href="#" onclick="javascript:$('.info-main').main('logout');">Logout</a></li>
+                </ul>
+            </div><!-- /popup -->
+
+        </div>
+        <div data-role="footer" style="height:130px;border:none; background:none">
+            <div class="footer_menu">
+                <div class="btn_workspace"><a class="flow" href="#" onclick="javascript:$.mobile.changePage('mainflow.html', { transition: 'slide', role: 'page' });">My work</a></div>
+                <div class="btn_message"><a class="message" href="#" onclick="javascript: $.mobile.changePage('message.html', { transition: 'slide', role: 'page' });">Change Password</a></div>
+                <div class="btn_setting"><a class="password" href="#" onclick="javascript: $.mobile.changePage('password.html', { transition: 'slide', role: 'page' });">Change Password</a></div>
+                <div class="btn_logout"><a class="logout" href="#" onclick="javascript:$('.info-main').main('logout');">Logout</a></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

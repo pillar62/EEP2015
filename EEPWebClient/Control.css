@@ -1,0 +1,143 @@
+﻿/*GridView*/
+.gridviewEdit:link {
+	background-image:url(image/gridview/Edit.gif); background-repeat:no-repeat;
+}
+.gridviewEdit:visited {
+	background-image:url(image/gridview/Edit.gif); background-repeat:no-repeat;
+}
+.gridviewEdit:hover {
+	background-image:url(image/gridview/Edit2.gif); background-repeat:no-repeat;
+}
+.gridviewEdit:active {
+
+}
+
+.gridviewDelete:link {
+	background-image:url(image/gridview/Delete.gif); background-repeat:no-repeat;
+}
+.gridviewDelete:visited {
+	background-image:url(image/gridview/Delete.gif); background-repeat:no-repeat;
+}
+.gridviewDelete:hover {
+	background-image:url(image/gridview/Delete2.gif); background-repeat:no-repeat;
+}
+.gridviewDelete:active {
+
+}
+
+.gridviewSelect:link {
+	background-image:url(image/gridview/Select.gif); background-repeat:no-repeat;
+}
+.gridviewSelect:visited {
+	background-image:url(image/gridview/Select.gif); background-repeat:no-repeat;
+}
+.gridviewSelect:hover {
+	background-image:url(image/gridview/Select2.gif); background-repeat:no-repeat;
+}
+.gridviewSelect:active {
+
+}
+
+.gridviewOK:link {
+	background-image:url(image/gridview/OK.gif); background-repeat:no-repeat;
+}
+.gridviewOK:visited {
+	background-image:url(image/gridview/OK.gif); background-repeat:no-repeat;
+}
+.gridviewOK:hover {
+	background-image:url(image/gridview/OK2.gif); background-repeat:no-repeat;
+}
+.gridviewOK:active {
+
+}
+
+.gridviewCancel:link {
+	background-image:url(image/gridview/Cancel.gif); background-repeat:no-repeat;
+}
+.gridviewCancel:visited {
+	background-image:url(image/gridview/Cancel.gif); background-repeat:no-repeat;
+}
+.gridviewCancel:hover {
+	background-image:url(image/gridview/Cancel2.gif); background-repeat:no-repeat;
+}
+.gridviewCancel:active {
+
+}
+
+/*DetailsView*/
+.detailsviewEdit:link {
+	background-image:url(image/detailsview/Edit.gif); background-repeat:no-repeat;
+}
+.detailsviewEdit:visited {
+	background-image:url(image/detailsview/Edit.gif); background-repeat:no-repeat;
+}
+.detailsviewEdit:hover {
+	background-image:url(image/detailsview/Edit2.gif); background-repeat:no-repeat;
+}
+.detailsviewEdit:active {
+
+}
+
+.detailsviewDelete:link {
+	background-image:url(image/detailsview/Delete.gif); background-repeat:no-repeat;
+}
+.detailsviewDelete:visited {
+	background-image:url(image/detailsview/Delete.gif); background-repeat:no-repeat;
+}
+.detailsviewDelete:hover {
+	background-image:url(image/detailsview/Delete2.gif); background-repeat:no-repeat;
+}
+.detailsviewDelete:active {
+
+}
+
+.detailsviewSelect:link {
+	background-image:url(image/detailsview/Add.gif); background-repeat:no-repeat;
+}
+.detailsviewSelect:visited {
+	background-image:url(image/detailsview/Add.gif); background-repeat:no-repeat;
+}
+.detailsviewSelect:hover {
+	background-image:url(image/detailsview/Add2.gif); background-repeat:no-repeat;
+}
+.detailsviewSelect:active {
+
+}
+
+.detailsviewOK:link {
+	background-image:url(image/detailsview/OK.gif); background-repeat:no-repeat;
+}
+.detailsviewOK:visited {
+	background-image:url(image/detailsview/OK.gif); background-repeat:no-repeat;
+}
+.detailsviewOK:hover {
+	background-image:url(image/detailsview/OK2.gif); background-repeat:no-repeat;
+}
+.detailsviewOK:active {
+
+}
+
+.detailsviewCancel:link {
+	background-image:url(image/detailsview/Cancel.gif); background-repeat:no-repeat;
+}
+.detailsviewCancel:visited {
+	background-image:url(image/detailsview/Cancel.gif); background-repeat:no-repeat;
+}
+.detailsviewCancel:hover {
+	background-image:url(image/detailsview/Cancel2.gif); background-repeat:no-repeat;
+}
+.detailsviewCancel:active {
+
+}
+
+/*Rax add*/
+.infoBody
+{
+	background-image: url(Image/query/Query.bmp);
+}
+
+.unshown
+{
+	display:none;
+	visibility:visible;
+}

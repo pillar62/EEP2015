@@ -1,0 +1,103 @@
+﻿/**/
+/*页面主体样式*/
+body
+{
+	font-family:Verdana;
+	font-size: 9pt;
+	background-image: url( '../../Image/innerpage/bg.jpg' );
+	background-repeat: repeat-x;
+	background-color:#405765;
+}
+
+/*所有靠上排列的元素样式*/
+.top_align
+{
+	vertical-align:top;
+}
+
+/*所有居中排列的元素样式*/
+.center_align
+{
+    text-align: center;
+}
+
+/*鼠标离开长方形按钮时，按钮的样式*/
+.btn_rect_mouseout
+{
+    border: 1px solid #286699;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-family:Microsoft JhengHei; 
+    font-weight: bold;
+    font-size: 12px;
+    background-color:#95c3e9;
+    background-image: url('../../Image/innerpage/btn1.png');
+    background-repeat: repeat-x;
+
+}
+
+/*鼠标移动到长方形按钮上时，按钮的样式*/
+.btn_rect_mouseover
+{
+    border: 1px solid #051723;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-family:Microsoft JhengHei; 
+    font-weight: bold;
+    font-size: 12px;
+    background-color:#64757f;
+    background-image:url( '../../Image/innerpage/btn2.png' );
+    background-repeat: repeat-x;	
+}
+
+/*鼠标离开正方形按钮时，按钮的样式*/
+.btn_square_mouseout
+{
+    border: 1px solid #286699;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-family:Microsoft JhengHei; 
+    font-weight: bold;
+    font-size: 12px;
+    background-color:#95c3e9;
+    background-image: url('../../Image/innerpage/btn1.png');
+    background-repeat: repeat-x;
+
+}
+
+/*鼠标移动到正方形按钮上时，按钮的样式*/
+.btn_square_mouseover
+{
+    border: 1px solid #051723;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-family:Microsoft JhengHei; 
+    font-weight: bold;
+    font-size: 12px;
+    background-color:#64757f;
+    background-image:url( '../../Image/innerpage/btn2.png' );
+    background-repeat: repeat-x;	
+}
+
+.btn_class
+{
+    width:100%;
+}
+
+.okbtn_align
+{
+    text-align:right;
+}
+
+.cancelbtn_align
+{
+    text-align:left;
+}

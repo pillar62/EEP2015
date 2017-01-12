@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <div data-overlay-theme="b" data-role="page">
+        <div data-role="header" data-theme="b">
+            <h1 class="ApproveTitle">
+                Approve
+            </h1>
+        </div>
+        <div data-theme="b" data-role="content" class="info-flowpage" style="margin: 0 auto; min-width: 100px; max-width: 500px">
+
+            <table style="width: 100%;margin-bottom:20px">
+                <tr>
+                    <td>
+                        <fieldset class="ui-grid-a" data-theme="b">
+                            <div class="ui-block-a">
+                                <input data-mini="true" type="checkbox" id="checkImportant" class="important"/>
+                                <label data-mini="true" for="checkImportant" class="important">Important</label>
+                            </div>
+                            <div class="ui-block-b">
+                                <input data-mini="true" type="checkbox" id="checkUrgent" class="urgent"/>
+                                <label data-mini="true" for="checkUrgent" class="urgent">Urgent</label>
+                            </div>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label data-mini="true" class="remark">remark:</label>
+                        <textarea class="suggest" data-mini="true" cols="40" rows="15"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <fieldset class="ui-grid-a" data-theme="b">
+                            <div class="ui-block-a">
+                                <label class="role" data-mini="true">role:</label>
+                            </div>
+                            <div class="ui-block-b">
+                                <select data-mini="true" class="role" data-native-menu="false"></select>
+                            </div>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label data-mini="true" for="historyView_FromApprove">已批示:</label>
+                        <div class="history">
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <ul class="files" data-role="listview" style="margin-bottom:20px"></ul>
+            <!--<label class="result" style="color: red"></label>-->
+            <fieldset class="ui-grid-a" data-theme="b">
+
+                <div class="ui-block-a">
+                    <a data-mini="true" class="preview" data-role="button" data-theme="b" onclick="javacript: $('.info-flowpage').flowpage('previewFlow');">Preview</a>
+                </div>
+                <div class="ui-block-b">
+                    <a data-mini="true" class="file" data-role="button" data-theme="b"onclick="javacript: $('.info-flowpage').flowpage('uploadFile');">Upload File</a>
+                </div>
+            </fieldset>
+            <fieldset class="ui-grid-a" data-theme="b">
+                <div class="ui-block-a">
+                    <a data-mini="true" class="ok" data-role="button" data-theme="b" onclick="javacript: $('.info-flowpage').flowpage('approveFlow');">OK</a>
+                </div>
+                <div class="ui-block-b">
+                    <a data-mini="true" class="close" data-role="button" data-theme="b" data-rel="back">Close</a>
+                </div>
+
+            </fieldset>
+            <div id="popupDialog" data-role="popup" class="preview" data-theme="b" data-dismissible="true" style="width:100%">
+                <div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+                    <a href="#" data-rel="back" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-right ui-link ui-btn ui-btn-b ui-icon-delete ui-btn-icon-notext ui-shadow ui-corner-all" role="button">Close</a>
+                    <img class="preview" width="100%" src="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

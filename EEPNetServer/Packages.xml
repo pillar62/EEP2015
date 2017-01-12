@@ -1,0 +1,9 @@
+<InfolightPackages LoadInMemory="False">
+  <Common />
+  <SOLUTION1>
+    <PackageFile Name="sRT101.dll" Active="1" />
+  </SOLUTION1>
+  <RT>
+    <PackageFile Name="sRT105.dll" Active="1" />
+  </RT>
+</InfolightPackages>

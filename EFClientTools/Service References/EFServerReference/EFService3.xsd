@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/EFWCFModule" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EFWCFModule" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8990/EFWCFModule/EFService?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ClientInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Database" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Groups" nillable="true" type="tns:ArrayOfGroupInfo" />
+      <xs:element minOccurs="0" name="IPAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Locale" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LogonResult" type="tns:LogonResult" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SecurityKey" type="ser:guid" />
+      <xs:element minOccurs="0" name="Site" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Solution" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClientInfo" nillable="true" type="tns:ClientInfo" />
+  <xs:complexType name="ArrayOfGroupInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GroupInfo" nillable="true" type="tns:GroupInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGroupInfo" nillable="true" type="tns:ArrayOfGroupInfo" />
+  <xs:complexType name="GroupInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Type" type="tns:GroupType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GroupInfo" nillable="true" type="tns:GroupInfo" />
+  <xs:simpleType name="GroupType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="Role" />
+      <xs:enumeration value="Org" />
+      <xs:enumeration value="OrgShare" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="GroupType" nillable="true" type="tns:GroupType" />
+  <xs:simpleType name="LogonResult">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NotLogoned" />
+      <xs:enumeration value="Logoned" />
+      <xs:enumeration value="PasswordError" />
+      <xs:enumeration value="UserNotFound" />
+      <xs:enumeration value="UserDisabled" />
+      <xs:enumeration value="UserCountExceedMax" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="LogonResult" nillable="true" type="tns:LogonResult" />
+  <xs:complexType name="ArrayOfSolutionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SolutionInfo" nillable="true" type="tns:SolutionInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSolutionInfo" nillable="true" type="tns:ArrayOfSolutionInfo" />
+  <xs:complexType name="SolutionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DefaultDatabase" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SolutionInfo" nillable="true" type="tns:SolutionInfo" />
+  <xs:complexType name="PacketInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Count" type="xs:int" />
+      <xs:element minOccurs="0" name="OrderParameters" nillable="true" type="tns:ArrayOfOrderParameter" />
+      <xs:element minOccurs="0" name="StartIndex" type="xs:int" />
+      <xs:element minOccurs="0" name="WhereParameters" nillable="true" type="tns:ArrayOfWhereParameter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PacketInfo" nillable="true" type="tns:PacketInfo" />
+  <xs:complexType name="ArrayOfOrderParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderParameter" nillable="true" type="tns:OrderParameter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrderParameter" nillable="true" type="tns:ArrayOfOrderParameter" />
+  <xs:complexType name="OrderParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Direction" type="tns:OrderDirection" />
+      <xs:element minOccurs="0" name="Field" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderParameter" nillable="true" type="tns:OrderParameter" />
+  <xs:simpleType name="OrderDirection">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Ascending" />
+      <xs:enumeration value="Descending" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OrderDirection" nillable="true" type="tns:OrderDirection" />
+  <xs:complexType name="ArrayOfWhereParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WhereParameter" nillable="true" type="tns:WhereParameter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWhereParameter" nillable="true" type="tns:ArrayOfWhereParameter" />
+  <xs:complexType name="WhereParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="And" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Condition" type="tns:WhereCondition" />
+      <xs:element minOccurs="0" name="Field" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WhereParameter" nillable="true" type="tns:WhereParameter" />
+  <xs:simpleType name="WhereCondition">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Equal" />
+      <xs:enumeration value="NotEqual" />
+      <xs:enumeration value="GreaterThan" />
+      <xs:enumeration value="EqualOrGreaterThan" />
+      <xs:enumeration value="LessThan" />
+      <xs:enumeration value="EqualOrLessThan" />
+      <xs:enumeration value="BeginWith" />
+      <xs:enumeration value="Contain" />
+      <xs:enumeration value="In" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="WhereCondition" nillable="true" type="tns:WhereCondition" />
+  <xs:complexType name="FlowParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Attachments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentActivity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Important" type="xs:boolean" />
+      <xs:element minOccurs="0" name="InstanceID" type="ser:guid" />
+      <xs:element minOccurs="0" name="KeyValues" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Keys" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NextActivity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NotifyAllRoles" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Operation" type="tns:FlowOperation" />
+      <xs:element minOccurs="0" name="OrgKind" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Provider" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SendToIDs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Urgent" type="xs:boolean" />
+      <xs:element minOccurs="0" name="XomlName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlowParameter" nillable="true" type="tns:FlowParameter" />
+  <xs:simpleType name="FlowOperation">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Submit" />
+      <xs:enumeration value="Approve" />
+      <xs:enumeration value="Return" />
+      <xs:enumeration value="ReturnToStep" />
+      <xs:enumeration value="Retake" />
+      <xs:enumeration value="Reject" />
+      <xs:enumeration value="PlusApprove" />
+      <xs:enumeration value="PlusReturn" />
+      <xs:enumeration value="Pause" />
+      <xs:enumeration value="Notify" />
+      <xs:enumeration value="Preview" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FlowOperation" nillable="true" type="tns:FlowOperation" />
+  <xs:complexType name="FlowResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="InstanceID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NextActivity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SendToIDs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" type="tns:FlowStatus" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlowResult" nillable="true" type="tns:FlowResult" />
+  <xs:simpleType name="FlowStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Normal" />
+      <xs:enumeration value="Waiting" />
+      <xs:enumeration value="Rejected" />
+      <xs:enumeration value="End" />
+      <xs:enumeration value="Exception" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FlowStatus" nillable="true" type="tns:FlowStatus" />
+  <xs:simpleType name="FlowDataType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Do" />
+      <xs:enumeration value="History" />
+      <xs:enumeration value="Notify" />
+      <xs:enumeration value="End" />
+      <xs:enumeration value="Organization" />
+      <xs:enumeration value="AllUsers" />
+      <xs:enumeration value="AllGroups" />
+      <xs:enumeration value="Group" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FlowDataType" nillable="true" type="tns:FlowDataType" />
+  <xs:complexType name="FlowDataParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlowDataParameter" nillable="true" type="tns:FlowDataParameter" />
+</xs:schema>

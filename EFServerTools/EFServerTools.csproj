@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9FAEA2B6-547A-4CFA-A16A-750421952430}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EFServerTools</RootNamespace>
+    <AssemblyName>EFServerTools</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\EEPNetServer\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>..\EEP2010RuleSet.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>
+    </DocumentationFile>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Entity">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\ComponentInfo.cs" />
+    <Compile Include="Common\EFAutoNumberInfo.cs" />
+    <Compile Include="Common\EFCommandInfo.cs" />
+    <Compile Include="Common\EFLogInfo.cs" />
+    <Compile Include="Common\EFRelationInfo.cs" />
+    <Compile Include="Common\EFTransactionInfo.cs" />
+    <Compile Include="Common\EFUpdateComponentInfo.cs" />
+    <Compile Include="Common\ICOInfo.cs" />
+    <Compile Include="Common\MessageHelper.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Design\DatabaseEditor.cs" />
+    <Compile Include="Design\EFCommandDesign\EFCommandDesigner.cs" />
+    <Compile Include="Design\EFCommandDesign\EFParameterEditorcs.cs" />
+    <Compile Include="Design\EFCommandDesign\EFParameterEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\EFCommandDesign\EFParameterEditorDialog.Designer.cs">
+      <DependentUpon>EFParameterEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\EFTransactionDesign\EFTransactionEditor.cs" />
+    <Compile Include="Design\EFTransactionDesign\EFTransactionEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\EFTransactionDesign\EFTransactionEditorDialog.designer.cs">
+      <DependentUpon>EFTransactionEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\EFTransactionDesign\EFTransactionEditorTransFieldsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\EFTransactionDesign\EFTransactionEditorTransFieldsDialog.Designer.cs">
+      <DependentUpon>EFTransactionEditorTransFieldsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\EFTransactionDesign\EFTransactionEditorTransKeyFieldsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\EFTransactionDesign\EFTransactionEditorTransKeyFieldsDialog.Designer.cs">
+      <DependentUpon>EFTransactionEditorTransKeyFieldsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\EFTransactionDesign\EFTransactionEditorTTransactionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\EFTransactionDesign\EFTransactionEditorTTransactionDialog.designer.cs">
+      <DependentUpon>EFTransactionEditorTTransactionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\EFTransactionDesign\EFTransactionTransFieldsAddDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\EFTransactionDesign\EFTransactionTransFieldsAddDialog.designer.cs">
+      <DependentUpon>EFTransactionTransFieldsAddDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\EFTransactionDesign\EFTransactionTransKeyFieldsAddDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\EFTransactionDesign\EFTransactionTransKeyFieldsAddDialog.Designer.cs">
+      <DependentUpon>EFTransactionTransKeyFieldsAddDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\EFCommandDesign\EFCommandEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\EFCommandDesign\EFCommandEditor.Designer.cs">
+      <DependentUpon>EFCommandEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\MetadataProvider.cs" />
+    <Compile Include="Design\PropertyEditor.cs" />
+    <Compile Include="EFAutoNumber.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EFCommand.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EFModule.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EFLog.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EFRelation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EFTransaction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EFUpdateComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Extension\EntityObjectExtension.cs" />
+    <Compile Include="Extension\ObjectContextExtension.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="EntityProvider.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EFBase\EFBase.csproj">
+      <Project>{592F3429-D35C-47BB-A631-EA17F58B5046}</Project>
+      <Name>EFBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFWCFModule\EFWCFModule.csproj">
+      <Project>{D1DCAC53-1E65-4229-B38E-14CA3CE1626D}</Project>
+      <Name>EFWCFModule</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Design\EFCommandDesign\EFParameterEditorDialog.resx">
+      <DependentUpon>EFParameterEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\EFTransactionDesign\EFTransactionEditorDialog.resx">
+      <DependentUpon>EFTransactionEditorDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\EFTransactionDesign\EFTransactionEditorTransFieldsDialog.resx">
+      <DependentUpon>EFTransactionEditorTransFieldsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\EFTransactionDesign\EFTransactionEditorTransKeyFieldsDialog.resx">
+      <DependentUpon>EFTransactionEditorTransKeyFieldsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\EFTransactionDesign\EFTransactionEditorTTransactionDialog.resx">
+      <DependentUpon>EFTransactionEditorTTransactionDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\EFTransactionDesign\EFTransactionTransFieldsAddDialog.resx">
+      <DependentUpon>EFTransactionTransFieldsAddDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\EFTransactionDesign\EFTransactionTransKeyFieldsAddDialog.resx">
+      <DependentUpon>EFTransactionTransKeyFieldsAddDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\EFCommandDesign\EFCommandEditor.resx">
+      <DependentUpon>EFCommandEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\EFAutoNumber.ico" />
+    <EmbeddedResource Include="Resources\EFCommand.ico" />
+    <EmbeddedResource Include="Resources\EFLog.ico" />
+    <EmbeddedResource Include="Resources\EFRelation.ico" />
+    <EmbeddedResource Include="Resources\EFTransaction.ico" />
+    <EmbeddedResource Include="Resources\EFUpdateComponent.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\container.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\entityset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\navproperty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\property.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\script.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

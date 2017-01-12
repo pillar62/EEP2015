@@ -1,0 +1,21 @@
+﻿.refBlank
+{
+	width:0px;
+	visibility:hidden;
+	display:none;
+}
+
+.refButtonUseImage
+{
+	width: 25px;
+	border-right: thin outset;
+	border-top: thin outset;
+	border-left: thin outset; 
+	border-bottom: thin outset; 
+	background-color: buttonface
+}
+
+.refButton
+{
+	width: 25px; 
+}

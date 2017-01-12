@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="infolight.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="infolight.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="infolight.com/Imports">
+      <xsd:import schemaLocation="http://localhost:8990/EFWCFModule/EFService?xsd=xsd5" namespace="infolight.com" />
+      <xsd:import schemaLocation="http://localhost:8990/EFWCFModule/EFService?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8990/EFWCFModule/EFService?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/sPOT0101" />
+      <xsd:import schemaLocation="http://localhost:8990/EFWCFModule/EFService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+      <xsd:import schemaLocation="http://localhost:8990/EFWCFModule/EFService?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://localhost:8990/EFWCFModule/EFService?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/EFGlobalModule" />
+      <xsd:import schemaLocation="http://localhost:8990/EFWCFModule/EFService?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/EFWCFModule" />
+      <xsd:import schemaLocation="http://localhost:8990/EFWCFModule/EFService?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEFService_GetModuleNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetModuleNames" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetModuleNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetModuleNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetCommandNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommandNames" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetCommandNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommandNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetObjectClassName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetObjectClassName" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetObjectClassName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetObjectClassNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetEntityPrimaryKeys_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityPrimaryKeys" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetEntityPrimaryKeys_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityPrimaryKeysResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetEntityFields_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityFields" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetEntityFields_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityFieldsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetEntityFieldTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityFieldTypes" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetEntityFieldTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityFieldTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetEntityFieldMappings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityFieldMappings" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetEntityFieldMappings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityFieldMappingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetEntityNavigationFields_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityNavigationFields" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetEntityNavigationFields_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityNavigationFieldsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetEntitySetNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntitySetNames" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetEntitySetNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntitySetNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetColumnDefination_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetColumnDefination" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetColumnDefination_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetColumnDefinationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetDatabases_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatabases" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetDatabases_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDatabasesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetSolutions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSolutions" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetSolutions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSolutionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_LogOn_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogOn" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_LogOn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogOnResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_LogOff_InputMessage">
+    <wsdl:part name="parameters" element="tns:LogOff" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_LogOff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogOffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_CallMethod_InputMessage">
+    <wsdl:part name="parameters" element="tns:CallMethod" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_CallMethod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CallMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetObjectCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetObjectCount" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetObjectCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetObjectCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetObjects_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetObjects" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetObjects_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetObjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetObjectByKey_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetObjectByKey" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetObjectByKey_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetObjectByKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetDetailObjects_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailObjects" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetDetailObjects_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailObjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_UpdateObjects_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateObjects" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_UpdateObjects_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateObjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_CallFlowMethod_InputMessage">
+    <wsdl:part name="parameters" element="tns:CallFlowMethod" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_CallFlowMethod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CallFlowMethodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetFlowData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowData" />
+  </wsdl:message>
+  <wsdl:message name="IEFService_GetFlowData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFlowDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEFService">
+    <wsdl:operation name="GetModuleNames">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/GetModuleNames" message="tns:IEFService_GetModuleNames_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/GetModuleNamesResponse" message="tns:IEFService_GetModuleNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCommandNames">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/GetCommandNames" message="tns:IEFService_GetCommandNames_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/GetCommandNamesResponse" message="tns:IEFService_GetCommandNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetObjectClassName">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/GetObjectClassName" message="tns:IEFService_GetObjectClassName_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/GetObjectClassNameResponse" message="tns:IEFService_GetObjectClassName_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityPrimaryKeys">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/GetEntityPrimaryKeys" message="tns:IEFService_GetEntityPrimaryKeys_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/GetEntityPrimaryKeysResponse" message="tns:IEFService_GetEntityPrimaryKeys_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityFields">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/GetEntityFields" message="tns:IEFService_GetEntityFields_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/GetEntityFieldsResponse" message="tns:IEFService_GetEntityFields_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityFieldTypes">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/GetEntityFieldTypes" message="tns:IEFService_GetEntityFieldTypes_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/GetEntityFieldTypesResponse" message="tns:IEFService_GetEntityFieldTypes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityFieldMappings">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/GetEntityFieldMappings" message="tns:IEFService_GetEntityFieldMappings_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/GetEntityFieldMappingsResponse" message="tns:IEFService_GetEntityFieldMappings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityNavigationFields">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/GetEntityNavigationFields" message="tns:IEFService_GetEntityNavigationFields_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/GetEntityNavigationFieldsResponse" message="tns:IEFService_GetEntityNavigationFields_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntitySetNames">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/GetEntitySetNames" message="tns:IEFService_GetEntitySetNames_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/GetEntitySetNamesResponse" message="tns:IEFService_GetEntitySetNames_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetColumnDefination">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/GetColumnDefination" message="tns:IEFService_GetColumnDefination_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/GetColumnDefinationResponse" message="tns:IEFService_GetColumnDefination_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabases">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/GetDatabases" message="tns:IEFService_GetDatabases_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/GetDatabasesResponse" message="tns:IEFService_GetDatabases_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSolutions">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/GetSolutions" message="tns:IEFService_GetSolutions_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/GetSolutionsResponse" message="tns:IEFService_GetSolutions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogOn">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/LogOn" message="tns:IEFService_LogOn_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/LogOnResponse" message="tns:IEFService_LogOn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LogOff">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/LogOff" message="tns:IEFService_LogOff_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/LogOffResponse" message="tns:IEFService_LogOff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CallMethod">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/CallMethod" message="tns:IEFService_CallMethod_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/CallMethodResponse" message="tns:IEFService_CallMethod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetObjectCount">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/GetObjectCount" message="tns:IEFService_GetObjectCount_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/GetObjectCountResponse" message="tns:IEFService_GetObjectCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetObjects">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/GetObjects" message="tns:IEFService_GetObjects_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/GetObjectsResponse" message="tns:IEFService_GetObjects_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetObjectByKey">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/GetObjectByKey" message="tns:IEFService_GetObjectByKey_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/GetObjectByKeyResponse" message="tns:IEFService_GetObjectByKey_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailObjects">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/GetDetailObjects" message="tns:IEFService_GetDetailObjects_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/GetDetailObjectsResponse" message="tns:IEFService_GetDetailObjects_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateObjects">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/UpdateObjects" message="tns:IEFService_UpdateObjects_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/UpdateObjectsResponse" message="tns:IEFService_UpdateObjects_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CallFlowMethod">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/CallFlowMethod" message="tns:IEFService_CallFlowMethod_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/CallFlowMethodResponse" message="tns:IEFService_CallFlowMethod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlowData">
+      <wsdl:input wsaw:Action="infolight.com/IEFService/GetFlowData" message="tns:IEFService_GetFlowData_InputMessage" />
+      <wsdl:output wsaw:Action="infolight.com/IEFService/GetFlowDataResponse" message="tns:IEFService_GetFlowData_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

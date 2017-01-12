@@ -1,0 +1,87 @@
+﻿
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script type="text/javascript" src="../scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="../scripts/index.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.json.js"></script>
+    <script type="text/javascript" src="../js/jquery.infolight.mobile.js"></script>
+    <script type="text/javascript" src="../js/jquery.infolight.mobile.wf.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../js/jSignature/jSignature.min.js"></script>
+<title>
+
+    </title>
+    <link href="../css/index.css" rel="stylesheet" />
+    <link href="../js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+    <link href="../css/themes/my-custom-theme.min.css" rel="stylesheet" />
+    <link href="../css/themes/jquery.mobile.icons.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form name="form1" method="post" action="JQMobileSingleTest.aspx?Cordova=true" id="form1">
+        <div>
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTE5MzY4ODAwZGQVDif+u/PHL+0gd44NnEBG8KuKS+yt7DuV3qHyIqhrwQ==" />
+        </div>
+
+
+        <div id="dataGridView" data-role="page">
+            <div data-theme="b" data-role="content">
+                <table class="info-datagrid table-stripe infolight-breakpoint" data-role="table" data-mode="reflow" data-theme="b" infolight-options="remoteName:'SDTest.DTest',tableName:'DTest',pageSize:10,editPage:'#dataFormMaster',editMode:'dialog',toolItemObjectID:'#dataGridView_toolitem',title:'JQMobileSingleTest',alwaysClose:false,allowAdd:true,allowUpdate:true,allowDelete:true,allowView:true,toolItemsPosition:'both',listColumnCount:2,listCaptionWidth:120,queryMode:'window',reportFileName:''">
+                    <thead>
+                        <tr>
+                            <th nowrap="nowrap" infolight-options="field:'DTest',width:120,align:'left',nowrap:false">DTest</th>
+                            <th nowrap="nowrap" infolight-options="field:'DName',width:120,align:'left',nowrap:false">DName</th>
+                            <th nowrap="nowrap" infolight-options="field:'DMax',width:120,align:'left',nowrap:false,format:'Signture,height:60,format:svgbase64'">DMax</th>
+                        </tr>
+                    </thead>
+                </table><div class="ui-content" id="dataGridView_popup" data-role="popup" data-theme="d" data-overlay-theme="a">
+                    <a data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><p></p>
+                </div><div id="dataGridView_toolitem" data-role="none" style="display:none">
+                    <a class="grid-insert" data-mini="true" data-inline="true" data-role="none" data-icon="plus" data-iconpos="notext">Insert</a><a class="grid-previous" data-mini="true" data-inline="true" data-role="none" data-icon="arrow-l" data-iconpos="notext">Previous page</a><a class="grid-next" data-mini="true" data-inline="true" data-role="none" data-icon="arrow-r" data-iconpos="notext">Next page</a><a class="grid-query" data-mini="true" data-inline="true" data-role="none" data-icon="search" data-iconpos="notext">Query</a><a class="grid-refresh" data-mini="true" data-inline="true" data-role="none" data-icon="refresh" data-iconpos="notext">Refresh</a><a class="grid-return" data-mini="true" data-inline="true" data-role="none" data-icon="back" data-iconpos="notext">Back</a>
+                </div>
+            </div>
+        </div>
+        <div id="dataFormMaster" data-overlay-theme="b" data-role="page">
+            <div data-role="header" data-theme="b">
+                <h1>
+                    JQMobileSingleTest
+                </h1>
+            </div><div data-theme="b" data-role="content">
+                <div data-theme="b" class="info-form" infolight-options="id: 'dataFormMaster',remoteName:'SDTest.DTest',tableName:'DTest',duplicateCheck:false,appliedClose:true,autoSubmit:false,autoPause:false">
+                    <div data-role="fieldcontain">
+                        <label for="dataFormMaster_DTest">DTest</label><input id="dataFormMaster_DTest" name="DTest" data-mini="true" infolight-options="field:'DTest',width:120,align:'left',readOnly:false" type="text" />
+                    </div><div data-role="fieldcontain">
+                        <label for="dataFormMaster_DName">DName</label><input id="dataFormMaster_DName" name="DName" data-mini="true" infolight-options="field:'DName',width:120,align:'left',readOnly:false" type="text" />
+
+                    </div><div data-role="fieldcontain">
+                        <label for="dataFormMaster_DMax">DMax</label><div id="dataFormMaster_DMax" name="DMax" data-mini="true" infolight-options="field:'DMax',width:120,align:'left',readOnly:false,format:'svgbase64',height:120" class="info-signature ui-input-text ui-shadow-inset ui-corner-all ui-btn-shadow ui-body-b ui-mini" data-role="none" style="height:120px;display:inline-block;">
+                    </div>
+                    </div>
+                </div><div class="ui-content" id="dataFormMaster_popup" data-role="popup" data-theme="d" data-overlay-theme="a">
+                    <a data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><p></p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div>
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D3510EDB" />
+        </div>
+    </form>
+
+    <!-- Visual Studio Browser Link -->
+    <script type="application/json" id="__browserLink_initializationData">
+        {"appName":"Internet Explorer","requestId":"382d4415016e429b9582169beca910e2"}
+    </script>
+    <script type="text/javascript" src="http://localhost:49792/d6fd24e5643c452abba1f79ebb1fdfab/browserLink" async="async"></script>
+    <!-- End Browser Link -->
+
+</body>
+</html>
+

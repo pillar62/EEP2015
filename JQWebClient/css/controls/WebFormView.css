@@ -1,0 +1,49 @@
+﻿
+
+/*formview的外观样式Office Blue*/
+.formview_1
+{
+	font-family: Microsoft JhengHei;
+	font-size: 9pt;
+}
+
+/*formview的row样式*/
+.formview_row_1
+{
+}
+
+/*formview的row中table样式*/
+.formview_row_1 .container_table
+{
+    width: 100%;
+    border: #698BCA 1px solid;
+    padding: 2px 2px 2px 2px; /*filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr=#DCEBFD, EndColorStr=#8DB2E6)
+	progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);*/
+    
+}
+.caption_td
+{
+    border: 1px solid #D4D0C8;
+    background-color: #D8E9FD;
+}
+.value_td
+{
+    border: 1px solid #D4D0C8;
+    background-color: #FEFEFE;
+}
+
+/*formview的pager样式*/
+.formview_pager_1
+{    
+    background-color: #B9D1F6;
+}
+
+/*formview的pager中table样式*/
+.formview_pager_1 table
+{
+    padding: 2px 2px 2px 2px; /*filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#E2F3F5, EndColorStr=#B0E0E6)
+	progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);*/
+    
+}
+
+

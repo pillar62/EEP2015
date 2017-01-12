@@ -1,0 +1,12 @@
+[[
+	{"field":"GROUPID","title":"Group ID","width":100,"editor":{"type":"validatebox", "options":{"required":true}}}
+	,{"field":"GROUPNAME","title":"Group Name","width":100,"editor":{"type":"validatebox", "options":{"required":true}}}
+	,{"field":"ISROLE","title":"ISROLE","width":100,"editor":{"type":"validatebox", "options":{"required":false}}}
+],[
+	{"field":"USERID","title":"USER ID","width":100,"editor":{"type":"text"}}
+	,{"field":"USERNAME","title":"User Name","width":100,"editor":{"type":"text"}}
+],[
+	{"checkbox":true}
+	,{"field":"USERID","title":"User ID","width":100,"editor":{"type":"text"}}
+	,{"field":"USERNAME","title":"User Name","width":100,"editor":{"type":"text"}}
+]]

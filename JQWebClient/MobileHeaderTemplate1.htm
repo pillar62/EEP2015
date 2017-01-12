@@ -1,0 +1,23 @@
+﻿<div data-role="header" data-theme="b">
+    <fieldset class="ui-grid-c">
+        <div class="ui-block-a" style="width: 5%">
+            <a data-mini="true" data-inline="true" data-icon="home" data-role="button" data-iconpos="notext"
+                data-theme="b" onclick="javascript:location.href='../MobileMainPage.aspx';">Home</a>
+        </div>
+        <div class="ui-block-b" style="width: 50%">
+            <h1 class="ui-title" role="heading" aria-level="1" style="line-height: 20px; margin-left: 15%;
+                margin-right: 15%">
+                EEP2010</h1>
+        </div>
+        <div class="ui-block-c" style="width: 25%">
+            <div class=" ui-mini">
+                <input class="header-query"/></div>
+        </div>
+        <div class="ui-block-d" style="width: 15%">
+            <a data-mini="true" data-inline="true" data-icon="search" data-role="button" data-iconpos="notext"
+                data-theme="b" onclick="javascript: $(this).closest('div[data-role=\'page\']').find('.info-query').query('query');">Query</a> <a data-mini="true" data-inline="true" data-icon="plus"
+                    data-role="button" data-iconpos="notext" data-theme="b" class="ui-btn-right"
+                    style="margin-top: 3px" onclick="javascript: $(this).closest('div[data-role=\'page\']').find('.info-datagrid').datagrid('insertRow');">Add</a>
+        </div>
+    </fieldset>
+</div>

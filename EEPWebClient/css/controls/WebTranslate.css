@@ -1,0 +1,33 @@
+﻿/*鼠标离开按钮时，按钮的样式*/
+.Button_mouseout
+{
+    border: 1px solid #286699;
+    height: 22px;
+    cursor: hand;
+    color: white;
+    font-size: 12px;
+    background-color: #95c3e9;
+    background-image: url('../../Image/main/emptybtn.png');
+    background-repeat: repeat-x;
+    font-family: Microsoft JhengHei;
+}
+
+/*鼠标移动到按钮上时，按钮的样式*/
+.Button_mouseover
+{
+    border: 1px solid #051723;
+    height: 22px;
+    cursor: hand;
+    color: white;
+    font-size: 12px;
+    background-color:#64757f;
+    background-image: url(../../Image/main/emptybtn_over.png);
+    background-repeat: repeat-x;
+    font-family:Microsoft JhengHei;
+}
+
+/*按钮container样式*/
+.ButtonContainer
+{
+	padding:5px;
+}

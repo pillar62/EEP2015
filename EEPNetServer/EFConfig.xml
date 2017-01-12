@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Config>
+  <PackageProvider>
+    <Solution Name="SOLUTION1">
+      <Module Name="WCFSOrderDetail" Active="True" />
+      <Module Name="WCFS001" Active="True" />
+      <Module Name="WCFServer" Active="True" />
+      <Module Name="EntityDesignTools" Active="True" />
+    </Solution>
+  </PackageProvider>
+  <ServiceProvider>
+    <Binding MaxBufferPoolSize="524288" MaxReceivedMessageSize="65536" MaxArrayLength="16384" MaxBytesPerRead="4096" MaxDepth="32" MaxNameTableCharCount="16384" MaxStringContentLength="8192" />
+  </ServiceProvider>
+  <SDModuleProvider>
+    <WebClient Path="D:\Infolight\EEP2010\SDWebClient" />
+  </SDModuleProvider>
+</Config>

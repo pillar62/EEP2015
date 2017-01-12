@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EEPNetServer</name>
+    </assembly>
+    <members>
+        <member name="T:EEPNetServer.frmServerMain">
+            <summary>
+            Summary description for WinForm.
+            </summary>
+        </member>
+        <member name="F:EEPNetServer.frmServerMain.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EEPNetServer.frmServerMain.#ctor">
+            <summary>
+            Summary description for WinForm.
+            </summary>
+        </member>
+        <member name="M:EEPNetServer.frmServerMain.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:EEPNetServer.frmServerMain.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:EEPNetServer.frmServerMain.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:EEPNetServer.frmDBMan">
+            <summary>
+            Summary description for WinForm2.
+            </summary>
+        </member>
+        <member name="F:EEPNetServer.frmDBMan.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EEPNetServer.frmDBMan.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:EEPNetServer.frmDBMan.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EEPNetServer.frmAbout">
+            <summary>
+            Summary description for WinForm2.
+            </summary>
+        </member>
+        <member name="F:EEPNetServer.frmAbout.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EEPNetServer.frmAbout.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:EEPNetServer.frmAbout.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EEPNetServer.frmAddDB">
+            <summary>
+            Summary description for WinForm.
+            </summary>
+        </member>
+        <member name="F:EEPNetServer.frmAddDB.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EEPNetServer.frmAddDB.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="T:EEPNetServer.frmPkgMan">
+            <summary>
+            Summary description for WinForm.
+            </summary>
+        </member>
+        <member name="F:EEPNetServer.frmPkgMan.PkgXml">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EEPNetServer.frmPkgMan.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:EEPNetServer.frmPkgMan.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EEPNetServer.frmPkgInfo">
+            <summary>
+            Summary description for WinForm.
+            </summary>
+        </member>
+        <member name="F:EEPNetServer.frmPkgInfo.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:EEPNetServer.frmPkgInfo.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:EEPNetServer.frmPkgInfo.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:EEPNetServer.SrvUtils">
+            <summary>
+            Summary description for Class.
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,92 @@
+JqDataHandler.aspx
+selectData  1110-1113  (1110:context properties 1111:get data 1112:total 1113:to json and return)
+updatedata  1120-1123  (1120:context properties 1121:get values 1122 push updates 1123 run applyupdates)
+callmethod  1130
+autoseq   1140-1141
+duplicatecheck  1150-1151
+RecordLock  1160
+importdata  1170-1171
+exportdata  1180-1182
+tableToJSON 1101 1102
+feedback  1220
+
+JqHttpHandler.aspx
+default  1230
+validate 1240
+message 1250
+sendmail 1260
+
+JqFileHandler.aspx
+download 1270
+
+UploadHandler.aspx
+upload   1280
+
+
+Compoments
+JQAutoComplete		8010
+JQAutoSeq   	 
+JQBatchMove 	   8030
+JQButton   	 8040 
+JQCheckBox   	 8050
+JQCollection 	   
+JQComboBox   	 8070 
+JQComboGrid   	 8080 
+JQControlDesigner 	 
+JQDataForm   	 8100
+JQDataGrid    	8110
+JQDateBox    	8120 
+JQDefault    	
+JQDialog	8140
+JQDrillDown	8150
+JQException	
+JQFileUpload	8170
+JQFLComment	8180
+JQImage		8190
+JQImageContainer	8200
+JQLabel		8210
+JQMail		8220
+JQMenuButton	8230
+JQMessageProvider
+JQMetro	8250*****
+JQMultiLanguage
+JQNumberBox	8270
+JQOptions	8280
+JQPanel		8290
+JQQrcode	8300
+JQRefval	8310
+JQReport	8320
+JQSchedule	8330
+JQScriptManger	8340 *****
+JQSecColumns	
+JQSecurity	
+JQTab		8370
+JQTextArea	8380
+JQTimeSpinner	8390
+JQTree		
+JQTreeView	8410
+JQValidate	
+JQVariable	
+JQYearMonthBox	8440
+JQTextBox	8450
+
+js 
+datagrid 1000-
+(1000:initial 1001,1002,1007:ednedit:1003,1006:delete 1005:insert 1004:apply  1050-1052:expandmode  1060-1063:import 1070,1071:export 1080,1081:report)
+dataform 1100- (1101,1102:submiDetailForm  1100 openform
+default  1200
+validate 1300
+upload   1400
+schedule 1500-
+treeview 1600-1603
+drilldown 1700-1703
+refval 1800-1802
+combogrid 1900
+
+feedback 1220
+batchmove 2100
+mail	2200
+
+userdefinen 1310
+databasetype 3100;
+copyitem  3200;

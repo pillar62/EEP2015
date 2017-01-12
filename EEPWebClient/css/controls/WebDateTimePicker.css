@@ -1,0 +1,14 @@
+﻿.dtpButtonUseImage
+{
+	width: 25px; 
+	border-right: thin outset;
+	border-top: thin outset;
+	border-left: thin outset; 
+	border-bottom: thin outset; 
+	background-color: buttonface
+}
+
+.dtpButton
+{
+	width: 25px; 
+}

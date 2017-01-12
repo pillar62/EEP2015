@@ -1,0 +1,15 @@
+﻿.mainDivUpdating
+{
+	background-color: Gray;
+    filter: alpha(opacity=40);
+    opacity: 0.4;
+}
+
+.updateProgressPanel
+{
+	position:absolute;
+	width:50;
+	height:50;
+	top:expression(((document.documentElement.clientHeight - 50) / 2) + "px");
+	left:expression(((document.documentElement.clientWidth - 50) / 2) + "px");
+}

@@ -1,0 +1,63 @@
+﻿/**/
+/*页面主体样式*/
+body 
+{
+	font-family:Verdana;
+	font-size: 9pt;
+	background-image: url( '../../Image/innerpage/bg.jpg' );
+	background-repeat: repeat-x;
+	background-color:#405765;
+}
+
+/*主div的样式*/
+#main_container
+{
+	text-align:center;
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#8689AE', endColorStr='#C7C8DA', gradientType='1');
+	border:solid 1px #000000;
+	width:100%;
+}
+
+/*组织选择dropdownlist样式*/
+#ddlOrgKind
+{
+	width:100px;
+}
+
+/*分割占位div样式*/
+#split
+{
+	width:5px;
+}
+
+/*鼠标离开按钮时，按钮的样式*/
+.btn_mouseout 
+{
+   border: 1px solid #286699;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-family:Microsoft JhengHei; 
+    font-weight: bold;
+    font-size: 12px;
+    background-color:#95c3e9;
+    background-image: url('../../Image/innerpage/btn1.png');
+    background-repeat: repeat-x;
+}
+
+/*鼠标移动到按钮上时，按钮的样式*/
+.btn_mouseover
+{
+    border: 1px solid #051723;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-family:Microsoft JhengHei; 
+    font-weight: bold;
+    font-size: 12px;
+    background-color:#64757f;
+    background-image:url( '../../Image/innerpage/btn2.png' );
+    background-repeat: repeat-x;	
+}

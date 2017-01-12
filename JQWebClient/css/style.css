@@ -1,0 +1,181 @@
+﻿@charset "utf-8";
+
+#container {
+    width: 572px;
+    margin: auto;
+}
+
+#container_inner {
+    width: 572px;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+#content {
+    width: 572px;
+    height: 271;
+    float: left;
+    margin: 30px 0;
+}
+
+#formbar {
+    position: relative;
+    top: -250px;
+    left: 350px;
+    width: 260px;
+    font-size: 13px;
+    line-height: 30px;
+    color: #FFF;
+}
+
+.form01 {
+    height: 16px;
+    width: 150px;
+}
+
+.form02 {
+    height: 22px;
+    width: 154px;
+}
+
+.form03 {
+    height: 20px;
+    width: 20px;
+}
+
+#logo {
+    position: relative;
+    top: -177px;
+    left: 50px;
+    width: 150px;
+    font-size: 14px;
+    line-height: 18px;
+    display: inline;
+}
+
+
+#sidebar {
+    width: 200px;
+    float: right;
+    margin: 30px 0;
+}
+
+.whtext {
+    text-align: center;
+    text-justify: inter-ideograph;
+    font-size: 13px;
+    color: #FFF;
+}
+
+
+/* ==================== background ==================== */
+
+body {
+    background-image: url(../img/bg.jpg);
+    background-repeat: repeat-x;
+    background-position: center top;
+    background-color: #06F;
+    background-attachment: fixed;
+}
+
+
+
+
+/* ==================== header ==================== */
+
+#header {
+    color: #ffffff;
+    height: 220px;
+}
+
+#info {
+    width: 572px;
+    height: 300px;
+    background-image: url(../img/select_bg.png);
+    color: #ffffff;
+}
+
+
+
+#bt {
+    position: relative;
+    height: 35px;
+    width: 293px;
+    text-align: right;
+    left: 284px;
+    top: -62px;
+}
+
+    #bt li {
+        list-style-type: none;
+        width: 117px;
+        height: 35px;
+        float: left;
+        margin: 2px;
+        vertical-align: top;
+    }
+
+        #bt li a {
+            text-align: center;
+            background-image: url(../img/bt_bg.png);
+            background-repeat: no-repeat;
+            width: 117px;
+            height: 35px;
+            padding-top: 8px;
+            list-style-type: none;
+            text-decoration: none;
+            display: block;
+            font-size: 13px;
+            font-family: Verdana, Geneva, sans-serif;
+            color: #FFF;
+        }
+
+            #bt li a:hover {
+                display: block;
+                font-size: 14px;
+                color: #000;
+                font-family: Verdana, Geneva, sans-serif;
+            }
+
+.post {
+    width: auto;
+}
+
+    .post h2 {
+        font-size: 1em;
+        margin: 0;
+        margin-bottom: 0px;
+        background-color: #b8e964;
+        line-height: 32px;
+        padding-left: 10px;
+    }
+
+.posttext {
+    font-size: 0.875em;
+    color: #000000;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+    zoom: 1;
+    opacity: 0.8;
+}
+
+    .posttext p {
+        margin: 0;
+        margin-bottom: 0px;
+    }
+
+.buttonStyle {
+    text-align: center;
+    background-image: url(../img/bt_bg.png);
+    background-repeat: no-repeat;
+    background-color: #014971;
+    width: 117px;
+    height: 35px;
+    list-style-type: none;
+    text-decoration: none;
+    display: block;
+    font-size: 13px;
+    font-family: Verdana, Geneva, sans-serif;
+    color: #FFF;
+    border-style: none;
+}

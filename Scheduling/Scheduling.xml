@@ -1,0 +1,4 @@
+<InfolightScheduling>
+  <String SchedulName="Test" Description="" Active="1" SchedulingMode="Server Method(sync)" ServerMethod="SCustomers_SQL.MyTest" Parameters="" Database="ERPS" Solution="SOLUTION1" CycleUnit="Daily" Cycle="7.5,8.5" CycleHour="" When="WorkDay" Error="" LogScheduling="All" LastDateTime="09-04-16 14:39:09" SendMailMode="None" IsRunning="0" StartDateTime="" ErrorCount="0" />
+  <String SchedulName="111" Description="" Active="0" SchedulingMode="" ServerMethod="" Parameters="" Database="" Solution="" CycleUnit="" Cycle="" CycleHour="" When="" Error="" LogScheduling="None" LastDateTime="" SendMailMode="None" IsRunning="0" StartDateTime="" ErrorCount="0" />
+</InfolightScheduling>

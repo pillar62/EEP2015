@@ -1,0 +1,77 @@
+﻿/**/
+/*页面主体样式*/
+body
+{
+	font-family:Verdana;
+	font-size: 9pt;
+	background-image: url( '../../Image/innerpage/bg.jpg' );
+	background-repeat: repeat-x;
+	background-color:#405765;
+}
+
+/*主div的样式*/
+#main_content
+{
+	width:100%;
+	text-align:center;
+	position:relative;
+	top:20px;
+}
+
+.formview
+{
+	width:100%;
+	border: #7B9EBD 1px solid;
+	padding: 2px 2px 2px 2px;
+	background-image:url('../../Image/main/gridAltRow.png');
+	background-repeat:repeat-x;
+	background-color:#f5fba4;
+	/*filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#fafcdf, EndColorStr=#f5fba4);
+	progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);*/
+}
+
+.left_align
+{
+	text-align:left;
+}
+
+/*历史审核Grid的样式*/
+.gridview
+{
+	/*filter:progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);*/
+}
+
+/*历史审核Grid的header的样式*/
+.gridview_header
+{
+	background-image:url('../../Image/main/gridHeader.png');
+	background-repeat:repeat-x;
+}
+
+/*历史审核Grid的row的样式*/
+.gridview_row
+{
+	background-image:url('../../Image/main/gridRow.png');
+	background-repeat:repeat-x;
+}
+
+/*历史审核Grid的altrow的样式*/
+.gridview_altrow
+{
+	background-image:url('../../Image/main/gridAltRow.png');
+	background-repeat:repeat-x;
+}
+
+/*历史审核Grid的footer的样式*/
+.gridview_footer
+{
+	background-image:url('../../Image/main/gridFooter.png');
+	background-repeat:repeat-x;
+}
+
+/*历史审核Grid的选中row的样式*/
+.gridview_selectedrow
+{
+	background-image:url('../../Image/main/gridSelected.png');
+	background-repeat:repeat-x;
+}

@@ -1,0 +1,1 @@
+<InfolightSystemLog Disable="True" LogToFile="True" LogSql="True" MaxRecord="1000" MaxLogDays="7" MaxSize="1024" EnableLogs="255" WarningInterval="1000" />

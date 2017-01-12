@@ -1,0 +1,72 @@
+﻿/* Breakpoint to show as a standard table at 560px (35em x 16px) or wider */
+@media ( min-width: 35em ) {
+    /* Fixes table rendering when switching between breakpoints in Safari <= 5. See https://github.com/jquery/jquery-mobile/issues/5380 */
+    .ui-table-reflow.infolight-breakpoint {
+        display: table-row-group;
+    }
+        /* Show the table header rows */
+        .ui-table-reflow.infolight-breakpoint td,
+        .ui-table-reflow.infolight-breakpoint th,
+        .ui-table-reflow.infolight-breakpoint tbody th,
+        .ui-table-reflow.infolight-breakpoint tbody td,
+        .ui-table-reflow.infolight-breakpointe thead td,
+        .ui-table-reflow.infolight-breakpoint thead th {
+            display: table-cell;
+            margin: 0;
+        }
+            /* Hide the labels in each cell */
+            .ui-table-reflow.infolight-breakpoint td .ui-table-cell-label,
+            .ui-table-reflow.infolight-breakpoint th .ui-table-cell-label {
+                display: none;
+            }
+}
+
+.validate-label {
+    color: Red;
+}
+
+.ui-disabled
+{
+    opacity: 1;
+}
+
+p.flowtitle {
+    margin: 3px;
+    font-size: 110%;
+    text-decoration: underline;
+}
+
+.table1 {
+    border-collapse: collapse;
+    border-spacing: 5px;
+    border: 1px solid white;
+}
+
+.td1 {
+    border-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.labelWhite {
+    color: white;
+}
+
+
+.ui-li-static.ui-collapsible > .ui-collapsible-heading {
+	margin: 0;
+}
+
+.ui-li-static.ui-collapsible {
+	padding: 0;
+}
+
+.ui-li-static.ui-collapsible > .ui-collapsible-heading > .ui-btn {
+	border-top-width: 0;
+}
+
+.ui-li-static.ui-collapsible > .ui-collapsible-heading.ui-collapsible-heading-collapsed > .ui-btn,
+.ui-li-static.ui-collapsible > .ui-collapsible-content {
+	border-bottom-width: 0;
+}
+	

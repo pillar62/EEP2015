@@ -1,0 +1,38 @@
+﻿/*datalist外观样式*/
+.datalist_1
+{
+	font-family: Microsoft JhengHei;
+	font-size: 9pt;
+}
+
+/*datalist的item的样式*/
+.datalist_item_1
+{
+	
+}
+
+/*datalist的item中table的样式*/
+.datalist_item_1 table
+{
+	width:100%;
+	border: #7B9EBD 1px solid;
+	padding: 2px 2px 2px 2px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr=#DAEFFA, EndColorStr=#8DB2E6)
+	progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);
+}
+
+/*datalist的altitem的样式*/
+.datalist_altitem_1
+{
+	
+}
+
+/*datalist的altitem中table的样式*/
+.datalist_altitem_1 table
+{
+	width:100%;
+	border: #7B9EBD 1px solid;
+	padding: 2px 2px 2px 2px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr=#ffffff, EndColorStr=#DAEFFA)
+	progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);
+}

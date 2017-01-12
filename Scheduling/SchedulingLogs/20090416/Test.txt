@@ -1,0 +1,125 @@
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-02-25 13:39:36 ExecuteTime: 09-04-16 13:25:10
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-02-25 13:39:36 ExecuteTime: 09-04-16 13:25:12
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-02-25 13:39:36 ExecuteTime: 09-04-16 13:25:12
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-02-25 13:39:36 ExecuteTime: 09-04-16 13:25:12
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-02-25 13:39:36 ExecuteTime: 09-04-16 13:25:46
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-02-25 13:39:36 ExecuteTime: 09-04-16 13:26:47
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-04-16 13:26:47 ExecuteTime: 09-04-16 13:27:00
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-04-16 13:27:00 ExecuteTime: 09-04-16 13:27:16
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-04-16 13:27:16 ExecuteTime: 09-04-16 13:27:46
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-04-16 13:27:46 ExecuteTime: 09-04-16 13:28:15
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-02-25 13:39:36 ExecuteTime: 09-04-16 13:30:28
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-02-25 13:39:36 ExecuteTime: 09-04-16 13:32:34
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-02-25 13:39:36 ExecuteTime: 09-04-16 13:33:17
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-02-25 13:39:36 ExecuteTime: 09-04-16 13:33:35
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-02-25 13:39:36 ExecuteTime: 09-04-16 13:35:46
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-02-25 13:39:36 ExecuteTime: 09-04-16 13:44:47
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-04-16 13:44:47 ExecuteTime: 09-04-16 13:46:14
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-02-25 13:39:36 ExecuteTime: 09-04-16 13:46:31
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-04-16 13:46:31 ExecuteTime: 09-04-16 13:46:49
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-04-16 13:46:49 ExecuteTime: 09-04-16 13:47:08
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-04-16 13:47:08 ExecuteTime: 09-04-16 13:47:23
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-04-16 13:47:23 ExecuteTime: 09-04-16 13:47:37
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-02-25 13:39:36 ExecuteTime: 09-04-16 14:35:56
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-04-16 14:35:56 ExecuteTime: 09-04-16 14:36:33
+
+
+SchedulName: Test Status: Error Message:Module:SCustomers_SQL, MethodName:MyTest 
+ Error:无法将类型为“SCustomers_SQL.Component”的对象强制转换为类型“IDataModule”。 
+LastDateTime: 09-04-16 14:36:33 ExecuteTime: 09-04-16 14:39:09
+

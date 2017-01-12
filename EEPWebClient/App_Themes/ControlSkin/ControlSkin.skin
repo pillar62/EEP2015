@@ -1,0 +1,180 @@
+﻿<InfoLight:WebStatusStrip SkinID="StatusStripSkin1" runat="server" TitleCss="statusstrip_title_1" 
+StatusCss="statusstrip_status_1" CaptionCss="statusstrip_caption_1" ContentCss="statusstrip_content_1" 
+GroupCss="statusstrip_group_1" BackColor="#8DB2E6"
+CssClass="transparent"/>
+
+<InfoLight:WebGridView SkinID="GridViewSkin1" runat="server" GridLines="Horizontal"  CssClass="gridview_1">
+    <FooterStyle CssClass="gridview_footer_1" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <HeaderStyle CssClass="gridview_header_1" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <RowStyle CssClass="gridview_row_1" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False"/>
+    <SelectedRowStyle CssClass="gridview_selectedrow_1" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <PagerStyle CssClass="gridview_pager_1" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <AlternatingRowStyle CssClass="gridview_altrow_1" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+</InfoLight:WebGridView>
+
+<InfoLight:WebGridView SkinID="GridViewSkin2" runat="server" GridLines="Horizontal"  CssClass="gridview_2">
+    <FooterStyle CssClass="gridview_footer_2" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <HeaderStyle CssClass="gridview_header_2" Height="20px" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <RowStyle CssClass="gridview_row_2" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False"/>
+    <SelectedRowStyle CssClass="gridview_selectedrow_2" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <PagerStyle CssClass="gridview_pager_2" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <AlternatingRowStyle CssClass="gridview_altrow_2" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+</InfoLight:WebGridView>
+
+<InfoLight:WebGridView SkinID="GridViewManagerSkin1" runat="server" GridLines="Horizontal"  CssClass="gridview_2">
+    <FooterStyle CssClass="gridview_footer_2" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <HeaderStyle CssClass="gridview_header_2" Height="20px" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <RowStyle CssClass="gridview_row_2" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False"/>
+    <SelectedRowStyle CssClass="gridview_selectedrow_2" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <PagerStyle CssClass="gridview_pager_2" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <AlternatingRowStyle CssClass="gridview_altrow_2" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+</InfoLight:WebGridView>
+
+<InfoLight:WebDetailsView SkinID="DetailsViewSkin1" runat="server" CssClass="detailsview_1">
+    <CommandRowStyle CssClass="detailsview_footer_1" />
+    <PagerStyle CssClass="detailsview_pager_1" />
+    <FieldHeaderStyle CssClass="detailsview_header_1" />
+    <AlternatingRowStyle CssClass="detailsview_altrow_1" />
+    <RowStyle CssClass="detailsview_row_1" />
+</InfoLight:WebDetailsView>
+
+<InfoLight:WebFormView SkinID="FormViewSkin1" runat="server" CssClass="formview_1">
+    <RowStyle CssClass="formview_row_1" />
+    <PagerStyle CssClass="formview_pager_1" />
+</InfoLight:WebFormView>
+
+<InfoLight:WebFormView SkinID="FormViewSkin2" runat="server" CssClass="formview_2">
+    <RowStyle CssClass="formview_row_2" />
+    <PagerStyle CssClass="formview_pager_2" />
+</InfoLight:WebFormView>
+
+<InfoLight:WebFormView SkinID="FormViewManagerSkin1" runat="server" CssClass="formview_1">
+    <RowStyle CssClass="formview_row_1" />
+    <PagerStyle CssClass="formview_pager_1" />
+</InfoLight:WebFormView>
+
+<InfoLight:WebDataList SkinID="DataListSkin1" runat="server" CssClass="datalist_1">
+    <ItemStyle CssClass="datalist_item_1" />
+    <AlternatingItemStyle CssClass="datalist_altitem_1" />
+</InfoLight:WebDataList>
+
+<InfoLight:WebValidate SkinID="WebValidateSkin1" runat="server" RowCss="validate_row_1" AltRowCss="validate_altrow_1">
+</InfoLight:WebValidate>
+
+
+<InfoLight:WebNavigator SkinID="WebNavigatorSkin1" runat="server" BackColor="#8DB2E6" BorderColor="#DCEBFD">
+    <NavStates>
+        <InfoLight:WebNavigatorStateItem StateText="Initial" EnableControls="First;Previous;Next;Last;Add;Update;Delete;Query;Print;Export"></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="Browsed" EnableControls="First;Previous;Next;Last;Add;Update;Delete;Query;Print;Export"></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="Inserting" EnableControls="OK;Cancel;Apply;Abort"></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="Editing" EnableControls="OK;Cancel;Apply;Abort"></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="Applying" EnableControls=""></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="Changing" EnableControls="First;Previous;Next;Last;Add;Update;Delete;Apply;Abort;Export"></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="Querying" EnableControls=""></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="Printing" EnableControls=""></InfoLight:WebNavigatorStateItem>
+    </NavStates>
+    <NavControls>
+        <InfoLight:ControlItem ControlName="First" ControlText="first" ControlType="Image" ImageUrl="../image/uipics/first.gif" MouseOverImageUrl="../image/uipics/first2.gif" DisenableImageUrl="../image/uipics/first3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Previous" ControlText="previous" ControlType="Image" ImageUrl="../image/uipics/previous.gif" MouseOverImageUrl="../image/uipics/previous2.gif" DisenableImageUrl="../image/uipics/previous3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Next" ControlText="next" ControlType="Image" ImageUrl="../image/uipics/next.gif" MouseOverImageUrl="../image/uipics/next2.gif" DisenableImageUrl="../image/uipics/next3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Last" ControlText="last" ControlType="Image" ImageUrl="../image/uipics/last.gif" MouseOverImageUrl="../image/uipics/last2.gif" DisenableImageUrl="../image/uipics/last3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Add" ControlText="add" ControlType="Image" ImageUrl="../image/uipics/add.gif" MouseOverImageUrl="../image/uipics/add2.gif" DisenableImageUrl="../image/uipics/add3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Update" ControlText="update" ControlType="Image" ImageUrl="../image/uipics/edit.gif" MouseOverImageUrl="../image/uipics/edit2.gif" DisenableImageUrl="../image/uipics/edit3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Delete" ControlText="delete" ControlType="Image" ImageUrl="../image/uipics/delete.gif" MouseOverImageUrl="../image/uipics/delete2.gif" DisenableImageUrl="../image/uipics/delete3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="OK" ControlText="ok" ControlType="Image" ImageUrl="../image/uipics/ok.gif" MouseOverImageUrl="../image/uipics/ok2.gif" DisenableImageUrl="../image/uipics/ok3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Cancel" ControlText="cancel" ControlType="Image" ImageUrl="../image/uipics/cancel.gif" MouseOverImageUrl="../image/uipics/cancel2.gif" DisenableImageUrl="../image/uipics/cancel3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Apply" ControlText="apply" ControlType="Image" ImageUrl="../image/uipics/apply.gif" MouseOverImageUrl="../image/uipics/apply2.gif" DisenableImageUrl="../image/uipics/apply3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Abort" ControlText="abort" ControlType="Image" ImageUrl="../image/uipics/abort.gif" MouseOverImageUrl="../image/uipics/abort2.gif" DisenableImageUrl="../image/uipics/abort3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Query" ControlText="query" ControlType="Image" ImageUrl="../image/uipics/query.gif" MouseOverImageUrl="../image/uipics/query2.gif" DisenableImageUrl="../image/uipics/query3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Print" ControlText="print" ControlType="Image" ImageUrl="../image/uipics/print.gif" MouseOverImageUrl="../image/uipics/print2.gif" DisenableImageUrl="../image/uipics/print3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Export" ControlText="export" ControlType="Image" ImageUrl="../image/uipics/export.gif" MouseOverImageUrl="../image/uipics/export2.gif" DisenableImageUrl="../image/uipics/export3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+    </NavControls>
+</InfoLight:WebNavigator>
+
+<InfoLight:WebNavigator SkinID="WebNavigatorManagerSkin1" runat="server" Height="26px" CssClass="transparent"
+ControlsGap="10"> 
+</InfoLight:WebNavigator>
+
+<FLTools:FLWebNavigator SkinID="FLWebNavigatorSkin1" runat="server">
+    <NavStates>
+        <InfoLight:WebNavigatorStateItem StateText="Initial" EnableControls="First;Previous;Next;Last;Add;Update;Delete;Query;Print;Export"></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="Browsed" EnableControls="First;Previous;Next;Last;Add;Update;Delete;Query;Print;Export"></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="Inserting" EnableControls="OK;Cancel;Apply;Abort"></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="Editing" EnableControls="OK;Cancel;Apply;Abort"></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="Applying" EnableControls=""></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="Changing" EnableControls="First;Previous;Next;Last;Add;Update;Delete;Apply;Abort;Export"></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="Querying" EnableControls=""></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="Printing" EnableControls=""></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="Normal" EnableControls=""></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="Insert" EnableControls="Add"></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="Modify" EnableControls="Update;Print;Export"></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="Inquery" EnableControls="Query"></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="Prepare" EnableControls="Query;Update;Print;Export"></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="PreInsert" EnableControls="Update;Delete;Print;Export"></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="InqueryMulti" EnableControls="First;Previous;Next;Last;Query;Print;Export"></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="InquerySingle" EnableControls="Query;Print;Export"></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="PrepareMulti" EnableControls="First;Previous;Next;Last;Update;Query;Print;Export"></InfoLight:WebNavigatorStateItem>
+        <InfoLight:WebNavigatorStateItem StateText="PrepareSingle" EnableControls="Update;Query;Print;Export"></InfoLight:WebNavigatorStateItem>
+    </NavStates>
+    <FLStates>
+    <FLTools:FLWebNavigatorStateItem Description="" StateText="Approve" VisibleControls="Approve;Return;Notify;Comment" />
+    <FLTools:FLWebNavigatorStateItem Description="" StateText="Continue" VisibleControls="Submit;Notify;Comment" />
+    <FLTools:FLWebNavigatorStateItem Description="" StateText="Inquery" VisibleControls="Comment" />
+    <FLTools:FLWebNavigatorStateItem Description="" StateText="Notify" VisibleControls="Notify;FlowDelete;Comment" />
+    <FLTools:FLWebNavigatorStateItem Description="" StateText="Return" VisibleControls="Submit;Reject;Notify" />
+    <FLTools:FLWebNavigatorStateItem Description="" StateText="Submit" VisibleControls="Submit;Notify;Pause" />
+    <FLTools:FLWebNavigatorStateItem Description="" StateText="None" VisibleControls="Notify;FlowDelete;Comment" />
+    <FLTools:FLWebNavigatorStateItem Description="" StateText="Plus" VisibleControls="Approve;Notify;Comment" />
+    <FLTools:FLWebNavigatorStateItem Description="" StateText="Lock" VisibleControls="Notify" />
+    <FLTools:FLWebNavigatorStateItem Description="" StateText="FSubmit" VisibleControls="Submit;Notify" />
+    <FLTools:FLWebNavigatorStateItem Description="" StateText="RSubmit" VisibleControls="Submit;Return;Notify" />
+    </FLStates>
+    <NavControls>
+        <InfoLight:ControlItem ControlName="First" ControlText="first" ControlType="Image" ImageUrl="../image/uipics/first.gif" MouseOverImageUrl="../image/uipics/first2.gif" DisenableImageUrl="../image/uipics/first3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Previous" ControlText="previous" ControlType="Image" ImageUrl="../image/uipics/previous.gif" MouseOverImageUrl="../image/uipics/previous2.gif" DisenableImageUrl="../image/uipics/previous3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Next" ControlText="next" ControlType="Image" ImageUrl="../image/uipics/next.gif" MouseOverImageUrl="../image/uipics/next2.gif" DisenableImageUrl="../image/uipics/next3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Last" ControlText="last" ControlType="Image" ImageUrl="../image/uipics/last.gif" MouseOverImageUrl="../image/uipics/last2.gif" DisenableImageUrl="../image/uipics/last3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Add" ControlText="add" ControlType="Image" ImageUrl="../image/uipics/add.gif" MouseOverImageUrl="../image/uipics/add2.gif" DisenableImageUrl="../image/uipics/add3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Update" ControlText="update" ControlType="Image" ImageUrl="../image/uipics/edit.gif" MouseOverImageUrl="../image/uipics/edit2.gif" DisenableImageUrl="../image/uipics/edit3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Delete" ControlText="delete" ControlType="Image" ImageUrl="../image/uipics/delete.gif" MouseOverImageUrl="../image/uipics/delete2.gif" DisenableImageUrl="../image/uipics/delete3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="OK" ControlText="ok" ControlType="Image" ImageUrl="../image/uipics/ok.gif" MouseOverImageUrl="../image/uipics/ok2.gif" DisenableImageUrl="../image/uipics/ok3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Cancel" ControlText="cancel" ControlType="Image" ImageUrl="../image/uipics/cancel.gif" MouseOverImageUrl="../image/uipics/cancel2.gif" DisenableImageUrl="../image/uipics/cancel3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Apply" ControlText="apply" ControlType="Image" ImageUrl="../image/uipics/apply.gif" MouseOverImageUrl="../image/uipics/apply2.gif" DisenableImageUrl="../image/uipics/apply3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Abort" ControlText="abort" ControlType="Image" ImageUrl="../image/uipics/abort.gif" MouseOverImageUrl="../image/uipics/abort2.gif" DisenableImageUrl="../image/uipics/abort3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Query" ControlText="query" ControlType="Image" ImageUrl="../image/uipics/query.gif" MouseOverImageUrl="../image/uipics/query2.gif" DisenableImageUrl="../image/uipics/query3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Print" ControlText="print" ControlType="Image" ImageUrl="../image/uipics/print.gif" MouseOverImageUrl="../image/uipics/print2.gif" DisenableImageUrl="../image/uipics/print3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Export" ControlText="export" ControlType="Image" ImageUrl="../image/uipics/export.gif" MouseOverImageUrl="../image/uipics/export2.gif" DisenableImageUrl="../image/uipics/export3.gif" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Submit" ControlText="submit" ControlType="Image" ImageUrl="../image/uipics/submit.gif" MouseOverImageUrl="../image/uipics/submit2.gif" DisenableImageUrl="" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Approve" ControlText="approve" ControlType="Image" ImageUrl="../image/uipics/approve.gif" MouseOverImageUrl="../image/uipics/approve2.gif" DisenableImageUrl="" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Return" ControlText="return" ControlType="Image" ImageUrl="../image/uipics/return.gif" MouseOverImageUrl="../image/uipics/return2.gif" DisenableImageUrl="" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Reject" ControlText="reject" ControlType="Image" ImageUrl="../image/uipics/reject.gif" MouseOverImageUrl="../image/uipics/reject2.gif" DisenableImageUrl="" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Notify" ControlText="notify" ControlType="Image" ImageUrl="../image/uipics/notify.gif" MouseOverImageUrl="../image/uipics/notify2.gif" DisenableImageUrl="" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="FlowDelete" ControlText="flowdelete" ControlType="Image" ImageUrl="../image/uipics/flowdelete.gif" MouseOverImageUrl="../image/uipics/flowdelete2.gif" DisenableImageUrl="" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Plus" ControlText="plus" ControlType="Image" ImageUrl="../image/uipics/plus.gif" MouseOverImageUrl="../image/uipics/plus2.gif" DisenableImageUrl="" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Pause" ControlText="pause" ControlType="Image" ImageUrl="../image/uipics/pause.gif" MouseOverImageUrl="../image/uipics/pause2.gif" DisenableImageUrl="" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+        <InfoLight:ControlItem ControlName="Comment" ControlText="comment" ControlType="Image" ImageUrl="../image/uipics/comment.gif" MouseOverImageUrl="../image/uipics/comment2.gif" DisenableImageUrl="" Size="25" ControlVisible="True"></InfoLight:ControlItem>
+    </NavControls>
+</FLTools:FLWebNavigator>
+
+<FLTools:FLWebNavigator SkinID="FLWebNavigatorSkin2" runat="server" BackColor="#8DB2E6" BorderColor="#DCEBFD" 
+BorderStyle="Groove" BorderWidth="1px">   
+</FLTools:FLWebNavigator>
+
+<asp:GridView SkinID="InnerGridViewSkin1" runat="server" GridLines="Horizontal"  CssClass="ajaxrefval_gridview_1">
+    <FooterStyle CssClass="ajaxrefval_gridview_footer_1" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <HeaderStyle CssClass="ajaxrefval_gridview_header_1" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <RowStyle CssClass="ajaxrefval_gridview_row_1" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False"/>
+    <SelectedRowStyle CssClass="ajaxrefval_gridview_selectedrow_1" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <PagerStyle CssClass="ajaxrefval_gridview_pager_1" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <AlternatingRowStyle CssClass="ajaxrefval_gridview_altrow_1" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+</asp:GridView>
+            
+<asp:Calendar SkinID="InnerDateTimePickerSkin1" runat="server" BackColor="#FFFFCC" BorderColor="#FFCC66" BorderWidth="1px" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#663399" Height="200px" ShowGridLines="True" Width="220px">
+<SelectedDayStyle BackColor="#CCCCFF" Font-Bold="True" />
+<TodayDayStyle BackColor="#FFCC66" ForeColor="White" />
+<SelectorStyle BackColor="#FFCC66" />
+<OtherMonthDayStyle ForeColor="#CC9966" />
+<NextPrevStyle Font-Size="9pt" ForeColor="#FFFFCC" />
+<DayHeaderStyle BackColor="#FFCC66" Font-Bold="True" Height="1px" Wrap="True" />
+<TitleStyle BackColor="#990000" Font-Bold="True" Font-Size="9pt" ForeColor="#FFFFCC" />
+</asp:Calendar>

@@ -1,0 +1,29 @@
+﻿/*标题的样式*/
+.ajaxdtp_div_title
+{
+	width:100%;
+	height:15px;
+	border: #698BCA 1px solid;
+	padding: 2px 2px 2px 2px;
+	text-align:right;
+	filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr='#DCEBFD', endColorStr='#8DB2E6',gradientType='1');
+}
+
+/*内容的样式*/
+.ajaxdtp_div_content
+{
+	width:100%;
+	text-align:center;
+	color:Navy;
+	border: #698BCA 1px solid;
+	padding: 2px 2px 2px 2px;
+	background-color:buttonface;
+	overflow-x:scroll;
+}
+
+.ajaxdtp_modalBackground
+{
+	background-color:Gray;
+	filter:alpha(opacity=60);
+	opacity:0.6;
+}

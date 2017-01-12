@@ -1,0 +1,140 @@
+﻿/**/
+/*页面主体样式*/
+body
+{
+	background-image:url('../Image/login/background.png'); 
+	background-repeat:repeat;
+	font-family:Verdana;
+	font-size: 9pt;
+}
+
+/*主div样式*/
+#inhalt
+{
+	position:absolute;
+	width:386px;
+	height:288px;
+	margin-left:-193px;
+	margin-top:-144px;
+	top: 50%;
+	left: 50%;
+	text-align: left;
+	overflow:auto;
+	
+	z-index:1;
+	text-align:center;
+}
+
+/*主table样式*/
+#mainTable
+{
+	width: 369px;
+	height:252px;
+}
+
+/*背景表格样式*/
+#td11
+{
+	background-image:url('../Image/login/login.jpg');
+}
+
+/*上层区域样式*/
+#layer1
+{
+	text-align: -moz-center !important; /*For Firefox*/
+	text-align: center;                 /*For IE*/
+	z-index: 2;
+}
+
+/*下层区域样式*/
+#layer2
+{
+	z-index: 2;
+	position:relative;
+	top:-46px;
+	text-align: -moz-center !important; /*For Firefox*/
+	text-align: center;                 /*For IE*/
+}
+
+/*标签contaienr样式*/
+.labelContainer
+{
+	text-align:left;
+	height:27px;
+}
+
+/*标签样式*/
+.label
+{
+	color:#006699;
+}
+
+/*文本样式*/
+.input
+{
+	width:160px;
+}
+
+/*选择控件样式*/
+.select
+{
+	width:166px;
+}
+
+/*错误讯息区域样式*/
+#FailureText
+{
+	color:Red;
+	font-weight:bold;
+}
+
+/*鼠标离开按钮时，按钮的样式*/
+.btn_mouseout 
+{
+	width:55px; 
+	height:25px;
+	border: #7B9EBD 1px solid;
+	padding: 2px 2px 0px 2px;
+	cursor: hand;
+	color: black;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorStr='#DCEBFD', endColorStr='#8DB2E6',);
+}
+
+/*鼠标移动到按钮上时，按钮的样式*/
+.btn_mouseover
+{
+	width:55px; 
+	height:25px;
+	border: #7B9EBD 1px solid;
+	padding: 2px 2px 0px 2px;
+	cursor: hand;
+	color: #FFFFFF;
+	color: black;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorStr='#8DB2E6', endColorStr='#DCEBFD', ); 
+}
+
+/*按钮container样式*/
+.btnContainer
+{
+	padding:5px;
+}
+
+/*.btnContainer
+{
+	background-image:url('../Image/login/button_rectangle.png'); 
+	width:50px; 
+	height:30px;
+}
+
+a
+{
+	text-transform:none;
+	text-decoration:none;
+	color:Black;
+}
+
+a:hover
+{
+	text-decoration:none;
+	color:Black;
+}*/

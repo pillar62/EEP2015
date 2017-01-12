@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <BottomMargin>2.5cm</BottomMargin>
+  <RightMargin>2.5cm</RightMargin>
+  <PageWidth>21cm</PageWidth>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Rectangle Name="rectContainer">
+        <ReportItems>
+          <Line Name="line1">
+            <Top>1.5cm</Top>
+            <Style>
+              <BorderStyle>
+                <Default>Solid</Default>
+              </BorderStyle>
+              <FontFamily>Verdana</FontFamily>
+            </Style>
+            <Height>0cm</Height>
+          </Line>
+        </ReportItems>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <FontFamily>Verdana</FontFamily>
+        </Style>
+      </Rectangle>
+    </ReportItems>
+    <Height>5.5cm</Height>
+  </Body>
+  <rd:ReportID>9ef5949c-326c-4496-9b0d-17036a616198</rd:ReportID>
+  <LeftMargin>2.5cm</LeftMargin>
+  <Width>21cm</Width>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <Language>zh-CN</Language>
+  <TopMargin>2.5cm</TopMargin>
+  <PageHeight>29.7cm</PageHeight>
+</Report>

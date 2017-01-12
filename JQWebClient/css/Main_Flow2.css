@@ -1,0 +1,22 @@
+﻿    html, body {
+	    height: 100%;
+	    overflow: auto;
+    }
+    body {
+	    padding: 0;
+	    margin: 0;
+    }
+    #slControlHost {
+	    height: 100%;
+	    text-align:center;
+    }
+   
+    #MainDiv
+    {
+        background-color:White;
+        position:absolute;
+        border:0px solid black;
+        display:none;
+        top:0px;
+        left:0px;
+    }

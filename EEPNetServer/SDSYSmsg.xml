@@ -1,0 +1,941 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SystemMessage>
+  <SDModule>
+    <fmMain>
+      <SaveUnsuccessful>
+        <ENG>Save Unsuccessful! </ENG>
+        <TRA>保存失敗！</TRA>
+        <SIM>保存失败！</SIM>
+        <HKG>保存失敗！</HKG>
+        <JPN>Save Unsuccessful! </JPN>
+        <LAN1>Save Unsuccessful! </LAN1>
+        <LAN2>Save Unsuccessful! </LAN2>
+        <LAN3>Save Unsuccessful! </LAN3>
+      </SaveUnsuccessful>
+      <Close>
+        <ENG>This Project has been changed! Do you want to save it?</ENG>
+        <TRA>這個專案已經更改，是否要保存？</TRA>
+        <SIM>这个专案已经更改，是否要保存？</SIM>
+        <HKG>這個專案已經更改，是否要保存？</HKG>
+        <JPN>This Project has been changed! Do you want to save it?</JPN>
+        <LAN1>This Project has been changed! Do you want to save it?</LAN1>
+        <LAN2>This Project has been changed! Do you want to save it?</LAN2>
+        <LAN3>This Project has been changed! Do you want to save it?</LAN3>
+      </Close>
+      <NewOldOne>
+        <ENG>This Project's ID is Exists! Do you want to load it?</ENG>
+        <TRA>這個專案的專案代號已經存在，是否要讀取？</TRA>
+        <SIM>这个专案的专案代号已经存在，是否要读取？</SIM>
+        <HKG>這個專案的專案代號已經存在，是否要讀取？</HKG>
+        <JPN>This Project's ID is Exists! Do you want to load it?</JPN>
+        <LAN1>This Project's ID is Exists! Do you want to load it?</LAN1>
+        <LAN2>This Project's ID is Exists! Do you want to load it?</LAN2>
+        <LAN3>This Project's ID is Exists! Do you want to load it?</LAN3>
+      </NewOldOne>
+    </fmMain>
+    <fmProjectu>
+      <Directory>
+        <ENG>EEP directony is null!</ENG>
+        <TRA>EEP 的路徑為空！</TRA>
+        <SIM>EEP 的路径为空！</SIM>
+        <HKG>EEP 的路徑為空！</HKG>
+        <JPN>EEP directony is null!</JPN>
+        <LAN1>EEP directony is null!</LAN1>
+        <LAN2>EEP directony is null!</LAN2>
+        <LAN3>EEP directony is null!</LAN3>
+      </Directory>
+      <Duplicate>
+        <ENG>Name '{0}' is duplicate with Group '{1} '!</ENG>
+        <TRA>名稱 {0} 在Group {1} 中已使用。</TRA>
+        <SIM>名称 {0} 在Group {1} 中已使用。</SIM>
+        <HKG>名稱 {0} 在Group {1} 中已使用。</HKG>
+        <JPN>Name '{0}' is duplicate with Group '{1} '!</JPN>
+        <LAN1>Name '{0}' is duplicate with Group '{1} '!</LAN1>
+        <LAN2>Name '{0}' is duplicate with Group '{1} '!</LAN2>
+        <LAN3>Name '{0}' is duplicate with Group '{1} '!</LAN3>
+      </Duplicate>
+      <FieldListRewrite>
+        <ENG>Please Rewrite the FieldList in Index in IndexDefs</ENG>
+        <TRA>欄位名稱變動, 請重新檢查Index的FieldList設定!</TRA>
+        <SIM>栏位名称变动, 请重新检查Index的FieldList设定!</SIM>
+        <HKG>欄位名稱變動, 請重新檢查Index的FieldList設定!</HKG>
+        <JPN>Please Rewrite the FieldList in Index in IndexDefs</JPN>
+        <LAN1>Please Rewrite the FieldList in Index in IndexDefs</LAN1>
+        <LAN2>Please Rewrite the FieldList in Index in IndexDefs</LAN2>
+        <LAN3>Please Rewrite the FieldList in Index in IndexDefs</LAN3>
+      </FieldListRewrite>
+      <Save>
+        <ENG>The Default Directory of SaveData is not found,Please assign the Directory for Save!</ENG>
+        <TRA>預設SaveData的路徑沒有找到，請指定存檔路徑！</TRA>
+        <SIM>预设SaveData的路径没有找到，请指定存档路径！</SIM>
+        <HKG>預設SaveData的路徑沒有找到，請指定存檔路徑！</HKG>
+        <JPN>The Default Directory of SaveData is not found,Please assign the Directory for Save!</JPN>
+        <LAN1>The Default Directory of SaveData is not found,Please assign the Directory for Save!</LAN1>
+        <LAN2>The Default Directory of SaveData is not found,Please assign the Directory for Save!</LAN2>
+        <LAN3>The Default Directory of SaveData is not found,Please assign the Directory for Save!</LAN3>
+      </Save>
+      <ProjectSetting>
+        <ENG>You have not set the ProjectSettings,please set it first!</ENG>
+        <TRA>你還沒有設定專案相關內容，請先設定！</TRA>
+        <SIM>你还没有设定专案相关内容，请先设定！</SIM>
+        <HKG>你還沒有設定專案相關內容，請先設定！</HKG>
+        <JPN>You have not set the ProjectSettings,please set it first!</JPN>
+        <LAN1>You have not set the ProjectSettings,please set it first!</LAN1>
+        <LAN2>You have not set the ProjectSettings,please set it first!</LAN2>
+        <LAN3>You have not set the ProjectSettings,please set it first!</LAN3>
+      </ProjectSetting>
+      <Copy>
+        <ENG>&amp;Copy</ENG>
+        <TRA>複製(&amp;C)</TRA>
+        <SIM>复制(&amp;C)</SIM>
+        <HKG>複製(&amp;C)</HKG>
+        <JPN>&amp;Copy</JPN>
+        <LAN1>&amp;Copy</LAN1>
+        <LAN2>&amp;Copy</LAN2>
+        <LAN3>&amp;Copy</LAN3>
+      </Copy>
+      <Paste>
+        <ENG>&amp;Paste</ENG>
+        <TRA>貼上(&amp;P)</TRA>
+        <SIM>粘贴(&amp;P)</SIM>
+        <HKG>貼上(&amp;P)</HKG>
+        <JPN>&amp;Paste</JPN>
+        <LAN1>&amp;Paste</LAN1>
+        <LAN2>&amp;Paste</LAN2>
+        <LAN3>&amp;Paste</LAN3>
+      </Paste>
+      <SearchDD>
+        <ENG>&amp;Search DD</ENG>
+        <TRA>搜尋DD(&amp;S)</TRA>
+        <SIM>查找DD(&amp;S)</SIM>
+        <HKG>搜尋DD(&amp;S)</HKG>
+        <JPN>&amp;Search DD</JPN>
+        <LAN1>&amp;Search DD</LAN1>
+        <LAN2>&amp;Search DD</LAN2>
+        <LAN3>&amp;Search DD</LAN3>
+      </SearchDD>
+      <BatchNewFields>
+        <ENG>&amp;Batch New Fields</ENG>
+        <TRA>批次新增欄位(&amp;B)</TRA>
+        <SIM>批次新增栏位(&amp;B)</SIM>
+        <HKG>批次新增欄位(&amp;B)</HKG>
+        <JPN>&amp;Batch New Fields</JPN>
+        <LAN1>&amp;Batch New Fields</LAN1>
+        <LAN2>&amp;Batch New Fields</LAN2>
+        <LAN3>&amp;Batch New Fields</LAN3>
+      </BatchNewFields>
+      <SearchTable>
+        <ENG>&amp;Search Table or Field</ENG>
+        <TRA>搜尋Table或者Field(&amp;S)</TRA>
+        <SIM>查找Table或者Field(&amp;S)</SIM>
+        <HKG>搜尋Table或者Field(&amp;S)</HKG>
+        <JPN>&amp;Search Table or Field</JPN>
+        <LAN1>&amp;Search Table or Field</LAN1>
+        <LAN2>&amp;Search Table or Field</LAN2>
+        <LAN3>&amp;Search Table or Field</LAN3>
+      </SearchTable>
+      <EditRefVals>
+        <ENG>&amp;Edit RefVals...</ENG>
+        <TRA>編輯RefVals...(&amp;E)</TRA>
+        <SIM>编辑RefVals...(&amp;E)</SIM>
+        <HKG>編輯RefVals...(&amp;E)</HKG>
+        <JPN>&amp;Edit RefVals...</JPN>
+        <LAN1>&amp;Edit RefVals...</LAN1>
+        <LAN2>&amp;Edit RefVals...</LAN2>
+        <LAN3>&amp;Edit RefVals...</LAN3>
+      </EditRefVals>
+      <EditFieldList>
+        <ENG>Ed&amp;it Index...</ENG>
+        <TRA>編輯Index...(&amp;I)</TRA>
+        <SIM>编辑Index...(&amp;I)</SIM>
+        <HKG>編輯Index...(&amp;I)</HKG>
+        <JPN>Ed&amp;it Index...</JPN>
+        <LAN1>Ed&amp;it Index...</LAN1>
+        <LAN2>Ed&amp;it Index...</LAN2>
+        <LAN3>Ed&amp;it Index...</LAN3>
+      </EditFieldList>
+      <NewItem>
+        <ENG>&amp;New {0}</ENG>
+        <TRA>新增{0}(&amp;N)</TRA>
+        <SIM>新增{0}(&amp;N)</SIM>
+        <HKG>新增{0}(&amp;N)</HKG>
+        <JPN>&amp;New {0}</JPN>
+        <LAN1>&amp;New {0}</LAN1>
+        <LAN2>&amp;New {0}</LAN2>
+        <LAN3>&amp;New {0}</LAN3>
+      </NewItem>
+      <DeleteItem>
+        <ENG>D&amp;elete</ENG>
+        <TRA>刪除(&amp;E)</TRA>
+        <SIM>刪除(&amp;E)</SIM>
+        <HKG>刪除(&amp;E)</HKG>
+        <JPN>D&amp;elete</JPN>
+        <LAN1>D&amp;elete</LAN1>
+        <LAN2>D&amp;elete</LAN2>
+        <LAN3>D&amp;elete</LAN3>
+      </DeleteItem>
+      <Properties>
+        <ENG>D&amp;Properties...</ENG>
+        <TRA>屬性檢視(&amp;P)</TRA>
+        <SIM>屬性(&amp;P)</SIM>
+        <HKG>屬性檢視(&amp;P)</HKG>
+        <JPN>D&amp;Properties...</JPN>
+        <LAN1>D&amp;Properties...</LAN1>
+        <LAN2>D&amp;Properties...</LAN2>
+        <LAN3>D&amp;Properties...</LAN3>
+      </Properties>
+      <Refresh>
+        <ENG>Refresh</ENG>
+        <TRA>重新整理</TRA>
+        <SIM>刷新</SIM>
+        <HKG>重新整理</HKG>
+        <JPN>Refresh</JPN>
+        <LAN1>Refresh</LAN1>
+        <LAN2>Refresh</LAN2>
+        <LAN3>Refresh</LAN3>
+      </Refresh>
+    </fmProjectu>
+    <ConnectSuccessfullyornot>
+      <successfully>
+        <ENG>Connect to database successfully.</ENG>
+        <TRA>連接成功</TRA>
+        <SIM>连接成功</SIM>
+        <HKG>連接成功</HKG>
+        <JPN>Connect to database successfully.</JPN>
+        <LAN1>Connect to database successfully.</LAN1>
+        <LAN2>Connect to database successfully.</LAN2>
+        <LAN3>Connect to database successfully.</LAN3>
+      </successfully>
+      <Unsuccessfully>
+        <ENG>Failed to connect to database.</ENG>
+        <TRA>連接失敗</TRA>
+        <SIM>连接失败</SIM>
+        <HKG>連接失敗</HKG>
+        <JPN>Failed to connect to database.</JPN>
+        <LAN1>Failed to connect to database.</LAN1>
+        <LAN2>Failed to connect to database.</LAN2>
+        <LAN3>Failed to connect to database.</LAN3>
+      </Unsuccessfully>
+      <WrongConn>
+        <ENG>Connection is Wrong!</ENG>
+        <TRA>連接錯誤</TRA>
+        <SIM>连接错误</SIM>
+        <HKG>連接錯誤</HKG>
+        <JPN>Connection is Wrong!</JPN>
+        <LAN1>Connection is Wrong!</LAN1>
+        <LAN2>Connection is Wrong!</LAN2>
+        <LAN3>Connection is Wrong!</LAN3>
+      </WrongConn>
+    </ConnectSuccessfullyornot>
+    <fmBatch>
+      <SelectDD>
+        <ENG>Please select DD</ENG>
+        <TRA>請選擇DD</TRA>
+        <SIM>请选择DD</SIM>
+        <HKG>請選擇DD</HKG>
+        <JPN>Please select DD</JPN>
+        <LAN1>Please select DD</LAN1>
+        <LAN2>Please select DD</LAN2>
+        <LAN3>Please select DD</LAN3>
+      </SelectDD>
+      <SelectTable>
+        <ENG>Please select Table</ENG>
+        <TRA>請選擇Table</TRA>
+        <SIM>請選擇Table</SIM>
+        <HKG>請選擇Table</HKG>
+        <JPN>Please select Table</JPN>
+        <LAN1>Please select Table</LAN1>
+        <LAN2>Please select Table</LAN2>
+        <LAN3>Please select Table</LAN3>
+      </SelectTable>
+    </fmBatch>
+    <CHeckDDLinkDD>
+      <Remove>
+        <ENG>Do You Sure To Remove the All DDName in Fields You Selected?</ENG>
+        <TRA>確定要移除所有選中的Field的DDName?</TRA>
+        <SIM>确定要移除所有选中的Field的DDName?</SIM>
+        <HKG>確定要移除所有選中的Field的DDName?</HKG>
+        <JPN>Do You Sure To Remove the All DDName in Fields You Selected?</JPN>
+        <LAN1>Do You Sure To Remove the All DDName in Fields You Selected?</LAN1>
+        <LAN2>Do You Sure To Remove the All DDName in Fields You Selected?</LAN2>
+        <LAN3>Do You Sure To Remove the All DDName in Fields You Selected?</LAN3>
+      </Remove>
+      <OKandCount>
+        <ENG>Modify Complete! The Count of the Field is {0}.</ENG>
+        <TRA>執行完畢！執行了操作的欄位數是： {0}。</TRA>
+        <SIM>执行完毕！执行了操作的栏位数是： {0}。</SIM>
+        <HKG>執行完畢！執行了操作的欄位數是： {0}。</HKG>
+        <JPN>Modify Complete! The Count of the Field is {0}.</JPN>
+        <LAN1>Modify Complete! The Count of the Field is {0}.</LAN1>
+        <LAN2>Modify Complete! The Count of the Field is {0}.</LAN2>
+        <LAN3>Modify Complete! The Count of the Field is {0}.</LAN3>
+      </OKandCount>
+    </CHeckDDLinkDD>
+    <TableSelect>
+      <SelectTable>
+        <ENG>Please Select the Tables</ENG>
+        <TRA>請選擇表！</TRA>
+        <SIM>请选择表！</SIM>
+        <HKG>請選擇表！</HKG>
+        <JPN>Please Select the Tables</JPN>
+        <LAN1>Please Select the Tables</LAN1>
+        <LAN2>Please Select the Tables</LAN2>
+        <LAN3>Please Select the Tables</LAN3>
+      </SelectTable>
+    </TableSelect>
+    <DDImport>
+      <NotImport>
+        <ENG>You have not Import yet!</ENG>
+        <TRA>你還沒有執行匯入！</TRA>
+        <SIM>你还没有执行汇入！</SIM>
+        <HKG>你還沒有執行匯入！</HKG>
+        <JPN>You have not Import yet!</JPN>
+        <LAN1>You have not Import yet!</LAN1>
+        <LAN2>You have not Import yet!</LAN2>
+        <LAN3>You have not Import yet!</LAN3>
+      </NotImport>
+      <SaveComplete>
+        <ENG>Save Complete!</ENG>
+        <TRA>保存完畢！</TRA>
+        <SIM>保存完毕！</SIM>
+        <HKG>保存完畢！</HKG>
+        <JPN>Save Complete!</JPN>
+        <LAN1>Save Complete!</LAN1>
+        <LAN2>Save Complete!</LAN2>
+        <LAN3>Save Complete!</LAN3>
+      </SaveComplete>
+    </DDImport>
+    <DDandTableSearch>
+      <DDEmpty>
+        <ENG>DD Name and Caption cannot be empty!</ENG>
+        <TRA>DDName和Caption不能是空的！</TRA>
+        <SIM>DDName和Caption不能是空的！</SIM>
+        <HKG>DDName和Caption不能是空的！</HKG>
+        <JPN>DD Name and Caption cannot be empty!</JPN>
+        <LAN1>DD Name and Caption cannot be empty!</LAN1>
+        <LAN2>DD Name and Caption cannot be empty!</LAN2>
+        <LAN3>DD Name and Caption cannot be empty!</LAN3>
+      </DDEmpty>
+      <TableEmpty>
+        <ENG>The search string cannot be blank !</ENG>
+        <TRA>Table檢索的內容不能是空的！</TRA>
+        <SIM>Table搜索的内容不能是空的！</SIM>
+        <HKG>Table檢索的內容不能是空的！</HKG>
+        <JPN>The search string cannot be empty !</JPN>
+        <LAN1>The search string cannot be empty !</LAN1>
+        <LAN2>The search string cannot be empty !</LAN2>
+        <LAN3>The search string cannot be empty !</LAN3>
+      </TableEmpty>
+    </DDandTableSearch>
+    <fmImportTables>
+      <TableExist>
+        <ENG>Table: {0} is existence in Group: {1} ! , Do You Want To OverWrite it?</ENG>
+        <TRA>Table :{0} 已經存在於 Group {1}，是否要覆蓋它？</TRA>
+        <SIM>Table :{0} 已经存在于 Group {1}，是否要覆盖它？</SIM>
+        <HKG>Table :{0} 已經存在於 Group {1}，是否要覆蓋它？</HKG>
+        <JPN>Table: {0} is existence in Group: {1} ! , Do You Want To OverWrite it?</JPN>
+        <LAN1>Table: {0} is existence in Group: {1} ! , Do You Want To OverWrite it?</LAN1>
+        <LAN2>Table: {0} is existence in Group: {1} ! , Do You Want To OverWrite it?</LAN2>
+        <LAN3>Table: {0} is existence in Group: {1} ! , Do You Want To OverWrite it?</LAN3>
+      </TableExist>
+    </fmImportTables>
+    <fmNewProjectu>
+      <EmptyName>
+        <ENG>The Project has not Name yet!</ENG>
+        <TRA>這個專案還沒有名稱！</TRA>
+        <SIM>这个专案还没有名称！</SIM>
+        <HKG>這個專案還沒有名稱！</HKG>
+        <JPN>The Project has not Name yet!</JPN>
+        <LAN1>The Project has not Name yet!</LAN1>
+        <LAN2>The Project has not Name yet!</LAN2>
+        <LAN3>The Project has not Name yet!</LAN3>
+      </EmptyName>
+    </fmNewProjectu>
+    <NodeDealWith>
+      <NotSelect>
+        <ENG>You have not selected node!</ENG>
+        <TRA>你還沒有選擇node！</TRA>
+        <SIM>你还没有选择node！</SIM>
+        <HKG>你還沒有選擇node！</HKG>
+        <JPN>You have not selected node!</JPN>
+        <LAN1>You have not selected node!</LAN1>
+        <LAN2>You have not selected node!</LAN2>
+        <LAN3>You have not selected node!</LAN3>
+      </NotSelect>
+      <NotSaveNode>
+        <ENG>You have not Saved!</ENG>
+        <TRA>你還沒有保存node！</TRA>
+        <SIM>你还没有保存node！</SIM>
+        <HKG>你還沒有保存node！</HKG>
+        <JPN>You have not Saved!</JPN>
+        <LAN1>You have not Saved!</LAN1>
+        <LAN2>You have not Saved!</LAN2>
+        <LAN3>You have not Saved!</LAN3>
+      </NotSaveNode>
+      <DelectNode>
+        <ENG>Sure to detele the selected node?</ENG>
+        <TRA>確定要刪除這個node?</TRA>
+        <SIM>确定要删除这个node?</SIM>
+        <HKG>確定要刪除這個node?</HKG>
+        <JPN>Sure to detele the selected node?</JPN>
+        <LAN1>Sure to detele the selected node?</LAN1>
+        <LAN2>Sure to detele the selected node?</LAN2>
+        <LAN3>Sure to detele the selected node?</LAN3>
+      </DelectNode>
+    </NodeDealWith>
+    <RefVal>
+      <SelectTableName>
+        <ENG>Please select Tablename first!</ENG>
+        <TRA>請先選擇TableName</TRA>
+        <SIM>请先选择TableName</SIM>
+        <HKG>請先選擇TableName</HKG>
+        <JPN>Please select Tablename first!</JPN>
+        <LAN1>Please select Tablename first!</LAN1>
+        <LAN2>Please select Tablename first!</LAN2>
+        <LAN3>Please select Tablename first!</LAN3>
+      </SelectTableName>
+      <FiedlList>
+        <ENG>Please select Field in FieldList first!</ENG>
+        <TRA>請先在FieldList裡選擇要處理的Field！</TRA>
+        <SIM>请先在FieldList里选择要处理的Field！</SIM>
+        <HKG>請先在FieldList裡選擇要處理的Field！</HKG>
+        <JPN>Please select Field in FieldList first!</JPN>
+        <LAN1>Please select Field in FieldList first!</LAN1>
+        <LAN2>Please select Field in FieldList first!</LAN2>
+        <LAN3>Please select Field in FieldList first!</LAN3>
+      </FiedlList>
+      <removeDisplayField>
+        <ENG>Are you sure to remove this diplayfield?</ENG>
+        <TRA>確定移除這個diplayfield？</TRA>
+        <SIM>确定移除这个diplayfield？</SIM>
+        <HKG>確定移除這個diplayfield？</HKG>
+        <JPN>Are you sure to remove this diplayfield?</JPN>
+        <LAN1>Are you sure to remove this diplayfield?</LAN1>
+        <LAN2>Are you sure to remove this diplayfield?</LAN2>
+        <LAN3>Are you sure to remove this diplayfield?</LAN3>
+      </removeDisplayField>
+      <removeGroup>
+        <ENG>Are you sure to detele this Group?</ENG>
+        <TRA>確定移除這個Group？</TRA>
+        <SIM>确定移除这个Group？</SIM>
+        <HKG>確定移除這個Group？</HKG>
+        <JPN>Are you sure to detele this Group?</JPN>
+        <LAN1>Are you sure to detele this Group?</LAN1>
+        <LAN2>Are you sure to detele this Group?</LAN2>
+        <LAN3>Are you sure to detele this Group?</LAN3>
+      </removeGroup>
+      <removeRefVal>
+        <ENG>Are you sure to detele this RefVal?</ENG>
+        <TRA>確定移除這個RefVal？</TRA>
+        <SIM>确定移除这个RefVal？</SIM>
+        <HKG>確定移除這個RefVal？</HKG>
+        <JPN>Are you sure to detele this RefVal?</JPN>
+        <LAN1>Are you sure to detele this RefVal?</LAN1>
+        <LAN2>Are you sure to detele this RefVal?</LAN2>
+        <LAN3>Are you sure to detele this RefVal?</LAN3>
+      </removeRefVal>
+      <RefValExist>
+        <ENG>REFVAL: {0} is existence in Group: {1} ! , Do You Want To OverWrite it?</ENG>
+        <TRA>REFVAL :{0} 已經存在於 Group {1}，是否要覆蓋它？</TRA>
+        <SIM>REFVAL :{0} 已经存在于 Group {1}，是否要覆盖它？</SIM>
+        <HKG>REFVAL :{0} 已經存在於 Group {1}，是否要覆蓋它？</HKG>
+        <JPN>REFVAL: {0} is existence in Group: {1} ! , Do You Want To OverWrite it?</JPN>
+        <LAN1>REFVAL: {0} is existence in Group: {1} ! , Do You Want To OverWrite it?</LAN1>
+        <LAN2>REFVAL: {0} is existence in Group: {1} ! , Do You Want To OverWrite it?</LAN2>
+        <LAN3>REFVAL: {0} is existence in Group: {1} ! , Do You Want To OverWrite it?</LAN3>
+      </RefValExist>
+    </RefVal>
+    <Synchronize>
+      <SynchronizeC>
+        <ENG>Synchronize Complete!</ENG>
+        <TRA>同步完成！</TRA>
+        <SIM>同步完成！</SIM>
+        <HKG>同步完成！</HKG>
+        <JPN>Synchronize Complete!</JPN>
+        <LAN1>Synchronize Complete!</LAN1>
+        <LAN2>Synchronize Complete!</LAN2>
+        <LAN3>Synchronize Complete!</LAN3>
+      </SynchronizeC>
+    </Synchronize>
+    <Print>
+      <selectFormsOrTables>
+        <ENG>Please select Forms or Tables!</ENG>
+        <TRA>請選擇Forms 或者Tables！</TRA>
+        <SIM>请选择Forms 或者Tables！</SIM>
+        <HKG>請選擇Forms 或者Tables！</HKG>
+        <JPN>Please select Forms or Tables!</JPN>
+        <LAN1>Please select Forms or Tables!</LAN1>
+        <LAN2>Please select Forms or Tables!</LAN2>
+        <LAN3>Please select Forms or Tables!</LAN3>
+      </selectFormsOrTables>
+      <tablenothingchecked>
+        <ENG>Nothing has been checked in Table!</ENG>
+        <TRA>Table沒有勾選任何項目！</TRA>
+        <SIM>Table没有勾选任何项目！</SIM>
+        <HKG>Table沒有勾選任何項目！</HKG>
+        <JPN>Nothing has been checked in Table!</JPN>
+        <LAN1>Nothing has been checked in Table!</LAN1>
+        <LAN2>Nothing has been checked in Table!</LAN2>
+        <LAN3>Nothing has been checked in Table!</LAN3>
+      </tablenothingchecked>
+      <formnothingchecked>
+        <ENG>Nothing has been checked in Form!</ENG>
+        <TRA>Form沒有勾選任何項目！</TRA>
+        <SIM>Form没有勾选任何项目！</SIM>
+        <HKG>Form沒有勾選任何項目！</HKG>
+        <JPN>Nothing has been checked in Form!</JPN>
+        <LAN1>Nothing has been checked in Form!</LAN1>
+        <LAN2>Nothing has been checked in Form!</LAN2>
+        <LAN3>Nothing has been checked in Form!</LAN3>
+      </formnothingchecked>
+      <WrongSDTemp>
+        <ENG>SDTemplateFile is Wrong!</ENG>
+        <TRA>SDTemplateFile 此文件發生錯誤！</TRA>
+        <SIM>SDTemplateFile 此文件发生错误！</SIM>
+        <HKG>SDTemplateFile 此文件發生錯誤！</HKG>
+        <JPN>SDTemplateFile is Wrong!</JPN>
+        <LAN1>SDTemplateFile is Wrong!</LAN1>
+        <LAN2>SDTemplateFile is Wrong!</LAN2>
+        <LAN3>SDTemplateFile is Wrong!</LAN3>
+      </WrongSDTemp>
+      <WrongUITemp>
+        <ENG>UITemplateFile is Wrong!</ENG>
+        <TRA>UITemplateFile 此文件發生錯誤！</TRA>
+        <SIM>UITemplateFile 此文件发生错误！</SIM>
+        <HKG>UITemplateFile 此文件發生錯誤！</HKG>
+        <JPN>UITemplateFile is Wrong!</JPN>
+        <LAN1>UITemplateFile is Wrong!</LAN1>
+        <LAN2>UITemplateFile is Wrong!</LAN2>
+        <LAN3>UITemplateFile is Wrong!</LAN3>
+      </WrongUITemp>
+      <NoWord>
+        <ENG>Please install Office-Word after print!</ENG>
+        <TRA>列印前請先安裝Office-Word！</TRA>
+        <SIM>列印前请先安装Office-Word！</SIM>
+        <HKG>列印前請先安裝Office-Word！</HKG>
+        <JPN>Please install Office-Word after print!</JPN>
+        <LAN1>Please install Office-Word after print!</LAN1>
+        <LAN2>Please install Office-Word after print!</LAN2>
+        <LAN3>Please install Office-Word after print!</LAN3>
+      </NoWord>
+    </Print>
+    <Dte>
+      <WrongMWizard>
+        <ENG>Wrong EEPDirectory or MWizard.dll.config! </ENG>
+        <TRA>EEP路徑或者MWizard.dll.config文件錯誤！</TRA>
+        <SIM>EEP路径或者MWizard.dll.config文件错误！</SIM>
+        <HKG>EEP路徑或者MWizard.dll.config文件錯誤！</HKG>
+        <JPN>Wrong EEPDirectory or MWizard.dll.config! </JPN>
+        <LAN1>Wrong EEPDirectory or MWizard.dll.config! </LAN1>
+        <LAN2>Wrong EEPDirectory or MWizard.dll.config! </LAN2>
+        <LAN3>Wrong EEPDirectory or MWizard.dll.config! </LAN3>
+      </WrongMWizard>
+      <projectDLLnotFind>
+        <ENG>Cannot find the Dll of the selected project!</ENG>
+        <TRA>沒有找到選擇的項目的DLL文件！</TRA>
+        <SIM>没有找到选择的项目的DLL文件！</SIM>
+        <HKG>沒有找到選擇的項目的DLL文件！</HKG>
+        <JPN>Cannot find the Dll of the selected project!</JPN>
+        <LAN1>Cannot find the Dll of the selected project!</LAN1>
+        <LAN2>Cannot find the Dll of the selected project!</LAN2>
+        <LAN3>Cannot find the Dll of the selected project!</LAN3>
+      </projectDLLnotFind>
+      <FormnotFind>
+        <ENG>Cannot find the selected Form!</ENG>
+        <TRA>沒有找到選擇的Form！</TRA>
+        <SIM>没有找到选择的Form！</SIM>
+        <HKG>沒有找到選擇的Form！</HKG>
+        <JPN>Cannot find the selected Form!</JPN>
+        <LAN1>Cannot find the selected Form!</LAN1>
+        <LAN2>Cannot find the selected Form!</LAN2>
+        <LAN3>Cannot find the selected Form!</LAN3>
+      </FormnotFind>
+      <solutionnotFind>
+        <ENG>Cannot find the selected solution!</ENG>
+        <TRA>沒有找到選擇的Solution！</TRA>
+        <SIM>没有找到选择的Solution！</SIM>
+        <HKG>沒有找到選擇的Solution！</HKG>
+        <JPN>Cannot find the selected solution!</JPN>
+        <LAN1>Cannot find the selected solution!</LAN1>
+        <LAN2>Cannot find the selected solution!</LAN2>
+        <LAN3>Cannot find the selected solution!</LAN3>
+      </solutionnotFind>
+      <projectItemnotFind>
+        <ENG>Cannot find the ProjectItem!</ENG>
+        <TRA>沒有找到ProjectItem！</TRA>
+        <SIM>没有找到ProjectItem！</SIM>
+        <HKG>沒有找到ProjectItem！</HKG>
+        <JPN>Cannot find the ProjectItem!</JPN>
+        <LAN1>Cannot find the ProjectItem!</LAN1>
+        <LAN2>Cannot find the ProjectItem!</LAN2>
+        <LAN3>Cannot find the ProjectItem!</LAN3>
+      </projectItemnotFind>
+      <NullRemotename>
+        <ENG>{0}.{1}.Master.RemoteName is Null.</ENG>
+        <TRA>{0}.{1}.Master.RemoteName 為空！</TRA>
+        <SIM>{0}.{1}.Master.RemoteName 为空！</SIM>
+        <HKG>{0}.{1}.Master.RemoteName 為空！</HKG>
+        <JPN>{0}.{1}.Master.RemoteName is Null.</JPN>
+        <LAN1>{0}.{1}.Master.RemoteName is Null.</LAN1>
+        <LAN2>{0}.{1}.Master.RemoteName is Null.</LAN2>
+        <LAN3>{0}.{1}.Master.RemoteName is Null.</LAN3>
+      </NullRemotename>
+      <NotEEPForm>
+        <ENG>{0} is not a EEP WinForm!</ENG>
+        <TRA>{0} 不是由EEP產生的WinForm！</TRA>
+        <SIM>{0} 不是由EEP产生的WinForm！</SIM>
+        <HKG>{0} 不是由EEP產生的WinForm！</HKG>
+        <JPN>{0} is not a EEP WinForm!</JPN>
+        <LAN1>{0} is not a EEP WinForm!</LAN1>
+        <LAN2>{0} is not a EEP WinForm!</LAN2>
+        <LAN3>{0} is not a EEP WinForm!</LAN3>
+      </NotEEPForm>
+      <WrongDTE>
+        <ENG>SDModule is not registered.</ENG>
+        <TRA>SDModule沒有註冊。</TRA>
+        <SIM>SDModule没有注册。</SIM>
+        <HKG>SDModule沒有註冊。</HKG>
+        <JPN>SDModule is not registered.</JPN>
+        <LAN1>SDModule is not registered.</LAN1>
+        <LAN2>SDModule is not registered.</LAN2>
+        <LAN3>SDModule is not registered.</LAN3>
+      </WrongDTE>
+      <FormDllNotFind>
+        <ENG>Cannot get Form {0} from DLL {1}!</ENG>
+        <TRA>沒有在 {1} 找到Form:{0}！ </TRA>
+        <SIM>没有在 {1} 找到Form:{0}！ </SIM>
+        <HKG>沒有在 {1} 找到Form:{0}！ </HKG>
+        <JPN>Cannot get Form {0} from DLL {1}!</JPN>
+        <LAN1>Cannot get Form {0} from DLL {1}!</LAN1>
+        <LAN2>Cannot get Form {0} from DLL {1}!</LAN2>
+        <LAN3>Cannot get Form {0} from DLL {1}!</LAN3>
+      </FormDllNotFind>
+    </Dte>
+    <fmCheckDDLinkTableSubForm>
+      <NodeOverwrite>
+        <ENG>{0} has the same name node of '{1}'. Do you want to overwrite it?!</ENG>
+        <TRA>{0}有相同名字的Node'{1}',是否覆蓋？</TRA>
+        <SIM>{0}有相同名字的Node'{1}',是否覆盖？</SIM>
+        <HKG>{0}有相同名字的Node'{1}',是否覆蓋？</HKG>
+        <JPN>{0} has the same name node of '{1}'. Do you want to overwrite it?!</JPN>
+        <LAN1>{0} has the same name node of '{1}'. Do you want to overwrite it?!</LAN1>
+        <LAN2>{0} has the same name node of '{1}'. Do you want to overwrite it?!</LAN2>
+        <LAN3>{0} has the same name node of '{1}'. Do you want to overwrite it?!</LAN3>
+      </NodeOverwrite>
+    </fmCheckDDLinkTableSubForm>
+    <FOREEP2008>
+      <F2008MSG>
+        <ENG>If you are using EEP2008.Please defer to 'SDModule-安裝說明' for EEP2008 operation! </ENG>
+        <TRA>如果您使用的是EEP2008版本，請先按照'SDModule-安裝說明'上第5點執行操作！</TRA>
+        <SIM>如果您使用的是EEP2008版本，请先按照'SDModule-安裝說明'上第5点执行操作！</SIM>
+        <HKG>如果您使用的是EEP2008版本，請先按照'SDModule-安裝說明'上第5點執行操作！</HKG>
+        <JPN>If you are using EEP2008.Please defer to 'SDModule-安裝說明' for EEP2008 operation! </JPN>
+        <LAN1>If you are using EEP2008.Please defer to 'SDModule-安裝說明' for EEP2008 operation! </LAN1>
+        <LAN2>If you are using EEP2008.Please defer to 'SDModule-安裝說明' for EEP2008 operation! </LAN2>
+        <LAN3>If you are using EEP2008.Please defer to 'SDModule-安裝說明' for EEP2008 operation! </LAN3>
+      </F2008MSG>
+    </FOREEP2008>
+    <Document>
+      <SchemaList>
+        <ENG>Table Schema List</ENG>
+        <TRA>Table Schema 列表</TRA>
+        <SIM>Table Schema 列表</SIM>
+        <HKG>Table Schema 列表</HKG>
+        <JPN>Table Schema List</JPN>
+        <LAN1>Table Schema List</LAN1>
+        <LAN2>Table Schema List</LAN2>
+        <LAN3>Table Schema List</LAN3>
+      </SchemaList>
+      <field>
+        <ENG>Field Name,Field Caption,Field Type,Length,Scale,NotNull,Remark</ENG>
+        <TRA>欄位名稱,欄位標題,欄位類型,長度,小數位數,Null檢核,備註</TRA>
+        <SIM>栏位名称,栏位标题,栏位类型,长度,小数位数,Null检核,备注</SIM>
+        <HKG>欄位名稱,欄位標題,欄位類型,長度,小數位數,Null檢核,備註</HKG>
+        <JPN>Field Name,Field Caption,Field Type,Length,Scale,NotNull,Remark</JPN>
+        <LAN1>Field Name,Field Caption,Field Type,Length,Scale,NotNull,Remark</LAN1>
+        <LAN2>Field Name,Field Caption,Field Type,Length,Scale,NotNull,Remark</LAN2>
+        <LAN3>Field Name,Field Caption,Field Type,Length,Scale,NotNull,Remark</LAN3>
+      </field>
+      <index>
+        <ENG>index</ENG>
+        <TRA>索引</TRA>
+        <SIM>索引</SIM>
+        <HKG>索引</HKG>
+        <JPN>index</JPN>
+        <LAN1>index</LAN1>
+        <LAN2>index</LAN2>
+        <LAN3>index</LAN3>
+      </index>
+      <jobdetail>
+        <ENG>Job Name,Date,Author</ENG>
+        <TRA>對象名稱,日期,作者</TRA>
+        <SIM>对象名称,日期,作者</SIM>
+        <HKG>對象名稱,日期,作者</HKG>
+        <JPN>Job Name,Date,Author</JPN>
+        <LAN1>Job Name,Date,Author</LAN1>
+        <LAN2>Job Name,Date,Author</LAN2>
+        <LAN3>Job Name,Date,Author</LAN3>
+      </jobdetail>
+      <maindetail>
+        <ENG>Solution Name,Project Name,Item Name,Sign For Customer,Confirmation Date,Remarks</ENG>
+        <TRA>方案名稱,專案名稱,項目名稱,客戶簽章,確認日期,備註</TRA>
+        <SIM>方案名称,专案名称,项目名称,客户签章,确认日期,备注</SIM>
+        <HKG>方案名稱,專案名稱,項目名稱,客戶簽章,確認日期,備註</HKG>
+        <JPN>Solution Name,Project Name,Item Name,Sign For Customer,Confirmation Date,Remarks</JPN>
+        <LAN1>Solution Name,Project Name,Item Name,Sign For Customer,Confirmation Date,Remarks</LAN1>
+        <LAN2>Solution Name,Project Name,Item Name,Sign For Customer,Confirmation Date,Remarks</LAN2>
+        <LAN3>Solution Name,Project Name,Item Name,Sign For Customer,Confirmation Date,Remarks</LAN3>
+      </maindetail>
+      <itemname>
+        <ENG>Item Name</ENG>
+        <TRA>項目名稱</TRA>
+        <SIM>项目名称</SIM>
+        <HKG>項目名稱</HKG>
+        <JPN>SItem Name</JPN>
+        <LAN1>Item Name</LAN1>
+        <LAN2>Item Name</LAN2>
+        <LAN3>Item Name</LAN3>
+      </itemname>
+      <picture>
+        <ENG>Picture</ENG>
+        <TRA>圖片</TRA>
+        <SIM>图片</SIM>
+        <HKG>圖片</HKG>
+        <JPN>Picture</JPN>
+        <LAN1>Picture</LAN1>
+        <LAN2>Picture</LAN2>
+        <LAN3>Picture</LAN3>
+      </picture>
+      <jobpurpose>
+        <ENG>Job purpose and description:</ENG>
+        <TRA>對象目的和說明:</TRA>
+        <SIM>对象目的和说明:</SIM>
+        <HKG>對象目的和說明:</HKG>
+        <JPN>Job purpose and description:</JPN>
+        <LAN1>Job purpose and description:</LAN1>
+        <LAN2>Job purpose and description:</LAN2>
+        <LAN3>Job purpose and description:</LAN3>
+      </jobpurpose>
+      <suggestion>
+        <ENG>Suggestion and upgrade:</ENG>
+        <TRA>建議和改進:</TRA>
+        <SIM>建议和改进:</SIM>
+        <HKG>建議和改進:</HKG>
+        <JPN>Suggestion and upgrade:</JPN>
+        <LAN1>Suggestion and upgrade:</LAN1>
+        <LAN2>Suggestion and upgrade:</LAN2>
+        <LAN3>Suggestion and upgrade:</LAN3>
+      </suggestion>
+      <fielddescri>
+        <ENG>Field description</ENG>
+        <TRA>欄位描述</TRA>
+        <SIM>栏位描述</SIM>
+        <HKG>欄位描述</HKG>
+        <JPN>Field Description</JPN>
+        <LAN1>Field Description</LAN1>
+        <LAN2>Field Description</LAN2>
+        <LAN3>Field Description</LAN3>
+      </fielddescri>
+      <fielddescridetail>
+        <ENG>Field Name,Field Caption,Table Name,Description,Field Editor</ENG>
+        <TRA>欄位名稱,欄位標題,所屬資料表,備註,編輯類型</TRA>
+        <SIM>栏位名称,栏位标题,所属数据表,备注,编辑类型</SIM>
+        <HKG>欄位名稱,欄位標題,所屬資料表,備註,編輯類型</HKG>
+        <JPN>Field Name,Field Caption,Table Name,Description,Field Editor</JPN>
+        <LAN1>Field Name,Field Caption,Table Name,Description,Field Editor</LAN1>
+        <LAN2>Field Name,Field Caption,Table Name,Description,Field Editor</LAN2>
+        <LAN3>Field Name,Field Caption,Table Name,Description,Field Editor</LAN3>
+      </fielddescridetail>
+      <jqfielddescridetail>
+        <ENG>FieldName,Caption,Eidtor, EditorOptions,Format,Sortable, Frozen,Total</ENG>
+        <TRA>欄位名稱,標題,編輯狀態,參數,格式,是否排序,是否凍結,加總</TRA>
+        <SIM>栏位名称,标题,编辑状态,参数,格式,是否排序,是否冻结,加总</SIM>
+        <HKG>欄位名稱,標題,編輯狀態,參數,格式,是否排序,是否凍結,加總</HKG>
+        <JPN>FieldName,Caption,Eidtor, EditorOptions,Format,Sortable, Frozen,Total</JPN>
+        <LAN1>FieldName,Caption,Eidtor, EditorOptions,Format,Sortable, Frozen,Total</LAN1>
+        <LAN2>FieldName,Caption,Eidtor, EditorOptions,Format,Sortable, Frozen,Total</LAN2>
+        <LAN3>FieldName,Caption,Eidtor, EditorOptions,Format,Sortable, Frozen,Total</LAN3>
+      </jqfielddescridetail>
+      <jqgridquerycolumn>
+        <ENG>FieldName,Caption,Condition, Editor,DefaultValue,AndOr, NewLine</ENG>
+        <TRA>欄位名稱,標題,運算符,狀態,預設值,AndOr,新行</TRA>
+        <SIM>栏位名称,标题,运算符,状态,预设值,AndOr,新行</SIM>
+        <HKG>欄位名稱,標題,運算符,狀態,預設值,AndOr,新行</HKG>
+        <JPN>FieldName,Caption,Condition, Editor,DefaultValue,AndOr, NewLine</JPN>
+        <LAN1>FieldName,Caption,Condition, Editor,DefaultValue,AndOr, NewLine</LAN1>
+        <LAN2>FieldName,Caption,Condition, Editor,DefaultValue,AndOr, NewLine</LAN2>
+        <LAN3>FieldName,Caption,Condition, Editor,DefaultValue,AndOr, NewLine</LAN3>
+      </jqgridquerycolumn>
+      <jqformcolumn>
+        <ENG>FieldName,Caption,Eidtor, EditorOptions,Format</ENG>
+        <TRA>欄位名稱,標題,編輯狀態,參數,格式</TRA>
+        <SIM>栏位名称,标题,编辑状态,参数,格式</SIM>
+        <HKG>欄位名稱,標題,編輯狀態,參數,格式</HKG>
+        <JPN>FieldName,Caption,Eidtor, EditorOptions,Format</JPN>
+        <LAN1>FieldName,Caption,Eidtor, EditorOptions,Format</LAN1>
+        <LAN2>FieldName,Caption,Eidtor, EditorOptions,Format</LAN2>
+        <LAN3>FieldName,Caption,Eidtor, EditorOptions,Format</LAN3>
+      </jqformcolumn>
+      <jqgridtoolitem>
+        <ENG>ID,Icon,ItemType, Text,Format,OnClick</ENG>
+        <TRA>ID,圖標,類型,文字,格式,OnClick</TRA>
+        <SIM>ID,图标,类型,文字,格式,OnClick</SIM>
+        <HKG>ID,圖標,類型,文字,格式,OnClick</HKG>
+        <JPN>ID,Icon,ItemType, Text,Format,OnClick</JPN>
+        <LAN1>ID,Icon,ItemType, Text,Format,OnClick</LAN1>
+        <LAN2>ID,Icon,ItemType, Text,Format,OnClick</LAN2>
+        <LAN3>ID,Icon,ItemType, Text,Format,OnClick</LAN3>
+      </jqgridtoolitem>
+      <griddescri>
+        <ENG>Grid Description:</ENG>
+        <TRA>Grid描述:</TRA>
+        <SIM>Grid描述:</SIM>
+        <HKG>Grid描述:</HKG>
+        <JPN>Grid Description:</JPN>
+        <LAN1>Grid Description:</LAN1>
+        <LAN2>Grid Description:</LAN2>
+        <LAN3>Grid Description:</LAN3>
+      </griddescri>
+      <formdescri>
+        <ENG>Form Description:</ENG>
+        <TRA>Form描述:</TRA>
+        <SIM>Form描述:</SIM>
+        <HKG>Form描述:</HKG>
+        <JPN>Form Description:</JPN>
+        <LAN1>Form Description:</LAN1>
+        <LAN2>Form Description:</LAN2>
+        <LAN3>Form Description:</LAN3>
+      </formdescri>
+      <default>
+        <ENG>Default value</ENG>
+        <TRA>預設</TRA>
+        <SIM>预设</SIM>
+        <HKG>預設</HKG>
+        <JPN>Default value</JPN>
+        <LAN1>Default value</LAN1>
+        <LAN2>Default value</LAN2>
+        <LAN3>Default value</LAN3>
+      </default>
+      <validate>
+        <ENG>Validate:</ENG>
+        <TRA>檢核</TRA>
+        <SIM>检核</SIM>
+        <HKG>檢核</HKG>
+        <JPN>Validate:</JPN>
+        <LAN1>Validate:</LAN1>
+        <LAN2>Validate:</LAN2>
+        <LAN3>Validate:</LAN3>
+      </validate>
+      <defaultdetail>
+        <ENG>BindingSource,Field Name,Check Null,Validate,Check Range From,Check Range To,CarryOn,Default Value</ENG>
+        <TRA>綁定資料源,欄位名稱,Null檢核,條件檢核,範圍檢核從,範圍檢核到,CarryOn,預設值</TRA>
+        <SIM>绑定资料源,栏位名称,Null检核,条件检核,范围检核从,范围检核到,CarryOn,预设值</SIM>
+        <HKG>綁定資料源,欄位名稱,Null檢核,條件檢核,範圍檢核從,範圍檢核到,CarryOn,預設值</HKG>
+        <JPN>BindingSource,Field Name,Check Null,Validate,Check Range From,Check Range To,CarryOn,Default Value</JPN>
+        <LAN1>BindingSource,Field Name,Check Null,Validate,Check Range From,Check Range To,CarryOn,Default Value</LAN1>
+        <LAN2>BindingSource,Field Name,Check Null,Validate,Check Range From,Check Range To,CarryOn,Default Value</LAN2>
+        <LAN3>BindingSource,Field Name,Check Null,Validate,Check Range From,Check Range To,CarryOn,Default Value</LAN3>
+      </defaultdetail>
+       <jqdefaultdetail>
+        <ENG>Field Name,CarryOn,Default Value</ENG>
+        <TRA>欄位名稱CarryOn,預設值</TRA>
+        <SIM>栏位名称CarryOn,预设值</SIM>
+        <HKG>欄位名稱CarryOn,預設值</HKG>
+        <JPN>Field Name,CarryOn,Default Value</JPN>
+        <LAN1>Field Name,CarryOn,Default Value</LAN1>
+        <LAN2>Field Name,CarryOn,Default Value</LAN2>
+        <LAN3>Field Name,CarryOn,Default Value</LAN3>
+      </jqdefaultdetail>
+      <jqvalidatedetail>
+        <ENG>Field Name,Check Null,Validate,Check Range From,Check Range To,CheckMethod,Message</ENG>
+        <TRA>欄位名稱,Null檢核,條件檢核,範圍檢核從,範圍檢核到,檢核方法,訊息</TRA>
+        <SIM>栏位名称,Null检核,条件检核,范围检核从,范围检核到,检核方法,讯息</SIM>
+        <HKG>欄位名稱,Null檢核,條件檢核,範圍檢核從,範圍檢核到,檢核方法,訊息</HKG>
+        <JPN>Field Name,Check Null,Validate,Check Range From,Check Range To,CheckMethod,Message</JPN>
+        <LAN1>Field Name,Check Null,Validate,Check Range From,Check Range To,CheckMethod,Message</LAN1>
+        <LAN2>Field Name,Check Null,Validate,Check Range From,Check Range To,CheckMethod,Message</LAN2>
+        <LAN3>Field Name,Check Null,Validate,Check Range From,Check Range To,CheckMethod,Message</LAN3>
+      </jqvalidatedetail>
+      <infocommanddetail>
+        <ENG>Name,Command Text</ENG>
+        <TRA>名稱,SQL 語法</TRA>
+        <SIM>名称,SQL 语法</SIM>
+        <HKG>名稱,SQL 語法</HKG>
+        <JPN>Name,Command Text</JPN>
+        <LAN1>Name,Command Text</LAN1>
+        <LAN2>Name,Command Text</LAN2>
+        <LAN3>Name,Command Text</LAN3>
+      </infocommanddetail>
+      <updatecompomentdetail>
+        <ENG>Name,Field Name,Default Mode,Default Value,Check Null</ENG>
+        <TRA>名稱,欄位名稱,預設模式,預設值,Null檢核</TRA>
+        <SIM>名称,栏位名称,预设模式,预设值,Null检核</SIM>
+        <HKG>名稱,欄位名稱,預設模式,預設值,Null檢核</HKG>
+        <JPN>Name,Field Name,Default Mode,Default Value,Check Null</JPN>
+        <LAN1>Name,Field Name,Default Mode,Default Value,Check Null</LAN1>
+        <LAN2>Name,Field Name,Default Mode,Default Value,Check Null</LAN2>
+        <LAN3>Name,Field Name,Default Mode,Default Value,Check Null</LAN3>
+      </updatecompomentdetail>
+      <list>
+        <ENG>List</ENG>
+        <TRA>列表</TRA>
+        <SIM>列表</SIM>
+        <HKG>列表</HKG>
+        <JPN>List</JPN>
+        <LAN1>List</LAN1>
+        <LAN2>List</LAN2>
+        <LAN3>List</LAN3>
+      </list>
+      <component>
+        <ENG>Component</ENG>
+        <TRA>元件</TRA>
+        <SIM>元件</SIM>
+        <HKG>元件</HKG>
+        <JPN>Component</JPN>
+        <LAN1>Component</LAN1>
+        <LAN2>Component</LAN2>
+        <LAN3>Component</LAN3>
+      </component>
+      <code>
+        <ENG>code</ENG>
+        <TRA>代碼</TRA>
+        <SIM>代码</SIM>
+        <HKG>代碼</HKG>
+        <JPN>code</JPN>
+        <LAN1>code</LAN1>
+        <LAN2>code</LAN2>
+        <LAN3>code</LAN3>
+      </code>
+      <outputFolder>
+        <ENG>Output Folder is empty or this directory is not exist</ENG>
+        <TRA>Output Folder沒有值或者這個路徑不存在</TRA>
+        <SIM>Output Folder没有值或者这个路径不存在</SIM>
+        <HKG>Output Folder沒有值或者這個路徑不存在</HKG>
+        <JPN>Output Folder is empty or this directory is not exist</JPN>
+        <LAN1>Output Folder is empty or this directory is not exist</LAN1>
+        <LAN2>Output Folder is empty or this directory is not exist</LAN2>
+        <LAN3>Output Folder is empty or this directory is not exist</LAN3>
+      </outputFolder>
+      <eepAlias>
+        <ENG>EEP Alias is empty</ENG>
+        <TRA>EEP Alias 沒有值</TRA>
+        <SIM>EEP Alias 没有值</SIM>
+        <HKG>EEP Alias 沒有值</HKG>
+        <JPN>EEP Alias is empty</JPN>
+        <LAN1>EEP Alias is empty</LAN1>
+        <LAN2>EEP Alias is empty</LAN2>
+        <LAN3>EEP Alias is empty</LAN3>
+      </eepAlias>
+      <outputSuccess>
+        <ENG>Output Success</ENG>
+        <TRA>輸出成功</TRA>
+        <SIM>输出成功</SIM>
+        <HKG>輸出成功</HKG>
+        <JPN>Output Success</JPN>
+        <LAN1>Output Success</LAN1>
+        <LAN2>Output Success</LAN2>
+        <LAN3>Output Success</LAN3>
+      </outputSuccess>
+    </Document>
+  </SDModule>
+</SystemMessage>

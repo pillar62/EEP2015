@@ -1,0 +1,36 @@
+AutoTest log file.
+UserID: 001   PackageName: CSchedule_Old   Start Time: 2011/7/7 14:06:16 571
+UserID: 001   PackageName: CSchedule_Old   Complete Time: 2011/7/7 14:41:35 822
+Total 3001 Records, Use00:35:19.2502142 Seconds.
+MaxRespendTime: 307 MilliSeconds 
+MinRespendTime: 7 MilliSeconds 
+AverageRespendTime: 11.742MilliSeconds
+
+AutoTest log file.
+UserID: 001   PackageName: CSchedule_Old   Start Time: 2011/7/7 13:22:34 602
+UserID: 001   PackageName: CSchedule_Old   Complete Time: 2011/7/7 13:57:41 286
+Total 3001 Records, Use00:35:06.6834954 Seconds.
+MaxRespendTime: 215 MilliSeconds 
+MinRespendTime: 7 MilliSeconds 
+AverageRespendTime: 11.35367MilliSeconds
+
+AutoTest log file.
+UserID: 001   PackageName: CSchedule_Old   Start Time: 2011/7/7 12:30:00 783
+UserID: 001   PackageName: CSchedule_Old   Complete Time: 2011/7/7 12:36:10 389
+Total 1001 Records, Use00:06:09.6061403 Seconds.
+MaxRespendTime: 149 MilliSeconds 
+MinRespendTime: 7 MilliSeconds 
+AverageRespendTime: 11.602MilliSeconds
+
+AutoTest log file.
+UserID: 001   PackageName: CSchedule_Old   Start Time: 2011/7/7 11:45:44 544
+UserID: 001   PackageName: CSchedule_Old   Complete Time: 2011/7/7 12:20:59 715
+Total 3001 Records, Use00:35:15.1709809 Seconds.
+MaxRespendTime: 231 MilliSeconds 
+MinRespendTime: 7 MilliSeconds 
+AverageRespendTime: 12.22067MilliSeconds
+
+
+
+
+

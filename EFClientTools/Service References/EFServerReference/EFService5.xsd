@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="infolight.com" elementFormDefault="qualified" targetNamespace="infolight.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8990/EFWCFModule/EFService?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/EFWCFModule" />
+  <xs:import schemaLocation="http://localhost:8990/EFWCFModule/EFService?xsd=xsd7" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost:8990/EFWCFModule/EFService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:element name="GetModuleNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="clientInfo" nillable="true" type="q1:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetModuleNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetModuleNamesResult" nillable="true" type="q2:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommandNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="clientInfo" nillable="true" type="q3:ClientInfo" />
+        <xs:element minOccurs="0" name="assemblyName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommandNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetCommandNamesResult" nillable="true" type="q4:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObjectClassName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="clientInfo" nillable="true" type="q5:ClientInfo" />
+        <xs:element minOccurs="0" name="assemblyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="commandName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="entitySetName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObjectClassNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetObjectClassNameResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityPrimaryKeys">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="clientInfo" nillable="true" type="q6:ClientInfo" />
+        <xs:element minOccurs="0" name="assemblyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="commandName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="entityTypeName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityPrimaryKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetEntityPrimaryKeysResult" nillable="true" type="q7:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityFields">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="clientInfo" nillable="true" type="q8:ClientInfo" />
+        <xs:element minOccurs="0" name="assemblyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="commandName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="entityTypeName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityFieldsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetEntityFieldsResult" nillable="true" type="q9:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityFieldTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="clientInfo" nillable="true" type="q10:ClientInfo" />
+        <xs:element minOccurs="0" name="assemblyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="commandName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="entityTypeName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityFieldTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetEntityFieldTypesResult" nillable="true" type="q11:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityFieldMappings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="clientInfo" nillable="true" type="q12:ClientInfo" />
+        <xs:element minOccurs="0" name="assemblyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="commandName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="entityTypeName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityFieldMappingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetEntityFieldMappingsResult" nillable="true" type="q13:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityNavigationFields">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="clientInfo" nillable="true" type="q14:ClientInfo" />
+        <xs:element minOccurs="0" name="assemblyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="commandName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="entityTypeName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityNavigationFieldsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetEntityNavigationFieldsResult" nillable="true" type="q15:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntitySetNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="clientInfo" nillable="true" type="q16:ClientInfo" />
+        <xs:element minOccurs="0" name="assemblyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="commandName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="entityTypeName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntitySetNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetEntitySetNamesResult" nillable="true" type="q17:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetColumnDefination">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="clientInfo" nillable="true" type="q18:ClientInfo" />
+        <xs:element minOccurs="0" name="assemblyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="commandName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="entityTypeName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetColumnDefinationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" minOccurs="0" name="GetColumnDefinationResult" nillable="true" type="q19:ArrayOfEntityObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDatabases">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDatabasesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetDatabasesResult" nillable="true" type="q20:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSolutions">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSolutionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="GetSolutionsResult" nillable="true" type="q21:ArrayOfSolutionInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogOn">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="clientInfo" nillable="true" type="q22:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogOnResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="LogOnResult" nillable="true" type="q23:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogOff">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="clientInfo" nillable="true" type="q24:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LogOffResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="LogOffResult" nillable="true" type="q25:ClientInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CallMethod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="clientInfo" nillable="true" type="q26:ClientInfo" />
+        <xs:element minOccurs="0" name="assemblyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="methodName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q27="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="parameters" nillable="true" type="q27:ArrayOfanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CallMethodResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CallMethodResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObjectCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="clientInfo" nillable="true" type="q28:ClientInfo" />
+        <xs:element minOccurs="0" name="assemblyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="commandName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="packetInfo" nillable="true" type="q29:PacketInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObjectCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetObjectCountResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObjects">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="clientInfo" nillable="true" type="q30:ClientInfo" />
+        <xs:element minOccurs="0" name="assemblyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="commandName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="packetInfo" nillable="true" type="q31:PacketInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObjectsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" minOccurs="0" name="GetObjectsResult" nillable="true" type="q32:ArrayOfEntityObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObjectByKey">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="clientInfo" nillable="true" type="q33:ClientInfo" />
+        <xs:element minOccurs="0" name="assemblyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="commandName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="entitySetName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q34="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="keyValues" nillable="true" type="q34:ArrayOfKeyValueOfstringanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObjectByKeyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetObjectByKeyResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetailObjects">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="clientInfo" nillable="true" type="q35:ClientInfo" />
+        <xs:element minOccurs="0" name="assemblyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="commandName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" minOccurs="0" name="masterObject" nillable="true" type="q36:EntityObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetailObjectsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" minOccurs="0" name="GetDetailObjectsResult" nillable="true" type="q37:EntityObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateObjects">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="clientInfo" nillable="true" type="q38:ClientInfo" />
+        <xs:element minOccurs="0" name="assemblyName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="commandName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" minOccurs="0" name="objects" nillable="true" type="q39:ArrayOfEntityObject" />
+        <xs:element xmlns:q40="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="states" nillable="true" type="q40:ArrayOfKeyValueOfEntityKeyEntityStateBZZhBTqX" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateObjectsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" minOccurs="0" name="UpdateObjectsResult" nillable="true" type="q41:ArrayOfEntityObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CallFlowMethod">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="clientInfo" nillable="true" type="q42:ClientInfo" />
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="parameter" nillable="true" type="q43:FlowParameter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CallFlowMethodResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="CallFlowMethodResult" nillable="true" type="q44:FlowResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="clientInfo" nillable="true" type="q45:ClientInfo" />
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="dataType" type="q46:FlowDataType" />
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/EFWCFModule" minOccurs="0" name="parameter" nillable="true" type="q47:FlowDataParameter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFlowDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" minOccurs="0" name="GetFlowDataResult" nillable="true" type="q48:ArrayOfEntityObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

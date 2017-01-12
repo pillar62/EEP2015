@@ -1,0 +1,61 @@
+﻿body
+{
+	font-family:Verdana;
+	font-size: 9pt;
+	background-image: url( '../../Image/innerpage/bg.jpg' );
+	background-repeat: repeat-x;
+	background-color:#405765;
+}
+
+#main_content
+{
+	text-align:center;
+	padding:5px;
+}
+
+.rightalign_fieldset
+{
+	padding:5px;
+    border: 1px solid #0E4A66; 
+    color: #FFFFFF;
+    font-family: 'Microsoft JhengHei';
+    font-weight: bold;
+	text-align: -moz-center !important;
+	text-align:center;
+}
+
+.button_container
+{
+	float:left;
+	padding:5px;
+}
+
+.btn_rect_mouseout
+{
+    border: 1px solid #286699;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-family:Microsoft JhengHei; 
+    font-weight: bold;
+    font-size: 12px;
+    background-color:#95c3e9;
+    background-image: url('../../Image/innerpage/btn1.png');
+    background-repeat: repeat-x;
+}
+
+.btn_rect_mouseover
+{
+    border: 1px solid #051723;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-family:Microsoft JhengHei; 
+    font-weight: bold;
+    font-size: 12px;
+    background-color:#64757f;
+    background-image:url( '../../Image/innerpage/btn2.png' );
+    background-repeat: repeat-x;	
+}

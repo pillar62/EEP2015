@@ -1,0 +1,1157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{09DC65FB-9FF8-44B5-8750-D89C32E823F8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Srvtools</RootNamespace>
+    <AssemblyName>Srvtools</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Srvtools.snk</AssemblyOriginatorKeyFile>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\EEPNetServer\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;AjaxTools;UseFL</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\EEPNetServer\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="envdte, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Common Files\Microsoft Shared\MSEnv\PublicAssemblies\envdte.dll</HintPath>
+    </Reference>
+    <Reference Include="envdte80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Common Files\Microsoft Shared\MSEnv\PublicAssemblies\envdte80.dll</HintPath>
+    </Reference>
+    <Reference Include="InfoRemoteModule, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5b851f9a40f07b8c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EEPNetServer\InfoRemoteModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADClass.cs" />
+    <Compile Include="AnyQuery.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AnyQuery.Designer.cs">
+      <DependentUpon>AnyQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlDescription.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlDescription.Designer.cs">
+      <DependentUpon>ControlDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ControlDescriptionEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControlDescriptionEditorDialog.Designer.cs">
+      <DependentUpon>ControlDescriptionEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBUtils.cs" />
+    <Compile Include="EEPException.cs" />
+    <Compile Include="ERModel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="fmReplaceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmReplaceDialog.designer.cs">
+      <DependentUpon>fmReplaceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnyQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnyQuery.Designer.cs">
+      <DependentUpon>frmAnyQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AutoNumber.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AutoNumberSynchronizer.cs" />
+    <Compile Include="AutoQuery.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AutoSeq.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AutoTest.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AutoTest.Designer.cs">
+      <DependentUpon>AutoTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditionDifference.cs" />
+    <Compile Include="FilterBuilder.cs" />
+    <Compile Include="FormVersion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVersion.Designer.cs">
+      <DependentUpon>FormVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnyQueryAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnyQueryAdd.Designer.cs">
+      <DependentUpon>frmAnyQueryAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExternalRefvalEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExternalRefvalEditor.Designer.cs">
+      <DependentUpon>frmExternalRefvalEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMenuTableControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuTableControl.Designer.cs">
+      <DependentUpon>frmMenuTableControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNavigatorCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNavigatorCopy.Designer.cs">
+      <DependentUpon>frmNavigatorCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProxy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProxy.designer.cs">
+      <DependentUpon>frmProxy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnyQuerySaveLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnyQuerySaveLoad.Designer.cs">
+      <DependentUpon>frmAnyQuerySaveLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRefButtonQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRefButtonQuery.designer.cs">
+      <DependentUpon>frmRefButtonQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoDataGridViewDateTimeBoxColumn.cs" />
+    <Compile Include="InfoDataGridViewRefButtonColumn.cs" />
+    <Compile Include="InfoDateTimeBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InfoDateTimeBox.Designer.cs">
+      <DependentUpon>InfoDateTimeBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoIOTReceiver.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoMail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoMail.Designer.cs">
+      <DependentUpon>InfoMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoRefbuttonBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MultiLanguageEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultiLanguageEditorDialog.Designer.cs">
+      <DependentUpon>MultiLanguageEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CacheClientDataSet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClientQuery.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClientQueryEditor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CliSysMegLag.cs" />
+    <Compile Include="CliUtils.cs" />
+    <Compile Include="ColumnMatch.cs" />
+    <Compile Include="ColumnMatchCollection.cs" />
+    <Compile Include="CommandTextAddTableDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommandTextAddTableDialog.Designer.cs">
+      <DependentUpon>CommandTextAddTableDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommandTextJoinDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommandTextJoinDialog.Designer.cs">
+      <DependentUpon>CommandTextJoinDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommandTextOptionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommandTextOptionDialog.Designer.cs">
+      <DependentUpon>CommandTextOptionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommonPropertyEditor.cs" />
+    <Compile Include="DataFileReader.cs" />
+    <Compile Include="DataSetToExcel.cs" />
+    <Compile Include="DbConnectionSet.cs" />
+    <Compile Include="DefaultValidate.cs" />
+    <Compile Include="DesignSupport.cs" />
+    <Compile Include="DetailNavigator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EnabledControlsEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnabledControlsEditorDialog.Designer.cs">
+      <DependentUpon>EnabledControlsEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Encrypt.cs" />
+    <Compile Include="ErrorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ErrorDialog.Designer.cs">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccessControlForUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccessControlForUser.Designer.cs">
+      <DependentUpon>frmAccessControlForUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccessMenus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccessMenus.Designer.cs">
+      <DependentUpon>frmAccessMenus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccessMenusForUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccessMenusForUser.Designer.cs">
+      <DependentUpon>frmAccessMenusForUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgent.Designer.cs">
+      <DependentUpon>frmAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectLanguage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectLanguage.Designer.cs">
+      <DependentUpon>frmSelectLanguage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelUsers.Designer.cs">
+      <DependentUpon>frmSelUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWebHyperLink.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWebHyperLink.Designer.cs">
+      <DependentUpon>frmWebHyperLink.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoDataGridViewHyperLinkColumn.cs" />
+    <Compile Include="InfoDataGridViewTextBoxColumn.cs.cs" />
+    <Compile Include="InfoMultiGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoRefButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoRefButton.Designer.cs">
+      <DependentUpon>InfoRefButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoRefPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoRefPanel.Designer.cs">
+      <DependentUpon>InfoRefPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoSecColumns.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoHyperLink.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoMaskedTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoMaskedTextBox.Designer.cs">
+      <DependentUpon>InfoMaskedTextBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoParameter.cs" />
+    <Compile Include="InfoTransactionEditorTransFieldsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoTransactionEditorTransFieldsDialog.Designer.cs">
+      <DependentUpon>InfoTransactionEditorTransFieldsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoTransactionEditorTransKeyFieldsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoTransactionEditorTransKeyFieldsDialog.Designer.cs">
+      <DependentUpon>InfoTransactionEditorTransKeyFieldsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoTransactionTransKeyFieldsAddDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoTransactionTransKeyFieldsAddDialog.Designer.cs">
+      <DependentUpon>InfoTransactionTransKeyFieldsAddDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoTranslate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PublicKey.cs" />
+    <Compile Include="QueryStringEncrypt.cs" />
+    <Compile Include="QueryTranslate.cs" />
+    <Compile Include="Report\frmSelectReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\frmSelectReport.Designer.cs">
+      <DependentUpon>frmSelectReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SessionRequest.cs" />
+    <Compile Include="WebAnyQuery.cs" />
+    <Compile Include="WebAutoQuery.cs" />
+    <Compile Include="WebControlDescription.cs" />
+    <Compile Include="WebCustomValidator.cs" />
+    <Compile Include="WebDataPager.cs" />
+    <Compile Include="WebEnableControlsEditor.cs" />
+    <Compile Include="WebFilterTextBox.cs" />
+    <Compile Include="WebGridDropDown.cs" />
+    <Compile Include="WebMail.cs" />
+    <Compile Include="WebMedia.cs" />
+    <Compile Include="WebMonthPicker.cs" />
+    <Compile Include="WebMultiViewCaptions.cs" />
+    <Compile Include="WebNavigatorEnableControlsEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebNavigatorEnableControlsEditorDialog.Designer.cs">
+      <DependentUpon>WebNavigatorEnableControlsEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebSecColumns.cs" />
+    <Compile Include="WebValidateBox.cs" />
+    <Compile Include="RecordLock.cs" />
+    <Compile Include="SetFieldValueSynchronizer.cs" />
+    <Compile Include="WebCheckBox.cs" />
+    <Compile Include="WebGridTextBox.cs" />
+    <Compile Include="WebHyperLink.cs" />
+    <Compile Include="WebImage.cs" />
+    <Compile Include="WebListBoxList.cs" />
+    <Compile Include="WebMenu.cs" />
+    <Compile Include="WebRefButton.cs" />
+    <Compile Include="WebExpressionControl.cs" />
+    <Compile Include="ExpressionField.cs" />
+    <Compile Include="FeedbackBugDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeedbackBugDialog.Designer.cs">
+      <DependentUpon>FeedbackBugDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FieldAttr.cs" />
+    <Compile Include="FieldAttrCollection.cs" />
+    <Compile Include="frmAccessControlForGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccessControlForGroup.Designer.cs">
+      <DependentUpon>frmAccessControlForGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAccessControlAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAccessControlAdd.Designer.cs">
+      <DependentUpon>frmAccessControlAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientQuery.Designer.cs">
+      <DependentUpon>frmClientQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClientQueryEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientQueryEditor.Designer.cs">
+      <DependentUpon>frmClientQueryEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDGVGridRefVal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDGVGridRefVal.Designer.cs">
+      <DependentUpon>frmDGVGridRefVal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfoSecurityAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfoSecurityAdd.Designer.cs">
+      <DependentUpon>frmInfoSecurityAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInfoSecurityEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInfoSecurityEdit.Designer.cs">
+      <DependentUpon>frmInfoSecurityEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNavQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNavQuery.Designer.cs">
+      <DependentUpon>frmNavQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRefValQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRefValQuery.Designer.cs">
+      <DependentUpon>frmRefValQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelGroups.Designer.cs">
+      <DependentUpon>frmSelGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTreeView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTreeView.Designer.cs">
+      <DependentUpon>frmTreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWebClientQueryEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWebClientQueryEditor.Designer.cs">
+      <DependentUpon>frmWebClientQueryEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWebSecurityAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWebSecurityAdd.Designer.cs">
+      <DependentUpon>frmWebSecurityAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWebSecurityEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWebSecurityEdit.Designer.cs">
+      <DependentUpon>frmWebSecurityEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IdentitySynchronizer.cs" />
+    <Compile Include="IndentityField.cs" />
+    <Compile Include="InfoBaseComp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoBaseForm.Designer.cs">
+      <DependentUpon>InfoBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoBindingSource.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoClientMove.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoClientMove.Designer.cs">
+      <DependentUpon>InfoClientMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoClientMoveProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoClientMoveProgress.Designer.cs">
+      <DependentUpon>InfoClientMoveProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoCommand.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="infoCommandEditor.cs" />
+    <Compile Include="InfoConnection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoDataGridViewCalendarColumn.cs" />
+    <Compile Include="InfoDataGridViewComboBoxColumn.cs" />
+    <Compile Include="InfoDataGridViewEditor.cs" />
+    <Compile Include="InfoDataGridViewExpressionColumn.cs" />
+    <Compile Include="InfoDataGridViewIndentityColumn.cs" />
+    <Compile Include="InfoDataGridViewRefValColumn.cs" />
+    <Compile Include="InfoDataModule.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoDataSetEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoDataSetEditor.Designer.cs">
+      <DependentUpon>InfoDataSetEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoDataSource.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoDMDesigner.cs" />
+    <Compile Include="InfoNavigator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoRefVal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoRefValEvents.cs" />
+    <Compile Include="InfoRefValForGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InfoRefValForGrid.Designer.cs">
+      <DependentUpon>InfoRefValForGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoRefvalBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InfoRefvalBox.Designer.cs">
+      <DependentUpon>InfoRefvalBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoSecurityEdit.cs">
+    </Compile>
+    <Compile Include="InfoSecurityEdit.Designer.cs">
+      <DependentUpon>InfoSecurityEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoStatusStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoStatusStrip.Designer.cs">
+      <DependentUpon>InfoStatusStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoTransaction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoTransactionEditor.cs" />
+    <Compile Include="InfoTransactionEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoTransactionEditorDialog.designer.cs">
+      <DependentUpon>InfoTransactionEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoTransactionEditorTTransactionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoTransactionEditorTTransactionDialog.designer.cs">
+      <DependentUpon>InfoTransactionEditorTTransactionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoTransactionEvent.cs" />
+    <Compile Include="InfoTransactionTransFieldsAddDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoTransactionTransFieldsAddDialog.designer.cs">
+      <DependentUpon>InfoTransactionTransFieldsAddDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoComboBox.Designer.cs">
+      <DependentUpon>InfoComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogInfo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LogSQLBuilder.cs" />
+    <Compile Include="InfoDataSet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MGControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MGControl.Designer.cs">
+      <DependentUpon>MGControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MultiLanguage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PERemoteName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PERemoteName.Designer.cs">
+      <DependentUpon>PERemoteName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryColumn.cs" />
+    <Compile Include="QueryColumnCollection.cs" />
+    <Compile Include="RefColumns.cs" />
+    <Compile Include="RefColumnsCollection.cs" />
+    <Compile Include="RemoteAsync.cs" />
+    <Compile Include="ServerConfig.cs" />
+    <Compile Include="ServerModifyColumn.cs" />
+    <Compile Include="ServerModifyColumnCollection.cs" />
+    <Compile Include="Service.cs" />
+    <Compile Include="ServiceCollection.cs" />
+    <Compile Include="ServiceManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SQLBuilder.cs" />
+    <Compile Include="SrvUtils.cs" />
+    <Compile Include="StateCollectionEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StateCollectionEditorDialog.Designer.cs">
+      <DependentUpon>StateCollectionEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoSecurity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InfoSecurity.Designer.cs">
+      <DependentUpon>InfoSecurity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TotalColumn.cs" />
+    <Compile Include="TotalColumnCollection.cs" />
+    <Compile Include="Transaction.cs" />
+    <Compile Include="TransactionCollection.cs" />
+    <Compile Include="TransField.cs" />
+    <Compile Include="TransFieldBase.cs" />
+    <Compile Include="TransFieldCollection.cs" />
+    <Compile Include="TransFieldCollectionBase.cs" />
+    <Compile Include="TransKeyField.cs" />
+    <Compile Include="TransKeyFieldCollection.cs" />
+    <Compile Include="TransSQLBuilder.cs" />
+    <Compile Include="UGControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UGControl.Designer.cs">
+      <DependentUpon>UGControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UpdateComponentEvent.cs" />
+    <Compile Include="UPWDControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UPWDControl.Designer.cs">
+      <DependentUpon>UPWDControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebAutoSeq.cs" />
+    <Compile Include="WebAutoTest.cs">
+    </Compile>
+    <Compile Include="WebClientMove.cs">
+    </Compile>
+    <Compile Include="WebClientQuery.cs" />
+    <Compile Include="WebClientQueryEditor.cs" />
+    <Compile Include="WebDataList.cs" />
+    <Compile Include="WebDataSet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WebDataSource.cs">
+    </Compile>
+    <Compile Include="WebDateTimePicker.cs" />
+    <Compile Include="WebDateTimeViewer.cs" />
+    <Compile Include="WebDropDownList.cs" />
+    <Compile Include="WebFormView.cs" />
+    <Compile Include="WebMultiLanguage.cs">
+    </Compile>
+    <Compile Include="WebRefVal.cs" />
+    <Compile Include="WebSecurity.cs">
+    </Compile>
+    <Compile Include="WebStatusStrip.cs" />
+    <Compile Include="WebTimePicker.cs" />
+    <Compile Include="WebTranslate.cs" />
+    <Compile Include="WebTreeView.cs" />
+    <Compile Include="WebValidate.cs" />
+    <Compile Include="WebDetailsView.cs" />
+    <Compile Include="WebDefault.cs" />
+    <Compile Include="WebGridView.cs" />
+    <Compile Include="WebNavigator.cs" />
+    <Compile Include="WebSecurityEdit.cs">
+    </Compile>
+    <Compile Include="WhereItem.cs" />
+    <Compile Include="WhereItemCollection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CommandTextAddTableDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CommandTextAddTableDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommandTextJoinDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CommandTextJoinDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommandTextOptionDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CommandTextOptionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDGVGridRefVal.resx">
+      <DependentUpon>frmDGVGridRefVal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuTableControl.resx">
+      <DependentUpon>frmMenuTableControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNavQuery.resx">
+      <DependentUpon>frmNavQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRefValQuery.resx">
+      <DependentUpon>frmRefValQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelGroups.resx">
+      <DependentUpon>frmSelGroups.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoBaseForm.resx">
+      <DependentUpon>InfoBaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoCommand.resx">
+      <DependentUpon>InfoCommand.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoDataSetEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InfoDataSetEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoDataSource.resx">
+      <DependentUpon>InfoDataSource.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoNavigator.resx">
+      <DependentUpon>InfoNavigator.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoRefVal.resx">
+      <DependentUpon>InfoRefVal.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoPanel.resx">
+      <DependentUpon>InfoPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoRefValForGrid.resx">
+      <DependentUpon>InfoRefValForGrid.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoTextBox.resx">
+      <DependentUpon>InfoTextBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoTransactionEditorDialog.resx">
+      <DependentUpon>InfoTransactionEditorDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoTransactionEditorTTransactionDialog.resx">
+      <DependentUpon>InfoTransactionEditorTTransactionDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoTransactionTransFieldsAddDialog.resx">
+      <DependentUpon>InfoTransactionTransFieldsAddDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoComboBox.resx">
+      <DependentUpon>InfoComboBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoDataSet.resx">
+      <DependentUpon>InfoDataSet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MGControl.resx">
+      <DependentUpon>MGControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\frmSelectReport.resx">
+      <DependentUpon>frmSelectReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UGControl.resx">
+      <DependentUpon>UGControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateComponent.resx">
+      <DependentUpon>UpdateComponent.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="InfoDataSetEditorImage\CheckBox.gif" />
+    <Content Include="InfoDataSetEditorImage\ComboBox.gif" />
+    <Content Include="InfoDataSetEditorImage\DataSet.gif" />
+    <Content Include="InfoDataSetEditorImage\DataTable.gif" />
+    <Content Include="InfoDataSetEditorImage\DateTimePicker.gif" />
+    <Content Include="InfoDataSetEditorImage\Image.gif" />
+    <Content Include="InfoDataSetEditorImage\InfoNavigator.bmp" />
+    <Content Include="InfoDataSetEditorImage\InfoRefValBox.ico" />
+    <Content Include="InfoDataSetEditorImage\InfoTextBox.gif" />
+    <Content Include="InfoDataSetEditorImage\InfoWinComboBox.gif" />
+    <Content Include="InfoDataSetEditorImage\Label.gif" />
+    <Content Include="InfoDataSetEditorImage\LinkLabel.gif" />
+    <Content Include="InfoDataSetEditorImage\ListBox.gif" />
+    <Content Include="InfoDataSetEditorImage\None.gif" />
+    <Content Include="InfoDataSetEditorImage\NumericUpDown.gif" />
+    <Content Include="InfoDataSetEditorImage\RichTextBox.gif" />
+    <Content Include="InfoDataSetEditorImage\TextBox.gif" />
+    <EmbeddedResource Include="ControlDescriptionEditorDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ControlDescriptionEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ERModel.resx">
+      <DependentUpon>ERModel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmReplaceDialog.resx">
+      <DependentUpon>fmReplaceDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnyQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAnyQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnyQueryAdd.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAnyQueryAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnyQuerySaveLoad.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAnyQuerySaveLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExternalRefvalEditor.resx">
+      <DependentUpon>frmExternalRefvalEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRefButtonQuery.resx">
+      <DependentUpon>frmRefButtonQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoDateTimeBox.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InfoDateTimeBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfonavigatorImage\Copy.png" />
+    <Content Include="ReadMe\readme.txt" />
+    <EmbeddedResource Include="WebRefVal.js" />
+    <EmbeddedResource Include="WebDateTimePicker.js" />
+    <EmbeddedResource Include="FormVersion.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNavigatorCopy.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmNavigatorCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProxy.resx">
+      <DependentUpon>frmProxy.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultiLanguageEditorDialog.resx">
+      <DependentUpon>MultiLanguageEditorDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgent.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectLanguage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSelectLanguage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\progress.gif" />
+    <EmbeddedResource Include="InfonavigatorImage\Export.png" />
+    <EmbeddedResource Include="InfoRefPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InfoRefPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\InfoHyperLink.ico" />
+    <EmbeddedResource Include="Resources\InfoMaskedTextbox.ico" />
+    <EmbeddedResource Include="Resources\InfoTranslate.png" />
+    <EmbeddedResource Include="Resources\WebCheckBox.png" />
+    <EmbeddedResource Include="Resources\WebGridTextBox.png" />
+    <EmbeddedResource Include="Resources\WebHyperLink.ico" />
+    <EmbeddedResource Include="Resources\WebImage.png" />
+    <EmbeddedResource Include="Resources\WebListBoxList.ico" />
+    <EmbeddedResource Include="Resources\WebMenu.png" />
+    <EmbeddedResource Include="Resources\WebStatusStrip.ico" />
+    <EmbeddedResource Include="Resources\WebValidateBox.ico" />
+    <EmbeddedResource Include="frmWebHyperLink.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWebHyperLink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoTransactionEditorTransFieldsDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InfoTransactionEditorTransFieldsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoTransactionEditorTransKeyFieldsDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InfoTransactionEditorTransKeyFieldsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoTransactionTransKeyFieldsAddDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InfoTransactionTransKeyFieldsAddDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\WebRefButton.png" />
+    <EmbeddedResource Include="Resources\InfoPanelClose.png" />
+    <EmbeddedResource Include="Resources\InfoPanelAutoHide.png" />
+    <EmbeddedResource Include="Resources\InfoPanelFixed.png" />
+    <EmbeddedResource Include="InfoPanelImage\InfoPanelAutoHide.png" />
+    <EmbeddedResource Include="InfoPanelImage\InfoPanelClose.png" />
+    <EmbeddedResource Include="InfoPanelImage\InfoPanelFixed.png" />
+    <EmbeddedResource Include="Resources\DefaultValidate.png" />
+    <EmbeddedResource Include="Resources\InfoClientMove.png" />
+    <EmbeddedResource Include="Resources\WebClientMove.png" />
+    <EmbeddedResource Include="Resources\WebTimePicker.png" />
+    <EmbeddedResource Include="Resources\WebTranslate.png" />
+    <EmbeddedResource Include="Resources\ClientQuery.ICO" />
+    <EmbeddedResource Include="Resources\InfoPanel.png" />
+    <EmbeddedResource Include="Resources\InfoTreeView.png" />
+    <EmbeddedResource Include="Resources\UPWDControl.png" />
+    <EmbeddedResource Include="Resources\WebAutoSeq.ico" />
+    <EmbeddedResource Include="Resources\WebAutoTest.png" />
+    <EmbeddedResource Include="Resources\WebClientQuery.ICO" />
+    <EmbeddedResource Include="Resources\WebDataList.ico" />
+    <EmbeddedResource Include="Resources\WebDataTimePicker.ico" />
+    <EmbeddedResource Include="Resources\WebDataTimeViewer.png" />
+    <EmbeddedResource Include="Resources\WebDropDownList.ico" />
+    <EmbeddedResource Include="Resources\WebExpressionControl.ico" />
+    <EmbeddedResource Include="Resources\WebFormView.ico" />
+    <EmbeddedResource Include="Resources\WebMultiLanguage.ico" />
+    <EmbeddedResource Include="Resources\WebRefVal.ico" />
+    <EmbeddedResource Include="frmAccessControlForUser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAccessControlForUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAccessMenus.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAccessMenus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAccessMenusForUser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAccessMenusForUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelUsers.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSelUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTreeView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWebClientQueryEditor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWebClientQueryEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWebSecurityAdd.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWebSecurityAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWebSecurityEdit.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmWebSecurityEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoClientMoveProgress.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InfoClientMoveProgress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AutoTest.png" />
+    <EmbeddedResource Include="Resources\InfoSecurity.png" />
+    <EmbeddedResource Include="frmAccessControlForGroup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAccessControlForGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAccessControlAdd.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmAccessControlAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfoSecurityAdd.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmInfoSecurityAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInfoSecurityEdit.resx">
+      <DependentUpon>frmInfoSecurityEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\InfoComboBox.ico" />
+    <EmbeddedResource Include="Resources\InfoDataGridView.png" />
+    <EmbeddedResource Include="Resources\InfoDataTimePicker.ico" />
+    <EmbeddedResource Include="Resources\InfoRefVal.png" />
+    <EmbeddedResource Include="Resources\InfoStatusStrip.ico" />
+    <EmbeddedResource Include="Resources\InfoTextBox.ico" />
+    <EmbeddedResource Include="Resources\MGControl.png" />
+    <EmbeddedResource Include="Resources\UGControl.png" />
+    <EmbeddedResource Include="Resources\WebDataSource.png" />
+    <EmbeddedResource Include="Resources\WebDefault.png" />
+    <EmbeddedResource Include="Resources\WebDetailView.ico" />
+    <EmbeddedResource Include="Resources\WebGridView.ico" />
+    <EmbeddedResource Include="Resources\WebNavigator.ico" />
+    <EmbeddedResource Include="Resources\WebValidate.png" />
+    <EmbeddedResource Include="frmClientQueryEditor.resx">
+      <DependentUpon>frmClientQueryEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\InfoRefValBox.ico" />
+    <EmbeddedResource Include="frmClientQuery.resx">
+      <DependentUpon>frmClientQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoRefvalBox.resx">
+      <DependentUpon>InfoRefvalBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AutoNum.ico" />
+    <EmbeddedResource Include="Resources\AutoSeq.ico" />
+    <EmbeddedResource Include="Resources\InfoDataSource.ico" />
+    <EmbeddedResource Include="Resources\InfoNavigator.ico" />
+    <EmbeddedResource Include="Resources\MultiLanguage.ico" />
+    <EmbeddedResource Include="InfonavigatorImage\Delete.png" />
+    <EmbeddedResource Include="InfonavigatorImage\Abort.png" />
+    <EmbeddedResource Include="InfonavigatorImage\Apply.png" />
+    <EmbeddedResource Include="InfonavigatorImage\Cancel.png" />
+    <EmbeddedResource Include="InfonavigatorImage\Edit.png" />
+    <EmbeddedResource Include="InfonavigatorImage\OK.png" />
+    <EmbeddedResource Include="InfonavigatorImage\Print.png" />
+    <EmbeddedResource Include="InfonavigatorImage\Query.png" />
+    <EmbeddedResource Include="InfonavigatorImage\Refresh.png" />
+    <EmbeddedResource Include="Resources\EEPmangaer.ico" />
+    <EmbeddedResource Include="Resources\EEPNetClient.ico" />
+    <EmbeddedResource Include="Resources\EEPNetServer.ico" />
+    <EmbeddedResource Include="Resources\InfoBindingSource.ico" />
+    <EmbeddedResource Include="Resources\InfoCommand.ico" />
+    <EmbeddedResource Include="Resources\InfoConnection.ico" />
+    <EmbeddedResource Include="Resources\InfoDataSet.ico" />
+    <EmbeddedResource Include="Resources\InfoTransaction.ico" />
+    <EmbeddedResource Include="Resources\LogInfo.ico" />
+    <EmbeddedResource Include="Resources\ServiceManager.ico" />
+    <EmbeddedResource Include="Resources\UpdateComp.ico" />
+    <EmbeddedResource Include="EnabledControlsEditorDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EnabledControlsEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ErrorDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeedbackBugDialog.resx">
+      <DependentUpon>FeedbackBugDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoBindingSource.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InfoBindingSource.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PERemoteName.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PERemoteName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StateCollectionEditorDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StateCollectionEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UPWDControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UPWDControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebNavigatorEnableControlsEditorDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>WebNavigatorEnableControlsEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Srvtools.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

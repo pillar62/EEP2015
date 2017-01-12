@@ -1,0 +1,151 @@
+.icon-blank{
+	background:url('icons/blank.gif') no-repeat center center;
+}
+.icon-add{
+	background:url('icons/edit_add.png') no-repeat center center;
+}
+.icon-edit{
+	background:url('icons/pencil.png') no-repeat center center;
+}
+.icon-remove{
+	background:url('icons/edit_remove.png') no-repeat center center;
+}
+.icon-save{
+	background:url('icons/filesave.png') no-repeat center center;
+}
+.icon-cut{
+	background:url('icons/cut.png') no-repeat center center;
+}
+.icon-ok{
+	background:url('icons/ok.png') no-repeat center center;
+}
+.icon-no{
+	background:url('icons/no.png') no-repeat center center;
+}
+.icon-cancel{
+	background:url('icons/cancel.png') no-repeat center center;
+}
+.icon-reload{
+	background:url('icons/reload.png') no-repeat center center;
+}
+.icon-search{
+	background:url('icons/search.png') no-repeat center center;
+}
+.icon-print{
+	background:url('icons/print.png') no-repeat center center;
+}
+.icon-help{
+	background:url('icons/help.png') no-repeat center center;
+}
+.icon-undo{
+	background:url('icons/undo.png') no-repeat center center;
+}
+.icon-redo{
+	background:url('icons/redo.png') no-repeat center center;
+}
+.icon-back{
+	background:url('icons/back.png') no-repeat center center;
+}
+.icon-sum{
+	background:url('icons/sum.png') no-repeat center center;
+}
+.icon-tip{
+	background:url('icons/tip.png') no-repeat center center;
+}
+
+.icon-mini-add{
+	background:url('icons/mini_add.png') no-repeat center center;
+}
+.icon-mini-edit{
+	background:url('icons/mini_edit.png') no-repeat center center;
+}
+.icon-mini-refresh{
+	background:url('icons/mini_refresh.png') no-repeat center center;
+}
+.icon-view{
+    background:url('icons/select.png') no-repeat center center;
+}
+.icon-excel{
+    background:url('icons/excel.png') no-repeat center center;
+}
+.icon-upload{
+    background:url('icons/upload.png') no-repeat center center;
+}
+.icon-next {
+    background:url('icons/next.png') no-repeat center center;
+}
+.icon-previous {
+    background:url('icons/previous.png') no-repeat center center;
+}
+.icon-flow-Select{
+    background:url('../../Image/WorkflowIcon/Select.png') no-repeat center center;
+}
+.icon-flow-Submit{
+    background:url('../../Image/WorkflowIcon/Submit.png') no-repeat center center;
+}
+.icon-flow-Approve{
+    background:url('../../Image/WorkflowIcon/Approve.png') no-repeat center center;
+}
+.icon-flow-Return{
+    background:url('../../Image/WorkflowIcon/Return.png') no-repeat center center;
+}
+.icon-flow-Retake{
+    background:url('../../Image/WorkflowIcon/Return.png') no-repeat center center;
+}
+.icon-flow-Notify{
+    background:url('../../Image/WorkflowIcon/Notify.png') no-repeat center center;
+}
+.icon-flow-Hasten{
+    background:url('../../Image/WorkflowIcon/Hasten.png') no-repeat center center;
+}
+.icon-flow-FlowDelete{
+    background:url('../../Image/WorkflowIcon/FlowDelete.png') no-repeat center center;
+}
+.icon-flow-Transfer{
+    background:url('../../Image/WorkflowIcon/Hasten.png') no-repeat center center;
+}
+.icon-flow-Comment{
+    background:url('../../Image/WorkflowIcon/Comment.png') no-repeat center center;
+}
+.icon-flow-Pause{
+    background:url('../../Image/WorkflowIcon/Pause.png') no-repeat center center;
+}
+.icon-flow-Reject{
+    background:url('../../Image/WorkflowIcon/Reject.png') no-repeat center center;
+}
+.icon-flow-Plus{
+    background:url('../../Image/WorkflowIcon/Plus.png') no-repeat center center;
+}
+
+/*.icon-flow-Select{
+    background:url('../../Image/UIPics/Select.gif') no-repeat center center;
+}
+.icon-flow-Submit{
+    background:url('../../Image/UIPics/Submit.gif') no-repeat center center;
+}
+.icon-flow-Approve{
+    background:url('../../Image/UIPics/Approve.gif') no-repeat center center;
+}
+.icon-flow-Return{
+    background:url('../../Image/UIPics/Return.gif') no-repeat center center;
+}
+.icon-flow-Notify{
+    background:url('../../Image/UIPics/Notify.gif') no-repeat center center;
+}
+.icon-flow-FlowDelete{
+    background:url('../../Image/UIPics/FlowDelete.gif') no-repeat center center;
+}
+.icon-flow-Comment{
+    background:url('../../Image/UIPics/Comment.gif') no-repeat center center;
+}
+.icon-flow-Pause{
+    background:url('../../Image/UIPics/Pause.gif') no-repeat center center;
+}*/
+
+.icon-datagrid
+{
+    background:url('../../Image/Security/datagrid.jpg') no-repeat center center;    
+}
+.menu-folder {
+  background: url('default/images/tree_icons.png') no-repeat -208px 0px;
+}

@@ -1,0 +1,18 @@
+﻿/*拉动大小时，被拉动对象Handler的样式*/
+.ajaxresize_handleResizableControl
+{
+	width:16px;
+	height:16px;
+	background-image:url(Image/Ajax/HandleGrip.png);
+	overflow:hidden;
+	cursor:se-resize;
+}
+
+/*拉动大小时，被拉动对象的样式*/
+.ajaxresize_resizingResizableControl
+{
+	padding:0px;
+	border-style:solid;
+	border-width:3px;
+	border-color:#B4D35D;
+}

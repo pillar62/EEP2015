@@ -1,0 +1,393 @@
+﻿/**/
+/*页面主体样式*/
+body {
+    font-family: Microsoft JhengHei;
+    font-size: 9pt;
+    background-color: #1e65f3;
+    background-image: url(../Image/Main2012/BG.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    scrollbar-base-color: #698BCA;
+    scrollbar-face-color: #698BCA;
+    scrollbar-track-color: #FEFEFE;
+    scrollbar-arrow-color: #FFFFFF;
+    scrollbar-3dlight-color: #698BCA;
+    scrollbar-highlight-color: #FFFFFF;
+    scrollbar-shadow-color: #FEFEFE;
+    scrollbar-darkshadow-color: #698BCA;
+}
+
+/*.slPlugin
+{
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    width: 100%;
+}*/
+
+/*满宽度table样式*/
+.fullWidthTable {
+    width: 100%;
+    margin: 3px 0px 3px 0px;
+}
+
+/*所有左边区域样式*/
+.leftPart {
+    width: 224px;
+    background-color: #003399;
+    border-color: #0a1821;
+    border-width: 1px;
+    filter: alpha(opacity=85);
+    -moz-opacity: 0.85;
+    -khtml-opacity: 0.85;
+    opacity: 0.85;
+}
+
+/*左边区域内边框div的container样式*/
+#leftframeContainer {
+    vertical-align: top;
+}
+
+/*左边区域内边框div样式*/
+#leftframe {
+    /*border: solid 1px #0a1821;
+    padding: 2px 2px 2px 2px;*/
+    transition: border linear .2s,box-shadow linear .5s;
+    -moz-transition: border linear .2s,-moz-box-shadow linear .5s;
+    -webkit-transition: border linear .2s,-webkit-box-shadow linear .5s;
+    outline: none;
+    border-color: #ffffff;
+    box-shadow: 0 0 8px #ffffff;
+    -moz-box-shadow: 0 0 8px #ffffff;
+    -webkit-box-shadow: 0 0 8px #ffffff;
+}
+
+.leftControl {
+    background-color: #d4e9ee;
+    border-color: #4f6268;
+    border-width: 1px;
+}
+
+/*边缘隔离div*/
+.marginContent {
+    width: 10px;
+}
+
+/*favorite和solution的image样式*/
+.buttonImg {
+    position: relative;
+    top: 2;
+    height: 23px;
+}
+
+/*header区域样式*/
+#headerLogo {
+    background-image: url(../Image/Main2012/header.png);
+    background-repeat: no-repeat;
+    height: 75px;
+    background-position: left center;
+}
+
+#headerLogo_right {
+    background-image: url(../Image/Main2012/header_right_bg.png);
+    background-repeat: no-repeat;
+    height: 75px;
+    background-position: right;
+}
+
+/*header区域背景样式*/
+#headerLogo_bg {
+    /*width:100%;*/
+    height: 75px;
+    background-image: url(../Image/Main2012/header_bg.png);
+    background-repeat: repeat-x;
+    /*background-color: #0a1821;*/
+    /*filter: progid:DXImageTransform.Microsoft.Gradient(gradientType=0,startColorStr=#349bc6,endColorStr=#2e96c4) alpha(opacity=100);*/
+    filter: alpha(opacity=100);
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+}
+
+/*左边框上边缘样式*/
+#topContent {
+    /*background-image: url(../Image/main/content_bg.png);*/
+    width: 100%;
+    height: 18px;
+    /*filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#255D8D', endColorStr='#2A6FA9', gradientType='1');*/
+}
+
+/*左边框中间缘样式*/
+#middleContent {
+    /*background-image: url(../Image/main/content_bg.png);*/
+    width: 100%;
+    /*filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#255D8D', endColorStr='#2A6FA9', gradientType='1');*/
+}
+
+/*favorite的textbox样式*/
+#tbCaption {
+    width: 152px;
+}
+
+/*go按钮container样式*/
+#goContainer {
+    width: 30px;
+    height: 27px;
+    background-image: url(../Image/Main2012/go_normal.png);
+    background-repeat: no-repeat;
+}
+
+/*solution的dropdownlist样式*/
+#ddlSolution {
+    width: 181px;
+}
+
+/*左边框下边缘样式*/
+#footContent {
+    /*background-image: url(../Image/main/content_bg.png);*/
+    width: 100%;
+    height: 60px;
+    /*filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#255D8D', endColorStr='#2A6FA9', gradientType='1');*/
+}
+
+/*change password按钮container样式*/
+#changePasswordContainer {
+    padding: 5px;
+}
+
+/*log out按钮container样式*/
+#logOutContainer {
+    padding: 5px;
+}
+
+/*鼠标离开按钮时，按钮的样式*/
+.btn_mouseout {
+    border: 1px solid #286699;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-size: 12px;
+    background-color: #95c3e9;
+    background-image: url(../Image/Main2012/emptybtn.png);
+    background-repeat: repeat-x;
+}
+
+/*鼠标移动到按钮上时，按钮的样式*/
+.btn_mouseover {
+    border: 1px solid #051723;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-size: 12px;
+    background-color: #64757f;
+    background-image: url(../Image/Main2012/emptybtn_over.png);
+    background-repeat: repeat-x;
+}
+
+.label {
+    color: White;
+}
+
+/*change password和log out按钮左边框样式*/
+#marginContent1 {
+    width: 48px;
+}
+
+/*change password和log out按钮右边框样式*/
+#marginContent2 {
+    width: 28px;
+}
+
+/*左右缩进分割区域样式*/
+#split {
+    width: 10px;
+    vertical-align: top;
+}
+
+/*主页面frame样式*/
+#mainframe {
+    vertical-align: top;
+    width: 100%;
+}
+
+#footerLeft {
+    background-image: url(../Image/main/footer_left.jpg);
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 42px;
+}
+
+#footerMiddle {
+    background-image: url(../Image/main/footer_middle.jpg);
+    background-repeat: repeat-x;
+    height: 42px;
+}
+
+#footerRight {
+    background-image: url(../Image/main/footer_right.jpg);
+    background-repeat: no-repeat;
+    width: 477px;
+    height: 42px;
+}
+
+/*webClientMainFlow*/
+
+/*右边框container样式*/
+#rightframeContainer {
+    vertical-align: top;
+    width: 100%;
+}
+
+/*右边框样式*/
+#rightframe {
+    width: 99.7%;
+}
+
+/*workflow的主区域样式*/
+#Panel2 {
+    width: 100%;
+    height: 30px;
+    background-image: url(../Image/main/flow_title.png);
+    background-repeat: repeat-x;
+    color: #EEEEEE;
+    font-weight: bold;
+    border: #7EBF4F 0px solid;
+    padding: 2px 2px 0px 2px;
+}
+
+/*workflow的分页区域样式*/
+.fs {
+    /*overflow-y:-moz-scroll !important;*/
+    overflow-y: scroll !important;
+    width: 100%;
+    height: 150px;
+    background-image: url('../Image/main/panel_bg.png');
+    background-repeat: repeat-x;
+}
+
+
+/*workflow的title的container样式*/
+#wfTitleContainer {
+    padding: 5px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+/*workflow的title样式*/
+#wftitle {
+    float: left;
+}
+
+/*workflow的提示伸展或者收缩区域样式*/
+#wfECDirector {
+    float: left;
+    margin-left: 20px;
+    vertical-align: middle;
+    text-align: left;
+}
+
+/*workflow的提示伸展或者收缩区域image样式*/
+#wfECImgDirector {
+    float: right;
+    vertical-align: middle;
+}
+
+/*workflow的gridview样式*/
+.gridview {
+    filter: progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);
+}
+
+/*workflow的gridview的header样式*/
+.gridview_header {
+    background-image: url('../Image/main/gridHeader.png');
+    background-repeat: repeat-x;
+}
+
+/*workflow的gridview的row样式*/
+.gridview_row {
+    background-image: url('../Image/main/gridRow.png');
+    background-repeat: repeat-x;
+}
+
+/*workflow的gridview的altrow样式*/
+.gridview_altrow {
+    background-image: url('../Image/main/gridAltRow.png');
+    background-repeat: repeat-x;
+}
+
+/*workflow的gridview的footer样式*/
+.gridview_footer {
+    background-image: url('../Image/main/gridFooter.png');
+    background-repeat: repeat-x;
+}
+
+/*workflow的gridview的selected row样式*/
+.gridview_selectedrow {
+    background-image: url('../Image/main/gridSelected.png');
+    background-repeat: repeat-x;
+}
+
+.modalBackground {
+    background-color: Gray;
+    filter: alpha(opacity=100);
+    opacity: 1;
+}
+
+.popup {
+    border-width: 3px;
+    border-style: solid;
+    border-color: Gray;
+    padding: 3px 3px 3px 3px;
+    width: 550px;
+}
+
+.div_title {
+    width: 550px;
+    height: 15px;
+    border: #7B9EBD 1px solid;
+    padding: 2px 2px 2px 2px;
+    text-align: right;
+    /*filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr='#DCEBFD', endColorStr='#8DB2E6',gradientType='1');
+	*/ background-color: #8DB2E6;
+}
+
+.div_content {
+    width: 550px;
+    text-align: center;
+    border: #7B9EBD 1px solid;
+    padding: 2px 2px 2px 2px;
+    background-image: url('../Image/main/bg.png');
+    background-repeat: repeat;
+    overflow-x: scroll;
+}
+
+.query_condition_container {
+    overflow: auto;
+    width: 520px;
+    /*filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr=#DCEBFD, EndColorStr=#8DB2E6)
+	progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);
+	*/ background-color: #8DB2E6;
+}
+
+.query_caption {
+    text-align: left;
+}
+
+.link {
+    text-align: left;
+    color: #0066CC;
+    background: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.transparent_class {
+    /*filter: alpha(opacity=0);
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    opacity: 0;*/
+}

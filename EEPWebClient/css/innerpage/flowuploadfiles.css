@@ -1,0 +1,161 @@
+﻿/**/
+/*页面主体样式*/
+body 
+{
+	font-family:Verdana;
+	font-size: 9pt;
+	background-image: url( '../../Image/innerpage/bg.jpg' );
+	background-repeat: repeat-x;
+	background-color:#405765;
+}
+
+fieldset
+{
+	padding:8px;
+    border: 1px solid #0E4A66; 
+    color: #FFFFFF;
+    font-family: 'Microsoft JhengHei';
+    font-weight: bold;
+	text-align: -moz-left !important;
+	text-align:left;
+}
+
+/*主div样式*/
+.tabcontainer
+{
+	text-align:center;
+	
+	width:100%;
+}
+
+/*鼠标离开长方形按钮时，按钮的样式*/
+.btn_rect_mouseout
+{
+    border: 1px solid #286699;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-family:Microsoft JhengHei; 
+    font-weight: bold;
+    font-size: 12px;
+    background-color:#95c3e9;
+    background-image: url('../../Image/innerpage/btn1.png');
+    background-repeat: repeat-x;
+}
+
+/*鼠标移动到长方形按钮上时，按钮的样式*/
+.btn_rect_mouseover
+{
+   border: 1px solid #051723;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-family:Microsoft JhengHei; 
+    font-weight: bold;
+    font-size: 12px;
+    background-color:#64757f;
+    background-image:url( '../../Image/innerpage/btn2.png' );
+    background-repeat: repeat-x;	
+}
+
+/*鼠标离开长方形按钮时，按钮的样式*/
+.btn_rect_mouseout1
+{
+   border: 1px solid #286699;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-family:Microsoft JhengHei; 
+    font-weight: bold;
+    font-size: 12px;
+    background-color:#95c3e9;
+    background-image: url('../../Image/innerpage/btn1.png');
+    background-repeat: repeat-x;
+}
+
+/*鼠标移动到长方形按钮上时，按钮的样式*/
+.btn_rect_mouseover1
+{
+   border: 1px solid #051723;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-family:Microsoft JhengHei; 
+    font-weight: bold;
+    font-size: 12px;
+    background-color:#64757f;
+    background-image:url( '../../Image/innerpage/btn2.png' );
+    background-repeat: repeat-x;	
+}
+
+.color_legend
+{
+    color:White;
+    font-weight:bold;    
+}
+ .left-top
+{
+    background-image: url('../../Image/innerpage/left-top.png');
+    width:20px;
+    height:20px;
+    border:0px;
+}
+.right-top
+{
+    background-image: url('../../Image/innerpage/right-top.png');    
+    width:20px;
+    height:20px;    
+    border:0px;
+}
+.left-bottom
+{
+    background-image: url('../../Image/innerpage/left-bottom.png');    
+    width:20px;
+    height:20px;    
+    border:0px;
+}
+.right-bottom
+{
+    background-image: url('../../Image/innerpage/right-bottom.png');    
+    width:20px;
+    height:20px;    
+    border:0px;
+}
+.top
+{
+    background-image: url('../../Image/innerpage/top.png');    
+    background-repeat:repeat-x;
+    height:20px;
+    border:0px;
+}
+.bottom
+{
+    background-image: url('../../Image/innerpage/bottom.png');
+    background-repeat: repeat-x;
+    height: 20px;
+    border: 0px;
+}
+.left
+{
+    background-image: url('../../Image/innerpage/left.png');   
+    background-repeat:repeat-y; 
+    width:20px;
+}
+.right
+{
+    background-image: url('../../Image/innerpage/right.png');    
+    background-repeat:repeat-y;
+    width:20px;
+    border:0px
+
+}
+.center
+{
+    background-image: url('../../Image/innerpage/center.png');
+    background-repeat: repeat;
+    border: 0px;
+}

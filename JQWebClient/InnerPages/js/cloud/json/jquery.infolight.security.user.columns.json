@@ -1,0 +1,15 @@
+[[
+	{"field":"USERID","title":"User ID","width":100,"editor":{"type":"validatebox", "options":{"required":true}}}
+	,{"field":"USERNAME","title":"User Name","width":100,"editor":{"type":"validatebox", "options":{"required":true}}}
+	,{"field":"PWD","title":"Password","width":100,"editor":{"type":"password"}}
+	,{"field":"EMAIL","title":"Email","width":150, "editor":{"type":"validatebox", "options":{"validType":"email"}}}
+	,{"field":"EXPIRYDATE","title":"Expiry Date","width":100,"editor":{"type":"datebox"}}
+    ,{"field":"AUTOLOGIN","title":"Status","width":80,"editor":{"type":"combobox","options":{"valueField":"value","textField":"text","panelHeight":"auto","editable":false,"data":[{"value":"S", "text":"Admin"},{"value":"N", "text":"Guest"},{"value":"X","text":"Disabled"}]}}}
+],[
+	{"field":"GROUPID","title":"Group ID","width":100,"editor":{"type":"text"}}
+	,{"field":"GROUPNAME","title":"Group Name","width":100,"editor":{"type":"text"}}
+],[
+	{"checkbox":true}
+	,{"field":"GROUPID","title":"Group ID","width":100,"editor":{"type":"text"}}
+	,{"field":"GROUPNAME","title":"Group Name","width":100,"editor":{"type":"text"}}
+]]

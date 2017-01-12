@@ -1,0 +1,100 @@
+﻿/*gridview的外观样式*/
+.gridview_1
+{
+	font-family: Verdana;
+	font-size: 9pt;
+	filter:progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);
+}
+
+/*gridview的header样式*/
+.gridview_header_1
+{
+	background-image:url('../../Image/ControlImage/gridHeader1.png');
+	background-repeat:repeat-x;
+}
+
+/*gridview的row样式*/
+.gridview_row_1
+{
+	background-image:url('../../Image/ControlImage/gridRow1.png');
+	background-repeat:repeat-x;
+}
+
+/*gridview的altrow样式*/
+.gridview_altrow_1
+{
+	background-image:url('../../Image/ControlImage/gridAltRow1.png');
+	background-repeat:repeat-x;
+}
+
+/*gridview的footer样式*/
+.gridview_footer_1
+{
+	background-image:url('../../Image/ControlImage/gridFooter1.png');
+	background-repeat:repeat-x;
+}
+
+/*gridview的pager样式*/
+.gridview_pager_1
+{
+	background-image:url('../../Image/ControlImage/gridHeader1.png');
+	background-repeat:repeat-x;
+}
+
+/*gridview的selected row样式*/
+.gridview_selectedrow_1
+{
+	background-image:url('../../Image/ControlImage/gridSelected1.png');
+	background-repeat:repeat-x;
+}
+
+
+/*gridview的外观样式*/
+.gridview_2
+{
+	font-family: Verdana;
+	font-size: 9pt;
+	filter:progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);
+}
+
+/*gridview的header样式*/
+.gridview_header_2
+{
+	background-image:url('../../Image/ControlImage/gridHeader2.png');
+	background-repeat:repeat-x;
+}
+
+/*gridview的row样式*/
+.gridview_row_2
+{
+	background-image:url('../../Image/ControlImage/gridRow2.png');
+	background-repeat:repeat-x;
+}
+
+/*gridview的altrow样式*/
+.gridview_altrow_2
+{
+	background-image:url('../../Image/ControlImage/gridAltRow2.png');
+	background-repeat:repeat-x;
+}
+
+/*gridview的footer样式*/
+.gridview_footer_2
+{
+	background-image:url('../../Image/ControlImage/gridFooter2.png');
+	background-repeat:repeat-x;
+}
+
+/*gridview的pager样式*/
+.gridview_pager_2
+{
+	background-image:url('../../Image/ControlImage/gridPager2.png');
+	background-repeat:repeat-x;
+}
+
+/*gridview的selected row样式*/
+.gridview_selectedrow_2
+{
+	background-image:url('../../Image/ControlImage/gridSelected2.png');
+	background-repeat:repeat-x;
+}

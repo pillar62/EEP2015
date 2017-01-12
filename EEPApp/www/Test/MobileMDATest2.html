@@ -1,0 +1,149 @@
+﻿
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript" src="../cordova.js"></script>
+    <script type="text/javascript" src="../scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="../scripts/index.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+    <script type="text/javascript" src="../js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.json.js"></script>
+    <script type="text/javascript" src="../js/jquery.infolight.mobile.js"></script>
+    <script type="text/javascript" src="../js/jquery.infolight.mobile.wf.js"></script>
+    <title>
+
+    </title>
+    <link href="../css/index.css" rel="stylesheet" />
+    <link href="../js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+    <link href="../css/themes/my-custom-theme.min.css" rel="stylesheet" />
+    <link href="../css/themes/jquery.mobile.icons.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="http://api.map.baidu.com/api?ak=fF3EzrOwkhrd7fZWVzhQp2ah&v=2.0"></script>
+</head>
+<body>
+    <form name="form1" method="post" action="MobileMDATest2.aspx?Cordova=true" id="form1">
+        <div>
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjA0NTcyNzA1M2Rk25iG8HoVZxzAowxyWzqQNXsS0HTTcv6yKrIT7803ELU=" />
+        </div>
+
+        <input type="hidden" name="_BAIDUAK" id="_BAIDUAK" value="fF3EzrOwkhrd7fZWVzhQp2ah" />
+        <div id="dataGridView" data-role="page">
+            <div data-theme="b" data-role="content">
+                <table class="info-datagrid table-stripe infolight-breakpoint" data-role="table" data-mode="reflow" data-theme="b" infolight-options="remoteName:'S001.ATest',tableName:'ATest',pageSize:10,editPage:'#dataFormMaster',editMode:'dialog',detailObjectID:'#dataGridDetail',toolItemObjectID:'#dataGridView_toolitem',title:'MobileMDATest',alwaysClose:false,allowAdd:true,allowUpdate:true,allowDelete:true,allowView:true,toolItemsPosition:'both',listColumnCount:2,listCaptionWidth:120,queryMode:'window',reportFileName:''">
+                    <thead>
+                        <tr>
+                            <th nowrap="nowrap" infolight-options="field:'ATestID',width:120,align:'left',nowrap:false">ATestID</th>
+                            <th nowrap="nowrap" infolight-options="field:'AName',width:120,align:'left',nowrap:false">AName</th>
+                            <th nowrap="nowrap" infolight-options="field:'ADateTime',width:120,align:'left',nowrap:false">ADateTime</th>
+                        </tr>
+                    </thead>
+                </table>
+                <div class="ui-content" id="dataGridView_popup" data-role="popup" data-theme="d" data-overlay-theme="a">
+                    <a data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><p></p>
+                </div><div id="dataGridView_toolitem" data-role="none" style="display:none">
+                    <a class="grid-insert" data-mini="true" data-inline="true" data-role="none" data-icon="plus" data-iconpos="notext">Insert</a><a class="grid-previous" data-mini="true" data-inline="true" data-role="none" data-icon="arrow-l" data-iconpos="notext">Previous page</a><a class="grid-next" data-mini="true" data-inline="true" data-role="none" data-icon="arrow-r" data-iconpos="notext">Next page</a><a class="grid-query" data-mini="true" data-inline="true" data-role="none" data-icon="search" data-iconpos="notext">Query</a><a class="grid-refresh" data-mini="true" data-inline="true" data-role="none" data-icon="refresh" data-iconpos="notext">Refresh</a><a class="grid-return" data-mini="true" data-inline="true" data-role="none" data-icon="back" data-iconpos="notext">Back</a>
+                </div>
+            </div>
+        </div>
+        <div id="dataFormMaster" data-overlay-theme="b" data-role="page">
+            <div data-role="header" data-theme="b">
+                <h1>
+                    MobileMDATest
+                </h1>
+            </div><div data-theme="b" data-role="content">
+                <div data-theme="b" class="info-form" infolight-options="id: 'dataFormMaster',remoteName:'S001.ATest',tableName:'ATest',duplicateCheck:false,appliedClose:true,autoSubmit:false,autoPause:false">
+                    <div data-role="fieldcontain">
+                        <label for="dataFormMaster_ATestID">ATestID</label><input id="dataFormMaster_ATestID" name="ATestID" data-mini="true" infolight-options="field:'ATestID',width:120,align:'left',readOnly:false" type="text" />
+                    </div><div data-role="fieldcontain">
+                        <label for="dataFormMaster_AName">AName</label><input id="dataFormMaster_AName" name="AName" data-mini="true" infolight-options="field:'AName',width:120,align:'left',readOnly:false,geoFormat:'String'" class="info-place" type="text" onclick="$('#dataFormMaster_AName').place('open');" />
+                        <div id="dataFormMaster_AName_popup" data-role="popup" data-overlay-theme="a" data-dismissible="false">
+                            <a data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="notext" data-rel="back" href="#" class="ui-btn-right">Close</a><div data-role="header" data-theme="b">
+                                <h1>
+                                    JQPlace
+                                </h1>
+                            </div><div data-role="content" data-theme="b" style="padding-top:0px">
+                                <div id="dataFormMaster_AName_map" data-theme="d">
+
+                                </div><ul data-role="listview" data-theme="d"></ul>
+                            </div>
+                        </div>
+                    </div><div data-role="fieldcontain">
+                        <label for="dataFormMaster_ADateTime">ADateTime</label><input id="dataFormMaster_ADateTime" name="ADateTime" data-mini="true" infolight-options="field:'ADateTime',width:120,align:'left',readOnly:false" type="text" />
+                    </div>
+                </div><div class="ui-content" id="dataFormMaster_popup" data-role="popup" data-theme="d" data-overlay-theme="a">
+                    <a data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><p></p>
+                </div>
+            </div>
+        </div>
+        <div id="dataGridDetail" data-role="page">
+            <div data-theme="b" data-role="content">
+                <table class="info-datagrid table-stripe infolight-breakpoint" data-role="table" data-mode="reflow" data-theme="b" infolight-options="remoteName:'S001.ATest',tableName:'ATestDetail',pageSize:10,editPage:'#dataFormDetail',editMode:'dialog',toolItemObjectID:'#dataGridDetail_toolitem',parentObjectID:'#dataGridView',title:'JQDataGrid',alwaysClose:false,allowAdd:true,allowUpdate:true,allowDelete:true,allowView:true,toolItemsPosition:'both',listColumnCount:2,listCaptionWidth:120,queryMode:'window',reportFileName:''">
+                    <thead>
+                        <tr>
+                            <th nowrap="nowrap" infolight-options="field:'ATestID',width:120,align:'left',nowrap:false">ATestID</th>
+                            <th nowrap="nowrap" infolight-options="field:'ADetailID',width:120,align:'left',nowrap:false">ADetailID</th>
+                            <th nowrap="nowrap" infolight-options="field:'ADName',width:120,align:'left',nowrap:false">ADName</th>
+                            <th nowrap="nowrap" infolight-options="field:'ANum',width:120,align:'left',nowrap:false">ANum</th>
+                        </tr>
+                    </thead>
+                </table><div class="ui-content" id="dataGridDetail_popup" data-role="popup" data-theme="d" data-overlay-theme="a">
+                    <a data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><p></p>
+                </div><div id="dataGridDetail_toolitem" data-role="none" style="display:none">
+                    <a class="grid-insert" data-mini="true" data-inline="true" data-role="none" data-icon="plus" data-iconpos="notext">Insert</a><a class="grid-previous" data-mini="true" data-inline="true" data-role="none" data-icon="arrow-l" data-iconpos="notext">Previous page</a><a class="grid-next" data-mini="true" data-inline="true" data-role="none" data-icon="arrow-r" data-iconpos="notext">Next page</a><a class="grid-query" data-mini="true" data-inline="true" data-role="none" data-icon="search" data-iconpos="notext">Query</a><a class="grid-refresh" data-mini="true" data-inline="true" data-role="none" data-icon="refresh" data-iconpos="notext">Refresh</a><a class="grid-return" data-mini="true" data-inline="true" data-role="none" data-icon="back" data-iconpos="notext">Back</a>
+                </div>
+            </div>
+        </div>
+        <div id="dataFormDetail" data-overlay-theme="b" data-role="page">
+            <div data-role="header" data-theme="b">
+                <h1>
+                    JQDataForm
+                </h1>
+            </div><div data-theme="b" data-role="content">
+                <div data-theme="b" class="info-form" infolight-options="id: 'dataFormDetail',remoteName:'S001.ATest',tableName:'ATestDetail',duplicateCheck:false,appliedClose:true,autoSubmit:false,autoPause:false">
+                    <div data-role="fieldcontain">
+                        <label for="dataFormDetail_ATestID">ATestID</label><input id="dataFormDetail_ATestID" name="ATestID" data-mini="true" infolight-options="field:'ATestID',width:120,align:'left',readOnly:false,defaultValue:{type:'field',value:['ATestID']}" type="text" />
+                    </div><div data-role="fieldcontain">
+                        <label for="dataFormDetail_ADetailID">ADetailID</label><input id="dataFormDetail_ADetailID" name="ADetailID" data-mini="true" infolight-options="field:'ADetailID',width:120,align:'left',readOnly:false,remoteName:'SScheduling.MySchedule',tableName:'MySchedule',displayMember:'Description',valueMember:'ID',pageSize:20,columns:[],whereItems:[],columnMatches:[],queryObjectID:'#dataFormDetail_ADetailID_query'" class="info-refval" type="text" onclick="$('#dataFormDetail_ADetailID').refval('open');" /><div id="dataFormDetail_ADetailID_popup" data-role="popup" data-overlay-theme="a" data-dismissible="false" style="width:250px">
+                            <a data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="notext" data-rel="back" href="#" class="ui-btn-right">Close</a><div data-role="header" data-theme="b">
+                                <h1>
+                                    Select Item
+                                </h1>
+                            </div><div data-role="content" data-theme="b" style="padding-top:0px">
+                                <div style="height:50px;">
+                                    <a class="grid-previous" data-mini="true" data-inline="true" data-role="button" data-icon="arrow-l" data-iconpos="notext">Previous page</a><a class="grid-next" data-mini="true" data-inline="true" data-role="button" data-icon="arrow-r" data-iconpos="notext">Next page</a><a class="grid-query" data-mini="true" data-inline="true" data-role="button" data-icon="search" data-iconpos="notext">Query</a><a class="grid-clear" data-mini="true" data-inline="true" data-role="button" data-icon="delete" data-iconpos="notext">Clear</a>
+                                </div><ul data-role="listview" data-theme="d"></ul><div style="height:30px;margin-top:20px">
+                                    <a class="grid-previous" data-mini="true" data-inline="true" data-role="button" data-icon="arrow-l" data-iconpos="notext">Previous page</a><a class="grid-next" data-mini="true" data-inline="true" data-role="button" data-icon="arrow-r" data-iconpos="notext">Next page</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div data-role="fieldcontain">
+                        <label for="dataFormDetail_ADName">ADName</label><input id="dataFormDetail_ADName" name="ADName" data-mini="true" infolight-options="field:'ADName',width:120,align:'left',readOnly:false" type="text" />
+                    </div><div data-role="fieldcontain">
+                        <label for="dataFormDetail_ANum">ANum</label><input id="dataFormDetail_ANum" name="ANum" data-mini="true" infolight-options="field:'ANum',width:120,align:'left',readOnly:false" type="text" />
+                    </div>
+                </div><div class="ui-content" id="dataFormDetail_popup" data-role="popup" data-theme="d" data-overlay-theme="a">
+                    <a data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><p></p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div>
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="59144B76" />
+        </div>
+    </form>
+
+    <!-- Visual Studio Browser Link -->
+    <script type="application/json" id="__browserLink_initializationData">
+        {"appName":"Internet Explorer","requestId":"26ddcca3a9174f9e975e4e4dabe257c1"}
+    </script>
+    <script type="text/javascript" src="http://localhost:50434/81779ff196dd40f68aa6f61646249f2f/browserLink" async="async"></script>
+    <!-- End Browser Link -->
+
+</body>
+</html>
+

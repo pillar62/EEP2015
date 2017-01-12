@@ -1,0 +1,44 @@
+
+SchedulName: Test Status: Error Message:用户名或密码错误。 
+LastDateTime: 09-04-16 14:39:09 ExecuteTime: 2011/11/22 10:59:05
+CycleUnit:InterVal
+Cycle:10000
+CycleHour:
+When:All
+Error:
+StartDateTime:2011/11/22 10:59:02
+TimeSpan:949.847177026064 days
+
+
+SchedulName: Test Status: Error Message:用户名或密码错误。 
+LastDateTime: 09-04-16 14:39:09 ExecuteTime: 2011/11/22 10:59:18
+CycleUnit:InterVal
+Cycle:10000
+CycleHour:
+When:All
+Error:
+StartDateTime:2011/11/22 10:59:11
+TimeSpan:949.847333389175 days
+
+
+SchedulName: Test Status: Error Message:用户名或密码错误。 
+LastDateTime: 09-04-16 14:39:09 ExecuteTime: 2011/11/22 10:59:20
+CycleUnit:InterVal
+Cycle:10000
+CycleHour:
+When:All
+Error:
+StartDateTime:2011/11/22 10:59:20
+TimeSpan:949.847358344305 days
+
+
+SchedulName: Test Status: Error Message:用户名或密码错误。 
+LastDateTime: 09-04-16 14:39:09 ExecuteTime: 2011/11/22 10:59:21
+CycleUnit:InterVal
+Cycle:10000
+CycleHour:
+When:All
+Error:
+StartDateTime:2011/11/22 10:59:21
+TimeSpan:949.847362904751 days
+

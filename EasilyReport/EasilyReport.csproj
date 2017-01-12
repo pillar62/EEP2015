@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C9A7B912-B5CD-436F-BFE7-66D78A947DC3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Infolight.EasilyReportTools</RootNamespace>
+    <AssemblyName>EasilyReport</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=1.0.20000.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Anthem, Version=1.5.1.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Excel, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="InfoRemoteModule, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5b851f9a40f07b8c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EEPNetServer\InfoRemoteModule.dll</HintPath>
+    </Reference>
+    <Reference Include="iTextAsian, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca" />
+    <Reference Include="iTextAsianCmaps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca" />
+    <Reference Include="itextsharp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca" />
+    <Reference Include="Srvtools, Version=5.0.0.0, Culture=neutral, PublicKeyToken=8763076c188bfb12, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EEPNetServer\Srvtools.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\CellCssClass.cs" />
+    <Compile Include="Config\EasilyReportConfig.cs" />
+    <Compile Include="Config\PdfSizeConfig.cs" />
+    <Compile Include="Config\WebEasilyReportConfig.cs" />
+    <Compile Include="DataCenter\DBGateway.cs">
+    </Compile>
+    <Compile Include="DataCenter\DBParameter.cs" />
+    <Compile Include="DataCenter\SysRptDB.cs" />
+    <Compile Include="DataCenter\XmlConverter.cs" />
+    <Compile Include="Design\EasilyReportDesigner.cs">
+    </Compile>
+    <Compile Include="Design\fmEasilyReportDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\fmEasilyReportDesigner.Designer.cs">
+      <DependentUpon>fmEasilyReportDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\ReportDataSourceEditor.cs" />
+    <Compile Include="Design\WebEasilyReportDesigner.cs" />
+    <Compile Include="EasilyReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="IReport.cs" />
+    <Compile Include="MailConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportExport.cs" />
+    <Compile Include="ReportExportPdf.cs" />
+    <Compile Include="ReportFormat.cs" />
+    <Compile Include="ReportItem.cs" />
+    <Compile Include="ReportSetting.cs" />
+    <Compile Include="DataCenter\BinarySerialize.cs" />
+    <Compile Include="Tools\ComponentInfo.cs" />
+    <Compile Include="Tools\DataFormatProvider.cs" />
+    <Compile Include="Tools\DataSetHelper.cs" />
+    <Compile Include="Tools\DataSourceExchange.cs" />
+    <Compile Include="Tools\DDProvider.cs" />
+    <Compile Include="Tools\EasilyReportLog.cs" />
+    <Compile Include="Tools\ERptMultiLanguage.cs" />
+    <Compile Include="Tools\ExcelController.cs" />
+    <Compile Include="Tools\ExcelSizeInfo.cs" />
+    <Compile Include="Tools\ExecutionResult.cs" />
+    <Compile Include="Tools\FontNameMapper.cs" />
+    <Compile Include="Tools\MailSender.cs" />
+    <Compile Include="Tools\MessageInfo.cs" />
+    <Compile Include="Tools\PdfController.cs" />
+    <Compile Include="Tools\PointInfo.cs" />
+    <Compile Include="Tools\MyStringConverter.cs" />
+    <Compile Include="Tools\UnitConversion.cs" />
+    <Compile Include="Config\WebEasilyReportCSS.cs" />
+    <Compile Include="Tools\WebFontConverter.cs" />
+    <Compile Include="UI\AspNetRender.cs" />
+    <Compile Include="UI\AspNetScriptsProvider.cs" />
+    <Compile Include="UI\ExtJsRender.cs" />
+    <Compile Include="UI\fmPictures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\fmPictures.Designer.cs">
+      <DependentUpon>fmPictures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\fmPictureView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\fmPictureView.Designer.cs">
+      <DependentUpon>fmPictureView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\fmReportExport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\fmReportExport.Designer.cs">
+      <DependentUpon>fmReportExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\fmLoadTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\fmLoadTemplate.Designer.cs">
+      <DependentUpon>fmLoadTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\fmProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\fmProgress.Designer.cs">
+      <DependentUpon>fmProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\fmSaveAsTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\fmSaveAsTemplate.Designer.cs">
+      <DependentUpon>fmSaveAsTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\fmEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\fmEmail.Designer.cs">
+      <DependentUpon>fmEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\IRender.cs" />
+    <Compile Include="WebEasilyReport.cs" />
+    <Compile Include="WebEasilyReport_2.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AjaxControlToolkit.dll" />
+    <Content Include="Anthem.dll" />
+    <Content Include="Excel.dll" />
+    <Content Include="iTextAsian.dll" />
+    <Content Include="iTextAsianCmaps.dll" />
+    <Content Include="itextsharp.dll" />
+    <EmbeddedResource Include="WebEasilyReport.js" />
+    <None Include="Resources\view.png" />
+    <None Include="Resources\excel.png" />
+    <None Include="Resources\down.gif" />
+    <None Include="Resources\up.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Design\fmEasilyReportDesigner.resx">
+      <DependentUpon>fmEasilyReportDesigner.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\fmPictures.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>fmPictures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\fmPictureView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>fmPictureView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\fmReportExport.resx">
+      <DependentUpon>fmReportExport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\fmLoadTemplate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>fmLoadTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\fmProgress.resx">
+      <DependentUpon>fmProgress.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\fmSaveAsTemplate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>fmSaveAsTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\fmEmail.resx">
+      <DependentUpon>fmEmail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,53 @@
+﻿/*水平显示时，header样式*/
+.ajaxclpan_header_h
+{
+	height:30px;
+	background-image:url('../../Image/Ajax/bg-menu-main.png');
+	background-repeat:repeat-x;
+	font-weight:bold;
+}
+
+/*竖直显示时，header样式*/
+.ajaxclpan_header_v
+{
+	width:30px;
+	background-image:url('../../Image/Ajax/bg-menu-main1.png');
+	background-repeat:repeat-x;
+	font-weight:bold;
+}
+
+/*水平显示时，header内框样式*/
+.ajaxclpan_header_hbox
+{
+	padding: 5px 5px 5px 5px;
+	vertical-align:middle;
+}
+
+/*竖直显示时，header内框样式*/
+.ajaxclpan_header_vbox
+{
+	padding: 5px 5px 5px 5px;
+	vertical-align:middle;
+}
+
+/*显示header标签的样式*/
+.ajaxclpan_header_label
+{
+	float:left;
+	margin-left:20px;
+}
+
+/*显示header图片的样式*/
+.ajaxclpan_header_img
+{
+	float:right;
+	vertical-align:middle;
+}
+
+/*主显示区的样式*/
+.ajaxclpan_content
+{
+	background-color:#F5EAF5;
+	overflow:hidden;
+    width:780px;
+}

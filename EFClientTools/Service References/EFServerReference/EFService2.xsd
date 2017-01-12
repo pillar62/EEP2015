@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/EFGlobalModule" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/EFGlobalModule" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8990/EFWCFModule/EFService?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+  <xs:complexType name="COLDEF">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q1:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CANREPORT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CAPTION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CAPTION1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CAPTION2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CAPTION3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CAPTION4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CAPTION5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CAPTION6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CAPTION7" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CAPTION8" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CHECK_NULL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DD_NAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DEFAULT_VALUE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EDITMASK" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EXT_MENUID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FIELD_LENGTH" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="FIELD_NAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FIELD_SCALE" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="FIELD_TYPE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IS_KEY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NEEDBOX" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QUERYMODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SEQ" nillable="true" type="xs:decimal" />
+          <xs:element minOccurs="0" name="TABLE_NAME" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="COLDEF" nillable="true" type="tns:COLDEF" />
+  <xs:complexType name="GROUPS">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q2:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GROUPID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GROUPNAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ISROLE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MSAD" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GROUPS" nillable="true" type="tns:GROUPS" />
+  <xs:complexType name="MENUITEMTYPE">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q3:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DBALIAS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ITEMNAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ITEMTYPE" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MENUITEMTYPE" nillable="true" type="tns:MENUITEMTYPE" />
+  <xs:complexType name="MENUTABLE">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q4:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CAPTION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CAPTION0" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CAPTION1" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CAPTION2" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CAPTION3" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CAPTION4" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CAPTION5" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CAPTION6" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CAPTION7" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CHECKOUT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CHECKOUTDATE" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="FORM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IMAGE" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="IMAGEURL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ISSERVER" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ISSHOWMODAL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ITEMPARAM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ITEMTYPE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MENUID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MENUTABLE1" nillable="true" type="tns:ArrayOfMENUTABLE" />
+          <xs:element minOccurs="0" name="MENUTABLE2" nillable="true" type="tns:MENUTABLE" />
+          <xs:element minOccurs="0" name="MENUTABLE2Reference" nillable="true" type="q4:EntityReferenceOfMENUTABLEk_PV_Pce2y" />
+          <xs:element minOccurs="0" name="MODULETYPE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Owner" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PACKAGE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PACKAGEDATE" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="PARENT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SEQ_NO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VERSIONNO" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MENUTABLE" nillable="true" type="tns:MENUTABLE" />
+  <xs:complexType name="ArrayOfMENUTABLE">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MENUTABLE" nillable="true" type="tns:MENUTABLE" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMENUTABLE" nillable="true" type="tns:ArrayOfMENUTABLE" />
+  <xs:complexType name="SYS_ORGKIND">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q5:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="KIND_DESC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ORG_KIND" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SYS_ORGKIND" nillable="true" type="tns:SYS_ORGKIND" />
+  <xs:complexType name="SYS_REPORT">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q6:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FIELDFONT" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="FIELDITEMS" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="FILENAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FILEPATH" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FOOTERFONT" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="FOOTERITEMS" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="FORMAT" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="HEADERFONT" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="HEADERITEMS" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="HEADERREPEAT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IMAGES" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="MAILSETTING" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="OUTPUTMODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PARAMETERS" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="REPORTID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="REPORTNAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SETTING" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SYS_REPORT" nillable="true" type="tns:SYS_REPORT" />
+  <xs:complexType name="SYS_ROLES_AGENT">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q7:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AGENT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="END_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="END_TIME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLOW_DESC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PAR_AGENT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="REMARK" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ROLE_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="START_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="START_TIME" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SYS_ROLES_AGENT" nillable="true" type="tns:SYS_ROLES_AGENT" />
+  <xs:complexType name="SYS_TODOHIS">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q8:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ATTACHMENTS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="D_STEP_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EXP_TIME" type="xs:decimal" />
+          <xs:element minOccurs="0" name="FLNAVIGATOR_MODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLOWIMPORTANT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLOWURGENT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLOW_DESC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLOW_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FORM_KEYS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FORM_NAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FORM_PRESENTATION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FORM_PRESENT_CT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FORM_TABLE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LEVEL_NO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LISTID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NAVIGATOR_MODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PARAMETERS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PROC_TIME" type="xs:decimal" />
+          <xs:element minOccurs="0" name="REMARK" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ROLE_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SENDBACKSTEP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="S_ROLE_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="S_STEP_DESC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="S_STEP_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="S_USERNAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="S_USER_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TIME_UNIT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UPDATE_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UPDATE_TIME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USERNAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USER_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VDSNAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VERSION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WEBFORM_NAME" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SYS_TODOHIS" nillable="true" type="tns:SYS_TODOHIS" />
+  <xs:complexType name="SYS_TODOLIST">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q9:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="APPLICANT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ATTACHMENTS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="D_STEP_DESC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="D_STEP_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EMAIL_ADD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EMAIL_STATUS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EXP_TIME" type="xs:decimal" />
+          <xs:element minOccurs="0" name="FLNAVIGATOR_MODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLOWIMPORTANT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLOWPATH" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLOWURGENT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLOW_DESC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FLOW_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FORM_KEYS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FORM_NAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FORM_PRESENTATION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FORM_PRESENT_CT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FORM_TABLE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LEVEL_NO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LISTID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MULTISTEPRETURN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NAVIGATOR_MODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PARAMETERS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PLUSAPPROVE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PLUSROLES" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PROVIDER_NAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="REMARK" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SENDBACKSTEP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SENDTO_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SENDTO_KIND" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SENDTO_NAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="STATUS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="S_STEP_DESC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="S_STEP_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="S_USER_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TIME_UNIT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UPDATE_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UPDATE_TIME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="URGENT_TIME" type="xs:decimal" />
+          <xs:element minOccurs="0" name="USERNAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VDSNAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VERSION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WEBFORM_NAME" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SYS_TODOLIST" nillable="true" type="tns:SYS_TODOLIST" />
+  <xs:complexType name="USER">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q10:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AGENT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AUTOLOGIN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CREATEDATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CREATER" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DESCRIPTION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EMAIL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LASTDATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LASTTIME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MSAD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PWD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SIGNATURE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USERID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USERNAME" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="USER" nillable="true" type="tns:USER" />
+  <xs:complexType name="USERGROUPS">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" base="q11:EntityObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GROUPID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USERID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="USERGROUPS" nillable="true" type="tns:USERGROUPS" />
+</xs:schema>

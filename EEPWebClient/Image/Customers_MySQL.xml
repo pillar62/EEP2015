@@ -1,0 +1,8 @@
+<FlowDetails>
+  <FormName>MySQL.Customers</FormName>
+  <FlowNavMode>Submit</FlowNavMode>
+  <NavMode>Insert</NavMode>
+  <FlowFileName>F:\WORK\INFOLIGHT\EEP2006\EEPNETSERVER\WORKFLOW\FL\CUSTOMERS_MYSQL</FlowFileName>
+  <ImageWidth>1009</ImageWidth>
+  <Parameters>P=客户申请</Parameters>
+</FlowDetails>

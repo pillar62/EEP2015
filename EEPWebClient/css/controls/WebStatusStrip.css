@@ -1,0 +1,113 @@
+﻿/*.TitleCss
+{
+	font-family: Verdana;
+	font-size: 9pt;
+	height: 18px;
+	border: #7B9EBD 1px solid;
+	padding: 2px 2px 2px 2px;
+	margin: 1px 1px 1px 1px;
+	color: #FF8000;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#DAEFFA, EndColorStr=#5B6FA8);
+}
+
+.StatusCss
+{
+	font-family:Verdana;
+	font-size: 9pt;
+	height:18px;
+	border: #7B9EBD 1px solid;
+	padding: 2px 2px 2px 2px;
+	margin: 1px 1px 1px 1px;
+	color:#FF8000;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#DAEFFA, EndColorStr=#5B6FA8);
+}
+
+.CaptionCss
+{
+	font-family: Verdana;
+	font-size: 9pt;
+	height: 18px;
+	border-top: #7B9EBD 1px solid;
+	border-right: 0px none;
+	border-bottom: #7B9EBD 1px solid;
+	border-left: #7B9EBD 1px solid;
+	padding: 2px 2px 2px 2px;
+	margin: 1px 0px 1px 1px;
+	color: #FF8000;
+	float: left;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#DAEFFA, EndColorStr=#5B6FA8);
+}
+
+.ContentCss
+{
+	font-family:Verdana;
+	font-size: 9pt;
+	height:18px;
+	border-top:#7B9EBD 1px solid;
+	border-right:#7B9EBD 1px solid;
+	border-bottom:#7B9EBD 1px solid;
+	border-left:0px none;
+	padding: 2px 2px 2px 2px;
+	margin: 1px 1px 1px 0px;
+	color:#808080;
+	float:left;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#DAEFFA, EndColorStr=#5B6FA8);
+}*/
+
+/*statusstrip的抬头样式*/
+.statusstrip_title_1
+{
+    font-family: Microsoft JhengHei;
+    font-size: 9pt;
+    width: 100px;
+    height: 18px;
+    border: #8DB2E6 1px solid;
+    padding: 2px 2px 2px 2px;
+    color: #000000; /*filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#FFDA9A, EndColorStr=#FFA200)
+	progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);*/
+    background-color: #8DB2E6;
+}
+
+/*statusstrip的状态栏目样式*/
+.statusstrip_status_1
+{
+    font-family: Microsoft JhengHei;
+    font-size: 9pt;
+    width: 100px;
+    height: 18px;
+    border: #8DB2E6 1px solid;
+    padding: 2px 2px 2px 2px;
+    color: #000000; /*filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorStr='#DCEBFD', endColorStr='#8DB2E6',)
+	progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);*/
+    background-color: #8DB2E6;
+}
+
+/*statusstrip的标题样式*/
+.statusstrip_caption_1
+{
+	font-family: Microsoft JhengHei;
+	font-size: 9pt;
+	color: #ffffff;
+	float: left;
+}
+
+/*statusstrip的文本内容样式*/
+.statusstrip_content_1
+{
+	font-family:Microsoft JhengHei;
+	font-size: 9pt;
+	color:#000000;
+	float:left;
+}
+
+/*statusstrip的一组数据的样式*/
+.statusstrip_group_1
+{
+	width:120px;
+	height:18px;
+	border: #8DB2E6 1px solid;
+	padding: 2px 2px 2px 2px;
+	/*filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,  StartColorStr=#FFDA9A, EndColorStr=#FFA200)
+	progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);*/
+	background-color:#8DB2E6;
+}

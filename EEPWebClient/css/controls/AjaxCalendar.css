@@ -1,0 +1,32 @@
+﻿/*calendar的container样式*/
+.AjaxCalendar .ajax__calendar_container 
+{
+    border:1px solid #698BCA;
+    background-color: #FEFEFE;
+    color: #000046;
+}
+
+/*calendar日期和年样式*/
+.AjaxCalendar .ajax__calendar_other .ajax__calendar_day,
+.AjaxCalendar .ajax__calendar_other .ajax__calendar_year 
+{
+    color: #878787;
+}
+
+/*calendar年，月，日鼠标移动到上方的样式*/
+.AjaxCalendar .ajax__calendar_hover .ajax__calendar_day,
+.AjaxCalendar .ajax__calendar_hover .ajax__calendar_month,
+.AjaxCalendar .ajax__calendar_hover .ajax__calendar_year 
+{
+    color: black;
+}
+
+/*calendar年，月，日被激活时的样式*/
+.AjaxCalendar .ajax__calendar_active .ajax__calendar_day,
+.AjaxCalendar .ajax__calendar_active .ajax__calendar_month,
+.AjaxCalendar .ajax__calendar_active .ajax__calendar_year 
+{
+    color: black;
+	background-color:#FEBF75;
+    font-weight:bold;
+}

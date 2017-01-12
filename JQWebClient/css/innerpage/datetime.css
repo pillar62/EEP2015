@@ -1,0 +1,17 @@
+﻿/**/
+/*页面主体样式*/
+body 
+{
+	font-family:Microsoft JhengHe;
+	font-size: 9pt;
+	background-image: url( '../../Image/innerpage/bg.jpg' );
+	background-repeat: repeat-x;
+	background-color:#405765;
+}
+
+/*主div的样式*/
+#main_container
+{
+	text-align:center;
+	width:100%;
+}

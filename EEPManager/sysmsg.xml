@@ -1,0 +1,3961 @@
+﻿<?xml version="1.0"?>
+<!-- This file represents eep.net system message -->
+<SystemMessage>
+  <EEPNetClient>
+    <FrmClientMain>
+      <ExceedsMax>
+        <ENG>The current number of users exceeds the max number set by the AP server!try again?</ENG>
+        <TRA>當前使用者數目超過AP server的最大使用者數目,重試？</TRA>
+        <SIM>当前用户数超过AP server的最大用户数， 重试？</SIM>
+        <HKG>當前使用者數目超過AP server的最大使用者數目，重試？</HKG>
+        <JPN>The current number of users exceeds the max number set by the AP server!try again?</JPN>
+        <LAN1>The current number of users exceeds the max number set by the AP server!try again?</LAN1>
+        <LAN2>The current number of users exceeds the max number set by the AP server!try again?</LAN2>
+        <LAN3>The current number of users exceeds the max number set by the AP server!try again?</LAN3>
+      </ExceedsMax>
+      <ToDoListColumns>
+        <ENG>flow,work name,flow condition,sender,infomation,date,status,user name,form,web form,finished</ENG>
+        <TRA>流程,作業名稱,單據號碼,寄件者,訊息,日期,情況,經辦者,表單名稱,網頁名稱,已結案</TRA>
+        <SIM>流程,作业名称,单据号码,寄件者,讯息,日期,情况,经办者,窗体名称,网页名称,已结案</SIM>
+        <HKG>流程,作業名稱,單據號碼,寄件者,訊息,日期,情況,經辦者,表單名稱,網頁名稱,已結案</HKG>
+        <JPN>flow,work name,flow condition,sender,infomation,date,status,user name,form,web form,finished</JPN>
+        <LAN1>flow,work name,flow condition,sender,infomation,date,status,user name,form,web form,finished</LAN1>
+        <LAN2>flow,work name,flow condition,sender,infomation,date,status,user name,form,web form,finished</LAN2>
+        <LAN3>flow,work name,flow condition,sender,infomation,date,status,user name,form,web form,finished</LAN3>
+      </ToDoListColumns>
+      <OvertimeColumns>
+        <ENG>flow,work name,flow condition,send to,remark,update date,overtime,level,active</ENG>
+        <TRA>流程,作業名稱,單據號碼,經辦者,訊息,日期,逾期時間,屬下層級,顯示</TRA>
+        <SIM>流程,作业名称,单据号码,经办者,讯息,日期,逾期时间,属下层级,显示</SIM>
+        <HKG>流程,作業名稱,單據號碼,經辦者,訊息,日期,逾期時間,屬下層級,顯示</HKG>
+        <JPN>flow,work name,flow condition,send to,remark,update date,overtime,level,active</JPN>
+        <LAN1>flow,work name,flow condition,send to,remark,update date,overtime,level,active</LAN1>
+        <LAN2>flow,work name,flow condition,send to,remark,update date,overtime,level,active</LAN2>
+        <LAN3>flow,work name,flow condition,send to,remark,update date,overtime,level,active</LAN3>
+      </OvertimeColumns>
+      <StatistColumns>
+        <ENG>flow,todolist count,todohis count,notify count,overtime count</ENG>
+        <TRA>流程名稱,待辦件數,經辦件數,通知件數,逾時件數</TRA>
+        <SIM>流程名称,待办件数,经办件数,通知件数,逾时件数</SIM>
+        <HKG>流程名稱,待辦件數,經辦件數,通知件數,逾時件數</HKG>
+        <JPN>flow,todolist count,todohis count,notify count,overtime count</JPN>
+        <LAN1>flow,todolist count,todohis count,notify count,overtime count</LAN1>
+        <LAN2>flow,todolist count,todohis count,notify count,overtime count</LAN2>
+        <LAN3>flow,todolist count,todohis count,notify count,overtime count</LAN3>
+      </StatistColumns>
+      <Buttons>
+        <ENG>change password;log out</ENG>
+        <TRA>修改密碼;登出</TRA>
+        <SIM>修改密码;登出</SIM>
+        <HKG>修改密碼;登出</HKG>
+        <JPN>change password;log out</JPN>
+        <LAN1>change password;log out</LAN1>
+        <LAN2>change password;log out</LAN2>
+        <LAN3>change password;log out</LAN3>
+      </Buttons>
+      <Menu>
+        <ENG>System;Solution;DataBase;Change Password;Exit;Windows;TileHorizontal;TileVertical;TreeView;Help;About EEP.Net Client</ENG>
+        <TRA>系統;解決方案;資料庫;修改密碼;離開;視窗;並排顯示;縱向並排;樹狀功能;説明;關於EEP.Net Client</TRA>
+        <SIM>系统;解决方案;数据库;修改密码;退出;窗口;横向平铺;纵向平铺;树状菜单;帮助;关于EEP.Net Client</SIM>
+        <HKG>系統;解決方案;資料庫;修改密碼;離開;視窗;並排顯示;縱向並排;樹狀功能;説明;關於EEP.Net Client</HKG>
+        <JPN>System;Solution;DataBase;Change Password;Exit;Windows;TileHorizontal;TileVertical;TreeView;Help;About EEP.Net Client</JPN>
+        <LAN1>System;Solution;DataBase;Change Password;Exit;Windows;TileHorizontal;TileVertical;TreeView;Help;About EEP.Net Client</LAN1>
+        <LAN2>System;Solution;DataBase;Change Password;Exit;Windows;TileHorizontal;TileVertical;TreeView;Help;About EEP.Net Clientt</LAN2>
+        <LAN3>System;Solution;DataBase;Change Password;Exit;Windows;TileHorizontal;TileVertical;TreeView;Help;About EEP.Net Client</LAN3>
+      </Menu>
+      <SelectOption>
+        <ENG>please select</ENG>
+        <TRA>請選擇</TRA>
+        <SIM>请选择</SIM>
+        <HKG>請選擇</HKG>
+        <JPN>please select</JPN>
+        <LAN1>please select</LAN1>
+        <LAN2>please select</LAN2>
+        <LAN3>please select</LAN3>
+      </SelectOption>
+      <PasswordNotify>
+        <ENG>Your pawword's Notify has left {0} day(s)!</ENG>
+        <TRA>您的密碼有效期還有{0}天！</TRA>
+        <SIM>您的密码有效期还有{0}天！</SIM>
+        <HKG>您的密碼有效期還有{0}天！</HKG>
+        <JPN>Your pawword's Notify has left {0} day(s)!</JPN>
+        <LAN1>Your pawword's Notify has left {0} day(s)!</LAN1>
+        <LAN2>Your pawword's Notify has left {0} day(s)!</LAN2>
+        <LAN3>Your pawword's Notify has left {0} day(s)!</LAN3>
+      </PasswordNotify>
+      <PasswordAnnulment>
+        <ENG>Your password is expired!</ENG>
+        <TRA>您的密碼已經失效！</TRA>
+        <SIM>您的密码已经失效！</SIM>
+        <HKG>您的密碼已經失效！</HKG>
+        <JPN>Your password is expired!</JPN>
+        <LAN1>Your password is expired!</LAN1>
+        <LAN2>Your password is expired!</LAN2>
+        <LAN3>Your password is expired!</LAN3>
+      </PasswordAnnulment>
+      <NewPassword>
+        <ENG>You're the 1st time to log in the system, please change your password first</ENG>
+        <TRA>您是第一次登陸系統，請更改您的密碼</TRA>
+        <SIM>您是第一次登陆系统，请更改您的密码</SIM>
+        <HKG>您是第一次登陸系統，請更改您的密碼</HKG>
+        <JPN>You're the 1st time to log in the system, please change your password first</JPN>
+        <LAN1>You're the 1st time to log in the system, please change your password first</LAN1>
+        <LAN2>You're the 1st time to log in the system, please change your password first</LAN2>
+        <LAN3>You're the 1st time to log in the system, please change your password first</LAN3>
+      </NewPassword>
+    </FrmClientMain>
+    <FavorMenu>
+      <Favor>
+        <ENG>My Favor</ENG>
+        <TRA>我的最愛</TRA>
+        <SIM>我的最爱</SIM>
+        <HKG>我的最愛</HKG>
+        <JPN>My Favor</JPN>
+        <LAN1>My Favor</LAN1>
+        <LAN2>My Favor</LAN2>
+        <LAN3>My Favor</LAN3>
+      </Favor>
+    </FavorMenu>
+  </EEPNetClient>
+  <EEPManager>
+    <frmSecurityMain>
+      <DataRequire>
+        <ENG>the data which you have input are not entire!</ENG>
+        <TRA>輸入的數據不完整!</TRA>
+        <SIM>输入的数据不完整!</SIM>
+        <HKG>輸入的數據不完整!</HKG>
+        <JPN>the data which you have input are not entire!</JPN>
+        <LAN1>the data which you have input are not entire!</LAN1>
+        <LAN2>the data which you have input are not entire!</LAN2>
+        <LAN3>the data which you have input are not entire!</LAN3>
+      </DataRequire>
+      <UIText>
+        <ENG>group id, group name, upper org, manager, level,org kind,role id,role name</ENG>
+        <TRA>部門編號,部門名稱,上層部門,主管,職級名稱,組織類別名稱,角色編號,角色名稱</TRA>
+        <SIM>部门编号,部门名称,上层部门,主管,职级名称,组织类别名称,角色编号,角色名称</SIM>
+        <HKG>部門編號,部門名稱,上層部門,主管,職級名稱,組織類別名稱,角色編號,角色名稱</HKG>
+        <JPN>group id, group name, upper org, manager, level,org kind,role id,role name</JPN>
+        <LAN1>group id, group name, upper org, manager, level,org kind,role id,role name</LAN1>
+        <LAN2>group id, group name, upper org, manager, level,org kind,role id,role name</LAN2>
+        <LAN3>group id, group name, upper org, manager, level,org kind,role id,role name</LAN3>
+      </UIText>
+      <GridHeaders>
+        <ENG>role id, role name, level id, level name, kind id, kind name</ENG>
+        <TRA>角色編號,角色名稱,職級編號,職級名稱,組織類別編號,組織類別名稱</TRA>
+        <SIM>角色编号,角色名称,职级编号,职级名称,组织类别编号,组织类别名称</SIM>
+        <HKG>角色編號,角色名稱,職級編號,職級名稱,組織類別編號,組織類別名稱</HKG>
+        <JPN>role id, role name, level id, level name, kind id, kind name</JPN>
+        <LAN1>role id, role name, level id, level name, kind id, kind name</LAN1>
+        <LAN2>role id, role name, level id, level name, kind id, kind name</LAN2>
+        <LAN3>role id, role name, level id, level name, kind id, kind name</LAN3>
+      </GridHeaders>
+      <MenuCaption>
+        <ENG>Menu ID, Caption, Parent ID, Module Type, Icon, Package, Item params, Form Name, Solution, Sequence, Language</ENG>
+        <TRA>菜單編號,菜單名稱,父級菜單,菜單類型,菜單圖標,組件名稱,項目參數,畫面名稱,工程名稱,排列順序,選擇語言</TRA>
+        <SIM>菜单编号,菜单名称,父级菜单,菜单类型,菜单图标,组件名称,项目参数,画面名称,工程名称,排列顺序,选择语言</SIM>
+        <HKG>菜單編號,菜單名稱,父級菜單,菜單類型,菜單圖標組件名稱,,項目參數,畫面名稱,工程名稱,排列順序,選擇語言</HKG>
+        <JPN>Menu ID, Caption, Parent ID, Module Type, Icon, Package, Item params, Form Name, Solution, Sequence, Language</JPN>
+        <LAN1>Menu ID, Caption, Parent ID, Module Type, Icon, Package, Item params, Form Name, Solution, Sequence, Language</LAN1>
+        <LAN2>Menu ID, Caption, Parent ID, Module Type, Icon, Package, Item params, Form Name, Solution, Sequence, Language</LAN2>
+        <LAN3>Menu ID, Caption, Parent ID, Module Type, Icon, Package, Item params, Form Name, Solution, Sequence, Language</LAN3>
+      </MenuCaption>
+    </frmSecurityMain>
+    <WebManager>
+      <TreeNodeCaption>
+        <ENG>Users, Groups, Menus, Organization, OrgLevel, OrgKind</ENG>
+        <TRA>用戶設置,群組設置,菜單項,組織設置,組織等級,組織類型</TRA>
+        <SIM>用户设置,群组设置,菜单项,组织设置,组织等级,组织类型</SIM>
+        <HKG>用戶設置,群組設置,菜單項,組織設置,組織等級,組織類型</HKG>
+        <JPN>Users, Groups, Menus, Organization, OrgLevel, OrgKind</JPN>
+        <LAN1>Users, Groups, Menus, Organization, OrgLevel, OrgKind</LAN1>
+        <LAN2>Users, Groups, Menus, Organization, OrgLevel, OrgKind</LAN2>
+        <LAN3>Users, Groups, Menus, Organization, OrgLevel, OrgKind</LAN3>
+      </TreeNodeCaption>
+    </WebManager>
+  </EEPManager>
+  <Web>
+    <webClientMainFlow>
+      <QueryCaption>
+        <ENG>flow;work name;sender;flow condition;infomation;from date;to date;sender role;status;OK;Cancel</ENG>
+        <TRA>流程名稱;作業名稱;寄件者;單據號碼;訊息;從日期;到日期;經辦者;情況;確定;取消</TRA>
+        <SIM>流程名称;作业名称;寄件者;单据号码;讯息;从日期;到日期;经办者;情况;确定;取消</SIM>
+        <HKG>流程名稱;作業名稱;寄件者;單據號碼;訊息;從日期;到日期;經辦者;情況;確定;取消</HKG>
+        <JPN>flow;work name;sender;flow condition;infomation;from date;to date;sender role;status;OK;Cancel</JPN>
+        <LAN1>flow;work name;sender;flow condition;infomation;from date;to date;sender role;status;OK;Cancel</LAN1>
+        <LAN2>flow;work name;sender;flow condition;infomation;from date;to date;sender role;status;OK;Cancel</LAN2>
+        <LAN3>flow;work name;sender;flow condition;infomation;from date;to date;sender role;status;OK;Cancel</LAN3>
+      </QueryCaption>
+      <UIText>
+        <ENG>There's no data!;refresh;To Do List;To Do His;Over Time;Clear;Approve;Reject;Return;Open;Refresh;my work;(Show...);(Hide...);retake;flow delete;Notify;Query;hasten;Approve All;Rerurn All</ENG>
+        <TRA>沒有任何資料!;更新;待辦事項;經辦事項;逾時事項;清除;審核;作廢;退回;打開;刷新;我的工作;(顯示...);(隱藏...);取回;通知刪除;通知;查詢;催單;一起審核;一起退回</TRA>
+        <SIM>没有任何资料!;刷新;待办事项;经办事项;逾时事项;清除;审核;作废;退回;打开;刷新;我的工作;(显示...);(隐藏...);取回;通知删除;通知;查询;催单;一起审核;一起退回</SIM>
+        <HKG>沒有任何資料!;更新;待辦事項;經辦事項;逾時事項;清除;審核;作廢;退回;打開;刷新;我的工作;(顯示...);(隱藏...);取回;通知刪除;通知;查詢;催單;一起審核;一起退回</HKG>
+        <JPN>There's no data!;refresh;To Do List;To Do His;Over Time;Clear;Approve;Reject;Return;Open;Refresh;my work;(Show...);(Hide...);retake;flow delete;Notify;Query;hasten;Approve All;Rerurn All</JPN>
+        <LAN1>There's no data!;refresh;To Do List;To Do His;Over Time;Clear;Approve;Reject;Return;Open;Refresh;my work;(Show...);(Hide...);retake;flow delete;Notify;Query;hasten;Approve All;Rerurn All</LAN1>
+        <LAN2>There's no data!;refresh;To Do List;To Do His;Over Time;Clear;Approve;Reject;Return;Open;Refresh;my work;(Show...);(Hide...);retake;flow delete;Notify;Query;hasten;Approve All;Rerurn All</LAN2>
+        <LAN3>There's no data!;refresh;To Do List;To Do His;Over Time;Clear;Approve;Reject;Return;Open;Refresh;my work;(Show...);(Hide...);retake;flow delete;Notify;Query;hasten;Approve All;Rerurn All</LAN3>
+      </UIText>
+    </webClientMainFlow>
+    <InfoLogin>
+      <canLogin>
+        <ENG>Can not login due to busy service !</ENG>
+        <TRA>無法連接到服務器！</TRA>
+        <SIM>无法连接服务器！</SIM>
+        <HKG>無法連接到服務器！</HKG>
+        <JPN>Can not login due to busy service !</JPN>
+        <LAN1>Can not login due to busy service !</LAN1>
+        <LAN2>Can not login due to busy service !</LAN2>
+        <LAN3>Can not login due to busy service !</LAN3>
+      </canLogin>
+      <ExceedsMax>
+        <ENG>The current number of users exceeds the max number set by the AP server!Please try again later</ENG>
+        <TRA>當前用戶數超過AP server的最大用戶數，請稍候重新整理後,，再登入</TRA>
+        <SIM>当前用户数超过AP server的最大用户数，请稍候刷新后，再登入</SIM>
+        <HKG>當前用戶數超過AP server的最大用戶數，請稍候重新整理後,，再登入</HKG>
+        <JPN>The current number of users exceeds the max number set by the AP server!Please try again later</JPN>
+        <LAN1>The current number of users exceeds the max number set by the AP server!Please try again later</LAN1>
+        <LAN2>The current number of users exceeds the max number set by the AP server!Please try again later</LAN2>
+        <LAN3>The current number of users exceeds the max number set by the AP server!Please try again later</LAN3>
+      </ExceedsMax>
+    </InfoLogin>
+    <Timeout>
+      <timeout>
+        <ENG>Sorry! Your Login already timeout! Please Relogin</ENG>
+        <TRA>对不起，您的登錄逾時！請重新登錄！</TRA>
+        <SIM>对不起，您的登录超时！请重新登录！</SIM>
+        <HKG>对不起，您的登錄逾時！請重新登錄！</HKG>
+        <JPN>The current number of users exceeds the max number set by the AP server!</JPN>
+        <LAN1>The current number of users exceeds the max number set by the AP server!</LAN1>
+        <LAN2>The current number of users exceeds the max number set by the AP server!</LAN2>
+        <LAN3>The current number of users exceeds the max number set by the AP server!</LAN3>
+      </timeout>
+    </Timeout>
+    <AccessDenied>
+      <accessdenied>
+        <ENG>Sorry! Access Desied On This Page!</ENG>
+        <TRA>對不起，您沒有權限使用本頁面！</TRA>
+        <SIM>对不起，您没有权限使用本页面！</SIM>
+        <HKG>對不起，您沒有權限使用本頁面！</HKG>
+        <JPN>Sorry! Access Desied On This Page!</JPN>
+        <LAN1>Sorry! Access Desied On This Page!</LAN1>
+        <LAN2>Sorry! Access Desied On This Page!</LAN2>
+        <LAN3>Sorry! Access Desied On This Page!</LAN3>
+      </accessdenied>
+    </AccessDenied>
+    <AjaxWebManager>
+      <AjaxWebUControl>
+        <ENG>GetADUser;AccessMenu;EditPassword;Choose ADUser;UserID;UserName;Password;Confirm Password;Password does net match.</ENG>
+        <TRA>取得AD用戶;連接菜單;修改密碼;選取AD用戶;用戶編號;用戶姓名;請輸入密碼;請再輸一次;您輸入的密碼不一致</TRA>
+        <SIM>取得AD用户;连接菜单;修改密码;选取AD用户;用户编号;用户姓名;请输入密码;请再输一次;您输入的密码不一致</SIM>
+        <HKG>取得AD用戶;連接菜單;修改密碼;選取AD用戶;用戶編號;用戶姓名;請輸入密碼;請再輸一次;您輸入的密碼不一致</HKG>
+        <JPN>GetADUser;AccessMenu;EditPassword;Choose ADUser;UserID;UserName;Password;Confirm Password;Password does net match.</JPN>
+        <LAN1>GetADUser;AccessMenu;EditPassword;Choose ADUser;UserID;UserName;Password;Confirm Password;Password does net match.</LAN1>
+        <LAN2>GetADUser;AccessMenu;EditPassword;Choose ADUser;UserID;UserName;Password;Confirm Password;Password does net match.</LAN2>
+        <LAN3>GetADUser;AccessMenu;EditPassword;Choose ADUser;UserID;UserName;Password;Confirm Password;Password does net match.</LAN3>
+      </AjaxWebUControl>
+      <AjaxWebGControl>
+        <ENG>GetADGroup;AccessMenu;Choose ADGroup;GroupID;GrouprName;Access User;RoleID;RoleName;Agent;Flow Desc;Start Date;Start Time;End Date;End Time;Par Agent;Remark;Agent</ENG>
+        <TRA>取得AD群組;連接菜單;選取AD群組;群組編號;群組姓名;選擇所含用戶;角色代號;角色名稱;代理者;指定流程;開始日期;開始時間;結束日期;結束時間;平行代理;相關說明;設置代理</TRA>
+        <SIM>取得AD群组;连接菜单;选取AD群组;群组编号;群组姓名;选择所含用户;角色代号;角色名称;代理者;指定流程;开始日期;开始时间;结束日期;结束时间;平行代理;备注;代理设定</SIM>
+        <HKG>取得AD群組;連接菜單;選取AD群組;群組編號;群組姓名;選擇所含用戶;角色代號;角色名稱;代理者;指定流程;開始日期;開始時間;結束日期;結束時間;平行代理;相關說明;設置代理</HKG>
+        <JPN>GetADGroup;AccessMenu;Choose ADGroup;GroupID;GrouprName;Access User</JPN>
+        <LAN1>GetADGroup;AccessMenu;Choose ADGroup;GroupID;GrouprName;Access User</LAN1>
+        <LAN2>GetADGroup;AccessMenu;Choose ADGroup;GroupID;GrouprName;Access User</LAN2>
+        <LAN3>GetADGroup;AccessMenu;Choose ADGroup;GroupID;GrouprName;Access User</LAN3>
+      </AjaxWebGControl>
+    </AjaxWebManager>
+  </Web>
+  <InfoRemoteModule>
+    <EEPRemoteModule>
+      <msg_clearmouse>
+        <ENG>Module:{0} Method:{1}Infolight</ENG>
+        <TRA>Module:{0} Method:{1}訊光科技</TRA>
+        <SIM>Module:{0} Method:{1}Infolight</SIM>
+        <HKG>Module:{0} Method:{1}訊光科技</HKG>
+        <JPN>Module:{0} Method:{1}Infolight</JPN>
+        <LAN1>Module:{0} Method:{1}Infolight</LAN1>
+        <LAN2>Module:{0} Method:{1}Infolight</LAN2>
+        <LAN3>Module:{0} Method:{1}Infolight</LAN3>
+      </msg_clearmouse>
+      <msg_NotRegistered>
+        <ENG>EEP is not registered.</ENG>
+        <TRA>EEP沒有註冊。</TRA>
+        <SIM>EEP没有注册。</SIM>
+        <HKG>EEP沒有註冊。</HKG>
+        <JPN>EEP is not registered.</JPN>
+        <LAN1>EEP is not registered.</LAN1>
+        <LAN2>EEP is not registered.</LAN2>
+        <LAN3>MEEP is not registered.</LAN3>
+      </msg_NotRegistered>
+      <msg_WFNotRegistered>
+        <ENG>WF is not registered.</ENG>
+        <TRA>WF沒有註冊。</TRA>
+        <SIM>WF没有注册。</SIM>
+        <HKG>WF沒有註冊。</HKG>
+        <JPN>WF is not registered.</JPN>
+        <LAN1>WF is not registered.</LAN1>
+        <LAN2>WF is not registered.</LAN2>
+        <LAN3>WF is not registered.</LAN3>
+      </msg_WFNotRegistered>
+      <msg_canntfindfile>
+        <ENG>Module:{0} Method:{1} File {2} cann't be found!</ENG>
+        <TRA>Module:{0} Method:{1} 查無此檔案:{2}! </TRA>
+        <SIM>Module:{0} Method:{1} 找不到文件:{2}!</SIM>
+        <HKG>Module:{0} Method:{1} 查無此檔案:{2}!</HKG>
+        <JPN>Module:{0} Method:{1} File {2} cann't be found!</JPN>
+        <LAN1>Module:{0} Method:{1} File {2} cann't be found!</LAN1>
+        <LAN2>Module:{0} Method:{1} File {2} cann't be found!</LAN2>
+        <LAN3>Module:{0} Method:{1} File {2} cann't be found!</LAN3>
+      </msg_canntfindfile>
+      <msg_canntfindmethod>
+        <ENG>Module:{0} Method:{1} Method {2} cann't be found!</ENG>
+        <TRA>Module:{0} Method:{1} 找不到此呼叫的服務程式: {2}! </TRA>
+        <SIM>Module:{0} Method:{1} 找不到要调用的方法{2}!</SIM>
+        <HKG>Module:{0} Method:{1} 找不到此呼叫的服務程式: {2}!</HKG>
+        <JPN>Module:{0} Method:{1} Method {2} cann't be found!</JPN>
+        <LAN1>Module:{0} Method:{1} Method {2} cann't be found!</LAN1>
+        <LAN2>Module:{0} Method:{1} Method {2} cann't be found!</LAN2>
+        <LAN3>Module:{0} Method:{1} Method {2} cann't be found!</LAN3>
+      </msg_canntfindmethod>
+      <msg_NoServiceManager>
+        <ENG>Module:{0} Method:{1}ServiceManager cann't be found in DataModule!</ENG>
+        <TRA>Module:{0} Method:{1}Server模組中找不到此ServiceManager元件! </TRA>
+        <SIM>Module:{0} Method:{1}数据模块中找不到任何一个ServiceManager元件!  </SIM>
+        <HKG>Module:{0} Method:{1}Server模組中找不到此ServiceManager元件!</HKG>
+        <JPN>Module:{0} Method:{1}ServiceManager cann't be found in DataModule! </JPN>
+        <LAN1>Module:{0} Method:{1}ServiceManager cann't be found in DataModule!</LAN1>
+        <LAN2>Module:{0} Method:{1}ServiceManager cann't be found in DataModule! </LAN2>
+        <LAN3>Module:{0} Method:{1}ServiceManager cann't be found in DataModule! </LAN3>
+      </msg_NoServiceManager>
+      <msg_methodcanntcalled>
+        <ENG>Module:{0} Method:{1}Method {2} cann't be called!</ENG>
+        <TRA>Module:{0} Method:{1}Method :{2} 不允許被呼叫! </TRA>
+        <SIM>Module:{0} Method:{1}数据模块中的方法:{2}不允许被调用! </SIM>
+        <HKG>Module:{0} Method:{1}Method :{2} 不允許被呼叫! </HKG>
+        <JPN>Module:{0} Method:{1}Method {2} cann't be called!</JPN>
+        <LAN1>Module:{0} Method:{1}Method {2} cann't be called!</LAN1>
+        <LAN2>Module:{0} Method:{1}Method {2} cann't be called!</LAN2>
+        <LAN3>Module:{0} Method:{1}Method {2} cann't be called!</LAN3>
+      </msg_methodcanntcalled>
+      <msg_methodinvokenotfound>
+        <ENG>Module:{0} Method:{1}Method {2} cann't be implemented!</ENG>
+        <TRA>Module:{0} Method:{1}Method :{2} 沒有實作! </TRA>
+        <SIM>Module:{0} Method:{1}数据模块中的方法:{2}没有实作! </SIM>
+        <HKG>Module:{0} Method:{1}Method :{2} 沒有實作!  </HKG>
+        <JPN>Module:{0} Method:{1}Method {2} cann't be implemented! </JPN>
+        <LAN1>Module:{0} Method:{1}Method {2} cann't be implemented! </LAN1>
+        <LAN2>Module:{0} Method:{1}Method {2} cann't be implemented! </LAN2>
+        <LAN3>Module:{0} Method:{1}Method {2} cann't be implemented! </LAN3>
+      </msg_methodinvokenotfound>
+      <msg_NotEepDataModule>
+        <ENG>Module:{0} Method:{1}Server Data Module not Infolight DataModule!</ENG>
+        <TRA>Module:{0} Method:{1}這個資料模組不是從InfoDataModule繼承下來!</TRA>
+        <SIM>Module:{0} Method:{1}数据模块没有从InfoDataModule继承下来!</SIM>
+        <HKG>Module:{0} Method:{1}這個資料模組不是從InfoDataModule繼承下來!</HKG>
+        <JPN>Module:{0} Method:{1}Server Data Module not Infolight DataModule!</JPN>
+        <LAN1>Module:{0} Method:{1}Server Data Module not Infolight DataModule!</LAN1>
+        <LAN2>Module:{0} Method:{1}Server Data Module not Infolight DataModule!</LAN2>
+        <LAN3>Module:{0} Method:{1}Server Data Module not Infolight DataModule!</LAN3>
+      </msg_NotEepDataModule>
+      <msg_CanntOpenRegistry>
+        <ENG>Module:{0} Method:{1}Infolight EEP.NET Server need a registry key:{2} !</ENG>
+        <TRA>Module:{0} Method:{1}訊光EEP.NET Server需要一個注冊表內容:{2}!</TRA>
+        <SIM>Module:{0} Method:{1}讯光EEP.NET 服务器端需要一个注册表键:{2}!</SIM>
+        <HKG>Module:{0} Method:{1}訊光EEP.NET Server需要一個注冊表內容:{2}</HKG>
+        <JPN>Module:{0} Method:{1}Infolight EEP.NET Server need a registry key:{2} </JPN>
+        <LAN1>Module:{0} Method:{1}Infolight EEP.NET Server need a registry key:{2} </LAN1>
+        <LAN2>Module:{0} Method:{1}Infolight EEP.NET Server need a registry key:{2} </LAN2>
+        <LAN3>Module:{0} Method:{1}Infolight EEP.NET Server need a registry key:{2}  </LAN3>
+      </msg_CanntOpenRegistry>
+      <msg_InstanceCanntCreate>
+        <ENG>Module:{0} Method:{1}Can not create an instance of type :{2} !</ENG>
+        <TRA>Module:{0} Method:{1}無法產生物件類型{2}的實例!</TRA>
+        <SIM>Module:{0} Method:{1}无法创建类型{2}的实例!</SIM>
+        <HKG>Module:{0} Method:{1}無法產生物件類型{2}的實例!</HKG>
+        <JPN>Module:{0} Method:{1}Can not create an instance of type :{2} !</JPN>
+        <LAN1>Module:{0} Method:{1}Can not create an instance of type :{2} !</LAN1>
+        <LAN2>Module:{0} Method:{1}Can not create an instance of type :{2} !</LAN2>
+        <LAN3>Module:{0} Method:{1}Can not create an instance of type :{2} !</LAN3>
+      </msg_InstanceCanntCreate>
+      <msg_DataSetCanntGet>
+        <ENG>Module:{0} Method:{1}Can not Get DataSet {2}!</ENG>
+        <TRA>Module:{0} Method:{1}無法取得DataSet{2}!</TRA>
+        <SIM>Module:{0} Method:{1}无法获取DataSet{2}!</SIM>
+        <HKG>Module:{0} Method:{1}無法取得DataSet{2}!</HKG>
+        <JPN>Module:{0} Method:{1}Can not Get DataSet {2}!</JPN>
+        <LAN1>Module:{0} Method:{1}Can not Get DataSet {2}!</LAN1>
+        <LAN2>Module:{0} Method:{1}Can not Get DataSet {2}!</LAN2>
+        <LAN3>Module:{0} Method:{1}Can not Get DataSet {2}!</LAN3>
+      </msg_DataSetCanntGet>
+      <msg_PackageNotActive>
+        <ENG>Package: {0} not active!!</ENG>
+        <TRA>Server端資料模組 {0}未啟動!</TRA>
+        <SIM>服务端控件包{0}未激活!</SIM>
+        <HKG>Server端資料模組 {0}未啟動!</HKG>
+        <JPN>Package: {0} not active!!</JPN>
+        <LAN1>Package: {0} not active!!</LAN1>
+        <LAN2>Package: {0} not active!!</LAN2>
+        <LAN3>Package: {0} not active!!</LAN3>
+      </msg_PackageNotActive>
+      <msg_UserNotLogined>
+        <ENG>User:{0} not logined!</ENG>
+        <TRA>用戶{0}沒有登陸!</TRA>
+        <SIM>用户{0}没有登陆!</SIM>
+        <HKG>用戶{0}沒有登陸!</HKG>
+        <JPN>User:{0} not logined!</JPN>
+        <LAN1>User:{0} not logined!</LAN1>
+        <LAN2>User:{0} not logined!</LAN2>
+        <LAN3>User:{0} not logined!</LAN3>
+      </msg_UserNotLogined>
+    </EEPRemoteModule>
+    <SystemLogService>
+      <msg_DBNotExistSYSEEPLOG>
+        <ENG>The 'SYSEEPLOG' table is not existed in DataBase.</ENG>
+        <TRA>找不到'SYSEEPLOG'這個資料表! </TRA>
+        <SIM>表'SYSEEPLOG'在数据库中不存在!</SIM>
+        <HKG>找不到'SYSEEPLOG'這個資料表!</HKG>
+        <JPN>The 'SYSEEPLOG' table is not existed in DataBase.</JPN>
+        <LAN1>The 'SYSEEPLOG' table is not existed in DataBase.</LAN1>
+        <LAN2>The 'SYSEEPLOG' table is not existed in DataBase.</LAN2>
+        <LAN3>The 'SYSEEPLOG' table is not existed in DataBase.</LAN3>
+      </msg_DBNotExistSYSEEPLOG>
+    </SystemLogService>
+  </InfoRemoteModule>
+  <Srvtools>
+    <InfoRefPanel>
+      <Text>
+        <ENG>OK;Cancel;Query;SelectItems;Clear</ENG>
+        <TRA>確定;取消;查詢;選擇;清除</TRA>
+        <SIM>确定;取消;查询;选择;清空</SIM>
+        <HKG>確定;取消;查詢;選擇;清除</HKG>
+        <JPN>OK;Cancel;Query;SelectItems;Clear</JPN>
+        <LAN1>OK;Cancel;Query;SelectItems;Clear</LAN1>
+        <LAN2>OK;Cancel;Query;SelectItems;Clear</LAN2>
+        <LAN3>OK;Cancel;Query;SelectItems;Clear</LAN3>
+      </Text>
+    </InfoRefPanel>
+    <AnyQuery>
+      <ColumnValue>
+        <ENG>Column;Value;Condition</ENG>
+        <TRA>欄位;值;組合條件</TRA>
+        <SIM>栏位;值;组合条件</SIM>
+        <HKG>欄位;值;組合條件</HKG>
+        <JPN>Column;Value;Condition</JPN>
+        <LAN1>Column;Value;Condition</LAN1>
+        <LAN2>Column;Value;Condition</LAN2>
+        <LAN3>Column;Value;Condition</LAN3>
+      </ColumnValue>
+      <ButtonText>
+        <ENG>Query;Add;Subtract;Save;Load;Quit</ENG>
+        <TRA>查詢;新增;刪除;保存;讀取;退出</TRA>
+        <SIM>查询;新增;删除;保存;读取;退出</SIM>
+        <HKG>查詢;新增;刪除;保存;讀取;退出</HKG>
+        <JPN>Query;Add;Subtract;Save;Load;Quit</JPN>
+        <LAN1>Query;Add;Subtract;Save;Load;Quit</LAN1>
+        <LAN2>Query;Add;Subtract;Save;Load;Quit</LAN2>
+        <LAN3>Query;Add;Subtract;Save;Load;Quit</LAN3>
+      </ButtonText>
+      <SaveLoadMessage>
+        <ENG>Please enter or choose a template name:.</ENG>
+        <TRA>請輸入或選擇一個模板：</TRA>
+        <SIM>请输入或选择一个模板：</SIM>
+        <HKG>請輸入或選擇一個模板：</HKG>
+        <JPN>Please enter or choose a template name:.</JPN>
+        <LAN1>Please enter or choose a template name:.</LAN1>
+        <LAN2>Please enter or choose a template name:.</LAN2>
+        <LAN3>Please enter or choose a template name:.</LAN3>
+      </SaveLoadMessage>
+      <SaveWarning>
+        <ENG>The template name which you choosed has already existed. Do you want to replease it?</ENG>
+        <TRA>您所選擇的模板名已經存在。您需要覆蓋它嗎？</TRA>
+        <SIM>您所选择的模板名已经存在。您需要覆盖它吗？</SIM>
+        <HKG>您所選擇的模板名已經存在。您需要覆蓋它嗎？</HKG>
+        <JPN>The template name which you choosed has already existed. Do you want to replease it?</JPN>
+        <LAN1>The template name which you choosed has already existed. Do you want to replease it?</LAN1>
+        <LAN2>The template name which you choosed has already existed. Do you want to replease it?</LAN2>
+        <LAN3>The template name which you choosed has already existed. Do you want to replease it?</LAN3>
+      </SaveWarning>
+      <SaveWarning2>
+        <ENG>The template name which you choosed has already existed.</ENG>
+        <TRA>您所選擇的模板名已經存在。</TRA>
+        <SIM>您所选择的模板名已经存在。</SIM>
+        <HKG>您所選擇的模板名已經存在。</HKG>
+        <JPN>The template name which you choosed has already existed.</JPN>
+        <LAN1>The template name which you choosed has already existed.</LAN1>
+        <LAN2>The template name which you choosed has already existed.</LAN2>
+        <LAN3>The template name which you choosed has already existed.</LAN3>
+      </SaveWarning2>
+      <LoadWarning>
+        <ENG>The template name which you entered does not exist. Please check it out.</ENG>
+        <TRA>您所輸入的模板名不存在，請檢查您的輸入。</TRA>
+        <SIM>您所输入的模板名不存在，请检查您的输入。</SIM>
+        <HKG>您所輸入的模板名不存在，請檢查您的輸入。</HKG>
+        <JPN>The template name which you entered does not exist. Please check it out.</JPN>
+        <LAN1>The template name which you entered does not exist. Please check it out.</LAN1>
+        <LAN2>The template name which you entered does not exist. Please check it out.</LAN2>
+        <LAN3>The template name which you entered does not exist. Please check it out.</LAN3>
+      </LoadWarning>
+      <SaveSuccess>
+        <ENG>Save succeed.</ENG>
+        <TRA>保存成功。</TRA>
+        <SIM>保存成功。</SIM>
+        <HKG>保存成功。</HKG>
+        <JPN>Save succeed.</JPN>
+        <LAN1>Save succeed.</LAN1>
+        <LAN2>Save succeed.</LAN2>
+        <LAN3>Save succeed.</LAN3>
+      </SaveSuccess>
+      <DeleteSuccess>
+        <ENG>Delete succeed.</ENG>
+        <TRA>刪除成功。</TRA>
+        <SIM>删除成功。</SIM>
+        <HKG>刪除成功。</HKG>
+        <JPN>Delete succeed.</JPN>
+        <LAN1>Delete succeed.</LAN1>
+        <LAN2>Delete succeed.</LAN2>
+        <LAN3>Delete succeed.</LAN3>
+      </DeleteSuccess>
+      <QueryIDNull>
+        <ENG>AnyQueryID can't be null!</ENG>
+        <TRA>AnyQueryID不能為空！</TRA>
+        <SIM>AnyQueryID不能为空！</SIM>
+        <HKG>AnyQueryID不能為空！</HKG>
+        <JPN>AnyQueryID can't be null!</JPN>
+        <LAN1>AnyQueryID can't be null!</LAN1>
+        <LAN2>AnyQueryID can't be null!</LAN2>
+        <LAN3>AnyQueryID can't be null!</LAN3>
+      </QueryIDNull>
+      <CheckTable>
+        <ENG>The template which you choosed is different from the BindingSource table!</ENG>
+        <TRA>您所選擇的模板不同於當前所綁定的BindingSource的Table！</TRA>
+        <SIM>您所选择的模板不同于当前所绑定的BindingSource的Table！</SIM>
+        <HKG>您所選擇的模板不同於當前所綁定的BindingSource的Table！</HKG>
+        <JPN>The template which you choosed is different from the BindingSource table!</JPN>
+        <LAN1>The template which you choosed is different from the BindingSource table!</LAN1>
+        <LAN2>The template which you choosed is different from the BindingSource table!</LAN2>
+        <LAN3>The template which you choosed is different from the BindingSource table!</LAN3>
+      </CheckTable>
+      <ValueOverFlow>
+        <ENG>The values you entered must be from mix to max.</ENG>
+        <TRA>您的輸入必須從小到大。</TRA>
+        <SIM>您的输入必须从小到大。</SIM>
+        <HKG>您的輸入必須從小到大。</HKG>
+        <JPN>The values you entered must be from mix to max.</JPN>
+        <LAN1>The values you entered must be from mix to max.</LAN1>
+        <LAN2>The values you entered must be from mix to max.</LAN2>
+        <LAN3>The values you entered must be from mix to max.</LAN3>
+      </ValueOverFlow>
+      <DeleteSure>
+        <ENG>Do you want to delete {0}?</ENG>
+        <TRA>是否要刪除{0}？</TRA>
+        <SIM>是否要删除{0}？</SIM>
+        <HKG>是否要刪除{0}？</HKG>
+        <JPN>Do you want to delete {0}?</JPN>
+        <LAN1>Do you want to delete {0}?</LAN1>
+        <LAN2>Do you want to delete {0}?</LAN2>
+        <LAN3>Do you want to delete {0}?</LAN3>
+      </DeleteSure>
+      <ValueNull>
+        <ENG>Value of {0} can't be null!</ENG>
+        <TRA>{0}的值不能為空！</TRA>
+        <SIM>{0}的值不能为空！</SIM>
+        <HKG>{0}的值不能為空！</HKG>
+        <JPN>Value of {0} can't be null!</JPN>
+        <LAN1>Value of {0} can't be null!</LAN1>
+        <LAN2>Value of {0} can't be null!</LAN2>
+        <LAN3>Value of {0} can't be null!</LAN3>
+      </ValueNull>
+      <SubtractWarning>
+        <ENG>Query conditions can't be less than 5!</ENG>
+        <TRA>查詢條件不能少於5個！</TRA>
+        <SIM>查询条件不能少于5个！</SIM>
+        <HKG>查詢條件不能少於5個！</HKG>
+        <JPN>Query conditions can't be less than 5!</JPN>
+        <LAN1>Query conditions can't be less than 5!</LAN1>
+        <LAN2>Query conditions can't be less than 5!</LAN2>
+        <LAN3>Query conditions can't be less than 5!</LAN3>
+      </SubtractWarning>
+      <OperatorHelp>
+        <ENG>equal to;not equal to;more than;less than;more than;no less than;no more than;end with **;begin with **;contain;not contain **;between;out of;in;not in</ENG>
+        <TRA>等於;不等於;大於;小於;大於等於;小於等於;以**結尾;以**開頭;包含字符**;不包含字符**;區間之內;區間之外;選擇的條件內;選擇的條件外</TRA>
+        <SIM>等于;不等于;大于;小于;大于等于;小于等于;以**结尾;以**开头;包含字符**;不包含字符**;区间之内;区间之外;选择的条件内;选择的条件外</SIM>
+        <HKG>等於;不等於;大於;小於;大於等於;小於等於;以**結尾;以**開頭;包含字符**;不包含字符**;區間之內;區間之外;選擇的條件內;選擇的條件外</HKG>
+        <JPN>equal to;not equal to;more than;less than;more than;no less than;no more than;end with **;begin with **;contain;not contain **;between;out of;in;not in</JPN>
+        <LAN1>equal to;not equal to;more than;less than;more than;no less than;no more than;end with **;begin with **;contain;not contain **;between;out of;in;not in</LAN1>
+        <LAN2>equal to;not equal to;more than;less than;more than;no less than;no more than;end with **;begin with **;contain;not contain **;between;out of;in;not in</LAN2>
+        <LAN3>equal to;not equal to;more than;less than;more than;no less than;no more than;end with **;begin with **;contain;not contain **;between;out of;in;not in</LAN3>
+      </OperatorHelp>
+    </AnyQuery>
+    <InfoDataSet>
+      <msg_InfoCommandNeedKeyFields>
+        <ENG>PacketRecords require infocommand having KeyFields!</ENG>
+        <TRA>PacketRecords要求InfoCommand必須有KeyFields!</TRA>
+        <SIM>PacketRecords要求InfoCommand必须有KeyFields!</SIM>
+        <HKG>PacketRecords要求InfoCommand必須有KeyFields!</HKG>
+        <JPN>PacketRecords require infocommand having KeyFields!</JPN>
+        <LAN1>PacketRecords require infocommand having KeyFields!</LAN1>
+        <LAN2>PacketRecords require infocommand having KeyFields!</LAN2>
+        <LAN3>PacketRecords require infocommand having KeyFields!</LAN3>
+      </msg_InfoCommandNeedKeyFields>
+    </InfoDataSet>
+    <DataModule>
+      <msg_CanntOpenRegistry>
+        <ENG>Module:{0} Method:{1}Infolight EEP.NET Server need a registry key:{2} !</ENG>
+        <TRA>Module:{0} Method:{1}訊光EEP.NET Server需要一個注冊表內容:{2}!</TRA>
+        <SIM>Module:{0} Method:{1}讯光EEP.NET 服务器端需要一个注册表键:{2}!</SIM>
+        <HKG>Module:{0} Method:{1}訊光EEP.NET Server需要一個注冊表內容:{2}!</HKG>
+        <JPN>Module:{0} Method:{1}Infolight EEP.NET Server need a registry key:{2} !</JPN>
+        <LAN1>Module:{0} Method:{1}Infolight EEP.NET Server need a registry key:{2} !</LAN1>
+        <LAN2>Module:{0} Method:{1}Infolight EEP.NET Server need a registry key:{2} !</LAN2>
+        <LAN3>Module:{0} Method:{1}Infolight EEP.NET Server need a registry key:{2} !</LAN3>
+      </msg_CanntOpenRegistry>
+      <msg_canntfindfile>
+        <ENG>Module:{0} Method:{1} File {2} cann't be found!</ENG>
+        <TRA>Module:{0} Method:{1} 找不到檔案:{2}! </TRA>
+        <SIM>Module:{0} Method:{1}找不到文件{2}!</SIM>
+        <HKG>Module:{0} Method:{1} 找不到檔案:{2}! </HKG>
+        <JPN>Module:{0} Method:{1} File {2} cann't be found!</JPN>
+        <LAN1>Module:{0} Method:{1} File {2} cann't be found!</LAN1>
+        <LAN2>Module:{0} Method:{1} File {2} cann't be found!</LAN2>
+        <LAN3>Module:{0} Method:{1} File {2} cann't be found!</LAN3>
+      </msg_canntfindfile>
+      <msg_CmdNotExistUpdataComp>
+        <ENG>Module:{0} Method:{1} \n Error:{2} not exist UpdateComponent!</ENG>
+        <TRA>Module:{0} Method:{1} \n 錯誤訊息:{2} 不存在UpdateComponent! </TRA>
+        <SIM>Module:{0} Method:{1} \n 错误:{2} 不存在UpdateComponent!</SIM>
+        <HKG>Module:{0} Method:{1} \n 錯誤訊息:{2} 不存在UpdateComponent!</HKG>
+        <JPN>Module:{0} Method:{1} \n Error:{2} not exist UpdateComponent!</JPN>
+        <LAN1>Module:{0} Method:{1} \n Error:{2} not exist UpdateComponent!</LAN1>
+        <LAN2>Module:{0} Method:{1} \n Error:{2} not exist UpdateComponent!</LAN2>
+        <LAN3>Module:{0} Method:{1} \n Error:{2} not exist UpdateComponent!</LAN3>
+      </msg_CmdNotExistUpdataComp>
+      <msg_RethrowException>
+        <ENG>Module:{0} Method:{1} \n Error:{2}!</ENG>
+        <TRA>Module:{0} Method:{1} \n 錯誤訊息:{2}! </TRA>
+        <SIM>Module:{0} Method:{1} \n 错误:{2}!</SIM>
+        <HKG>Module:{0} Method:{1} \n 錯誤訊息:{2}!</HKG>
+        <JPN>Module:{0} Method:{1} \n Error:{2}!</JPN>
+        <LAN1>Module:{0} Method:{1} \n Error:{2}!</LAN1>
+        <LAN2>Module:{0} Method:{1} \n Error:{2}!</LAN2>
+        <LAN3>Module:{0} Method:{1} \n Error:{2}!</LAN3>
+      </msg_RethrowException>
+      <msg_ExecuteCommandException>
+        <ENG>Module:{0} Method:{1} \n Error:{2}!</ENG>
+        <TRA>Module:{0} Method:{1} \n 錯誤訊息:{2}! </TRA>
+        <SIM>Module:{0} Method:{1} \n 错误:{2}!</SIM>
+        <HKG>Module:{0} Method:{1} \n 錯誤訊息:{2}!</HKG>
+        <JPN>Module:{0} Method:{1} \n Error:{2}!</JPN>
+        <LAN1>Module:{0} Method:{1} \n Error:{2}!</LAN1>
+        <LAN2>Module:{0} Method:{1} \n Error:{2}!</LAN2>
+        <LAN3>Module:{0} Method:{1} \n Error:{2}!</LAN3>
+      </msg_ExecuteCommandException>
+      <msg_AllocateConnectionTimeOutEx>
+        <ENG>Database Connection Time Out!</ENG>
+        <TRA>連接資料庫時逾時! </TRA>
+        <SIM>连接数据库超时!</SIM>
+        <HKG>連接資料庫時逾時! </HKG>
+        <JPN>Database Connection Time Out!</JPN>
+        <LAN1>Database Connection Time Out!</LAN1>
+        <LAN2>Database Connection Time Out!</LAN2>
+        <LAN3>Database Connection Time Out!</LAN3>
+      </msg_AllocateConnectionTimeOutEx>
+    </DataModule>
+    <InfoCommand>
+      <msg_RethrowException>
+        <ENG>Module:{0} Method:{1} \n Error:{2}!</ENG>
+        <TRA>Module:{0} Method:{1} \n 錯誤訊息:{2}! </TRA>
+        <SIM>Module:{0} Method:{1} \n 错误:{2}!</SIM>
+        <HKG>Module:{0} Method:{1} \n 錯誤訊息:{2}!</HKG>
+        <JPN>Module:{0} Method:{1} \n Error:{2}!</JPN>
+        <LAN1>Module:{0} Method:{1} \n Error:{2}!</LAN1>
+        <LAN2>Module:{0} Method:{1} \n Error:{2}!</LAN2>
+        <LAN3>Module:{0} Method:{1} \n Error:{2}!</LAN3>
+      </msg_RethrowException>
+    </InfoCommand>
+    <UpdateComponent>
+      <msg_AffectedMultiRows>
+        <ENG>Multi rows affected. Operation Abort!</ENG>
+        <TRA>多筆資料被異動了，這個作業沒有成功! </TRA>
+        <SIM>多行被影响，操作未成功!</SIM>
+        <HKG>多筆資料被異動了，這個作業沒有成功!</HKG>
+        <JPN>Multi rows affected. Operation Abort!</JPN>
+        <LAN1>Multi rows affected. Operation Abort!</LAN1>
+        <LAN2>Multi rows affected. Operation Abort!</LAN2>
+        <LAN3>Multi rows affected. Operation Abort!</LAN3>
+      </msg_AffectedMultiRows>
+      <msg_AffectedNotRows>
+        <ENG>No rows affected. Operation Abort! </ENG>
+        <TRA>無資料被異動，這個作業沒有成功! </TRA>
+        <SIM>无数据被影响，操作未成功!</SIM>
+        <HKG>無資料被異動，這個作業沒有成功!</HKG>
+        <JPN>No rows affected. Operation Abort!</JPN>
+        <LAN1>No rows affected. Operation Abort!</LAN1>
+        <LAN2>No rows affected. Operation Abort!</LAN2>
+        <LAN3>No rows affected. Operation Abort!</LAN3>
+      </msg_AffectedNotRows>
+      <msg__SelectCmdIsNull>
+        <ENG>{0}'s SelectCmd is null.</ENG>
+        <TRA>{0}的SelectCmd屬性沒有設定!</TRA>
+        <SIM>{0}的SelectCmd属性为空!</SIM>
+        <HKG>{0}的SelectCmd屬性沒有設定!</HKG>
+        <JPN>{0}'s SelectCmd is null.</JPN>
+        <LAN1>{0}'s SelectCmd is null.</LAN1>
+        <LAN2>{0}'s SelectCmd is null.</LAN2>
+        <LAN3>{0}'s SelectCmd is null.</LAN3>
+      </msg__SelectCmdIsNull>
+      <msg__ConnectionIsNull>
+        <ENG>{0}'s Connection is null.</ENG>
+        <TRA>{0}的Connection屬性沒有設定!</TRA>
+        <SIM>{0}的Connection属性为空!</SIM>
+        <HKG>{0}的Connection屬性沒有設定!</HKG>
+        <JPN>{0}'s Connection is null.</JPN>
+        <LAN1>{0}'s Connection is null.</LAN1>
+        <LAN2>{0}'s Connection is null.</LAN2>
+        <LAN3>{0}'s Connection is null.</LAN3>
+      </msg__ConnectionIsNull>
+      <msg_SchemaIsNull>
+        <ENG>{0}'s schema is null.</ENG>
+        <TRA>{0}查詢的結果為空白!</TRA>
+        <SIM>{0}查询的返回结果中不包含任何数据!</SIM>
+        <HKG>{0}查詢的結果為空白!</HKG>
+        <JPN>{0}'s schema is null.</JPN>
+        <LAN1>{0}'s schema is null.</LAN1>
+        <LAN2>{0}'s schema is null.</LAN2>
+        <LAN3>{0}'s schema is null.</LAN3>
+      </msg_SchemaIsNull>
+      <msg_KeyFieldsIsNull>
+        <ENG>{0}'s WhereMode is "Keyfields",but {0}'s KeyFields property is empty.</ENG>
+        <TRA>{0}的WhereMode為Keyfields”,但是{0}的KeyFields屬性沒有設定!</TRA>
+        <SIM>{0}的WhereMode为“Keyfields”，但是{0}的KeyFields属性为空!</SIM>
+        <HKG>{0}的WhereMode為Keyfields”,但是{0}的KeyFields屬性沒有設定!</HKG>
+        <JPN>{0}'s WhereMode is "Keyfields",but {0}'s KeyFields property is empty.</JPN>
+        <LAN1>{0}'s WhereMode is "Keyfields",but {0}'s KeyFields property is empty.</LAN1>
+        <LAN2>{0}'s WhereMode is "Keyfields",but {0}'s KeyFields property is empty.</LAN2>
+        <LAN3>{0}'s WhereMode is "Keyfields",but {0}'s KeyFields property is empty.</LAN3>
+      </msg_KeyFieldsIsNull>
+      <msg_KeyFieldNotExistInTable>
+        <ENG>{0}'s KeyField[{1}] not exist in table.</ENG>
+        <TRA>{0}的KeyField[{1}]欄位不存在!</TRA>
+        <SIM>{0}的KeyField[{1}]在表中不存在!</SIM>
+        <HKG>{0}的KeyField[{1}]欄位不存在!</HKG>
+        <JPN>{0}'s KeyField[{1}] not exist in table.</JPN>
+        <LAN1>{0}'s KeyField[{1}] not exist in table.</LAN1>
+        <LAN2>{0}'s KeyField[{1}] not exist in table.</LAN2>
+        <LAN3>{0}'s KeyField[{1}] not exist in table.</LAN3>
+      </msg_KeyFieldNotExistInTable>
+      <msg_FieldAttrNotExistInTable>
+        <ENG>{0}'s "{1}" FieldAttr column not exist in table.</ENG>
+        <TRA>{0}的“{1}”FieldAttr中的欄位不存在!</TRA>
+        <SIM>{0}的“{1}”FieldAttr列在表中不存在!</SIM>
+        <HKG>{0}的“{1}”FieldAttr中的欄位不存在!</HKG>
+        <JPN>{0}'s "{1}" FieldAttr column not exist in table.</JPN>
+        <LAN1>{0}'s "{1}" FieldAttr column not exist in table.</LAN1>
+        <LAN2>{0}'s "{1}" FieldAttr column not exist in table.</LAN2>
+        <LAN3>{0}'s "{1}" FieldAttr column not exist in table.</LAN3>
+      </msg_FieldAttrNotExistInTable>
+      <msg_FieldAttrValueIsNull>
+        <ENG>{0}'s FieldAttr[{1}]'s value is null.</ENG>
+        <TRA>{0}的FieldAttr[{1}]的值沒有設定!</TRA>
+        <SIM>{0}的FieldAttr[{1}]值为空!</SIM>
+        <HKG>{0}的FieldAttr[{1}]的值沒有設定!</HKG>
+        <JPN>{0}'s FieldAttr[{1}]'s value is null.</JPN>
+        <LAN1>{0}'s FieldAttr[{1}]'s value is null.</LAN1>
+        <LAN2>{0}'s FieldAttr[{1}]'s value is null.</LAN2>
+        <LAN3>{0}'s FieldAttr[{1}]'s value is null.</LAN3>
+      </msg_FieldAttrValueIsNull>
+      <msg_FieldAttrDefaultValueIsBad>
+        <ENG>{0}'s FieldAttr[{1}]'s DefaultValue is a bad expression.</ENG>
+        <TRA>{0}的FieldAttr[{1}]的DefaultValue屬性有誤!</TRA>
+        <SIM>{0}的FieldAttr[{1}]的DefaultValue属性有误!</SIM>
+        <HKG>{0}的FieldAttr[{1}]的DefaultValue屬性有誤!</HKG>
+        <JPN>{0}'s FieldAttr[{1}]'s DefaultValue is a bad expression.</JPN>
+        <LAN1>{0}'s FieldAttr[{1}]'s DefaultValue is a bad expression.</LAN1>
+        <LAN2>{0}'s FieldAttr[{1}]'s DefaultValue is a bad expression.</LAN2>
+        <LAN3>{0}'s FieldAttr[{1}]'s DefaultValue is a bad expression.</LAN3>
+      </msg_FieldAttrDefaultValueIsBad>
+    </UpdateComponent>
+    <AutoNumber>
+      <msg_TargetColumnNotExistInTable>
+        <ENG>{0}'s TargetColumn[{1}] not exist in table.</ENG>
+        <TRA>{0}的TargetColumn[{1}]欄位不存在!</TRA>
+        <SIM>{0}的TargetColumn[{1}]在表中不存在!</SIM>
+        <HKG>{0}的TargetColumn[{1}]欄位不存在!</HKG>
+        <JPN>{0}'s TargetColumn[{1}] not exist in table.</JPN>
+        <LAN1>{0}'s TargetColumn[{1}] not exist in table.</LAN1>
+        <LAN2>{0}'s TargetColumn[{1}] not exist in table.</LAN2>
+        <LAN3>{0}'s TargetColumn[{1}] not exist in table.</LAN3>
+      </msg_TargetColumnNotExistInTable>
+      <msg_GetFixedIsBad>
+        <ENG>{0}'s GetFixed[{1}] property is a bad expression.</ENG>
+        <TRA>{0}的GetFixed[{1}]屬性有誤!</TRA>
+        <SIM>{0}的GetFixed[{1}]属性有误!</SIM>
+        <HKG>{0}的GetFixed[{1}]屬性有誤!</HKG>
+        <JPN>{0}'s GetFixed[{1}] property is a bad expression.</JPN>
+        <LAN1>{0}'s GetFixed[{1}] property is a bad expression.</LAN1>
+        <LAN2>{0}'s GetFixed[{1}] property is a bad expression.</LAN2>
+        <LAN3>{0}'s GetFixed[{1}] property is a bad expression.</LAN3>
+      </msg_GetFixedIsBad>
+      <msg_TargerColumnIsNull>
+        <ENG>{0}'s TargerColumn property is null.</ENG>
+        <TRA>{0}的TargerColumn屬性沒有設定!</TRA>
+        <SIM>{0}的TargerColumn属性为空!</SIM>
+        <HKG>{0}的TargerColumn屬性沒有設定!</HKG>
+        <JPN>{0}'s TargerColumn property is null.</JPN>
+        <LAN1>{0}'s TargerColumn property is null.</LAN1>
+        <LAN2>{0}'s TargerColumn property is null.</LAN2>
+        <LAN3>{0}'s TargerColumn property is null.</LAN3>
+      </msg_TargerColumnIsNull>
+      <msg_AutoNoIDIsNull>
+        <ENG>{0}'s AutoNoID property is null.</ENG>
+        <TRA>{0}的AutoNoID屬性沒有設定!</TRA>
+        <SIM>{0}的AutoNoID属性为空!</SIM>
+        <HKG>{0}的AutoNoID屬性沒有設定!</HKG>
+        <JPN>{0}'s AutoNoID property is null.</JPN>
+        <LAN1>{0}'s AutoNoID property is null.</LAN1>
+        <LAN2>{0}'s AutoNoID property is null.</LAN2>
+        <LAN3>{0}'s AutoNoID property is null.</LAN3>
+      </msg_AutoNoIDIsNull>
+      <msg_AutoNoOverFlow>
+        <ENG>{0} over flow.</ENG>
+        <TRA>{0}的值發生了溢位!</TRA>
+        <SIM>{0}的值发生了溢出!</SIM>
+        <HKG>{0}的值發生了溢位!</HKG>
+        <JPN>{0} over flow.</JPN>
+        <LAN1>{0} over flow.</LAN1>
+        <LAN2>{0} over flow.</LAN2>
+        <LAN3>{0} over flow.</LAN3>
+      </msg_AutoNoOverFlow>
+      <msg_AutoConflict>
+        <ENG>Automatic Number conflict!</ENG>
+        <TRA>自動編號發生衝突!</TRA>
+        <SIM>自动编号发生冲突!</SIM>
+        <HKG>自動編號發生衝突!</HKG>
+        <JPN>Automatic Number conflict!</JPN>
+        <LAN1>Automatic Number conflict!</LAN1>
+        <LAN2>Automatic Number conflict!</LAN2>
+        <LAN3>Automatic Number conflict!</LAN3>
+      </msg_AutoConflict>
+    </AutoNumber>
+    <LogInfo>
+      <msg_LogIDFieldIsNull>
+        <ENG>{0}'s LogIDField property is null.</ENG>
+        <TRA>{0}的LogIDField屬性沒有設定!</TRA>
+        <SIM>{0}的LogIDField属性为空!</SIM>
+        <HKG>{0}的LogIDField屬性沒有設定!</HKG>
+        <JPN>{0}'s LogIDField property is null.</JPN>
+        <LAN1>{0}'s LogIDField property is null.</LAN1>
+        <LAN2>{0}'s LogIDField property is null.</LAN2>
+        <LAN3>{0}'s LogIDField property is null.</LAN3>
+      </msg_LogIDFieldIsNull>
+      <msg_LogTableNameIsNull>
+        <ENG>{0}'s LogTableName property is null.</ENG>
+        <TRA>{0}的LogTableName屬性沒有設定!</TRA>
+        <SIM>{0}的LogTableName属性为空!</SIM>
+        <HKG>{0}的LogTableName屬性沒有設定!</HKG>
+        <JPN>{0}'s LogTableName property is null.</JPN>
+        <LAN1>{0}'s LogTableName property is null.</LAN1>
+        <LAN2>{0}'s LogTableName property is null.</LAN2>
+        <LAN3>{0}'s LogTableName property is null.</LAN3>
+      </msg_LogTableNameIsNull>
+      <msg_MarkFieldIsNull>
+        <ENG>{0}'s MarkField property is null.</ENG>
+        <TRA>{0}的MarkField屬性沒有設定!</TRA>
+        <SIM>{0}的MarkField属性为空!</SIM>
+        <HKG>{0}的MarkField屬性沒有設定!</HKG>
+        <JPN>{0}'s MarkField property is null.</JPN>
+        <LAN1>{0}'s MarkField property is null.</LAN1>
+        <LAN2>{0}'s MarkField property is null.</LAN2>
+        <LAN3>{0}'s MarkField property is null.</LAN3>
+      </msg_MarkFieldIsNull>
+      <msg_ModifierFieldIsNull>
+        <ENG>{0}'s ModifierField property is null.</ENG>
+        <TRA>{0}的ModifierField屬性沒有設定!</TRA>
+        <SIM>{0}的ModifierField属性为空!</SIM>
+        <HKG>{0}的ModifierField屬性沒有設定!</HKG>
+        <JPN>{0}'s ModifierField property is null.</JPN>
+        <LAN1>{0}'s ModifierField property is null.</LAN1>
+        <LAN2>{0}'s ModifierField property is null.</LAN2>
+        <LAN3>{0}'s ModifierField property is null.</LAN3>
+      </msg_ModifierFieldIsNull>
+      <msg_ModifyDateFieldIsNull>
+        <ENG>{0}'s ModifyDateField property is null.</ENG>
+        <TRA>{0}的ModifyDateField屬性沒有設定!</TRA>
+        <SIM>{0}的ModifyDateField属性为空!</SIM>
+        <HKG>{0}的ModifyDateField屬性沒有設定!</HKG>
+        <JPN>{0}'s ModifyDateField property is null.</JPN>
+        <LAN1>{0}'s ModifyDateField property is null.</LAN1>
+        <LAN2>{0}'s ModifyDateField property is null.</LAN2>
+        <LAN3>{0}'s ModifyDateField property is null.</LAN3>
+      </msg_ModifyDateFieldIsNull>
+      <msg_LogIDFieldIsNotAutoIncrement>
+        <ENG>{0}'s LogIDField[{1}] is not autoincrement in table.</ENG>
+        <TRA>{0}的LogIDField[{1}]不是定義為自增值的欄位!</TRA>
+        <SIM>{0}的LogIDField[{1}]不是在表中自增值的字段!</SIM>
+        <HKG>{0}的LogIDField[{1}]不是定義為自增值的欄位!</HKG>
+        <JPN>{0}'s LogIDField[{1}] is not autoincrement in table.</JPN>
+        <LAN1>{0}'s LogIDField[{1}] is not autoincrement in table.</LAN1>
+        <LAN2>{0}'s LogIDField[{1}] is not autoincrement in table.</LAN2>
+        <LAN3>{0}'s LogIDField[{1}] is not autoincrement in table.</LAN3>
+      </msg_LogIDFieldIsNotAutoIncrement>
+      <msg_ModifyDateFieldNotExistInTable>
+        <ENG>{0}'s ModifyDateField[{1}] not exist in table.</ENG>
+        <TRA>{0}的ModifyDateField[{1}]欄位不存在!</TRA>
+        <SIM>{0}的ModifyDateField[{1}]在表中不存在!</SIM>
+        <HKG>{0}的ModifyDateField[{1}]欄位不存在!</HKG>
+        <JPN>{0}'s ModifyDateField[{1}] not exist in table.</JPN>
+        <LAN1>{0}'s ModifyDateField[{1}] not exist in table.</LAN1>
+        <LAN2>{0}'s ModifyDateField[{1}] not exist in table.</LAN2>
+        <LAN3>{0}'s ModifyDateField[{1}] not exist in table.</LAN3>
+      </msg_ModifyDateFieldNotExistInTable>
+      <msg_ModifierFieldNotExistInTable>
+        <ENG>{0}'s ModifierField[{1}] not exist in table.</ENG>
+        <TRA>{0}的ModifierField[{1}]欄位不存在!</TRA>
+        <SIM>{0}的ModifierField[{1}]在表中不存在!</SIM>
+        <HKG>{0}的ModifierField[{1}]欄位不存在!</HKG>
+        <JPN>{0}'s ModifierField[{1}] not exist in table.</JPN>
+        <LAN1>{0}'s ModifierField[{1}] not exist in table.</LAN1>
+        <LAN2>{0}'s ModifierField[{1}] not exist in table.</LAN2>
+        <LAN3>{0}'s ModifierField[{1}] not exist in table.</LAN3>
+      </msg_ModifierFieldNotExistInTable>
+      <msg_MarkFieldNotExistInTable>
+        <ENG>{0}'s MarkField[{1}] not exist in table.</ENG>
+        <TRA>{0}的MarkField[{1}]欄位不存在!</TRA>
+        <SIM>{0}的MarkField[{1}]在表中不存在!</SIM>
+        <HKG>{0}的MarkField[{1}]欄位不存在!</HKG>
+        <JPN>{0}'s MarkField[{1}] not exist in table.</JPN>
+        <LAN1>{0}'s MarkField[{1}] not exist in table.</LAN1>
+        <LAN2>{0}'s MarkField[{1}] not exist in table.</LAN2>
+        <LAN3>{0}'s MarkField[{1}] not exist in table.</LAN3>
+      </msg_MarkFieldNotExistInTable>
+      <msg_LogDateTypeIsBad>
+        <ENG>{0}'s LogDateType[{1}] is a bad expression.</ENG>
+        <TRA>{0}的LogDateType[{1}]屬性有誤!</TRA>
+        <SIM>{0}的LogDateType[{1}]属性有误!</SIM>
+        <HKG>{0}的LogDateType[{1}]屬性有誤!</HKG>
+        <JPN>{0}'s LogDateType[{1}] is a bad expression.</JPN>
+        <LAN1>{0}'s LogDateType[{1}] is a bad expression.</LAN1>
+        <LAN2>{0}'s LogDateType[{1}] is a bad expression.</LAN2>
+        <LAN3>{0}'s LogDateType[{1}] is a bad expression.</LAN3>
+      </msg_LogDateTypeIsBad>
+      <msg_ColumnNotExistInTable>
+        <ENG>{0} column is not exist in table {1}.</ENG>
+        <TRA>資料表{1}中沒有包含{0}欄位!</TRA>
+        <SIM>表{1}中不包含{0}字段!</SIM>
+        <HKG>資料表{1}中沒有包含{0}欄位!</HKG>
+        <JPN>{0} column is not exist in table {1}.</JPN>
+        <LAN1>{0} column is not exist in table {1}.</LAN1>
+        <LAN2>{0} column is not exist in table {1}.</LAN2>
+        <LAN3>{0} column is not exist in table {1}.</LAN3>
+      </msg_ColumnNotExistInTable>
+    </LogInfo>
+    <InfoTransaction>
+      <msg_NotExistRowsInTable>
+        <ENG>"{1}" is not exist in table {0}.</ENG>
+        <TRA>資料表{0}中不存在“{1}”的資料!</TRA>
+        <SIM>表{0}中不存在“{1}”的纪录!</SIM>
+        <HKG>資料表{0}中不存在“{1}”的資料!</HKG>
+        <JPN>"{1}" is not exist in table {0}.</JPN>
+        <LAN1>"{1}" is not exist in table {0}.</LAN1>
+        <LAN2>"{1}" is not exist in table {0}.</LAN2>
+        <LAN3>"{1}" is not exist in table {0}.</LAN3>
+      </msg_NotExistRowsInTable>
+      <msg_TransFieldSrcExistInTable>
+        <ENG>{0}'s TransField[{1}].SrcField[{2}] column is not exist in table {3}.</ENG>
+        <TRA>資料表{3}中不包含{0}的TransField[{1}].SrcField[{2}]欄位!</TRA>
+        <SIM>表{3}中不包含{0}的TransField[{1}].SrcField[{2}]字段!</SIM>
+        <HKG>資料表{3}中不包含{0}的TransField[{1}].SrcField[{2}]欄位!</HKG>
+        <JPN>{0}'s TransField[{1}].SrcField[{2}] column is not exist in table {3}.</JPN>
+        <LAN1>{0}'s TransField[{1}].SrcField[{2}] column is not exist in table {3}.</LAN1>
+        <LAN2>{0}'s TransField[{1}].SrcField[{2}] column is not exist in table {3}.</LAN2>
+        <LAN3>{0}'s TransField[{1}].SrcField[{2}] column is not exist in table {3}.</LAN3>
+      </msg_TransFieldSrcExistInTable>
+      <msg_TransFieldDesExistInTable>
+        <ENG>{0}'s TransField[{1}].DesField[{2}] column is not exist in table {3}.</ENG>
+        <TRA>資料表{3}中不包含{0}的TransField[{1}].DesField[{2}]欄位!</TRA>
+        <SIM>表{3}中不包含{0}的TransField[{1}].DesField[{2}]字段!</SIM>
+        <HKG>資料表{3}中不包含{0}的TransField[{1}].DesField[{2}]欄位!</HKG>
+        <JPN>{0}'s TransField[{1}].DesField[{2}] column is not exist in table {3}.</JPN>
+        <LAN1>{0}'s TransField[{1}].DesField[{2}] column is not exist in table {3}.</LAN1>
+        <LAN2>{0}'s TransField[{1}].DesField[{2}] column is not exist in table {3}.</LAN2>
+        <LAN3>{0}'s TransField[{1}].DesField[{2}] column is not exist in table {3}.</LAN3>
+      </msg_TransFieldDesExistInTable>
+      <msg_TransFieldDesAndSrcNotSameType>
+        <ENG>{0}'s TransField[{1}].DesField[{2}] and SrcField[{3}] not same type.</ENG>
+        <TRA>{0}的TransField[{1}].DesField[{2}]和SrcField[{3}]的欄位類型不同!</TRA>
+        <SIM>{0}的TransField[{1}].DesField[{2}]和SrcField[{3}]的数据类型不同!</SIM>
+        <HKG>{0}的TransField[{1}].DesField[{2}]和SrcField[{3}]的欄位類型不同!</HKG>
+        <JPN>{0}'s TransField[{1}].DesField[{2}] and SrcField[{3}] not same type.</JPN>
+        <LAN1>{0}'s TransField[{1}].DesField[{2}] and SrcField[{3}] not same type.</LAN1>
+        <LAN2>{0}'s TransField[{1}].DesField[{2}] and SrcField[{3}] not same type.</LAN2>
+        <LAN3>{0}'s TransField[{1}].DesField[{2}] and SrcField[{3}] not same type.</LAN3>
+      </msg_TransFieldDesAndSrcNotSameType>
+      <msg_TransFieldDesIsReadOnly>
+        <ENG>{0}'s TransField[{1}].DesField[{2}] column is readonly.</ENG>
+        <TRA>{0}的TransField[{1}].DesField[{2}]欄位為"唯讀"!</TRA>
+        <SIM>{0}的TransField[{1}].DesField[{2}]字段为“只读”!</SIM>
+        <HKG>{0}的TransField[{1}].DesField[{2}]欄位為"唯讀"!</HKG>
+        <JPN>{0}'s TransField[{1}].DesField[{2}] column is readonly.</JPN>
+        <LAN1>{0}'s TransField[{1}].DesField[{2}] column is readonly.</LAN1>
+        <LAN2>{0}'s TransField[{1}].DesField[{2}] column is readonly.</LAN2>
+        <LAN3>{0}'s TransField[{1}].DesField[{2}] column is readonly.</LAN3>
+      </msg_TransFieldDesIsReadOnly>
+      <msg_TransKeyFieldSrcExistInTable>
+        <ENG>{0}'s TransKeyField[{1}].SrcField[{2}] column is not exist in table {3}.</ENG>
+        <TRA>{3}中不包含{0}的TransKeyField[{1}].SrcField[{2}]欄位!</TRA>
+        <SIM>{3}中不包含{0}的TransKeyField[{1}].SrcField[{2}]字段!</SIM>
+        <HKG>{3}中不包含{0}的TransKeyField[{1}].SrcField[{2}]欄位!</HKG>
+        <JPN>{0}'s TransKeyField[{1}].SrcField[{2}] column is not exist in table {3}.</JPN>
+        <LAN1>{0}'s TransKeyField[{1}].SrcField[{2}] column is not exist in table {3}.</LAN1>
+        <LAN2>{0}'s TransKeyField[{1}].SrcField[{2}] column is not exist in table {3}.</LAN2>
+        <LAN3>{0}'s TransKeyField[{1}].SrcField[{2}] column is not exist in table {3}.</LAN3>
+      </msg_TransKeyFieldSrcExistInTable>
+      <msg_TransKeyFieldDesExistInTable>
+        <ENG>{0}'s TransKeyField[{1}].DesField[{2}] column is not exist in table {3}.</ENG>
+        <TRA>資料表{3}中不包含{0}的TransKeyField[{1}]的DesField[{2}]欄位!</TRA>
+        <SIM>表{3}中不包含{0}的TransKeyField[{1}]的属性DesField[{2}]字段!</SIM>
+        <HKG>資料表{3}中不包含{0}的TransKeyField[{1}]的DesField[{2}]欄位!</HKG>
+        <JPN>{0}'s TransKeyField[{1}].DesField[{2}] column is not exist in table {3}.</JPN>
+        <LAN1>{0}'s TransKeyField[{1}].DesField[{2}] column is not exist in table {3}.</LAN1>
+        <LAN2>{0}'s TransKeyField[{1}].DesField[{2}] column is not exist in table {3}.</LAN2>
+        <LAN3>{0}'s TransKeyField[{1}].DesField[{2}] column is not exist in table {3}.</LAN3>
+      </msg_TransKeyFieldDesExistInTable>
+      <msg_TransKeyFieldDesAndSrcNotSameType>
+        <ENG>{0}'s TransKeyField[{1}].DesField[{2}] and SrcField[{3}] not same type.</ENG>
+        <TRA>{0}的TransKeyField[{1}].DesField[{2}]和SrcField[{3}]的欄位型態不同!</TRA>
+        <SIM>{0}的TransKeyField[{1}].DesField[{2}]和SrcField[{3}]的数据类型不同。</SIM>
+        <HKG>{0}的TransKeyField[{1}].DesField[{2}]和SrcField[{3}]的欄位型態不同!</HKG>
+        <JPN>{0}'s TransKeyField[{1}].DesField[{2}] and SrcField[{3}] not same type.</JPN>
+        <LAN1>{0}'s TransKeyField[{1}].DesField[{2}] and SrcField[{3}] not same type.</LAN1>
+        <LAN2>{0}'s TransKeyField[{1}].DesField[{2}] and SrcField[{3}] not same type.</LAN2>
+        <LAN3>{0}'s TransKeyField[{1}].DesField[{2}] and SrcField[{3}] not same type.</LAN3>
+      </msg_TransKeyFieldDesAndSrcNotSameType>
+      <msg_TransKeyFieldDesIsReadOnly>
+        <ENG>{0}'s TransKeyField[{1}].DesField[{2}] column is readonly.</ENG>
+        <TRA>{0}的TransKeyField[{1}].DesField[{2}]欄位為"唯讀"!</TRA>
+        <SIM>{0}的TransKeyField[{1}].DesField[{2}]字段为“只读”!</SIM>
+        <HKG>{0}的TransKeyField[{1}].DesField[{2}]欄位為"唯讀"!</HKG>
+        <JPN>{0}'s TransKeyField[{1}].DesField[{2}] column is readonly.</JPN>
+        <LAN1>{0}'s TransKeyField[{1}].DesField[{2}] column is readonly.</LAN1>
+        <LAN2>{0}'s TransKeyField[{1}].DesField[{2}] column is readonly.</LAN2>
+        <LAN3>{0}'s TransKeyField[{1}].DesField[{2}] column is readonly.</LAN3>
+      </msg_TransKeyFieldDesIsReadOnly>
+      <msg_NotExist>
+        <ENG>Some columns which need transfer are null in table {0}.</ENG>
+        <TRA>資料表{0}中需要轉帳的欄位有空值!</TRA>
+        <SIM>表{0}中需要转帐的栏位有空值!</SIM>
+        <HKG>資料表{0}中需要轉帳的欄位有空值!</HKG>
+        <JPN>Some columns which need transfer are null in table {0}.</JPN>
+        <LAN1>Some columns which need transfer are null in table {0}.</LAN1>
+        <LAN2>Some columns which need transfer are null in table {0}.</LAN2>
+        <LAN3>Some columns which need transfer are null in table {0}.</LAN3>
+      </msg_NotExist>
+    </InfoTransaction>
+    <CacheClientDataSet>
+      <msg_DataSetIsNull>
+        <ENG>{0}'s RealDataSet is null.</ENG>
+        <TRA>{0}的RealDataSet沒有設定!</TRA>
+        <SIM>{0}的RealDataSet为空!</SIM>
+        <HKG>{0}的RealDataSet沒有設定!</HKG>
+        <JPN>{0}'s RealDataSet is null.</JPN>
+        <LAN1>{0}'s RealDataSet is null.</LAN1>
+        <LAN2>{0}'s RealDataSet is null.</LAN2>
+        <LAN3>{0}'s RealDataSet is null.</LAN3>
+      </msg_DataSetIsNull>
+      <msg_CacheDataSetIsReadOnly>
+        <ENG>{0} is readonly,can't save.</ENG>
+        <TRA>{0}為唯讀模式，不能被存檔!</TRA>
+        <SIM>{0}是只读，不能被保存!</SIM>
+        <HKG>{0}為唯讀模式，不能被存檔!</HKG>
+        <JPN>{0} is readonly,can't save.</JPN>
+        <LAN1>{0} is readonly,can't save.</LAN1>
+        <LAN2>{0} is readonly,can't save.</LAN2>
+        <LAN3>{0} is readonly,can't save.</LAN3>
+      </msg_CacheDataSetIsReadOnly>
+      <msg_CacheFileIsNull>
+        <ENG>{0}'s CacheFile is null.</ENG>
+        <TRA>{0}没有指定CacheFile名稱!</TRA>
+        <SIM>{0}没有指定CacheFile!</SIM>
+        <HKG>{0}没有指定CacheFile名稱</HKG>
+        <JPN>{0}'s CacheFile is null.</JPN>
+        <LAN1>{0}'s CacheFile is null.</LAN1>
+        <LAN2>{0}'s CacheFile is null.</LAN2>
+        <LAN3>{0}'s CacheFile is null.</LAN3>
+      </msg_CacheFileIsNull>
+      <msg_CacheFileNameIsBad>
+        <ENG>{0}'s CacheFile is a bad expression.</ENG>
+        <TRA>{0}的CacheFile命名有誤，請重新命名!</TRA>
+        <SIM>{0}的CacheFile有误，请重新命名!</SIM>
+        <HKG>{0}的CacheFile命名有誤，請重新命名!</HKG>
+        <JPN>{0}'s CacheFile is a bad expression.</JPN>
+        <LAN1>{0}'s CacheFile is a bad expression.</LAN1>
+        <LAN2>{0}'s CacheFile is a bad expression.</LAN2>
+        <LAN3>{0}'s CacheFile is a bad expression.</LAN3>
+      </msg_CacheFileNameIsBad>
+    </CacheClientDataSet>
+    <InfoDMDesigner>
+      <msg_Exception>
+        <ENG>Module:{0} Method:{1} Exception catched:{2} !</ENG>
+        <TRA>Module:{0} Method:{1} 發生了錯誤的異常:{2}!</TRA>
+        <SIM>Module:{0} Method:{1} 捕获Exception异常:{2}!</SIM>
+        <HKG>Module:{0} Method:{1} 發生了錯誤的異常:{2}!</HKG>
+        <JPN>Module:{0} Method:{1} Exception catched:{2} !</JPN>
+        <LAN1>Module:{0} Method:{1} Exception catched:{2} !</LAN1>
+        <LAN2>Module:{0} Method:{1} Exception catched:{2} !</LAN2>
+        <LAN3>Module:{0} Method:{1} Exception catched:{2} !</LAN3>
+      </msg_Exception>
+    </InfoDMDesigner>
+    <InfoRefVal>
+      <msg_RefValValueNotFound>
+        <ENG>value {0} is not found!</ENG>
+        <TRA>無法找到內容為 {0}的資料!</TRA>
+        <SIM>值{0}不包含在此数据中!</SIM>
+        <HKG>無法找到內容為 {0}的資料!</HKG>
+        <JPN>value {0} is not found!</JPN>
+        <LAN1>value {0} is not found!</LAN1>
+        <LAN2>value {0} is not found!</LAN2>
+        <LAN3>value {0} is not found!</LAN3>
+      </msg_RefValValueNotFound>
+      <ButtonName>
+        <ENG>ok;cancel;refresh;query;add;apply</ENG>
+        <TRA>確定;取消;更新;查詢;新增;存檔</TRA>
+        <SIM>确定;放弃;刷新;查询;新增;存档</SIM>
+        <HKG>確定;取消;更新;查詢;新增;存檔</HKG>
+        <JPN>ok;cancel;refresh;query;add;apply</JPN>
+        <LAN1>ok;cancel;refresh;query;add;apply</LAN1>
+        <LAN1>ok;cancel;refresh;query;add;apply</LAN1>
+        <LAN2>ok;cancel;refresh;query;add;apply</LAN2>
+        <LAN3>ok;cancel;refresh;query;add;apply</LAN3>
+      </ButtonName>
+    </InfoRefVal>
+    <DefaultValidate>
+      <DeplicateWarning>
+        <ENG>Data has already been existed!</ENG>
+        <TRA>此資料已經存在!</TRA>
+        <SIM>数据已经存在!</SIM>
+        <HKG>此資料已經存在!</HKG>
+        <JPN>Data has already been existed!</JPN>
+        <LAN1>Data has already been existed!</LAN1>
+        <LAN1>Data has already been existed!</LAN1>
+        <LAN2>Data has already been existed!</LAN2>
+        <LAN3>Data has already been existed!</LAN3>
+      </DeplicateWarning>
+      <msg_DefaultValidateCheckNull>
+        <ENG>Can not Null in {0}</ENG>
+        <TRA>欄位-{0}-內容不能為空白</TRA>
+        <SIM>字段-{0}-值不能为空</SIM>
+        <HKG>欄位{0}內容不能為空白</HKG>
+        <JPN>Can not Null in {0} </JPN>
+        <LAN1>Can not Null in {0} </LAN1>
+        <LAN2>Can not Null in {0} </LAN2>
+        <LAN3>Can not Null in {0} </LAN3>
+      </msg_DefaultValidateCheckNull>
+      <msg_DefaultValidateCheckRange>
+        <ENG>Field{0} is valued by range from {1} to {2}</ENG>
+        <TRA>欄位-{0}-內容被限制於{1}到{2}之間</TRA>
+        <SIM>字段-{0}-的值被限定于{1}到{2}之间</SIM>
+        <HKG>欄位-{0}-內容被限制於{1}到{2}之間</HKG>
+        <JPN>Field({0}) is valued by range from {1} to {2}</JPN>
+        <LAN1>Field({0}) is valued by range from {1} to {2}</LAN1>
+        <LAN2>Field({0}) is valued by range from {1} to {2}</LAN2>
+        <LAN3>Field({0}) is valued by range from {1} to {2}</LAN3>
+      </msg_DefaultValidateCheckRange>
+      <msg_DefaultValidateCheckRangeFrom>
+        <ENG>Field({0}) is valued by range limited to more than {1}</ENG>
+        <TRA>欄位-{0}-內容被限制於大于等于{1}</TRA>
+        <SIM>字段-{0}-的值被限定于大于等于{1}</SIM>
+        <HKG>欄位-{0}-內容被限制於大于等于{1}</HKG>
+        <JPN>Field({0}) is valued by range limited to more than {1}</JPN>
+        <LAN1>Field({0}) is valued by range limited to more than {1}</LAN1>
+        <LAN2>Field({0}) is valued by range limited to more than {1}</LAN2>
+        <LAN3>Field({0}) is valued by range limited to more than {1}</LAN3>
+      </msg_DefaultValidateCheckRangeFrom>
+      <msg_DefaultValidateCheckRangeTo>
+        <ENG>Field({0}) is valued by range limited to less than {1}</ENG>
+        <TRA>欄位-{0}-內容被限制於小于等于{1}</TRA>
+        <SIM>字段-{0}-的值被限定于小于等于{1}</SIM>
+        <HKG>欄位-{0}-內容被限制於小于等于{1}</HKG>
+        <JPN>Field({0}) is valued by range limited to less than {1}</JPN>
+        <LAN1>Field({0}) is valued by range limited to less than {1}</LAN1>
+        <LAN2>Field({0}) is valued by range limited to less than {1}</LAN2>
+        <LAN3>Field({0}) is valued by range limited to less than {1}</LAN3>
+      </msg_DefaultValidateCheckRangeTo>
+      <msg_DefaultValidateCheckMethod>
+        <ENG>has not passed the check!</ENG>
+        <TRA>資料檢核沒有通過</TRA>
+        <SIM>没有通过检验</SIM>
+        <HKG>資料檢核沒有通過</HKG>
+        <JPN>has not passed the check!</JPN>
+        <LAN1>has not passed the check!</LAN1>
+        <LAN2>has not passed the check!</LAN2>
+        <LAN3>has not passed the check!</LAN3>
+      </msg_DefaultValidateCheckMethod>
+      <msg_DefalutValuePropertyIsError>
+        <ENG>The 'DefaultValue' property is error</ENG>
+        <TRA>'DefaultValue'屬性有誤</TRA>
+        <SIM>'DefaultValue'属性有误</SIM>
+        <HKG>'DefaultValue'屬性有誤</HKG>
+        <JPN>The 'DefaultValue' property is error</JPN>
+        <LAN1>The 'DefaultValue' property is error</LAN1>
+        <LAN2>The 'DefaultValue' property is error</LAN2>
+        <LAN3>The 'DefaultValue' property is error</LAN3>
+      </msg_DefalutValuePropertyIsError>
+      <msg_DefMethodNotFound>
+        <ENG>"{0}" function not found</ENG>
+        <TRA>沒有發現"{0}"方法</TRA>
+        <SIM>没有发现"{0}"方法</SIM>
+        <HKG>沒有發現"{0}"方法</HKG>
+        <JPN>"{0}" function not found</JPN>
+        <LAN1>"{0}" function not found</LAN1>
+        <LAN2>"{0}" function not found</LAN2>
+        <LAN3>"{0}" function not found</LAN3>
+      </msg_DefMethodNotFound>
+      <msg_ValidMethodNotFound>
+        <ENG>"{0}" function not found. Function's return value must be a type of bool.</ENG>
+        <TRA>沒有發現"{0}"方法, 函數傳回值必須是一個bool, 函數也必須只有一個參數</TRA>
+        <SIM>没有发现"{0}"方法.函数返回值必须是一个bool,函数必须只有一个参数</SIM>
+        <HKG>沒有發現"{0}"方法, 函數傳回值必須是一個bool, 函數也必須只有一個參數</HKG>
+        <JPN>"{0}" function not found. Function's return value must be a type of bool.</JPN>
+        <LAN1>"{0}" function not found. Function's return value must be a type of bool.</LAN1>
+        <LAN2>"{0}" function not found. Function's return value must be a type of bool.</LAN2>
+        <LAN3>"{0}" function not found. Function's return value must be a type of bool.</LAN3>
+      </msg_ValidMethodNotFound>
+    </DefaultValidate>
+    <InfoBindingSource>
+      <msg_CloseProtect>
+        <ENG>Value has been changed. please save them, and then try to close the form.</ENG>
+        <TRA>資料已被異動中, 請按確認或取消才能退出編輯!</TRA>
+        <SIM>数据已被更改，请保存后再退出!</SIM>
+        <HKG>資料已被異動中, 請按確認或取消才能退出編輯!</HKG>
+        <JPN>Value has been changed. please save them, and then try to close the form.</JPN>
+        <LAN1>Value has been changed. please save them, and then try to close the form.</LAN1>
+        <LAN2>Value has been changed. please save them, and then try to close the form.</LAN2>
+        <LAN3>Value has been changed. please save them, and then try to close the form.</LAN3>
+      </msg_CloseProtect>
+      <rightToAdd>
+        <ENG>have no right to add...</ENG>
+        <TRA>查無新增權限</TRA>
+        <SIM>查无新增权限</SIM>
+        <HKG>查無新增權限</HKG>
+        <JPN>have no right to add...</JPN>
+        <LAN1>have no right to add...</LAN1>
+        <LAN2>have no right to add...</LAN2>
+        <LAN3>have no right to add...</LAN3>
+      </rightToAdd>
+      <rightToDelete>
+        <ENG>have no right to delete...</ENG>
+        <TRA>查無刪除權限</TRA>
+        <SIM>查无删除权限</SIM>
+        <HKG>查無刪除權限</HKG>
+        <JPN>have no right to delete...</JPN>
+        <LAN1>have no right to delete...</LAN1>
+        <LAN2>have no right to delete...</LAN2>
+        <LAN3>have no right to delete...</LAN3>
+      </rightToDelete>
+      <rightToUpdate>
+        <ENG>have no right to update...</ENG>
+        <TRA>查無修改權限</TRA>
+        <SIM>查无修改权限</SIM>
+        <HKG>查無修改權限</HKG>
+        <JPN>have no right to update...</JPN>
+        <LAN1>have no right to update...</LAN1>
+        <LAN2>have no right to update...</LAN2>
+        <LAN3>have no right to update...</LAN3>
+      </rightToUpdate>
+      <rightToPrint>
+        <ENG>have no right to print...</ENG>
+        <TRA>查無列印權限</TRA>
+        <SIM>查无打印权限</SIM>
+        <HKG>查無列印權限</HKG>
+        <JPN>have no right to print...</JPN>
+        <LAN1>have no right to print...</LAN1>
+        <LAN2>have no right to print...</LAN2>
+        <LAN3>have no right to print...</LAN3>
+      </rightToPrint>
+    </InfoBindingSource>
+    <InfoSecurity>
+      <IsNull>
+        <ENG>Null value is not acceptable in {0}!</ENG>
+        <TRA>{0}資料不允許空白</TRA>
+        <SIM>{0}不允许有空值</SIM>
+        <HKG>{0}資料不允許空白</HKG>
+        <JPN>Null value is not acceptable in {0}!</JPN>
+        <LAN1>Null value is not acceptable in {0}!</LAN1>
+        <LAN2>Null value is not acceptable in {0}!</LAN2>
+        <LAN3>Null value is not acceptable in {0}!</LAN3>
+      </IsNull>
+      <IsUpdate>
+        <ENG>Update completed !</ENG>
+        <TRA>更新完成</TRA>
+        <SIM>更新完成</SIM>
+        <HKG>更新完成</HKG>
+        <JPN>Update completed !</JPN>
+        <LAN1>Update completed !</LAN1>
+        <LAN2>Update completed !</LAN2>
+        <LAN3>Update completed !</LAN3>
+      </IsUpdate>
+      <IsChooseGroup>
+        <ENG>Please choose "Group" first !</ENG>
+        <TRA>請先選擇一個群組</TRA>
+        <SIM>请先选择一个群组</SIM>
+        <HKG>請先選擇一個群組</HKG>
+        <JPN>Please choose "Group" first !</JPN>
+        <LAN1>Please choose "Group" first !</LAN1>
+        <LAN2>Please choose "Group" first !</LAN2>
+        <LAN3>Please choose "Group" first !</LAN3>
+      </IsChooseGroup>
+      <IsChooseMenu>
+        <ENG>Please choose "Menu" first !</ENG>
+        <TRA>請先選擇一個功能表單</TRA>
+        <SIM>请先选择一个菜单</SIM>
+        <HKG>請先選擇一個功能表單</HKG>
+        <JPN>Please choose "Menu" first !</JPN>
+        <LAN1>Please choose "Menu" first !</LAN1>
+        <LAN2>Please choose "Menu" first !</LAN2>
+        <LAN3>Please choose "Menu" first !</LAN3>
+      </IsChooseMenu>
+      <IsChooseUser>
+        <ENG>Please choose "User" first !</ENG>
+        <TRA>請先選擇一個使用者帳號</TRA>
+        <SIM>请先选择一个用户</SIM>
+        <HKG>請先選擇一個使用者帳號</HKG>
+        <JPN>Please choose "User" first !</JPN>
+        <LAN1>Please choose "User" first !</LAN1>
+        <LAN2>Please choose "User" first !</LAN2>
+        <LAN3>Please choose "User" first !</LAN3>
+      </IsChooseUser>
+      <IsDBAlias>
+        <ENG>DBAlias can't be null!</ENG>
+        <TRA>DBAlias不能空白！</TRA>
+        <SIM>DBAlias不能为空！</SIM>
+        <HKG>DBAlias不能空白！</HKG>
+        <JPN>DBAlias can't be null!</JPN>
+        <LAN1>DBAlias can't be null!</LAN1>
+        <LAN2>DBAlias can't be null!</LAN2>
+        <LAN3>DBAlias can't be null!</LAN3>
+      </IsDBAlias>
+    </InfoSecurity>
+    <UPWDControl>
+      <LabelName>
+        <ENG>User ID:;User Name:;Old Password:;New Password:;Confirm Password:</ENG>
+        <TRA>用戶ID：;用戶名：;原密碼：;新密碼：;確認密碼：</TRA>
+        <SIM>用户ID：;用户名：;原密码：;新密码：;确认密码：</SIM>
+        <HKG>用戶ID：;用戶名：;原密碼：;新密碼：;確認密碼：</HKG>
+        <JPN>User ID:;User Name:;Old Password:;New Password:;Confirm Password:</JPN>
+        <LAN1>User ID:;User Name:;Old Password:;New Password:;Confirm Password:</LAN1>
+        <LAN2>User ID:;User Name:;Old Password:;New Password:;Confirm Password:</LAN2>
+        <LAN3>User ID:;User Name:;Old Password:;New Password:;Confirm Password:</LAN3>
+      </LabelName>
+      <OldPasswordErrorMessage>
+        <ENG>Old password is wrong! Please check your old password and enter it again!</ENG>
+        <TRA>原密碼錯誤！請確認您的原密碼后，重新再輸入一次！</TRA>
+        <SIM>原密码错误！请确认您的原密码后，重新再输入一次！</SIM>
+        <HKG>原密碼錯誤！請確認您的原密碼后，重新再輸入一次！</HKG>
+        <JPN>Old password is wrong! Please check your old password and enter it again!</JPN>
+        <LAN1>Old password is wrong! Please check your old password and enter it again!</LAN1>
+        <LAN2>Old password is wrong! Please check your old password and enter it again!</LAN2>
+        <LAN3>Old password is wrong! Please check your old password and enter it again!</LAN3>
+      </OldPasswordErrorMessage>
+      <NewPasswordErrorMessage>
+        <ENG>Confirm password doesn't fit to new password! Please enter again!</ENG>
+        <TRA>確認密碼與新密碼不符！請重新再輸入一次！</TRA>
+        <SIM>确认密码与新密码不符！请重新再输入一次！</SIM>
+        <HKG>確認密碼與新密碼不符！請重新再輸入一次！</HKG>
+        <JPN>Confirm password doesn't fit to new password! Please enter again!</JPN>
+        <LAN1>Confirm password doesn't fit to new password! Please ente again!</LAN1>
+        <LAN2>Confirm password doesn't fit to new password! Please enter again!</LAN2>
+        <LAN3>Confirm password doesn't fit to new password! Please enter again!</LAN3>
+      </NewPasswordErrorMessage>
+      <ChangeSucceed>
+        <ENG>Password change succeed!</ENG>
+        <TRA>密碼更改成功！</TRA>
+        <SIM>密码更改成功！</SIM>
+        <HKG>密碼更改成功！</HKG>
+        <JPN>Password change succeed!</JPN>
+        <LAN1>Password change succeed!</LAN1>
+        <LAN2>Password change succeed!</LAN2>
+        <LAN3>Password change succeed!</LAN3>
+      </ChangeSucceed>
+    </UPWDControl>
+    <EEPNetAutoRun>
+      <LabelName>
+        <ENG>Test Users:;Test Modules:;Interval:;Log to:;Choose XML:</ENG>
+        <TRA>使用者數：;表單數量：;間隔時間：;記錄檔名：;選擇參數檔案：</TRA>
+        <SIM>用户个数：;窗体个数：;间隔时间：;记录文档：;选择环境文件：</SIM>
+        <HKG>使用者數：;表單數量：;間隔時間：;記錄檔名：;選擇參數檔案：</HKG>
+        <JPN>Test Users:;Test Modules:;Interval:;Log to:;Choose XML:</JPN>
+        <LAN1>Test Users:;Test Modules:;Interval:;Log to:;Choose XML:</LAN1>
+        <LAN2>Test Users:;Test Modules:;Interval:;Log to:;Choose XML:</LAN2>
+        <LAN3>Test Users:;Test Modules:;Interval:;Log to:;Choose XML:</LAN3>
+      </LabelName>
+    </EEPNetAutoRun>
+    <EEPNetRunStep>
+      <LabelName>
+        <ENG>User ID:;Password:;DataBase:;Solution:;Package Name:;Form Name:;Times:</ENG>
+        <TRA>使用者ID：;密碼：;資料庫名：;方案名稱：;Package Name：;表單名稱：;執行次數：</TRA>
+        <SIM>用户ID：;密码：;数据库名：;项目名称：;Package Name：;窗体名称：;执行次数：</SIM>
+        <HKG>使用者ID：;密碼：;資料庫名：;方案名稱：;Package Name：;表單名稱：;執行次數：</HKG>
+        <JPN>User ID:;Password:;DataBase:;Solution:;Package Name:;Form Name:;Times:</JPN>
+        <LAN1>User ID:;Password:;DataBase:;Solution:;Package Name:;Form Name:;Times:</LAN1>
+        <LAN2>User ID:;Password:;DataBase:;Solution:;Package Name:;Form Name:;Times:</LAN2>
+        <LAN3>User ID:;Password:;DataBase:;Solution:;Package Name:;Form Name:;Times:</LAN3>
+      </LabelName>
+    </EEPNetRunStep>
+    <InfoClientMove>
+      <iskeyMatchColumn>
+        <ENG>Null is not allowed in KeyMatchColumn !</ENG>
+        <TRA>在KeyMatchColumn中不允許空白！</TRA>
+        <SIM>在KeyMatchColumn中不允许有空值！</SIM>
+        <HKG>在KeyMatchColumn中不允許空白</HKG>
+        <JPN>Null is not allowed in KeyMatchColumn !</JPN>
+        <LAN1>Null is not allowed in KeyMatchColumn !</LAN1>
+        <LAN2>Null is not allowed in KeyMatchColumn !</LAN2>
+        <LAN3>Null is not allowed in KeyMatchColumn !</LAN3>
+      </iskeyMatchColumn>
+      <ismatchColumn>
+        <ENG>Null is not allowed in MatchColumn !</ENG>
+        <TRA>在MatchColumn中不允許空白！</TRA>
+        <SIM>在MatchColumn中不允许有空值！</SIM>
+        <HKG>在MatchColumn中不允許空白！</HKG>
+        <JPN>Null is not allowed in MatchColumn !</JPN>
+        <LAN1>Null is not allowed in MatchColumn !</LAN1>
+        <LAN2>Null is not allowed in MatchColumn !</LAN2>
+        <LAN3>Null is not allowed in MatchColumn !</LAN3>
+      </ismatchColumn>
+      <isBindingSorce>
+        <ENG>Please check the SrcBindingSorce and DestBindingSorce is setted or not !</ENG>
+        <TRA>請檢查SrcBindingSorce和DestBindingSorce是否已經設定！</TRA>
+        <SIM>请检查SrcBindingSorce和DestBindingSorce是否已经设定！</SIM>
+        <HKG>請檢查SrcBindingSorce和DestBindingSorce是否已經設定！</HKG>
+        <JPN>Please check the SrcBindingSorce and DestBindingSorce is setted or not !</JPN>
+        <LAN1>Please check the SrcBindingSorce and DestBindingSorce is setted or not !</LAN1>
+        <LAN2>Please check the SrcBindingSorce and DestBindingSorce is setted or not !</LAN2>
+        <LAN3>Please check the SrcBindingSorce and DestBindingSorce is setted or not !</LAN3>
+      </isBindingSorce>
+    </InfoClientMove>
+    <WebValidate>
+      <DeplicateWarning>
+        <ENG>Data has already been existed!</ENG>
+        <TRA>本資料已經存在!</TRA>
+        <SIM>数据已经存在!</SIM>
+        <HKG>本資料已經存在!</HKG>
+        <JPN>Data has already been existed!</JPN>
+        <LAN1>Data has already been existed!</LAN1>
+        <LAN1>Data has already been existed!</LAN1>
+        <LAN2>Data has already been existed!</LAN2>
+        <LAN3>Data has already been existed!</LAN3>
+      </DeplicateWarning>
+      <msg_WebValidateCheckNull>
+        <ENG>Can not Null in {0}</ENG>
+        <TRA>欄位-{0}-內容不能為空白</TRA>
+        <SIM>字段-{0}-值不能为空</SIM>
+        <HKG>欄位-{0}-內容不能為空白</HKG>
+        <JPN>Can not Null in {0} </JPN>
+        <LAN1>Can not Null in {0} </LAN1>
+        <LAN2>Can not Null in {0} </LAN2>
+        <LAN3>Can not Null in {0} </LAN3>
+      </msg_WebValidateCheckNull>
+      <msg_WebValidateCheckRange>
+        <ENG>field {0} is Valued by range from {1} to {2}</ENG>
+        <TRA>欄位-{0}-內容被限制於{1}到{2}之間</TRA>
+        <SIM>字段-{0}-的值被限定于{1}到{2}之间</SIM>
+        <HKG>欄位-{0}-內容被限制於{1}到{2}之間</HKG>
+        <JPN>field {0} is Valued by range from {1} to {2}</JPN>
+        <LAN1>field {0} is Valued by range from {1} to {2}</LAN1>
+        <LAN2>field {0} is Valued by range from {1} to {2}</LAN2>
+        <LAN3>field {0} is Valued by range from {1} to {2}</LAN3>
+      </msg_WebValidateCheckRange>
+      <msg_WebValidateCheckRangeFrom>
+        <ENG>Field({0}) is valued by range limited to more than {1}</ENG>
+        <TRA>欄位-{0}-內容被限制於大于等于{1}</TRA>
+        <SIM>字段-{0}-的值被限定于大于等于{1}</SIM>
+        <HKG>欄位-{0}-內容被限制於大于等于{1}</HKG>
+        <JPN>Field({0}) is valued by range limited to more than {1}</JPN>
+        <LAN1>Field({0}) is valued by range limited to more than {1}</LAN1>
+        <LAN2>Field({0}) is valued by range limited to more than {1}</LAN2>
+        <LAN3>Field({0}) is valued by range limited to more than {1}</LAN3>
+      </msg_WebValidateCheckRangeFrom>
+      <msg_WebValidateCheckRangeTo>
+        <ENG>Field({0}) is valued by range limited to less than {1}</ENG>
+        <TRA>欄位-{0}-內容被限制於小于等于{1}</TRA>
+        <SIM>字段-{0}-的值被限定于小于等于{1}</SIM>
+        <HKG>欄位-{0}-內容被限制於小于等于{1}</HKG>
+        <JPN>Field({0}) is valued by range limited to less than {1}</JPN>
+        <LAN1>Field({0}) is valued by range limited to less than {1}</LAN1>
+        <LAN2>Field({0}) is valued by range limited to less than {1}</LAN2>
+        <LAN3>Field({0}) is valued by range limited to less than {1}</LAN3>
+      </msg_WebValidateCheckRangeTo>
+      <Error_Msg>
+        <ENG>field {0} has not passed the check!</ENG>
+        <TRA>欄位-{0}-没有通過檢核</TRA>
+        <SIM>字段-{0}-没有通过检验</SIM>
+        <HKG>欄位-{0}-没有通過檢核</HKG>
+        <JPN>field {0} has not passed the check!</JPN>
+        <LAN1>field {0} has not passed the check!</LAN1>
+        <LAN2>field {0} has not passed the check!</LAN2>
+        <LAN3>field {0} has not passed the check!</LAN3>
+      </Error_Msg>
+      <msg_WebValidateMaxCharactor>
+        <ENG>The length of Field({0}) is limited to less than {1} letters</ENG>
+        <TRA>欄位-{0}-的長度被限制於小于等于{1}個字符</TRA>
+        <SIM>字段-{0}-的长度被限定于小于等于{1}个字符</SIM>
+        <HKG>欄位-{0}-的長度被限制於小于等于{1}個字符</HKG>
+        <JPN>The length of Field({0}) is limited to less than {1} letters</JPN>
+        <LAN1>The length of Field({0}) is limited to less than {1} letters</LAN1>
+        <LAN2>The length of Field({0}) is limited to less than {1} letters</LAN2>
+        <LAN3>The length of Field({0}) is limited to less than {1} letters</LAN3>
+      </msg_WebValidateMaxCharactor>
+      <msg_WebValidateMinCharactor>
+        <ENG>The length of Field({0}) is limited to more than {1} letters</ENG>
+        <TRA>欄位-{0}-的長度被限制於大于等于{1}個字符</TRA>
+        <SIM>字段-{0}-的长度被限定于大于等于{1}个字符</SIM>
+        <HKG>欄位-{0}-的長度被限制於大于等于{1}個字符</HKG>
+        <JPN>The length of Field({0}) is limited to more than {1} letters</JPN>
+        <LAN1>The length of Field({0}) is limited to more than {1} letters</LAN1>
+        <LAN2>The length of Field({0}) is limited to more than {1} letters</LAN2>
+        <LAN3>The length of Field({0}) is limited to more than {1} letters</LAN3>
+      </msg_WebValidateMinCharactor>
+      <msg_WebValidateNumericOnly>
+        <ENG>Field({0}) is only allowed Numeric</ENG>
+        <TRA>欄位-{0}-只能輸入數字</TRA>
+        <SIM>字段-{0}-只能输入数字</SIM>
+        <HKG>欄位-{0}-只能輸入數字</HKG>
+        <JPN>Field({0}) is only allowed Numeric</JPN>
+        <LAN1>Field({0}) is only allowed Numeric</LAN1>
+        <LAN2>Field({0}) is only allowed Numeric</LAN2>
+        <LAN3>Field({0}) is only allowed Numeric</LAN3>
+      </msg_WebValidateNumericOnly>
+      <msg_WebValidateNumericOnly>
+        <ENG>Field({0}) is only allowed Positive Integer</ENG>
+        <TRA>欄位-{0}-只能輸入正整數</TRA>
+        <SIM>字段-{0}-只能输入正整数</SIM>
+        <HKG>欄位-{0}-只能輸入正整數</HKG>
+        <JPN>Field({0}) is only allowed Positive Integer</JPN>
+        <LAN1>Field({0}) is only allowed Positive Integer</LAN1>
+        <LAN2>Field({0}) is only allowed Positive Integer</LAN2>
+        <LAN3>Field({0}) is only allowed Positive Integer</LAN3>
+      </msg_WebValidateNumericOnly>
+      <msg_WebValidateFixedCharactor>
+        <ENG>The length of Field({0}) is limited to {1} letters</ENG>
+        <TRA>欄位-{0}-的長度被限制於{1}個字符</TRA>
+        <SIM>字段-{0}-的长度被限定于{1}个字符</SIM>
+        <HKG>欄位-{0}-的長度被限制於{1}個字符</HKG>
+        <JPN>The length of Field({0}) is limited to {1} letters</JPN>
+        <LAN1>The length of Field({0}) is limited to {1} letters</LAN1>
+        <LAN2>The length of Field({0}) is limited to {1} letters</LAN2>
+        <LAN3>The length of Field({0}) is limited to {1} letters</LAN3>
+      </msg_WebValidateFixedCharactor>
+      <msg_WebValidateEmail>
+        <ENG>The e-mail address entered in Field({0}) is not allowed</ENG>
+        <TRA>欄位-{0}-中輸入的信箱地址不正確</TRA>
+        <SIM>字段-{0}-中输入的信箱地址不正确</SIM>
+        <HKG>欄位-{0}-中輸入的信箱地址不正確</HKG>
+        <JPN>The e-mail address entered in Field({0}) is not allowed</JPN>
+        <LAN1>The e-mail address entered in Field({0}) is not allowed</LAN1>
+        <LAN2>The e-mail address entered in Field({0}) is not allowed</LAN2>
+        <LAN3>The e-mail address entered in Field({0}) is not allowed</LAN3>
+      </msg_WebValidateEmail>
+      <msg_WebValidateIDNo>
+        <ENG>Identity id entered in Field({0}) is not allowed</ENG>
+        <TRA>欄位-{0}-中輸入的身份證信息有誤</TRA>
+        <SIM>字段-{0}-中输入的身份证信息有误</SIM>
+        <HKG>欄位-{0}-中輸入的身份證信息有誤</HKG>
+        <JPN>Identity id entered in Field({0}) is not allowed</JPN>
+        <LAN1>Identity id entered in Field({0}) is not allowed</LAN1>
+        <LAN2>Identity id entered in Field({0}) is not allowed</LAN2>
+        <LAN3>Identity id entered in Field({0}) is not allowed</LAN3>
+      </msg_WebValidateIDNo>
+      <msg_WebValidateDateCheck>
+        <ENG>Date entered in Field({0}) is not allowed, the regular format is {1}.</ENG>
+        <TRA>欄位-{0}-中輸入的日期格式有誤，正確的格式為{1}</TRA>
+        <SIM>字段-{0}-中输入的日期格式有误，正确的格式是{1}</SIM>
+        <HKG>欄位-{0}-中輸入的日期格式有誤，正確的格式為{1}</HKG>
+        <JPN>Date entered in Field({0}) is not allowed, the regular format is {1}.</JPN>
+        <LAN1>Date entered in Field({0}) is not allowed, the regular format is {1}.</LAN1>
+        <LAN2>Date entered in Field({0}) is not allowed, the regular format is {1}.</LAN2>
+        <LAN3>Date entered in Field({0}) is not allowed, the regular format is {1}.</LAN3>
+      </msg_WebValidateDateCheck>
+    </WebValidate>
+    <InfoNavigator>
+      <NavText>
+        <ENG>First;Previous;Next;Last;Add;Delete;Edit;Ok;Cancel;Apply;Abort;Refresh;Query;Print;Export;of {0};Submit;Approve;Return;Reject;Notify;Delete;Plus;Pause;Comment</ENG>
+        <TRA>首筆;上筆;下筆;末筆;新增;刪除;更改;確定;取消;存檔;放棄;更新;查詢;列印;輸出;共{0}筆;呈送;審核;退回;作廢;通知;删除工作流;加簽;暫停;查看</TRA>
+        <SIM>首笔;上笔;下笔;末笔;新增;删除;更改;确定;取消;存档;放弃;更新;查询;打印;输出;共{0}笔;呈送;审核;退回;作废;通知;删除工作流;加签;暂停;查看</SIM>
+        <HKG>首筆;上筆;下筆;末筆;新增;刪除;更改;確定;取消;存檔;放棄;更新;查詢;列印;輸出;共{0}筆;呈送;審核;退回;作廢;通知;删除工作流;加簽;暫停;查看</HKG>
+        <JPN>First;Previous;Next;Last;Add;Delete;Edit;Ok;Cancel;Apply;Abort;Refresh;Query;Print;Export;of {0};Submit;Approve;Return;Reject;Notify;Delete;Plus;Pause;Comment</JPN>
+        <LAN1>First;Previous;Next;Last;Add;Delete;Edit;Ok;Cancel;Apply;Abort;Refresh;Query;Print;Export;of {0};Submit;Approve;Return;Reject;Notify;Delete;Plus;Pause;Comment</LAN1>
+        <LAN2>First;Previous;Next;Last;Add;Delete;Edit;Ok;Cancel;Apply;Abort;Refresh;Query;Print;Export;of {0};Submit;Approve;Return;Reject;Notify;Delete;Plus;Pause;Comment</LAN2>
+        <LAN3>First;Previous;Next;Last;Add;Delete;Edit;Ok;Cancel;Apply;Abort;Refresh;Query;Print;Export;of {0};Submit;Approve;Return;Reject;Notify;Delete;Plus;Pause;Comment</LAN3>
+      </NavText>
+      <NavStates>
+        <ENG>Initial;Browsed;Inserting;Editing;Applying;Changing;Querying;Printing</ENG>
+        <TRA>起始;瀏覽;新增中;編輯中;存檔中;已改變;查詢中;列印中</TRA>
+        <SIM>初始;浏览;新增中;编辑中;存档中;已改变;查询中;打印中</SIM>
+        <HKG>起始;瀏覽;新增中;編輯中;存檔中;已改變;查詢中;列印中</HKG>
+        <JPN>Initial;Browsed;Inserting;Editing;Applying;Changing;Querying;Printing</JPN>
+        <LAN1>Initial;Browsed;Inserting;Editing;Applying;Changing;Querying;Printing</LAN1>
+        <LAN2>Initial;Browsed;Inserting;Editing;Applying;Changing;Querying;Printing</LAN2>
+        <LAN3>Initial;Browsed;Inserting;Editing;Applying;Changing;Querying;Printing</LAN3>
+      </NavStates>
+      <ButtonName>
+        <ENG>ok;cancel</ENG>
+        <TRA>確定;取消</TRA>
+        <SIM>确定;放弃</SIM>
+        <HKG>確定;取消</HKG>
+        <JPN>ok;cancel</JPN>
+        <LAN1>ok;cancel</LAN1>
+        <LAN1>ok;cancel</LAN1>
+        <LAN2>ok;cancel</LAN2>
+        <LAN3>ok;cancel</LAN3>
+      </ButtonName>
+      <sureDeleteText>
+        <ENG>Are you sure to delete current record?</ENG>
+        <TRA>確定要刪除這筆資料嗎？</TRA>
+        <SIM>确定要删除这条记录吗？</SIM>
+        <HKG>確定要刪除這筆資料嗎？</HKG>
+        <JPN>Are you sure to delete current record?</JPN>
+        <LAN1>Are you sure to delete current record?</LAN1>
+        <LAN1>Are you sure to delete current record?</LAN1>
+        <LAN2>Are you sure to delete current record?</LAN2>
+        <LAN3>Are you sure to delete current record?</LAN3>
+      </sureDeleteText>
+      <sureInsertText>
+        <ENG>Are you sure to insert record?</ENG>
+        <TRA>確定要新增這筆資料？</TRA>
+        <SIM>确定要新增这条记录吗？</SIM>
+        <HKG>確定要新增這筆資料？</HKG>
+        <JPN>Are you sure to insert record?</JPN>
+        <LAN1>Are you sure to insert record?</LAN1>
+        <LAN1>Are you sure to insert record?</LAN1>
+        <LAN2>Are you sure to insert record?</LAN2>
+        <LAN3>Are you sure to insert record?</LAN3>
+      </sureInsertText>
+      <sureAborText>
+        <ENG>Are you sure to abort?</ENG>
+        <TRA>確定要放棄更改？</TRA>
+        <SIM>确定要放弃更改吗？</SIM>
+        <HKG>確定要放棄更改？</HKG>
+        <JPN>Are you sure to abort?</JPN>
+        <LAN1>Are you sure to abort?</LAN1>
+        <LAN1>Are you sure to abort?</LAN1>
+        <LAN2>Are you sure to abort?</LAN2>
+        <LAN3>Are you sure to abort?</LAN3>
+      </sureAborText>
+      <QueryFormTitle>
+        <ENG>Query</ENG>
+        <TRA>查詢</TRA>
+        <SIM>查询</SIM>
+        <HKG>查詢</HKG>
+        <JPN>Query</JPN>
+        <LAN1>Query</LAN1>
+        <LAN1>Query</LAN1>
+        <LAN2>Query</LAN2>
+        <LAN3>Query</LAN3>
+      </QueryFormTitle>
+    </InfoNavigator>
+    <InfoStatusStrip>
+      <StripMsg>
+        <ENG>UserID:;User:;Date:;Alias:;Module:;Site:;Count:;Solution Name:</ENG>
+        <TRA>使用者:;姓名:;日期:;資料庫:;方案:;公司別:;筆數:;方案名:</TRA>
+        <SIM>用户号:;姓名:;日期:;数据库:;工程:;公司类別:;笔数:;工程名:</SIM>
+        <HKG>使用者:;姓名:;日期:;資料庫:;方案:;公司別:;笔数:;方案名:</HKG>
+        <JPN>UserID:;User:;Date:;Alias:;Module:;Site:;Count:;Solution Name:</JPN>
+        <LAN1>UserID:;User:;Date:;Alias:;Module:;Site:;Count:;Solution Name:</LAN1>
+        <LAN2>UserID:;User:;Date:;Alias:;Module:;Site:;Count:;Solution Name:</LAN2>
+        <LAN3>UserID:;User:;Date:;Alias:;Module:;Site:;Count:;Solution Name:</LAN3>
+      </StripMsg>
+    </InfoStatusStrip>
+    <AutoTest>
+      <LogError>
+        <ENG>The file which you wanted to log is not exist!</ENG>
+        <TRA>你所要Log的檔案不存在！</TRA>
+        <SIM>你所要Log的文件不存在！</SIM>
+        <HKG>你所要Log的檔案不存在！</HKG>
+        <JPN>The file which you wanted to log is not exist!</JPN>
+        <LAN1>The file which you wanted to log is not exist!</LAN1>
+        <LAN2>The file which you wanted to log is not exist!</LAN2>
+        <LAN3>The file which you wanted to log is not exist!</LAN3>
+      </LogError>
+      <KeyFieldNull>
+        <ENG>Your detail's KeyFiled can't be null!</ENG>
+        <TRA>Detail的KeyField不能為空白！</TRA>
+        <SIM>Detail的KeyField不能为空！</SIM>
+        <HKG>Detail的KeyField不能為空白！</HKG>
+        <JPN>Your detail's KeyFiled can't be null!</JPN>
+        <LAN1>Your detail's KeyFiled can't be null!</LAN1>
+        <LAN2>Your detail's KeyFiled can't be null!</LAN2>
+        <LAN3>Your detail's KeyFiled can't be null!</LAN3>
+      </KeyFieldNull>
+      <msg_AutoTestPropertyIsError>
+        <ENG>The 'AutoTest' property is error</ENG>
+        <TRA>'AutoTest'屬性有誤</TRA>
+        <SIM>'AutoTest'属性有误</SIM>
+        <HKG>'AutoTest'屬性有誤</HKG>
+        <JPN>The 'AutoTest' property is error</JPN>
+        <LAN1>The 'AutoTest' property is error</LAN1>
+        <LAN2>The 'AutoTest' property is error</LAN2>
+        <LAN3>The 'AutoTest' property is error</LAN3>
+      </msg_AutoTestPropertyIsError>
+      <msg_DefMethodNotFound>
+        <ENG>"{0}" function not found</ENG>
+        <TRA>沒有發現"{0}"方法</TRA>
+        <SIM>没有发现"{0}"方法</SIM>
+        <HKG>沒有發現"{0}"方法</HKG>
+        <JPN>"{0}" function not found</JPN>
+        <LAN1>"{0}" function not found</LAN1>
+        <LAN2>"{0}" function not found</LAN2>
+        <LAN3>"{0}" function not found</LAN3>
+      </msg_DefMethodNotFound>
+    </AutoTest>
+    <UGControl>
+      <Caption_User>
+        <ENG>User ID;UserName;Agent;Created Date;Description;Email Address;User Style;MSAD;IsRole;PWD</ENG>
+        <TRA>用戶編號;用戶姓名;代理人;建立日期;說明;電子郵件;帳戶類型;AD用戶;角色;密碼</TRA>
+        <SIM>用户编号;用户名;代理;建立日期;说明;电子邮件;帐户类型;AD用户;角色;密码</SIM>
+        <HKG>用戶編號;用戶姓名;代理人;建立日期;說明;電子郵件;帳戶類型;AD用戶;角色;密碼</HKG>
+        <JPN>User ID;UserName;Agent;Created Date;Description;Email Address;User Style;MSAD;IsRole;PWD</JPN>
+        <LAN1>User ID;UserName;Agent;Created Date;Description;Email Address;User Style;MSAD;IsRole;PWD</LAN1>
+        <LAN2>User ID;UserName;Agent;Created Date;Description;Email Address;User Style;MSAD;IsRole;PWD</LAN2>
+        <LAN3>User ID;UserName;Agent;Created Date;Description;Email Address;User Style;MSAD;IsRole;PWD</LAN3>
+      </Caption_User>
+      <Caption_Group>
+        <ENG>Group ID;Group Name;Description;MSAD;IsRole</ENG>
+        <TRA>部門編號;群組名稱;說明;AD組;角色</TRA>
+        <SIM>部门编号;组名;说明;AD组;角色</SIM>
+        <HKG>部門編號;群組名稱;說明;AD組;角色</HKG>
+        <JPN>Group ID;Group Name;Description;MSAD</JPN>
+        <LAN1>Group ID;Group Name;Description;MSAD</LAN1>
+        <LAN2>Group ID;Group Name;Description;MSAD</LAN2>
+        <LAN3>Group ID;Group Name;Description;MSAD</LAN3>
+      </Caption_Group>
+      <Caption_Relations>
+        <ENG>Users</ENG>
+        <TRA>用戶</TRA>
+        <SIM>用户</SIM>
+        <HKG>用戶</HKG>
+        <JPN>Users</JPN>
+        <LAN1>Users</LAN1>
+        <LAN2>Users</LAN2>
+        <LAN3>Users</LAN3>
+      </Caption_Relations>
+      <Caption_Users>
+        <ENG>Unchecked User;Choosed Users</ENG>
+        <TRA>未選擇用戶;已選擇用戶</TRA>
+        <SIM>未选择用户;已选择用户</SIM>
+        <HKG>未選擇用戶;已選擇用戶</HKG>
+        <JPN>Unchecked User;Choosed Users</JPN>
+        <LAN1>Unchecked User;Choosed Users</LAN1>
+        <LAN2>Unchecked User;Choosed Users</LAN2>
+        <LAN3>Unchecked User;Choosed Users</LAN3>
+      </Caption_Users>
+      <SecRoleAgent>
+        <ENG>only role group can set agent!</ENG>
+        <TRA>必須為角色才能設定代理!</TRA>
+        <SIM>必须为角色才能设定代理!</SIM>
+        <HKG>必須為角色才能設定代理!</HKG>
+        <JPN>only role group can set agent!</JPN>
+        <LAN1>only role group can set agent!</LAN1>
+        <LAN2>only role group can set agent!</LAN2>
+        <LAN3>only role group can set agent!</LAN3>
+      </SecRoleAgent>
+      <PasswordLength>
+        <ENG>PWD' length must between {0}to{1}</ENG>
+        <TRA>密碼的長度須為{0}-{1}字符</TRA>
+        <SIM>密码的长度须为{0}-{1}字符</SIM>
+        <HKG>密碼的長度須為{0}-{1}字符</HKG>
+        <JPN>PWD' length must between {0}to{1}</JPN>
+        <LAN1>PWD' length must between {0}to{1}</LAN1>
+        <LAN2>PWD' length must between {0}to{1}</LAN2>
+        <LAN3>PWD' length must between {0}to{1}</LAN3>
+      </PasswordLength>
+      <PasswordCharCheck>
+        <ENG>PWD can ONLY contain LETTER and NUMBER.</ENG>
+        <TRA>密碼中含有非字母和數字</TRA>
+        <SIM>密码中含有非字母和数字</SIM>
+        <HKG>密碼中含有非字母和數字</HKG>
+        <JPN>PWD can ONLY contain LETTER and NUMBER.</JPN>
+        <LAN1>PWD can ONLY contain LETTER and NUMBER.</LAN1>
+        <LAN2>PWD can ONLY contain LETTER and NUMBER.</LAN2>
+        <LAN3>PWD can ONLY contain LETTER and NUMBER.</LAN3>
+      </PasswordCharCheck>
+      <PasswordCharNum>
+        <ENG>PWD must contain LETTER and NUMBER.</ENG>
+        <TRA>密碼必須英數混合</TRA>
+        <SIM>密码必须英数混合</SIM>
+        <HKG>密碼必須英數混合</HKG>
+        <JPN>PWD must contain LETTER and NUMBER.</JPN>
+        <LAN1>PWD must contain LETTER and NUMBER.</LAN1>
+        <LAN2>PWD must contain LETTER and NUMBER.</LAN2>
+        <LAN3>PWD must contain LETTER and NUMBER.</LAN3>
+      </PasswordCharNum>
+    </UGControl>
+    <WebGridView>
+      <Confirm_Delete>
+        <ENG>Are you sure you want to delete this record?</ENG>
+        <TRA>確定刪除此資料嗎？</TRA>
+        <SIM>确定删除此记录吗？</SIM>
+        <HKG>確定刪除此資料嗎？</HKG>
+        <JPN>Are you sure you want to delete this record?</JPN>
+        <LAN1>Are you sure you want to delete this record?</LAN1>
+        <LAN2>Are you sure you want to delete this record?</LAN2>
+        <LAN3>Are you sure you want to delete this record?</LAN3>
+      </Confirm_Delete>
+      <ButtonName>
+        <ENG>Edit;Delete;Select;Update;Cancel</ENG>
+        <TRA>編輯;刪除;選擇;更新;傳回</TRA>
+        <SIM>编辑;删除;选中;更新;返回</SIM>
+        <HKG>編輯;刪除;選擇;更新;傳回</HKG>
+        <JPN>Edit;Delete;Select;Update;Cancel</JPN>
+        <LAN1>Edit;Delete;Select;Update;Cancel</LAN1>
+        <LAN2>Edit;Delete;Select;Update;Cancel</LAN2>
+        <LAN3>Edit;Delete;Select;Update;Cancel</LAN3>
+      </ButtonName>
+      <ControlText>
+        <ENG>add;query;apply;abort;insert;cancel</ENG>
+        <TRA>新增;查詢;存檔;放棄;新增;取消</TRA>
+        <SIM>新增;查询;存档;放弃;新增;取消</SIM>
+        <HKG>新增;查詢;存檔;放棄;新增;取消</HKG>
+        <JPN>add;query;apply;abort;insert;cancel</JPN>
+        <LAN1>add;query;apply;abort;insert;cancel</LAN1>
+        <LAN1>add;query;apply;abort;insert;cancel</LAN1>
+        <LAN2>add;query;apply;abort;insert;cancel</LAN2>
+        <LAN3>add;query;apply;abort;insert;cancel</LAN3>
+      </ControlText>
+      <EmptyText>
+        <ENG>data empty</ENG>
+        <TRA>查無任何資料...</TRA>
+        <SIM>空数据..</SIM>
+        <HKG>查無任何資料...</HKG>
+        <JPN>data empty</JPN>
+        <LAN1>data empty</LAN1>
+        <LAN1>data empty</LAN1>
+        <LAN2>data empty</LAN2>
+        <LAN3>data empty</LAN3>
+      </EmptyText>
+    </WebGridView>
+    <WebDetailsView>
+      <ButtonName>
+        <ENG>Edit;Delete;Add;Update;Cancel</ENG>
+        <TRA>編輯;刪除;新增;更新;傳回</TRA>
+        <SIM>编辑;删除;新增;更新;返回</SIM>
+        <HKG>編輯;刪除;新增;更新;傳回</HKG>
+        <JPN>Edit;Delete;Add;Update;Cancel</JPN>
+        <LAN1>Edit;Delete;Add;Update;Cancel</LAN1>
+        <LAN2>Edit;Delete;Add;Update;Cancel</LAN2>
+        <LAN3>Edit;Delete;Add;Update;Cancel</LAN3>
+      </ButtonName>
+      <ControlText>
+        <ENG>apply;abort;query</ENG>
+        <TRA>存檔;放棄;查詢</TRA>
+        <SIM>存档;放弃;查询</SIM>
+        <HKG>存檔;放棄;查詢</HKG>
+        <JPN>apply;abort;query</JPN>
+        <LAN1>apply;abort;query</LAN1>
+        <LAN1>apply;abort;query</LAN1>
+        <LAN2>apply;abort;query</LAN2>
+        <LAN3>apply;abort;query</LAN3>
+      </ControlText>
+    </WebDetailsView>
+    <InfoDataGridView>
+      <SureDelete>
+        <ENG>Are you sure to delete the current row?</ENG>
+        <TRA>確定刪除此資料嗎？</TRA>
+        <SIM>确定删除此记录？</SIM>
+        <HKG>確定刪除此資料嗎？</HKG>
+        <JPN>Are you sure to delete the current row?</JPN>
+        <LAN1>Are you sure to delete the current row?</LAN1>
+        <LAN1>Are you sure to delete the current row?</LAN1>
+        <LAN2>Are you sure to delete the current row?</LAN2>
+        <LAN3>Are you sure to delete the current row?</LAN3>
+      </SureDelete>
+    </InfoDataGridView>
+    <WebNavigator>
+      <ButtonName>
+        <ENG>ok;cancel</ENG>
+        <TRA>確定;取消</TRA>
+        <SIM>确定;放弃</SIM>
+        <HKG>確定;取消</HKG>
+        <JPN>ok;cancel</JPN>
+        <LAN1>ok;cancel</LAN1>
+        <LAN2>ok;cancel</LAN2>
+        <LAN3>ok;cancel</LAN3>
+      </ButtonName>
+      <ControlText>
+        <ENG>first;previous;next;last;add;update;delete;ok;cancel;apply;abort;query;print;export</ENG>
+        <TRA>首筆;上筆;下筆;末筆;新增;更改;刪除;確認;取消;存檔;放棄;查詢;列印;輸出</TRA>
+        <SIM>首笔;上笔;下笔;末笔;新增;更改;删除;确定;取消;存档;放弃;查询;打印;输出</SIM>
+        <HKG>首筆;上筆;下筆;末筆;新增;更改;刪除;確認;取消;存檔;放棄;查詢;列印;輸出</HKG>
+        <JPN>first;previous;next;last;add;update;delete;ok;cancel;apply;abort;query;print;export</JPN>
+        <LAN1>first;previous;next;last;add;update;delete;ok;cancel;apply;abort;query;print;export</LAN1>
+        <LAN2>first;previous;next;last;add;update;delete;ok;cancel;apply;abort;query;print;export</LAN2>
+        <LAN3>first;previous;next;last;add;update;delete;ok;cancel;apply;abort;query;print;export</LAN3>
+      </ControlText>
+      <StatesName>
+        <ENG>Editing;Inserting;Browsing;Changed;ApplySucess;ApplyFail;Aborted</ENG>
+        <TRA>編輯中;新增中;瀏覽中;已變更;存檔成功;存檔失敗;放棄存檔</TRA>
+        <SIM>编辑中;新增中;浏览中;已变更;存档成功;存档失败;放弃存档</SIM>
+        <HKG>編輯中;新增中;瀏覽中;已變更;存檔成功;存檔失敗;放棄存檔</HKG>
+        <JPN>Editing;Inserting;Browsing;Changed;ApplySucess;ApplyFail;Aborted</JPN>
+        <LAN1>Editing;Inserting;Browsing;Changed;ApplySucess;ApplyFail;Aborted</LAN1>
+        <LAN2>Editing;Inserting;Browsing;Changed;ApplySucess;ApplyFail;Aborted</LAN2>
+        <LAN3>Editing;Inserting;Browsing;Changed;ApplySucess;ApplyFail;Aborted</LAN3>
+      </StatesName>
+      <sureDeleteText>
+        <ENG>Are you sure to delete current record?</ENG>
+        <TRA>確定要刪除這筆資料嗎？</TRA>
+        <SIM>确定要删除这条记录吗？</SIM>
+        <HKG>確定要刪除這筆資料嗎？</HKG>
+        <JPN>Are you sure to delete current record?</JPN>
+        <LAN1>Are you sure to delete current record?</LAN1>
+        <LAN1>Are you sure to delete current record?</LAN1>
+        <LAN2>Are you sure to delete current record?</LAN2>
+        <LAN3>Are you sure to delete current record?</LAN3>
+      </sureDeleteText>
+    </WebNavigator>
+    <WebRefVal>
+      <ButtonName>
+        <ENG>query;refresh;ok;cancel;add</ENG>
+        <TRA>查詢;更新;確定;取消;新增</TRA>
+        <SIM>查询;刷新;确定;取消;新增</SIM>
+        <HKG>查詢;更新;確定;取消;新增</HKG>
+        <JPN>query;refresh;ok;cancel;add</JPN>
+        <LAN1>query;refresh;ok;cancel;add</LAN1>
+        <LAN2>query;refresh;ok;cancel;add</LAN2>
+        <LAN3>query;refresh;ok;cancel;add</LAN3>
+      </ButtonName>
+      <CheckDataMessage>
+        <ENG>{0}.value + ' is not exist!'</ENG>
+        <TRA>{0}.value + '不存在!'</TRA>
+        <SIM>{0}.value + '不存在!'</SIM>
+        <HKG>{0}.value + '不存在!'</HKG>
+        <JPN>{0}.value + ' is not exist!'</JPN>
+        <LAN1>{0}.value + ' is not exist!'</LAN1>
+        <LAN2>{0}.value + ' is not exist!'</LAN2>
+        <LAN3>{0}.value + ' is not exist!'</LAN3>
+      </CheckDataMessage>
+    </WebRefVal>
+    <frmRefValQuery>
+      <FormName>
+        <ENG>Query</ENG>
+        <TRA>進階查詢</TRA>
+        <SIM>进阶查询</SIM>
+        <HKG>進階查詢</HKG>
+        <JPN>Query</JPN>
+        <LAN1>Query</LAN1>
+        <LAN2>Query</LAN2>
+        <LAN3>Query</LAN3>
+      </FormName>
+    </frmRefValQuery>
+    <WebDateTimePicker>
+      <DateTimeValidate>
+        <ENG>The date time which you have inputed in is incorrect</ENG>
+        <TRA>您輸入的日期有誤!</TRA>
+        <SIM>您输入的日期不合法!</SIM>
+        <HKG>您輸入的日期有誤!</HKG>
+        <JPN>The date time which you have inputed in is incorrect</JPN>
+        <LAN1>The date time which you have inputed in is incorrect</LAN1>
+        <LAN2>The date time which you have inputed in is incorrect</LAN2>
+        <LAN3>The date time which you have inputed in is incorrect</LAN3>
+      </DateTimeValidate>
+      <DateValues>
+        <ENG>year;month</ENG>
+        <TRA>年;月</TRA>
+        <SIM>年;月</SIM>
+        <HKG>年;月</HKG>
+        <JPN>year;month</JPN>
+        <LAN1>year;month</LAN1>
+        <LAN2>year;month</LAN2>
+        <LAN3>year;month</LAN3>
+      </DateValues>
+    </WebDateTimePicker>
+    <WebDropDownList>
+      <EmptyData>
+        <ENG>---please select---</ENG>
+        <TRA>---請選擇---</TRA>
+        <SIM>---请选择---</SIM>
+        <HKG>---請選擇---</HKG>
+        <JPN>---please select---</JPN>
+        <LAN1>---please select---</LAN1>
+        <LAN2>---please select---</LAN2>
+        <LAN3>---please select---</LAN3>
+      </EmptyData>
+    </WebDropDownList>
+    <MultiLanguage>
+      <languages>
+        <ENG>English;ChineseTra;ChineseSim;ChineseHK;Japanese;Korean;Other Language1;Other Language2</ENG>
+        <TRA>英文;中文繁體;中文簡體;中文香港;日文;韓文;其他語言1;其他語言2</TRA>
+        <SIM>英文;中文繁体;中文简体;中文香港;日文;韩文;其他语言1;其他语言2</SIM>
+        <HKG>英文;中文繁體;中文簡體;中文香港;日文;韓文;其他語言1;其他語言2</HKG>
+        <JPN>English;ChineseTra;ChineseSim;ChineseHK;Japanese;Korean;Other Language1;Other Language2</JPN>
+        <LAN1>English;ChineseTra;ChineseSim;ChineseHK;Japanese;Korean;Other Language1;Other Language2</LAN1>
+        <LAN2>English;ChineseTra;ChineseSim;ChineseHK;Japanese;Korean;Other Language1;Other Language2</LAN2>
+        <LAN3>English;ChineseTra;ChineseSim;ChineseHK;Japanese;Korean;Other Language1;Other Language2</LAN3>
+      </languages>
+    </MultiLanguage>
+    <WebDataSource>
+      <rightToAdd>
+        <ENG>have no right to add...</ENG>
+        <TRA>查無新增權限</TRA>
+        <SIM>查无新增权限</SIM>
+        <HKG>查無新增權限</HKG>
+        <JPN>have no right to add...</JPN>
+        <LAN1>have no right to add...</LAN1>
+        <LAN2>have no right to add...</LAN2>
+        <LAN3>have no right to add...</LAN3>
+      </rightToAdd>
+      <InsertedNotApply>
+        <ENG>You must first apply.</ENG>
+        <TRA>你必須先存檔</TRA>
+        <SIM>你必须先提交</SIM>
+        <HKG>你必須先存檔</HKG>
+        <JPN>You must first apply master.</JPN>
+        <LAN1>You must first apply master.</LAN1>
+        <LAN2>You must first apply master.</LAN2>
+        <LAN3>You must first apply master.</LAN3>
+      </InsertedNotApply>
+      <DataMemberIsNull>
+        <ENG>WebDataSource's DataMember is null.</ENG>
+        <TRA>WebDataSource的DataMember為null。</TRA>
+        <SIM>WebDataSource的DataMember为null。</SIM>
+        <HKG>WebDataSource的DataMember為null。</HKG>
+        <JPN>WebDataSource's DataMember is null.</JPN>
+        <LAN1>WebDataSource's DataMember is null.</LAN1>
+        <LAN2>WebDataSource's DataMember is null.</LAN2>
+        <LAN3>WebDataSource's DataMember is null.</LAN3>
+      </DataMemberIsNull>
+      <NotInitializeComponent>
+        <ENG>Not InitializeComponent on page load.</ENG>
+        <TRA>在Page_Load時沒有執行InitializeComponent方法。</TRA>
+        <SIM>在Page_Load时没有执行InitializeComponent方法。</SIM>
+        <HKG>在Page_Load時沒有執行InitializeComponent方法。</HKG>
+        <JPN>Not InitializeComponent on page load.</JPN>
+        <LAN1>Not InitializeComponent on page load.</LAN1>
+        <LAN2>Not InitializeComponent on page load.</LAN2>
+        <LAN3>Not InitializeComponent on page load.</LAN3>
+      </NotInitializeComponent>
+      <rightToDelete>
+        <ENG>have no right to delete...</ENG>
+        <TRA>查無刪除權限</TRA>
+        <SIM>查无删除权限</SIM>
+        <HKG>查無刪除權限</HKG>
+        <JPN>have no right to delete...</JPN>
+        <LAN1>have no right to delete...</LAN1>
+        <LAN2>have no right to delete...</LAN2>
+        <LAN3>have no right to delete...</LAN3>
+      </rightToDelete>
+      <rightToUpdate>
+        <ENG>have no right to update...</ENG>
+        <TRA>查無修改權限</TRA>
+        <SIM>查无修改权限</SIM>
+        <HKG>查無修改權限</HKG>
+        <JPN>have no right to update...</JPN>
+        <LAN1>have no right to update...</LAN1>
+        <LAN2>have no right to update...</LAN2>
+        <LAN3>have no right to update...</LAN3>
+      </rightToUpdate>
+      <rightToPrint>
+        <ENG>have no right to print...</ENG>
+        <TRA>查無列印權限</TRA>
+        <SIM>查无打印权限</SIM>
+        <HKG>查無列印權限</HKG>
+        <JPN>have no right to print...</JPN>
+        <LAN1>have no right to print...</LAN1>
+        <LAN2>have no right to print...</LAN2>
+        <LAN3>have no right to print...</LAN3>
+      </rightToPrint>
+    </WebDataSource>
+    <WebDateTimeViewer>
+      <Text>
+        <ENG>Year;Month;Previous;Next;Sun;Mon;Tue;Wed;Thu;Fri;Sat</ENG>
+        <TRA>年;月;上月;下月;日;一;二;三;四;五;六</TRA>
+        <SIM>年;月;上月;下月;日;一;二;三;四;五;六</SIM>
+        <HKG>年;月;上月;下月;日;一;二;三;四;五;六</HKG>
+        <JPN>Year;Month;Previous;Next;Sun;Mon;Tue;Wed;Thu;Fri;Sat</JPN>
+        <LAN1>Year;Month;Previous;Next;Sun;Mon;Tue;Wed;Thu;Fri;Sat</LAN1>
+        <LAN2>Year;Month;Previous;Next;Sun;Mon;Tue;Wed;Thu;Fri;Sat</LAN2>
+        <LAN3>Year;Month;Previous;Next;Sun;Mon;Tue;Wed;Thu;Fri;Sat</LAN3>
+      </Text>
+    </WebDateTimeViewer>
+    <WebTreeView>
+      <Caption>
+        <ENG>Key;Parent;Text</ENG>
+        <TRA>編號;上層目錄;名稱</TRA>
+        <SIM>编号;上层目录;名称</SIM>
+        <HKG>編號;上層目錄;名稱</HKG>
+        <JPN>Key;Parent;Text</JPN>
+        <LAN1>Key;Parent;Text</LAN1>
+        <LAN2>Key;Parent;Text</LAN2>
+        <LAN3>Key;Parent;Text</LAN3>
+      </Caption>
+    </WebTreeView>
+    <QueryTranslate>
+      <Operator>
+        <ENG>is equal to {0}; is not equal to {0}; is greater than {0}; is less than {0}; is not less than {0}; is not greater than {0}; begins with {0}; is like {0};is in ({0})</ENG>
+        <TRA>等於{0};不等於{0};大於{0};小於{0};大於等於{0};小於等於{0};近乎於{0};包含{0}; 存在於({0})</TRA>
+        <SIM>等于{0};不等于{0};大于{0};小于{0};不小于{0};不大于{0};类似于{0};包含于{0};存在于({0})</SIM>
+        <HKG>等於{0};不等於{0};大於{0};小於{0};大於等於{0};小於等於{0};近乎於{0};包含{0}; 存在於({0})</HKG>
+        <JPN>is equal to {0}; is not equal to {0}; is greater than {0}; is less than {0}; is not less than {0}; is not greater than {0}; begins with {0}; is like {0};is in ({0})</JPN>
+        <LAN1>is equal to {0}; is not equal to {0}; is greater than {0}; is less than {0}; is not less than {0}; is not greater than {0}; begins with {0}; is like {0};is in ({0})</LAN1>
+        <LAN2>is equal to {0}; is not equal to {0}; is greater than {0}; is less than {0}; is not less than {0}; is not greater than {0}; begins with {0}; is like {0};is in ({0})</LAN2>
+        <LAN3>is equal to {0}; is not equal to {0}; is greater than {0}; is less than {0}; is not less than {0}; is not greater than {0}; begins with {0}; is like {0};is in ({0})</LAN3>
+      </Operator>
+      <Condition>
+        <ENG> and ; or </ENG>
+        <TRA>而且;或者</TRA>
+        <SIM>而且;或者</SIM>
+        <HKG>而且;或者</HKG>
+        <JPN> and ; or </JPN>
+        <LAN1> and ; or </LAN1>
+        <LAN2> and ; or </LAN2>
+        <LAN3> and ; or </LAN3>
+      </Condition>
+      <Empty>
+        <ENG> is null</ENG>
+        <TRA>為空</TRA>
+        <SIM>为空</SIM>
+        <HKG>為空</HKG>
+        <JPN> is null</JPN>
+        <LAN1> is null</LAN1>
+        <LAN2> is null</LAN2>
+        <LAN3> is null</LAN3>
+      </Empty>
+    </QueryTranslate>
+    <WebListBoxList>
+      <ButtonCaption>
+        <ENG>Select All;UnSelect All;OK;Cancel</ENG>
+        <TRA>全選;全不選;確定;取消</TRA>
+        <SIM>全选;全不选;确定;取消</SIM>
+        <HKG>全選;全不選;確定;取消</HKG>
+        <JPN>Select All;UnSelect All;OK;Cancel</JPN>
+        <LAN1>Select All;UnSelect All;OK;Cancel</LAN1>
+        <LAN2>Select All;UnSelect All;OK;Cancel</LAN2>
+        <LAN3>Select All;UnSelect All;OK;Cancel</LAN3>
+      </ButtonCaption>
+    </WebListBoxList>
+    <InfoDateTimeBox>
+      <DateTimePart>
+        <ENG>year,month,day,hour,minute,second</ENG>
+        <TRA>年份,月份,日期,小時,分鐘,秒</TRA>
+        <SIM>年份,月份,日期,小时,分钟,秒</SIM>
+        <HKG>年份,月份,日期,小時,分鐘,秒</HKG>
+        <JPN>year,month,day,hour,minute,second</JPN>
+        <LAN1>year,month,day,hour,minute,second</LAN1>
+        <LAN2>year,month,day,hour,minute,second</LAN2>
+        <LAN3>year,month,day,hour,minute,second</LAN3>
+      </DateTimePart>
+      <DateTimeError>
+        <ENG>The range of {0} is {1} - {2}</ENG>
+        <TRA>{0}應輸入{1} - {2}</TRA>
+        <SIM>{0}应输入{1} - {2}</SIM>
+        <HKG>{0}應輸入{1} - {2}</HKG>
+        <JPN>The range of {0} is {1} - {2}</JPN>
+        <LAN1>The range of {0} is {1} - {2}</LAN1>
+        <LAN2>The range of {0} is {1} - {2}</LAN2>
+        <LAN3>The range of {0} is {1} - {2}</LAN3>
+      </DateTimeError>
+    </InfoDateTimeBox>
+    <frmAgent>
+      <UITexts>
+        <ENG>agent,flow description,start date,start time,end date,end time,parallel agent,remark,role id, role name</ENG>
+        <TRA>代理者,指定流程,起始日期,起始時間,終止日期,終止時間,平行代理,說明,角色代號,角色名稱</TRA>
+        <SIM>代理者,指定流程,起始日期,起始时间,终止日期,终止时间,平行代理,说明,角色代号,角色名称</SIM>
+        <HKG>代理者,指定流程,起始日期,起始時間,終止日期,終止時間,平行代理,說明,角色代號,角色名稱</HKG>
+        <JPN>agent,flow description,start date,start time,end date,end time,parallel agent,remark,role id, role name</JPN>
+        <LAN1>agent,flow description,start date,start time,end date,end time,parallel agent,remark,role id, role name</LAN1>
+        <LAN2>agent,flow description,start date,start time,end date,end time,parallel agent,remark,role id, role name</LAN2>
+        <LAN3>agent,flow description,start date,start time,end date,end time,parallel agent,remark,role id, role name</LAN3>
+      </UITexts>
+    </frmAgent>
+    <CliUtils>
+      <TotalString>
+        <TRA>零;壹;貳;參;肆;伍;陸;柒;捌;玖;拾;佰;仟;萬;億;點</TRA>
+        <SIM>零;壹;贰;叁;肆;伍;陆;柒;捌;玖;拾;佰;仟;万;亿;点</SIM>
+      </TotalString>
+    </CliUtils>
+    <EEPException>
+      <SourceDescription>
+        <ENG>The Component of {0} {1} throw an exception, </ENG>
+        <TRA>{0}元件{1}發生錯誤,</TRA>
+        <SIM>{0}组件{1}发生错误,</SIM>
+        <HKG>{0}元件{1}發生錯誤,</HKG>
+        <JPN>The Component of {0} {1} throw an exception, </JPN>
+        <LAN1>The Component of {0} {1} throw an exception, </LAN1>
+        <LAN2>The Component of {0} {1} throw an exception, </LAN2>
+        <LAN3>The Component of {0} {1} throw an exception, </LAN3>
+      </SourceDescription>
+      <ArgumentNull>
+        <ENG>argument of {2} can not be null</ENG>
+        <TRA>參數:{2}的值不能為空</TRA>
+        <SIM>参数:{2}的值不能为空</SIM>
+        <HKG>參數:{2}的值不能為空</HKG>
+        <JPN>argument of {2} can not be null</JPN>
+        <LAN1>argument of {2} can not be null</LAN1>
+        <LAN2>argument of {2} can not be null</LAN2>
+        <LAN3>argument of {2} can not be null</LAN3>
+      </ArgumentNull>
+      <ArgumentInvalid>
+        <ENG>argument of {2} valued {3} is invalid</ENG>
+        <TRA>參數:{2}的值{3}無效</TRA>
+        <SIM>参数:{2}的值{3}无效</SIM>
+        <HKG>參數:{2}的值{3}無效</HKG>
+        <JPN>argument of {2} valued {3} is invalid</JPN>
+        <LAN1>argument of {2} valued {3} is invalid</LAN1>
+        <LAN2>argument of {2} valued {3} is invalid</LAN2>
+        <LAN3>argument of {2} valued {3} is invalid</LAN3>
+      </ArgumentInvalid>
+      <ColumnNotFound>
+        <ENG>column of {2} can not be found</ENG>
+        <TRA>無法找到欄位:{2}</TRA>
+        <SIM>无法找到字段:{2}</SIM>
+        <HKG>無法找到欄位:{2}</HKG>
+        <JPN>column of {2} can not be found</JPN>
+        <LAN1>column of {2} can not be found</LAN1>
+        <LAN2>column of {2} can not be found</LAN2>
+        <LAN3>column of {2} can not be found</LAN3>
+      </ColumnNotFound>
+      <ColumnTypeInvalid>
+        <ENG>type of column of {2} valued {3} is invalid</ENG>
+        <TRA>欄位:{2}的類型{3}無效</TRA>
+        <SIM>字段:{2}的类型{3}无效</SIM>
+        <HKG>欄位:{2}的類型{3}無效</HKG>
+        <JPN>type of column of {2} valued {3} is invalid</JPN>
+        <LAN1>type of column of {2} valued {3} is invalid</LAN1>
+        <LAN2>type of column of {2} valued {3} is invalid</LAN2>
+        <LAN3>type of column of {2} valued {3} is invalid</LAN3>
+      </ColumnTypeInvalid>
+      <ColumnValueNotFound>
+        <ENG>value of column of {2} can not be found</ENG>
+        <TRA>無法找到欄位:{2}的值</TRA>
+        <SIM>无法找到字段:{2}的值</SIM>
+        <HKG>無法找到欄位:{2}的值</HKG>
+        <JPN>value of column of {2} can not be found</JPN>
+        <LAN1>value of column of {2} can not be found</LAN1>
+        <LAN2>value of column of {2} can not be found</LAN2>
+        <LAN3>value of column of {2} can not be found</LAN3>
+      </ColumnValueNotFound>
+      <ControlNotFound>
+        <ENG>component of {2} {3} can not be found</ENG>
+        <TRA>無法找到{2}元件{3}</TRA>
+        <SIM>无法找到{2}组件{3}</SIM>
+        <HKG>無法找到{2}元件{3}</HKG>
+        <JPN>component of {2} {3} can not be found</JPN>
+        <LAN1>component of {2} {3} can not be found</LAN1>
+        <LAN2>component of {2} {3} can not be found</LAN2>
+        <LAN3>component of {2} {3} can not be found</LAN3>
+      </ControlNotFound>
+      <ControlTypeNotMatch>
+        <ENG>type of component {3} should be {2}</ENG>
+        <TRA>元件{3}的類型應該是{2}</TRA>
+        <SIM>组件{3}的类型应该是{2}</SIM>
+        <HKG>元件{3}的類型應該是{2}</HKG>
+        <JPN>type of component {3} should be {2}</JPN>
+        <LAN1>type of component {3} should be {2}</LAN1>
+        <LAN2>type of component {3} should be {2}</LAN2>
+        <LAN3>type of component {3} should be {2}</LAN3>
+      </ControlTypeNotMatch>
+      <ControlNotInitial>
+        <ENG>component {2} has not been initialized</ENG>
+        <TRA>元件{2}尚未初始化</TRA>
+        <SIM>组件{2}尚未初始化</SIM>
+        <HKG>元件{2}尚未初始化</HKG>
+        <JPN>component {2} has not been initialized</JPN>
+        <LAN1>component {2} has not been initialized</LAN1>
+        <LAN2>component {2} has not been initialized</LAN2>
+        <LAN3>component {2} has not been initialized</LAN3>
+      </ControlNotInitial>
+      <DataBaseNotDefined>
+        <ENG>database of {2} has not been defined</ENG>
+        <TRA>資料庫:{2}沒有定義</TRA>
+        <SIM>数据库:{2}没有定义</SIM>
+        <HKG>資料庫:{2}沒有定義</HKG>
+        <JPN>database of {2} has not been defined</JPN>
+        <LAN1>database of {2} has not been defined</LAN1>
+        <LAN2>database of {2} has not been defined</LAN2>
+        <LAN3>database of {2} has not been defined</LAN3>
+      </DataBaseNotDefined>
+      <PropertyNull>
+        <ENG>property of {2} can not be null</ENG>
+        <TRA>屬性:{2}的值不能為空</TRA>
+        <SIM>属性:{2}的值不能为空</SIM>
+        <HKG>屬性:{2}的值不能為空</HKG>
+        <JPN>property of {2} can not be null</JPN>
+        <LAN1>property of {2} can not be null</LAN1>
+        <LAN2>property of {2} can not be null</LAN2>
+        <LAN3>property of {2} can not be null</LAN3>
+      </PropertyNull>
+      <PropertyInvalid>
+        <ENG>property of {2} valued {3} is invalid</ENG>
+        <TRA>屬性:{2}的值{3}無效</TRA>
+        <SIM>属性:{2}的值{3}无效</SIM>
+        <HKG>屬性:{2}的值{3}無效</HKG>
+        <JPN>property of {2} valued {3} is invalid</JPN>
+        <LAN1>property of {2} valued {3} is invalid</LAN1>
+        <LAN2>property of {2} valued {3} is invalid</LAN2>
+        <LAN3>property of {2} valued {3} is invalid</LAN3>
+      </PropertyInvalid>
+      <PropertyNotSupported>
+        <ENG>property of {2} not supported</ENG>
+        <TRA>不支援屬性:{2}</TRA>
+        <SIM>不支持属性:{2}</SIM>
+        <HKG>不支援屬性:{2}</HKG>
+        <JPN>property of {2} not supported</JPN>
+        <LAN1>property of {2} not supported</LAN1>
+        <LAN2>property of {2} not supported</LAN2>
+        <LAN3>property of {2} not supported</LAN3>
+      </PropertyNotSupported>
+      <MethodNotSupported>
+        <ENG>method of {2} not supported</ENG>
+        <TRA>不支援方法:{2}</TRA>
+        <SIM>不支持方法:{2}</SIM>
+        <HKG>不支援方法:{2}</HKG>
+        <JPN>method of {2} not supported</JPN>
+        <LAN1>method of {2} not supported</LAN1>
+        <LAN2>method of {2} not supported</LAN2>
+        <LAN3>method of {2} not supported</LAN3>
+      </MethodNotSupported>
+    </EEPException>
+  </Srvtools>
+  <GLModule>
+  </GLModule>
+  <AjaxTools>
+    <ExtModelPanel>
+      <UIText>
+        <ENG>Submit,Cancel</ENG>
+        <TRA>提交,取消</TRA>
+        <SIM>提交,取消</SIM>
+        <HKG>提交,取消</HKG>
+        <JPN>Submit,Cancel</JPN>
+        <LAN1>Submit,Cancel</LAN1>
+        <LAN2>Submit,Cancel</LAN2>
+        <LAN3>Submit,Cancel</LAN3>
+      </UIText>
+    </ExtModelPanel>
+    <ExtGrid>
+      <NonSelectToEdit>
+        <ENG>Please select a single row to edit!</ENG>
+        <TRA>請選中要編輯的行!</TRA>
+        <SIM>请选中要编辑的行!</SIM>
+        <HKG>請選中要編輯的行!</HKG>
+        <JPN>Please select a single row to edit!</JPN>
+        <LAN1>Please select a single row to edit!</LAN1>
+        <LAN2>Please select a single row to edit!</LAN2>
+        <LAN3>Please select a single row to edit!</LAN3>
+      </NonSelectToEdit>
+      <NonSelectToDelete>
+        <ENG>Please select a single row to delete!</ENG>
+        <TRA>請選中要刪除的行!</TRA>
+        <SIM>请选中要删除的行!</SIM>
+        <HKG>請選中要刪除的行!</HKG>
+        <JPN>Please select a single row to delete!</JPN>
+        <LAN1>Please select a single row to delete!</LAN1>
+        <LAN2>Please select a single row to delete!</LAN2>
+        <LAN3>Please select a single row to delete!</LAN3>
+      </NonSelectToDelete>
+      <SureDelete>
+        <ENG>Are you sure to delete current record?</ENG>
+        <TRA>確定要刪除這筆資料嗎?</TRA>
+        <SIM>确定要删除这条记录吗?</SIM>
+        <HKG>確定要刪除這筆資料嗎?</HKG>
+        <JPN>Are you sure to delete current record?</JPN>
+        <LAN1>Are you sure to delete current record?</LAN1>
+        <LAN1>Are you sure to delete current record?</LAN1>
+        <LAN2>Are you sure to delete current record?</LAN2>
+        <LAN3>Are you sure to delete current record?</LAN3>
+      </SureDelete>
+      <EmptyMsg>
+        <ENG>there is no record!</ENG>
+        <TRA>沒有數據!</TRA>
+        <SIM>没有数据!</SIM>
+        <HKG>沒有數據!</HKG>
+        <JPN>there is no record!</JPN>
+        <LAN1>there is no record!</LAN1>
+        <LAN2>there is no record!</LAN2>
+        <LAN3>there is no record!</LAN3>
+      </EmptyMsg>
+      <DisplayMsg>
+        <ENG>display from {0} to {1}, total:{2}</ENG>
+        <TRA>顯示第{0}筆到第{1}筆, 共:{2}筆</TRA>
+        <SIM>显示第{0}笔到第{1}笔, 共:{2}笔</SIM>
+        <HKG>顯示第{0}筆到第{1}筆, 共:{2}筆</HKG>
+        <JPN>display from {0} to {1}, total:{2}</JPN>
+        <LAN1>display from {0} to {1}, total:{2}</LAN1>
+        <LAN2>display from {0} to {1}, total:{2}</LAN2>
+        <LAN3>display from {0} to {1}, total:{2}</LAN3>
+      </DisplayMsg>
+      <ToolItems>
+        <ENG>add,edit,delete,save,abort,refresh,query,ok,cancel,save personal,load personal</ENG>
+        <TRA>新增,更改,刪除,存檔,撤銷,更新,查詢,確認,取消,保存個人設置,載入個人設置</TRA>
+        <SIM>新增,编辑,删除,保存,撤销,刷新,查询,确认,取消,保存个人设置,加载个人设置</SIM>
+        <HKG>新增,更改,刪除,存檔,撤銷,更新,查詢,確認,取消,保存個人設置,載入個人設置</HKG>
+        <JPN>add,edit,delete,save,abort,refresh,query,ok,cancel,save personal,load personal</JPN>
+        <LAN1>add,edit,delete,save,abort,refresh,query,ok,cancel,save personal,load personal</LAN1>
+        <LAN2>add,edit,delete,save,abort,refresh,query,ok,cancel,save personal,load personal</LAN2>
+        <LAN3>add,edit,delete,save,abort,refresh,query,ok,cancel,save personal,load personal</LAN3>
+      </ToolItems>
+      <ValidAlphaMsg>
+        <ENG>This field should only contain letters</ENG>
+        <TRA>此欄位只允許輸入字母</TRA>
+        <SIM>此栏位只允许输入字母</SIM>
+        <HKG>此欄位只允許輸入字母</HKG>
+        <JPN>This field should only contain letters</JPN>
+        <LAN1>This field should only contain letters</LAN1>
+        <LAN2>This field should only contain letters</LAN2>
+        <LAN3>This field should only contain letters</LAN3>
+      </ValidAlphaMsg>
+      <ValidAlphaNumMsg>
+        <ENG>This field should only contain letters, numbers</ENG>
+        <TRA>此欄位只允許輸入字母和數字</TRA>
+        <SIM>此栏位只允许输入字母和数字</SIM>
+        <HKG>此欄位只允許輸入字母和數字</HKG>
+        <JPN>This field should only contain letters, numbers</JPN>
+        <LAN1>This field should only contain letters, numbers</LAN1>
+        <LAN2>This field should only contain letters, numbers</LAN2>
+        <LAN3>This field should only contain letters, numbers</LAN3>
+      </ValidAlphaNumMsg>
+      <ValidEmailMsg>
+        <ENG>This field should be an e-mail address</ENG>
+        <TRA>此欄位只允許輸入email格式的字符串</TRA>
+        <SIM>此栏位只允许输入email格式的字符串</SIM>
+        <HKG>此欄位只允許輸入email格式的字符串</HKG>
+        <JPN>This field should be an e-mail address</JPN>
+        <LAN1>This field should be an e-mail address</LAN1>
+        <LAN2>This field should be an e-mail address</LAN2>
+        <LAN3>This field should be an e-mail address</LAN3>
+      </ValidEmailMsg>
+      <ValidUrlMsg>
+        <ENG>This field should be an url address</ENG>
+        <TRA>此欄位只允許輸入url格式的字符串</TRA>
+        <SIM>此栏位只允许输入url格式的字符串</SIM>
+        <HKG>此欄位只允許輸入url格式的字符串</HKG>
+        <JPN>This field should be an url address</JPN>
+        <LAN1>This field should be an url address</LAN1>
+        <LAN2>This field should be an url address</LAN2>
+        <LAN3>This field should be an url address</LAN3>
+      </ValidUrlMsg>
+      <ValidIntMsg>
+        <ENG>This field should be a number of type int</ENG>
+        <TRA>此欄位只允許輸入無小數格式的數字</TRA>
+        <SIM>此栏位只允许输入无小数格式的数字</SIM>
+        <HKG>此欄位只允許輸入無小數格式的數字</HKG>
+        <JPN>This field should be a number of type int</JPN>
+        <LAN1>This field should be a number of type int</LAN1>
+        <LAN2>This field should be a number of type int</LAN2>
+        <LAN3>This field should be a number of type int</LAN3>
+      </ValidIntMsg>
+      <ValidFloatMsg>
+        <ENG>This field should be a number of type float</ENG>
+        <TRA>此欄位只允許輸入數字格式(可含小數)</TRA>
+        <SIM>此栏位只允许输入数字格式(可含小数)</SIM>
+        <HKG>此欄位只允許輸入數字格式(可含小數)</HKG>
+        <JPN>This field should be a number of type float</JPN>
+        <LAN1>This field should be a number of type float</LAN1>
+        <LAN2>This field should be a number of type float</LAN2>
+        <LAN3>This field should be a number of type float</LAN3>
+      </ValidFloatMsg>
+      <ValidIPMsg>
+        <ENG>This field should be an ip address</ENG>
+        <TRA>此欄位只允許輸入ip地址</TRA>
+        <SIM>此栏位只允许输入ip地址</SIM>
+        <HKG>此欄位只允許輸入ip地址</HKG>
+        <JPN>This field should be an ip address</JPN>
+        <LAN1>This field should be an ip address</LAN1>
+        <LAN2>This field should be an ip address</LAN2>
+        <LAN3>This field should be an ip address</LAN3>
+      </ValidIPMsg>
+      <PersonalSaved>
+        <ENG>personal settings have been saved</ENG>
+        <TRA>個性化設置已保存</TRA>
+        <SIM>个性化设置已保存</SIM>
+        <HKG>個性化設置已保存</HKG>
+        <JPN>personal settings have been saved</JPN>
+        <LAN1>personal settings have been saved</LAN1>
+        <LAN2>personal settings have been saved</LAN2>
+        <LAN3>personal settings have been saved</LAN3>
+      </PersonalSaved>
+      <PersonalLoaded>
+        <ENG>personal settings have been loaded</ENG>
+        <TRA>個性化設置已載入</TRA>
+        <SIM>个性化设置已载入</SIM>
+        <HKG>個性化設置已載入</HKG>
+        <JPN>personal settings have been loaded</JPN>
+        <LAN1>personal settings have been loaded</LAN1>
+        <LAN2>personal settings have been loaded</LAN2>
+        <LAN3>personal settings have been loaded</LAN3>
+      </PersonalLoaded>
+    </ExtGrid>
+    <AjaxFormView>
+      <pkChange>
+        <ENG>key value is not find.if you are changing the key value, please delete it first an then insert it.</ENG>
+        <TRA>主鍵不能被修改，請先刪除此筆資料再創建</TRA>
+        <SIM>主键不能被修改，请先删除此笔资料再创建</SIM>
+        <HKG>主鍵不能被修改，請先刪除此筆資料再創建</HKG>
+        <JPN>key value is not find.if you are changing the key value, please delete it first an then insert it.</JPN>
+        <LAN1>key value is not find.if you are changing the key value, please delete it first an then insert it.</LAN1>
+        <LAN2>key value is not find.if you are changing the key value, please delete it first an then insert it.</LAN2>
+        <LAN3>key value is not find.if you are changing the key value, please delete it first an then insert it.</LAN3>
+      </pkChange>
+    </AjaxFormView>
+    <AjaxLayout>
+      <SaveDetails>
+        <ENG>please save details first!</ENG>
+        <TRA>必須先存檔子表才能提交</TRA>
+        <SIM>必须先存档子表才能提交</SIM>
+        <HKG>必須先存檔子表才能提交</HKG>
+        <JPN>please save details first!</JPN>
+        <LAN1>please save details first!</LAN1>
+        <LAN2>please save details first!</LAN2>
+        <LAN3>please save details first!</LAN3>
+      </SaveDetails>
+    </AjaxLayout>
+    <AjaxSchedule>
+      <UIText>
+        <ENG>schedule details,title,description,all day,start time, end time,Submit,Cancel,Delete</ENG>
+        <TRA>行事歷詳情,內容,詳細,整天事務,開始時間,結束時間,存檔,取消,刪除</TRA>
+        <SIM>行事历详情,内容,详细,整天事务,开始时间,结束时间,提交,取消,删除</SIM>
+        <HKG>行事歷詳情,內容,詳細,整天事務,開始時間,結束時間,存檔,取消,刪除</HKG>
+        <JPN>schedule details,title,description,all day,start time, end time,Submit,Cancel,Delete</JPN>
+        <LAN1>schedule details,title,description,all day,start time, end time,Submit,Cancel,Delete</LAN1>
+        <LAN2>schedule details,title,description,all day,start time, end time,Submit,Cancel,Delete</LAN2>
+        <LAN3>schedule details,title,description,all day,start time, end time,Submit,Cancel,Delete</LAN3>
+      </UIText>
+    </AjaxSchedule>
+  </AjaxTools>
+  <EEPWebNetClient>
+    <WebSysMsg>
+      <msg_FeedbackBugSucceeded>
+        <ENG>Feedback bug succeeded.</ENG>
+        <TRA>傳送成功。</TRA>
+        <SIM>提交成功。</SIM>
+        <HKG>傳送成功。</HKG>
+        <JPN>Feedback bug succeeded.</JPN>
+        <LAN1>Feedback bug succeeded.</LAN1>
+        <LAN2>Feedback bug succeeded.</LAN2>
+        <LAN3>Feedback bug succeeded.</LAN3>
+      </msg_FeedbackBugSucceeded>
+      <msg_FeedbackBugUnSucceeded>
+        <ENG>Feedback bug unsucceeded.</ENG>
+        <TRA>傳送失敗。</TRA>
+        <SIM>提交失败。</SIM>
+        <HKG>傳送失敗。</HKG>
+        <JPN>Feedback bug unsucceeded.</JPN>
+        <LAN1>Feedback bug unsucceeded.</LAN1>
+        <LAN2>Feedback bug unsucceeded.</LAN2>
+        <LAN3>Feedback bug unsucceeded.</LAN3>
+      </msg_FeedbackBugUnSucceeded>
+    </WebSysMsg>
+    <WinSysMsg>
+      <msg_UserReLogined>
+        <ENG>User {0} has logined,do you want to Relog?</ENG>
+        <TRA>用戶{0}已經登錄，是否重新登錄？</TRA>
+        <SIM>用户{0}已经登录，是否重新登录？</SIM>
+        <HKG>用戶{0}已經登錄，是否重新登錄？</HKG>
+        <JPN>User {0} has logined,do you want to Relog?</JPN>
+        <LAN1>User {0} has logined,do you want to Relog?</LAN1>
+        <LAN2>User {0} has logined,do you want to Relog?</LAN2>
+        <LAN3>User {0} has logined,do you want to Relog?</LAN3>
+      </msg_UserReLogined>
+      <msg_UserIsLogined>
+        <ENG>User {0} has logined</ENG>
+        <TRA>用戶{0}已經登錄</TRA>
+        <SIM>用户{0}已经登录</SIM>
+        <HKG>用戶{0}已經登錄</HKG>
+        <JPN>User {0} has logined</JPN>
+        <LAN1>User {0} has logined</LAN1>
+        <LAN2>User {0} has logined</LAN2>
+        <LAN3>User {0} has logined</LAN3>
+      </msg_UserIsLogined>
+      <txt_Login>
+        <ENG>User;PassWord;DataBase;Solution;Remember password;Check Code</ENG>
+        <TRA>用戶;密碼;資料庫;方案;記住密碼;驗證碼</TRA>
+        <SIM>用户;密码;数据库;工程;记住密码;验证码</SIM>
+        <HKG>用戶;密碼;資料庫;方案;記住密碼;驗證碼</HKG>
+        <JPN>User;PassWord;DataBase;Solution;Remember password;Check Code</JPN>
+        <LAN1>User;PassWord;DataBase;Solution;Remember password;Check Code</LAN1>
+        <LAN2>User;PassWord;DataBase;Solution;Remember password;Check Code</LAN2>
+        <LAN3>User;PassWord;DataBase;Solution;Remember password;Check Code</LAN3>
+      </txt_Login>
+      <msg_UserNotFound>
+        <ENG>User Not Found.</ENG>
+        <TRA>該用戶不存在</TRA>
+        <SIM>该用户不存在</SIM>
+        <HKG>該用戶不存在</HKG>
+        <JPN>User Not Found.</JPN>
+        <LAN1>User Not Found.</LAN1>
+        <LAN2>User Not Found.</LAN2>
+        <LAN3>User Not Found.</LAN3>
+      </msg_UserNotFound>
+      <msg_UserOrPasswordError>
+        <ENG>User or Password is error.</ENG>
+        <TRA>用戶名或密碼錯誤。</TRA>
+        <SIM>用户名或密码错误。</SIM>
+        <HKG>用戶名或密碼錯誤。</HKG>
+        <JPN>User or Password is error.</JPN>
+        <LAN1>User or Password is error.</LAN1>
+        <LAN2>User or Password is error.</LAN2>
+        <LAN3>User or Password is error.</LAN3>
+      </msg_UserOrPasswordError>
+      <msg_UserDisabled>
+        <ENG>User has been disabled.</ENG>
+        <TRA>用戶已經被禁用。</TRA>
+        <SIM>用户已经被禁用。</SIM>
+        <HKG>用戶已經被禁用。</HKG>
+        <JPN>User has been disabled.</JPN>
+        <LAN1>User has been disabled.</LAN1>
+        <LAN2>User has been disabled.</LAN2>
+        <LAN3>User has been disabled.</LAN3>
+      </msg_UserDisabled>
+      <msg_SolutionSecurity>
+        <ENG>You have no right to use {0}.</ENG>
+        <TRA>你沒有權限使用{0}。</TRA>
+        <SIM>你没有权限使用{0}。</SIM>
+        <HKG>你沒有權限使用{0}。</HKG>
+        <JPN>You have no right to use {0}.</JPN>
+        <LAN1>You have no right to use {0}.</LAN1>
+        <LAN2>You have no right to use {0}.</LAN2>
+        <LAN3>You have no right to use {0}.</LAN3>
+      </msg_SolutionSecurity>
+      <msg_CanNotFindServer>
+        <ENG>Unable to connect to the remote server.</ENG>
+        <TRA>無法連接到遠端伺服器。</TRA>
+        <SIM>无法连接到远程服务器。</SIM>
+        <HKG>無法連接到遠端伺服器。</HKG>
+        <JPN>Unable to connect to the remote server.</JPN>
+        <LAN1>Unable to connect to the remote server.</LAN1>
+        <LAN2>Unable to connect to the remote server.</LAN2>
+        <LAN3>Unable to connect to the remote server.</LAN3>
+      </msg_CanNotFindServer>
+      <msg_BusyService>
+        <ENG>System Busy, try again later.</ENG>
+        <TRA>系統忙，請稍候再試</TRA>
+        <SIM>系统忙，请稍候再试</SIM>
+        <HKG>系統忙，請稍候再試</HKG>
+        <JPN>System Busy, try again later.</JPN>
+        <LAN1>System Busy, try again later.</LAN1>
+        <LAN2>System Busy, try again later.</LAN2>
+        <LAN3>System Busy, try again later.</LAN3>
+      </msg_BusyService>
+      <msg_CheckCode>
+        <ENG>Check code is error.</ENG>
+        <TRA>驗證碼輸入有誤</TRA>
+        <SIM>验证码输入有误</SIM>
+        <HKG>驗證碼輸入有誤</HKG>
+        <JPN>Check code is error.</JPN>
+        <LAN1>Check code is error.</LAN1>
+        <LAN2>Check code is error.</LAN2>
+        <LAN3>Check code is errorr.</LAN3>
+      </msg_CheckCode>
+    </WinSysMsg>
+  </EEPWebNetClient>
+  <EEPNetServer>
+    <CreateDB>
+      <radioText>
+        <ENG>Typical create;Simplified create</ENG>
+        <TRA>完整建立;簡易建立</TRA>
+        <SIM>完全创建;最小创建</SIM>
+        <HKG>完整建立;簡易建立</HKG>
+        <JPN>Typical create;Simplified create</JPN>
+        <LAN1>Typical create;Simplified create</LAN1>
+        <LAN2>Typical create;Simplified create</LAN2>
+        <LAN3>Typical create;Simplified create</LAN3>
+      </radioText>
+    </CreateDB>
+    <RecordLock>
+      <DataUpdating>
+        <ENG>data is be updating by another user</ENG>
+        <TRA>該資料正在被其他使用者更改中..</TRA>
+        <SIM>该数据正在被其他用户更改..</SIM>
+        <HKG>該資料正在被其他使用者更改中..</HKG>
+        <JPN>data is be updating by another user</JPN>
+        <LAN1>data is be updating by another user</LAN1>
+        <LAN2>data is be updating by another user</LAN2>
+        <LAN3>data is be updating by another user</LAN3>
+      </DataUpdating>
+      <DataDeleting>
+        <ENG>data is be deleting by another user</ENG>
+        <TRA>該資料正在被其他使用者刪除中..</TRA>
+        <SIM>该数据正在被其他用户删除..</SIM>
+        <HKG>該資料正在被其他使用者刪除中..</HKG>
+        <JPN>data is be deleting by another user</JPN>
+        <LAN1>data is be deleting by another user</LAN1>
+        <LAN2>data is be deleting by another user</LAN2>
+        <LAN3>data is be deleting by another user</LAN3>
+      </DataDeleting>
+      <DataDeleted>
+        <ENG>Can't find data in database.Maybe it has been deleted</ENG>
+        <TRA>無法找到該資料,可能已經被刪除</TRA>
+        <SIM>无法找到该数据,可能已经被删除</SIM>
+        <HKG>無法找到該資料,可能已經被刪除</HKG>
+        <JPN>data is be deleting by another user</JPN>
+        <LAN1>data is be deleting by another user</LAN1>
+        <LAN2>data is be deleting by another user</LAN2>
+        <LAN3>data is be deleting by another user</LAN3>
+      </DataDeleted>
+    </RecordLock>
+  </EEPNetServer>
+  <FLClientControls>
+    <FLWizard>
+      <Send>
+        <ENG>Has been sent to:</ENG>
+        <TRA>已送往:</TRA>
+        <SIM>已送往:</SIM>
+        <HKG>已送往:</HKG>
+        <JPN>Has been sent to:</JPN>
+        <LAN1>Has been sent to:</LAN1>
+        <LAN2>Has been sent to:</LAN2>
+        <LAN3>Has been sent to:</LAN3>
+      </Send>
+      <SendToMan>
+        <ENG>{0} to check,role:{1},user:{2}</ENG>
+        <TRA>{0},對象:{1},用戶:{2}</TRA>
+        <SIM>{0},对象:{1},用户:{2}</SIM>
+        <HKG>{0},對象:{1},用戶:{2}</HKG>
+        <JPN>{0} to check,role:{1},user:{2}</JPN>
+        <LAN1>{0} to check,role:{1},user:{2}</LAN1>
+        <LAN2>{0} to check,role:{1},user:{2}</LAN2>
+        <LAN3>{0} to check,role:{1},user:{2}</LAN3>
+      </SendToMan>
+      <SendToMan1>
+        <ENG>{0} to check,user:{1}</ENG>
+        <TRA>{0},用戶:{1}</TRA>
+        <SIM>{0},用户:{1}</SIM>
+        <HKG>{0},用戶:{1}</HKG>
+        <JPN>{0} to check,user:{1}</JPN>
+        <LAN1>{0} to check,user:{1}</LAN1>
+        <LAN2>{0} to check,user:{1}</LAN2>
+        <LAN3>{0} to check,user:{1}</LAN3>
+      </SendToMan1>
+      <SendToManager>
+        <ENG>Has been sent to:{0} to check,role:{1},user:{2}</ENG>
+        <TRA>已送往:{0},對象:{1},用戶:{2}</TRA>
+        <SIM>已送往:{0},对象:{1},用户:{2}</SIM>
+        <HKG>已送往:{0},對象:{1},用戶:{2}</HKG>
+        <JPN>Has been sent to:{0} to check,role:{1},user:{2}</JPN>
+        <LAN1>Has been sent to:{0} to check,role:{1},user:{2}</LAN1>
+        <LAN2>Has been sent to:{0} to check,role:{1},user:{2}</LAN2>
+        <LAN3>Has been sent to {0} to check,role:{1},user:{2}</LAN3>
+      </SendToManager>
+      <NotifyUsers>
+        <ENG>Has been sent to role:{0},user:{1} to notify</ENG>
+        <TRA>已送往對象:{0},用戶:{1}</TRA>
+        <SIM>已送往对象:{0},用户:{1}</SIM>
+        <HKG>已送往對象:{0},用戶:{1}</HKG>
+        <JPN>Has been sent to role:{0},user:{1} to notify</JPN>
+        <LAN1>Has been sent to role:{0},user:{1} to notify</LAN1>
+        <LAN2>Has been sent to role:{0},user:{1} to notify</LAN2>
+        <LAN3>Has been sent to role:{0},user:{1} to notify</LAN3>
+      </NotifyUsers>
+      <RetakeSucess>
+        <ENG>retake sucess!</ENG>
+        <TRA>單據取回成功!</TRA>
+        <SIM>单据取回成功!</SIM>
+        <HKG>單據取回成功!</HKG>
+        <JPN>retake sucess!</JPN>
+        <LAN1>retake sucess!</LAN1>
+        <LAN2>retake sucess!</LAN2>
+        <LAN3>retake sucess!</LAN3>
+      </RetakeSucess>
+    </FLWizard>
+    <FLNavigator>
+      <NavText>
+        <ENG>First;Previous;Next;Last;Add;Delete;Edit;Ok;Cancel;Apply;Abort;Refresh;Query;Print;Export;of {0};Submit;Approve;Return;Reject;Notify;Delete;Plus;Pause;Comment</ENG>
+        <TRA>首筆;上筆;下筆;末筆;新增;刪除;更改;確定;取消;存檔;放棄;更新;查詢;列印;輸出;共{0}筆;呈送;審核;退回;作廢;通知;删除工作流;加簽;暫停;查看</TRA>
+        <SIM>首笔;上笔;下笔;末笔;新增;删除;更改;确定;取消;存档;放弃;更新;查询;打印;输出;共{0}笔;呈送;审核;退回;作废;通知;删除工作流;加签;暂停;查看</SIM>
+        <HKG>首筆;上筆;下筆;末筆;新增;刪除;更改;確定;取消;存檔;放棄;更新;查詢;列印;輸出;共{0}筆;呈送;審核;退回;作廢;通知;删除工作流;加簽;暫停;查看</HKG>
+        <JPN>First;Previous;Next;Last;Add;Delete;Edit;Ok;Cancel;Apply;Abort;Refresh;Query;Print;Export;of {0};Submit;Approve;Return;Reject;Notify;Delete;Plus;Pause;Comment</JPN>
+        <LAN1>First;Previous;Next;Last;Add;Delete;Edit;Ok;Cancel;Apply;Abort;Refresh;Query;Print;Export;of {0};Submit;Approve;Return;Reject;Notify;Delete;Plus;Pause;Comment</LAN1>
+        <LAN2>First;Previous;Next;Last;Add;Delete;Edit;Ok;Cancel;Apply;Abort;Refresh;Query;Print;Export;of {0};Submit;Approve;Return;Reject;Notify;Delete;Plus;Pause;Comment</LAN2>
+        <LAN3>First;Previous;Next;Last;Add;Delete;Edit;Ok;Cancel;Apply;Abort;Refresh;Query;Print;Export;of {0};Submit;Approve;Return;Reject;Notify;Delete;Plus;Pause;Comment</LAN3>
+      </NavText>
+      <FlowNotDefine>
+        <ENG>the flow definition has not found!</ENG>
+        <TRA>找不到流程定義!</TRA>
+        <SIM>到不到流程定义!</SIM>
+        <HKG>找不到流程定義!</HKG>
+        <JPN>the flow definition has not found!</JPN>
+        <LAN1>the flow definition has not found!</LAN1>
+        <LAN2>the flow definition has not found!</LAN2>
+        <LAN3>the flow definition has not found!</LAN3>
+      </FlowNotDefine>
+      <PauseSucceed>
+        <ENG>pause succeed!</ENG>
+        <TRA>暫停成功!</TRA>
+        <SIM>暂停成功!</SIM>
+        <HKG>暫停成功!</HKG>
+        <JPN>pause succeed!</JPN>
+        <LAN1>pause succeed!</LAN1>
+        <LAN2>pause succeed!</LAN2>
+        <LAN3>pause succeed!</LAN3>
+      </PauseSucceed>
+      <ApplyFirst>
+        <ENG>You must apply first!</ENG>
+        <TRA>你需事先將資料存檔!</TRA>
+        <SIM>你需事先将资料存档!</SIM>
+        <HKG>你需事先將資料存檔!</HKG>
+        <JPN>You must apply first!</JPN>
+        <LAN1>You must apply first!</LAN1>
+        <LAN2>You must apply first!</LAN2>
+        <LAN3>You must apply first!</LAN3>
+      </ApplyFirst>
+      <FlowDeleted>
+        <ENG>Are you sure to Delete?</ENG>
+        <TRA>確認刪除？</TRA>
+        <SIM>确认删除？</SIM>
+        <HKG>確認刪除？</HKG>
+        <JPN>Are you sure to delete?</JPN>
+        <LAN1>Are you sure to delete?</LAN1>
+        <LAN2>Are you sure to deletet?</LAN2>
+        <LAN3>Are you sure to delete?</LAN3>
+      </FlowDeleted>
+      <FlowDeleted1>
+        <ENG>delete succeed!</ENG>
+        <TRA>刪除成功!</TRA>
+        <SIM>删除成功!</SIM>
+        <HKG>刪除成功!</HKG>
+        <JPN>delete succeed!</JPN>
+        <LAN1>delete succeed!</LAN1>
+        <LAN2>delete succeed!</LAN2>
+        <LAN3>delete succeed!</LAN3>
+      </FlowDeleted1>
+      <FlowRejectConfirm>
+        <ENG>Are you sure to reject?</ENG>
+        <TRA>確定作廢？</TRA>
+        <SIM>确认作废？！</SIM>
+        <HKG>確定作廢？</HKG>
+        <JPN>Are you sure to reject?</JPN>
+        <LAN1>Are you sure to reject?</LAN1>
+        <LAN2>Are you sure to reject?</LAN2>
+        <LAN3>Are you sure to reject?</LAN3>
+      </FlowRejectConfirm>
+      <FlowReject>
+        <ENG>Flow has been deleted!</ENG>
+        <TRA>該流程已刪除!</TRA>
+        <SIM>该流程已删除!</SIM>
+        <HKG>該流程已刪除!</HKG>
+        <JPN>Flow has been deleted!</JPN>
+        <LAN1>Flow has been deleted!</LAN1>
+        <LAN2>Flow has been deleted!</LAN2>
+        <LAN3>Flow has been deleted!</LAN3>
+      </FlowReject>
+      <RunOver>
+        <ENG>Flow has run over!</ENG>
+        <TRA>本單據已完成流程!</TRA>
+        <SIM>本单据已完成流程!</SIM>
+        <HKG>本單據已完成流程!</HKG>
+        <JPN>Flow has run over!</JPN>
+        <LAN1>Flow has run over!</LAN1>
+        <LAN2>Flow has run over!</LAN2>
+        <LAN3>Flow has run over!</LAN3>
+      </RunOver>
+      <HasRejected>
+        <ENG>Flow has been rejected!</ENG>
+        <TRA>本單據已被取消!</TRA>
+        <SIM>本单据已被取消!</SIM>
+        <HKG>本單據已被取消!</HKG>
+        <JPN>Flow has been rejected!</JPN>
+        <LAN1>Flow has been rejected!</LAN1>
+        <LAN2>Flow has been rejected!</LAN2>
+        <LAN3>Flow has been rejected!</LAN3>
+      </HasRejected>
+    </FLNavigator>
+    <SubmitConfirm>
+      <UIText>
+        <ENG>confirm,important list,urgent list,suggestion,history,sender's role,OK,Cancel,Result,Org,return to,return one step,upload files,close,preview,return</ENG>
+        <TRA>確認事項,重要單據,緊急單據,意見說明,批示意見,發送者角色,確認,取消,提示,組織,退回到,退回一個活動,上傳檔案,關閉,預覽,確認退回</TRA>
+        <SIM>确认事项,重要单据,紧急单据,意见说明,批示意见,发送者角色,确认,取消,提示,组织,退回到,退回一个活动,上传文件,关闭,预览,确认退回</SIM>
+        <HKG>確認事項,重要單據,緊急單據,意見說明,批示意見,發送者角色,確認,取消,提示,組織,退回到,退回一個活動,上傳檔案,關閉,預覽,確認退回</HKG>
+        <JPN>confirm,important list,urgent list,suggestion,history,sender's role,OK,Cancel,Result,Org,return to,return one step,upload files,close,preview,return</JPN>
+        <LAN1>confirm,important list,urgent list,suggestion,history,sender's role,OK,Cancel,Result,Org,return to,return one step,upload files,close,preview,return</LAN1>
+        <LAN2>confirm,important list,urgent list,suggestion,history,sender's role,OK,Cancel,Result,Org,return to,return one step,upload files,close,preview,return</LAN2>
+        <LAN3>confirm,important list,urgent list,suggestion,history,sender's role,OK,Cancel,Result,Org,return to,return one step,upload files,close,preview,return</LAN3>
+      </UIText>
+      <UIText1>
+        <ENG>Remark,Result,OK,Cancel,Close</ENG>
+        <TRA>通知訊息,提示,確認,取消,關閉</TRA>
+        <SIM>通知讯息,提示,确认,取消,关闭</SIM>
+        <HKG>通知訊息,提示,確認,取消,關閉</HKG>
+        <JPN>Remark,Result,OK,Cancel,Close</JPN>
+        <LAN1>Remark,Result,OK,Cancel,Close</LAN1>
+        <LAN2>Remark,Result,OK,Cancel,Close</LAN2>
+        <LAN3>Remark,Result,OK,Cancel,Close</LAN3>
+      </UIText1>
+      <HisUIText>
+        <ENG>user id,user name,update date,update time,remark,step id,status,attachments</ENG>
+        <TRA>用戶編號,用戶名,日期,時間,批示意見,作業名稱,情況,附件</TRA>
+        <SIM>用户编号,用户名,日期,时间,批示意见,作业名称,情况,附件</SIM>
+        <HKG>用戶編號,用戶名,日期,時間,批示意見,作業名稱,情況,附件</HKG>
+        <JPN>user id,user name,update date,update time,remark,step id,status,attachments</JPN>
+        <LAN1>user id,user name,update date,update time,remark,step id,status,attachments</LAN1>
+        <LAN2>user id,user name,update date,update time,remark,step id,status,attachments</LAN2>
+        <LAN3>user id,user name,update date,update time,remark,step id,status,attachments</LAN3>
+      </HisUIText>
+      <CommitText>
+        <ENG>flow desc,udpdate date,user name,form presentation</ENG>
+        <TRA>流程名稱,上呈日期,使用者,角色,單據號碼</TRA>
+        <SIM>流程名称,上呈日期,使用者,角色,单据号码</SIM>
+        <HKG>流程名稱,上呈日期,使用者,角色,單據號碼</HKG>
+        <JPN>flow desc,udpdate date,user name,form presentation</JPN>
+        <LAN1>flow desc,udpdate date,user name,form presentation</LAN1>
+        <LAN2>flow desc,udpdate date,user name,form presentation</LAN2>
+        <LAN3>flow desc,udpdate date,user name,form presentation</LAN3>
+      </CommitText>
+    </SubmitConfirm>
+    <NotifyForm>
+      <UIText>
+        <ENG>select users,select roles,notify infomation,from,to,OK,Cancel,Result,role id,role name,search,user id,username</ENG>
+        <TRA>選擇使用者,選擇角色,通知訊息,來自,送往,確認,取消,提示,角色編號,角色名稱,查詢,用戶編號,用戶姓名</TRA>
+        <SIM>选择使用者,选择角色,通知讯息,来自,送往,确认,取消,提示,角色编号,角色名称,查询,用户编号,用户姓名</SIM>
+        <HKG>選擇使用者,選擇角色,通知訊息,來自,送往,確認,取消,提示,角色編號,角色名稱,查詢,用戶編號,用戶姓名</HKG>
+        <JPN>select users,select roles,notify infomation,from,to,OK,Cancel,Result,role id,role name,search,user id,username</JPN>
+        <LAN1>select users,select roles,notify infomation,from,to,OK,Cancel,Result,role id,role name,search,user id,username</LAN1>
+        <LAN2>select users,select roles,notify infomation,from,to,OK,Cancel,Result,role id,role name,search,user id,username</LAN2>
+        <LAN3>select users,select roles,notify infomation,from,to,OK,Cancel,Result,role id,role name,search,user id,username</LAN3>
+      </UIText>
+    </NotifyForm>
+    <Comment>
+      <UIText>
+        <ENG>attachments available</ENG>
+        <TRA>可下載附件</TRA>
+        <SIM>可下载附件</SIM>
+        <HKG>可下載附件</HKG>
+        <JPN>attachments available</JPN>
+        <LAN1>attachments available</LAN1>
+        <LAN2>attachments available</LAN2>
+        <LAN3>attachments available</LAN3>
+      </UIText>
+    </Comment>
+    <UploadFilesForm>
+      <UIText>
+        <ENG>add attachments,select,upload,attachments available,delete</ENG>
+        <TRA>新增附件,選擇,上傳,可下載附件,刪除</TRA>
+        <SIM>新增附件,选择,上传,可下载附件,删除</SIM>
+        <HKG>新增附件,選擇,上傳,可下載附件,刪除</HKG>
+        <JPN>add attachments,select,upload,attachments available,delete</JPN>
+        <LAN1>add attachments,select,upload,attachments available,delete</LAN1>
+        <LAN2>add attachments,select,upload,attachments available,delete</LAN2>
+        <LAN3>add attachments,select,upload,attachments available,delete</LAN3>
+      </UIText>
+    </UploadFilesForm>
+    <UserInFlow>
+      <ByUser>
+        <ENG>User Id;User Name;Flow Description;Activity Name</ENG>
+        <TRA>用戶代號;用戶名稱;流程名稱;活動名稱</TRA>
+        <SIM>用户代号;用户名称;流程名称;活动名称</SIM>
+        <HKG>用戶代號;用戶名稱;流程名稱;活動名稱</HKG>
+        <JPN>User Id;User Name;Flow Description;Activity Name</JPN>
+        <LAN1>User Id;User Name;Flow Description;Activity Name</LAN1>
+        <LAN2>User Id;User Name;Flow Description;Activity Name</LAN2>
+        <LAN3>User Id;User Name;Flow Description;Activity Name</LAN3>
+      </ByUser>
+      <ByRole>
+        <ENG>Role Id;Role Name;Flow Description;Activity Name</ENG>
+        <TRA>角色代號;角色名稱;流程名稱;活動名稱</TRA>
+        <SIM>角色代号;角色名称;流程名称;活动名称</SIM>
+        <HKG>角色代號;角色名稱;流程名稱;活動名稱</HKG>
+        <JPN>Role Id;Role Name;Flow Description;Activity Name</JPN>
+        <LAN1>Role Id;Role Name;Flow Description;Activity Name</LAN1>
+        <LAN2>Role Id;Role Name;Flow Description;Activity Name</LAN2>
+        <LAN3>Role Id;Role Name;Flow Description;Activity Name</LAN3>
+      </ByRole>
+      <UIText>
+        <ENG>User Id;User Name;By Role;By User</ENG>
+        <TRA>用戶代號;用戶名稱;察看角色類;察看用戶類</TRA>
+        <SIM>用户代号;用户名称;察看角色类;察看用户类</SIM>
+        <HKG>用戶代號;用戶名稱;察看角色類;察看用戶類</HKG>
+        <JPN>User Id;User Name;By Role;By User</JPN>
+        <LAN1>User Id;User Name;By Role;By User</LAN1>
+        <LAN2>User Id;User Name;By Role;By User</LAN2>
+        <LAN3>User Id;User Name;By Role;By User</LAN3>
+      </UIText>
+    </UserInFlow>
+  </FLClientControls>
+  <FLTools>
+    <FLWebNavigator>
+      <ControlText>
+        <ENG>first;previous;next;last;add;update;delete;ok;cancel;apply;abort;query;print;export;submit;approve;return;reject;notify;flowdelete;plus;pause;comment</ENG>
+        <TRA>首筆;上筆;下筆;末筆;新增;更改;刪除;確認;取消;存檔;放棄;查詢;列印;輸出;呈送;審核;退回;作廢;通知;删除工作流;加簽;暫停;查看</TRA>
+        <SIM>首笔;上笔;下笔;末笔;新增;更改;删除;确定;取消;存档;放弃;查询;打印;输出;呈送;审核;退回;作废;通知;删除工作流;加签;暂停;查看</SIM>
+        <HKG>首筆;上筆;下筆;末筆;新增;更改;刪除;確認;取消;存檔;放棄;查詢;列印;輸出;呈送;審核;退回;作廢;通知;删除工作流;加簽;暫停;查看</HKG>
+        <JPN>first;previous;next;last;add;update;delete;ok;cancel;apply;abort;query;print;export;submit;approve;return;reject;notify;flowdelete;plus;pause;comment</JPN>
+        <LAN1>first;previous;next;last;add;update;delete;ok;cancel;apply;abort;query;print;export;submit;approve;return;reject;notify;flowdelete;plus;pause;comment</LAN1>
+        <LAN2>first;previous;next;last;add;update;delete;ok;cancel;apply;abort;query;print;export;submit;approve;return;reject;notify;flowdelete;plus;pause;comment</LAN2>
+        <LAN3>first;previous;next;last;add;update;delete;ok;cancel;apply;abort;query;print;export;submit;approve;return;reject;notify;flowdelete;plus;pause;comment</LAN3>
+      </ControlText>
+      <ReturnToEnd>
+        <ENG>flow has been reject!</ENG>
+        <TRA>流程已經無法退回!</TRA>
+        <SIM>流程已经无法退回!</SIM>
+        <HKG>流程已經無法退回!</HKG>
+        <JPN>flow has been reject!</JPN>
+        <LAN1>flow has been reject!</LAN1>
+        <LAN2>flow has been reject!</LAN2>
+        <LAN3>flow has been reject!</LAN3>
+      </ReturnToEnd>
+    </FLWebNavigator>
+    <GloFix>
+      <WaitMessage>
+        <ENG>wait for roles:{0},users:{1} to check!</ENG>
+        <TRA>等待對象:{0},用戶:{1}審核!</TRA>
+        <SIM>等待对象:{0},用户:{1}审核!</SIM>
+        <HKG>等待對象:{0},用戶:{1}審核!</HKG>
+        <JPN>wait for roles:{0},users:{1} to check!</JPN>
+        <LAN1>wait for roles:{0},users:{1} to check!</LAN1>
+        <LAN2>wait for roles:{0},users:{1} to check!</LAN2>
+        <LAN3>wait for roles:{0},users:{1} to check!</LAN3>
+      </WaitMessage>
+      <WaitMessage1>
+        <ENG>wait for roles:{0},users:{1} to return!</ENG>
+        <TRA>等待對象:{0},用戶:{1}退回!</TRA>
+        <SIM>等待对象:{0},用户:{1}退回!</SIM>
+        <HKG>等待對象:{0},用戶:{1}退回!</HKG>
+        <JPN>wait for roles:{0},users:{1} to return!</JPN>
+        <LAN1>wait for roles:{0},users:{1} to return!</LAN1>
+        <LAN2>wait for roles:{0},users:{1} to return!</LAN2>
+        <LAN3>wait for roles:{0},users:{1} to return!</LAN3>
+      </WaitMessage1>
+      <WaitMessage2>
+        <ENG>wait for users:{0} to check!</ENG>
+        <TRA>等待用戶:{0}審核!</TRA>
+        <SIM>等待用户:{0}审核!</SIM>
+        <HKG>等待用戶:{0}審核!</HKG>
+        <JPN>wait for users:{0} to check!</JPN>
+        <LAN1>wait for users:{0} to check!</LAN1>
+        <LAN2>wait for users:{0} to check!</LAN2>
+        <LAN3>wait for users:{0} to check!</LAN3>
+      </WaitMessage2>
+      <SelectData>
+        <ENG>please select a data first!</ENG>
+        <TRA>操作前必須選中一筆資料!</TRA>
+        <SIM>操作前必须选中一笔资料!</SIM>
+        <HKG>操作前必須選中一筆資料!</HKG>
+        <JPN>please select a data first!</JPN>
+        <LAN1>please select a data first!</LAN1>
+        <LAN2>please select a data first!</LAN2>
+        <LAN3>please select a data first!</LAN3>
+      </SelectData>
+      <IsListIdNull>
+        <ENG>list id can not be null!</ENG>
+        <TRA>list id不能爲空!</TRA>
+        <SIM>list id不能为空!</SIM>
+        <HKG>list id不能爲空!</HKG>
+        <JPN>list id can not be null!</JPN>
+        <LAN1>list id can not be null!</LAN1>
+        <LAN2>list id can not be null!</LAN2>
+        <LAN3>list id can not be null!</LAN3>
+      </IsListIdNull>
+      <OnlyToDoListWork>
+        <ENG>only to do list can do this!</ENG>
+        <TRA>只有代辦事項可以執行此操作</TRA>
+        <SIM>只有待办事项可以执行此操作!</SIM>
+        <HKG>只有代辦事項可以執行此操作</HKG>
+        <JPN>only to do list can do this!</JPN>
+        <LAN1>only to do list can do this!</LAN1>
+        <LAN2>only to do list can do this!</LAN2>
+        <LAN3>only to do list can do this!</LAN3>
+      </OnlyToDoListWork>
+      <UrgeFlow>
+        <ENG>already notify {0}({1}) to approve as soon as possible!</ENG>
+        <TRA>已通知{0}({1})儘快核審!</TRA>
+        <SIM>已通知{0}({1})尽快审核!</SIM>
+        <HKG>已通知{0}({1})儘快核審!</HKG>
+        <JPN>already notify {0}({1}) to approve as soon as possible!</JPN>
+        <LAN1>already notify {0}({1}) to approve as soon as possible!</LAN1>
+        <LAN2>already notify {0}({1}) to approve as soon as possible!</LAN2>
+        <LAN3>already notify {0}({1}) to approve as soon as possible!</LAN3>
+      </UrgeFlow>
+      <FailToNotify>
+        <ENG>fail to notify!</ENG>
+        <TRA>通知失敗!</TRA>
+        <SIM>通知失败!</SIM>
+        <HKG>通知失敗!</HKG>
+        <JPN>fail to notify!</JPN>
+        <LAN1>fail to notify!</LAN1>
+        <LAN2>fail to notify!</LAN2>
+        <LAN3>fail to notify!</LAN3>
+      </FailToNotify>
+      <FailToPlus>
+        <ENG>fail to plus!</ENG>
+        <TRA>加簽失敗!</TRA>
+        <SIM>加签失败!</SIM>
+        <HKG>加簽失敗!</HKG>
+        <JPN>fail to plus!</JPN>
+        <LAN1>fail to plus!</LAN1>
+        <LAN2>fail to plus!</LAN2>
+        <LAN3>fail to plus!</LAN3>
+      </FailToPlus>
+      <FailToSubmit>
+        <ENG>this record {0} has been submitted!</ENG>
+        <TRA>本單據:{0}已經提交,無法再次提交!</TRA>
+        <SIM>本单据:{0}已经提交,无法再次提交!</SIM>
+        <HKG>本單據:{0}已經提交,無法再次提交!</HKG>
+        <JPN>this record {0} has been submitted!</JPN>
+        <LAN1>this record {0} has been submitted!</LAN1>
+        <LAN2>this record {0} has been submitted!</LAN2>
+        <LAN3>this record {0} has been submitted!</LAN3>
+      </FailToSubmit>
+      <FailToApprove>
+        <ENG>fail to approve!</ENG>
+        <TRA>審核失敗!</TRA>
+        <SIM>审核失败!</SIM>
+        <HKG>審核失敗!</HKG>
+        <JPN>fail to approve!</JPN>
+        <LAN1>fail to approve!</LAN1>
+        <LAN2>fail to approve!</LAN2>
+        <LAN3>fail to approve!</LAN3>
+      </FailToApprove>
+      <FailToReturn>
+        <ENG>fail to return!</ENG>
+        <TRA>退回失敗!</TRA>
+        <SIM>退回失败!</SIM>
+        <HKG>退回失敗!</HKG>
+        <JPN>fail to return!</JPN>
+        <LAN1>fail to return!</LAN1>
+        <LAN2>fail to return!</LAN2>
+        <LAN3>fail to return!</LAN3>
+      </FailToReturn>
+    </GloFix>
+  </FLTools>
+  <FLRuntime>
+    <FLInstance>
+      <TableNotContainsColumn>
+        <ENG>{0}' columns not contains {1}!</ENG>
+        <TRA>表{0}中的不包含{1}欄位!</TRA>
+        <SIM>表{0}中的不包含{1}字段!</SIM>
+        <HKG>表{0}中的不包含{1}欄位!</HKG>
+        <JPN>{0}' columns not contains {1}!</JPN>
+        <LAN1>{0}' columns not contains {1}!</LAN1>
+        <LAN2>{0}' columns not contains {1}!</LAN2>
+        <LAN3>{0}' columns not contains {1}!</LAN3>
+      </TableNotContainsColumn>
+      <ServerMethodNotReturnBoolean>
+        <ENG>{0} return value type must be object[]{{int, boolean}}!</ENG>
+        <TRA>{0}返回值必須為object[]{{int, boolean}}類型!</TRA>
+        <SIM>{0}返回值必须为object[]{{int, boolean}}类型!</SIM>
+        <HKG>{0}返回值必須為object[]{{int, boolean}}類型!</HKG>
+        <JPN>{0} return value type must be object[]{{int, boolean}}!</JPN>
+        <LAN1>{0} return value type must be object[]{{int, boolean}}!</LAN1>
+        <LAN2>{0} return value type must be object[]{{int, boolean}}!</LAN2>
+        <LAN3>{0} return value type must be object[]{{int, boolean}}!</LAN3>
+      </ServerMethodNotReturnBoolean>
+      <WrongExpression>
+        <ENG>{0} is the wrong expression!</ENG>
+        <TRA>{0}格式錯誤!</TRA>
+        <SIM>{0}格式错误!</SIM>
+        <HKG>{0}格式錯誤!</HKG>
+        <JPN>{0} is the wrong expression!</JPN>
+        <LAN1>{0} is the wrong expression!</LAN1>
+        <LAN2>{0} is the wrong expression!</LAN2>
+        <LAN3>{0} is the wrong expression!</LAN3>
+      </WrongExpression>
+      <TableNotExistColumn>
+        <ENG>Table {0} not exist {1} column!</ENG>
+        <TRA>表{0}中不存在{1}欄位!</TRA>
+        <SIM>表{0}中不存在{0}字段!</SIM>
+        <HKG>表{0}中不存在{0}欄位!</HKG>
+        <JPN>Table {0} not exist {1} column!</JPN>
+        <LAN1>Table {0} not exist {1} column!</LAN1>
+        <LAN2>Table {0} not exist {1} column!</LAN2>
+        <LAN3>Table {0} not exist {1} column!</LAN3>
+      </TableNotExistColumn>
+      <SendToMasterFieldValueIsNull>
+        <ENG>{0} column value is null in table {1}!</ENG>
+        <TRA>表{1}中的{0}字段的值為空!</TRA>
+        <SIM>表{1}中的{0}字段的值为空!</SIM>
+        <HKG>表{1}中的{0}字段的值為空!</HKG>
+        <JPN>{0} column value is null in table {1}!</JPN>
+        <LAN1>{0} column value is null in table {1}!</LAN1>
+        <LAN2>{0} column value is null in table {1}!</LAN2>
+        <LAN3>{0} column value is null in table {1}!</LAN3>
+      </SendToMasterFieldValueIsNull>
+      <SendToFieldValueIsNull>
+        <ENG>SendToField column value is null in table {0}!</ENG>
+        <TRA>表{0}中的SendToField字段的值為空!</TRA>
+        <SIM>表{0}中的SendToField字段的值为空!</SIM>
+        <HKG>表{0}中的SendToField字段的值為空!</HKG>
+        <JPN>SendToField column value is null in table {0}!</JPN>
+        <LAN1>SendToField column value is null in table {0}!</LAN1>
+        <LAN2>SendToField column value is null in table {0}!</LAN2>
+        <LAN3>SendToField column value is null in table {0}!</LAN3>
+      </SendToFieldValueIsNull>
+      <ValidateFail>
+        <ENG>Activity Name:{0} validate fail!</ENG>
+        <TRA>作業活動:{0}驗證失敗!</TRA>
+        <SIM>作业活动:{0}验证失败!</SIM>
+        <HKG>作業活動:{0}驗證失敗!</HKG>
+        <JPN>Activity Name:{0} validate fail!</JPN>
+        <LAN1>Activity Name:{0} validate fail!</LAN1>
+        <LAN2>Activity Name:{0} validate fail!</LAN2>
+        <LAN3>Activity Name:{0} validate fail!</LAN3>
+      </ValidateFail>
+      <ErrorInXoml>
+        <ENG>Error in xoml file,please use FLDesigner design xoml!</ENG>
+        <TRA>Xoml檔錯誤，請用FLDesigner重新設計!</TRA>
+        <SIM>Xoml文件错误，请用FLDesigner重新设计!</SIM>
+        <HKG>Xoml檔錯誤，請用FLDesigner重新設計!</HKG>
+        <JPN>Error in xoml file,please use FLDesigner design xoml!</JPN>
+        <LAN1>Error in xoml file,please use FLDesigner design xoml!</LAN1>
+        <LAN2>Error in xoml file,please use FLDesigner design xoml!</LAN2>
+        <LAN3>Error in xoml file,please use FLDesigner design xoml!</LAN3>
+      </ErrorInXoml>
+      <FirstFLActivityError2>
+        <ENG>First FLActivity SendToKind property to must be a Applicate!</ENG>
+        <TRA>第一個FLActivity的SendToKind屬性必須是Applicate!</TRA>
+        <SIM>第一个FLActivity的SendToKind属性必须是Applicate!</SIM>
+        <HKG>第一個FLActivity的SendToKind屬性必須是Applicate!</HKG>
+        <JPN>First FLActivity SendToKind property to must be a Applicate!</JPN>
+        <LAN1>First FLActivity SendToKind property to must be a Applicate!</LAN1>
+        <LAN2>First FLActivity SendToKind property to must be a Applicate!</LAN2>
+        <LAN3>First FLActivity SendToKind property to must be a Applicate!</LAN3>
+      </FirstFLActivityError2>
+      <FirstFLActivityError>
+        <ENG>First FLActivity to must be a FLStand!</ENG>
+        <TRA>第一個FLActivity必須是FLStand!</TRA>
+        <SIM>第一个FLActivity必须是FLStand!</SIM>
+        <HKG>第一個FLActivity必須是FLStand!</HKG>
+        <JPN>First FLActivity to must be a FLStand!</JPN>
+        <LAN1>First FLActivity to must be a FLStand!</LAN1>
+        <LAN2>First FLActivity to must be a FLStand!</LAN2>
+        <LAN3>First FLActivity to must be a FLStand!</LAN3>
+      </FirstFLActivityError>
+      <IfElseBranchConditionNotSet>
+        <ENG>{0} has {1} branch not set condition!</ENG>
+        <TRA>{0}有{1}分支沒有設置判斷條件!</TRA>
+        <SIM>{0}有{1}分支没有设置判断条件!</SIM>
+        <HKG>{0}有{1}分支沒有設置判斷條件!</HKG>
+        <JPN>{0} has {1} branch not set condition!</JPN>
+        <LAN1>{0} has {1} branch not set condition!</LAN1>
+        <LAN2>{0} has {1} branch not set condition!</LAN2>
+        <LAN3>{0} has {1} branch not set condition!</LAN3>
+      </IfElseBranchConditionNotSet>
+      <ParallelActivityDescriptError>
+        <ENG>{0}'s Description value has error!</ENG>
+        <TRA>{0}的Description值錯誤!</TRA>
+        <SIM>{0}的Description值错误!</SIM>
+        <HKG>{0}的Description值錯誤!</HKG>
+        <JPN>{0}'s Description value has error!</JPN>
+        <LAN1>{0}'s Description value has error!</LAN1>
+        <LAN2>{0}'s Description value has error!</LAN2>
+        <LAN3>{0}'s Description value has error!</LAN3>
+      </ParallelActivityDescriptError>
+      <ParallelNotSupportNest>
+        <ENG>ParallelActivity disallow to include another parallelActivity!</ENG>
+        <TRA>ParallelActivity中不能包含另一個ParallelActivity!</TRA>
+        <SIM>ParallelActivity中不能包含另一个ParallelActivity!</SIM>
+        <HKG>ParallelActivity中不能包含另一個ParallelActivity!</HKG>
+        <JPN>ParallelActivity disallow to include another parallelActivity!</JPN>
+        <LAN1>ParallelActivity disallow to include another parallelActivity!</LAN1>
+        <LAN2>ParallelActivity disallow to include another parallelActivity!</LAN2>
+      </ParallelNotSupportNest>
+      <NotSupportActivityType>
+        <ENG>Not support {0} type activity!</ENG>
+        <TRA>不支援{0}類型的Activity!</TRA>
+        <SIM>不支持{0}类型的Activity!</SIM>
+        <HKG>不支援{0}類型的Activity!</HKG>
+        <JPN>Not support {0} type activity!</JPN>
+        <LAN1>Not support {0} type activity!</LAN1>
+        <LAN2>Not support {0} type activity!</LAN2>
+      </NotSupportActivityType>
+      <ConditionBad>
+        <ENG>The {0} expression includes a mistake!</ENG>
+        <TRA>條件{0}格式錯誤!</TRA>
+        <SIM>条件{0}格式错误!</SIM>
+        <HKG>條件{0}格式錯誤!</HKG>
+        <JPN>The {0} expression includes a mistake!</JPN>
+        <LAN1>The {0} expression includes a mistake!</LAN1>
+        <LAN2>The {0} expression includes a mistake!</LAN2>
+      </ConditionBad>
+      <FLInstanceIsSummited>
+        <ENG>The flinstance is summited!</ENG>
+        <TRA>當前實例已經被Summit過了!</TRA>
+        <SIM>当前实例已经被Summit过了!</SIM>
+        <HKG>當前實例已經被Summit過了!</HKG>
+        <JPN>The flinstance is summited!</JPN>
+        <LAN1>The flinstance is summited!</LAN1>
+        <LAN2>The flinstance is summited!</LAN2>
+      </FLInstanceIsSummited>
+      <FLSetpIsApprovedOrReturned>
+        <ENG>This step is approved or returned,please refresh todolist!</ENG>
+        <TRA>此步已經被Approve過或者被Return過，請刷新ToDoList列表!</TRA>
+        <SIM>此步已经被Approve过或者被Return过，请刷新ToDoList列表!</SIM>
+        <HKG>此步已經被Approve過或者被Return過，請刷新ToDoList列表!</HKG>
+        <JPN>This step is approved or returned,please refresh todolist!</JPN>
+        <LAN1>This step is approved or returned,please refresh todolist!</LAN1>
+        <LAN2>This step is approved or returned,please refresh todolist!</LAN2>
+      </FLSetpIsApprovedOrReturned>
+      <RoleIdHasNoGrade>
+        <ENG>RoleId {0} has no grade!</ENG>
+        <TRA>RoleId {0} 不存在Grade!</TRA>
+        <SIM>RoleId {0} 不存在Grade!</SIM>
+        <HKG>RoleId {0} 不存在Grade!</HKG>
+        <JPN>RoleId {0} has no grade!</JPN>
+        <LAN1>RoleId {0} has no grade!</LAN1>
+        <LAN2>RoleId {0} has no grade!</LAN2>
+      </RoleIdHasNoGrade>
+      <DirectionError>
+        <ENG>direction error, activity:{0}!</ENG>
+        <TRA>會簽方向發生錯誤, 與其他活動的決策方向不一致, 活動:{0}!</TRA>
+        <SIM>会签方向发生错误, 与其他活动的决策方向不一致, 活动:{0}!</SIM>
+        <HKG>會簽方向發生錯誤, 與其他活動的決策方向不一致, 活動:{0}!</HKG>
+        <JPN>direction error, activity:{0}!</JPN>
+        <LAN1>direction error, activity:{0}!</LAN1>
+        <LAN2>direction error, activity:{0}!</LAN2>
+      </DirectionError>
+    </FLInstance>
+    <InstanceManager>
+      <UserNotHaveRole>
+        <ENG>User {0} not have role!</ENG>
+        <TRA>用戶{0}沒有角色!</TRA>
+        <SIM>用户{0}没有角色!</SIM>
+        <HKG>用戶{0}沒有角色!</HKG>
+        <JPN>User {0} not have role!</JPN>
+        <LAN1>User {0} not have role!</LAN1>
+        <LAN2>User {0} not have role!</LAN2>
+        <LAN3>User {0} not have role!</LAN3>
+      </UserNotHaveRole>
+      <UserManagerCanNotBeYouself>
+        <ENG>Role {0}'s manager can't be yourself!</ENG>
+        <TRA>角色{0}的主管不能為自己!</TRA>
+        <SIM>角色{0}的主管不能为自己!</SIM>
+        <HKG>角色{0}的主管不能為自己!</HKG>
+        <JPN>Role {0}'s manager can't be yourself!</JPN>
+        <LAN1>Role {0}'s manager can't be yourself!</LAN1>
+        <LAN2>Role {0}'s manager can't be yourself!</LAN2>
+        <LAN3>Role {0}'s manager can't be yourself!</LAN3>
+      </UserManagerCanNotBeYouself>
+      <UserManagerIsCircle>
+        <ENG>Role {0}'s manager happed Circle!</ENG>
+        <TRA>角色{0}尋找上層主管過程中發生無窮循環的現象!</TRA>
+        <SIM>角色{0}寻找上层主管过程中发生无穷循环的现象!</SIM>
+        <HKG>角色{0}尋找上層主管過程中發生無窮循環的現象!</HKG>
+        <JPN>Role {0}'s manager happed Circle!</JPN>
+        <LAN1>Role {0}'s manager happed Circle!</LAN1>
+        <LAN2>Role {0}'s manager happed Circle!</LAN2>
+        <LAN3>Role {0}'s manager happed Circle!</LAN3>
+      </UserManagerIsCircle>
+      <SendToEmailSender>
+        <ENG>Sender</ENG>
+        <TRA>發送者</TRA>
+        <SIM>发送者</SIM>
+        <HKG>發送者</HKG>
+        <JPN>Sender</JPN>
+        <LAN1>Sender</LAN1>
+        <LAN2>Sender</LAN2>
+        <LAN3>Sender</LAN3>
+      </SendToEmailSender>
+      <SendToEmailFlowName>
+        <ENG>FlowName</ENG>
+        <TRA>流程</TRA>
+        <SIM>流程</SIM>
+        <HKG>流程</HKG>
+        <JPN>FlowName</JPN>
+        <LAN1>FlowName</LAN1>
+        <LAN2>FlowName</LAN2>
+        <LAN3>FlowName</LAN3>
+      </SendToEmailFlowName>
+      <SendToEmailActivityName>
+        <ENG>ActivityName</ENG>
+        <TRA>作業活動</TRA>
+        <SIM>作业活动</SIM>
+        <HKG>作業活動</HKG>
+        <JPN>ActivityName</JPN>
+        <LAN1>ActivityName</LAN1>
+        <LAN2>ActivityName</LAN2>
+        <LAN3>ActivityName</LAN3>
+      </SendToEmailActivityName>
+      <SendToEmailContent>
+        <ENG>Content</ENG>
+        <TRA>單據號</TRA>
+        <SIM>单据号</SIM>
+        <HKG>單據號</HKG>
+        <JPN>Content</JPN>
+        <LAN1>Content</LAN1>
+        <LAN2>Content</LAN2>
+        <LAN3>Content</LAN3>
+      </SendToEmailContent>
+      <SendToEmailDescription>
+        <ENG>Description</ENG>
+        <TRA>說明</TRA>
+        <SIM>说明</SIM>
+        <HKG>說明</HKG>
+        <JPN>Description</JPN>
+        <LAN1>Description</LAN1>
+        <LAN2>Description</LAN2>
+        <LAN3>Description</LAN3>
+      </SendToEmailDescription>
+      <SendToEmailDateTime>
+        <ENG>DateTime</ENG>
+        <TRA>日期</TRA>
+        <SIM>日期</SIM>
+        <HKG>日期</HKG>
+        <JPN>DateTime</JPN>
+        <LAN1>DateTime</LAN1>
+        <LAN2>DateTime</LAN2>
+        <LAN3>DateTime</LAN3>
+      </SendToEmailDateTime>
+      <SendToEmailHyperLink>
+        <ENG>HyperLink</ENG>
+        <TRA>網頁連結</TRA>
+        <SIM>网页连接</SIM>
+        <HKG>網頁連結</HKG>
+        <JPN>HyperLink</JPN>
+        <LAN1>HyperLink</LAN1>
+        <LAN2>HyperLink</LAN2>
+        <LAN3>HyperLink</LAN3>
+      </SendToEmailHyperLink>
+      <SendToEmailHyperLink2>
+        <ENG>Navigator to form</ENG>
+        <TRA>按此連結到表單</TRA>
+        <SIM>按此连接到表单</SIM>
+        <HKG>按此連結到表單</HKG>
+        <JPN>Navigator to form</JPN>
+        <LAN1>Navigator to form</LAN1>
+        <LAN2>Navigator to form</LAN2>
+        <LAN3>Navigator to form</LAN3>
+      </SendToEmailHyperLink2>
+      <CommentTableHeader>
+        <ENG>STEP_ID,USER_ID,USERNAME,STATUS,REMARK,ATTACHMENTS,UPDATE_DATE,UPDATE_TIME</ENG>
+        <TRA>作業名稱,用戶編號,用戶名稱,情況,批示意見,附件,日期,時間</TRA>
+        <SIM>作业名称,用户编号,用户名称,情况,批示意见,附件,日期,时间</SIM>
+        <HKG>作業名稱,用戶編號,用戶名稱,情況,批示意見,附件,日期,時間</HKG>
+        <JPN>STEP_ID,USER_ID,USERNAME,STATUS,REMARK,ATTACHMENTS,UPDATE_DATE,UPDATE_TIME</JPN>
+        <LAN1>STEP_ID,USER_ID,USERNAME,STATUS,REMARK,ATTACHMENTS,UPDATE_DATE,UPDATE_TIME</LAN1>
+        <LAN2>STEP_ID,USER_ID,USERNAME,STATUS,REMARK,ATTACHMENTS,UPDATE_DATE,UPDATE_TIME</LAN2>
+        <LAN3>STEP_ID,USER_ID,USERNAME,STATUS,REMARK,ATTACHMENTS,UPDATE_DATE,UPDATE_TIME</LAN3>
+      </CommentTableHeader>
+      <InstanceStatus>
+        <ENG>NF:NF,NR:NR,N:N,Z:Z,V:V,A:A</ENG>
+        <TRA>NF:取回,NR:退回,N:上呈,Z:結束,V:驗證,A:加簽</TRA>
+        <SIM>NF:取回,NR:退回,N:上呈,Z:结束,V:验证,A:加签</SIM>
+        <HKG>NF:取回,NR:退回,N:上呈,Z:結束,V:驗證,A:加簽</HKG>
+        <JPN>NF:NF,NR:NR,N:N,Z:Z,V:V,A:A</JPN>
+        <LAN1>NF:NF,NR:NR,N:N,Z:Z,V:V,A:A</LAN1>
+        <LAN2>NF:NF,NR:NR,N:N,Z:Z,V:V,A:A</LAN2>
+        <LAN3>NF:NF,NR:NR,N:N,Z:Z,V:V,A:A</LAN3>
+      </InstanceStatus>
+      <InstanceOverTime>
+        <ENG>Instance has expired.</ENG>
+        <TRA>注意，流程已經過期.</TRA>
+        <SIM>注意，流程已经过期.</SIM>
+        <HKG>注意，流程已經過期.</HKG>
+        <JPN>Instance has expired.</JPN>
+        <LAN1>Instance has expired.</LAN1>
+        <LAN2>Instance has expired.</LAN2>
+        <LAN3>Instance has expired.</LAN3>
+      </InstanceOverTime>
+      <InstanceOverTime2>
+        <ENG>Instance:{0}.</ENG>
+        <TRA>流程：{0}.</TRA>
+        <SIM>流程：{0}.</SIM>
+        <HKG>流程：{0}.</HKG>
+        <JPN>Instance:{0}.</JPN>
+        <LAN1>Instance:{0}.</LAN1>
+        <LAN2>Instance:{0}.</LAN2>
+        <LAN3>Instance:{0}.</LAN3>
+      </InstanceOverTime2>
+      <RecordIsPaused>
+        <ENG>This record is already paused!</ENG>
+        <TRA>此記錄已經被暫停,無法再次暫停!</TRA>
+        <SIM>此记录已经被暂停,无法再次暂停!</SIM>
+        <HKG>此記錄已經被暫停,無法再次暫停!</HKG>
+        <JPN>This record is already paused!</JPN>
+        <LAN1>This record is already paused!</LAN1>
+        <LAN2>This record is already paused!</LAN2>
+        <LAN3>This record is already paused!</LAN3>
+      </RecordIsPaused>
+      <RecordIsAlreadyInFL>
+        <ENG>This record is already in the flow!</ENG>
+        <TRA>此記錄已經在流程中,無法再次提交!</TRA>
+        <SIM>此记录已经在流程中,无法再次提交!</SIM>
+        <HKG>此記錄已經在流程中,無法再次提交!</HKG>
+        <JPN>This record is already in the flow!</JPN>
+        <LAN1>This record is already in the flow!</LAN1>
+        <LAN2>This record is already in the flow!</LAN2>
+        <LAN3>This record is already in the flow!</LAN3>
+      </RecordIsAlreadyInFL>
+      <HostTableNotContainRecord>
+        <ENG>Table {0} not contain {1} record!</ENG>
+        <TRA>表{0}不包含'{1}'這樣記錄!</TRA>
+        <SIM>表{0}不包含'{1}'这样记录!</SIM>
+        <HKG>表{0}不包含'{1}'這樣記錄!</HKG>
+        <JPN>Table {0} not contain {1} record!</JPN>
+        <LAN1>Table {0} not contain {1} record!</LAN1>
+        <LAN2>Table {0} not contain {1} record!</LAN2>
+        <LAN3>Table {0} not contain {1} record!</LAN3>
+      </HostTableNotContainRecord>
+      <FLInstanceIsPlused>
+        <ENG>This instance is plused,please wait!</ENG>
+        <TRA>單據已加簽出去, 須等待簽回!</TRA>
+        <SIM>单据已加签出去, 须等待签回!</SIM>
+        <HKG>單據已加簽出去, 須等待簽回!</HKG>
+        <JPN>This instance is plused,please wait!</JPN>
+        <LAN1>This instance is plused,please wait!</LAN1>
+        <LAN2>This instance is plused,please wait!</LAN2>
+        <LAN3>This instance is plused,please wait!</LAN3>
+      </FLInstanceIsPlused>
+      <RoleIdIsAgented>
+        <ENG>This role was agented, no access to approve!</ENG>
+        <TRA>本角色已被代理了, 已無權限審核!</TRA>
+        <SIM>本角色已被代理了, 已无权限审核!</SIM>
+        <HKG>本角色已被代理了, 已無權限審核!</HKG>
+        <JPN>This role was agented, no access to approve!</JPN>
+        <LAN1>This role was agented, no access to approve!</LAN1>
+        <LAN2>This role was agented, no access to approve!</LAN2>
+        <LAN3>This role was agented, no access to approve!</LAN3>
+      </RoleIdIsAgented>
+      <NotFoundFLInstance>
+        <ENG>Not found {0} in db!</ENG>
+        <TRA>資料庫中找不到{0}實例!</TRA>
+        <SIM>数据库中找不到{0}实例!</SIM>
+        <HKG>資料庫中找不到{0}實例!</HKG>
+        <JPN>Not found {0} in db!</JPN>
+        <LAN1>Not found {0} in db!</LAN1>
+        <LAN2>Not found {0} in db!</LAN2>
+        <LAN3>Not found {0} in db!</LAN3>
+      </NotFoundFLInstance>
+      <FirstStepNotReturn>
+        <ENG>This is first step,can't return!</ENG>
+        <TRA>這是流程的第一步，不能Return!</TRA>
+        <SIM>这是流程的第一步，不能Return!</SIM>
+        <HKG>這是流程的第一步，不能Return!</HKG>
+        <JPN>This is first step,can't return!</JPN>
+        <LAN1>This is first step,can't return!</LAN1>
+        <LAN2>This is first step,can't return!</LAN2>
+        <LAN3>This is first step,can't return!</LAN3>
+      </FirstStepNotReturn>
+      <NotSupportRetake>
+        <ENG>This flow is not supported retake!</ENG>
+        <TRA>此流程不支援Return!</TRA>
+        <SIM>此流程不支持Return!</SIM>
+        <HKG>此流程不支援Return!</HKG>
+        <JPN>This flow is not supported retake!</JPN>
+        <LAN1>This flow is not supported retake!</LAN1>
+        <LAN2>This flow is not supported retake!</LAN2>
+        <LAN3>This flow is not supported retake!</LAN3>
+      </NotSupportRetake>
+      <NotRetakePleaseRefresh>
+        <ENG>Can't return,please refresh todohis table!</ENG>
+        <TRA>不能Return，請刷新“經辦事項”列表!</TRA>
+        <SIM>不能Return，请刷新“经办事项”列表!</SIM>
+        <HKG>不能Return，請刷新“經辦事項”列表!</HKG>
+        <JPN>Can't return,please refresh todohis table!</JPN>
+        <LAN1>Can't return,please refresh todohis table!</LAN1>
+        <LAN2>Can't return,please refresh todohis table!</LAN2>
+        <LAN3>Can't return,please refresh todohis table!</LAN3>
+      </NotRetakePleaseRefresh>
+      <RecordNotInToDoList>
+        <ENG>This record is not in to do list!</ENG>
+        <TRA>此記錄不在待辦事項中!</TRA>
+        <SIM>此记录不在待办事项中!</SIM>
+        <HKG>此記錄不在待辦事項中!</HKG>
+        <JPN>This record is not in to do list!</JPN>
+        <LAN1>This record is not in to do list!</LAN1>
+        <LAN2>This record is not in to do list!</LAN2>
+        <LAN3>This record is not in to do list!</LAN3>
+      </RecordNotInToDoList>
+    </InstanceManager>
+    <HostTable>
+      <HostTableNotContainRecord>
+        <ENG>Table {0} not contain {1} record!</ENG>
+        <TRA>表{0}不包含'{1}'這樣記錄!</TRA>
+        <SIM>表{0}不包含'{1}'这样记录!</SIM>
+        <HKG>表{0}不包含'{1}'這樣記錄!</HKG>
+        <JPN>Table {0} not contain {1} record!</JPN>
+        <LAN1>Table {0} not contain {1} record!</LAN1>
+        <LAN2>Table {0} not contain {1} record!</LAN2>
+        <LAN3>Table {0} not contain {1} record!</LAN3>
+      </HostTableNotContainRecord>
+      <KeysWasNotDefine>
+        <ENG>FL's keys was not define!</ENG>
+        <TRA>FL的Keys沒有設置!</TRA>
+        <SIM>FL的Keys没有设置!</SIM>
+        <HKG>FL的Keys沒有設置!</HKG>
+        <JPN>FL's keys was not define!</JPN>
+        <LAN1>FL's keys was not define!</LAN1>
+        <LAN2>FL's keys was not define!</LAN2>
+        <LAN3>FL's keys was not define!</LAN3>
+      </KeysWasNotDefine>
+      <KeysLengthNotEqualRelation>
+        <ENG>Keys's length was not equal RelationKey's length!</ENG>
+        <TRA>Keys的長度不等於RelationKeys的長度!</TRA>
+        <SIM>Keys的长度不等于RelationKeys的长度!</SIM>
+        <HKG>Keys的長度不等於RelationKeys的長度!</HKG>
+        <JPN>Keys's length was not equal RelationKey's length!</JPN>
+        <LAN1>Keys's length was not equal RelationKey's length!</LAN1>
+        <LAN2>Keys's length was not equal RelationKey's length!</LAN2>
+        <LAN3>Keys's length was not equal RelationKey's length!</LAN3>
+      </KeysLengthNotEqualRelation>
+    </HostTable>
+    <Logic>
+      <CannotPlusReturn>
+        <ENG>Can't use Role:{0} to reply plus approved!</ENG>
+        <TRA>不能使用角色:{0} 進行回覆加簽!</TRA>
+        <SIM>不能使用角色:{0} 进行回复加签!</SIM>
+        <HKG>不能使用角色:{0} 進行回覆加簽!</HKG>
+        <JPN>Can't use Role:{0} to reply plus approved!</JPN>
+        <LAN1>Can't use Role:{0} to reply plus approved!</LAN1>
+        <LAN2>Can't use Role:{0} to reply plus approved!</LAN2>
+        <LAN3>Can't use Role:{0} to reply plus approved!</LAN3>
+      </CannotPlusReturn>
+      <SendToIdIsNull>
+        <ENG>SendToId is null!</ENG>
+        <TRA>此流程沒有接收者!</TRA>
+        <SIM>此流程没有接收者!</SIM>
+        <HKG>此流程沒有接收者!</HKG>
+        <JPN>SendToId is null!</JPN>
+        <LAN1>SendToId is null!</LAN1>
+        <LAN2>SendToId is null!</LAN2>
+        <LAN3>SendToId is null!</LAN3>
+      </SendToIdIsNull>
+      <SendToIdNotExist>
+        <ENG>SendToId not exist!</ENG>
+        <TRA>查無此角色!</TRA>
+        <SIM>查无此角色!</SIM>
+        <HKG>查無此角色!</HKG>
+        <JPN>SendToId not exist!</JPN>
+        <LAN1>SendToId not exist!</LAN1>
+        <LAN2>SendToId not exist!</LAN2>
+        <LAN3>SendToId not exist!</LAN3>
+      </SendToIdNotExist>
+      <SendToIdNotSet>
+        <ENG>SendToId not set!</ENG>
+        <TRA>未設定角色!</TRA>
+        <SIM>未设定角色!</SIM>
+        <HKG>未設定角色!</HKG>
+        <JPN>SendToId not set!</JPN>
+        <LAN1>SendToId not set!</LAN1>
+        <LAN2>SendToId not set!</LAN2>
+        <LAN3>SendToId not set!</LAN3>
+      </SendToIdNotSet>
+    </Logic>
+    <SubFl>
+      <UIText>
+        <ENG>Add;Add ParallelActivity;Delete;Up;Down;Save;Load;Save File Name;Load FileName;Close</ENG>
+        <TRA>新增;新增會簽;刪除;上移;下移;保存;讀取;保存的文件名;讀取的文件名;確認返回</TRA>
+        <SIM>新增;新增会签;删除;上移;下移;保存;读取;保存的文件名;读取的文件名;确认返回</SIM>
+        <HKG>新增;新增會簽;刪除;上移;下移;保存;讀取;保存的文件名;讀取的文件名;確認返回</HKG>
+        <JPN>Add;Add ParallelActivity;Delete;Up;Down;Save;Load;Save File Name;Load FileName;Close</JPN>
+        <LAN1>Add;Add ParallelActivity;Delete;Up;Down;Save;Load;Save File Name;Load FileName;Close</LAN1>
+        <LAN2>Add;Add ParallelActivity;Delete;Up;Down;Save;Load;Save File Name;Load FileName;Close</LAN2>
+        <LAN3>Add;Add ParallelActivity;Delete;Up;Down;Save;Load;Save File Name;Load FileName;Close</LAN3>
+      </UIText>
+      <Property>
+        <ENG>Name;PlusApprove;SendToRole;SendToUser;Type</ENG>
+        <TRA>名稱;是否加簽;角色;使用者;類型</TRA>
+        <SIM>名称;是否加签;角色;使用者;类型</SIM>
+        <HKG>名稱;是否加簽;角色;使用者;類型</HKG>
+        <JPN>Name;PlusApprove;SendToRole;SendToUser;Type</JPN>
+        <LAN1>Name;PlusApprove;SendToRole;SendToUser;Type</LAN1>
+        <LAN2>Name;PlusApprove;SendToRole;SendToUser;Type</LAN2>
+        <LAN3>Name;PlusApprove;SendToRole;SendToUser;Type</LAN3>
+      </Property>
+      <ActivityType>
+        <ENG>Activity;Stand;Notify</ENG>
+        <TRA>活動;作業;通知</TRA>
+        <SIM>活动;作业;通知</SIM>
+        <HKG>活動;作業;通知</HKG>
+        <JPN>Activity;Stand;Notify</JPN>
+        <LAN1>Activity;Stand;Notify</LAN1>
+        <LAN2>Activity;Stand;Notify</LAN2>
+        <LAN3>Activity;Stand;Notify</LAN3>
+      </ActivityType>
+    </SubFl>
+  </FLRuntime>
+  <EEPMessenger>
+    <Popup>
+      <PopupMessage>
+        <ENG>you have {0} new tasks in to do list at {1}!</ENG>
+        <TRA>你有{0}新的代辦于{1}!</TRA>
+        <SIM>你有{0}新的待办于{1}!</SIM>
+        <HKG>你有{0}新的代辦于{1}!</HKG>
+        <JPN>you have {0} new tasks in to do list at {1}!</JPN>
+        <LAN1>you have {0} new tasks in to do list at {1}!</LAN1>
+        <LAN2>you have {0} new tasks in to do list at {1}!</LAN2>
+        <LAN3>you have {0} new tasks in to do list at {1}!</LAN3>
+      </PopupMessage>
+      <ListMessage>
+        <ENG>you have {0} tasks in to do list and {1} of them are new tasks!</ENG>
+        <TRA>共有{0}個代辦，其中{1}個爲新的代辦!</TRA>
+        <SIM>共有{0}个待办，其中{1}个为新的待办!</SIM>
+        <HKG>共有{0}個代辦，其中{1}個爲新的代辦!</HKG>
+        <JPN>you have {0} tasks in to do list and {1} of them are new tasks!</JPN>
+        <LAN1>you have {0} tasks in to do list and {1} of them are new tasks!</LAN1>
+        <LAN2>you have {0} tasks in to do list and {1} of them are new tasks!</LAN2>
+        <LAN3>you have {0} tasks in to do list and {1} of them are new tasks!</LAN3>
+      </ListMessage>
+    </Popup>
+  </EEPMessenger>
+  <FLDesigner>
+    <FLDesigner>
+      <Item1>
+        <ENG>Id,DateTime,Flow,Activity,Sender,Presentation,Receiver,Message</ENG>
+        <TRA>序號,日期,流程名稱,流程活動,寄件者,單據號碼,接收者,訊息內容</TRA>
+        <SIM>序号,日期,流程名称,流程活动,寄件者,单据号码,接收者,讯息内容</SIM>
+        <HKG>序號,日期,流程名稱,流程活動,寄件者,單據號碼,接收者,訊息內容</HKG>
+        <JPN>Id,DateTime,Flow,Activity,Sender,Presentation,Receiver,Message</JPN>
+        <LAN1>Id,DateTime,Flow,Activity,Sender,Presentation,Receiver,Message</LAN1>
+        <LAN2>Id,DateTime,Flow,Activity,Sender,Presentation,Receiver,Message</LAN2>
+        <LAN3>Id,DateTime,Flow,Activity,Sender,Presentation,Receiver,Message</LAN3>
+      </Item1>
+      <Item2>
+        <ENG>Flow,Activity,Presentaion,Sender,Message,DateTime,Status</ENG>
+        <TRA>流程名稱,流程活動,單據號碼,經辦者,批示意見,日期,状态</TRA>
+        <SIM>流程名称,流程活动,单据号码,经办者,批示意见,日期,状态</SIM>
+        <HKG>流程名稱,流程活動,單據號碼,經辦者,批示意見,日期,状态</HKG>
+        <JPN>Flow,Activity,Presentaion,Sender,Message,DateTime,Status</JPN>
+        <LAN1>Flow,Activity,Presentaion,Sender,Message,DateTime,Status</LAN1>
+        <LAN2>Flow,Activity,Presentaion,Sender,Message,DateTime,Status</LAN2>
+        <LAN3>Flow,Activity,Presentaion,Sender,Message,DateTime,Status</LAN3>
+      </Item2>
+      <Item3>
+        <ENG>Z:End,N:Approve,NR:Return,NF:Retake,X:Reject,A:PlusApprove,V:Validate,F:Notify</ENG>
+        <TRA>Z:結案,N:上呈,NR:退回,NF:取回,X:作廢,A:加簽,V:驗證,F:通知</TRA>
+        <SIM>Z:结案,N:上呈,NR:退回,NF:取回,X:作废,A:加签,V:验证,F:通知</SIM>
+        <HKG>Z:結案,N:上呈,NR:退回,NF:取回,X:作廢,A:加簽,V:驗證,F:通知</HKG>
+        <JPN>Z:End,N:Approve,NR:Return,NF:Retake,X:Reject,A:PlusApprove,V:Validate,F:Notify</JPN>
+        <LAN1>Z:End,N:Approve,NR:Return,NF:Retake,X:Reject,A:PlusApprove,V:Validate,F:Notify</LAN1>
+        <LAN2>Z:End,N:Approve,NR:Return,NF:Retake,X:Reject,A:PlusApprove,V:Validate,F:Notify</LAN2>
+        <LAN3>Z:End,N:Approve,NR:Return,NF:Retake,X:Reject,A:PlusApprove,V:Validate,F:Notify</LAN3>
+      </Item3>
+      <FlowDescriptionIsNull>
+        <ENG>Flow's description can't null.</ENG>
+        <TRA>流程的Description不能為空。</TRA>
+        <SIM>流程的Description不能为空。</SIM>
+        <HKG>流程的Description不能為空。</HKG>
+        <JPN>Flow's description can't null.</JPN>
+        <LAN1>Flow's description can't null.</LAN1>
+        <LAN2>Flow's description can't null.</LAN2>
+        <LAN3>Flow's description can't null.</LAN3>
+      </FlowDescriptionIsNull>
+      <FLPreview>
+        <ENG>seq,condition,activity,user,role,status,approved,waiting,plus approved</ENG>
+        <TRA>次序,条件,活動名稱,角色名,用戶名,簽核狀態,已簽,待簽,加簽</TRA>
+        <SIM>序号,条件,活动名称,角色名,用户名,签核状态,已签,待签,加签</SIM>
+        <HKG>次序,条件,活動名稱,角色名,用戶名,簽核狀態,已簽,待簽,加簽</HKG>
+        <JPN>seq,condition,activity,user,role,status,approved,waiting,plus approved</JPN>
+        <LAN1>seq,condition,activity,user,role,status,approved,waiting,plus approved</LAN1>
+        <LAN2>seq,condition,activity,user,role,status,approved,waiting,plus approved</LAN2>
+        <LAN3>seq,condition,activity,user,role,status,approved,waiting,plus approved</LAN3>
+      </FLPreview>
+    </FLDesigner>
+  </FLDesigner>
+  <SLTools>
+    <SLNavigator>
+      <ControlText>
+        <ENG>first;previous;next;last;add;update;delete;apply;abort;query;submit;approve;return;reject;notify;flowdelete;plus;pause;comment</ENG>
+        <TRA>首筆;上筆;下筆;末筆;新增;更改;刪除;存檔;放棄;查詢;呈送;審核;退回;作廢;通知;删除工作流;加簽;暫停;查看</TRA>
+        <SIM>首笔;上笔;下笔;末笔;新增;更改;删除;存档;放弃;查询;呈送;审核;退回;作废;通知;删除工作流;加签;暂停;查看</SIM>
+        <HKG>首筆;上筆;下筆;末筆;新增;更改;刪除;存檔;放棄;查詢;呈送;審核;退回;作廢;通知;删除工作流;加簽;暫停;查看</HKG>
+        <JPN>first;previous;next;last;add;update;delete;apply;abort;query;submit;approve;return;reject;notify;flowdelete;plus;pause;comment</JPN>
+        <LAN1>first;previous;next;last;add;update;delete;apply;abort;query;submit;approve;return;reject;notify;flowdelete;plus;pause;comment</LAN1>
+        <LAN2>first;previous;next;last;add;update;delete;apply;abort;query;submit;approve;return;reject;notify;flowdelete;plus;pause;comment</LAN2>
+        <LAN3>first;previous;next;last;add;update;delete;apply;abort;query;submit;approve;return;reject;notify;flowdelete;plus;pause;comment</LAN3>
+      </ControlText>
+      <StatusName>
+        <ENG>Editing;Inserting;Browsing;Changed;ApplySucess;ApplyFail;Aborted</ENG>
+        <TRA>編輯中;新增中;瀏覽中;已變更;存檔成功;存檔失敗;放棄存檔</TRA>
+        <SIM>编辑中;新增中;浏览中;已变更;存档成功;存档失败;放弃存档</SIM>
+        <HKG>編輯中;新增中;瀏覽中;已變更;存檔成功;存檔失敗;放棄存檔</HKG>
+        <JPN>Editing;Inserting;Browsing;Changed;ApplySucess;ApplyFail;Aborted</JPN>
+        <LAN1>Editing;Inserting;Browsing;Changed;ApplySucess;ApplyFail;Aborted</LAN1>
+        <LAN2>Editing;Inserting;Browsing;Changed;ApplySucess;ApplyFail;Aborted</LAN2>
+        <LAN3>Editing;Inserting;Browsing;Changed;ApplySucess;ApplyFail;Aborted</LAN3>
+      </StatusName>
+      <PageRecordText>
+        <ENG>Page;Record</ENG>
+        <TRA>頁次;資料</TRA>
+        <SIM>页次;资料</SIM>
+        <HKG>頁次;資料</HKG>
+        <JPN>Page;Record</JPN>
+        <LAN1>Page;Record</LAN1>
+        <LAN2>Page;Record</LAN2>
+        <LAN3>Page;Record</LAN3>
+      </PageRecordText>
+    </SLNavigator>
+    <SLStatusBar>
+      <StripMsg>
+        <ENG>UserID:;User:;Date:;Alias:;Module:;Site:;Count:</ENG>
+        <TRA>使用者:;姓名:;日期:;資料庫:;方案:;公司別:;筆數:</TRA>
+        <SIM>用户号:;姓名:;日期:;数据库:;工程:;公司类別:;笔数:</SIM>
+        <HKG>使用者:;姓名:;日期:;資料庫:;方案:;公司別:;笔数:</HKG>
+        <JPN>UserID:;User:;Date:;Alias:;Module:;Site:;Count:</JPN>
+        <LAN1>UserID:;User:;Date:;Alias:;Module:;Site:;Count:</LAN1>
+        <LAN2>UserID:;User:;Date:;Alias:;Module:;Site:;Count:</LAN2>
+        <LAN3>UserID:;User:;Date:;Alias:;Module:;Site:;Count:</LAN3>
+      </StripMsg>
+      <NavDefault>
+        <ENG>Browsing</ENG>
+        <TRA>瀏覽中</TRA>
+        <SIM>浏览中</SIM>
+        <HKG>瀏覽中</HKG>
+        <JPN>Browsing</JPN>
+        <LAN1>Browsing</LAN1>
+        <LAN2>Browsing</LAN2>
+        <LAN3>Browsing</LAN3>
+      </NavDefault>
+      <CloseInfomation>
+        <ENG>Are you sure to Close This Form?</ENG>
+        <TRA>確定要關閉這個窗口嗎？</TRA>
+        <SIM>确定要关闭这个窗口吗？</SIM>
+        <HKG>確定要關閉這個窗口嗎？</HKG>
+        <JPN>Are you sure to Close This Form?</JPN>
+        <LAN1>Are you sure to Close This Form?</LAN1>
+        <LAN2>Are you sure to Close This Form?</LAN2>
+        <LAN3>Are you sure to Close This Form?</LAN3>
+      </CloseInfomation>
+    </SLStatusBar>
+    <SLFileUpload>
+      <UploadDialog>
+        <ENG>browse;add files;upload;total {0} files;close;file upload</ENG>
+        <TRA>瀏覽;追加文件;上傳;總計{0}個文件;關閉;檔案上傳</TRA>
+        <SIM>浏览;追加文件;上传;总计{0}个文件;关闭;档案上传</SIM>
+        <HKG>瀏覽;追加文件;上傳;總計{0}個文件;關閉;檔案上傳</HKG>
+        <JPN>browse;add files;upload;total {0} files;close;file upload</JPN>
+        <LAN1>browse;add files;upload;total {0} files;close;file upload</LAN1>
+        <LAN2>browse;add files;upload;total {0} files;close;file upload</LAN2>
+        <LAN3>browse;add files;upload;total {0} files;close;file upload</LAN3>
+      </UploadDialog>
+      <UploadFileSuccess>
+        <ENG>upload success</ENG>
+        <TRA>上傳成功</TRA>
+        <SIM>上传成功</SIM>
+        <HKG>上傳成功</HKG>
+        <JPN>upload success</JPN>
+        <LAN1>upload success</LAN1>
+        <LAN2>upload success</LAN2>
+        <LAN3>upload success</LAN3>
+      </UploadFileSuccess>
+    </SLFileUpload>
+    <SLRefval>
+      <CheckDataMessage>
+        <ENG>{0} is not exist!</ENG>
+        <TRA>{0}不存在!</TRA>
+        <SIM>{0}不存在!</SIM>
+        <HKG>{0}不存在!</HKG>
+        <JPN>{0} is not exist!</JPN>
+        <LAN1>{0} is not exist!</LAN1>
+        <LAN2>{0} is not exist!</LAN2>
+        <LAN3>{0} is not exist!</LAN3>
+      </CheckDataMessage>
+      <ButtonName>
+        <ENG>query;refresh;ok;cancel;add;lookup list</ENG>
+        <TRA>查詢;更新;確定;取消;新增;關聯選單</TRA>
+        <SIM>查询;刷新;确定;取消;新增;关联选单</SIM>
+        <HKG>查詢;更新;確定;取消;新增;關聯選單</HKG>
+        <JPN>query;refresh;ok;cancel;add;lookup list</JPN>
+        <LAN1>query;refresh;ok;cancel;add;lookup list</LAN1>
+        <LAN2>query;refresh;ok;cancel;add;lookup list</LAN2>
+        <LAN3>query;refresh;ok;cancel;add;lookup list</LAN3>
+      </ButtonName>
+    </SLRefval>
+    <SLCard>
+      <TooltipMessage>
+        <ENG>show data '{0}'</ENG>
+        <TRA>查看資料'{0}'</TRA>
+        <SIM>查看数据'{0}'</SIM>
+        <HKG>查看資料'{0}'</HKG>
+        <JPN>show data '{0}'</JPN>
+        <LAN1>show data '{0}'</LAN1>
+        <LAN2>show data '{0}'</LAN2>
+        <LAN3>show data '{0}'</LAN3>
+      </TooltipMessage>
+      <TooltipFieldNull>
+        <ENG>TooltipField is not set.</ENG>
+        <TRA>TooltipField沒有設置。</TRA>
+        <SIM>TooltipField没有设置。</SIM>
+        <HKG>TooltipField沒有設置。</HKG>
+        <JPN>TooltipField is not set.</JPN>
+        <LAN1>TooltipField is not set.</LAN1>
+        <LAN2>TooltipField is not set.</LAN2>
+        <LAN3>TooltipField is not set.</LAN3>
+      </TooltipFieldNull>
+    </SLCard>
+    <SLMainFlowPage2>
+      <MyWork>
+        <ENG>My Work</ENG>
+        <TRA>我的工作</TRA>
+        <SIM>我的工作</SIM>
+        <HKG>我的工作</HKG>
+        <JPN>My Work</JPN>
+        <LAN1>My Work</LAN1>
+        <LAN2>My Work</LAN2>
+        <LAN3>My Work</LAN3>
+      </MyWork>
+      <GridButton>
+        <ENG>select;approve;return;retake;haste;notify delete</ENG>
+        <TRA>查看;審核;退回;取回;加急;刪除通知;</TRA>
+        <SIM>查看;审核;退回;取回;加急;删除通知;</SIM>
+        <HKG>查看;審核;退回;取回;加急;刪除通知;</HKG>
+        <JPN>select;approve;return;select;retake;haste;notify delete</JPN>
+        <LAN1>select;approve;return;select;retake;haste;notify delete</LAN1>
+        <LAN2>select;approve;return;select;retake;haste;notify delete</LAN2>
+        <LAN3>select;approve;return;select;retake;haste;notify delete</LAN3>
+      </GridButton>
+    </SLMainFlowPage2>
+    <SLSubmit>
+      <TitleCaption>
+        <ENG>submit:Submit;approve:Approve;return:Return;</ENG>
+        <TRA>submit:申請;approve:審核;return:退回;</TRA>
+        <SIM>submit:申请;approve:审核;return:退回;</SIM>
+        <HKG>submit:申請;approve:審核;return:退回;</HKG>
+        <JPN>submit:Submit;approve:Approve;return:Return;</JPN>
+        <LAN1>submit:Submit;approve:Approve;return:Return;</LAN1>
+        <LAN2>submit:Submit;approve:Approve;return:Return;</LAN2>
+        <LAN3>submit:Submit;approve:Approve;return:Return;</LAN3>
+      </TitleCaption>
+    </SLSubmit>
+    <ServiceDataSource>
+      <RightToAdd>
+        <ENG>have no right to add...</ENG>
+        <TRA>查無新增權限</TRA>
+        <SIM>查无新增权限</SIM>
+        <HKG>查無新增權限</HKG>
+        <JPN>have no right to add...</JPN>
+        <LAN1>have no right to add...</LAN1>
+        <LAN2>have no right to add...</LAN2>
+        <LAN3>have no right to add...</LAN3>
+      </RightToAdd>
+      <RightToDelete>
+        <ENG>have no right to delete...</ENG>
+        <TRA>查無刪除權限</TRA>
+        <SIM>查无删除权限</SIM>
+        <HKG>查無刪除權限</HKG>
+        <JPN>have no right to delete...</JPN>
+        <LAN1>have no right to delete...</LAN1>
+        <LAN2>have no right to delete...</LAN2>
+        <LAN3>have no right to delete...</LAN3>
+      </RightToDelete>
+      <RightToEdit>
+        <ENG>have no right to edit...</ENG>
+        <TRA>查無修改權限</TRA>
+        <SIM>查无修改权限</SIM>
+        <HKG>查無修改權限</HKG>
+        <JPN>have no right to edit...</JPN>
+        <LAN1>have no right to edit...</LAN1>
+        <LAN2>have no right to edit...</LAN2>
+        <LAN3>have no right to edit...</LAN3>
+      </RightToEdit>
+    </ServiceDataSource>
+    <DetailWindow>
+      <TitleCaption>
+        <ENG>DetailWindow</ENG>
+        <TRA>明細編輯表單</TRA>
+        <SIM>明细编辑表单</SIM>
+        <HKG>明細編輯表單</HKG>
+        <JPN>DetailWindow</JPN>
+        <LAN1>DetailWindow</LAN1>
+        <LAN2>DetailWindow</LAN2>
+        <LAN3>DetailWindow</LAN3>
+      </TitleCaption>
+    </DetailWindow>
+    <SLDatePicker>
+      <TODAYBUTTON>
+        <ENG>Today</ENG>
+        <TRA>今天</TRA>
+        <SIM>今天</SIM>
+        <HKG>今天</HKG>
+        <JPN>Today</JPN>
+        <LAN1>Today</LAN1>
+        <LAN2>Today</LAN2>
+        <LAN3>Today</LAN3>
+      </TODAYBUTTON>
+    </SLDatePicker>
+  </SLTools>
+</SystemMessage>

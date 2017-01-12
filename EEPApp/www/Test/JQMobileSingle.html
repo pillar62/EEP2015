@@ -1,0 +1,266 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><script type="text/javascript" src="../cordova.js"></script><script type="text/javascript" src="../scripts/platformOverrides.js"></script><script type="text/javascript" src="../scripts/index.js"></script><script type="text/javascript" src="../js/jquery-1.11.3.js"></script><script type="text/javascript" src="../js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script><script type="text/javascript" src="../js/jquery.json.js"></script><script type="text/javascript" src="../js/jquery.infolight.mobile.js"></script><title>
+
+</title>
+   
+    <script>
+//        jQuery.extend(jQuery.mobile.datebox.prototype.options, {
+//            'overrideDateFormat': '%Y-%b-',
+//            'overrideHeaderFormat': '%d-%b-%Y'
+        //        });
+        function getCompany() {
+            return "infolight";
+        }
+
+        function test() {
+            //alert("abc");
+            return "abc"
+        }
+
+    
+
+        function testconfirm() {
+           
+        }
+
+        function AddRed(val, rowData) {
+            return "<font color='red'>" + val + "</font>";
+        }
+
+        function FormatDate(val, rowData) {
+            var date = new Date(val);
+            var y = date.getFullYear();
+            var m = date.getMonth() + 1;
+            var d = date.getDate();
+            return y + '-' + (m < 10 ? ('0' + m) : m) + '-' + (d < 10 ? ('0' + d) : d);
+        }
+
+        
+
+        function onbeforeload() {
+            //alert("onbeforeload");
+            //$(this).datagrid('options').whereString = '1=0';
+        }
+
+        function onloadsuccess() {
+           // alert($(this).datagrid('getWhere'));
+            //alert("onloadsuccess");
+            var parent = $('#JQDataForm1_OrderID').parent();
+            //$('<a class="ui-btn ui-btn-up-b ui-shadow ui-btn-corner-all ui-mini" data-role="button" data-theme="b" data-mini="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperEls="span"><span class="ui-btn-inner"><span class="ui-btn-text">button</span></span></a>').appendTo(parent);
+
+
+            //$("<a data-mini='true' data-role='button' data-theme='b'>button</a>").appendTo($('#JQDataForm1_OrderID').parent()).trigger("create"); ;
+            //$('<input type="reset" value="Reset Button">').appendTo($('#JQDataForm1_OrderID').parent()).button({ theme: 'b' });
+            //$("<a data-mini='true' data-role='button' data-theme='b'>button</a>").insertAfter('#JQDataForm1_OrderID');
+        }
+
+        function oninsert() {
+            //alert("oninsert");
+        }
+
+        function onedit() {
+            //alert("onedit");
+        }
+
+        function ondelete() {
+            //alert("ondelete");
+        }
+
+        function onapply() {
+            //alert("onapply");
+        }
+
+        function oncancel() {
+           // alert("oncancel");
+        }
+
+//        function export111() {
+//           // $("." + $.fn.datagrid.class, '#JQDataGrid1').datagrid('export');
+//        }
+    </script>
+<link href="../css/index.css" rel="stylesheet" /><link href="../js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet" /><link href="../css/themes/my-custom-theme.min.css" rel="stylesheet" /><link href="../css/themes/jquery.mobile.icons.min.css" rel="stylesheet" /></head>
+<body>
+    <form name="form1" method="post" action="JQMobileSingle.aspx?Cordova=true" id="form1">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTk2NjE3MjU2NmRkJd6GTiJBAqRTeu1pQFYSwty2W/CHk3yNLxDsEfwFEOs=" />
+</div>
+
+   
+        <input type="hidden" name="_DEVELOPERID" id="_DEVELOPERID" />
+
+
+        <div id="JQDataGrid1" data-role="page">
+	<div data-role="header" data-theme="b">
+    <h1>
+        EEP2012</h1>
+    <a data-mini="true" data-inline="true" data-icon="home" data-role="button" data-iconpos="notext" data-theme="b" onclick="javascript:location.href='../MobileMainPage.aspx';">Home</a>
+    <a data-mini="true" data-inline="true" data-icon="back" data-role="button" data-iconpos="notext" data-theme="b" data-rel="back">Back</a>
+</div>
+<!--javascript:$.mobile.changePage('../MobileMainPage.aspx', { transition: 'slide' ,reverse:true, role: 'page' });--><div data-theme="b" data-role="content">
+		<div id="JQDataGrid1_query" data-role="collapsible">
+			<h4>
+				Query
+			</h4><div data-theme="b" class="info-query" style="min-width: 100px; max-width: 500px">
+				<div data-role="fieldcontain">
+					<label for="JQDataGrid1_query_OrderID" style="word-break:keep-all">OrderID</label><input id="JQDataGrid1_query_OrderID" name="OrderID" data-mini="true" infolight-options="queryField:'OrderID',condition:'%',dataType:'string',isNvarChar:false" type="text" />
+				</div>
+			</div>
+		</div><table class="info-datagrid table-stripe infolight-breakpoint" data-role="table" data-mode="reflow" data-theme="b" infolight-options="remoteName:'S002.Orders',tableName:'Orders',pageSize:10,editPage:'#JQTab1',editMode:'switch',detailObjectID:'#JQDataGrid2',queryObjectID:'#JQDataGrid1_query',toolItemObjectID:'#JQDataGrid1_toolitem',title:'JQDataGrid',alwaysClose:false,allowAdd:true,allowUpdate:true,allowDelete:true,allowView:true,toolItemsPosition:'both',listColumnCount:3,listCaptionWidth:80,queryMode:'panel',reportFileName:'1.rdlc',onBeforeLoad:onbeforeload,onSelect:testconfirm,onInsert:oninsert,onEdit:onedit,onDelete:ondelete">
+			<thead>
+				<tr>
+					<th nowrap="nowrap" infolight-options="field:'OrderID',width:90,align:'',nowrap:false,format:'R-S001.Products-Products-ProductID-ProductID',whereItems:[]">OrderID</th><th nowrap="nowrap" infolight-options="field:'CustomerID',width:190,align:'right',nowrap:false,format:'R-S001.Master-Master-ContactName-CustomerID',whereItems:[]">CustomerID</th><th nowrap="nowrap" infolight-options="field:'EmployeeID',width:90,align:'right',nowrap:false,format:'R-S001.Employees-Employees-LastName-EmployeeID',whereItems:[{field:'EmployeeID',whereValue:{type:'constant',value:['2']}}]">EmployeeID</th><th nowrap="nowrap" infolight-options="field:'OrderDate',width:90,align:'',nowrap:false,format:'yyyy/mm/dd'">OrderDate</th><th nowrap="nowrap" infolight-options="field:'RequiredDate',width:90,align:'',nowrap:false,format:'qrcode,size:60'">RequiredDate</th><th nowrap="nowrap" infolight-options="field:'ShippedDate',width:90,align:'',nowrap:false,formatter:FormatDate">ShippedDate</th><th nowrap="nowrap" infolight-options="field:'Finished',width:90,align:'',nowrap:false,format:'L,checkbox'">Finished</th><th nowrap="nowrap" infolight-options="field:'ShipAddress',width:90,align:'',nowrap:false,format:'Image,Folder:Image,Height:50'">ShipAddress</th><th nowrap="nowrap" infolight-options="field:'ShipCity',width:90,align:'',nowrap:false">ShipCity</th><th nowrap="nowrap" infolight-options="field:'ShipRegion',width:90,align:'',nowrap:false">ShipRegion</th>
+				</tr>
+			</thead>
+		</table><div class="ui-content" id="JQDataGrid1_popup" data-role="popup" data-theme="d" data-overlay-theme="a">
+			<a data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><p></p>
+		</div><div id="JQDataGrid1_toolitem" data-role="none" style="display:none">
+			<a class="grid-insert" data-mini="true" data-inline="true" data-role="none" data-icon="plus" data-iconpos="notext">Insert</a><a class="grid-previous" data-mini="true" data-inline="true" data-role="none" data-icon="arrow-l" data-iconpos="notext">Previous page</a><a class="grid-next" data-mini="true" data-inline="true" data-role="none" data-icon="arrow-r" data-iconpos="notext">Next page</a><a class="grid-query" data-mini="true" data-inline="true" data-role="none" data-icon="search" data-iconpos="notext">Query</a><a class="grid-refresh" data-mini="true" data-inline="true" data-role="none" data-icon="refresh" data-iconpos="notext" onclick="test()">Refresh</a><a class="grid-return" data-mini="true" data-inline="true" data-role="none" data-icon="back" data-iconpos="notext">Back</a><a class="grid-export" data-mini="true" data-inline="true" data-role="none" data-icon="info" data-iconpos="notext">export</a><a data-mini="true" data-inline="true" data-role="none" data-icon="gear" data-iconpos="notext" onclick="testconfirm()">export</a><a class="aaa" data-mini="true" data-inline="true" data-role="none" data-icon="minus" data-iconpos="notext">aaaa</a>
+		</div>
+	</div>
+</div>
+        
+        
+
+    <div id="JQDataForm2" data-overlay-theme="b" data-role="page">
+	<div data-role="header" data-theme="b">
+		<h1>
+			JQDataForm
+		</h1>
+	</div><div data-theme="b" data-role="content">
+		<div data-theme="b" class="info-form" infolight-options="id: 'JQDataForm2',remoteName:'S002.Orders',tableName:'OrderDetails',duplicateCheck:false,appliedClose:true,autoSubmit:false,autoPause:false">
+			<div data-role="fieldcontain">
+				<label for="JQDataForm2_OrderID">OrderID</label><input id="JQDataForm2_OrderID" name="OrderID" data-mini="true" infolight-options="field:'OrderID',width:80,align:'left',readOnly:false,defaultValue:{type:'field',value:['OrderID']}" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="JQDataForm2_ProductID">ProductID</label><input id="JQDataForm2_ProductID" name="ProductID" data-mini="true" infolight-options="field:'ProductID',width:80,align:'left',readOnly:false" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="JQDataForm2_UnitPrice">UnitPrice</label><input id="JQDataForm2_UnitPrice" name="UnitPrice" data-mini="true" infolight-options="field:'UnitPrice',width:80,align:'left',readOnly:false" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="JQDataForm2_Quantity">Quantity</label><input id="JQDataForm2_Quantity" name="Quantity" data-mini="true" infolight-options="field:'Quantity',width:80,align:'left',readOnly:false" type="text" />
+			</div><div data-role="fieldcontain">
+				<label for="JQDataForm2_Discount">Discount</label><input id="JQDataForm2_Discount" name="Discount" data-mini="true" infolight-options="field:'Discount',width:80,align:'left',readOnly:false" type="text" />
+			</div>
+		</div><div class="ui-content" id="JQDataForm2_popup" data-role="popup" data-theme="d" data-overlay-theme="a">
+			<a data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><p></p>
+		</div>
+	</div>
+</div>
+    &nbsp;<div id="JQTab1" data-overlay-theme="b" data-role="page">
+	<div data-role="header" data-theme="b">
+		<h1>
+			a
+		</h1>
+	</div><div data-theme="b" data-role="content">
+		<div data-role="tabs">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#JQTabItem1">Master</a></li><li><a href="#JQTabItem2">Detail</a></li>
+				</ul>
+			</div><div id="JQTabItem1">
+				
+                <div id="JQDataForm1">
+					<div data-theme="b" class="info-form" infolight-options="id: 'JQDataForm1',remoteName:'S002.Orders',tableName:'Orders',duplicateCheck:false,onLoadSuccess:onloadsuccess,appliedClose:true,autoSubmit:false,autoPause:false,onApply:onapply,onCancel:oncancel">
+						<div data-role="fieldcontain">
+							<label for="JQDataForm1_OrderID">OrderID</label><input id="JQDataForm1_OrderID" name="OrderID" data-mini="true" infolight-options="field:'OrderID',width:80,align:'left',readOnly:false" type="text" />
+						</div><div data-role="fieldcontain">
+							<label for="JQDataForm1_CustomerID">CustomerID</label><input id="JQDataForm1_CustomerID" name="CustomerID" data-mini="true" infolight-options="field:'CustomerID',width:80,align:'left',readOnly:false,remoteName:'S001.Master',tableName:'Master',displayMember:'ContactName',valueMember:'CustomerID',pageSize:5,columns:[{field:'CompanyName',caption:'CompanyName'}],whereItems:[{field:'CompanyName',whereValue:{type:'client',value:['getCompany']}}],columnMatches:[{field:'',matchValue:{type:'remote',value:['']}}],queryObjectID:'#JQDataForm1_CustomerID_query'" class="info-refval" type="text" onclick="$('#JQDataForm1_CustomerID').refval('open');" /><div id="JQDataForm1_CustomerID_popup" data-role="popup" data-overlay-theme="a" data-dismissible="false" style="width:250px">
+								<a data-role="button" data-mini="true" data-inline="true" data-icon="delete" data-iconpos="notext" data-rel="back" href="#" class="ui-btn-right">Close</a><div data-role="header" data-theme="b">
+									<h1>
+										Select Item
+									</h1>
+								</div><div data-role="content" data-theme="b" style="padding-top:0px">
+									<div style="height:50px;">
+										<a class="grid-previous" data-mini="true" data-inline="true" data-role="button" data-icon="arrow-l" data-iconpos="notext">Previous page</a><a class="grid-next" data-mini="true" data-inline="true" data-role="button" data-icon="arrow-r" data-iconpos="notext">Next page</a><a class="grid-query" data-mini="true" data-inline="true" data-role="button" data-icon="search" data-iconpos="notext">Query</a><a class="grid-clear" data-mini="true" data-inline="true" data-role="button" data-icon="delete" data-iconpos="notext">Clear</a>
+									</div><div id="JQDataForm1_CustomerID_query" class="info-query" data-theme="b" style="margin-bottom:15px;margin-top:-20px;display:none">
+										<div data-role="fieldcontain">
+											<label for="JQDataForm1_CustomerID_query_CustomerID" style="word-break:keep-all">CustomerID</label><input id="JQDataForm1_CustomerID_query_CustomerID" name="CustomerID" data-mini="true" infolight-options="queryField:'CustomerID',condition:'%',dataType:'string',isNvarChar:false" type="text" />
+										</div><div data-role="fieldcontain">
+											<label for="JQDataForm1_CustomerID_query_ContactName" style="word-break:keep-all">ContactName</label><select id="JQDataForm1_CustomerID_query_ContactName" name="ContactName" data-mini="true" infolight-options="queryField:'ContactName',condition:'%',dataType:'string',isNvarChar:false" class="info-selects" data-native-menu="false">
+												<option value="a">
+													a
+												</option><option value="b">
+													b
+												</option>
+											</select>
+										</div>
+									</div><ul data-role="listview" data-theme="d">
+
+									</ul><div style="height:30px;margin-top:20px">
+										<a class="grid-previous" data-mini="true" data-inline="true" data-role="button" data-icon="arrow-l" data-iconpos="notext">Previous page</a><a class="grid-next" data-mini="true" data-inline="true" data-role="button" data-icon="arrow-r" data-iconpos="notext">Next page</a>
+									</div>
+								</div>
+							</div>
+						</div><div data-role="fieldcontain">
+							<label for="JQDataForm1_EmployeeID">EmployeeID</label><select id="JQDataForm1_EmployeeID" name="EmployeeID" data-mini="true" infolight-options="field:'EmployeeID',width:80,align:'left',readOnly:false,remoteName:'S001.Employees',tableName:'Employees',displayMember:'LastName',valueMember:'EmployeeID'" class="info-selects" data-native-menu="false">
+
+							</select>
+						</div><div data-role="fieldcontain">
+							<label for="JQDataForm1_OrderDate">OrderDate</label><input id="JQDataForm1_OrderDate" name="OrderDate" data-mini="true" infolight-options="field:'OrderDate',width:80,align:'left',readOnly:false,format:'yyyy.mm.dd',lockInput:true,showYearSelect:false" data-theme="b" class="info-datebox" data-role="datebox" type="date" data-options="{&quot;mode&quot;:&quot;calbox&quot;, &quot;overrideDateFormat&quot;:&quot;%Y.%m.%d&quot;,&quot;lockInput&quot;:true}" />
+						</div><div data-role="fieldcontain">
+							<label for="JQDataForm1_RequiredDate">RequiredDate</label><input id="JQDataForm1_RequiredDate" name="RequiredDate" data-mini="true" infolight-options="field:'RequiredDate',width:80,align:'left',readOnly:false" class="info-scan" />
+						</div><div data-role="fieldcontain">
+							<label for="JQDataForm1_ShipVia">ShipVia</label><input id="JQDataForm1_ShipVia" name="ShipVia" data-mini="true" infolight-options="field:'ShipVia',width:80,align:'left',readOnly:false" type="text" />
+						</div><div data-role="fieldcontain">
+							<label for="JQDataForm1_Finished">Finished</label><select id="JQDataForm1_Finished" name="Finished" data-mini="true" infolight-options="field:'Finished',width:80,align:'left',readOnly:false" class="info-flipswitch" data-role="slider">
+								<option value="false">
+									No
+								</option><option value="true">
+									Yes
+								</option>
+							</select>
+						</div><div data-role="fieldcontain">
+							<fieldset id="JQDataForm1_ShipName" name="ShipName" data-mini="true" infolight-options="field:'ShipName',width:80,align:'left',readOnly:false,remoteName:'S001.Employees',tableName:'Employees',displayMember:'EmployeeID',valueMember:'EmployeeID'" class="info-checkboxes" data-role="controlgroup" data-type="horizontal">
+								<legend>
+									ShipName
+								</legend>
+							</fieldset>
+						</div><div data-role="fieldcontain">
+							<label for="JQDataForm1_ShipAddress">ShipAddress</label><div id="JQDataForm1_ShipAddress" name="ShipAddress" data-mini="true" infolight-options="field:'ShipAddress',width:80,align:'left',readOnly:false,render:'table',width:120,height:120" class="info-qrcode">
+
+							</div>
+						</div><div data-role="fieldcontain">
+							<label for="JQDataForm1_ShipCity">ShipCity</label><input id="JQDataForm1_ShipCity" name="ShipCity" data-mini="true" infolight-options="field:'ShipCity',width:80,align:'left',readOnly:false,directory:'Image',fileSizeLimited:100" class="info-file" type="file" />
+						</div>
+					</div><div class="ui-content" id="JQDataForm1_popup" data-role="popup" data-theme="d" data-overlay-theme="a">
+						<a data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><p></p>
+					</div>
+				</div>
+            
+			</div><div id="JQTabItem2">
+				
+                <table class="info-datagrid table-stripe infolight-breakpoint" data-role="table" data-mode="reflow" data-theme="b" infolight-options="remoteName:'S002.Orders',tableName:'OrderDetails',pageSize:10,editPage:'#JQDataForm2',editMode:'dialog',toolItemObjectID:'#JQDataGrid2_toolitem',parentObjectID:'#JQDataGrid1',alwaysClose:false,allowAdd:true,allowUpdate:true,allowDelete:true,allowView:true,toolItemsPosition:'bottom',listColumnCount:2,listCaptionWidth:120,queryMode:'window',reportFileName:''">
+					<thead>
+						<tr>
+							<th nowrap="nowrap" infolight-options="field:'OrderID',width:90,align:'',nowrap:false">OrderID</th><th nowrap="nowrap" infolight-options="field:'ProductID',width:90,align:'',nowrap:false">ProductID</th><th nowrap="nowrap" infolight-options="field:'UnitPrice',width:90,align:'',nowrap:false">UnitPrice</th><th nowrap="nowrap" infolight-options="field:'Quantity',width:90,align:'',nowrap:false">Quantity</th><th nowrap="nowrap" infolight-options="field:'Discount',width:90,align:'',nowrap:false">Discount</th>
+						</tr>
+					</thead>
+				</table><div class="ui-content" id="JQDataGrid2_popup" data-role="popup" data-theme="d" data-overlay-theme="a">
+					<a data-rel="back" data-role="button" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a><p></p>
+				</div><div id="JQDataGrid2_toolitem" data-role="none" style="display:none">
+					<a class="grid-insert" data-mini="true" data-inline="true" data-role="none" data-icon="plus" data-iconpos="notext">Insert</a><a class="grid-previous" data-mini="true" data-inline="true" data-role="none" data-icon="arrow-l" data-iconpos="notext">Previous page</a><a class="grid-next" data-mini="true" data-inline="true" data-role="none" data-icon="arrow-r" data-iconpos="notext">Next page</a><a class="grid-query" data-mini="true" data-inline="true" data-role="none" data-icon="Search" data-iconpos="notext">Query</a><a class="grid-refresh" data-mini="true" data-inline="true" data-role="none" data-icon="refresh" data-iconpos="notext">Refresh</a><a class="grid-return" data-mini="true" data-inline="true" data-role="none" data-icon="back" data-iconpos="notext">Back</a>
+				</div>
+            
+			</div>
+		</div>
+	</div>
+</div>
+    <p>
+&nbsp;
+    </p>
+    
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3C65FFEB" />
+</div></form>
+    
+<!-- Visual Studio Browser Link -->
+<script type="application/json" id="__browserLink_initializationData">
+    {"appName":"Internet Explorer","requestId":"e06e7de942b445d7a9de077b14081cbe"}
+</script>
+<script type="text/javascript" src="http://localhost:59060/b98a6ef758754a21ac0b61a0050dd11c/browserLink" async="async"></script>
+<!-- End Browser Link -->
+
+</body>
+</html>
+

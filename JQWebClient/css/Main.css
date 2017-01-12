@@ -1,0 +1,60 @@
+﻿body 
+{
+	padding: 0;
+	margin: 0;
+	background-image: url('../Image/Main/bg.jpg');
+	background-repeat:repeat-x;
+	background-color:#405765;
+}
+
+.fullwidthContainer
+{
+	width:100%;
+}
+
+#headerBg
+{
+	width: 100%;
+	height: 75px;
+	background-image: url('../Image/Main/banner_bg.jpg');
+	background-repeat: repeat-x;
+}
+
+#headerLogo
+{
+	background-image: url('../Image/Main/banner.jpg');
+	background-repeat:no-repeat;
+	width:100%;
+	height: 75px;
+	text-align:right;
+}
+
+#headerLogo span
+{
+	position:relative;
+	top: 25px;
+	left: -5px;
+}
+
+#headerLogo img
+{
+	cursor:pointer;
+}
+
+#slControlHost
+{
+    text-align:center;
+    width:245px;
+    padding-bottom: 10px;
+}
+
+#frameContainer
+{
+	padding-bottom: 10px;
+}
+
+#mainframe
+{
+	width:100%;
+	height:100%;
+}

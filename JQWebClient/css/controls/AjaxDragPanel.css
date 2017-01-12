@@ -1,0 +1,62 @@
+﻿/*主container样式*/
+.ajaxdrag_container
+{
+	z-index:20;
+	padding:5px 5px 5px 5px;
+	float:left;
+}
+
+/*有边框的拖拽框*/
+.ajaxdrag_bodered_drag_handle
+{
+	width:100%;
+	height:20px;
+	border: #7B9EBD 1px solid;
+	padding: 2px 2px 2px 2px;
+	text-align:right;
+	filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FBE2D2', endColorStr='#EF9B63', gradientType='1');
+}
+
+/*无边框的拖拽框*/
+.ajaxdrag_drag_handle
+{
+	width:100%;
+	height:20px;
+	padding: 2px 2px 2px 2px;
+	text-align:right;
+	filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FBE2D2', endColorStr='#EF9B63', gradientType='1');
+}
+
+/*header的container样式*/
+.ajaxdrag_header_container
+{
+	font-weight:bold;
+	width:100%;
+	text-align:center;
+	position:absolute;
+	top:10px;
+}
+
+/*header的背景样式*/
+.ajaxdrag_header_bg
+{
+	width:100%;
+	height:20px;
+}
+
+/*有边框的内容框*/
+.ajaxdrag_bodered_content
+{
+	width:100%;
+	overflow:auto;
+	padding: 2px 2px 2px 2px;
+	border: #7B9EBD 1px solid;
+}
+
+/*无边框的内容框*/
+.ajaxdrag_content
+{
+	width:100%;
+	overflow:auto;
+	padding: 2px 2px 2px 2px;
+}

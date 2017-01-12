@@ -1,0 +1,13 @@
+﻿.title_1
+{
+	font-family: Verdana;
+	font-size: 9pt;
+	width:400px;
+	height: 18px;
+	border:#9A460E 1px solid;
+	padding: 2px 2px 2px 2px;
+	color: #808080;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#FBE2D2, EndColorStr=#EF9B63)
+	progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);
+}
+

@@ -1,0 +1,213 @@
+﻿/**/
+/*页面主体样式*/
+body
+{
+	font-family:Microsoft JhengHei;
+	font-size: 9pt;
+	background-color: #405765;
+	background-image:url(../Image/main/bg.jpg);
+	background-repeat:repeat-x;
+	
+	scrollbar-base-color:#0099cc; 
+	scrollbar-face-color:#99CCFF; 
+	scrollbar-track-color:#FFFFFF; 
+	scrollbar-arrow-color:#FFFFCC; 
+	scrollbar-3dlight-color:#0099cc; 
+	scrollbar-highlight-color:#FFFFFF; 
+	scrollbar-shadow-color:#FFFFFF; 
+	scrollbar-darkshadow-color:#0099cc;
+}
+
+/*主table的样式*/
+.mainTable
+{
+	 width:100%;
+	 padding:3px;
+}
+
+.mainMarginTd
+{
+	width:2%;
+}
+
+/*全宽度的table的样式*/
+.fullWidthTable
+{
+	width:100%;
+}
+
+/*抬头的背景样式*/
+#title_bg
+{
+	width:100%;
+}
+
+/*header区域背景样式*/
+#headerLogo_bg
+{
+	width:100%;
+	height:58px;
+	border:solid 2px #a9b6d6;
+	background-image: url(../Image/main/header_bg.png);
+	text-align:right;
+}
+
+/*header区域样式*/
+#headerLogo
+{
+	background-image: url(../Image/main/header.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	width:1000px;
+	height:58px;
+}
+
+/*菜单的container的样式*/
+#menu_container
+{
+	vertical-align:top;
+	border-style:solid;
+	border-width:2px;
+	border-color:Black;
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#deecf1', endColorStr='#9bb1d5', gradientType='0');
+}
+
+/*菜单根样式*/
+.static_menuitem
+{
+	height:25px;
+	border: #7B9EBD 1px solid;
+	padding: 2px 2px 2px 2px;
+	cursor: hand;
+	color: black;
+	font-size: 12px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#deecf1', endColorStr='#9bb1d5', gradientType='1');
+}
+
+/*鼠标滑动到菜单根上方时，菜单根的样式*/
+.static_hover
+{
+	height:25px;
+	border: #7B9EBD 1px solid;
+	padding: 2px 2px 2px 2px;
+	cursor: hand;
+	color: black;
+	font-size: 12px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#9bb1d5', endColorStr='#deecf1', gradientType='1');
+}
+
+/*菜单叶的样式*/
+.dynamic_menuitem
+{
+	height:16px;
+	border: #7B9EBD 1px solid;
+	padding: 2px 2px 2px 2px;
+	cursor: hand;
+	color: black;
+	font-size: 12px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#deecf1', endColorStr='#9bb1d5', gradientType='1');
+}
+
+/*鼠标滑动到菜单叶上方时，菜单叶的样式*/
+.dynamic_hover
+{
+	height:16px;
+	border: #7B9EBD 1px solid;
+	padding: 2px 2px 2px 2px;
+	cursor: hand;
+	color: black;
+	font-size: 12px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#9bb1d5', endColorStr='#deecf1', gradientType='1');
+}
+
+/*solution下拉列表的container的样式*/
+.solution_container
+{
+	vertical-align:top;
+	text-align:right;
+}
+
+/*左边区域container的样式*/
+#leftframe_container
+{
+	border-left: black thin solid; 
+	border-bottom: black thin solid
+}
+
+/*左边区域的样式*/
+#leftframe
+{
+	width:100%;
+	overflow:auto;
+}
+
+/*中间分割区域container的样式*/
+#split_container
+{
+	width: 10px; 
+	vertical-align: top;
+	border-bottom: black thin solid;
+}
+
+/*中间分割区域的样式*/
+#rightframe_container
+{
+	border-right: black thin solid; 
+	border-bottom: black thin solid
+}
+
+/*右边区域的样式*/
+#rightframe
+{
+	overflow: scroll;
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#F7F7DE', endColorStr='#6B696B', gradientType='1');
+}
+
+/*workflow的分页区域样式*/
+.fs
+{
+	overflow-y: scroll; 
+	width: 100%; 
+	height: 160px;
+}
+
+/*workflow的gridview样式*/
+.gridview
+{
+	filter:progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);
+}
+
+/*workflow的gridview的header样式*/
+.gridview_header
+{
+	background-image:url('../Image/main/gridHeader.png');
+	background-repeat:repeat-x;
+}
+
+/*workflow的gridview的row样式*/
+.gridview_row
+{
+	background-image:url('../Image/main/gridRow.png');
+	background-repeat:repeat-x;
+}
+
+/*workflow的gridview的altrow样式*/
+.gridview_altrow
+{
+	background-image:url('../Image/main/gridAltRow.png');
+	background-repeat:repeat-x;
+}
+
+/*workflow的gridview的footer样式*/
+.gridview_footer
+{
+	background-image:url('../Image/main/gridFooter.png');
+	background-repeat:repeat-x;
+}
+
+/*workflow的gridview的selected row样式*/
+.gridview_selectedrow
+{
+	background-image:url('../Image/main/gridSelected.png');
+	background-repeat:repeat-x;
+}

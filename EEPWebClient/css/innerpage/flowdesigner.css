@@ -1,0 +1,10 @@
+﻿/**/
+/*页面主体样式*/
+body
+{
+	font-family:Verdana;
+	font-size: 9pt;
+	background-image: url( '../../Image/innerpage/bg.jpg' );
+	background-repeat: repeat-x;
+	background-color:#405765;
+}

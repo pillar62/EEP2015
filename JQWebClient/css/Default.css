@@ -1,0 +1,45 @@
+﻿/*#img1
+{
+	margin:5px 0px 5px 0px; 
+	background-image:url('../Image/main/default.jpg');
+	background-repeat:no-repeat;
+	background-position:center;
+	width:100%;
+}*/
+
+/**/
+/*页面主体样式*/
+body
+{
+    background-image: url('../Image/main/default_bg.jpg'); /*background-image: url('../Image/main/bg-1.jpg');*/
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #0E4A66;
+    background-repeat: repeat-x;
+}
+
+/*主div样式*/
+#inhalt
+{
+	position:absolute;
+	width:760px;
+	height:459px;
+	margin-top:-230px;
+	margin-left:-380px;
+	top: 50%;
+	left: 50%;
+	text-align:left;
+	padding: 0px;
+	border: 0px solid #000000;
+	overflow:auto;
+}
+
+/*image样式*/
+.img
+{
+    background-image: url('../Image/main/default.jpg');
+    background-repeat: no-repeat;
+    vertical-align:top;
+}

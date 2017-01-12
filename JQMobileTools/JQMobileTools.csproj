@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA77927F-2EA3-4C23-AF16-5B1CD53271AD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JQMobileTools</RootNamespace>
+    <AssemblyName>JQMobileTools</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="InfoRemoteModule, Version=1.0.0.0, Culture=neutral, PublicKeyToken=44699d1537576b3b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EEPNetServer\InfoRemoteModule.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Editor\JQDataFormEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\JQDataFormEditorDialog.Designer.cs">
+      <DependentUpon>JQDataFormEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\JQMetroEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\JQMetroEditForm.Designer.cs">
+      <DependentUpon>JQMetroEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\JQMetroEditStyleObjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\JQMetroEditStyleObjectForm.Designer.cs">
+      <DependentUpon>JQMetroEditStyleObjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\JQSecurityAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\JQSecurityAddForm.Designer.cs">
+      <DependentUpon>JQSecurityAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\JQSecurityEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\JQSecurityEditForm.Designer.cs">
+      <DependentUpon>JQSecurityEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\MultiLanguageEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\MultiLanguageEditorDialog.Designer.cs">
+      <DependentUpon>MultiLanguageEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\MultiLanguageTableNameDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\MultiLanguageTableNameDialog.Designer.cs">
+      <DependentUpon>MultiLanguageTableNameDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\SelectLanguageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\SelectLanguageForm.Designer.cs">
+      <DependentUpon>SelectLanguageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JQAutoSeq.cs" />
+    <Compile Include="JQDataFormEditorControl.cs" />
+    <Compile Include="Editor\RemoteNameEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\RemoteNameEditorDialog.designer.cs">
+      <DependentUpon>RemoteNameEditorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JQCollection.cs" />
+    <Compile Include="JQControlDesigner.cs" />
+    <Compile Include="JQDataForm.cs" />
+    <Compile Include="JQDataGrid.cs" />
+    <Compile Include="JQDefault.cs" />
+    <Compile Include="JQDrillDown.cs" />
+    <Compile Include="JQException.cs" />
+    <Compile Include="JQMetro.cs" />
+    <Compile Include="JQMsgPush.cs" />
+    <Compile Include="JQMultiLanguage.cs" />
+    <Compile Include="JQPropertyEditor.cs" />
+    <Compile Include="JQRotator.cs" />
+    <Compile Include="JQScriptManager.cs" />
+    <Compile Include="JQSecColumns.cs" />
+    <Compile Include="JQSecurity.cs" />
+    <Compile Include="JQTab.cs" />
+    <Compile Include="JQValidate.cs" />
+    <Compile Include="JQVariable.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EFBase\EFBase.csproj">
+      <Project>{592f3429-d35c-47bb-a631-ea17f58b5046}</Project>
+      <Name>EFBase</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EFClientTools\EFClientTools.csproj">
+      <Project>{E09E8259-7E2D-4490-9C9F-469A19CAF1A7}</Project>
+      <Name>EFClientTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Srvtools\Srvtools.csproj">
+      <Project>{09dc65fb-9ff8-44b5-8750-d89c32e823f8}</Project>
+      <Name>Srvtools</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Editor\JQMetroEditForm.resx">
+      <DependentUpon>JQMetroEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\JQMetroEditStyleObjectForm.resx">
+      <DependentUpon>JQMetroEditStyleObjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\JQSecurityAddForm.resx">
+      <DependentUpon>JQSecurityAddForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\JQSecurityEditForm.resx">
+      <DependentUpon>JQSecurityEditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\MultiLanguageEditorDialog.resx">
+      <DependentUpon>MultiLanguageEditorDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\MultiLanguageTableNameDialog.resx">
+      <DependentUpon>MultiLanguageTableNameDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\RemoteNameEditorDialog.resx">
+      <DependentUpon>RemoteNameEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\SelectLanguageForm.resx">
+      <DependentUpon>SelectLanguageForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

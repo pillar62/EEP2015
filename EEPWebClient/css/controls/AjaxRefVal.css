@@ -1,0 +1,121 @@
+﻿/*弹出框背景*/
+.ajaxref_modalBackground
+{
+	background-color:Gray;
+	filter:alpha(opacity=60);
+	opacity:0.6;
+}
+
+.ajaxref_nondisplay
+{
+	width:0px; 
+	visibility: hidden; 
+	display: none;
+}
+
+/*gridview的样式*/
+.ajaxrefval_gridview_1
+{
+	font-family: Microsoft JhengHei;
+	font-size: 9pt;
+	filter:progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);
+}
+
+/*gridview的header样式*/
+.ajaxrefval_gridview_header_1
+{
+	background-image:url('../../Image/ControlImage/gridHeader1.png');
+	background-repeat:repeat-x;
+}
+
+/*gridview的row样式*/
+.ajaxrefval_gridview_row_1
+{
+	background-image:url('../../Image/ControlImage/gridRow1.png');
+	background-repeat:repeat-x;
+}
+
+/*gridview的altrow样式*/
+.ajaxrefval_gridview_altrow_1
+{
+	background-image:url('../../Image/ControlImage/gridAltRow1.png');
+	background-repeat:repeat-x;
+}
+
+/*gridview的footer样式*/
+.ajaxrefval_gridview_footer_1
+{
+	background-image:url('../../Image/ControlImage/gridFooter1.png');
+	background-repeat:repeat-x;
+}
+
+/*gridview的pager样式*/
+.ajaxrefval_gridview_pager_1
+{
+	background-image:url('../../Image/ControlImage/gridHeader1.png');
+	background-repeat:repeat-x;
+}
+
+/*gridview的selected row样式*/
+.ajaxrefval_gridview_selectedrow_1
+{
+	background-image:url('../../Image/ControlImage/gridSelected1.png');
+	background-repeat:repeat-x;
+}
+
+/*标题框的样式*/
+.ajaxref_div_title
+{
+	width:100%;
+	height:15px;
+	border: #7B9EBD 1px solid;
+	padding: 2px 2px 2px 2px;
+	text-align:right;
+	filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FBE2D2', endColorStr='#EF9B63', gradientType='1');
+}
+
+/*内容框的样式*/
+.ajaxref_div_content
+{
+	width:100%;
+	text-align:center;
+	color:Navy;
+	border: #7B9EBD 1px solid;
+	padding: 2px 2px 2px 2px;
+	background-color:buttonface;
+	background-image:url('../../Image/main/background.png');
+	background-repeat:repeat;
+	overflow-x:scroll;
+}
+
+/*查询背景的样式*/
+.ajaxref_query_bg
+{
+	width:100%;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr=#DCEBFD, EndColorStr=#8DB2E6)
+	progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);
+}
+
+/*鼠标离开按钮时，按钮的样式*/
+.ajaxref_btn_mouseout 
+{
+	border: #7B9EBD 1px solid;
+	padding: 2px 2px 2px 2px;
+	cursor: hand;
+	color: black;
+	font-size: 12px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#DCEBFD', endColorStr='#8DB2E6', GradientType=0 );
+}
+
+/*鼠标移动到按钮上时，按钮的样式*/
+.ajaxref_btn_mouseover
+{
+	border: #7B9EBD 1px solid;
+	padding: 2px 2px 2px 2px;
+	cursor: hand;
+	color: #FFFFFF;
+	color: black;
+	font-size: 12px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,startColorStr='#8DB2E6', endColorStr='#DCEBFD', );
+}
+

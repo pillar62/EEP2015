@@ -1,0 +1,235 @@
+﻿body
+{
+    font-family: 'Microsoft JhengHei';
+    font-size: 9pt;
+    background-image: url( '../../Image/innerpage/bg.jpg' );
+    background-repeat: repeat-x;
+    background-color: #405765;
+}
+
+#main_container
+{	
+    text-align: -moz-center !important;
+	text-align:center;
+	width:100%;
+}
+
+.leftalign_fieldset
+{
+	width:95%;
+	padding:8px;
+    border: 1px solid #0E4A66; 
+    color: #FFFFFF;
+    font-family: 'Microsoft JhengHei';
+    font-weight: bold;
+	text-align: -moz-left !important;
+	text-align:left;
+}
+
+.rightalign_fieldset
+{
+	width:95%;
+	padding:8px;
+    border: 1px solid #0E4A66; 
+    color: #FFFFFF;
+    font-family: 'Microsoft JhengHei';
+    font-weight: bold;
+	text-align: -moz-right !important;
+	text-align:right;
+}
+
+.color_legend
+{
+    color:White;
+    font-weight:bold;    
+}
+
+.full_width
+{
+	width:100%;
+}
+
+.left_align
+{
+	text-align: -moz-left !important;
+	text-align:left;
+}
+
+.button_container
+{
+	float:left;
+	padding:5px;
+}
+
+.btn_rect_mouseout
+{
+    border: 1px solid #286699;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-family:'Microsoft JhengHei'; 
+    font-weight: bold;
+    font-size: 12px;
+    background-color:#95c3e9;
+    background-image: url('../../Image/innerpage/btn1.png');
+    background-repeat: repeat-x;
+    }
+
+.btn_rect_mouseover
+{
+    border: 1px solid #051723;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-family:'Microsoft JhengHei'; 
+    font-weight: bold;
+    font-size: 12px;
+    background-color:#64757f;
+    background-image:url( '../../Image/innerpage/btn2.png' );
+    background-repeat: repeat-x;	
+}
+
+.btn_upload_rect_mouseout
+{
+   border: 1px solid #286699;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-family:'Microsoft JhengHei'; 
+    font-weight: bold;
+    font-size: 12px;
+    background-color:#95c3e9;
+    background-image: url('../../Image/innerpage/btn1.png');
+    background-repeat: repeat-x;
+
+}
+
+.btn_upload_rect_mouseover
+{
+    border: 1px solid #051723;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-family:'Microsoft JhengHei'; 
+    font-weight: bold;
+    font-size: 12px;
+    background-color:#64757f;
+    background-image:url( '../../Image/innerpage/btn2.png' );
+    background-repeat: repeat-x;	
+}
+
+#td1
+{
+	width: 15%;
+	vertical-align:top;
+}
+
+#td2
+{
+	width: 85%;
+}
+
+.part_container
+{
+	text-align: -moz-left !important;
+	text-align:left;
+}
+
+.gridview
+{
+}
+
+.gridview_header
+{
+	background-image:url('../../Image/main/gridHeader.png');
+	background-repeat:repeat-x;
+}
+
+.gridview_row
+{
+	background-image:url('../../Image/main/gridRow.png');
+	background-repeat:repeat-x;
+}
+
+.gridview_altrow
+{
+	background-image:url('../../Image/main/gridAltRow.png');
+	background-repeat:repeat-x;
+}
+
+.gridview_footer
+{
+	background-image:url('../../Image/main/gridFooter.png');
+	background-repeat:repeat-x;
+}
+
+.gridview_selectedrow
+{
+	background-image:url('../../Image/main/gridSelected.png');
+	background-repeat:repeat-x;
+}
+
+ .left-top
+{
+    background-image: url('../../Image/innerpage/left-top.png');
+    width:20px;
+    height:20px;
+    border:0px;
+}
+.right-top
+{
+    background-image: url('../../Image/innerpage/right-top.png');    
+    width:20px;
+    height:20px;    
+    border:0px;
+}
+.left-bottom
+{
+    background-image: url('../../Image/innerpage/left-bottom.png');    
+    width:20px;
+    height:20px;    
+    border:0px;
+}
+.right-bottom
+{
+    background-image: url('../../Image/innerpage/right-bottom.png');    
+    width:20px;
+    height:20px;    
+    border:0px;
+}
+.top
+{
+    background-image: url('../../Image/innerpage/top.png');    
+    background-repeat:repeat-x;
+    height:20px;
+    border:0px;
+}
+.bottom
+{
+    background-image: url('../../Image/innerpage/bottom.png');
+    background-repeat: repeat-x;
+    height: 20px;
+    border: 0px;
+}
+.left
+{
+    background-image: url('../../Image/innerpage/left.png');   
+    background-repeat:repeat-y; 
+    width:20px;
+}
+.right
+{
+    background-image: url('../../Image/innerpage/right.png');    
+    background-repeat:repeat-y;
+    width:20px;
+    border:0px
+
+}
+.center
+{
+    background-image: url('../../Image/innerpage/center.png');
+    background-repeat: repeat;
+    border: 0px;
+}

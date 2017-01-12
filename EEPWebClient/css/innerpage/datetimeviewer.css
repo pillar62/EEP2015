@@ -1,0 +1,77 @@
+﻿/**/
+/*页面主体样式*/
+body 
+{
+	font-family:Verdana;
+	font-size: 9pt;
+	background-image: url( '../../Image/innerpage/bg.jpg' );
+	background-repeat: repeat-x;
+	background-color:#405765;
+}
+
+/*主table的样式*/
+#main_table
+{
+	width:350px;
+}
+
+/*年月选择table的样式*/
+#table1
+{
+	width:100%;
+	background-color: #a5affe;
+}
+
+/*年月选择table中td1表格的样式*/
+.td1
+{
+	width:20%;
+	text-align:right;
+}
+
+/*年月选择table中td2表格的样式*/
+.td2
+{
+	width:10%;
+}
+
+/*年月选择table中td3表格的样式*/
+.td3
+{
+	width:12%;
+	text-align:right;
+}
+
+/*年月选择table中td4表格的样式*/
+.td4
+{
+	width:18%;
+	text-align:right;
+}
+
+/*td5表格的样式*/
+.td5
+{
+	text-align:center;
+}
+
+/*星期选择table的样式*/
+#table2
+{
+	width:100%;
+	background-color: #ffcc66;
+}
+
+/*星期选择table中td6表格的样式*/
+.td6
+{
+	width:14%;
+	text-align:center;
+}
+
+/*星期选择table中td7表格的样式*/
+.td7
+{
+	height:300px;
+	text-align:center;
+}

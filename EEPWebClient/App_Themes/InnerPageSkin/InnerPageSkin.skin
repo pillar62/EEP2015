@@ -1,0 +1,48 @@
+﻿<%--<InfoLight:WebGridView SkinID="RefValGrid" runat="server" GridLines="Horizontal"  CssClass="GridViewCss_one">
+    <FooterStyle CssClass="FooterCss_one" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <HeaderStyle CssClass="HeaderCss_one" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <RowStyle CssClass="RowCss_one" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False"/>
+    <SelectedRowStyle CssClass="SelectedRowCss_one" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <PagerStyle CssClass="PagerCss_one" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <AlternatingRowStyle CssClass="AltRowCss_one" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <PagerSettings Mode="NumericFirstLast"></PagerSettings>
+</InfoLight:WebGridView>--%>
+
+<InfoLight:WebGridView SkinID="RefValGrid" runat="server" GridLines="Both"  CssClass="gridview_1">
+    <FooterStyle CssClass="gridview_footer_1" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <HeaderStyle CssClass="gridview_header_1" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <RowStyle CssClass="gridview_row_1" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False"/>
+    <SelectedRowStyle CssClass="gridview_selectedrow_1" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <PagerStyle CssClass="gridview_pager_1" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <AlternatingRowStyle CssClass="gridview_altrow_1" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+</InfoLight:WebGridView>
+
+<asp:GridView SkinID="FlowCommentGrid" runat="server" GridLines="Both" AutoGenerateColumns="False" CssClass="gridview">
+    <FooterStyle CssClass="gridview_footer" BackColor="#B9BDF6" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <HeaderStyle CssClass="gridview_header" BackColor="#8E8E90" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <RowStyle CssClass="gridview_row" BackColor="#FCC8A6" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False"/>
+    <SelectedRowStyle CssClass="gridview_selectedrow" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <PagerStyle CssClass="gridview_pager" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <AlternatingRowStyle CssClass="gridview_altrow" BackColor="#F5FBA4" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+</asp:GridView>
+
+<asp:GridView SkinID="FlowSubmitConfirmGrid" runat="server" GridLines="Vertical" ForeColor="Black" PageSize="5">
+    <FooterStyle CssClass="gridview_footer" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <HeaderStyle CssClass="gridview_header" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <RowStyle CssClass="gridview_row" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False"/>
+    <SelectedRowStyle CssClass="gridview_selectedrow" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <PagerStyle CssClass="gridview_pager" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+    <AlternatingRowStyle CssClass="gridview_altrow" HorizontalAlign="Left" VerticalAlign="Middle" Wrap="False" />
+</asp:GridView>
+
+<asp:Label SkinID="FullWidthMessageLabel" runat="server" Width="100%" ForeColor="Red"></asp:Label>
+
+<asp:Calendar SkinID="GloCalendar" runat="server" BackColor="#FFFFCC" BorderColor="#FFCC66" BorderWidth="1px" DayNameFormat="Shortest" Font-Names="Verdana" Font-Size="8pt" ForeColor="#663399" Height="200px" ShowGridLines="True" Width="220px">
+<SelectedDayStyle BackColor="#CCCCFF" Font-Bold="True" />
+<TodayDayStyle BackColor="#FFCC66" ForeColor="White" />
+<SelectorStyle BackColor="#FFCC66" />
+<OtherMonthDayStyle ForeColor="#CC9966" />
+<NextPrevStyle Font-Size="9pt" ForeColor="#FFFFCC" />
+<DayHeaderStyle BackColor="#FFCC66" Font-Bold="True" Height="1px" Wrap="True" />
+<TitleStyle BackColor="#990000" Font-Bold="True" Font-Size="9pt" ForeColor="#FFFFCC" />
+</asp:Calendar>

@@ -1,0 +1,35 @@
+﻿.info-datagrid{
+    display:none
+}
+.easyui-dialog{
+     display:none
+}
+.easyui-window{
+    display:none 
+}
+.info-toolbar{
+    display:none
+}
+
+.validatebox-tip-content {
+  left: 20px;
+}
+
+.validatebox-tip-pointer {
+  left: 13px;
+}
+
+.validate-label{
+    color:Red;
+}
+
+/*::-ms-clear {
+                        display:none;
+                    }   
+
+input[disabled]
+{
+    background-color: White!important;
+    color:Black!important;
+}*/
+ 

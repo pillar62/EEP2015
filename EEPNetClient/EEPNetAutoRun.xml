@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<EEPAutoRun>
+  <LoginInformation>
+    <UserID>001</UserID>
+    <Password>1</Password>
+    <DataBase>ERPS</DataBase>
+    <Solution>SOLUTION1</Solution>
+    <ServerIPAddress>192.168.1.100</ServerIPAddress>
+  </LoginInformation>
+
+  <PackageInformation>
+    <PackageName>CSchedule_Old</PackageName>
+    <FormName>Form1</FormName>
+    <Times>1000</Times>
+  </PackageInformation> 
+</EEPAutoRun>

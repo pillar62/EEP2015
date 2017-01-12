@@ -1,0 +1,4 @@
+<SingleSignOnPath>
+  <String ComputerName="REIKAMI-PC" Path="D:\Infolight\EEP2010\SingleSignOn\bin\Debug" />
+  <String ComputerName="LILY" Path="D:\CSharp\EEPNetClient" />
+</SingleSignOnPath>

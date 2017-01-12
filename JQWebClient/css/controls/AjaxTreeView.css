@@ -1,0 +1,76 @@
+﻿.ajaxtree_modalBackground
+{
+	background-color:Gray;
+	filter:alpha(opacity=60);
+	opacity:0.6;
+}
+
+.ajaxtree_popupContainer 
+{
+	
+	margin:2px;
+	
+	width:225px;
+}
+
+.ajaxtree_div_title
+{
+	width:100%;
+	height:15px;
+	border: #7B9EBD 1px solid;
+	padding: 2px 2px 2px 2px;
+	text-align:right;
+	filter:progid:DXImageTransform.Microsoft.Gradient(startColorStr='#DCEBFD', endColorStr='#8DB2E6', gradientType='1');
+}
+
+.ajaxtree_div_content
+{
+	width:100%;
+	height:250px;
+	text-align:center;
+	color:Navy;
+	border: #7B9EBD 1px solid;
+	padding: 2px 2px 2px 2px;
+	background-color:buttonface;
+	background-image:url('../../Image/main/background.png');
+	background-repeat:repeat;
+	overflow:scroll;
+}
+
+.ajaxtree_insert_or_udpate_table
+{
+	width:200px;
+	text-align:left;
+	font-family:Microsoft JhengHei;
+	font-size: 9pt;
+}
+
+.ajaxtree_btn_rect_mouseout
+{
+	width:55px; 
+	height:25px;
+	border: #7B9EBD 1px solid;
+	padding: 2px 2px 2px 2px;
+	margin:5px 5px 5px 5px;
+	cursor: hand;
+	color: #000000;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorStr='#DCEBFD', endColorStr='#8DB2E6',);
+}
+
+.ajaxtree_btn_rect_mouseover
+{
+	width:55px; 
+	height:25px;
+	border: #7B9EBD 1px solid;
+	padding: 2px 2px 2px 2px;
+	margin:5px 5px 5px 5px;
+	cursor: hand;
+	color: #000000;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorStr='#8DB2E6', endColorStr='#DCEBFD',); 
+}
+
+.ajaxtree_buttonContainer
+{
+	text-align:center;
+}
+

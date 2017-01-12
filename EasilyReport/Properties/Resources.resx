@@ -1,0 +1,607 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MsgGroupColumnNotOrderBy" xml:space="preserve">
+    <value>Please set order for the column that you want to group by.,請先為要分組的欄位設置排序方式。,请先为要分组的字段设置排序方式。</value>
+  </data>
+  <data name="lbGroupGap" xml:space="preserve">
+    <value>GroupGap:,分組間隙:,分组间隙:</value>
+  </data>
+  <data name="gbOutputSetting" xml:space="preserve">
+    <value>Output Setting,輸出設定,输出设定</value>
+  </data>
+  <data name="lbIndex" xml:space="preserve">
+    <value>Index:,索引:,索引:</value>
+  </data>
+  <data name="MsgExporting" xml:space="preserve">
+    <value>Exporting,輸出中...,输出中...</value>
+  </data>
+  <data name="MsgTemplateDeleteConfirm" xml:space="preserve">
+    <value>Are you sure to delete this template ?,您確定要刪除此模板嗎？,您确定要删除此模板吗？</value>
+  </data>
+  <data name="MsgParameterItemsNull" xml:space="preserve">
+    <value>Please set parameters at first.,請先在設計時設置好參數,请先在设计时设置好参数</value>
+  </data>
+  <data name="lbPageRecords" xml:space="preserve">
+    <value>Per Page Records:,每頁資料筆數:,每页记录数:</value>
+  </data>
+  <data name="gbHeaderItems" xml:space="preserve">
+    <value>Report Header Items,表頭項目,表头项目</value>
+  </data>
+  <data name="gbPageSetting" xml:space="preserve">
+    <value>Page Setting,頁面設定,页面设定</value>
+  </data>
+  <data name="MsgProcessAbortRequest" xml:space="preserve">
+    <value>has not completed, \ndo you really want to abort it?,還未完成，您真的要中止嗎？,还未完成，您真的要中止吗？</value>
+  </data>
+  <data name="MsgProcessStart" xml:space="preserve">
+    <value>Process Start,開始,开始</value>
+  </data>
+  <data name="ReportDate" xml:space="preserve">
+    <value>ReportDate,打印日期,打印日期</value>
+  </data>
+  <data name="MenuFile" xml:space="preserve">
+    <value>File,文件,文件</value>
+  </data>
+  <data name="MsgReportDetails" xml:space="preserve">
+    <value>Please select export columns.,請選擇想要輸出的欄位。,请选择想要输出的字段。</value>
+  </data>
+  <data name="MsgGroupColumnsNotSetError" xml:space="preserve">
+    <value>Group Column is not be set.,群組欄位未設置。,群组字段未设置。</value>
+  </data>
+  <data name="lbAttachment" xml:space="preserve">
+    <value>attachment,附件,附件,attachment,attachment,attachment,attachment,attachment</value>
+  </data>
+  <data name="gbPageSize" xml:space="preserve">
+    <value>Page Size,頁面尺寸,页面尺寸</value>
+  </data>
+  <data name="MenuSaveTemplate" xml:space="preserve">
+    <value>Save Template,保存模板,保存模板</value>
+  </data>
+  <data name="lbColumnCaption" xml:space="preserve">
+    <value>Column Caption:,欄位抬頭:,字段标题:</value>
+  </data>
+  <data name="lbNewLinePosition" xml:space="preserve">
+    <value>NewLine Position:,換行對齊位置:,换行对齐位置:</value>
+  </data>
+  <data name="lbCaptionAlignment" xml:space="preserve">
+    <value>Caption Alignment:,抬頭對齊:,标题对齐:</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description,備注,备注</value>
+  </data>
+  <data name="lbFormat" xml:space="preserve">
+    <value>Format:,格式:,格式:</value>
+  </data>
+  <data name="btReset" xml:space="preserve">
+    <value>&amp;Reset,重置(&amp;R),重置(&amp;R),&amp;Reset,&amp;Reset,&amp;Reset,&amp;Reset,&amp;Reset</value>
+  </data>
+  <data name="gbStyleSetting" xml:space="preserve">
+    <value>Sytle Setting,樣式設定,样式设定</value>
+  </data>
+  <data name="TabControlFooterItemProperties" xml:space="preserve">
+    <value>Footer Item Properties,表尾項目屬性,表尾项目属性</value>
+  </data>
+  <data name="TabControlReportHeader" xml:space="preserve">
+    <value>Report Header,報表頭,报表头</value>
+  </data>
+  <data name="lbGroupTotalCaption" xml:space="preserve">
+    <value>Group Total Caption:,組匯總抬頭:,组汇总标题:</value>
+  </data>
+  <data name="MsgProcessFinished" xml:space="preserve">
+    <value>Process Finished,完成,完成</value>
+  </data>
+  <data name="TabControlGroupColumnProperties" xml:space="preserve">
+    <value>Group &amp; Total Setting,分組和匯總 設置,分组和汇总 设置</value>
+  </data>
+  <data name="PageIndexAndTotalPageCount" xml:space="preserve">
+    <value>PageIndexAndTotalPageCount,頁次和總頁次,页次和总页次</value>
+  </data>
+  <data name="Blank" xml:space="preserve">
+    <value>Blank,空白,空白</value>
+  </data>
+  <data name="MenuDeleteTemplate" xml:space="preserve">
+    <value>DeleteTemplate...,刪除模板...,删除模板...</value>
+  </data>
+  <data name="lbField" xml:space="preserve">
+    <value>Column Name:,欄位名:,字段名:</value>
+  </data>
+  <data name="btAdd" xml:space="preserve">
+    <value>Add,添加,添加</value>
+  </data>
+  <data name="btCancel" xml:space="preserve">
+    <value>Cancel,取消,取消</value>
+  </data>
+  <data name="gbSelectedColumns" xml:space="preserve">
+    <value>Selected Columns,被選擇的欄位,被选择的字段</value>
+  </data>
+  <data name="cbRowGridLine" xml:space="preserve">
+    <value>Row GridLine,列格線,行格线</value>
+  </data>
+  <data name="lbContentAlignment" xml:space="preserve">
+    <value>Content Alignment:,內容對齊:,内容对齐:</value>
+  </data>
+  <data name="TabControlGroupColumns" xml:space="preserve">
+    <value>Group &amp; Total,分組和匯總,分组和汇总</value>
+  </data>
+  <data name="lbOutputFileName" xml:space="preserve">
+    <value>Output FileName:,輸出檔案名:,输出文件名:</value>
+  </data>
+  <data name="MsgHeaderItemAdd" xml:space="preserve">
+    <value>Please select &lt;Header Item Type&gt;， then click &lt;Add&gt; button to add header item.,請先選擇表頭項目類型，然後按【添加】按鈕添加表頭項目。,请先选择表头项目类型，然后按【添加】按钮添加表头项目。</value>
+  </data>
+  <data name="lbHeaderItemType" xml:space="preserve">
+    <value>Header Item Type,表頭項目類型,表头项目类型</value>
+  </data>
+  <data name="TabControlColumnProperties" xml:space="preserve">
+    <value>Column Properties,欄位屬性,字段属性</value>
+  </data>
+  <data name="fmSaveAsTemplate" xml:space="preserve">
+    <value>Save As Template,另存模板,另存模板</value>
+  </data>
+  <data name="MsgExcelGroupNewLineError" xml:space="preserve">
+    <value>Can not use &lt;Excel group&gt; in folded rows.,使用Excel群組功能的時候不能使用折列列印。,使用Excel分组功能的时候不能使用折列打印。</value>
+  </data>
+  <data name="lbTemplateName" xml:space="preserve">
+    <value>Please Input Template Name:,請輸入模板名:,请输入模板名:</value>
+  </data>
+  <data name="fmLoadTemplate" xml:space="preserve">
+    <value>Select Template,模板選擇,模板选择</value>
+  </data>
+  <data name="MenuSaveAsTemplate" xml:space="preserve">
+    <value>Save As Template...,另存模板...,另存模板...</value>
+  </data>
+  <data name="lbSelectTemplate" xml:space="preserve">
+    <value>Please select one template:,請選擇一個模板:,请选择一个模板:</value>
+  </data>
+  <data name="gbShowGridLine" xml:space="preserve">
+    <value>Show GridLine,顯示格線,显示格线</value>
+  </data>
+  <data name="btExport" xml:space="preserve">
+    <value>Export,輸出,输出</value>
+  </data>
+  <data name="TabControlReportSetting" xml:space="preserve">
+    <value>Report Setting,報表設定,报表设定</value>
+  </data>
+  <data name="lbMailFrom" xml:space="preserve">
+    <value>Mail From:,寄件人:,寄件人:</value>
+  </data>
+  <data name="Ascend" xml:space="preserve">
+    <value>Ascend,升冪,升序</value>
+  </data>
+  <data name="gbColumns" xml:space="preserve">
+    <value>Columns,欄位,字段</value>
+  </data>
+  <data name="MsgMailToEmpty" xml:space="preserve">
+    <value>Mail To can not be empty !,收件人地址不能為空 !,收件人地址不能为空 !</value>
+  </data>
+  <data name="ReportName" xml:space="preserve">
+    <value>ReportName,報表名稱,报表名称</value>
+  </data>
+  <data name="btRemove" xml:space="preserve">
+    <value>Remove,移除,移除</value>
+  </data>
+  <data name="MsgError" xml:space="preserve">
+    <value>Error,錯誤,错误</value>
+  </data>
+  <data name="lbMailTo" xml:space="preserve">
+    <value>Mail To:,收件人:,收件人:</value>
+  </data>
+  <data name="gbPrintOrientation" xml:space="preserve">
+    <value>rientation,打印方向,打印方向</value>
+  </data>
+  <data name="lbOutputMode" xml:space="preserve">
+    <value>Output Mode:,輸出模式:,输出模式:</value>
+  </data>
+  <data name="fmEmail" xml:space="preserve">
+    <value>E-mail,電子郵件,电子邮件,E-mail,E-mail,E-mail,E-mail,E-mail</value>
+  </data>
+  <data name="lbContent" xml:space="preserve">
+    <value>Content:,內容:,内容:</value>
+  </data>
+  <data name="TabControlColumns" xml:space="preserve">
+    <value>Columns,欄位選擇,字段选择</value>
+  </data>
+  <data name="gbContentSetting" xml:space="preserve">
+    <value>Content Setting,內容設定,内容设定</value>
+  </data>
+  <data name="MsgSaveSuccess" xml:space="preserve">
+    <value>Save Success !,保存成功！,保存成功！</value>
+  </data>
+  <data name="TabControlHeaderItemProperties" xml:space="preserve">
+    <value>Header Item Properties,表頭項目屬性,表头项目属性</value>
+  </data>
+  <data name="MsgDataSourceNull" xml:space="preserve">
+    <value>Please select one BindingSource for easliyReport at Design Time.,請在設計時為簡易報表選擇一個BindingSource。,请在设计时为简易报表选择一个BindingSource。</value>
+  </data>
+  <data name="cbColumnGridLine" xml:space="preserve">
+    <value>Column GridLine,行格線,列格线</value>
+  </data>
+  <data name="CompanyName" xml:space="preserve">
+    <value>CompanyName,公司名稱,公司名称</value>
+  </data>
+  <data name="lbWidth" xml:space="preserve">
+    <value>Width:,寬度:,宽度:</value>
+  </data>
+  <data name="MsgWarning" xml:space="preserve">
+    <value>Warning,警告,警告</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>None,不排序,不排序</value>
+  </data>
+  <data name="lbColumnAlignment" xml:space="preserve">
+    <value>Column Alignment:,欄位對齊:,字段对齐:</value>
+  </data>
+  <data name="gbFooterItems" xml:space="preserve">
+    <value>Footer Items,表尾項目,表尾项目</value>
+  </data>
+  <data name="cbNewLine" xml:space="preserve">
+    <value>NewLine,換行,换行</value>
+  </data>
+  <data name="MsgSuccess" xml:space="preserve">
+    <value>Success,成功,成功</value>
+  </data>
+  <data name="lbPassword" xml:space="preserve">
+    <value>Password:,密碼:,密码:</value>
+  </data>
+  <data name="gbGroupColumns" xml:space="preserve">
+    <value>Group Columns,分組欄位,分组字段</value>
+  </data>
+  <data name="MsgReportSetting" xml:space="preserve">
+    <value>This page is used to set the format of report and output config.,此頁面用於設置報表的格式和輸出設定。,此页用于设定报表的格式和输出方式设置。</value>
+  </data>
+  <data name="ReportDateTime" xml:space="preserve">
+    <value>ReportDateTime,打印日期時間,打印日期时间</value>
+  </data>
+  <data name="ReportID" xml:space="preserve">
+    <value>ReportID,報表代號,报表代号</value>
+  </data>
+  <data name="lbCells" xml:space="preserve">
+    <value>Cells:,占用單元格數:,占用单元格数:</value>
+  </data>
+  <data name="MenuReadTemplate" xml:space="preserve">
+    <value>Read Template...,讀取模板...,读取模板...</value>
+  </data>
+  <data name="QueryCondition" xml:space="preserve">
+    <value>QueryCondition,查詢條件,查询条件</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>UserName,用戶名,用户名</value>
+  </data>
+  <data name="TabControlReportDetails" xml:space="preserve">
+    <value>Report Details,報表明細,报表明细</value>
+  </data>
+  <data name="cbGroupTotal" xml:space="preserve">
+    <value>GroupTotal,分組匯總,分组汇总</value>
+  </data>
+  <data name="btHeaderFont" xml:space="preserve">
+    <value>Header Font...,表頭字型...,表头字型...</value>
+  </data>
+  <data name="MsgDeleteSuccess" xml:space="preserve">
+    <value>Delete Success !,刪除成功！,删除成功！</value>
+  </data>
+  <data name="lbTotalCaption" xml:space="preserve">
+    <value>TotalCaption:,匯總抬頭:,汇总标题:</value>
+  </data>
+  <data name="MsgFieldItemsNull" xml:space="preserve">
+    <value>Please select export columns.,請先選擇要輸出的欄位。,请先选择要输出的字段。</value>
+  </data>
+  <data name="btFont" xml:space="preserve">
+    <value>Font...,字型...,字型...</value>
+  </data>
+  <data name="MsgImageItemsNull" xml:space="preserve">
+    <value>Please set images at first.,請先在設計時設置好圖片。,请先在设计时设置好图片。</value>
+  </data>
+  <data name="cbDetail" xml:space="preserve">
+    <value>Detail,詳情,详情</value>
+  </data>
+  <data name="gbMailConfig" xml:space="preserve">
+    <value>E-Mail Config,電子郵件設定,电子邮件设定</value>
+  </data>
+  <data name="btFieldFont" xml:space="preserve">
+    <value>Field Font...,欄位字型,字段字型</value>
+  </data>
+  <data name="btOK" xml:space="preserve">
+    <value>OK,確定,确定</value>
+  </data>
+  <data name="btPreview" xml:space="preserve">
+    <value>Preview,預覽,预览</value>
+  </data>
+  <data name="UserID" xml:space="preserve">
+    <value>UserID,用戶代號,用户代号</value>
+  </data>
+  <data name="MsgFooterItemAdd" xml:space="preserve">
+    <value>Please select &lt;Footer Item Type&gt;， then click &lt;Add&gt; button to add footer item.,請先選擇表尾項目類型，然後按【添加】按鈕添加表尾項目。,请先选择表尾项目类型，然后按【添加】按钮添加表尾项目。</value>
+  </data>
+  <data name="Descend" xml:space="preserve">
+    <value>Descend,降冪,降序</value>
+  </data>
+  <data name="btFooterFont" xml:space="preserve">
+    <value>Footer Font...,表尾字型...,表尾字型...</value>
+  </data>
+  <data name="lbFooterItemType" xml:space="preserve">
+    <value>Footer Item Type,表尾項目類型,表尾项目类型</value>
+  </data>
+  <data name="lbOrderType" xml:space="preserve">
+    <value>Order:,排序:,排序:</value>
+  </data>
+  <data name="MsgMailFromEmpty" xml:space="preserve">
+    <value>Mail From can not be empty !,寄件人地址不能為空 !,寄件人地址不能为空 !</value>
+  </data>
+  <data name="btClose" xml:space="preserve">
+    <value>Close,關閉,关闭</value>
+  </data>
+  <data name="lbOutputFilePath" xml:space="preserve">
+    <value>Output FilePath:,輸出路徑:,输出路径:</value>
+  </data>
+  <data name="btSave" xml:space="preserve">
+    <value>Save,保存設定,保存设定</value>
+  </data>
+  <data name="cbDefault" xml:space="preserve">
+    <value>Default,默認,默认</value>
+  </data>
+  <data name="PageIndex" xml:space="preserve">
+    <value>PageIndex,頁次,页次</value>
+  </data>
+  <data name="MsgInvalidMailAddress" xml:space="preserve">
+    <value>Invalid email address.,無效的電子郵件地址格式,无效的电子邮件地址格式</value>
+  </data>
+  <data name="MsgHeaderDataSourceNull" xml:space="preserve">
+    <value>Please select one HeaderBindingSource for easliyReport at Design Time.,請在設計時為簡易報表選擇一個HeaderBindingSource。,请在设计时为简易报表选择一个HeaderBindingSource。</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\down.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MsgTemplateExist" xml:space="preserve">
+    <value>The template name which you input has already existed.,您所輸入的模板已經存在。,您所输入的模板已经存在。</value>
+  </data>
+  <data name="up" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\up.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btSend" xml:space="preserve">
+    <value>&amp;Send,發送(&amp;S),发送(&amp;S),&amp;Send,&amp;Send,&amp;Send,&amp;Send,&amp;Send</value>
+  </data>
+  <data name="lbSumType" xml:space="preserve">
+    <value>SumType,匯總類型,汇总类型</value>
+  </data>
+  <data name="MsgTemplateFileNameIsNull" xml:space="preserve">
+    <value>Please input template name， then retry.,請先輸入模板名，然後再試一次。,请先输入模板名，然后再试一次。</value>
+  </data>
+  <data name="fmReportExport" xml:space="preserve">
+    <value>Easily Report Designer,簡易報表設計,简易报表设计</value>
+  </data>
+  <data name="lbSmtpServer" xml:space="preserve">
+    <value>Server:,伺服器:,服务器:</value>
+  </data>
+  <data name="gbSelectedGroupColumns" xml:space="preserve">
+    <value>Selected Group Columns,被選擇的分組欄位,被选择的分组字段</value>
+  </data>
+  <data name="lbPosition" xml:space="preserve">
+    <value>Position:,位置:,位置:</value>
+  </data>
+  <data name="TabControlReportFooter" xml:space="preserve">
+    <value>Report Footer,報表尾,报表尾</value>
+  </data>
+  <data name="excel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\excel.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lbGroupType" xml:space="preserve">
+    <value>Group Type:,分組方式:,分组方式:</value>
+  </data>
+  <data name="MsgExportSuccess" xml:space="preserve">
+    <value>Export Success !,輸出成功！,输出成功！</value>
+  </data>
+  <data name="view" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\view.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="btChange" xml:space="preserve">
+    <value>Change,換圖,换图</value>
+  </data>
+  <data name="btSelect" xml:space="preserve">
+    <value>Select,選擇,选择</value>
+  </data>
+  <data name="fmPictures" xml:space="preserve">
+    <value>Select Picture,圖檔選擇,图片选择</value>
+  </data>
+  <data name="fmPictureView" xml:space="preserve">
+    <value>Picture View,圖檔預覽,图片预览</value>
+  </data>
+  <data name="lbPictures" xml:space="preserve">
+    <value>Pictures:,圖檔:,图片:</value>
+  </data>
+  <data name="lbExportFormat" xml:space="preserve">
+    <value>Export Format:,導出格式:,输出格式:</value>
+  </data>
+  <data name="btDelete" xml:space="preserve">
+    <value>Delete,刪除,删除</value>
+  </data>
+  <data name="lbSelectPicture" xml:space="preserve">
+    <value>Please select picture:,請選擇圖片:,请选择图片:</value>
+  </data>
+  <data name="btSelectPicture" xml:space="preserve">
+    <value>Select Picture...,選擇圖檔...,选择图片...</value>
+  </data>
+  <data name="MsgFileTypeNotSupport" xml:space="preserve">
+    <value>This file type is not be supported.,不支持此文件類型。,不支持此文件类型。</value>
+  </data>
+  <data name="gbPageMargin" xml:space="preserve">
+    <value>Page Margin:Inches,頁邊距:英寸,页边距:英寸</value>
+  </data>
+  <data name="lbBottom" xml:space="preserve">
+    <value>Bottom:,下:,下:</value>
+  </data>
+  <data name="lbLeft" xml:space="preserve">
+    <value>Left:,左:,左:</value>
+  </data>
+  <data name="lbRight" xml:space="preserve">
+    <value>Right:,右:,右:</value>
+  </data>
+  <data name="lbTop" xml:space="preserve">
+    <value>Top:,上:,上:</value>
+  </data>
+  <data name="hlDownload" xml:space="preserve">
+    <value>Click to Download,點擊下載,点击下载</value>
+  </data>
+  <data name="lbMailTitle" xml:space="preserve">
+    <value>Title:,抬頭:,标题:</value>
+  </data>
+  <data name="cbxSendMail" xml:space="preserve">
+    <value>Send Mail,發送郵件,发送邮件</value>
+  </data>
+  <data name="btWebSendMail" xml:space="preserve">
+    <value>Send,發送,发送,Send,Send,Send,Send,Send</value>
+  </data>
+  <data name="gbMailSend" xml:space="preserve">
+    <value>Send Email,發送電子郵件,发送电子邮件</value>
+  </data>
+  <data name="lbPageHeight" xml:space="preserve">
+    <value>Page Height:,頁的高度:,页的高度:</value>
+  </data>
+  <data name="lbCaptionStyle" xml:space="preserve">
+    <value>Caption Style,抬頭樣式,标题样式</value>
+  </data>
+  <data name="cbColumnInsideLine" xml:space="preserve">
+    <value>Collumn GridLine,内行格線,内列格线</value>
+  </data>
+  <data name="lbDataSourceIndex" xml:space="preserve">
+    <value>DataSource:,資料源,数据源</value>
+  </data>
+  <data name="cbSuppressIfDuplicated" xml:space="preserve">
+    <value>Suppress if duplicated,群組重複則不顯示,群组重复则不显示</value>
+  </data>
+  <data name="cbHeaderRepeat" xml:space="preserve">
+    <value>Header repeat,重複表頭,重复表头</value>
+  </data>
+  <data name="TrialMessage" xml:space="preserve">
+    <value>TrialVersion only support 10 templates,很抱歉，試用版本最多只能存取10筆樣版資料,很抱歉，试用版本最多只能存取10笔样版资料</value>
+  </data>
+  <data name="ConstantItem" xml:space="preserve">
+    <value>ConstantItem,常用變數,常用参数</value>
+  </data>
+  <data name="DataSourceItem" xml:space="preserve">
+    <value>DataSourceItem,欄位,栏位</value>
+  </data>
+  <data name="ImageItem" xml:space="preserve">
+    <value>ImageItem,圖檔,图片</value>
+  </data>
+  <data name="ParameterItem" xml:space="preserve">
+    <value>ParameterItem,參數,参数</value>
+  </data>
+</root>

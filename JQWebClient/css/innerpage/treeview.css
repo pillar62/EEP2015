@@ -1,0 +1,61 @@
+﻿/**/
+/*页面主体样式*/
+body 
+{
+	font-family:Verdana;
+	font-size: 9pt;
+	background-image: url( '../../Image/innerpage/bg.jpg' );
+	background-repeat: repeat-x;
+	background-color:#405765;
+}
+
+/*主table样式*/
+#main_table
+{
+	width:100%;
+}
+
+/*按钮控件container样式*/
+.btn_container
+{
+	width:50px;
+}
+
+/*区域container样式*/
+.container
+{
+	 text-align:left;
+	 vertical-align:top;
+}
+
+/*鼠标离开按钮时，按钮的样式*/
+.btn_mouseout 
+{
+    border: 1px solid #286699;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-family:Microsoft JhengHei; 
+    font-weight: bold;
+    font-size: 12px;
+    background-color:#95c3e9;
+    background-image: url('../../Image/innerpage/btn1.png');
+    background-repeat: repeat-x;
+    }
+
+/*鼠标移动到按钮上时，按钮的样式*/
+.btn_mouseover
+{
+    border: 1px solid #051723;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-family:Microsoft JhengHei; 
+    font-weight: bold;
+    font-size: 12px;
+    background-color:#64757f;
+    background-image:url( '../../Image/innerpage/btn2.png' );
+    background-repeat: repeat-x;	
+}

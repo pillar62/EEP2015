@@ -1,0 +1,18 @@
+﻿.info-x-item-disabled
+{
+    color: #111111;
+    cursor: default;
+    opacity: .6;
+    -moz-opacity: .6;
+}
+
+.info-x-item-disabled input
+{
+    color: #111111;
+    cursor: default;
+}
+
+.ext_refbtn_icon
+{
+	background: url(../../../Image/Ext/RefButton/refButton.png) left top no-repeat !important;
+}

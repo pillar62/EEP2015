@@ -1,0 +1,168 @@
+﻿.icon-today
+{
+    background: url('../themes/icons/schedule_today.png') no-repeat center center;
+}
+        
+.icon-week
+{
+    background: url('../themes/icons/schedule_week.gif') no-repeat center center;
+}
+        
+.icon-month
+{
+    background: url('../themes/icons/schedule_month.gif') no-repeat center center;
+}
+
+.icon-refresh
+{
+    background: url('../themes/icons/schedule_refresh.png') no-repeat center center;
+}
+
+.icon-loading
+{
+    background: url('../themes/icons/schedule_loading.gif') no-repeat center center;
+}
+
+.schedule-menu
+{
+    background-color:#F4F4F4;
+    border-bottom: 1px solid #DDDDDD;
+}
+        
+.schedule-table
+{
+    width: 100%;
+    border-collapse: collapse;        /*cellspacing*/
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+.schedule-table th
+{  
+    font-weight: 400;               
+    padding : 2px 0px 2px 0px;      /*cellpadding*/
+}
+
+.schedule-table td
+{  
+    padding : 0px;                  /*cellpadding*/
+}
+        
+.schedule-header-row
+{
+    color: #112ABB;
+    background-color:#F4F4F4;
+    font-size: 13px;
+    
+    border-left: 1px solid #DDDDDD;
+    border-bottom: 1px solid #C3D9FF;
+    border-right: 1px solid #DDDDDD;
+}
+        
+.schedule-date-row
+{
+    
+}
+        
+.schedule-row
+{
+    height: 60px;
+}
+
+.schedule-detail-row
+{
+    height: 10px;
+}
+        
+.schedule-cell
+{
+    vertical-align: top;
+    border-left: 1px solid #C3D9FF;
+    border-bottom: 1px solid #C3D9FF;
+}
+
+.schedule-date-row >.schedule-cell
+{
+    font-size: 12px;
+    background-color: #E8EEF7;
+    text-align: center;
+}
+
+.schedule-detail-row >.schedule-cell
+{
+    font-size: 12px;
+    color: #112ABB;
+    text-align: right;
+    vertical-align: top;
+}
+
+.schedule-odd-cell
+{
+    border-bottom-style:none;
+}
+
+.schedule-last-cell
+{
+    border-right: 1px solid #C3D9FF;
+}
+        
+.schedule-item
+{
+    border-radius: 15px;
+}
+
+.schedule-detail-item
+{
+    border-top: 1px solid #FFFFFF;
+}
+        
+.schedule-item > p
+{
+    color: White;
+    cursor:pointer!important;
+    font-size: 12px;
+    padding: 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0px 10px 0px 10px;
+}
+        
+.schedule-am-item
+{
+    background-color: #F2A640;
+}
+        
+.schedule-pm-item
+{
+    background-color: #668CB3;
+}
+
+.schedule-day-item
+{
+    background-color: #8CBF40;
+}
+
+.schedule-period-item
+{
+    background-color:#B373B3;
+}
+
+.schedule-period-left
+{
+    border-radius:15px 0px 0px 15px;
+}
+
+.schedule-period-right
+{
+   border-radius:0px 15px 15px 0px;
+}
+
+.schedule-period-middle
+{
+    border-radius: 0px;
+}
+
+.schedule-drag-over
+{
+    background:#FBEC88;
+}

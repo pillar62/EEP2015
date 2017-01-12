@@ -1,0 +1,290 @@
+﻿/*collapse menu的文本區域樣式1*/
+.ajaxcm_content1
+{
+	font-family: Microsoft JhengHei;
+	font-size: 9pt;
+	background-color: #D3DEEF;
+	border: 1px solid #2F4F4F;
+	border-top: none;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+/*collapse menu的文本區域樣式2*/
+.ajaxcm_content2
+{
+	font-family: Microsoft JhengHei;
+	font-size: 9pt;
+	background-color: #D3EFCE;
+	border: 1px solid #2F4F4F;
+	border-top: none;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+/*collapse menu的文本區域樣式3*/
+.ajaxcm_content3
+{
+	font-family: Microsoft JhengHei;
+	font-size: 9pt;
+	background-color: #EFEFEF;
+	border: 1px solid #B0B0B8;
+	border-top: none;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+/*collapse menu的文本區域樣式4*/
+.ajaxcm_content4
+{
+	font-family: Microsoft JhengHei;
+	font-size: 9pt;
+	background-color: #808080;
+	border: 1px solid #000000;
+	border-top: none;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+/*collapse menu的文本區域樣式4(為某一用戶特製的樣式)*/
+.ajaxcm_user_content
+{
+	font-family: Microsoft JhengHei;
+	font-size: 9pt;
+	background-color: #9DD7E5;
+	border-top: none;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+/*collapse menu的抬頭區域未選擇時樣式1*/
+.ajaxcm_header_unselected1
+{
+	color: black;
+	font-family: Microsoft JhengHei;
+	font-size: 9pt;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+/*collapse menu的抬頭區域未選擇時樣式2*/
+.ajaxcm_header_unselected2
+{
+	color: #EF9B63;
+	font-family: Microsoft JhengHei;
+	font-size: 9pt;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+/*collapse menu的抬頭區域未選擇時樣式3(為某一用戶特製的樣式)*/
+.ajaxcm_user_header_unselected
+{
+	color: #0246AB;
+	background-image: url('../../Image/Ajax/user_header.gif');
+	background-repeat:no-repeat;
+	font-family: Microsoft JhengHei;
+	font-size: 11pt;
+	cursor: pointer;
+	width: 180px;
+	height: 25px;
+	padding-left:6px;
+	padding-top: 6px;
+}
+
+/*collapse menu的抬頭區域選擇時樣式1*/
+.ajaxcm_header_selected1
+{
+	color: white;
+	font-family: Microsoft JhengHei;
+	font-size: 9pt;
+	font-weight: bold;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+/*collapse menu的抬頭區域選擇時樣式2*/
+.ajaxcm_header_selected2
+{
+	color: black;
+	font-family: Microsoft JhengHei;
+	font-size: 9pt;
+	font-weight: bold;
+	margin-top: 5px;
+	cursor: pointer;
+}
+
+/*collapse menu的抬頭區域選擇時樣式3(為某一用戶特製的樣式)*/
+.ajaxcm_user_header_selected
+{
+	color: #0246AB;
+	background-image: url('../../Image/Ajax/user_header_selected.gif');
+	background-repeat:no-repeat;
+	font-family: Microsoft JhengHei;
+	font-size: 11pt;
+	cursor: pointer;
+	width: 180px;
+	height: 25px;
+	padding-left:6px;
+	padding-top: 6px;
+}
+
+/*collapse menu的抬頭區域左邊底圖樣式1*/
+.ajaxcm_header_left_1
+{
+	background-image: url('../../Image/Ajax/left_1.jpg');
+	background-repeat: no-repeat;
+	width: 4px;
+	height: 30px;
+}
+
+/*collapse menu的抬頭區域中間底圖樣式1*/
+.ajaxcm_header_middle_1
+{
+	background-image: url('../../Image/Ajax/middle_1.jpg');
+	background-repeat: repeat-x;
+	height: 30px;
+}
+
+/*collapse menu的抬頭區域右邊底圖樣式1*/
+.ajaxcm_header_right_1
+{
+	background-image: url('../../Image/Ajax/right_1.jpg');
+	background-repeat: no-repeat;
+	width: 4px;
+	height: 30px;
+}
+
+/*collapse menu的抬頭區域左邊底圖樣式2*/
+.ajaxcm_header_left_2
+{
+	background-image: url('../../Image/Ajax/left_2.jpg');
+	background-repeat: no-repeat;
+	width: 4px;
+	height: 30px;
+}
+
+/*collapse menu的抬頭區域中間底圖樣式2*/
+.ajaxcm_header_middle_2
+{
+	background-image: url('../../Image/Ajax/middle_2.jpg');
+	background-repeat: repeat-x;
+	height: 30px;
+}
+
+/*collapse menu的抬頭區域右邊底圖樣式2*/
+.ajaxcm_header_right_2
+{
+	background-image: url('../../Image/Ajax/right_2.jpg');
+	background-repeat: no-repeat;
+	width: 4px;
+	height: 30px;
+}
+
+/*collapse menu的抬頭區域左邊底圖樣式3*/
+.ajaxcm_header_left_3
+{
+	background-image: url('../../Image/Ajax/left_3.jpg');
+	background-repeat: no-repeat;
+	width: 4px;
+	height: 30px;
+}
+
+/*collapse menu的抬頭區域中間底圖樣式3*/
+.ajaxcm_header_middle_3
+{
+	background-image: url('../../Image/Ajax/middle_3.jpg');
+	background-repeat: repeat-x;
+	height: 30px;
+}
+
+/*collapse menu的抬頭區域右邊底圖樣式3*/
+.ajaxcm_header_right_3
+{
+	background-image: url('../../Image/Ajax/right_3.jpg');
+	background-repeat: no-repeat;
+	width: 4px;
+	height: 30px;
+}
+
+/*collapse menu的抬頭區域左邊底圖樣式4*/
+.ajaxcm_header_left_4
+{
+	background-image: url('../../Image/Ajax/left_4.jpg');
+	background-repeat: no-repeat;
+	width: 4px;
+	height: 30px;
+}
+
+/*collapse menu的抬頭區域中間底圖樣式4*/
+.ajaxcm_header_middle_4
+{
+	background-image: url('../../Image/Ajax/middle_4.jpg');
+	background-repeat: repeat-x;
+	height: 30px;
+}
+
+/*collapse menu的抬頭區域右邊底圖樣式4*/
+.ajaxcm_header_right_4
+{
+	background-image: url('../../Image/Ajax/right_4.jpg');
+	background-repeat: no-repeat;
+	width: 4px;
+	height: 30px;
+}
+
+/*collapse menu用戶綁定image欄位的樣式*/
+.ajaxcm_img
+{
+	padding: 0px 5px 0px 0px;
+	width: 15px;
+	height: 15px;
+}
+
+/*collapse menu用戶綁定文本欄位的樣式*/
+.ajaxcm_lbl
+{
+}
+
+/*以下為鏈接的樣式,*/
+a:link
+{
+	color: black;
+	text-decoration: none;
+}
+a:visited
+{
+	color: black;
+	text-decoration: none;
+}
+a:hover
+{
+	color: black;
+	text-decoration: underline;
+}
+a:active
+{
+	color: black;
+	text-decoration: underline;
+}
+
+a.otherLink:link
+{
+	color: black;
+	text-decoration: none;
+}
+a.otherLink:visited
+{
+	color: black;
+	text-decoration: none;
+}
+a.otherLink:hover
+{
+	color: black;
+	text-decoration: none;
+}
+a.otherLink:active
+{
+	color: black;
+	text-decoration: none;
+}

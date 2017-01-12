@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget defaultlocale="zh-TW" id="infolight.eep2015" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps">
+    <preference name="loglevel" value="DEBUG" />
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+    <feature name="VideoPlayer">
+        <param name="android-package" value="com.moust.cordova.videoplayer.VideoPlayer" />
+    </feature>
+    <feature name="PushPlugin">
+        <param name="android-package" value="com.plugin.gcm.PushPlugin" />
+    </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="Contacts">
+        <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="FileTransfer">
+        <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
+    </feature>
+    <feature name="Globalization">
+        <param name="android-package" value="org.apache.cordova.globalization.Globalization" />
+    </feature>
+    <feature name="Capture">
+        <param name="android-package" value="org.apache.cordova.mediacapture.Capture" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
+    <feature name="BarcodeScanner">
+        <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
+    </feature>
+    <feature name="Sms">
+        <param name="android-package" value="com.cordova.plugins.sms.Sms" />
+    </feature>
+    <icon density="ldpi" src="res/icons/android/icon-36-ldpi.png" />
+    <icon density="mdpi" src="res/icons/android/icon-48-mdpi.png" />
+    <icon density="hdpi" src="res/icons/android/icon-72-hdpi.png" />
+    <icon density="xhdpi" src="res/icons/android/icon-96-xhdpi.png" />
+    <splash density="land-hdpi" src="res/screens/android/screen-hdpi-landscape.png" />
+    <splash density="land-ldpi" src="res/screens/android/screen-ldpi-landscape.png" />
+    <splash density="land-mdpi" src="res/screens/android/screen-mdpi-landscape.png" />
+    <splash density="land-xhdpi" src="res/screens/android/screen-xhdpi-landscape.png" />
+    <splash density="port-hdpi" src="res/screens/android/screen-hdpi-portrait.png" />
+    <splash density="port-ldpi" src="res/screens/android/screen-ldpi-portrait.png" />
+    <splash density="port-mdpi" src="res/screens/android/screen-mdpi-portrait.png" />
+    <splash density="port-xhdpi" src="res/screens/android/screen-xhdpi-portrait.png" />
+    <name>EEPApp</name>
+    <description>A blank project that uses Apache Cordova to help you build an app that targets multiple mobile platforms: Android, iOS, Windows, and Windows Phone.</description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">Infolight</author>
+    <content src="logon.html" />
+    <access origin="*" />
+    <access launch-external="yes" origin="tel:*" />
+    <vs:features />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="windows-target-version" value="8.1" />
+    <preference name="windows-phone-target-version" value="8.1" />
+    <vs:plugin name="org.apache.cordova.dialogs" version="0.3.0" />
+    <preference name="Fullscreen" value="True" />
+    <preference name="KeepRunning" value="True" />
+    <preference name="ShowTitle" value="False" />
+    <preference name="InAppBrowserStorageEnabled" value="True" />
+    <preference name="SuppressesIncrementalRendering" value="False" />
+    <vs:plugin name="org.apache.cordova.device" version="0.3.0" />
+    <vs:plugin name="org.apache.cordova.camera" version="0.3.6" />
+    <vs:plugin name="org.apache.cordova.file-transfer" version="0.5.0" />
+    <vs:plugin name="org.apache.cordova.media-capture" version="0.3.6" />
+    <vs:plugin name="phonegap-plugin-barcodescanner" version="3.1.2" />
+    <vs:plugin name="org.apache.cordova.inappbrowser" version="0.6.0" />
+    <vs:plugin name="com.microsoft.azure-mobile-services" version="1.2.9" />
+    <vs:plugin name="com.phonegap.plugins.PushPlugin" version="2.2.1" />
+    <vs:plugin name="org.apache.cordova.globalization" version="0.3.4" />
+    <vs:plugin name="org.apache.cordova.contacts" version="" />
+    <vs:plugin name="org.apache.cordova.geolocation" version="0.3.12" />
+    <vs:plugin name="com.cordova.plugins.sms" src="https://github.com/cordova-sms/cordova-sms-plugin" version="0.1.6" />
+    <vs:plugin name="org.apache.cordova.network-information" version="0.2.15" />
+    <vs:plugin name="cordova-plugin-transport-security" src="https://github.com/leecrossley/cordova-plugin-transport-security.git" version="0.1.1" />
+</widget>

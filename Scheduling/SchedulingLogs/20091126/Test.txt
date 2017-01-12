@@ -1,0 +1,11 @@
+
+SchedulName: Test Status: Error Message: 
+LastDateTime: 09-04-16 14:39:09 ExecuteTime: 2009/11/26 10:16:27
+CycleUnit:InterVal
+Cycle:10000
+CycleHour:
+When:All
+Error:
+StartDateTime:2009/11/26 10:16:22
+TimeSpan:223.817577817589 days
+

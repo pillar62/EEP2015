@@ -1,0 +1,3 @@
+<InfolightSchedulingOptions>
+  <String Interval="5" DayTime="0800" NightTime="2000" Holiday="0,6" ServerIP="127.0.0.1" ServerPort="8989" UserID="001" Password="" StartActive="False" Email="" EmailPwd="" Host="" Port="" />
+</InfolightSchedulingOptions>

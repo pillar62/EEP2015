@@ -1,0 +1,104 @@
+{
+    "org.apache.cordova.dialogs": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.dialogs"
+        }
+    },
+    "org.apache.cordova.statusbar": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.statusbar"
+        }
+    },
+    "org.apache.cordova.inappbrowser": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.inappbrowser"
+        }
+    },
+    "org.apache.cordova.device": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.device"
+        }
+    },
+    "org.apache.cordova.camera": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.camera"
+        }
+    },
+    "org.apache.cordova.file-transfer": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.file-transfer"
+        }
+    },
+    "org.apache.cordova.file": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.file"
+        }
+    },
+    "org.apache.cordova.media-capture": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.media-capture"
+        }
+    },
+    "phonegap-plugin-barcodescanner-tests": {
+        "source": {
+            "type": "local",
+            "path": "F:\\setup\\phonegap-plugin-barcodescanner\\tests"
+        }
+    },
+    "phonegap-plugin-barcodescanner": {
+        "source": {
+            "type": "local",
+            "path": "F:\\setup\\phonegap-plugin-barcodescanner"
+        }
+    },
+    "com.microsoft.azure-mobile-services": {
+        "source": {
+            "type": "registry",
+            "id": "com.microsoft.azure-mobile-services"
+        }
+    },
+    "com.phonegap.plugins.PushPlugin": {
+        "source": {
+            "type": "local",
+            "path": "C:\\Users\\ccm\\Desktop\\MyGitHub-master\\MyGitHub-master"
+        }
+    },
+    "org.apache.cordova.globalization": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.globalization"
+        }
+    },
+    "org.apache.cordova.contacts": {
+        "source": {
+            "type": "registry",
+            "id": "org.apache.cordova.contacts"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.cordova.plugins.sms": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/cordova-sms/cordova-sms-plugin",
+            "subdir": "."
+        }
+    },
+    "cordova-plugin-transport-security": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/leecrossley/cordova-plugin-transport-security.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

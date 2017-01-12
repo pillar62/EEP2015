@@ -1,0 +1,732 @@
+﻿<?xml version="1.0"?>
+<!-- This file represents eep.net system message -->
+<SystemMessage>
+  <JQWebClient>
+    <!-- 以下为jqmobile部分 -->
+    <info-logon>
+      <userIDText>
+        <ENG>UserID</ENG>
+        <TRA>用戶編號</TRA>
+        <SIM>用户编号</SIM>
+        <HKG>用戶編號</HKG>
+        <JPN>UserID</JPN>
+        <LAN1>UserID</LAN1>
+        <LAN2>UserID</LAN2>
+        <LAN3>UserID</LAN3>
+      </userIDText>
+      <passwordText>
+        <ENG>Password</ENG>
+        <TRA>密碼</TRA>
+        <SIM>密码</SIM>
+        <HKG>密碼</HKG>
+        <JPN>Password</JPN>
+        <LAN1>Password</LAN1>
+        <LAN2>Password</LAN2>
+        <LAN3>Password</LAN3>
+      </passwordText>
+      <databaseText>
+        <ENG>Database</ENG>
+        <TRA>資料庫</TRA>
+        <SIM>数据库</SIM>
+        <HKG>資料庫</HKG>
+        <JPN>Database</JPN>
+        <LAN1>Database</LAN1>
+        <LAN2>Database</LAN2>
+        <LAN3>Database</LAN3>
+      </databaseText>
+      <solutionText>
+        <ENG>Solution</ENG>
+        <TRA>解決方案</TRA>
+        <SIM>解決方案</SIM>
+        <HKG>解決方案</HKG>
+        <JPN>Solution</JPN>
+        <LAN1>Solution</LAN1>
+        <LAN2>Solution</LAN2>
+        <LAN3>Solution</LAN3>
+      </solutionText>
+      <rememberText>
+        <ENG>Remember</ENG>
+        <TRA>記住密碼</TRA>
+        <SIM>记住密码</SIM>
+        <HKG>記住密碼</HKG>
+        <JPN>Remember</JPN>
+        <LAN1>Remember</LAN1>
+        <LAN2>Remember</LAN2>
+        <LAN3>Remember</LAN3>
+      </rememberText>
+      <logonText>
+        <ENG>Logon</ENG>
+        <TRA>登入</TRA>
+        <SIM>登入</SIM>
+        <HKG>登入</HKG>
+        <JPN>Logon</JPN>
+        <LAN1>Logon</LAN1>
+        <LAN2>Logon</LAN2>
+        <LAN3>Logon</LAN3>
+      </logonText>
+      <cancelText>
+        <ENG>Cancel</ENG>
+        <TRA>取消</TRA>
+        <SIM>取消</SIM>
+        <HKG>取消</HKG>
+        <JPN>Cancel</JPN>
+        <LAN1>Cancel</LAN1>
+        <LAN2>Cancel</LAN2>
+        <LAN3>Cancel</LAN3>
+      </cancelText>
+      <forgetText>
+        <ENG>Forget password</ENG>
+        <TRA>忘記密碼</TRA>
+        <SIM>忘记密码</SIM>
+        <HKG>忘記密碼</HKG>
+        <JPN>Forget password</JPN>
+        <LAN1>Forget password</LAN1>
+        <LAN2>Forget password</LAN2>
+        <LAN3>Forget password</LAN3>
+      </forgetText>
+      <userIDValidateMessage>
+        <ENG>UserID can not be empty.</ENG>
+        <TRA>用戶編號不能為空。</TRA>
+        <SIM>用户编号不能为空。</SIM>
+        <HKG>用戶編號不能為空。</HKG>
+        <JPN>UserID can not be empty.</JPN>
+        <LAN1>UserID can not be empty.</LAN1>
+        <LAN2>UserID can not be empty.</LAN2>
+        <LAN3>UserID can not be empty.</LAN3>
+      </userIDValidateMessage>
+      <returnText>
+        <ENG>Return</ENG>
+        <TRA>返回</TRA>
+        <SIM>返回</SIM>
+        <HKG>返回</HKG>
+        <JPN>Return</JPN>
+        <LAN1>Return</LAN1>
+        <LAN2>Return</LAN2>
+        <LAN3>Return</LAN3>
+      </returnText>
+      <resetText>
+        <ENG>Reset</ENG>
+        <TRA>重置</TRA>
+        <SIM>重置</SIM>
+        <HKG>重置</HKG>
+        <JPN>Reset</JPN>
+        <LAN1>Reset</LAN1>
+        <LAN2>Reset</LAN2>
+        <LAN3>Reset</LAN3>
+      </resetText>
+    </info-logon>
+    <info-main>
+      <refreshText>
+        <ENG>Refresh</ENG>
+        <TRA>重新整理</TRA>
+        <SIM>刷新</SIM>
+        <HKG>重新整理</HKG>
+        <JPN>Refresh</JPN>
+        <LAN1>Refresh</LAN1>
+        <LAN2>Refresh</LAN2>
+        <LAN3>Refresh</LAN3>
+      </refreshText>
+      <logoutText>
+        <ENG>Logout</ENG>
+        <TRA>登出</TRA>
+        <SIM>登出</SIM>
+        <HKG>登出</HKG>
+        <JPN>Logout</JPN>
+        <LAN1>Logout</LAN1>
+        <LAN2>Logout</LAN2>
+        <LAN3>Logout</LAN3>
+      </logoutText>
+      <messageText>
+        <ENG>Message</ENG>
+        <TRA>消息</TRA>
+        <SIM>消息</SIM>
+        <HKG>消息</HKG>
+        <JPN>Message</JPN>
+        <LAN1>Message</LAN1>
+        <LAN2>Message</LAN2>
+        <LAN3>Message</LAN3>
+      </messageText>
+      <menuText>
+        <ENG>Menu</ENG>
+        <TRA>功能表</TRA>
+        <SIM>菜单</SIM>
+        <HKG>功能表</HKG>
+        <JPN>Menu</JPN>
+        <LAN1>Menu</LAN1>
+        <LAN2>Menu</LAN2>
+        <LAN3>Menu</LAN3>
+      </menuText>
+      <flowText>
+        <ENG>My Work</ENG>
+        <TRA>個人工作</TRA>
+        <SIM>个人工作</SIM>
+        <HKG>個人工作</HKG>
+        <JPN>My Work</JPN>
+        <LAN1>My Work</LAN1>
+        <LAN2>My Work</LAN2>
+        <LAN3>My Work</LAN3>
+      </flowText>
+      <placeholderText>
+        <ENG>Search menu</ENG>
+        <TRA>功能項查詢</TRA>
+        <SIM>菜单查找</SIM>
+        <HKG>功能項查詢</HKG>
+        <JPN>Search menu</JPN>
+        <LAN1>Search menu</LAN1>
+        <LAN2>Search menu</LAN2>
+        <LAN3>Search menu</LAN3>
+      </placeholderText>
+      <changePasswordText>
+        <ENG>Change Password</ENG>
+        <TRA>修改密碼</TRA>
+        <SIM>修改密码</SIM>
+        <HKG>修改密碼</HKG>
+        <JPN>Change Password</JPN>
+        <LAN1>Change Password</LAN1>
+        <LAN2>Change Password</LAN2>
+        <LAN3>Change Password</LAN3>
+      </changePasswordText>
+    </info-main>
+    <info-password>
+      <okText>
+        <ENG>OK</ENG>
+        <TRA>確定</TRA>
+        <SIM>确定</SIM>
+        <HKG>確定</HKG>
+        <JPN>OK</JPN>
+        <LAN1>OK</LAN1>
+        <LAN2>OK</LAN2>
+        <LAN3>OK</LAN3>
+      </okText>
+      <cancelText>
+        <ENG>Cancel</ENG>
+        <TRA>取消</TRA>
+        <SIM>取消</SIM>
+        <HKG>取消</HKG>
+        <JPN>Cancel</JPN>
+        <LAN1>Cancel</LAN1>
+        <LAN2>Cancel</LAN2>
+        <LAN3>Cancel</LAN3>
+      </cancelText>
+      <oldPassowrdText>
+        <ENG>Old Password</ENG>
+        <TRA>舊密碼</TRA>
+        <SIM>旧密码</SIM>
+        <HKG>舊密碼</HKG>
+        <JPN>Old Password</JPN>
+        <LAN1>Old Password</LAN1>
+        <LAN2>Old Password</LAN2>
+        <LAN3>Old Password</LAN3>
+      </oldPassowrdText>
+      <newPassowrdText>
+        <ENG>New Password</ENG>
+        <TRA>新密碼</TRA>
+        <SIM>新密码</SIM>
+        <HKG>新密碼</HKG>
+        <JPN>New Password</JPN>
+        <LAN1>New Password</LAN1>
+        <LAN2>New Password</LAN2>
+        <LAN3>New Password</LAN3>
+      </newPassowrdText>
+      <confirmPassowrdText>
+        <ENG>Confirm Password</ENG>
+        <TRA>確認密碼</TRA>
+        <SIM>确认密码</SIM>
+        <HKG>確認密碼</HKG>
+        <JPN>Confirm Password</JPN>
+        <LAN1>Confirm Password</LAN1>
+        <LAN2>Confirm Password</LAN2>
+        <LAN3>Confirm Password</LAN3>
+      </confirmPassowrdText>
+      <notMatchText>
+        <ENG>Password not match</ENG>
+        <TRA>兩次輸入的密碼不一致</TRA>
+        <SIM>两次输入的密码不一致</SIM>
+        <HKG>兩次輸入的密碼不一致</HKG>
+        <JPN>Password not match</JPN>
+        <LAN1>Password not match</LAN1>
+        <LAN2>Password not match</LAN2>
+        <LAN3>Password not match</LAN3>
+      </notMatchText>
+      <failedText>
+        <ENG>Password modified failed.</ENG>
+        <TRA>修改密碼失敗</TRA>
+        <SIM>修改密码失败</SIM>
+        <HKG>修改密碼失敗</HKG>
+        <JPN>Password modified failed.</JPN>
+        <LAN1>Password modified failed.</LAN1>
+        <LAN2>Password modified failed.</LAN2>
+        <LAN3>Password modified failed.</LAN3>
+      </failedText>
+      <successedText>
+        <ENG>Password modified successfully.</ENG>
+        <TRA>修改密碼成功</TRA>
+        <SIM>修改密码成功</SIM>
+        <HKG>修改密碼成功</HKG>
+        <JPN>Password modified successfully.</JPN>
+        <LAN1>Password modified successfully.</LAN1>
+        <LAN2>Password modified successfully.</LAN2>
+        <LAN3>Password modified successfully.</LAN3>
+      </successedText>
+    </info-password>
+    <info-flow>
+      <placeholderText>
+        <ENG>Search data</ENG>
+        <TRA>單據查詢</TRA>
+        <SIM>单据查询</SIM>
+        <HKG>單據查詢</HKG>
+        <JPN>Search data</JPN>
+        <LAN1>Search data</LAN1>
+        <LAN2>Search data</LAN2>
+        <LAN3>Search data</LAN3>
+      </placeholderText>
+      <ToDoListText>
+        <ENG>Todo</ENG>
+        <TRA>待辦事項</TRA>
+        <SIM>待办事项</SIM>
+        <HKG>待辦事項</HKG>
+        <JPN>Todo</JPN>
+        <LAN1>Todo</LAN1>
+        <LAN2>Todo</LAN2>
+        <LAN3>Todo</LAN3>
+      </ToDoListText>
+      <ToDoHisText>
+        <ENG>History</ENG>
+        <TRA>經辦事項</TRA>
+        <SIM>经办事项</SIM>
+        <HKG>經辦事項</HKG>
+        <JPN>History</JPN>
+        <LAN1>History</LAN1>
+        <LAN2>History</LAN2>
+        <LAN3>History</LAN3>
+      </ToDoHisText>
+      <NotifyText>
+        <ENG>Notify</ENG>
+        <TRA>通知</TRA>
+        <SIM>通知</SIM>
+        <HKG>通知</HKG>
+        <JPN>Notify</JPN>
+        <LAN1>Notify</LAN1>
+        <LAN2>Notify</LAN2>
+        <LAN3>Notify</LAN3>
+      </NotifyText>
+      <DelayText>
+        <ENG>Delay</ENG>
+        <TRA>逾時事項</TRA>
+        <SIM>逾时事项</SIM>
+        <HKG>逾時事項</HKG>
+        <JPN>Delay</JPN>
+        <LAN1>Delay</LAN1>
+        <LAN2>Delay</LAN2>
+        <LAN3>Delay</LAN3>
+      </DelayText>
+
+
+
+      <FLOW_DESC>
+        <ENG>flow</ENG>
+        <TRA>流程</TRA>
+        <SIM>流程</SIM>
+        <HKG>流程</HKG>
+        <JPN>flow</JPN>
+        <LAN1>flow</LAN1>
+        <LAN2>flow</LAN2>
+        <LAN3>flow</LAN3>
+      </FLOW_DESC>
+      <S_STEP_ID>
+        <ENG>work name</ENG>
+        <TRA>作業名稱</TRA>
+        <SIM>作业名称</SIM>
+        <HKG>作業名稱</HKG>
+        <JPN>work name</JPN>
+        <LAN1>work name</LAN1>
+        <LAN2>work name</LAN2>
+        <LAN3>work name</LAN3>
+      </S_STEP_ID>
+      <D_STEP_ID>
+        <ENG>work name</ENG>
+        <TRA>作業名稱</TRA>
+        <SIM>作业名称</SIM>
+        <HKG>作業名稱</HKG>
+        <JPN>work name</JPN>
+        <LAN1>work name</LAN1>
+        <LAN2>work name</LAN2>
+        <LAN3>work name</LAN3>
+      </D_STEP_ID>
+      <USERNAME>
+        <ENG>sender</ENG>
+        <TRA>寄件者</TRA>
+        <SIM>寄件者</SIM>
+        <HKG>寄件者</HKG>
+        <JPN>sender</JPN>
+        <LAN1>sender</LAN1>
+        <LAN2>sender</LAN2>
+        <LAN3>sender</LAN3>
+      </USERNAME>
+      <SENDTO_NAME>
+        <ENG>send to</ENG>
+        <TRA>经办者</TRA>
+        <SIM>单据查询</SIM>
+        <HKG>經辦者</HKG>
+        <JPN>send to</JPN>
+        <LAN1>send to</LAN1>
+        <LAN2>send to</LAN2>
+        <LAN3>send to</LAN3>
+      </SENDTO_NAME>
+      <STATUS>
+        <ENG>status</ENG>
+        <TRA>情況</TRA>
+        <SIM>情況</SIM>
+        <HKG>情況</HKG>
+        <JPN>status</JPN>
+        <LAN1>status</LAN1>
+        <LAN2>status</LAN2>
+        <LAN3>status</LAN3>
+      </STATUS>
+      <FORM_PRESENT_CT>
+        <ENG>flow condition</ENG>
+        <TRA>單據號碼</TRA>
+        <SIM>单据号码</SIM>
+        <HKG>單據號碼</HKG>
+        <JPN>flow condition</JPN>
+        <LAN1>flow condition</LAN1>
+        <LAN2>flow condition</LAN2>
+        <LAN3>flow condition</LAN3>
+      </FORM_PRESENT_CT>
+      <REMARK>
+        <ENG>infomation</ENG>
+        <TRA>訊息</TRA>
+        <SIM>讯息</SIM>
+        <HKG>訊息</HKG>
+        <JPN>infomation</JPN>
+        <LAN1>infomation</LAN1>
+        <LAN2>infomation</LAN2>
+        <LAN3>infomation</LAN3>
+      </REMARK>
+      <UPDATE_WHOLE_TIME>
+        <ENG>update date</ENG>
+        <TRA>日期</TRA>
+        <SIM>日期</SIM>
+        <HKG>日期</HKG>
+        <JPN>update date</JPN>
+        <LAN1>update date</LAN1>
+        <LAN2>update date</LAN2>
+        <LAN3>update date</LAN3>
+      </UPDATE_WHOLE_TIME>
+
+
+    </info-flow>
+    <info-datagrid>
+      <insertText>
+        <ENG>Insert</ENG>
+        <TRA>新增</TRA>
+        <SIM>新增</SIM>
+        <HKG>新增</HKG>
+        <JPN>Insert</JPN>
+        <LAN1>Insert</LAN1>
+        <LAN2>Insert</LAN2>
+        <LAN3>Insert</LAN3>
+      </insertText>
+      <updateText>
+        <ENG>Update</ENG>
+        <TRA>更改</TRA>
+        <SIM>更改</SIM>
+        <HKG>更改</HKG>
+        <JPN>Update</JPN>
+        <LAN1>Update</LAN1>
+        <LAN2>Update</LAN2>
+        <LAN3>Update</LAN3>
+      </updateText>
+      <deleteText>
+        <ENG>Delete</ENG>
+        <TRA>刪除</TRA>
+        <SIM>删除</SIM>
+        <HKG>刪除</HKG>
+        <JPN>Delete</JPN>
+        <LAN1>Delete</LAN1>
+        <LAN2>Delete</LAN2>
+        <LAN3>Delete</LAN3>
+      </deleteText>
+      <detailText>
+        <ENG>Detail</ENG>
+        <TRA>明细</TRA>
+        <SIM>明细</SIM>
+        <HKG>明细</HKG>
+        <JPN>Detail</JPN>
+        <LAN1>Detail</LAN1>
+        <LAN2>Detail</LAN2>
+        <LAN3>Detail</LAN3>
+      </detailText>
+      <viewText>
+        <ENG>View</ENG>
+        <TRA>檢視</TRA>
+        <SIM>检视</SIM>
+        <HKG>檢視</HKG>
+        <JPN>View</JPN>
+        <LAN1>View</LAN1>
+        <LAN2>View</LAN2>
+        <LAN3>View</LAN3>
+      </viewText>
+      <previousPageText>
+        <ENG>Previous page</ENG>
+        <TRA>上一頁</TRA>
+        <SIM>上一页</SIM>
+        <HKG>上一頁</HKG>
+        <JPN>Previous page</JPN>
+        <LAN1>Previous page</LAN1>
+        <LAN2>Previous page</LAN2>
+        <LAN3>Previous page</LAN3>
+      </previousPageText>
+      <nextPageText>
+        <ENG>Next page</ENG>
+        <TRA>下一頁</TRA>
+        <SIM>下一页</SIM>
+        <HKG>下一頁</HKG>
+        <JPN>Next page</JPN>
+        <LAN1>Next page</LAN1>
+        <LAN2>Next page</LAN2>
+        <LAN3>Next page</LAN3>
+      </nextPageText>
+      <queryText>
+        <ENG>Query</ENG>
+        <TRA>查詢</TRA>
+        <SIM>查询</SIM>
+        <HKG>查詢</HKG>
+        <JPN>Query</JPN>
+        <LAN1>Query</LAN1>
+        <LAN2>Query</LAN2>
+        <LAN3>Query</LAN3>
+      </queryText>
+      <refreshText>
+        <ENG>Refresh</ENG>
+        <TRA>重新整理</TRA>
+        <SIM>刷新</SIM>
+        <HKG>重新整理</HKG>
+        <JPN>Refresh</JPN>
+        <LAN1>Refresh</LAN1>
+        <LAN2>Refresh</LAN2>
+        <LAN3>Refresh</LAN3>
+      </refreshText>
+      <backText>
+        <ENG>Back</ENG>
+        <TRA>返回</TRA>
+        <SIM>返回</SIM>
+        <HKG>返回</HKG>
+        <JPN>Back</JPN>
+        <LAN1>Back</LAN1>
+        <LAN2>Back</LAN2>
+        <LAN3>Back</LAN3>
+      </backText>
+      <confirmDeleteText>
+        <ENG>Sure to delete data?</ENG>
+        <TRA>確認刪除資料?</TRA>
+        <SIM>确认删除数据?</SIM>
+        <HKG>確認刪除資料?</HKG>
+        <JPN>Sure to delete data?</JPN>
+        <LAN1>Sure to delete data?</LAN1>
+        <LAN2>Sure to delete data?</LAN2>
+        <LAN3>Sure to delete data?</LAN3>
+      </confirmDeleteText>
+      <loadingMessage>
+        <ENG>Loading data</ENG>
+        <TRA>載入資料</TRA>
+        <SIM>加载数据</SIM>
+        <HKG>載入資料</HKG>
+        <JPN>Loading data</JPN>
+        <LAN1>Loading data</LAN1>
+        <LAN2>Loading data</LAN2>
+        <LAN3>Loading data</LAN3>
+      </loadingMessage>
+      <updatingMessage>
+        <ENG>Updating data</ENG>
+        <TRA>更新資料</TRA>
+        <SIM>更新数据</SIM>
+        <HKG>更新資料</HKG>
+        <JPN>Updating data</JPN>
+        <LAN1>Updating data</LAN1>
+        <LAN2>Updating data</LAN2>
+        <LAN3>Updating data</LAN3>
+      </updatingMessage>
+    </info-datagrid>
+    <info-form>
+      <okText>
+        <ENG>OK</ENG>
+        <TRA>確定</TRA>
+        <SIM>确定</SIM>
+        <HKG>確定</HKG>
+        <JPN>OK</JPN>
+        <LAN1>OK</LAN1>
+        <LAN2>OK</LAN2>
+        <LAN3>OK</LAN3>
+      </okText>
+      <cancelText>
+        <ENG>Cancel</ENG>
+        <TRA>取消</TRA>
+        <SIM>取消</SIM>
+        <HKG>取消</HKG>
+        <JPN>Cancel</JPN>
+        <LAN1>Cancel</LAN1>
+        <LAN2>Cancel</LAN2>
+        <LAN3>Cancel</LAN3>
+      </cancelText>
+      <updatingMessage>
+        <ENG>Updating data</ENG>
+        <TRA>更新資料</TRA>
+        <SIM>更新数据</SIM>
+        <HKG>更新資料</HKG>
+        <JPN>Updating data</JPN>
+        <LAN1>Updating data</LAN1>
+        <LAN2>Updating data</LAN2>
+        <LAN3>Updating data</LAN3>
+      </updatingMessage>
+      <updateFailMessage>
+        <ENG>Update data failed.</ENG>
+        <TRA>更新資料失敗。</TRA>
+        <SIM>更新数据失败。</SIM>
+        <HKG>更新資料失敗。</HKG>
+        <JPN>Update data failed.</JPN>
+        <LAN1>Update data failed.</LAN1>
+        <LAN2>Update data failed.</LAN2>
+        <LAN3>Update data failed.</LAN3>
+      </updateFailMessage>
+      <updateSuccessMessage>
+        <ENG>Update data successed.</ENG>
+        <TRA>更新資料成功。</TRA>
+        <SIM>更新数据成功。</SIM>
+        <HKG>更新資料成功。</HKG>
+        <JPN>Update data successed.</JPN>
+        <LAN1>Update data successed.</LAN1>
+        <LAN2>Update data successed.</LAN2>
+        <LAN3>Update data successed.</LAN3>
+      </updateSuccessMessage>
+      <notUpdateMessage>
+        <ENG>You have to save the record first.</ENG>
+        <TRA>請先對資料存檔。</TRA>
+        <SIM>必须存档才能提交。</SIM>
+        <HKG>請先對資料存檔。</HKG>
+        <JPN>You have to save the record first.</JPN>
+        <LAN1>You have to save the record first.</LAN1>
+        <LAN2>You have to save the record first.</LAN2>
+        <LAN3>You have to save the record first.</LAN3>
+      </notUpdateMessage>
+    </info-form>
+    <info-query>
+      <clearText>
+        <ENG>Clear</ENG>
+        <TRA>清除</TRA>
+        <SIM>清除</SIM>
+        <HKG>清除</HKG>
+        <JPN>Clear</JPN>
+        <LAN1>Clear</LAN1>
+        <LAN2>Clear</LAN2>
+        <LAN3>Clear</LAN3>
+      </clearText>
+    </info-query>
+    <info-validate>
+      <valueNotNullMessage>
+        <ENG> can not be empty</ENG>
+        <TRA>的值不能空白</TRA>
+        <SIM>的值不能为空</SIM>
+        <HKG>的值不能空白</HKG>
+        <JPN> can not be empty</JPN>
+        <LAN1> can not be empty</LAN1>
+        <LAN2> can not be empty</LAN2>
+        <LAN3> can not be empty</LAN3>
+      </valueNotNullMessage>
+      <valueNotLessThanMessage>
+        <ENG> should be less than </ENG>
+        <TRA>的值應該小於</TRA>
+        <SIM>的值应该小于</SIM>
+        <HKG>的值應該小於</HKG>
+        <JPN> should be less than </JPN>
+        <LAN1> should be less than </LAN1>
+        <LAN2> should be less than </LAN2>
+        <LAN3> should be less than </LAN3>
+      </valueNotLessThanMessage>
+      <valueNotGreaterThanMessage>
+        <ENG> should be greater than </ENG>
+        <TRA>的值應該大於</TRA>
+        <SIM>的值應該大于</SIM>
+        <HKG>的值應該大於</HKG>
+        <JPN> should be greater than </JPN>
+        <LAN1> should be greater than </LAN1>
+        <LAN2> should be greater than </LAN2>
+        <LAN3> should be greater than </LAN3>
+      </valueNotGreaterThanMessage>
+      <valueNotInRangeMessage>
+        <ENG> is not in range</ENG>
+        <TRA>不在合法的範圍內</TRA>
+        <SIM>不在合法的范围内</SIM>
+        <HKG>不在合法的範圍內</HKG>
+        <JPN> is not in range</JPN>
+        <LAN1> is not in range</LAN1>
+        <LAN2> is not in range</LAN2>
+        <LAN3> is not in range</LAN3>
+      </valueNotInRangeMessage>
+      <valueDuplicateMessage>
+        <ENG>record already exist in database</ENG>
+        <TRA>這筆資料已經存在</TRA>
+        <SIM>这笔数据已经存在</SIM>
+        <HKG>這筆資料已經存在</HKG>
+        <JPN>record already exist in database</JPN>
+        <LAN1>record already exist in database</LAN1>
+        <LAN2>record already exist in database</LAN2>
+        <LAN3>record already exist in database</LAN3>
+      </valueDuplicateMessage>
+      <valueNotidCardMessage>
+        <ENG>Identity id entered is not allowed</ENG>
+        <TRA>輸入的身份證信息有誤</TRA>
+        <SIM>输入的身份证信息有误</SIM>
+        <HKG>輸入的身份證信息有誤</HKG>
+        <JPN>Identity id entered is not allowed</JPN>
+        <LAN1>Identity id entered is not allowed</LAN1>
+        <LAN2>Identity id entered is not allowed</LAN2>
+        <LAN3>Identity id entered is not allowed</LAN3>
+      </valueNotidCardMessage>
+      <valueNotUrlMessage>
+        <ENG>The url address entered is not allowed</ENG>
+        <TRA>輸入的url地址不正確</TRA>
+        <SIM>输入的url地址不正确</SIM>
+        <HKG>輸入的url地址不正確</HKG>
+        <JPN>The url address entered is not allowed</JPN>
+        <LAN1>The url address entered is not allowed</LAN1>
+        <LAN2>The url address entered is not allowed</LAN2>
+        <LAN3>The url address entered is not allowed</LAN3>
+      </valueNotUrlMessage>
+      <valueNotemailMessage>
+        <ENG>The e-mail address entered is not allowed</ENG>
+        <TRA>輸入的信箱地址不正確</TRA>
+        <SIM>输入的信箱地址不正确</SIM>
+        <HKG>輸入的信箱地址不正確</HKG>
+        <JPN>The e-mail address entered is not allowed</JPN>
+        <LAN1>The e-mail address entered is not allowed</LAN1>
+        <LAN2>The e-mail address entered is not allowed</LAN2>
+        <LAN3>The e-mail address entered is not allowed</LAN3>
+      </valueNotemailMessage>
+    </info-validate>
+    <info-file>
+      <uploadingMessage>
+        <ENG>Uploading file</ENG>
+        <TRA>正在上傳文檔</TRA>
+        <SIM>正在上传文件</SIM>
+        <HKG>正在上傳文檔</HKG>
+        <JPN>Uploading file</JPN>
+        <LAN1>Uploading file</LAN1>
+        <LAN2>Uploading file</LAN2>
+        <LAN3>Uploading file</LAN3>
+      </uploadingMessage>
+      <ExtensionNotMatchMessage>
+        <ENG>File does not have extension in</ENG>
+        <TRA>文件必須是以下擴展名</TRA>
+        <SIM>文件必须是以下后缀名</SIM>
+        <HKG>文件必須是以下擴展名</HKG>
+        <JPN>File does not have extension in</JPN>
+        <LAN1>File does not have extension in</LAN1>
+        <LAN2>File does not have extension in</LAN2>
+        <LAN3>File does not have extension in</LAN3>
+      </ExtensionNotMatchMessage>
+    </info-file>
+    <!-- 以上为jqmobile部分 -->
+  </JQWebClient>
+
+</SystemMessage>

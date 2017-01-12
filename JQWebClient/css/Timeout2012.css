@@ -1,0 +1,55 @@
+﻿/**/
+/*页面主体样式*/
+body
+{
+	font-family:Microsoft JhengHei;
+	font-size:9pt;
+	background-color: #405765;
+	background-image:url(../Image/Logon2012/BG.jpg);
+	background-repeat:repeat-x;
+}
+
+/*主div样式*/
+#inhalt
+{
+	position:absolute;
+	width:480px;
+	height:340px;
+	margin-top:-240px;
+	margin-left:-170px;
+	top: 50%;
+	left: 50%;
+	text-align: left;
+	padding: 0px;
+	border: 0px solid #000000;
+	overflow:auto;
+}
+
+/*主table样式*/
+#tab_container
+{
+	width:460px;
+	height:330px;
+}
+
+/*header样式*/
+#header
+{
+	font-size: 10pt; 
+	font-weight: bold; 
+	color: #ff0000;
+	text-align:center;
+}
+
+/*内容样式*/
+#content
+{
+	 text-align:center;
+}
+
+/*footer样式*/
+#footer
+{
+	 font-weight: bold;
+	 text-align:center;
+}

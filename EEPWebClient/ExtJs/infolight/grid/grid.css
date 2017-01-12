@@ -1,0 +1,36 @@
+﻿.quid_grid_button
+{
+	border: 3px double #99bbe8; 
+	font-size: 12px; 
+	padding: 2px; 
+	cursor: hand; 
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#daeffa, EndColorStr=#cbddf3);
+}
+
+.quid_grid_expandtab
+{
+	width:100%;
+	border:dashed 1px #ffffff;
+	background-color:#cccccc;
+	table-layout:auto !important;
+}
+
+/*.quid_grid_expandtab td
+{
+	border:solid 1px black;
+}*/
+
+.quid_grid_nowarptd
+{
+	width:1px;
+	background-color:#fcf7d7;
+	padding: 2px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#fcf7d7, EndColorStr=#ffffff);
+}
+
+.quid_grid_contenttd
+{
+	background-color:#f7fcd7;
+	padding: 2px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#f7fcd7, EndColorStr=#ffffff);
+}

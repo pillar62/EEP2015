@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<push_notification>
+  <item>
+    <name>Apple Push Notification</name>
+    <p12_file_path>infolight.eep2015.p12</p12_file_path>
+    <p12_file_password>23449699</p12_file_password>
+    <apn_acvive>true</apn_acvive>
+    <apn_type>debug</apn_type>
+    <description>
+      Apple Push Notification Config
+    </description>
+  </item>
+  <item>
+    <name>Google Cloud Messaging</name>
+    <sender_id>974405994118</sender_id>
+    <server_api_key>AIzaSyBxzMQ7cxFAT74sE0alciq7aFKN2CTaNmg</server_api_key>
+    <gcm_active>true</gcm_active>
+    <description>
+      Google Cloud Messaging Config
+    </description>
+  </item>
+</push_notification>

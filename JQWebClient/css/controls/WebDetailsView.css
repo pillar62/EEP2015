@@ -1,0 +1,42 @@
+﻿/*detailsview的外观样式*/
+.detailsview_1
+{
+	font-family: Microsoft JhengHei;
+	font-size: 9pt;
+	filter:progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);
+}
+
+/*detailsview的header样式*/
+.detailsview_header_1
+{
+	/*background-image:url('../../Image/ControlImage/detlHeader1.png');
+	background-repeat:repeat-x;*/
+}
+
+/*detailsview的row样式*/
+.detailsview_row_1
+{
+	background-image:url('../../Image/ControlImage/detlRow1.png');
+	background-repeat:repeat-x;
+}
+
+/*detailsview的altrow样式*/
+.detailsview_altrow_1
+{
+	background-image:url('../../Image/ControlImage/detlAltRow1.png');
+	background-repeat:repeat-x;
+}
+
+/*detailsview的footer样式*/
+.detailsview_footer_1
+{
+	background-image:url('../../Image/ControlImage/detlFooter1.png');
+	background-repeat:repeat-x;
+}
+
+/*detailsview的pager样式*/
+.detailsview_pager_1
+{
+	background-image:url('../../Image/ControlImage/detlPager1.png');
+	background-repeat:repeat-x;
+}

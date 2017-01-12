@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Alphabetical" MembersFormat="NameAndType">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="OfficeTools.ExcelPlate" Collapsed="true">
+    <Position X="7.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ExcelPlate.cs</FileName>
+      <HashCode>CAAAAAAABAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.ExpressionEditor" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>OfficePlate.cs</FileName>
+      <HashCode>AAAAAAAAAgAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.OfficePlate" Collapsed="true">
+    <Position X="6.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>OfficePlate.cs</FileName>
+      <HashCode>gEASBAEAgAAAAgQAHAAKAyAEQAAgAEARhAhAAgAMCAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OfficeTools.TagCollections" Collapsed="true">
+    <Position X="18" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>OfficePlate.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.TagItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>OfficePlate.cs</FileName>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAAEgABAAAAAAgABAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.DataSourceCollections" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>OfficePlate.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.DataSourceItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>OfficePlate.cs</FileName>
+      <HashCode>AEAAAAAAIAAAAoAAAAAQAAQEAAAAACAACAACAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.95" Collapsed="true" />
+  </Class>
+  <Class Name="OfficeTools.PathEditor" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>OfficePlate.cs</FileName>
+      <HashCode>AAAAAAAAAgAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.WordPlate" Collapsed="true">
+    <Position X="5.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>WordPlate.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.Automation" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Automation.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAQAIAAABAAAAAAAAAAAAAAAAAJI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.Expression" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Automation.cs</FileName>
+      <HashCode>AAAAAAAAABAAAIAAAAFAAAAAAACAAAAAAAAQAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.ReversePN" Collapsed="true">
+    <Position X="16.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Automation.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAIAAAAAQAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.ExcelExport" Collapsed="true">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AdditionalTools.cs</FileName>
+      <HashCode>AAAEAAAAFAAAAAAACIQCBgAEAAAAAAYAAAAAIgBAAAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.OfficeKiller" Collapsed="true">
+    <Position X="16.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AdditionalTools.cs</FileName>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.OfficeAutomation" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>OfficeAutomation.cs</FileName>
+      <HashCode>AAAAAAAAgAAAQAAgAQAAgAMAAQgAAEyAAAAAAAlAgAI=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.7" />
+  </Class>
+  <Class Name="OfficeTools.ExcelAutomationXml" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>ExcelAutomation.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.ExcelAutomationCom" Collapsed="true">
+    <Position X="8.25" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>ExcelAutomation.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAEAAAAAAAAAAAAAAAAM=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.WordAutomationXml" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>WordAutomation.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.WordAutomationCom" Collapsed="true">
+    <Position X="3.25" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <FileName>WordAutomation.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAEAAAAAAAAAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.OfficePlateDesigner" Collapsed="true">
+    <Position X="18" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>OfficePlate.cs</FileName>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.PlateLog" Collapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PlateLog.cs</FileName>
+      <HashCode>AAAAAAAAIEAAAAAAAAAAAAEAAAAAAAEIAAAAAAQAAAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.Properties.Resources" Collapsed="true">
+    <Position X="14.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIAgAAhAQBAAAFwAgiBEAAQEQBAgGAACAUIAgIBAoM=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.WebOfficePlate" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>WebOfficePlate.cs</FileName>
+      <HashCode>gEASBAEAgAAAAgAACAAKAyBGQCAgAEAQhAhAAgAMCAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="OfficeTools.WebDataSourceCollections" Collapsed="true">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>WebOfficePlate.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.WebDataSourceItem" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>WebOfficePlate.cs</FileName>
+      <HashCode>AAAAAAAAIAAAAAAAAABQAAQAEAAAACAACAACAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="OfficeTools.WebExcelPlate" Collapsed="true">
+    <Position X="2.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>WebExcelPlate.cs</FileName>
+      <HashCode>CAAAAAAABAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.WebWordPlate" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>WebWordPlate.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.ExcelReader" Collapsed="true">
+    <Position X="18" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>AdditionalTools.cs</FileName>
+      <HashCode>AAQAAgAAAAIAAAAAAAACgAAgAAAAAAcAAAAAIghAAAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.Design.frmValue" Collapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Design\frmValue.cs</FileName>
+      <HashCode>AAAACABEECAQAJEAMACQAACCECQAIEABAkQIAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.RunTime.frmProgress" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>RunTime\frmProgress.cs</FileName>
+      <HashCode>AAQABAkQACCAAAEAAACAAEACAAAAEABAAAAAEQAAQAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.Design.frmDataMember" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Design\frmDataMember.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAEAQACAAAACAAAAAEAAAAAAAIAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.Design.frmDesigner" Collapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Design\frmDesigner.cs</FileName>
+      <HashCode>IIEugCEyACUgALEHDJyeIAEDoioSDAgcPaEEmEEWRkE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.RunTime.frmEmail" Collapsed="true">
+    <Position X="18" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>RunTime\frmEmail.cs</FileName>
+      <HashCode>AAAAAIJSQTQIAAAIgACaAhQSmAQBAFAJIAgAgSAEQQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OfficeTools.RunTime.frmOutputMode" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>RunTime\frmOutputMode.cs</FileName>
+      <HashCode>AAAAAAABACAAABEAAACAAAACAAAAAEAAAAAAAAAAAAI=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="IGetValues" Collapsed="true">
+    <Position X="12.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="OfficeTools.IAutomation" Collapsed="true">
+    <Position X="11" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>OfficeAutomation.cs</FileName>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAgAI=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="OfficeTools.IOfficePlate" Collapsed="true">
+    <Position X="14.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>IOfficePlate.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAgAAAAAIAAAAAAAgAEAABAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="OfficeTools.PlateException" Collapsed="true">
+    <Position X="11" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>PlateLog.cs</FileName>
+      <HashCode>IAAIAAAAAAAAACAAQAAAAAAEAAAEAAAUAAAAAAGBAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="OfficeTools.PlateModeType" Collapsed="true">
+    <Position X="12.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>IOfficePlate.cs</FileName>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Enum>
+</ClassDiagram>

@@ -1,0 +1,255 @@
+﻿/**/
+/*页面主体样式*/
+body
+{
+	font-family:Microsoft JhengHei;
+	font-size: 9pt;
+	background-color: #405765;
+	background-image:url(../Image/main/bg.jpg);
+	background-repeat: repeat-x;
+
+	scrollbar-base-color:#698BCA; 
+	scrollbar-face-color:#698BCA; 
+	scrollbar-track-color:#FEFEFE; 
+	scrollbar-arrow-color:#FFFFFF; 
+	scrollbar-3dlight-color:#698BCA; 
+	scrollbar-highlight-color:#FFFFFF; 
+	scrollbar-shadow-color:#FEFEFE; 
+	scrollbar-darkshadow-color:#698BCA;
+}
+
+/*.slPlugin
+{
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    width: 100%;
+}*/
+
+/*满宽度table样式*/
+.fullWidthTable
+{
+	width:100%;
+	margin:3px 0px 3px 0px;
+}
+
+/*所有左边区域样式*/
+.leftPart
+{
+	width:224px;
+}
+
+/*左边区域内边框div的container样式*/
+#leftframeContainer
+{
+	vertical-align:top;
+}
+
+/*左边区域内边框div样式*/
+#leftframe
+{
+    background-color: #255D8D;
+	border: solid 1px #86A8C4;
+	padding:2px 2px 2px 2px;
+}
+
+/*边缘隔离div*/
+.marginContent
+{
+	width:10px;
+}
+
+/*favorite和solution的image样式*/
+.buttonImg
+{
+	position:relative;
+	top:-3;
+	height:25px;
+}
+
+/*header区域样式*/
+#headerLogo
+{
+	background-image: url('../Image/Main/banner.jpg');
+	background-repeat:no-repeat;
+	width:100%;
+	height: 75px;
+	text-align:right;
+}
+
+/*header区域背景样式*/
+#headerLogo_bg
+{
+	width: 100%;
+	height: 75px;
+	background-image: url('../Image/Main/banner_bg.jpg');
+	background-repeat: repeat-x;
+}
+
+/*左边框上边缘样式*/
+#topContent
+{
+	/*background-image: url(../Image/main/content_bg.png);*/
+	width: 100%;
+	height: 18px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#255D8D', endColorStr='#2A6FA9', gradientType='1');
+}
+
+/*左边框中间缘样式*/
+#middleContent
+{
+	/*background-image: url(../Image/main/content_bg.png);*/
+	width: 100%;
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#255D8D', endColorStr='#2A6FA9', gradientType='1');
+}
+
+/*favorite的textbox样式*/
+#tbCaption
+{
+	width:152px;
+}
+
+/*go按钮container样式*/
+#goContainer
+{
+	width:30px;
+	height:27px;
+	background-image: url(../Image/main/go.gif);
+	background-repeat:no-repeat;
+}
+
+/*solution的dropdownlist样式*/
+#ddlSolution
+{
+	width:181px;
+}
+
+/*左边框下边缘样式*/
+#footContent
+{
+	/*background-image: url(../Image/main/content_bg.png);*/
+	width: 100%;
+	height: 60px;  
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#255D8D', endColorStr='#2A6FA9', gradientType='1');
+}
+
+/*change password按钮container样式*/
+#changePasswordContainer
+{
+	padding:5px;
+}
+
+/*log out按钮container样式*/
+#logOutContainer
+{
+	padding:5px;
+}
+
+/*鼠标离开按钮时，按钮的样式*/
+.btn_mouseout
+{
+    border: 1px solid #286699;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-size: 12px;
+    background-color:#95c3e9;
+    background-image: url(../Image/main/emptybtn.png);
+    background-repeat: repeat-x;
+}
+
+/*鼠标移动到按钮上时，按钮的样式*/
+.btn_mouseover
+{
+    border: 1px solid #051723;
+    width: 60px;
+    height: 24px;
+    cursor: hand;
+    color: white;
+    font-size: 12px;
+    background-color:#64757f;
+    background-image: url(../Image/main/emptybtn_over.png);
+    background-repeat: repeat-x;
+}
+
+/*change password和log out按钮左边框样式*/
+#marginContent1
+{
+	width:48px;
+}
+
+/*change password和log out按钮右边框样式*/
+#marginContent2
+{
+	width:28px;
+}
+
+/*左右缩进分割区域样式*/
+#split
+{
+	width: 10px;
+	vertical-align:top;
+}
+
+/*主页面frame样式*/
+#mainframe
+{
+	vertical-align:top;
+	width: 100%;	
+}
+
+#footerLeft
+{
+	background-image: url(../Image/main/footer_left.jpg);
+	background-repeat:no-repeat;
+	width:80px;
+	height:42px;
+}
+
+#footerMiddle
+{
+	background-image: url(../Image/main/footer_middle.jpg);
+	background-repeat:repeat-x;
+	height:42px;
+}
+
+#footerRight
+{
+	background-image: url(../Image/main/footer_right.jpg);
+	background-repeat:no-repeat;
+	width:477px;
+	height:42px;
+}
+
+/*webClientMainFlow*/
+
+/*右边框container样式*/
+#rightframeContainer
+{
+	vertical-align:top;
+	width: 100%;	
+}
+
+/*右边框样式*/
+#rightframe
+{
+	width: 99.7%;	
+}
+
+/*用於每個也沒Navigator所在td样式*/
+#NavigatorContent
+{
+	width: 100%;
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#8DB2E6', endColorStr='#DCEBFD', gradientType='1');
+}
+
+/*用於Menu設定的td样式*/
+#MenuCotent
+{
+	width:100%;
+	border: #E7ECF0 1px solid;
+	padding: 2px 2px 2px 2px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr=#DCEBFD, EndColorStr=#8DB2E6)
+	progid:DXImageTransform.Microsoft.Shadow(Color=#000000,Direction=120,strength=3);
+}

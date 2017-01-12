@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c2a21827-4c0a-4cac-bb12-b342d160897d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8990/EFWCFModule/EFService" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EFService.wsdl" MetadataType="Wsdl" ID="5bedd640-6cd9-44cf-9139-9fcd1694b66b" SourceId="1" SourceUrl="http://localhost:8990/EFWCFModule/EFService?wsdl" />
+    <MetadataFile FileName="EFService.xsd" MetadataType="Schema" ID="72fcbc3c-9777-4066-a2d5-8593eb25c8d9" SourceId="1" SourceUrl="http://localhost:8990/EFWCFModule/EFService?xsd=xsd0" />
+    <MetadataFile FileName="EFService1.xsd" MetadataType="Schema" ID="e42220d9-286b-42c4-9d7b-045a1d3095f2" SourceId="1" SourceUrl="http://localhost:8990/EFWCFModule/EFService?xsd=xsd2" />
+    <MetadataFile FileName="EFService2.xsd" MetadataType="Schema" ID="8e956ed4-8c5e-4386-abc8-073ca9191823" SourceId="1" SourceUrl="http://localhost:8990/EFWCFModule/EFService?xsd=xsd4" />
+    <MetadataFile FileName="EFService.disco" MetadataType="Disco" ID="176fb7e3-01fa-468b-be8c-f2c8ef8af0c3" SourceId="1" SourceUrl="http://localhost:8990/EFWCFModule/EFService?disco" />
+    <MetadataFile FileName="EFService3.xsd" MetadataType="Schema" ID="09507eae-5dcc-4247-a1c0-571ebe96842c" SourceId="1" SourceUrl="http://localhost:8990/EFWCFModule/EFService?xsd=xsd6" />
+    <MetadataFile FileName="EFService4.xsd" MetadataType="Schema" ID="6f57ee53-0110-4868-908f-d7f164ec8558" SourceId="1" SourceUrl="http://localhost:8990/EFWCFModule/EFService?xsd=xsd1" />
+    <MetadataFile FileName="EFService5.xsd" MetadataType="Schema" ID="1feed833-e452-4b23-a712-e9d9f94079ae" SourceId="1" SourceUrl="http://localhost:8990/EFWCFModule/EFService?xsd=xsd5" />
+    <MetadataFile FileName="EFService6.xsd" MetadataType="Schema" ID="08b240a3-f7f2-4533-b59e-eed9b69b47fd" SourceId="1" SourceUrl="http://localhost:8990/EFWCFModule/EFService?xsd=xsd3" />
+    <MetadataFile FileName="EFService1.wsdl" MetadataType="Wsdl" ID="4fa9ba9f-31cf-40eb-bba0-e5d81ceb0217" SourceId="1" SourceUrl="http://localhost:8990/EFWCFModule/EFService?wsdl=wsdl0" />
+    <MetadataFile FileName="EFService7.xsd" MetadataType="Schema" ID="46d31388-3359-4dd7-89ac-02290cf91c36" SourceId="1" SourceUrl="http://localhost:8990/EFWCFModule/EFService?xsd=xsd7" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

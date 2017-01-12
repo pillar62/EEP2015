@@ -1,0 +1,70 @@
+﻿body 
+{
+	background-color:#405765;
+	background-position: top;
+	background-repeat: repeat-x;
+    background-image: url('../Image/Login/bigbg.jpg');
+}
+ .style1
+{
+    border-color: #4F6269;
+    border-width: 1px;
+    background-color: #D4E9EE;
+    background-image: url('../Image/Login/login_mid_bg.jpg');
+    background-repeat: repeat-x;
+    width: 546px; 
+    height: 210px;
+}
+ .control
+{
+    background-color: #D4E9EE;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #4F6269;
+    font-size: 12px;
+    color: #333333;
+    width: 250px;
+    height: 21px;
+    line-height: 21px;
+}
+ .maintable
+ {
+     border-width: 0px; 
+     width: 546px;
+     height: 100%;
+     border-collapse: collapse;
+     border-color: #001824;
+ }
+  .login_top
+  {
+      background-image: url('../Image/Login/login_top.jpg'); 
+      width: 548px;
+      height: 89px;
+      background-repeat: no-repeat; 
+      z-index: auto;
+  }
+   .login_bot_fanti
+   {
+       background-image: url('../Image/Login/login_bot_bg_fanti.jpg');
+       background-repeat: no-repeat;
+       width: 546px;
+       height: 90px;
+   }
+   .lab
+   {
+       font-size:10pt;
+       font-family:Arial;
+       font-weight:bold;
+       color:#001824;
+   }
+    .cbx
+    {
+        font-family:Arial;
+        font-weight:bold;
+        font-size:10pt;
+    }
+     .fullcontainertable
+     {
+         width:100%;
+     }
+  
