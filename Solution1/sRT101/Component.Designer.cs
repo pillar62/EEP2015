@@ -585,7 +585,7 @@
             this.ucRTLessorAVSCmtyH.FieldAttrs.Add(fieldAttr50);
             this.ucRTLessorAVSCmtyH.FieldAttrs.Add(fieldAttr51);
             this.ucRTLessorAVSCmtyH.LogInfo = null;
-            this.ucRTLessorAVSCmtyH.Name = null;
+            this.ucRTLessorAVSCmtyH.Name = "ucRTLessorAVSCmtyH";
             this.ucRTLessorAVSCmtyH.RowAffectsCheck = true;
             this.ucRTLessorAVSCmtyH.SelectCmd = this.RTLessorAVSCmtyH;
             this.ucRTLessorAVSCmtyH.SelectCmdForUpdate = null;
