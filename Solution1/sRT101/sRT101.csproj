@@ -60,6 +60,9 @@
     <EmbeddedResource Include="Component.resx">
       <DependentUpon>Component.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Component.vi-VN.resx">
+      <DependentUpon>Component.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
