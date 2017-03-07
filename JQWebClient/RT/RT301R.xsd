@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="RT301R" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="RT301R" msdata:IsDataSet="true" msdata:CaseSensitive="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_RTLessorAVSCase">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CASEID" type="xs:decimal" />
+              <xs:element name="CASENAME" type="xs:string" minOccurs="0" />
+              <xs:element name="STARTDAT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ENDDAT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CRTUSR" type="xs:string" minOccurs="0" />
+              <xs:element name="MEMO" type="xs:string" minOccurs="0" />
+              <xs:element name="EUSR" type="xs:string" minOccurs="0" />
+              <xs:element name="EDAT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UUSR" type="xs:string" minOccurs="0" />
+              <xs:element name="UDAT" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//View_RTLessorAVSCase" />
+      <xs:field xpath="CASEID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

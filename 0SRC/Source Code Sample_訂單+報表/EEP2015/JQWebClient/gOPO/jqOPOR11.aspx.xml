@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Infolight>
+  <MultiLanguage language="EN;CHT;CHS" />
+  <EN>
+    <Language field="JQScriptManager1.ToolTip" value="" />
+    <Language field="JQDialogTempSelect.Title" value="Select Report" />
+    <Language field="btMultiQuery.Text" value="Query" />
+    <Language field="lbBILLDATE1.Text" value="日期區間：" />
+    <Language field="lbBILLDATE2.Text" value="～" />
+    <Language field="lbBILLNO1.Text" value="單號區間：" />
+    <Language field="lbBILLNO2.Text" value="～" />
+    <Language field="btOpenIDNO.Text" value="客戶區間：" />
+    <Language field="lbIDNO2.Text" value="～" />
+    <Language field="btOpenPRODUCTID.Text" value="產品區間：" />
+    <Language field="lbPRODUCTID2.Text" value="～" />
+    <Language field="btOpenPERSONID.Text" value="人員區間：" />
+    <Language field="lbPERSONID2.Text" value="～" />
+    <Language field="lbONHANDDATE1.Text" value="預交日區間：" />
+    <Language field="lbONHANDDATE2.Text" value="～" />
+
+    <Language field="IDNO1Query.inforefval.title" value="Customer Query" />
+    <Language field="IDNO2Query.inforefval.title" value="Customer Query" />
+    <Language field="IDNO1Query.inforefval.Caption.CUSTID" value="Customer Id." />
+    <Language field="IDNO2Query.inforefval.Caption.CUSTID" value="Customer Id." />
+    <Language field="IDNO1Query.inforefval.Caption.CORPCNAME" value="Company Name in Chinese" />
+    <Language field="IDNO2Query.inforefval.Caption.CORPCNAME" value="Company Name in Chinese" />
+    <Language field="IDNO1Query.inforefval.Caption.CORPSHORTNAME" value="Name in Brief" />
+    <Language field="IDNO2Query.inforefval.Caption.CORPSHORTNAME" value="Name in Brief" />
+    <Language field="IDNO1Query.inforefval.Caption.CUSTCATEID" value="Customer Category Id." />
+    <Language field="IDNO2Query.inforefval.Caption.CUSTCATEID" value="Customer Category Id." />
+    <Language field="IDNO1Query.inforefval.Caption.CORPUNICODE" value="Company Uniform No." />
+    <Language field="IDNO2Query.inforefval.Caption.CORPUNICODE" value="Company Uniform No." />
+    <Language field="IDNO1Query.inforefval.Caption.CONNECTPERSON" value="Contact Person" />
+    <Language field="IDNO2Query.inforefval.Caption.CONNECTPERSON" value="Contact Person" />
+    <Language field="IDNO1Query.inforefval.Caption.PERSONID" value="Inspected by" />
+    <Language field="IDNO2Query.inforefval.Caption.PERSONID" value="Inspected by" />
+    <Language field="IDNO1Query.inforefval.Caption.TEL1" value="Tel. No. 1" />
+    <Language field="IDNO2Query.inforefval.Caption.TEL1" value="Tel. No. 1" />
+    <Language field="PRODUCTID1Query.inforefval.title" value="Product Query" />
+    <Language field="PRODUCTID2Query.inforefval.title" value="Product Query" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.PRODUCTID" value="Producr Id." />
+    <Language field="PRODUCTID2Query.inforefval.Caption.PRODUCTID" value="Producr Id." />
+    <Language field="PRODUCTID1Query.inforefval.Caption.SCANCODE" value="Bar Code" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.SCANCODE" value="Bar Code" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.PRODCNAME" value="Product in Chinese" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.PRODCNAME" value="Product in Chinese" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.PRODSTRUCTURE" value="Product Specifications" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.PRODSTRUCTURE" value="Product Specifications" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.INVOICEPRODNAME" value="Brand" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.INVOICEPRODNAME" value="Brand" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.PRODCATEID" value="Product Id." />
+    <Language field="PRODUCTID2Query.inforefval.Caption.PRODCATEID" value="Product Id." />
+    <Language field="PRODUCTID1Query.inforefval.Caption.SALEPRICE" value="Suggest Saleing Price" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.SALEPRICE" value="Suggest Saleing Price" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.CALCUNIT" value="Unit" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.CALCUNIT" value="Unit" />
+    <Language field="PERSONID1Query.inforefval.title" value="Employee Query" />
+    <Language field="PERSONID2Query.inforefval.title" value="Employee Query" />
+    <Language field="PERSONID1Query.inforefval.Caption.PERSONID" value="Inspected by" />
+    <Language field="PERSONID2Query.inforefval.Caption.PERSONID" value="Inspected by" />
+    <Language field="PERSONID1Query.inforefval.Caption.PERSONCNAME" value="Name in Chinese" />
+    <Language field="PERSONID2Query.inforefval.Caption.PERSONCNAME" value="Name in Chinese" />
+    <Language field="PERSONID1Query.inforefval.Caption.ENGLISHNAME" value="Name in English" />
+    <Language field="PERSONID2Query.inforefval.Caption.ENGLISHNAME" value="Name in English" />
+    <Language field="PERSONID1Query.inforefval.Caption.JOBNAME" value="Position" />
+    <Language field="PERSONID2Query.inforefval.Caption.JOBNAME" value="Position" />
+    <Language field="PERSONID1Query.inforefval.Caption.BIRTHDAY" value="Birthday" />
+    <Language field="PERSONID2Query.inforefval.Caption.BIRTHDAY" value="Birthday" />
+    <Language field="PERSONID1Query.inforefval.Caption.DEPARTMENTID" value="Department Id." />
+    <Language field="PERSONID2Query.inforefval.Caption.DEPARTMENTID" value="Department Id." />
+    <Language field="PERSONID1Query.inforefval.Caption.CELLPHONE" value="Mobile Phone" />
+    <Language field="PERSONID2Query.inforefval.Caption.CELLPHONE" value="Mobile Phone" />
+    <Language field="PERSONID1Query.inforefval.Caption.FIRSTWORKDATE" value="First Work Date" />
+    <Language field="PERSONID2Query.inforefval.Caption.FIRSTWORKDATE" value="First Work Date" />
+
+    <Language field="dataGridMaster.IDNO.Caption" value="IDNO" />
+    <Language field="dataGridMaster.IDNO.PlaceHolder" value="" />
+    <Language field="dataGridMaster.CORPCNAME.Caption" value="CORPCNAME" />
+    <Language field="dataGridMaster.CORPCNAME.PlaceHolder" value="" />
+    <Language field="dataGridMaster.BILLDATE.Caption" value="BILLDATE" />
+    <Language field="dataGridMaster.BILLDATE.PlaceHolder" value="" />
+    <Language field="dataGridMaster.BILLNO.Caption" value="BILLNO" />
+    <Language field="dataGridMaster.BILLNO.PlaceHolder" value="" />
+    <Language field="dataGridMaster.PRODUCTID.Caption" value="PRODUCTID" />
+    <Language field="dataGridMaster.PRODUCTID.PlaceHolder" value="" />
+    <Language field="dataGridMaster.PRODCNAME.Caption" value="PRODCNAME" />
+    <Language field="dataGridMaster.PRODCNAME.PlaceHolder" value="" />
+    <Language field="dataGridMaster.PRODSTRUCTURE.Caption" value="PRODSTRUCTURE" />
+    <Language field="dataGridMaster.PRODSTRUCTURE.PlaceHolder" value="" />
+    <Language field="dataGridMaster.PERSONID.Caption" value="PERSONID" />
+    <Language field="dataGridMaster.PERSONID.PlaceHolder" value="" />
+    <Language field="dataGridMaster.PERSONCNAME.Caption" value="PERSONCNAME" />
+    <Language field="dataGridMaster.PERSONCNAME.PlaceHolder" value="" />
+    <Language field="dataGridMaster.ONHANDDATE.Caption" value="ONHANDDATE" />
+    <Language field="dataGridMaster.ONHANDDATE.PlaceHolder" value="" />
+    <Language field="dataGridMaster.CURRENCYID.Caption" value="CURRENCYID" />
+    <Language field="dataGridMaster.CURRENCYID.PlaceHolder" value="" />
+    <Language field="dataGridMaster.CURRRATE.Caption" value="CURRRATE" />
+    <Language field="dataGridMaster.CURRRATE.PlaceHolder" value="" />
+    <Language field="dataGridMaster.PRICE.Caption" value="PRICE" />
+    <Language field="dataGridMaster.PRICE.PlaceHolder" value="" />
+    <Language field="dataGridMaster.SUBAMOUNT.Caption" value="SUBAMOUNT" />
+    <Language field="dataGridMaster.SUBAMOUNT.PlaceHolder" value="" />
+    <Language field="dataGridMaster.QUANTITY.Caption" value="QUANTITY" />
+    <Language field="dataGridMaster.QUANTITY.PlaceHolder" value="" />
+    <Language field="dataGridMaster.NOTOUTQTY.Caption" value="NOTOUTQTY" />
+    <Language field="dataGridMaster.NOTOUTQTY.PlaceHolder" value="" />
+    <Language field="dataGridMaster.UNIQUENO.Caption" value="UNIQUENO" />
+    <Language field="dataGridMaster.UNIQUENO.PlaceHolder" value="" />
+
+    <Language field="JQMultiLanguage1.ToolTip" value="" />
+    <Language field="dataGridMaster.icon-print.ToolItemText" value="Print" />
+    <Language field="dataGridMaster.Title" value="已訂購未出貨明細表" />
+    <Language field="dataGridMaster.QueryTitle" value="Query" />
+    <Language field="dataGridMaster.TotalCaption" value="Total:" />
+    <Language field="This.Title" value="已訂購未出貨明細表" />
+  </EN>
+  <CHT>
+    <Language field="JQScriptManager1.ToolTip" value="" />
+    <Language field="JQDialogTempSelect.Title" value="選擇報表" />
+    <Language field="btMultiQuery.Text" value="查詢" />
+    <Language field="lbBILLDATE1.Text" value="日期區間：" />
+    <Language field="lbBILLDATE2.Text" value="～" />
+    <Language field="lbBILLNO1.Text" value="單號區間：" />
+    <Language field="lbBILLNO2.Text" value="～" />
+    <Language field="btOpenIDNO.Text" value="客戶區間：" />
+    <Language field="lbIDNO2.Text" value="～" />
+    <Language field="btOpenPRODUCTID.Text" value="產品區間：" />
+    <Language field="lbPRODUCTID2.Text" value="～" />
+    <Language field="btOpenPERSONID.Text" value="人員區間：" />
+    <Language field="lbPERSONID2.Text" value="～" />
+    <Language field="lbONHANDDATE1.Text" value="預交日區間：" />
+    <Language field="lbONHANDDATE2.Text" value="～" />
+
+    <Language field="IDNO1Query.inforefval.title" value="客戶查詢" />
+    <Language field="IDNO2Query.inforefval.title" value="客戶查詢" />
+    <Language field="IDNO1Query.inforefval.Caption.CUSTID" value="客戶編號" />
+    <Language field="IDNO2Query.inforefval.Caption.CUSTID" value="客戶編號" />
+    <Language field="IDNO1Query.inforefval.Caption.CORPCNAME" value="客戶名稱" />
+    <Language field="IDNO2Query.inforefval.Caption.CORPCNAME" value="客戶名稱" />
+    <Language field="IDNO1Query.inforefval.Caption.CORPSHORTNAME" value="客戶簡稱" />
+    <Language field="IDNO2Query.inforefval.Caption.CORPSHORTNAME" value="客戶簡稱" />
+    <Language field="IDNO1Query.inforefval.Caption.CUSTCATEID" value="客戶類別" />
+    <Language field="IDNO2Query.inforefval.Caption.CUSTCATEID" value="客戶類別" />
+    <Language field="IDNO1Query.inforefval.Caption.CORPUNICODE" value="統一編號" />
+    <Language field="IDNO2Query.inforefval.Caption.CORPUNICODE" value="統一編號" />
+    <Language field="IDNO1Query.inforefval.Caption.CONNECTPERSON" value="連 絡 人" />
+    <Language field="IDNO2Query.inforefval.Caption.CONNECTPERSON" value="連 絡 人" />
+    <Language field="IDNO1Query.inforefval.Caption.PERSONID" value="業務人員" />
+    <Language field="IDNO2Query.inforefval.Caption.PERSONID" value="業務人員" />
+    <Language field="IDNO1Query.inforefval.Caption.TEL1" value="電話號碼1" />
+    <Language field="IDNO2Query.inforefval.Caption.TEL1" value="電話號碼1" />
+    <Language field="PRODUCTID1Query.inforefval.title" value="產品查詢" />
+    <Language field="PRODUCTID2Query.inforefval.title" value="產品查詢" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.PRODUCTID" value="產品編號" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.PRODUCTID" value="產品編號" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.SCANCODE" value="條碼編號" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.SCANCODE" value="條碼編號" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.PRODCNAME" value="產品品名" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.PRODCNAME" value="產品品名" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.PRODSTRUCTURE" value="產品規格" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.PRODSTRUCTURE" value="產品規格" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.INVOICEPRODNAME" value="產品品牌" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.INVOICEPRODNAME" value="產品品牌" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.PRODCATEID" value="產品類別" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.PRODCATEID" value="產品類別" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.SALEPRICE" value="建議售價" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.SALEPRICE" value="建議售價" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.CALCUNIT" value="計量單位" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.CALCUNIT" value="計量單位" />
+    <Language field="PERSONID1Query.inforefval.title" value="員工查詢" />
+    <Language field="PERSONID2Query.inforefval.title" value="員工查詢" />
+    <Language field="PERSONID1Query.inforefval.Caption.PERSONID" value="員工編號" />
+    <Language field="PERSONID2Query.inforefval.Caption.PERSONID" value="員工編號" />
+    <Language field="PERSONID1Query.inforefval.Caption.PERSONCNAME" value="員工姓名" />
+    <Language field="PERSONID2Query.inforefval.Caption.PERSONCNAME" value="員工姓名" />
+    <Language field="PERSONID1Query.inforefval.Caption.ENGLISHNAME" value="英文姓名" />
+    <Language field="PERSONID2Query.inforefval.Caption.ENGLISHNAME" value="英文姓名" />
+    <Language field="PERSONID1Query.inforefval.Caption.JOBNAME" value="員工職稱" />
+    <Language field="PERSONID2Query.inforefval.Caption.JOBNAME" value="員工職稱" />
+    <Language field="PERSONID1Query.inforefval.Caption.BIRTHDAY" value="出生日期" />
+    <Language field="PERSONID2Query.inforefval.Caption.BIRTHDAY" value="出生日期" />
+    <Language field="PERSONID1Query.inforefval.Caption.DEPARTMENTID" value="部門編號" />
+    <Language field="PERSONID2Query.inforefval.Caption.DEPARTMENTID" value="部門編號" />
+    <Language field="PERSONID1Query.inforefval.Caption.CELLPHONE" value="行動電話" />
+    <Language field="PERSONID2Query.inforefval.Caption.CELLPHONE" value="行動電話" />
+    <Language field="PERSONID1Query.inforefval.Caption.FIRSTWORKDATE" value="到 職 日" />
+    <Language field="PERSONID2Query.inforefval.Caption.FIRSTWORKDATE" value="到 職 日" />
+
+    <Language field="dataGridMaster.IDNO.Caption" value="客戶編號" />
+    <Language field="dataGridMaster.IDNO.PlaceHolder" value="" />
+    <Language field="dataGridMaster.CORPCNAME.Caption" value="公司全稱" />
+    <Language field="dataGridMaster.CORPCNAME.PlaceHolder" value="" />
+    <Language field="dataGridMaster.BILLDATE.Caption" value="日期" />
+    <Language field="dataGridMaster.BILLDATE.PlaceHolder" value="" />
+    <Language field="dataGridMaster.BILLNO.Caption" value="單號" />
+    <Language field="dataGridMaster.BILLNO.PlaceHolder" value="" />
+    <Language field="dataGridMaster.PRODUCTID.Caption" value="產品編號" />
+    <Language field="dataGridMaster.PRODUCTID.PlaceHolder" value="" />
+    <Language field="dataGridMaster.PRODCNAME.Caption" value="品名規格" />
+    <Language field="dataGridMaster.PRODCNAME.PlaceHolder" value="" />
+    <Language field="dataGridMaster.PRODSTRUCTURE.Caption" value="規格" />
+    <Language field="dataGridMaster.PRODSTRUCTURE.PlaceHolder" value="" />
+    <Language field="dataGridMaster.PERSONID.Caption" value="人員編號" />
+    <Language field="dataGridMaster.PERSONID.PlaceHolder" value="" />
+    <Language field="dataGridMaster.PERSONCNAME.Caption" value="業務員" />
+    <Language field="dataGridMaster.PERSONCNAME.PlaceHolder" value="" />
+    <Language field="dataGridMaster.ONHANDDATE.Caption" value="預交貨日" />
+    <Language field="dataGridMaster.ONHANDDATE.PlaceHolder" value="" />
+    <Language field="dataGridMaster.CURRENCYID.Caption" value="幣別" />
+    <Language field="dataGridMaster.CURRENCYID.PlaceHolder" value="" />
+    <Language field="dataGridMaster.CURRRATE.Caption" value="匯率" />
+    <Language field="dataGridMaster.CURRRATE.PlaceHolder" value="" />
+    <Language field="dataGridMaster.PRICE.Caption" value="單價" />
+    <Language field="dataGridMaster.PRICE.PlaceHolder" value="" />
+    <Language field="dataGridMaster.SUBAMOUNT.Caption" value="原幣金額" />
+    <Language field="dataGridMaster.SUBAMOUNT.PlaceHolder" value="" />
+    <Language field="dataGridMaster.QUANTITY.Caption" value="數量" />
+    <Language field="dataGridMaster.QUANTITY.PlaceHolder" value="" />
+    <Language field="dataGridMaster.NOTOUTQTY.Caption" value="未出數量" />
+    <Language field="dataGridMaster.NOTOUTQTY.PlaceHolder" value="" />
+    <Language field="dataGridMaster.UNIQUENO.Caption" value="唯一序號" />
+    <Language field="dataGridMaster.UNIQUENO.PlaceHolder" value="" />
+
+    <Language field="JQMultiLanguage1.ToolTip" value="" />
+    <Language field="dataGridMaster.icon-print.ToolItemText" value="列印" />
+    <Language field="dataGridMaster.Title" value="已訂購未出貨明細表" />
+    <Language field="dataGridMaster.QueryTitle" value="查詢" />
+    <Language field="dataGridMaster.TotalCaption" value="Total:" />
+    <Language field="This.Title" value="已訂購未出貨明細表" />
+  </CHT>
+  <CHS>
+    <Language field="JQScriptManager1.ToolTip" value="" />
+    <Language field="JQDialogTempSelect.Title" value="選擇報表" />
+    <Language field="btMultiQuery.Text" value="查詢" />
+    <Language field="lbBILLDATE1.Text" value="日期區間：" />
+    <Language field="lbBILLDATE2.Text" value="～" />
+    <Language field="lbBILLNO1.Text" value="單號區間：" />
+    <Language field="lbBILLNO2.Text" value="～" />
+    <Language field="btOpenIDNO.Text" value="客戶區間：" />
+    <Language field="lbIDNO2.Text" value="～" />
+    <Language field="btOpenPRODUCTID.Text" value="產品區間：" />
+    <Language field="lbPRODUCTID2.Text" value="～" />
+    <Language field="btOpenPERSONID.Text" value="人員區間：" />
+    <Language field="lbPERSONID2.Text" value="～" />
+    <Language field="lbONHANDDATE1.Text" value="預交日區間：" />
+    <Language field="lbONHANDDATE2.Text" value="～" />
+
+    <Language field="IDNO1Query.inforefval.title" value="客戶查詢" />
+    <Language field="IDNO2Query.inforefval.title" value="客戶查詢" />
+    <Language field="IDNO1Query.inforefval.Caption.CUSTID" value="客戶編號" />
+    <Language field="IDNO2Query.inforefval.Caption.CUSTID" value="客戶編號" />
+    <Language field="IDNO1Query.inforefval.Caption.CORPCNAME" value="客戶名稱" />
+    <Language field="IDNO2Query.inforefval.Caption.CORPCNAME" value="客戶名稱" />
+    <Language field="IDNO1Query.inforefval.Caption.CORPSHORTNAME" value="客戶簡稱" />
+    <Language field="IDNO2Query.inforefval.Caption.CORPSHORTNAME" value="客戶簡稱" />
+    <Language field="IDNO1Query.inforefval.Caption.CUSTCATEID" value="客戶類別" />
+    <Language field="IDNO2Query.inforefval.Caption.CUSTCATEID" value="客戶類別" />
+    <Language field="IDNO1Query.inforefval.Caption.CORPUNICODE" value="統一編號" />
+    <Language field="IDNO2Query.inforefval.Caption.CORPUNICODE" value="統一編號" />
+    <Language field="IDNO1Query.inforefval.Caption.CONNECTPERSON" value="連 絡 人" />
+    <Language field="IDNO2Query.inforefval.Caption.CONNECTPERSON" value="連 絡 人" />
+    <Language field="IDNO1Query.inforefval.Caption.PERSONID" value="業務人員" />
+    <Language field="IDNO2Query.inforefval.Caption.PERSONID" value="業務人員" />
+    <Language field="IDNO1Query.inforefval.Caption.TEL1" value="電話號碼1" />
+    <Language field="IDNO2Query.inforefval.Caption.TEL1" value="電話號碼1" />
+    <Language field="PRODUCTID1Query.inforefval.title" value="產品查詢" />
+    <Language field="PRODUCTID2Query.inforefval.title" value="產品查詢" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.PRODUCTID" value="產品編號" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.PRODUCTID" value="產品編號" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.SCANCODE" value="條碼編號" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.SCANCODE" value="條碼編號" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.PRODCNAME" value="產品品名" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.PRODCNAME" value="產品品名" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.PRODSTRUCTURE" value="產品規格" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.PRODSTRUCTURE" value="產品規格" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.INVOICEPRODNAME" value="產品品牌" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.INVOICEPRODNAME" value="產品品牌" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.PRODCATEID" value="產品類別" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.PRODCATEID" value="產品類別" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.SALEPRICE" value="建議售價" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.SALEPRICE" value="建議售價" />
+    <Language field="PRODUCTID1Query.inforefval.Caption.CALCUNIT" value="計量單位" />
+    <Language field="PRODUCTID2Query.inforefval.Caption.CALCUNIT" value="計量單位" />
+    <Language field="PERSONID1Query.inforefval.title" value="員工查詢" />
+    <Language field="PERSONID2Query.inforefval.title" value="員工查詢" />
+    <Language field="PERSONID1Query.inforefval.Caption.PERSONID" value="員工編號" />
+    <Language field="PERSONID2Query.inforefval.Caption.PERSONID" value="員工編號" />
+    <Language field="PERSONID1Query.inforefval.Caption.PERSONCNAME" value="員工姓名" />
+    <Language field="PERSONID2Query.inforefval.Caption.PERSONCNAME" value="員工姓名" />
+    <Language field="PERSONID1Query.inforefval.Caption.ENGLISHNAME" value="英文姓名" />
+    <Language field="PERSONID2Query.inforefval.Caption.ENGLISHNAME" value="英文姓名" />
+    <Language field="PERSONID1Query.inforefval.Caption.JOBNAME" value="員工職稱" />
+    <Language field="PERSONID2Query.inforefval.Caption.JOBNAME" value="員工職稱" />
+    <Language field="PERSONID1Query.inforefval.Caption.BIRTHDAY" value="出生日期" />
+    <Language field="PERSONID2Query.inforefval.Caption.BIRTHDAY" value="出生日期" />
+    <Language field="PERSONID1Query.inforefval.Caption.DEPARTMENTID" value="部門編號" />
+    <Language field="PERSONID2Query.inforefval.Caption.DEPARTMENTID" value="部門編號" />
+    <Language field="PERSONID1Query.inforefval.Caption.CELLPHONE" value="行動電話" />
+    <Language field="PERSONID2Query.inforefval.Caption.CELLPHONE" value="行動電話" />
+    <Language field="PERSONID1Query.inforefval.Caption.FIRSTWORKDATE" value="到 職 日" />
+    <Language field="PERSONID2Query.inforefval.Caption.FIRSTWORKDATE" value="到 職 日" />
+
+    <Language field="dataGridMaster.IDNO.Caption" value="客戶編號" />
+    <Language field="dataGridMaster.IDNO.PlaceHolder" value="" />
+    <Language field="dataGridMaster.CORPCNAME.Caption" value="公司全稱" />
+    <Language field="dataGridMaster.CORPCNAME.PlaceHolder" value="" />
+    <Language field="dataGridMaster.BILLDATE.Caption" value="日期" />
+    <Language field="dataGridMaster.BILLDATE.PlaceHolder" value="" />
+    <Language field="dataGridMaster.BILLNO.Caption" value="單號" />
+    <Language field="dataGridMaster.BILLNO.PlaceHolder" value="" />
+    <Language field="dataGridMaster.PRODUCTID.Caption" value="產品編號" />
+    <Language field="dataGridMaster.PRODUCTID.PlaceHolder" value="" />
+    <Language field="dataGridMaster.PRODCNAME.Caption" value="品名規格" />
+    <Language field="dataGridMaster.PRODCNAME.PlaceHolder" value="" />
+    <Language field="dataGridMaster.PRODSTRUCTURE.Caption" value="規格" />
+    <Language field="dataGridMaster.PRODSTRUCTURE.PlaceHolder" value="" />
+    <Language field="dataGridMaster.PERSONID.Caption" value="人員編號" />
+    <Language field="dataGridMaster.PERSONID.PlaceHolder" value="" />
+    <Language field="dataGridMaster.PERSONCNAME.Caption" value="業務員" />
+    <Language field="dataGridMaster.PERSONCNAME.PlaceHolder" value="" />
+    <Language field="dataGridMaster.ONHANDDATE.Caption" value="預交貨日" />
+    <Language field="dataGridMaster.ONHANDDATE.PlaceHolder" value="" />
+    <Language field="dataGridMaster.CURRENCYID.Caption" value="幣別" />
+    <Language field="dataGridMaster.CURRENCYID.PlaceHolder" value="" />
+    <Language field="dataGridMaster.CURRRATE.Caption" value="匯率" />
+    <Language field="dataGridMaster.CURRRATE.PlaceHolder" value="" />
+    <Language field="dataGridMaster.PRICE.Caption" value="單價" />
+    <Language field="dataGridMaster.PRICE.PlaceHolder" value="" />
+    <Language field="dataGridMaster.SUBAMOUNT.Caption" value="原幣金額" />
+    <Language field="dataGridMaster.SUBAMOUNT.PlaceHolder" value="" />
+    <Language field="dataGridMaster.QUANTITY.Caption" value="數量" />
+    <Language field="dataGridMaster.QUANTITY.PlaceHolder" value="" />
+    <Language field="dataGridMaster.NOTOUTQTY.Caption" value="未出數量" />
+    <Language field="dataGridMaster.NOTOUTQTY.PlaceHolder" value="" />
+    <Language field="dataGridMaster.UNIQUENO.Caption" value="唯一序號" />
+    <Language field="dataGridMaster.UNIQUENO.PlaceHolder" value="" />
+
+    <Language field="JQMultiLanguage1.ToolTip" value="" />
+    <Language field="dataGridMaster.icon-print.ToolItemText" value="列印" />
+    <Language field="dataGridMaster.Title" value="已訂購未出貨明細表" />
+    <Language field="dataGridMaster.QueryTitle" value="查詢" />
+    <Language field="dataGridMaster.TotalCaption" value="Total:" />
+    <Language field="This.Title" value="已訂購未出貨明細表" />
+  </CHS>
+  <HK />
+  <JA />
+  <KO />
+  <LAN1 />
+  <LAN2 />
+</Infolight>

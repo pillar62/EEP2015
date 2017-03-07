@@ -1,0 +1,933 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Infolight>
+  <MultiLanguage language="EN;CHT;CHS" />
+  <EN>
+    <Language field="ScriptManager.ToolTip" value="" />
+    <Language field="dgView.ToolTip" value="" />
+    <Language field="dgView.icon-add.ToolItemText" value="AddNew" />
+    <Language field="dgView.icon-edit.ToolItemText" value="Modify" />
+    <Language field="dgView.icon-remove.ToolItemText" value="Delete" />
+    <Language field="dgView.icon-save.ToolItemText" value="Save" />
+    <Language field="dgView.icon-cancel.ToolItemText" value="Cancel" />
+    <Language field="dgView.icon-undo.ToolItemText" value="Cancel" />
+    <Language field="dgView.icon-sign.ToolItemText" value="Sign" />
+    <Language field="dgView.icon-print.ToolItemText" value="Print" />
+    <Language field="dgView.Title" value="客戶訂單維護" />
+    <Language field="dgView.QueryTitle" value="Quick Query" />
+    <Language field="dgView.TotalCaption" value="Total:" />
+    <Language field="JQDialog1.ToolTip" value="" />
+    <Language field="JQDialog1.Title" value="客戶訂單維護" />
+    <Language field="dgView.BILLDATE.Caption" value="Evaluate Date" />
+    <Language field="dgView.BILLDATE.PlaceHolder" value="" />
+    <Language field="dgView.BILLNO.Caption" value="Check No." />
+    <Language field="dgView.BILLNO.PlaceHolder" value="" />
+    <Language field="dgView.REFBILLNO.Caption" value="Customer Ref. Bill No." />
+    <Language field="dgView.REFBILLNO.PlaceHolder" value="" />
+    <Language field="dgView.ONHANDDATE.Caption" value="Expect Delivery Date" />
+    <Language field="dgView.ONHANDDATE.PlaceHolder" value="" />
+    <Language field="dgView.CUSTID.Caption" value="Customer Id." />
+    <Language field="dgView.CUSTID.PlaceHolder" value="" />
+    <Language field="TabItem1.Title" value="主要明細" />
+    <Language field="dgView.PROJECTID.Caption" value="PROJECTID" />
+    <Language field="dgView.PROJECTID.PlaceHolder" value="" />
+    <Language field="dgView.PERSONID.Caption" value="Inspected by" />
+    <Language field="dgView.PERSONID.PlaceHolder" value="" />
+    <Language field="dgView.WAREID.Caption" value="Warehouse Id." />
+    <Language field="dgView.WAREID.PlaceHolder" value="" />
+    <Language field="TabItem2.Title" value="其他明細" />
+    <Language field="TabItem3.Title" value="擴充欄位" />
+    <Language field="dgView.PRODCNAME.Caption" value="Product in Chinese" />
+    <Language field="dgView.PRODCNAME.PlaceHolder" value="" />
+    <Language field="dgView.PRODSTRUCTURE.Caption" value="Product Specifications" />
+    <Language field="dgView.PRODSTRUCTURE.PlaceHolder" value="" />
+
+    <Language field="dgView.BILLDATE.QueryColumnCaption%%" value="Evaluate Date" />
+    <Language field="dgView.BILLNO.QueryColumnCaption%%" value="Check No." />
+    <Language field="dgView.CUSTID.QueryColumnCaption%%" value="Customer Id." />
+    <Language field="dgView.CORPMEMO.QueryColumnCaption%%" value="Memo" />
+
+    <Language field="dataFormMaster.BILLDATE.Caption" value="Evaluate Date" />
+    <Language field="dataFormMaster.BILLDATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.BILLNO.Caption" value="Check No." />
+    <Language field="dataFormMaster.BILLNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.SDTBILLNO.Caption" value="Bill No. by User" />
+    <Language field="dataFormMaster.SDTBILLNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.ISSIGN.Caption" value="Is Signed ?" />
+    <Language field="dataFormMaster.ISSIGN.PlaceHolder" value="" />
+    <Language field="dataFormMaster.REFBILLNO.Caption" value="Customer Ref. Bill No." />
+    <Language field="dataFormMaster.REFBILLNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.ONHANDDATE.Caption" value="Expect Delivery Date" />
+    <Language field="dataFormMaster.ONHANDDATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.CUSTID.Caption" value="Customer Id." />
+    <Language field="dataFormMaster1.CUSTID.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.title" value="Customer Id. Query" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.CUSTID" value="Customer Id." />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.CORPCNAME" value="Company Name in Chinese" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.CORPSHORTNAME" value="Name in Brief" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.CUSTCATEID" value="Customer Category Id." />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.CORPUNICODE" value="Company Uniform No." />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.CONNECTPERSON" value="Contact Person" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.PERSONID" value="Inspected by" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.TEL1" value="Tel. No. 1" />
+    <Language field="dataFormMaster1.CORPMEMO.Caption" value="Memo" />
+    <Language field="dataFormMaster1.CORPMEMO.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.DELIVERADDRESS.Caption" value="Delivery Address" />
+    <Language field="dataFormMaster1.DELIVERADDRESS.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.PROJECTID.Caption" value="PROJECTID" />
+    <Language field="dataFormMaster1.PROJECTID.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.title" value="PROJECTID Query" />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.Caption.PROJECTID" value="Project Id." />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.Caption.PROJECTCLASSID" value="Project Class Id." />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.Caption.PROJ_CNAME" value="Project Name in Chinese" />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.Caption.PROJ_BOSS" value="Project Leader" />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.Caption.PROJ_STARTDATE" value="Project Start Date" />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.Caption.PROJ_ENDDATE" value="End Date" />
+    <Language field="dataFormMaster1.PERSONID.Caption" value="Inspected by" />
+    <Language field="dataFormMaster1.PERSONID.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.title" value="Inspected by Query" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.PERSONID" value="Inspected by" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.PERSONCNAME" value="Name in Chinese" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.ENGLISHNAME" value="Name in English" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.JOBNAME" value="Position" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.BIRTHDAY" value="Birthday" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.DEPARTMENTID" value="Department Id." />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.CELLPHONE" value="Mobile Phone" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.FIRSTWORKDATE" value="First Work Date" />
+    <Language field="dataFormMaster1.WAREID.Caption" value="Warehouse Id." />
+    <Language field="dataFormMaster1.WAREID.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.WAREID.inforefval.title" value="Warehouse Id. Query" />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.WAREID" value="Warehouse Id." />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.WARECNAME" value="Warehouse in Chinese" />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.WAREENAME" value="Warehouse in English" />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.WARESHORTNAME" value="Warehouse Name in Brief" />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.WAREHOUSETYPE" value="Warehouse Type" />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.TEL" value="Bank Tel. No." />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.FAX" value="FAX" />
+    <Language field="dataFormMaster1.DEPARTMENTID.Caption" value="Department Id." />
+    <Language field="dataFormMaster1.DEPARTMENTID.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.DEPARTMENTID.inforefval.title" value="Department Id. Query" />
+    <Language field="dataFormMaster1.DEPARTMENTID.inforefval.Caption.DEPARTMENTID" value="Department Id." />
+    <Language field="dataFormMaster1.DEPARTMENTID.inforefval.Caption.DEPARTMENTCNAME" value="Deaprtment Id." />
+    <Language field="dataFormMaster1.DEPARTMENTID.inforefval.Caption.DEPARTMENTENAME" value="Department in English" />
+    <Language field="dataFormMaster1.DEPARTMENTID.inforefval.Caption.MEMOCHAR" value="Swap Shift" />
+    <Language field="dataFormMaster1.CONNECTPERSON.Caption" value="Contact Person" />
+    <Language field="dataFormMaster1.CONNECTPERSON.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.CURRENCYID.Caption" value="Currency Id." />
+    <Language field="dataFormMaster1.CURRENCYID.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.CURRENCYID.inforefval.title" value="Currency Id. Query" />
+    <Language field="dataFormMaster1.CURRENCYID.inforefval.Caption.CURRENCYID" value="Currency Id." />
+    <Language field="dataFormMaster1.CURRENCYID.inforefval.Caption.CURRENCYCNAME" value="Currency in Chinese" />
+    <Language field="dataFormMaster1.CURRENCYID.inforefval.Caption.CURRENCYENAME" value="Currency in English" />
+    <Language field="dataFormMaster1.CURRENCYID.inforefval.Caption.CURRRATEIN" value="Buying Rate" />
+    <Language field="dataFormMaster1.CURRENCYID.inforefval.Caption.CURRRATEOUT" value="Selling Rate" />
+    <Language field="dataFormMaster1.CURRRATE.Caption" value="Exchange Rate" />
+    <Language field="dataFormMaster1.CURRRATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.INVOICETYPE.Caption" value="Invoice Type" />
+    <Language field="dataFormMaster1.INVOICETYPE.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.TAXCLASS.Caption" value="Tax Class" />
+    <Language field="dataFormMaster1.TAXCLASS.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.TOTALAMOUNT.Caption" value="Total Amount" />
+    <Language field="dataFormMaster1.TOTALAMOUNT.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.TAXAMOUNT.Caption" value="Tax Amount" />
+    <Language field="dataFormMaster1.TAXAMOUNT.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.SUMQUALITY.Caption" value="Total Quantity" />
+    <Language field="dataFormMaster1.SUMQUALITY.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.SUMAMOUNT.Caption" value="Total Amount" />
+    <Language field="dataFormMaster1.SUMAMOUNT.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.MEMODOC.Caption" value="Memo" />
+    <Language field="dataFormMaster2.MEMODOC.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.DATAPATH.Caption" value="DATAPATH" />
+    <Language field="dataFormMaster2.DATAPATH.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.PAYMENTWAY.Caption" value="Payment Method" />
+    <Language field="dataFormMaster2.PAYMENTWAY.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.SHIPMENT.Caption" value="Shipment" />
+    <Language field="dataFormMaster2.SHIPMENT.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.VALIDITYDATE.Caption" value="Validity Date" />
+    <Language field="dataFormMaster2.VALIDITYDATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.VALIDITYDOC.Caption" value="Validity Detail" />
+    <Language field="dataFormMaster2.VALIDITYDOC.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.BILLHEADNO.Caption" value="Bill Header No." />
+    <Language field="dataFormMaster2.BILLHEADNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.BILLHEADNO.inforefval.title" value="Bill Header No. Query" />
+    <Language field="dataFormMaster2.BILLHEADNO.inforefval.Caption.TAILID" value="Tail Id." />
+    <Language field="dataFormMaster2.BILLHEADNO.inforefval.Caption.TAILDESC" value="Tail Description" />
+    <Language field="dataFormMaster2.BILLTAILNO.Caption" value="Bill Tail No." />
+    <Language field="dataFormMaster2.BILLTAILNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.BILLTAILNO.inforefval.title" value="Bill Tail No. Query" />
+    <Language field="dataFormMaster2.BILLTAILNO.inforefval.Caption.TAILID" value="Tail Id." />
+    <Language field="dataFormMaster2.BILLTAILNO.inforefval.Caption.TAILDESC" value="Tail Description" />
+    <Language field="dataFormMaster3.DATAEXTEND1.Caption" value="Extend Field 1" />
+    <Language field="dataFormMaster3.DATAEXTEND1.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND2.Caption" value="Extend Field 2" />
+    <Language field="dataFormMaster3.DATAEXTEND2.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND3.Caption" value="Extend Field 3" />
+    <Language field="dataFormMaster3.DATAEXTEND3.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND4.Caption" value="Extend Field 4" />
+    <Language field="dataFormMaster3.DATAEXTEND4.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND5.Caption" value="Extend Field 5" />
+    <Language field="dataFormMaster3.DATAEXTEND5.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND6.Caption" value="Extend Field 6" />
+    <Language field="dataFormMaster3.DATAEXTEND6.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND7.Caption" value="Extend Field 7" />
+    <Language field="dataFormMaster3.DATAEXTEND7.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND8.Caption" value="Extend Field 8" />
+    <Language field="dataFormMaster3.DATAEXTEND8.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.CREATE_USER.Caption" value="Created by" />
+    <Language field="dataFormMaster3.CREATE_USER.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.CREATE_DATE.Caption" value="Create On" />
+    <Language field="dataFormMaster3.CREATE_DATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.UPDATE_USER.Caption" value="Update by" />
+    <Language field="dataFormMaster3.UPDATE_USER.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.UPDATE_DATE.Caption" value="Update Date" />
+    <Language field="dataFormMaster3.UPDATE_DATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.SIGN_USER.Caption" value="Remark" />
+    <Language field="dataFormMaster3.SIGN_USER.PlaceHolder" value="" />
+    <Language field="dataFormMaster.BILLNO.Caption" value="Check No." />
+    <Language field="dataFormMaster.BILLNO.PlaceHolder" value="" />
+    <Language field="dataGridDetail.BILLNO.Caption" value="Check No." />
+    <Language field="dataGridDetail.BILLNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.SEQNO.Caption" value="Seq. No." />
+    <Language field="dataFormMaster.SEQNO.PlaceHolder" value="" />
+    <Language field="dataGridDetail.SEQNO.Caption" value="Seq. No." />
+    <Language field="dataGridDetail.SEQNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.WAREID.Caption" value="Warehouse Id." />
+    <Language field="dataFormMaster.WAREID.PlaceHolder" value="" />
+    <Language field="dataFormMaster.WAREID.inforefval.title" value="Warehouse Id. Query" />
+    <Language field="dataGridDetail.WAREID.Caption" value="Warehouse Id." />
+    <Language field="dataGridDetail.WAREID.PlaceHolder" value="" />
+    <Language field="dataGridDetail.WAREID.inforefval.title" value="Warehouse Id. Query" />
+    <Language field="dataFormMaster.CUSTID.Caption" value="Customer Id." />
+    <Language field="dataFormMaster.CUSTID.PlaceHolder" value="" />
+    <Language field="dataGridDetail.CUSTID.Caption" value="Customer Id." />
+    <Language field="dataGridDetail.CUSTID.PlaceHolder" value="" />
+    <Language field="dataFormMaster.PRODUCTID.Caption" value="Producr Id." />
+    <Language field="dataFormMaster.PRODUCTID.PlaceHolder" value="" />
+    <Language field="dataFormMaster.PRODUCTID.inforefval.title" value="Producr Id. Query" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODUCTID" value="Producr Id." />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.SCANCODE" value="Bar Code" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODCNAME" value="Product in Chinese" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODSTRUCTURE" value="Product Specifications" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.INVOICEPRODNAME" value="Brand" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODCATEID" value="Product Id." />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.SALEPRICE" value="Suggest Saleing Price" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.CALCUNIT" value="Unit" />
+    <Language field="dataGridDetail.PRODUCTID.Caption" value="Producr Id." />
+    <Language field="dataGridDetail.PRODUCTID.PlaceHolder" value="" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.title" value="Producr Id. Query" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODUCTID" value="Producr Id." />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.SCANCODE" value="Bar Code" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODCNAME" value="Product in Chinese" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODSTRUCTURE" value="Product Specifications" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.INVOICEPRODNAME" value="Brand" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODCATEID" value="Product Id." />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.SALEPRICE" value="Suggest Saleing Price" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.CALCUNIT" value="Unit" />
+    <Language field="dataFormMaster.PRODCNAME.Caption" value="Product in Chinese" />
+    <Language field="dataFormMaster.PRODCNAME.PlaceHolder" value="" />
+    <Language field="dataGridDetail.PRODCNAME.Caption" value="Product in Chinese" />
+    <Language field="dataGridDetail.PRODCNAME.PlaceHolder" value="" />
+    <Language field="dataFormMaster.PRODENAME.Caption" value="Product in English" />
+    <Language field="dataFormMaster.PRODENAME.PlaceHolder" value="" />
+    <Language field="dataGridDetail.PRODENAME.Caption" value="Product in English" />
+    <Language field="dataGridDetail.PRODENAME.PlaceHolder" value="" />
+    <Language field="dataFormMaster.PRODSTRUCTURE.Caption" value="Product Specifications" />
+    <Language field="dataFormMaster.PRODSTRUCTURE.PlaceHolder" value="" />
+    <Language field="dataGridDetail.PRODSTRUCTURE.Caption" value="Product Specifications" />
+    <Language field="dataGridDetail.PRODSTRUCTURE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.QUANTITY.Caption" value="Quantity" />
+    <Language field="dataFormMaster.QUANTITY.PlaceHolder" value="" />
+    <Language field="dataGridDetail.QUANTITY.Caption" value="Quantity" />
+    <Language field="dataGridDetail.QUANTITY.PlaceHolder" value="" />
+    <Language field="dataFormMaster.UNIT.Caption" value="Unit" />
+    <Language field="dataFormMaster.UNIT.PlaceHolder" value="" />
+    <Language field="dataGridDetail.UNIT.Caption" value="Unit" />
+    <Language field="dataGridDetail.UNIT.PlaceHolder" value="" />
+    <Language field="dataFormMaster.PRICE.Caption" value="Unit Price" />
+    <Language field="dataFormMaster.PRICE.PlaceHolder" value="" />
+    <Language field="dataGridDetail.PRICE.Caption" value="Unit Price" />
+    <Language field="dataGridDetail.PRICE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.TAXPRICE.Caption" value="Unit Price include Tax" />
+    <Language field="dataFormMaster.TAXPRICE.PlaceHolder" value="" />
+    <Language field="dataGridDetail.TAXPRICE.Caption" value="Unit Price include Tax" />
+    <Language field="dataGridDetail.TAXPRICE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.PRODCOST.Caption" value="Product Cost" />
+    <Language field="dataFormMaster.PRODCOST.PlaceHolder" value="" />
+    <Language field="dataGridDetail.PRODCOST.Caption" value="Product Cost" />
+    <Language field="dataGridDetail.PRODCOST.PlaceHolder" value="" />
+    <Language field="dataFormMaster.SUBAMOUNT.Caption" value="Sub Amount" />
+    <Language field="dataFormMaster.SUBAMOUNT.PlaceHolder" value="" />
+    <Language field="dataGridDetail.SUBAMOUNT.Caption" value="Sub Amount" />
+    <Language field="dataGridDetail.SUBAMOUNT.PlaceHolder" value="" />
+    <Language field="dataFormMaster.TAXAMOUNT.Caption" value="Tax Amount" />
+    <Language field="dataFormMaster.TAXAMOUNT.PlaceHolder" value="" />
+    <Language field="dataGridDetail.TAXAMOUNT.Caption" value="Tax Amount" />
+    <Language field="dataGridDetail.TAXAMOUNT.PlaceHolder" value="" />
+    <Language field="dataFormMaster.ONHANDDATE.Caption" value="Expect Delivery Date" />
+    <Language field="dataFormMaster.ONHANDDATE.PlaceHolder" value="" />
+    <Language field="dataGridDetail.ONHANDDATE.Caption" value="Expect Delivery Date" />
+    <Language field="dataGridDetail.ONHANDDATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.ASSEMBLEQTY.Caption" value="Assembly Qty" />
+    <Language field="dataFormMaster.ASSEMBLEQTY.PlaceHolder" value="" />
+    <Language field="dataGridDetail.ASSEMBLEQTY.Caption" value="Assembly Qty" />
+    <Language field="dataGridDetail.ASSEMBLEQTY.PlaceHolder" value="" />
+    <Language field="dataFormMaster.SOURCEBILLNO.Caption" value="Source Bill No." />
+    <Language field="dataFormMaster.SOURCEBILLNO.PlaceHolder" value="" />
+    <Language field="dataGridDetail.SOURCEBILLNO.Caption" value="Source Bill No." />
+    <Language field="dataGridDetail.SOURCEBILLNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.SOURCEUNIQUENO.Caption" value="Source Unique No." />
+    <Language field="dataFormMaster.SOURCEUNIQUENO.PlaceHolder" value="" />
+    <Language field="dataGridDetail.SOURCEUNIQUENO.Caption" value="Source Unique No." />
+    <Language field="dataGridDetail.SOURCEUNIQUENO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.ISNEEDMADE.Caption" value="Need to Produce ?" />
+    <Language field="dataFormMaster.ISNEEDMADE.PlaceHolder" value="" />
+    <Language field="dataGridDetail.ISNEEDMADE.Caption" value="Need to Produce ?" />
+    <Language field="dataGridDetail.ISNEEDMADE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.MEMOCHAR1.Caption" value="Memo 1" />
+    <Language field="dataFormMaster.MEMOCHAR1.PlaceHolder" value="" />
+    <Language field="dataGridDetail.MEMOCHAR1.Caption" value="Memo 1" />
+    <Language field="dataGridDetail.MEMOCHAR1.PlaceHolder" value="" />
+    <Language field="dataFormMaster.MEMOCHAR2.Caption" value="Memo 2" />
+    <Language field="dataFormMaster.MEMOCHAR2.PlaceHolder" value="" />
+    <Language field="dataGridDetail.MEMOCHAR2.Caption" value="Memo 2" />
+    <Language field="dataGridDetail.MEMOCHAR2.PlaceHolder" value="" />
+    <Language field="dataFormMaster.ISGIFTPROD.Caption" value="Is it Gift ?" />
+    <Language field="dataFormMaster.ISGIFTPROD.PlaceHolder" value="" />
+    <Language field="dataGridDetail.ISGIFTPROD.Caption" value="Is it Gift ?" />
+    <Language field="dataGridDetail.ISGIFTPROD.PlaceHolder" value="" />
+    <Language field="dataFormMaster.BOXQTY.Caption" value="Qty by Twin Qty" />
+    <Language field="dataFormMaster.BOXQTY.PlaceHolder" value="" />
+    <Language field="dataGridDetail.BOXQTY.Caption" value="Qty by Twin Qty" />
+    <Language field="dataGridDetail.BOXQTY.PlaceHolder" value="" />
+    <Language field="dataFormMaster.BOXPRICE.Caption" value="Unit Price by Twin Unit" />
+    <Language field="dataFormMaster.BOXPRICE.PlaceHolder" value="" />
+    <Language field="dataGridDetail.BOXPRICE.Caption" value="Unit Price by Twin Unit" />
+    <Language field="dataGridDetail.BOXPRICE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.UNIQUENO.Caption" value="Unique No." />
+    <Language field="dataFormMaster.UNIQUENO.PlaceHolder" value="" />
+    <Language field="dataGridDetail.UNIQUENO.Caption" value="Unique No." />
+    <Language field="dataGridDetail.UNIQUENO.PlaceHolder" value="" />
+
+    <Language field="This.Title" value="[OPOM02] 客戶訂單維護" />
+  </EN>
+  <CHT>
+    <Language field="ScriptManager.ToolTip" value="" />
+    <Language field="dgView.ToolTip" value="" />
+    <Language field="dgView.icon-add.ToolItemText" value="新增" />
+    <Language field="dgView.icon-edit.ToolItemText" value="修改" />
+    <Language field="dgView.icon-remove.ToolItemText" value="刪除" />
+    <Language field="dgView.icon-save.ToolItemText" value="存檔" />
+    <Language field="dgView.icon-cancel.ToolItemText" value="取消" />
+    <Language field="dgView.icon-undo.ToolItemText" value="取消" />
+    <Language field="dgView.icon-sign.ToolItemText" value="審核" />
+    <Language field="dgView.icon-print.ToolItemText" value="列印" />
+    <Language field="dgView.Title" value="客戶訂單維護" />
+    <Language field="dgView.QueryTitle" value="快速查詢" />
+    <Language field="dgView.TotalCaption" value="Total:" />
+    <Language field="JQDialog1.ToolTip" value="" />
+    <Language field="JQDialog1.Title" value="客戶訂單維護" />
+    <Language field="dgView.BILLDATE.Caption" value="日　　期" />
+    <Language field="dgView.BILLDATE.PlaceHolder" value="" />
+    <Language field="dgView.BILLNO.Caption" value="訂單編號" />
+    <Language field="dgView.BILLNO.PlaceHolder" value="" />
+    <Language field="dgView.REFBILLNO.Caption" value="客戶單號" />
+    <Language field="dgView.REFBILLNO.PlaceHolder" value="" />
+    <Language field="dgView.ONHANDDATE.Caption" value="預交貨日" />
+    <Language field="dgView.ONHANDDATE.PlaceHolder" value="" />
+    <Language field="dgView.CUSTID.Caption" value="客戶編號" />
+    <Language field="dgView.CUSTID.PlaceHolder" value="" />
+    <Language field="TabItem1.Title" value="主要明細" />
+    <Language field="dgView.PROJECTID.Caption" value="專案編號" />
+    <Language field="dgView.PROJECTID.PlaceHolder" value="" />
+    <Language field="dgView.PERSONID.Caption" value="業務人員" />
+    <Language field="dgView.PERSONID.PlaceHolder" value="" />
+    <Language field="dgView.WAREID.Caption" value="倉庫代號" />
+    <Language field="dgView.WAREID.PlaceHolder" value="" />
+    <Language field="TabItem2.Title" value="其他明細" />
+    <Language field="TabItem3.Title" value="擴充欄位" />
+    <Language field="dgView.PRODCNAME.Caption" value="品名" />
+    <Language field="dgView.PRODCNAME.PlaceHolder" value="" />
+    <Language field="dgView.PRODSTRUCTURE.Caption" value="規格" />
+    <Language field="dgView.PRODSTRUCTURE.PlaceHolder" value="" />
+
+    <Language field="dgView.BILLDATE.QueryColumnCaption%%" value="日　　期" />
+    <Language field="dgView.BILLNO.QueryColumnCaption%%" value="訂單編號" />
+    <Language field="dgView.CUSTID.QueryColumnCaption%%" value="客戶編號" />
+    <Language field="dgView.CORPMEMO.QueryColumnCaption%%" value="注意事項" />
+
+    <Language field="dataFormMaster.BILLDATE.Caption" value="日　　期" />
+    <Language field="dataFormMaster.BILLDATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.BILLNO.Caption" value="訂單編號" />
+    <Language field="dataFormMaster.BILLNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.SDTBILLNO.Caption" value="自編單號" />
+    <Language field="dataFormMaster.SDTBILLNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.ISSIGN.Caption" value="簽　　回" />
+    <Language field="dataFormMaster.ISSIGN.PlaceHolder" value="" />
+    <Language field="dataFormMaster.REFBILLNO.Caption" value="客戶單號" />
+    <Language field="dataFormMaster.REFBILLNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.ONHANDDATE.Caption" value="預交貨日" />
+    <Language field="dataFormMaster.ONHANDDATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.CUSTID.Caption" value="客戶編號" />
+    <Language field="dataFormMaster1.CUSTID.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.title" value="客戶編號查詢" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.CUSTID" value="客戶編號" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.CORPCNAME" value="客戶名稱" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.CORPSHORTNAME" value="客戶簡稱" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.CUSTCATEID" value="客戶類別" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.CORPUNICODE" value="統一編號" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.CONNECTPERSON" value="連 絡 人" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.PERSONID" value="業務人員" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.TEL1" value="電話號碼1" />
+    <Language field="dataFormMaster1.CORPMEMO.Caption" value="注意事項" />
+    <Language field="dataFormMaster1.CORPMEMO.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.DELIVERADDRESS.Caption" value="送貨地址" />
+    <Language field="dataFormMaster1.DELIVERADDRESS.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.PROJECTID.Caption" value="專案編號" />
+    <Language field="dataFormMaster1.PROJECTID.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.title" value="專案編號查詢" />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.Caption.PROJECTID" value="專案代號" />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.Caption.PROJECTCLASSID" value="專案類別" />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.Caption.PROJ_CNAME" value="中文名稱" />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.Caption.PROJ_BOSS" value="專案主管" />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.Caption.PROJ_STARTDATE" value="起始日期" />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.Caption.PROJ_ENDDATE" value="結束日期" />
+    <Language field="dataFormMaster1.PERSONID.Caption" value="業務人員" />
+    <Language field="dataFormMaster1.PERSONID.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.title" value="業務人員查詢" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.PERSONID" value="員工編號" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.PERSONCNAME" value="員工姓名" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.ENGLISHNAME" value="英文姓名" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.JOBNAME" value="員工職稱" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.BIRTHDAY" value="出生日期" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.DEPARTMENTID" value="部門編號" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.CELLPHONE" value="行動電話" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.FIRSTWORKDATE" value="到 職 日" />
+    <Language field="dataFormMaster1.WAREID.Caption" value="倉庫代號" />
+    <Language field="dataFormMaster1.WAREID.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.WAREID.inforefval.title" value="倉庫代號查詢" />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.WAREID" value="倉庫編號" />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.WARECNAME" value="倉庫名稱" />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.WAREENAME" value="英文名稱" />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.WARESHORTNAME" value="倉庫簡稱" />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.WAREHOUSETYPE" value="倉庫屬性" />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.TEL" value="連絡電話" />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.FAX" value="傳　　真" />
+    <Language field="dataFormMaster1.DEPARTMENTID.Caption" value="部門編號" />
+    <Language field="dataFormMaster1.DEPARTMENTID.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.DEPARTMENTID.inforefval.title" value="部門編號查詢" />
+    <Language field="dataFormMaster1.DEPARTMENTID.inforefval.Caption.DEPARTMENTID" value="部門編號" />
+    <Language field="dataFormMaster1.DEPARTMENTID.inforefval.Caption.DEPARTMENTCNAME" value="部門名稱" />
+    <Language field="dataFormMaster1.DEPARTMENTID.inforefval.Caption.DEPARTMENTENAME" value="英文名稱" />
+    <Language field="dataFormMaster1.DEPARTMENTID.inforefval.Caption.MEMOCHAR" value="備    註" />
+    <Language field="dataFormMaster1.CONNECTPERSON.Caption" value="聯 絡 人" />
+    <Language field="dataFormMaster1.CONNECTPERSON.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.CURRENCYID.Caption" value="幣別編號" />
+    <Language field="dataFormMaster1.CURRENCYID.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.CURRENCYID.inforefval.title" value="幣別編號查詢" />
+    <Language field="dataFormMaster1.CURRENCYID.inforefval.Caption.CURRENCYID" value="幣別編號" />
+    <Language field="dataFormMaster1.CURRENCYID.inforefval.Caption.CURRENCYCNAME" value="幣別名稱" />
+    <Language field="dataFormMaster1.CURRENCYID.inforefval.Caption.CURRENCYENAME" value="英文名稱" />
+    <Language field="dataFormMaster1.CURRENCYID.inforefval.Caption.CURRRATEIN" value="買入匯率" />
+    <Language field="dataFormMaster1.CURRENCYID.inforefval.Caption.CURRRATEOUT" value="賣出匯率" />
+    <Language field="dataFormMaster1.CURRRATE.Caption" value="匯率金額" />
+    <Language field="dataFormMaster1.CURRRATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.INVOICETYPE.Caption" value="發票聯式" />
+    <Language field="dataFormMaster1.INVOICETYPE.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.TAXCLASS.Caption" value="課稅類別" />
+    <Language field="dataFormMaster1.TAXCLASS.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.TOTALAMOUNT.Caption" value="未稅合計" />
+    <Language field="dataFormMaster1.TOTALAMOUNT.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.TAXAMOUNT.Caption" value="營 業 稅" />
+    <Language field="dataFormMaster1.TAXAMOUNT.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.SUMQUALITY.Caption" value="數量合計" />
+    <Language field="dataFormMaster1.SUMQUALITY.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.SUMAMOUNT.Caption" value="總　　計" />
+    <Language field="dataFormMaster1.SUMAMOUNT.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.MEMODOC.Caption" value="備　　註" />
+    <Language field="dataFormMaster2.MEMODOC.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.DATAPATH.Caption" value="附檔" />
+    <Language field="dataFormMaster2.DATAPATH.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.PAYMENTWAY.Caption" value="收款方式" />
+    <Language field="dataFormMaster2.PAYMENTWAY.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.SHIPMENT.Caption" value="交貨方式" />
+    <Language field="dataFormMaster2.SHIPMENT.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.VALIDITYDATE.Caption" value="有效日期" />
+    <Language field="dataFormMaster2.VALIDITYDATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.VALIDITYDOC.Caption" value="有效日說明" />
+    <Language field="dataFormMaster2.VALIDITYDOC.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.BILLHEADNO.Caption" value="表頭條文" />
+    <Language field="dataFormMaster2.BILLHEADNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.BILLHEADNO.inforefval.title" value="表頭條文查詢" />
+    <Language field="dataFormMaster2.BILLHEADNO.inforefval.Caption.TAILID" value="表頭代號" />
+    <Language field="dataFormMaster2.BILLHEADNO.inforefval.Caption.TAILDESC" value="表頭說明" />
+    <Language field="dataFormMaster2.BILLTAILNO.Caption" value="表尾條文" />
+    <Language field="dataFormMaster2.BILLTAILNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.BILLTAILNO.inforefval.title" value="表尾條文查詢" />
+    <Language field="dataFormMaster2.BILLTAILNO.inforefval.Caption.TAILID" value="表尾代號" />
+    <Language field="dataFormMaster2.BILLTAILNO.inforefval.Caption.TAILDESC" value="表尾說明" />
+    <Language field="dataFormMaster3.DATAEXTEND1.Caption" value="香帥" />
+    <Language field="dataFormMaster3.DATAEXTEND1.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND2.Caption" value="擴充欄位2" />
+    <Language field="dataFormMaster3.DATAEXTEND2.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND3.Caption" value="擴充欄位3" />
+    <Language field="dataFormMaster3.DATAEXTEND3.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND4.Caption" value="擴充欄位4" />
+    <Language field="dataFormMaster3.DATAEXTEND4.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND5.Caption" value="擴充欄位5" />
+    <Language field="dataFormMaster3.DATAEXTEND5.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND6.Caption" value="擴充欄位6" />
+    <Language field="dataFormMaster3.DATAEXTEND6.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND7.Caption" value="擴充欄位7" />
+    <Language field="dataFormMaster3.DATAEXTEND7.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND8.Caption" value="擴充欄位8" />
+    <Language field="dataFormMaster3.DATAEXTEND8.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.CREATE_USER.Caption" value="建檔人員" />
+    <Language field="dataFormMaster3.CREATE_USER.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.CREATE_DATE.Caption" value="建檔日期" />
+    <Language field="dataFormMaster3.CREATE_DATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.UPDATE_USER.Caption" value="修改人員" />
+    <Language field="dataFormMaster3.UPDATE_USER.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.UPDATE_DATE.Caption" value="修改日期" />
+    <Language field="dataFormMaster3.UPDATE_DATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.SIGN_USER.Caption" value="覆核人員" />
+    <Language field="dataFormMaster3.SIGN_USER.PlaceHolder" value="" />
+    <Language field="dataFormMaster.BILLNO.Caption" value="訂單編號" />
+    <Language field="dataFormMaster.BILLNO.PlaceHolder" value="" />
+    <Language field="dataGridDetail.BILLNO.Caption" value="訂單編號" />
+    <Language field="dataGridDetail.BILLNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.SEQNO.Caption" value="欄號" />
+    <Language field="dataFormMaster.SEQNO.PlaceHolder" value="" />
+    <Language field="dataGridDetail.SEQNO.Caption" value="欄號" />
+    <Language field="dataGridDetail.SEQNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.WAREID.Caption" value="倉庫代號" />
+    <Language field="dataFormMaster.WAREID.PlaceHolder" value="" />
+    <Language field="dataFormMaster.WAREID.inforefval.title" value="倉庫代號查詢" />
+    <Language field="dataGridDetail.WAREID.Caption" value="倉庫代號" />
+    <Language field="dataGridDetail.WAREID.PlaceHolder" value="" />
+    <Language field="dataGridDetail.WAREID.inforefval.title" value="倉庫代號查詢" />
+    <Language field="dataFormMaster.CUSTID.Caption" value="客戶編號" />
+    <Language field="dataFormMaster.CUSTID.PlaceHolder" value="" />
+    <Language field="dataGridDetail.CUSTID.Caption" value="客戶編號" />
+    <Language field="dataGridDetail.CUSTID.PlaceHolder" value="" />
+    <Language field="dataFormMaster.PRODUCTID.Caption" value="產品編號" />
+    <Language field="dataFormMaster.PRODUCTID.PlaceHolder" value="" />
+    <Language field="dataFormMaster.PRODUCTID.inforefval.title" value="產品編號查詢" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODUCTID" value="產品編號" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.SCANCODE" value="條碼編號" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODCNAME" value="產品品名" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODSTRUCTURE" value="產品規格" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.INVOICEPRODNAME" value="產品品牌" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODCATEID" value="產品類別" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.SALEPRICE" value="建議售價" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.CALCUNIT" value="計量單位" />
+    <Language field="dataGridDetail.PRODUCTID.Caption" value="產品編號" />
+    <Language field="dataGridDetail.PRODUCTID.PlaceHolder" value="" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.title" value="產品編號查詢" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODUCTID" value="產品編號" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.SCANCODE" value="條碼編號" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODCNAME" value="產品品名" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODSTRUCTURE" value="產品規格" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.INVOICEPRODNAME" value="產品品牌" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODCATEID" value="產品類別" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.SALEPRICE" value="建議售價" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.CALCUNIT" value="計量單位" />
+    <Language field="dataFormMaster.PRODCNAME.Caption" value="品名" />
+    <Language field="dataFormMaster.PRODCNAME.PlaceHolder" value="" />
+    <Language field="dataGridDetail.PRODCNAME.Caption" value="品名" />
+    <Language field="dataGridDetail.PRODCNAME.PlaceHolder" value="" />
+    <Language field="dataFormMaster.PRODENAME.Caption" value="英文名稱" />
+    <Language field="dataFormMaster.PRODENAME.PlaceHolder" value="" />
+    <Language field="dataGridDetail.PRODENAME.Caption" value="英文名稱" />
+    <Language field="dataGridDetail.PRODENAME.PlaceHolder" value="" />
+    <Language field="dataFormMaster.PRODSTRUCTURE.Caption" value="規格" />
+    <Language field="dataFormMaster.PRODSTRUCTURE.PlaceHolder" value="" />
+    <Language field="dataGridDetail.PRODSTRUCTURE.Caption" value="規格" />
+    <Language field="dataGridDetail.PRODSTRUCTURE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.QUANTITY.Caption" value="數量" />
+    <Language field="dataFormMaster.QUANTITY.PlaceHolder" value="" />
+    <Language field="dataGridDetail.QUANTITY.Caption" value="數量" />
+    <Language field="dataGridDetail.QUANTITY.PlaceHolder" value="" />
+    <Language field="dataFormMaster.UNIT.Caption" value="單位" />
+    <Language field="dataFormMaster.UNIT.PlaceHolder" value="" />
+    <Language field="dataGridDetail.UNIT.Caption" value="單位" />
+    <Language field="dataGridDetail.UNIT.PlaceHolder" value="" />
+    <Language field="dataFormMaster.PRICE.Caption" value="單價" />
+    <Language field="dataFormMaster.PRICE.PlaceHolder" value="" />
+    <Language field="dataGridDetail.PRICE.Caption" value="單價" />
+    <Language field="dataGridDetail.PRICE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.TAXPRICE.Caption" value="含稅單價" />
+    <Language field="dataFormMaster.TAXPRICE.PlaceHolder" value="" />
+    <Language field="dataGridDetail.TAXPRICE.Caption" value="含稅單價" />
+    <Language field="dataGridDetail.TAXPRICE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.PRODCOST.Caption" value="產品當時成本" />
+    <Language field="dataFormMaster.PRODCOST.PlaceHolder" value="" />
+    <Language field="dataGridDetail.PRODCOST.Caption" value="產品當時成本" />
+    <Language field="dataGridDetail.PRODCOST.PlaceHolder" value="" />
+    <Language field="dataFormMaster.SUBAMOUNT.Caption" value="金額" />
+    <Language field="dataFormMaster.SUBAMOUNT.PlaceHolder" value="" />
+    <Language field="dataGridDetail.SUBAMOUNT.Caption" value="金額" />
+    <Language field="dataGridDetail.SUBAMOUNT.PlaceHolder" value="" />
+    <Language field="dataFormMaster.TAXAMOUNT.Caption" value="含稅金額" />
+    <Language field="dataFormMaster.TAXAMOUNT.PlaceHolder" value="" />
+    <Language field="dataGridDetail.TAXAMOUNT.Caption" value="含稅金額" />
+    <Language field="dataGridDetail.TAXAMOUNT.PlaceHolder" value="" />
+    <Language field="dataFormMaster.ONHANDDATE.Caption" value="預交貨日" />
+    <Language field="dataFormMaster.ONHANDDATE.PlaceHolder" value="" />
+    <Language field="dataGridDetail.ONHANDDATE.Caption" value="預交貨日" />
+    <Language field="dataGridDetail.ONHANDDATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.ASSEMBLEQTY.Caption" value="組合數量" />
+    <Language field="dataFormMaster.ASSEMBLEQTY.PlaceHolder" value="" />
+    <Language field="dataGridDetail.ASSEMBLEQTY.Caption" value="組合數量" />
+    <Language field="dataGridDetail.ASSEMBLEQTY.PlaceHolder" value="" />
+    <Language field="dataFormMaster.SOURCEBILLNO.Caption" value="原單單號" />
+    <Language field="dataFormMaster.SOURCEBILLNO.PlaceHolder" value="" />
+    <Language field="dataGridDetail.SOURCEBILLNO.Caption" value="原單單號" />
+    <Language field="dataGridDetail.SOURCEBILLNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.SOURCEUNIQUENO.Caption" value="原單序號" />
+    <Language field="dataFormMaster.SOURCEUNIQUENO.PlaceHolder" value="" />
+    <Language field="dataGridDetail.SOURCEUNIQUENO.Caption" value="原單序號" />
+    <Language field="dataGridDetail.SOURCEUNIQUENO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.ISNEEDMADE.Caption" value="生產否" />
+    <Language field="dataFormMaster.ISNEEDMADE.PlaceHolder" value="" />
+    <Language field="dataGridDetail.ISNEEDMADE.Caption" value="生產否" />
+    <Language field="dataGridDetail.ISNEEDMADE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.MEMOCHAR1.Caption" value="備註1" />
+    <Language field="dataFormMaster.MEMOCHAR1.PlaceHolder" value="" />
+    <Language field="dataGridDetail.MEMOCHAR1.Caption" value="備註1" />
+    <Language field="dataGridDetail.MEMOCHAR1.PlaceHolder" value="" />
+    <Language field="dataFormMaster.MEMOCHAR2.Caption" value="備註2" />
+    <Language field="dataFormMaster.MEMOCHAR2.PlaceHolder" value="" />
+    <Language field="dataGridDetail.MEMOCHAR2.Caption" value="備註2" />
+    <Language field="dataGridDetail.MEMOCHAR2.PlaceHolder" value="" />
+    <Language field="dataFormMaster.ISGIFTPROD.Caption" value="贈品" />
+    <Language field="dataFormMaster.ISGIFTPROD.PlaceHolder" value="" />
+    <Language field="dataGridDetail.ISGIFTPROD.Caption" value="贈品" />
+    <Language field="dataGridDetail.ISGIFTPROD.PlaceHolder" value="" />
+    <Language field="dataFormMaster.BOXQTY.Caption" value="雙單位數量" />
+    <Language field="dataFormMaster.BOXQTY.PlaceHolder" value="" />
+    <Language field="dataGridDetail.BOXQTY.Caption" value="雙單位數量" />
+    <Language field="dataGridDetail.BOXQTY.PlaceHolder" value="" />
+    <Language field="dataFormMaster.BOXPRICE.Caption" value="雙單位單價" />
+    <Language field="dataFormMaster.BOXPRICE.PlaceHolder" value="" />
+    <Language field="dataGridDetail.BOXPRICE.Caption" value="雙單位單價" />
+    <Language field="dataGridDetail.BOXPRICE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.UNIQUENO.Caption" value="唯一序號" />
+    <Language field="dataFormMaster.UNIQUENO.PlaceHolder" value="" />
+    <Language field="dataGridDetail.UNIQUENO.Caption" value="唯一序號" />
+    <Language field="dataGridDetail.UNIQUENO.PlaceHolder" value="" />
+
+    <Language field="This.Title" value="[OPOM02] 客戶訂單維護" />
+  </CHT>
+  <CHS>
+    <Language field="ScriptManager.ToolTip" value="" />
+    <Language field="dgView.ToolTip" value="" />
+    <Language field="dgView.icon-add.ToolItemText" value="新增" />
+    <Language field="dgView.icon-edit.ToolItemText" value="修改" />
+    <Language field="dgView.icon-remove.ToolItemText" value="刪除" />
+    <Language field="dgView.icon-save.ToolItemText" value="存檔" />
+    <Language field="dgView.icon-cancel.ToolItemText" value="取消" />
+    <Language field="dgView.icon-undo.ToolItemText" value="取消" />
+    <Language field="dgView.icon-sign.ToolItemText" value="審核" />
+    <Language field="dgView.icon-print.ToolItemText" value="列印" />
+    <Language field="dgView.Title" value="客戶訂單維護" />
+    <Language field="dgView.QueryTitle" value="快速查詢" />
+    <Language field="dgView.TotalCaption" value="Total:" />
+    <Language field="JQDialog1.ToolTip" value="" />
+    <Language field="JQDialog1.Title" value="客戶訂單維護" />
+    <Language field="dgView.BILLDATE.Caption" value="日　　期" />
+    <Language field="dgView.BILLDATE.PlaceHolder" value="" />
+    <Language field="dgView.BILLNO.Caption" value="訂單編號" />
+    <Language field="dgView.BILLNO.PlaceHolder" value="" />
+    <Language field="dgView.REFBILLNO.Caption" value="客戶單號" />
+    <Language field="dgView.REFBILLNO.PlaceHolder" value="" />
+    <Language field="dgView.ONHANDDATE.Caption" value="預交貨日" />
+    <Language field="dgView.ONHANDDATE.PlaceHolder" value="" />
+    <Language field="dgView.CUSTID.Caption" value="客戶編號" />
+    <Language field="dgView.CUSTID.PlaceHolder" value="" />
+    <Language field="TabItem1.Title" value="主要明細" />
+    <Language field="dgView.PROJECTID.Caption" value="專案編號" />
+    <Language field="dgView.PROJECTID.PlaceHolder" value="" />
+    <Language field="dgView.PERSONID.Caption" value="業務人員" />
+    <Language field="dgView.PERSONID.PlaceHolder" value="" />
+    <Language field="dgView.WAREID.Caption" value="倉庫代號" />
+    <Language field="dgView.WAREID.PlaceHolder" value="" />
+    <Language field="TabItem2.Title" value="其他明細" />
+    <Language field="TabItem3.Title" value="擴充欄位" />
+    <Language field="dgView.PRODCNAME.Caption" value="品名" />
+    <Language field="dgView.PRODCNAME.PlaceHolder" value="" />
+    <Language field="dgView.PRODSTRUCTURE.Caption" value="規格" />
+    <Language field="dgView.PRODSTRUCTURE.PlaceHolder" value="" />
+
+    <Language field="dgView.BILLDATE.QueryColumnCaption%%" value="日　　期" />
+    <Language field="dgView.BILLNO.QueryColumnCaption%%" value="訂單編號" />
+    <Language field="dgView.CUSTID.QueryColumnCaption%%" value="客戶編號" />
+    <Language field="dgView.CORPMEMO.QueryColumnCaption%%" value="注意事項" />
+
+    <Language field="dataFormMaster.BILLDATE.Caption" value="日　　期" />
+    <Language field="dataFormMaster.BILLDATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.BILLNO.Caption" value="訂單編號" />
+    <Language field="dataFormMaster.BILLNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.SDTBILLNO.Caption" value="自編單號" />
+    <Language field="dataFormMaster.SDTBILLNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.ISSIGN.Caption" value="簽　　回" />
+    <Language field="dataFormMaster.ISSIGN.PlaceHolder" value="" />
+    <Language field="dataFormMaster.REFBILLNO.Caption" value="客戶單號" />
+    <Language field="dataFormMaster.REFBILLNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.ONHANDDATE.Caption" value="預交貨日" />
+    <Language field="dataFormMaster.ONHANDDATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.CUSTID.Caption" value="客戶編號" />
+    <Language field="dataFormMaster1.CUSTID.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.title" value="客戶編號查詢" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.CUSTID" value="客戶編號" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.CORPCNAME" value="客戶名稱" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.CORPSHORTNAME" value="客戶簡稱" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.CUSTCATEID" value="客戶類別" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.CORPUNICODE" value="統一編號" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.CONNECTPERSON" value="連 絡 人" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.PERSONID" value="業務人員" />
+    <Language field="dataFormMaster1.CUSTID.inforefval.Caption.TEL1" value="電話號碼1" />
+    <Language field="dataFormMaster1.CORPMEMO.Caption" value="注意事項" />
+    <Language field="dataFormMaster1.CORPMEMO.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.DELIVERADDRESS.Caption" value="送貨地址" />
+    <Language field="dataFormMaster1.DELIVERADDRESS.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.PROJECTID.Caption" value="專案編號" />
+    <Language field="dataFormMaster1.PROJECTID.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.title" value="專案編號查詢" />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.Caption.PROJECTID" value="專案代號" />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.Caption.PROJECTCLASSID" value="專案類別" />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.Caption.PROJ_CNAME" value="中文名稱" />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.Caption.PROJ_BOSS" value="專案主管" />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.Caption.PROJ_STARTDATE" value="起始日期" />
+    <Language field="dataFormMaster1.PROJECTID.inforefval.Caption.PROJ_ENDDATE" value="結束日期" />
+    <Language field="dataFormMaster1.PERSONID.Caption" value="業務人員" />
+    <Language field="dataFormMaster1.PERSONID.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.title" value="業務人員查詢" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.PERSONID" value="員工編號" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.PERSONCNAME" value="員工姓名" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.ENGLISHNAME" value="英文姓名" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.JOBNAME" value="員工職稱" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.BIRTHDAY" value="出生日期" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.DEPARTMENTID" value="部門編號" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.CELLPHONE" value="行動電話" />
+    <Language field="dataFormMaster1.PERSONID.inforefval.Caption.FIRSTWORKDATE" value="到 職 日" />
+    <Language field="dataFormMaster1.WAREID.Caption" value="倉庫代號" />
+    <Language field="dataFormMaster1.WAREID.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.WAREID.inforefval.title" value="倉庫代號查詢" />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.WAREID" value="倉庫編號" />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.WARECNAME" value="倉庫名稱" />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.WAREENAME" value="英文名稱" />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.WARESHORTNAME" value="倉庫簡稱" />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.WAREHOUSETYPE" value="倉庫屬性" />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.TEL" value="連絡電話" />
+    <Language field="dataFormMaster1.WAREID.inforefval.Caption.FAX" value="傳　　真" />
+    <Language field="dataFormMaster1.DEPARTMENTID.Caption" value="部門編號" />
+    <Language field="dataFormMaster1.DEPARTMENTID.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.DEPARTMENTID.inforefval.title" value="部門編號查詢" />
+    <Language field="dataFormMaster1.DEPARTMENTID.inforefval.Caption.DEPARTMENTID" value="部門編號" />
+    <Language field="dataFormMaster1.DEPARTMENTID.inforefval.Caption.DEPARTMENTCNAME" value="部門名稱" />
+    <Language field="dataFormMaster1.DEPARTMENTID.inforefval.Caption.DEPARTMENTENAME" value="英文名稱" />
+    <Language field="dataFormMaster1.DEPARTMENTID.inforefval.Caption.MEMOCHAR" value="備    註" />
+    <Language field="dataFormMaster1.CONNECTPERSON.Caption" value="聯 絡 人" />
+    <Language field="dataFormMaster1.CONNECTPERSON.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.CURRENCYID.Caption" value="幣別編號" />
+    <Language field="dataFormMaster1.CURRENCYID.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.CURRENCYID.inforefval.title" value="幣別編號查詢" />
+    <Language field="dataFormMaster1.CURRENCYID.inforefval.Caption.CURRENCYID" value="幣別編號" />
+    <Language field="dataFormMaster1.CURRENCYID.inforefval.Caption.CURRENCYCNAME" value="幣別名稱" />
+    <Language field="dataFormMaster1.CURRENCYID.inforefval.Caption.CURRENCYENAME" value="英文名稱" />
+    <Language field="dataFormMaster1.CURRENCYID.inforefval.Caption.CURRRATEIN" value="買入匯率" />
+    <Language field="dataFormMaster1.CURRENCYID.inforefval.Caption.CURRRATEOUT" value="賣出匯率" />
+    <Language field="dataFormMaster1.CURRRATE.Caption" value="匯率金額" />
+    <Language field="dataFormMaster1.CURRRATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.INVOICETYPE.Caption" value="發票聯式" />
+    <Language field="dataFormMaster1.INVOICETYPE.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.TAXCLASS.Caption" value="課稅類別" />
+    <Language field="dataFormMaster1.TAXCLASS.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.TOTALAMOUNT.Caption" value="未稅合計" />
+    <Language field="dataFormMaster1.TOTALAMOUNT.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.TAXAMOUNT.Caption" value="營 業 稅" />
+    <Language field="dataFormMaster1.TAXAMOUNT.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.SUMQUALITY.Caption" value="數量合計" />
+    <Language field="dataFormMaster1.SUMQUALITY.PlaceHolder" value="" />
+    <Language field="dataFormMaster1.SUMAMOUNT.Caption" value="總　　計" />
+    <Language field="dataFormMaster1.SUMAMOUNT.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.MEMODOC.Caption" value="備　　註" />
+    <Language field="dataFormMaster2.MEMODOC.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.DATAPATH.Caption" value="附檔" />
+    <Language field="dataFormMaster2.DATAPATH.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.PAYMENTWAY.Caption" value="收款方式" />
+    <Language field="dataFormMaster2.PAYMENTWAY.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.SHIPMENT.Caption" value="交貨方式" />
+    <Language field="dataFormMaster2.SHIPMENT.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.VALIDITYDATE.Caption" value="有效日期" />
+    <Language field="dataFormMaster2.VALIDITYDATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.VALIDITYDOC.Caption" value="有效日說明" />
+    <Language field="dataFormMaster2.VALIDITYDOC.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.BILLHEADNO.Caption" value="表頭條文" />
+    <Language field="dataFormMaster2.BILLHEADNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.BILLHEADNO.inforefval.title" value="表頭條文查詢" />
+    <Language field="dataFormMaster2.BILLHEADNO.inforefval.Caption.TAILID" value="表頭代號" />
+    <Language field="dataFormMaster2.BILLHEADNO.inforefval.Caption.TAILDESC" value="表頭說明" />
+    <Language field="dataFormMaster2.BILLTAILNO.Caption" value="表尾條文" />
+    <Language field="dataFormMaster2.BILLTAILNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster2.BILLTAILNO.inforefval.title" value="表尾條文查詢" />
+    <Language field="dataFormMaster2.BILLTAILNO.inforefval.Caption.TAILID" value="表尾代號" />
+    <Language field="dataFormMaster2.BILLTAILNO.inforefval.Caption.TAILDESC" value="表尾說明" />
+    <Language field="dataFormMaster3.DATAEXTEND1.Caption" value="擴充欄位1" />
+    <Language field="dataFormMaster3.DATAEXTEND1.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND2.Caption" value="擴充欄位2" />
+    <Language field="dataFormMaster3.DATAEXTEND2.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND3.Caption" value="擴充欄位3" />
+    <Language field="dataFormMaster3.DATAEXTEND3.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND4.Caption" value="擴充欄位4" />
+    <Language field="dataFormMaster3.DATAEXTEND4.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND5.Caption" value="擴充欄位5" />
+    <Language field="dataFormMaster3.DATAEXTEND5.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND6.Caption" value="擴充欄位6" />
+    <Language field="dataFormMaster3.DATAEXTEND6.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND7.Caption" value="擴充欄位7" />
+    <Language field="dataFormMaster3.DATAEXTEND7.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.DATAEXTEND8.Caption" value="擴充欄位8" />
+    <Language field="dataFormMaster3.DATAEXTEND8.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.CREATE_USER.Caption" value="建檔人員" />
+    <Language field="dataFormMaster3.CREATE_USER.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.CREATE_DATE.Caption" value="建檔日期" />
+    <Language field="dataFormMaster3.CREATE_DATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.UPDATE_USER.Caption" value="修改人員" />
+    <Language field="dataFormMaster3.UPDATE_USER.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.UPDATE_DATE.Caption" value="修改日期" />
+    <Language field="dataFormMaster3.UPDATE_DATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster3.SIGN_USER.Caption" value="覆核人員" />
+    <Language field="dataFormMaster3.SIGN_USER.PlaceHolder" value="" />
+    <Language field="dataFormMaster.BILLNO.Caption" value="訂單編號" />
+    <Language field="dataFormMaster.BILLNO.PlaceHolder" value="" />
+    <Language field="dataGridDetail.BILLNO.Caption" value="訂單編號" />
+    <Language field="dataGridDetail.BILLNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.SEQNO.Caption" value="欄號" />
+    <Language field="dataFormMaster.SEQNO.PlaceHolder" value="" />
+    <Language field="dataGridDetail.SEQNO.Caption" value="欄號" />
+    <Language field="dataGridDetail.SEQNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.WAREID.Caption" value="倉庫代號" />
+    <Language field="dataFormMaster.WAREID.PlaceHolder" value="" />
+    <Language field="dataFormMaster.WAREID.inforefval.title" value="倉庫代號查詢" />
+    <Language field="dataGridDetail.WAREID.Caption" value="倉庫代號" />
+    <Language field="dataGridDetail.WAREID.PlaceHolder" value="" />
+    <Language field="dataGridDetail.WAREID.inforefval.title" value="倉庫代號查詢" />
+    <Language field="dataFormMaster.CUSTID.Caption" value="客戶編號" />
+    <Language field="dataFormMaster.CUSTID.PlaceHolder" value="" />
+    <Language field="dataGridDetail.CUSTID.Caption" value="客戶編號" />
+    <Language field="dataGridDetail.CUSTID.PlaceHolder" value="" />
+    <Language field="dataFormMaster.PRODUCTID.Caption" value="產品編號" />
+    <Language field="dataFormMaster.PRODUCTID.PlaceHolder" value="" />
+    <Language field="dataFormMaster.PRODUCTID.inforefval.title" value="產品編號查詢" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODUCTID" value="產品編號" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.SCANCODE" value="條碼編號" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODCNAME" value="產品品名" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODSTRUCTURE" value="產品規格" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.INVOICEPRODNAME" value="產品品牌" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODCATEID" value="產品類別" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.SALEPRICE" value="建議售價" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.CALCUNIT" value="計量單位" />
+    <Language field="dataGridDetail.PRODUCTID.Caption" value="產品編號" />
+    <Language field="dataGridDetail.PRODUCTID.PlaceHolder" value="" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.title" value="產品編號查詢" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODUCTID" value="產品編號" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.SCANCODE" value="條碼編號" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODCNAME" value="產品品名" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODSTRUCTURE" value="產品規格" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.INVOICEPRODNAME" value="產品品牌" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.PRODCATEID" value="產品類別" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.SALEPRICE" value="建議售價" />
+    <Language field="dataGridDetail.PRODUCTID.inforefval.Caption.CALCUNIT" value="計量單位" />
+    <Language field="dataFormMaster.PRODCNAME.Caption" value="品名" />
+    <Language field="dataFormMaster.PRODCNAME.PlaceHolder" value="" />
+    <Language field="dataGridDetail.PRODCNAME.Caption" value="品名" />
+    <Language field="dataGridDetail.PRODCNAME.PlaceHolder" value="" />
+    <Language field="dataFormMaster.PRODENAME.Caption" value="英文名稱" />
+    <Language field="dataFormMaster.PRODENAME.PlaceHolder" value="" />
+    <Language field="dataGridDetail.PRODENAME.Caption" value="英文名稱" />
+    <Language field="dataGridDetail.PRODENAME.PlaceHolder" value="" />
+    <Language field="dataFormMaster.PRODSTRUCTURE.Caption" value="規格" />
+    <Language field="dataFormMaster.PRODSTRUCTURE.PlaceHolder" value="" />
+    <Language field="dataGridDetail.PRODSTRUCTURE.Caption" value="規格" />
+    <Language field="dataGridDetail.PRODSTRUCTURE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.QUANTITY.Caption" value="數量" />
+    <Language field="dataFormMaster.QUANTITY.PlaceHolder" value="" />
+    <Language field="dataGridDetail.QUANTITY.Caption" value="數量" />
+    <Language field="dataGridDetail.QUANTITY.PlaceHolder" value="" />
+    <Language field="dataFormMaster.UNIT.Caption" value="單位" />
+    <Language field="dataFormMaster.UNIT.PlaceHolder" value="" />
+    <Language field="dataGridDetail.UNIT.Caption" value="單位" />
+    <Language field="dataGridDetail.UNIT.PlaceHolder" value="" />
+    <Language field="dataFormMaster.PRICE.Caption" value="單價" />
+    <Language field="dataFormMaster.PRICE.PlaceHolder" value="" />
+    <Language field="dataGridDetail.PRICE.Caption" value="單價" />
+    <Language field="dataGridDetail.PRICE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.TAXPRICE.Caption" value="含稅單價" />
+    <Language field="dataFormMaster.TAXPRICE.PlaceHolder" value="" />
+    <Language field="dataGridDetail.TAXPRICE.Caption" value="含稅單價" />
+    <Language field="dataGridDetail.TAXPRICE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.PRODCOST.Caption" value="產品當時成本" />
+    <Language field="dataFormMaster.PRODCOST.PlaceHolder" value="" />
+    <Language field="dataGridDetail.PRODCOST.Caption" value="產品當時成本" />
+    <Language field="dataGridDetail.PRODCOST.PlaceHolder" value="" />
+    <Language field="dataFormMaster.SUBAMOUNT.Caption" value="金額" />
+    <Language field="dataFormMaster.SUBAMOUNT.PlaceHolder" value="" />
+    <Language field="dataGridDetail.SUBAMOUNT.Caption" value="金額" />
+    <Language field="dataGridDetail.SUBAMOUNT.PlaceHolder" value="" />
+    <Language field="dataFormMaster.TAXAMOUNT.Caption" value="含稅金額" />
+    <Language field="dataFormMaster.TAXAMOUNT.PlaceHolder" value="" />
+    <Language field="dataGridDetail.TAXAMOUNT.Caption" value="含稅金額" />
+    <Language field="dataGridDetail.TAXAMOUNT.PlaceHolder" value="" />
+    <Language field="dataFormMaster.ONHANDDATE.Caption" value="預交貨日" />
+    <Language field="dataFormMaster.ONHANDDATE.PlaceHolder" value="" />
+    <Language field="dataGridDetail.ONHANDDATE.Caption" value="預交貨日" />
+    <Language field="dataGridDetail.ONHANDDATE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.ASSEMBLEQTY.Caption" value="組合數量" />
+    <Language field="dataFormMaster.ASSEMBLEQTY.PlaceHolder" value="" />
+    <Language field="dataGridDetail.ASSEMBLEQTY.Caption" value="組合數量" />
+    <Language field="dataGridDetail.ASSEMBLEQTY.PlaceHolder" value="" />
+    <Language field="dataFormMaster.SOURCEBILLNO.Caption" value="原單單號" />
+    <Language field="dataFormMaster.SOURCEBILLNO.PlaceHolder" value="" />
+    <Language field="dataGridDetail.SOURCEBILLNO.Caption" value="原單單號" />
+    <Language field="dataGridDetail.SOURCEBILLNO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.SOURCEUNIQUENO.Caption" value="原單序號" />
+    <Language field="dataFormMaster.SOURCEUNIQUENO.PlaceHolder" value="" />
+    <Language field="dataGridDetail.SOURCEUNIQUENO.Caption" value="原單序號" />
+    <Language field="dataGridDetail.SOURCEUNIQUENO.PlaceHolder" value="" />
+    <Language field="dataFormMaster.ISNEEDMADE.Caption" value="生產否" />
+    <Language field="dataFormMaster.ISNEEDMADE.PlaceHolder" value="" />
+    <Language field="dataGridDetail.ISNEEDMADE.Caption" value="生產否" />
+    <Language field="dataGridDetail.ISNEEDMADE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.MEMOCHAR1.Caption" value="備註1" />
+    <Language field="dataFormMaster.MEMOCHAR1.PlaceHolder" value="" />
+    <Language field="dataGridDetail.MEMOCHAR1.Caption" value="備註1" />
+    <Language field="dataGridDetail.MEMOCHAR1.PlaceHolder" value="" />
+    <Language field="dataFormMaster.MEMOCHAR2.Caption" value="備註2" />
+    <Language field="dataFormMaster.MEMOCHAR2.PlaceHolder" value="" />
+    <Language field="dataGridDetail.MEMOCHAR2.Caption" value="備註2" />
+    <Language field="dataGridDetail.MEMOCHAR2.PlaceHolder" value="" />
+    <Language field="dataFormMaster.ISGIFTPROD.Caption" value="贈品" />
+    <Language field="dataFormMaster.ISGIFTPROD.PlaceHolder" value="" />
+    <Language field="dataGridDetail.ISGIFTPROD.Caption" value="贈品" />
+    <Language field="dataGridDetail.ISGIFTPROD.PlaceHolder" value="" />
+    <Language field="dataFormMaster.BOXQTY.Caption" value="雙單位數量" />
+    <Language field="dataFormMaster.BOXQTY.PlaceHolder" value="" />
+    <Language field="dataGridDetail.BOXQTY.Caption" value="雙單位數量" />
+    <Language field="dataGridDetail.BOXQTY.PlaceHolder" value="" />
+    <Language field="dataFormMaster.BOXPRICE.Caption" value="雙單位單價" />
+    <Language field="dataFormMaster.BOXPRICE.PlaceHolder" value="" />
+    <Language field="dataGridDetail.BOXPRICE.Caption" value="雙單位單價" />
+    <Language field="dataGridDetail.BOXPRICE.PlaceHolder" value="" />
+    <Language field="dataFormMaster.UNIQUENO.Caption" value="唯一序號" />
+    <Language field="dataFormMaster.UNIQUENO.PlaceHolder" value="" />
+    <Language field="dataGridDetail.UNIQUENO.Caption" value="唯一序號" />
+    <Language field="dataGridDetail.UNIQUENO.PlaceHolder" value="" />
+
+    <Language field="This.Title" value="[OPOM02] 客戶訂單維護" />
+  </CHS>
+  <HK />
+  <JA />
+  <KO />
+  <LAN1 />
+  <LAN2 />
+</Infolight>

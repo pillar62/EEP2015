@@ -46,6 +46,8 @@
             this.RTLessorAVSCase = new Srvtools.InfoCommand(this.components);
             this.ucRTLessorAVSCase = new Srvtools.UpdateComponent(this.components);
             this.View_RTLessorAVSCase = new Srvtools.InfoCommand(this.components);
+            this.autoNumber1 = new Srvtools.AutoNumber(this.components);
+            this.infoTransaction1 = new Srvtools.InfoTransaction(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCase)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_RTLessorAVSCase)).BeginInit();
@@ -212,6 +214,28 @@
             this.View_RTLessorAVSCase.SiteControl = false;
             this.View_RTLessorAVSCase.SiteFieldName = null;
             this.View_RTLessorAVSCase.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // autoNumber1
+            // 
+            this.autoNumber1.Active = true;
+            this.autoNumber1.AutoNoID = "";
+            this.autoNumber1.Description = null;
+            this.autoNumber1.GetFixed = "SS()";
+            this.autoNumber1.isNumFill = false;
+            this.autoNumber1.Name = null;
+            this.autoNumber1.Number = null;
+            this.autoNumber1.NumDig = 3;
+            this.autoNumber1.OldVersion = false;
+            this.autoNumber1.OverFlow = true;
+            this.autoNumber1.StartValue = 1;
+            this.autoNumber1.Step = 1;
+            this.autoNumber1.TargetColumn = "CASEID";
+            this.autoNumber1.UpdateComp = this.ucRTLessorAVSCase;
+            // 
+            // infoTransaction1
+            // 
+            this.infoTransaction1.Name = null;
+            this.infoTransaction1.UpdateComp = this.ucRTLessorAVSCase;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCase)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_RTLessorAVSCase)).EndInit();
@@ -225,5 +249,7 @@
         private Srvtools.InfoCommand RTLessorAVSCase;
         private Srvtools.UpdateComponent ucRTLessorAVSCase;
         private Srvtools.InfoCommand View_RTLessorAVSCase;
+        private Srvtools.AutoNumber autoNumber1;
+        private Srvtools.InfoTransaction infoTransaction1;
     }
 }

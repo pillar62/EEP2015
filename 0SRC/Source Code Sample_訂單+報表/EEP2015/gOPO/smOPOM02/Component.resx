@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="serviceManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 55</value>
+  </metadata>
+  <metadata name="InfoConnection.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 169</value>
+  </metadata>
+  <metadata name="Master.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 283</value>
+  </metadata>
+  <data name="Master.CommandText" xml:space="preserve">
+    <value>SELECT OPOORDER2_M.*,A.CORPSHORTNAME,A.TEL1 ,B.PERSONCNAME,C.WARECNAME,C.WAREENAME
+,D.DEPARTMENTCNAME,D.DEPARTMENTENAME,E.CURRENCYCNAME,E.CURRENCYENAME,F.TAILDESC,G.TAILDESC TAILDESC_G
+,H.PERSONCNAME SIGNUSERCNAME,I.PROJ_CNAME,I.PROJ_ENAME,J.SHIPMARKNAME,J.MAINMARK_DOC,J.MAINMARK,J.SIDEMARK_DOC,J.SIDEMARK,J.MEMOCHAR,CASE WHEN ISNULL(OPOORDER2_M.SIGN_USER,'')='' THEN '待審核' ELSE '已審核' END SIGN_STATUS
+FROM OPOORDER2_M
+LEFT JOIN BASCUSTOMER A ON OPOORDER2_M.CUSTID = A.CUSTID
+LEFT JOIN BASPERSON B ON OPOORDER2_M.PERSONID = B.PERSONID
+LEFT JOIN BASWAREHOUSE C ON OPOORDER2_M.WAREID = C.WAREID
+LEFT JOIN BASDEPARTMENT D ON OPOORDER2_M.DEPARTMENTID = D.DEPARTMENTID
+LEFT JOIN BASCURRENCY E ON OPOORDER2_M.CURRENCYID = E.CURRENCYID
+LEFT JOIN COMHEADDOC F ON OPOORDER2_M.BILLHEADNO = F.TAILID
+LEFT JOIN COMTAILDOC G ON OPOORDER2_M.BILLTAILNO = G.TAILID
+LEFT JOIN BASPERSON H ON OPOORDER2_M.SIGN_USER = H.PERSONID
+LEFT JOIN PMSPROJECT I ON OPOORDER2_M.PROJECTID = I.PROJECTID
+LEFT JOIN BASSHIPMARK J ON OPOORDER2_M.SHIPMARKID = J.SHIPMARKID
+ORDER BY BILLDATE DESC,BILLNO DESC
+</value>
+  </data>
+  <metadata name="ucMaster.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 321</value>
+  </metadata>
+  <metadata name="Detail.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 359</value>
+  </metadata>
+  <metadata name="ucDetail.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 397</value>
+  </metadata>
+  <metadata name="idsRelation.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 435</value>
+  </metadata>
+  <metadata name="View_Provider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 93</value>
+  </metadata>
+  <data name="View_Provider.CommandText" xml:space="preserve">
+    <value>SELECT OPOORDER2_M.BILLDATE,OPOORDER2_M.BILLNO,OPOORDER2_M.SDTBILLNO,OPOORDER2_M.ISSIGN,OPOORDER2_M.REFBILLNO,
+OPOORDER2_M.ONHANDDATE,OPOORDER2_M.CUSTID,OPOORDER2_M.CORPMEMO,OPOORDER2_M.PERSONID,OPOORDER2_M.WAREID,
+OPOORDER2_M.DEPARTMENTID,OPOORDER2_M.PROJECTID,OPOORDER2_M.CONNECTPERSON, OPOORDER2_M.TOTALAMOUNT + OPOORDER2_M.TAXAMOUNT SUMAMOUNT2,
+A.CORPSHORTNAME ,A.TEL1,B.PERSONCNAME
+FROM OPOORDER2_M
+LEFT JOIN BASCUSTOMER A ON OPOORDER2_M.CUSTID = A.CUSTID
+LEFT JOIN BASPERSON B ON OPOORDER2_M.PERSONID = B.PERSONID
+ORDER BY OPOORDER2_M.BILLDATE DESC,OPOORDER2_M.BILLNO DESC</value>
+  </data>
+  <metadata name="autoNumber1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 473</value>
+  </metadata>
+  <metadata name="icTemp.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 511</value>
+  </metadata>
+  <metadata name="cmdOPO2INV5Query.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 549</value>
+  </metadata>
+  <data name="cmdOPO2INV5Query.CommandText" xml:space="preserve">
+    <value>SELECT A.TYPEFLAG,B.IDNO,A.QUANTITY,ISNULL(X.OPO_QTY,0) AS OPO_QTY,B.BILLDATE,A.BILLNO,A.SEQNO,A.PRODUCTID,
+B501.PRODCNAME,B501.PRODSTRUCTURE,A.PRICE,A.UNIQUENO,A.WAREID,B.PERSONID,B.CURRENCYID,B.INVOICETYPE,
+B.TAXCLASS,B.MEMODOC,A.SOURCEBILLNO,A.SOURCEREFBILLNO
+FROM INVSTKBILL5_D A
+LEFT JOIN INVSTKBILL5_M B ON A.BILLNO = B.BILLNO
+LEFT JOIN BASPRODUCT B501 ON A.PRODUCTID = B501.PRODUCTID
+LEFT JOIN BASCUSTOMER B601 ON B.IDNO = B601.CUSTID
+LEFT JOIN
+(
+  SELECT A.BILLNO,A.UNIQUENO,SUM(ISNULL(X.QUANTITY,0)) AS OPO_QTY FROM OPOORDER2_D A
+  LEFT JOIN INVSTKBILL5_D X ON A.BILLNO = X.SOURCEBILLNO AND A.UNIQUENO = X.SOURCEUNIQUENO
+  GROUP BY A.BILLNO,A.UNIQUENO
+) X ON A.BILLNO = X.BILLNO AND A.UNIQUENO = X.UNIQUENO</value>
+  </data>
+  <metadata name="cmdBASSHIPMARK.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 131</value>
+  </metadata>
+  <metadata name="tsMaster.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 207</value>
+  </metadata>
+  <metadata name="Report.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 245</value>
+  </metadata>
+  <data name="Report.CommandText" xml:space="preserve">
+    <value>SELECT OPOORDER2_M.*,A.CORPSHORTNAME,A.TEL1 ,B.PERSONCNAME,C.WARECNAME,C.WAREENAME
+,D.DEPARTMENTCNAME,D.DEPARTMENTENAME,E.CURRENCYCNAME,E.CURRENCYENAME,F.TAILDESC,G.TAILDESC TAILDESC_G
+,H.PERSONCNAME SIGNUSERCNAME,I.PROJ_CNAME,I.PROJ_ENAME,J.SHIPMARKNAME,J.MAINMARK_DOC,J.MAINMARK,J.SIDEMARK_DOC,J.SIDEMARK,J.MEMOCHAR,Z.SEQNO,Z.PRODUCTID,Z.PRODCNAME,Z.PRODENAME,Z.PRODSTRUCTURE,Z.QUANTITY,Z.UNIT,Z.PRICE,Z.TAXPRICE,Z.SUBAMOUNT,Z.TAXAMOUNT,Z.ONHANDDATE,Z.ISNEEDMADE,Z.MEMOCHAR1,Z.ISGIFTPROD,A.CORPCNAME,A.TEL1,A.FAX,G.MEMODOC AS FMEMODOC1,Z1.PERSONCNAME AS SPERSONCNAME,Z.UNIQUENO 
+FROM OPOORDER2_M
+LEFT JOIN BASCUSTOMER A ON OPOORDER2_M.CUSTID = A.CUSTID
+LEFT JOIN BASPERSON B ON OPOORDER2_M.PERSONID = B.PERSONID
+LEFT JOIN BASWAREHOUSE C ON OPOORDER2_M.WAREID = C.WAREID
+LEFT JOIN BASDEPARTMENT D ON OPOORDER2_M.DEPARTMENTID = D.DEPARTMENTID
+LEFT JOIN BASCURRENCY E ON OPOORDER2_M.CURRENCYID = E.CURRENCYID
+LEFT JOIN COMHEADDOC F ON OPOORDER2_M.BILLHEADNO = F.TAILID
+LEFT JOIN COMTAILDOC G ON OPOORDER2_M.BILLTAILNO = G.TAILID
+LEFT JOIN BASPERSON H ON OPOORDER2_M.SIGN_USER = H.PERSONID
+LEFT JOIN PMSPROJECT I ON OPOORDER2_M.PROJECTID = I.PROJECTID
+LEFT JOIN BASSHIPMARK J ON OPOORDER2_M.SHIPMARKID = J.SHIPMARKID   
+LEFT JOIN OPOORDER2_D Z ON OPOORDER2_M.BILLNO=Z.BILLNO 
+LEFT JOIN BASPERSON Z1 ON OPOORDER2_M.SIGN_USER = Z1.PERSONID
+ORDER BY BILLDATE,BILLNO</value>
+  </data>
+  <metadata name="cmdOPO12OPO2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>771, 219</value>
+  </metadata>
+  <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+</root>

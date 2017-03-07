@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="若要在類別中加入元件，請從工具箱拖所需元件，並利用 [屬性] 視窗設定它們的屬性。若要建立類別的方法與事件，請按這裡切換到程式碼檢視。" type="System.Drawing.Point, System.Drawing">
+    <value>0, 362</value>
+  </data>
+  <data name="serviceManager1" type="System.Drawing.Point, System.Drawing">
+    <value>588, 94</value>
+  </data>
+  <data name="InfoConnection1" type="System.Drawing.Point, System.Drawing">
+    <value>588, 55</value>
+  </data>
+  <data name="RTCounty" type="System.Drawing.Point, System.Drawing">
+    <value>526, 183</value>
+  </data>
+  <data name="ucRTCounty" type="System.Drawing.Point, System.Drawing">
+    <value>521, 231</value>
+  </data>
+  <data name="RTCtyTown" type="System.Drawing.Point, System.Drawing">
+    <value>357, 266</value>
+  </data>
+  <data name="ucRTCtyTown" type="System.Drawing.Point, System.Drawing">
+    <value>353, 301</value>
+  </data>
+  <data name="RTCode" type="System.Drawing.Point, System.Drawing">
+    <value>366, 187</value>
+  </data>
+  <data name="ucRTCode" type="System.Drawing.Point, System.Drawing">
+    <value>350, 223</value>
+  </data>
+  <data name="RTCodeSub" type="System.Drawing.Point, System.Drawing">
+    <value>204, 188</value>
+  </data>
+  <data name="ucRTCodeSub" type="System.Drawing.Point, System.Drawing">
+    <value>203, 223</value>
+  </data>
+  <data name="RTBank" type="System.Drawing.Point, System.Drawing">
+    <value>189, 44</value>
+  </data>
+  <data name="ucRTBank" type="System.Drawing.Point, System.Drawing">
+    <value>185, 89</value>
+  </data>
+  <data name="RTBankBranch" type="System.Drawing.Point, System.Drawing">
+    <value>201, 263</value>
+  </data>
+  <data name="ucRTBankBranch" type="System.Drawing.Point, System.Drawing">
+    <value>201, 306</value>
+  </data>
+  <data name="RTBankNo" type="System.Drawing.Point, System.Drawing">
+    <value>61, 273</value>
+  </data>
+  <data name="ucRTBankNo" type="System.Drawing.Point, System.Drawing">
+    <value>59, 312</value>
+  </data>
+  <data name="RTEmployee" type="System.Drawing.Point, System.Drawing">
+    <value>54, 190</value>
+  </data>
+  <data name="ucRTEmployee" type="System.Drawing.Point, System.Drawing">
+    <value>55, 235</value>
+  </data>
+  <data name="RTObj" type="System.Drawing.Point, System.Drawing">
+    <value>444, 56</value>
+  </data>
+  <data name="ucRTObj" type="System.Drawing.Point, System.Drawing">
+    <value>437, 105</value>
+  </data>
+  <data name="RTObjKind" type="System.Drawing.Point, System.Drawing">
+    <value>319, 53</value>
+  </data>
+  <data name="ucRTObjKind" type="System.Drawing.Point, System.Drawing">
+    <value>310, 97</value>
+  </data>
+  <data name="RTObjLink" type="System.Drawing.Point, System.Drawing">
+    <value>56, 51</value>
+  </data>
+  <data name="ucRTObjLink" type="System.Drawing.Point, System.Drawing">
+    <value>52, 108</value>
+  </data>
+  <data name="View_RTCounty" type="System.Drawing.Point, System.Drawing">
+    <value>840, 250</value>
+  </data>
+  <data name="View_RTCtyTown" type="System.Drawing.Point, System.Drawing">
+    <value>840, 211</value>
+  </data>
+  <data name="View_RTCode" type="System.Drawing.Point, System.Drawing">
+    <value>840, 172</value>
+  </data>
+  <data name="View_RTCodeSub" type="System.Drawing.Point, System.Drawing">
+    <value>843, 84</value>
+  </data>
+  <data name="View_RTBank" type="System.Drawing.Point, System.Drawing">
+    <value>862, 46</value>
+  </data>
+  <data name="View_RTBankBranch" type="System.Drawing.Point, System.Drawing">
+    <value>1030, 208</value>
+  </data>
+  <data name="View_RTBankNo" type="System.Drawing.Point, System.Drawing">
+    <value>1034, 50</value>
+  </data>
+  <data name="View_RTEmployee" type="System.Drawing.Point, System.Drawing">
+    <value>1026, 167</value>
+  </data>
+  <data name="View_RTObj" type="System.Drawing.Point, System.Drawing">
+    <value>1037, 127</value>
+  </data>
+  <data name="View_RTObjKind" type="System.Drawing.Point, System.Drawing">
+    <value>1029, 88</value>
+  </data>
+  <data name="View_RTObjLink" type="System.Drawing.Point, System.Drawing">
+    <value>837, 127</value>
+  </data>
+  <data name="View_RTOBJ1" type="System.Drawing.Point, System.Drawing">
+    <value>17, 446</value>
+  </data>
+  <data name="RTprodh" type="System.Drawing.Point, System.Drawing">
+    <value>538, 351</value>
+  </data>
+  <data name="ucRTprodh" type="System.Drawing.Point, System.Drawing">
+    <value>522, 290</value>
+  </data>
+  <data name="RTprodd1" type="System.Drawing.Point, System.Drawing">
+    <value>655, 292</value>
+  </data>
+  <data name="ucRTprodd1" type="System.Drawing.Point, System.Drawing">
+    <value>649, 350</value>
+  </data>
+  <data name="ucHBWAREHOUSE" type="System.Drawing.Point, System.Drawing">
+    <value>17, 368</value>
+  </data>
+  <data name="HBWAREHOUSE" type="System.Drawing.Point, System.Drawing">
+    <value>22, 404</value>
+  </data>
+  <data name="RTArea" type="System.Drawing.Point, System.Drawing">
+    <value>197, 405</value>
+  </data>
+  <data name="ucRTArea" type="System.Drawing.Point, System.Drawing">
+    <value>195, 365</value>
+  </data>
+  <data name="RTConsignee" type="System.Drawing.Point, System.Drawing">
+    <value>315, 407</value>
+  </data>
+  <data name="ucRTConsignee" type="System.Drawing.Point, System.Drawing">
+    <value>312, 362</value>
+  </data>
+  <data name="V_RTConsignee" type="System.Drawing.Point, System.Drawing">
+    <value>532, 400</value>
+  </data>
+</root>

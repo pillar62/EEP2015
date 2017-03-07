@@ -1,0 +1,1251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <rd:DataSourceID>e56984e4-cfbe-41b1-85a1-7c5df391095b</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>server=localhost;database=gData03;uid=sa;password=123;</ConnectString>
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>29.7cm</InteractiveHeight>
+  <ReportParameters>
+    <ReportParameter Name="PARA_CORP">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_CORP</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_TITLE">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_TITLE</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_PDATE">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_PDATE</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_FILTER">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_FILTER</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_REPORTTYPE">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_REPORTTYPE</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_REPORTFONT">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_REPORTFONT</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_FILTER_CAP">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_FILTER_CAP</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_TAILDESC">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_TAILDESC</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_JumptoURL">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>Jump to URL</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_PERSONID">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_PERSONID</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_PERSONCNAME">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_PERSONCNAME</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_BILLDATE">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_BILLDATE</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_BILLNO">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_BILLNO</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_IDNO">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_IDNO</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_CORPCNAME">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_CORPCNAME</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_PRODUCTID">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_PRODUCTID</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_PRODCNAME">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_PRODCNAME</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_PRODSTRUCTURE">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_PRODSTRUCTURE</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_ONHANDDATE">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_ONHANDDATE</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_CURRENCYID">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_CURRENCYID</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_CURRRATE">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_CURRRATE</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_PRICE">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_PRICE</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_SUBAMOUNT">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_SUBAMOUNT</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_QUANTITY">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_QUANTITY</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_NOTOUTQTY">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_NOTOUTQTY</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_UNIQUENO">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_UNIQUENO</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_QTYDECIMAL">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_QTYDECIMAL</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_PRICEDECIMAL">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_PRICEDECIMAL</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_SUBDECIMAL">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_SUBDECIMAL</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_SUMDECIMAL">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_SUMDECIMAL</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_TAXDECIMAL">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_TAXDECIMAL</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_RATEDECIMAL">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_RATEDECIMAL</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_ELSEDECIMAL">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_ELSEDECIMAL</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PARA_ISCOMMA">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>PARA_ISCOMMA</Prompt>
+    </ReportParameter>
+
+  </ReportParameters>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>21cm</InteractiveWidth>
+  <rd:GridSpacing>0.25cm</rd:GridSpacing>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>0.5cm</RightMargin>
+  <LeftMargin>1cm</LeftMargin>
+  <PageHeader>
+    <PrintOnFirstPage>true</PrintOnFirstPage>
+    <ReportItems>
+      <Textbox Name="PH_CORP">
+        <Style>
+          <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+          <FontSize>18pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <VerticalAlign>Bottom</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Height>1cm</Height>
+        <Value>=Parameters!PARA_CORP.Value</Value>
+      </Textbox>
+      
+      <Textbox Name="PH_TITLE">
+        <Top>1cm</Top>
+        <Style>
+          <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+          <FontSize>16pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.75cm</Height>
+        <Value>=Parameters!PARA_TITLE.Value</Value>
+      </Textbox>
+      
+      <Textbox Name="PH_Date">
+        <Top>1.75cm</Top>
+        <Width>6cm</Width>
+        <Style>
+          <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.65cm</Height>
+        <Value>=Parameters!PARA_PDATE.Value+" "+DateValue(Globals!ExecutionTime.ToString())</Value>
+      </Textbox>
+      
+      <Textbox Name="PH_Type">
+        <Top>1.75cm</Top>
+        <Width>16.5cm</Width>
+        <Style>
+          <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>6cm</Left>
+        <Height>0.65cm</Height>
+        <Value>=Parameters!PARA_REPORTTYPE.Value</Value>
+      </Textbox>
+      
+      <Textbox Name="PH_Page">
+        <Top>1.75cm</Top>
+        <Style>
+          <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+          <TextAlign>Right</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>4</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>22.5cm</Left>
+        <Height>0.65cm</Height>
+        <Value>="Page："+Globals!PageNumber.ToString()+" of "+Globals!TotalPages.ToString()</Value>
+        <Width >5.5cm</Width>
+      </Textbox>
+      
+      <Textbox Name="PH_Filter_CAP">
+        <Top>2.4cm</Top>
+        <Width>2.1cm</Width>
+        <Style>
+          <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>5</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Value>=Parameters!PARA_FILTER_CAP.Value</Value>
+      </Textbox>
+      
+      <Textbox Name="PH_Filter">
+        <Top>2.4cm</Top>
+        <Width>25.9cm</Width>
+        <Style>
+          <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+          <PaddingLeft>0pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>6</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.1cm</Left>
+        <Value>=Parameters!PARA_FILTER.Value</Value>
+      </Textbox>
+
+    </ReportItems>
+    <Height>3.05cm</Height>
+    <PrintOnLastPage>true</PrintOnLastPage>
+  </PageHeader>
+  <BottomMargin>0.5cm</BottomMargin>
+  <rd:ReportID>90ab3f22-b199-45d4-80d6-7fdb0b7362f9</rd:ReportID>
+  
+  <PageWidth>29.7cm</PageWidth>
+  <DataSets>
+    <DataSet Name="ReportDS">
+      <Fields>
+        <Field Name="PERSONID">
+          <DataField>PERSONID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PERSONCNAME">
+          <DataField>PERSONCNAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BILLDATE">
+          <DataField>BILLDATE</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="BILLNO">
+          <DataField>BILLNO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="IDNO">
+          <DataField>IDNO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CORPCNAME">
+          <DataField>CORPCNAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PRODUCTID">
+          <DataField>PRODUCTID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PRODCNAME">
+          <DataField>PRODCNAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PRODSTRUCTURE">
+          <DataField>PRODSTRUCTURE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ONHANDDATE">
+          <DataField>ONHANDDATE</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="CURRENCYID">
+          <DataField>CURRENCYID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CURRRATE">
+          <DataField>CURRRATE</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PRICE">
+          <DataField>PRICE</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="SUBAMOUNT">
+          <DataField>SUBAMOUNT</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="QUANTITY">
+          <DataField>QUANTITY</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="NOTOUTQTY">
+          <DataField>NOTOUTQTY</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="UNIQUENO">
+          <DataField>UNIQUENO</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>NewDataSet</rd:DataSetName>
+        <rd:TableName>Master</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  
+  <Width>28.2cm</Width>
+  <Body>
+    <ColumnSpacing>1cm</ColumnSpacing>
+    <ReportItems>
+      <Rectangle Name="rectContainer">
+        <ReportItems>
+          <Table Name="table1">
+            <DataSetName>ReportDS</DataSetName>
+              <TableGroups>
+                          <TableGroup>
+                <Grouping Name="PERSONID">
+                  <GroupExpressions>
+                    <GroupExpression>=Fields!PERSONID.Value</GroupExpression>
+                  </GroupExpressions>
+                </Grouping>
+                <Header>
+                  <TableRows>
+                    <TableRow>
+                      <TableCells>
+                        <TableCell>
+                          <ColSpan>2</ColSpan>
+                          <ReportItems>
+                            <Textbox Name="GH1_PERSONID">
+                              <rd:DefaultName>GH1_PERSONID</rd:DefaultName>
+                              <Style>
+                                <BorderStyle>
+                                  <Bottom>Solid</Bottom>
+                                </BorderStyle>
+                                <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                                <TextAlign>Left</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                              <ZIndex>11</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value>=Parameters!PARA_PERSONID.Value+"："+Fields!PERSONID.Value</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ColSpan>2</ColSpan>
+                          <ReportItems>
+                            <Textbox Name="GH1_PERSONCNAME">
+                              <rd:DefaultName>GH1_PERSONCNAME</rd:DefaultName>
+                              <Style>
+                                <BorderStyle>
+                                  <Bottom>Solid</Bottom>
+                                </BorderStyle>
+                                <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                                <TextAlign>Left</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
+                              <ZIndex>12</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value>=First(Fields!PERSONCNAME.Value)</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ColSpan>7</ColSpan>
+                          <ReportItems>
+                            <Textbox Name="GH1_NULL17">
+                              <rd:DefaultName>GH1_NULL17</rd:DefaultName>
+                              <Style>
+                                <BorderStyle>
+                                  <Bottom>Solid</Bottom>
+                                </BorderStyle>
+                                <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>17</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value />
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                      </TableCells>
+                      <Height>0.64cm</Height>
+                    </TableRow>
+                  </TableRows>
+                </Header>
+                <Footer>
+                  <TableRows>
+                    <TableRow>
+                      <TableCells>
+                        <TableCell>
+                          <ColSpan>8</ColSpan>
+                          <ReportItems>
+                            <Textbox Name="GF1_NULL13">
+                              <rd:DefaultName>GF1_NULL13</rd:DefaultName>
+                              <Style>
+                                <BorderStyle>
+                                  <Top>None</Top>
+                                </BorderStyle>
+                                <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>13</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value />
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="GF1_SUBAMOUNT">
+                              <rd:DefaultName>GF1_SUBAMOUNT</rd:DefaultName>
+                              <Style>
+                                <BorderStyle>
+                                  <Top>Solid</Top>
+                                </BorderStyle>
+                                <FontFamily>Arial Narrow</FontFamily>
+                                <TextAlign>Right</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>14</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value>=FormatNumber(Sum(Fields!SUBAMOUNT.Value),CInt(Parameters!PARA_SUBDECIMAL.Value))</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="GF1_QUANTITY">
+                              <rd:DefaultName>GF1_QUANTITY</rd:DefaultName>
+                              <Style>
+                                <BorderStyle>
+                                  <Top>Solid</Top>
+                                </BorderStyle>
+                                <FontFamily>Arial Narrow</FontFamily>
+                                <TextAlign>Right</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>15</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value>=FormatNumber(Sum(Fields!QUANTITY.Value),CInt(Parameters!PARA_QTYDECIMAL.Value))</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                        <TableCell>
+                          <ReportItems>
+                            <Textbox Name="GF1_NOTOUTQTY">
+                              <rd:DefaultName>GF1_NOTOUTQTY</rd:DefaultName>
+                              <Style>
+                                <BorderStyle>
+                                  <Top>Solid</Top>
+                                </BorderStyle>
+                                <FontFamily>Arial Narrow</FontFamily>
+                                <TextAlign>Right</TextAlign>
+                                <PaddingLeft>2pt</PaddingLeft>
+                                <PaddingRight>2pt</PaddingRight>
+                                <PaddingTop>2pt</PaddingTop>
+                                <PaddingBottom>2pt</PaddingBottom>
+                              </Style>
+                              <ZIndex>16</ZIndex>
+                              <CanGrow>true</CanGrow>
+                              <Value>=FormatNumber(Sum(Fields!NOTOUTQTY.Value),CInt(Parameters!PARA_QTYDECIMAL.Value))</Value>
+                            </Textbox>
+                          </ReportItems>
+                        </TableCell>
+                      </TableCells>
+                      <Height>0.64cm</Height>
+                    </TableRow>
+                  </TableRows>
+                </Footer>
+              </TableGroup>
+              <TableGroup>
+                <Grouping Name="BILLDATE">
+                  <GroupExpressions>
+                    <GroupExpression>=Fields!BILLDATE.Value</GroupExpression>
+                  </GroupExpressions>
+                </Grouping>
+              </TableGroup>
+              <TableGroup>
+                <Grouping Name="BILLNO">
+                  <GroupExpressions>
+                    <GroupExpression>=Fields!BILLNO.Value</GroupExpression>
+                  </GroupExpressions>
+                </Grouping>
+              </TableGroup>
+            </TableGroups>
+
+            <Details>
+              <TableRows>
+                              <TableRow>
+                <TableCells>
+<TableCell>
+                      <ReportItems>
+                        <Textbox Name="BILLDATE">
+                          <rd:DefaultName>BILLDATE</rd:DefaultName>
+                          <Style>
+                            <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>18</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=iif(RowNumber("BILLDATE")=1,Iif(IsNothing(Fields!BILLDATE.Value),"",CDate(Fields!BILLDATE.Value).ToString("yyyy/MM/dd")),"")</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="BILLNO">
+                          <rd:DefaultName>BILLNO</rd:DefaultName>
+                          <Style>
+                            <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                            <TextDecoration>Underline</TextDecoration>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>19</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=iif(RowNumber("BILLNO")=1,Fields!BILLNO.Value,"")</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="PRODUCTID">
+                          <rd:DefaultName>PRODUCTID</rd:DefaultName>
+                          <Style>
+                            <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>20</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!PRODUCTID.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="PRODCNAME">
+                          <rd:DefaultName>PRODCNAME</rd:DefaultName>
+                          <Style>
+                            <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>21</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Fields!PRODCNAME.Value+"   "+Fields!PRODSTRUCTURE.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="ONHANDDATE">
+                          <rd:DefaultName>ONHANDDATE</rd:DefaultName>
+                          <Style>
+                            <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>22</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Iif(IsNothing(Fields!ONHANDDATE.Value),"",CDate(Fields!ONHANDDATE.Value).ToString("yyyy/MM/dd"))</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="CURRENCYID">
+                          <rd:DefaultName>CURRENCYID</rd:DefaultName>
+                          <Style>
+                            <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>23</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=iif(RowNumber("BILLNO")=1,Fields!CURRENCYID.Value,"")</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="CURRRATE">
+                          <rd:DefaultName>CURRRATE</rd:DefaultName>
+                          <Style>
+                            <FontFamily>Arial Narrow</FontFamily>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>24</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=iif(RowNumber("BILLNO")=1,FormatNumber(Fields!CURRRATE.Value,CInt(Parameters!PARA_ELSEDECIMAL.Value)),"")</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="PRICE">
+                          <rd:DefaultName>PRICE</rd:DefaultName>
+                          <Style>
+                            <FontFamily>Arial Narrow</FontFamily>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>25</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=FormatNumber(Fields!PRICE.Value,CInt(Parameters!PARA_PRICEDECIMAL.Value))</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="SUBAMOUNT">
+                          <rd:DefaultName>SUBAMOUNT</rd:DefaultName>
+                          <Style>
+                            <FontFamily>Arial Narrow</FontFamily>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>26</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=FormatNumber(Fields!SUBAMOUNT.Value,CInt(Parameters!PARA_SUBDECIMAL.Value))</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="QUANTITY">
+                          <rd:DefaultName>QUANTITY</rd:DefaultName>
+                          <Style>
+                            <FontFamily>Arial Narrow</FontFamily>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>27</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=FormatNumber(Fields!QUANTITY.Value,CInt(Parameters!PARA_QTYDECIMAL.Value))</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="NOTOUTQTY">
+                          <rd:DefaultName>NOTOUTQTY</rd:DefaultName>
+                          <Style>
+                            <FontFamily>Arial Narrow</FontFamily>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>28</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=FormatNumber(Fields!NOTOUTQTY.Value,CInt(Parameters!PARA_QTYDECIMAL.Value))</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                </TableCells>
+                <Height>0.64cm</Height>
+              </TableRow>
+
+              </TableRows>
+            </Details>
+            <Style>
+              <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+            </Style>
+            <Header>
+              <TableRows>
+                              <TableRow>
+                <TableCells>
+<TableCell>
+                      <ReportItems>
+                        <Textbox Name="DTH_BILLDATE">
+                          <rd:DefaultName>DTH_BILLDATE</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Top>Solid</Top>
+                              <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>29</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Parameters!PARA_BILLDATE.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="DTH_BILLNO">
+                          <rd:DefaultName>DTH_BILLNO</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Top>Solid</Top>
+                              <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>30</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Parameters!PARA_BILLNO.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="DTH_PRODUCTID">
+                          <rd:DefaultName>DTH_PRODUCTID</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Top>Solid</Top>
+                              <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>31</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Parameters!PARA_PRODUCTID.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="DTH_PRODCNAME">
+                          <rd:DefaultName>DTH_PRODCNAME</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Top>Solid</Top>
+                              <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>32</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Parameters!PARA_PRODCNAME.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="DTH_ONHANDDATE">
+                          <rd:DefaultName>DTH_ONHANDDATE</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Top>Solid</Top>
+                              <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>33</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Parameters!PARA_ONHANDDATE.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="DTH_CURRENCYID">
+                          <rd:DefaultName>DTH_CURRENCYID</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Top>Solid</Top>
+                              <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                            <TextAlign>Left</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>34</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Parameters!PARA_CURRENCYID.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="DTH_CURRRATE">
+                          <rd:DefaultName>DTH_CURRRATE</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Top>Solid</Top>
+                              <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>35</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Parameters!PARA_CURRRATE.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="DTH_PRICE">
+                          <rd:DefaultName>DTH_PRICE</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Top>Solid</Top>
+                              <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>36</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Parameters!PARA_PRICE.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="DTH_SUBAMOUNT">
+                          <rd:DefaultName>DTH_SUBAMOUNT</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Top>Solid</Top>
+                              <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>37</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Parameters!PARA_SUBAMOUNT.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="DTH_QUANTITY">
+                          <rd:DefaultName>DTH_QUANTITY</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Top>Solid</Top>
+                              <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>38</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Parameters!PARA_QUANTITY.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                    <TableCell>
+                      <ReportItems>
+                        <Textbox Name="DTH_NOTOUTQTY">
+                          <rd:DefaultName>DTH_NOTOUTQTY</rd:DefaultName>
+                          <Style>
+                            <BorderStyle>
+                              <Top>Solid</Top>
+                              <Bottom>Solid</Bottom>
+                            </BorderStyle>
+                            <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                            <TextAlign>Right</TextAlign>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                          <ZIndex>39</ZIndex>
+                          <CanGrow>true</CanGrow>
+                          <Value>=Parameters!PARA_NOTOUTQTY.Value</Value>
+                        </Textbox>
+                      </ReportItems>
+                    </TableCell>
+                </TableCells>
+                <Height>0.64cm</Height>
+              </TableRow>
+    
+              </TableRows>
+              <RepeatOnNewPage>true</RepeatOnNewPage>
+            </Header>
+            <TableColumns>
+              <TableColumn>
+                <Width>2cm</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>2.5cm</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>3cm</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>7.5cm</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>2cm</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>1.5cm</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>1.5cm</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>2cm</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>2cm</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>2cm</Width>
+              </TableColumn>
+              <TableColumn>
+                <Width>2cm</Width>
+              </TableColumn>
+
+            </TableColumns>
+            <Height>3.18476cm</Height>
+                    <Footer>
+              <TableRows>
+                <TableRow>
+                  <TableCells>
+                      <TableCell>
+                        <ColSpan>8</ColSpan>
+                        <ReportItems>
+                          <Textbox Name="SUM_NULL18">
+                            <rd:DefaultName>SUM_NULL18</rd:DefaultName>
+                            <Style>
+                              <BorderStyle>
+                                <Top>Solid</Top>
+                              </BorderStyle>
+                              <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+                              <PaddingLeft>2pt</PaddingLeft>
+                              <PaddingRight>2pt</PaddingRight>
+                              <PaddingTop>2pt</PaddingTop>
+                              <PaddingBottom>2pt</PaddingBottom>
+                            </Style>
+                            <ZIndex>18</ZIndex>
+                            <CanGrow>true</CanGrow>
+                            <Value />
+                          </Textbox>
+                        </ReportItems>
+                      </TableCell>
+                      <TableCell>
+                        <ReportItems>
+                          <Textbox Name="SUM_FLDS_SUBAMOUNT">
+                            <rd:DefaultName>SUM_FLDS_SUBAMOUNT</rd:DefaultName>
+                            <Style>
+                              <BorderStyle>
+                                <Top>Solid</Top>
+                              </BorderStyle>
+                              <FontFamily>Arial Narrow</FontFamily>
+                              <TextAlign>Right</TextAlign>
+                              <PaddingLeft>2pt</PaddingLeft>
+                              <PaddingRight>2pt</PaddingRight>
+                              <PaddingTop>2pt</PaddingTop>
+                              <PaddingBottom>2pt</PaddingBottom>
+                            </Style>
+                            <ZIndex>19</ZIndex>
+                            <CanGrow>true</CanGrow>
+                              <Value>=FormatNumber(Sum(Fields!SUBAMOUNT.Value),CInt(Parameters!PARA_SUBDECIMAL.Value))</Value>
+                          </Textbox>
+                        </ReportItems>
+                      </TableCell>
+                      <TableCell>
+                        <ReportItems>
+                          <Textbox Name="SUM_FLDS_QUANTITY">
+                            <rd:DefaultName>SUM_FLDS_QUANTITY</rd:DefaultName>
+                            <Style>
+                              <BorderStyle>
+                                <Top>Solid</Top>
+                              </BorderStyle>
+                              <FontFamily>Arial Narrow</FontFamily>
+                              <TextAlign>Right</TextAlign>
+                              <PaddingLeft>2pt</PaddingLeft>
+                              <PaddingRight>2pt</PaddingRight>
+                              <PaddingTop>2pt</PaddingTop>
+                              <PaddingBottom>2pt</PaddingBottom>
+                            </Style>
+                            <ZIndex>20</ZIndex>
+                            <CanGrow>true</CanGrow>
+                              <Value>=FormatNumber(Sum(Fields!QUANTITY.Value),CInt(Parameters!PARA_QTYDECIMAL.Value))</Value>
+                          </Textbox>
+                        </ReportItems>
+                      </TableCell>
+                      <TableCell>
+                        <ReportItems>
+                          <Textbox Name="SUM_FLDS_NOTOUTQTY">
+                            <rd:DefaultName>SUM_FLDS_NOTOUTQTY</rd:DefaultName>
+                            <Style>
+                              <BorderStyle>
+                                <Top>Solid</Top>
+                              </BorderStyle>
+                              <FontFamily>Arial Narrow</FontFamily>
+                              <TextAlign>Right</TextAlign>
+                              <PaddingLeft>2pt</PaddingLeft>
+                              <PaddingRight>2pt</PaddingRight>
+                              <PaddingTop>2pt</PaddingTop>
+                              <PaddingBottom>2pt</PaddingBottom>
+                            </Style>
+                            <ZIndex>21</ZIndex>
+                            <CanGrow>true</CanGrow>
+                              <Value>=FormatNumber(Sum(Fields!NOTOUTQTY.Value),CInt(Parameters!PARA_QTYDECIMAL.Value))</Value>
+                          </Textbox>
+                        </ReportItems>
+                      </TableCell>
+                  </TableCells>
+                  <Height>0.64cm</Height>
+                </TableRow>
+              </TableRows>
+            </Footer>
+
+          </Table>
+        </ReportItems>
+        <Style>
+          <FontFamily>=Parameters!PARA_REPORTFONT.Value</FontFamily>
+        </Style>
+      </Rectangle>
+    </ReportItems>
+    <Height>5.5cm</Height>
+  </Body>
+  
+  <Language>zh-TW</Language>
+  <TopMargin>1cm</TopMargin>
+  <PageHeight>21cm</PageHeight>
+</Report>

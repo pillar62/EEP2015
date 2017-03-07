@@ -1,9 +1,17 @@
 <InfolightPackages LoadInMemory="False">
   <Common />
-  <SOLUTION1>
+  <SOLUTION1 />
+  <CBBN>
+    <PackageFile Name="sRT100.dll" Active="1" />
     <PackageFile Name="sRT101.dll" Active="1" />
-  </SOLUTION1>
-  <RT>
+    <PackageFile Name="sRT103.dll" Active="1" />
+    <PackageFile Name="sRT104.dll" Active="1" />
+    <PackageFile Name="sRT1041.dll" Active="1" />
+    <PackageFile Name="sRT1042.dll" Active="1" />
     <PackageFile Name="sRT105.dll" Active="1" />
-  </RT>
+    <PackageFile Name="sRT201.dll" Active="1" />
+    <PackageFile Name="sRT202.dll" Active="1" />
+    <PackageFile Name="sRT203.dll" Active="1" />
+    <PackageFile Name="sRT302.dll" Active="1" />
+  </CBBN>
 </InfolightPackages>
