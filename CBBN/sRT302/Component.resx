@@ -130,10 +130,10 @@
     <value>644, 121</value>
   </metadata>
   <metadata name="RTLessorAVSCustBillingPrtSub.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>643, 288</value>
+    <value>638, 287</value>
   </metadata>
   <metadata name="ucRTLessorAVSCustBillingPrtSub.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>645, 351</value>
+    <value>638, 333</value>
   </metadata>
   <metadata name="idRTLessorAVSCustBillingPrt_RTLessorAVSCustBillingPrtSub.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>544, 227</value>
@@ -142,7 +142,7 @@
     <value>415, 56</value>
   </metadata>
   <metadata name="RT302.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>299, 151</value>
+    <value>297, 256</value>
   </metadata>
   <data name="RT302.CommandText" xml:space="preserve">
     <value>SELECT BATCH, DUEDATSB, DUEDATEB, DUEDATSA, DUEDATEA, CDAT, c.CUSNC, 
@@ -157,6 +157,27 @@ ORDER BY BATCH DESC</value>
   <metadata name="ucRT302.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>291, 210</value>
   </metadata>
+  <metadata name="RT3021.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>128, 207</value>
+  </metadata>
+  <data name="RT3021.CommandText" xml:space="preserve">
+    <value>SELECT a.comq1, a.lineq1, a.cusid, 
+convert(varchar(6), a.COMQ1) +'-'+ convert(varchar(2), a.LINEQ1) as comqline, 
+c.comn, a.cusnc, e.codenc, f.codenc, 
+a.CONTACTTEL + case when a.CONTACTTEL &lt;&gt;'' and a.MOBILE &lt;&gt;'' then ' / ' else '' end + a.MOBILE as TEL, 
+a.APPLYDAT, a.FINISHDAT, a.STRBILLINGDAT, a.newBILLINGDAT, a.adjustday, 
+a.DUEDAT, a.DROPDAT, a.CANCELDAT, a.PERIOD, 
+case when a.DUEDAT is null then 0 
+when a.canceldat is not null or a.dropdat is not null then 0 
+else DATEDiFF(d,getdate(),a.DUEDAT) end as validdat 
+FROM RTLessorAVSCust a 
+inner join RTLessorAVSCmtyLine b on a.COMQ1 = b.COMQ1 and a.LINEQ1 = b.LINEQ1 
+inner join RTLessorAVSCmtyH c on a.COMQ1 = c.COMQ1 
+left outer join rtcode e on a.paycycle=e.code and e.kind='M8' 
+left outer join rtcode f on a.paytype=f.code and f.kind='M9' 
+WHERE 	a.DROPDAT is null and a.CANCELDAT is null and a.FINISHDAT is not null and a.freecode&lt;&gt;'Y' 
+and 	b.DROPDAT is null and b.CANCELDAT is null </value>
+  </data>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>

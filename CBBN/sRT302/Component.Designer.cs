@@ -57,6 +57,9 @@
             Srvtools.KeyItem keyItem3 = new Srvtools.KeyItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Component));
             Srvtools.KeyItem keyItem4 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem5 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem6 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem7 = new Srvtools.KeyItem();
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTLessorAVSCustBillingPrt = new Srvtools.InfoCommand(this.components);
@@ -67,11 +70,13 @@
             this.View_RTLessorAVSCustBillingPrt = new Srvtools.InfoCommand(this.components);
             this.RT302 = new Srvtools.InfoCommand(this.components);
             this.ucRT302 = new Srvtools.UpdateComponent(this.components);
+            this.RT3021 = new Srvtools.InfoCommand(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustBillingPrt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustBillingPrtSub)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_RTLessorAVSCustBillingPrt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT302)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT3021)).BeginInit();
             // 
             // InfoConnection1
             // 
@@ -420,7 +425,7 @@
             this.ucRT302.AutoTrans = true;
             this.ucRT302.ExceptJoin = false;
             this.ucRT302.LogInfo = null;
-            this.ucRT302.Name = null;
+            this.ucRT302.Name = "ucRT302";
             this.ucRT302.RowAffectsCheck = true;
             this.ucRT302.SelectCmd = this.RT302;
             this.ucRT302.SelectCmdForUpdate = null;
@@ -431,11 +436,42 @@
             this.ucRT302.TransIsolationLevel = System.Data.IsolationLevel.ReadCommitted;
             this.ucRT302.UseTranscationScope = false;
             this.ucRT302.WhereMode = Srvtools.WhereModeType.Keyfields;
+            // 
+            // RT3021
+            // 
+            this.RT3021.CacheConnection = false;
+            this.RT3021.CommandText = resources.GetString("RT3021.CommandText");
+            this.RT3021.CommandTimeout = 30;
+            this.RT3021.CommandType = System.Data.CommandType.Text;
+            this.RT3021.DynamicTableName = false;
+            this.RT3021.EEPAlias = null;
+            this.RT3021.EncodingAfter = null;
+            this.RT3021.EncodingBefore = "Windows-1252";
+            this.RT3021.EncodingConvert = null;
+            this.RT3021.InfoConnection = this.InfoConnection1;
+            keyItem5.KeyName = "comq1";
+            keyItem6.KeyName = "lineq1";
+            keyItem7.KeyName = "cusid";
+            this.RT3021.KeyFields.Add(keyItem5);
+            this.RT3021.KeyFields.Add(keyItem6);
+            this.RT3021.KeyFields.Add(keyItem7);
+            this.RT3021.MultiSetWhere = false;
+            this.RT3021.Name = "RT3021";
+            this.RT3021.NotificationAutoEnlist = false;
+            this.RT3021.SecExcept = null;
+            this.RT3021.SecFieldName = null;
+            this.RT3021.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.RT3021.SelectPaging = false;
+            this.RT3021.SelectTop = 0;
+            this.RT3021.SiteControl = false;
+            this.RT3021.SiteFieldName = null;
+            this.RT3021.UpdatedRowSource = System.Data.UpdateRowSource.None;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustBillingPrt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustBillingPrtSub)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_RTLessorAVSCustBillingPrt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT302)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT3021)).EndInit();
 
         }
 
@@ -451,5 +487,6 @@
         private Srvtools.InfoCommand View_RTLessorAVSCustBillingPrt;
         private Srvtools.InfoCommand RT302;
         private Srvtools.UpdateComponent ucRT302;
+        private Srvtools.InfoCommand RT3021;
     }
 }
