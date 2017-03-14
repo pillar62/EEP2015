@@ -59,7 +59,6 @@
                 syr = $("#DUEDAT_Query").combobox('getValue'); //年
                 smm = $("#DROPDAT_Query").combobox('getValue'); //月
                 spr = $("#cusnc_Query").combobox('getValue'); //期別
-                alert(syr);
                 if (spr == '1')
                 {
                     due1S = syr + '/' + smm + '/01';
@@ -71,29 +70,64 @@
                     var sdt = new Date(due1S+' 00:00:00');
                     //將月份移至下個月份
                     sdt.setMonth(sdt.getMonth()+1);
-                    //alert(sdt);
                     //設定為下個月份的第一天
                     sdt.setDate(1);
                     //將日期-1為當月的最後一天
                     var dayOfMonth = sdt.getDate();
                     sdt.setDate(dayOfMonth - 1);
                     due1E = sdt.getFullYear() + "/" + (sdt.getMonth()+1) + "/" + sdt.getDate();
-                    alert(due1E);
                 }
 
                 due2S = "1999/1/1";
                 due2E = "1999/1/1";
 
-                alert(where);
                 if (where.length > 0) {
                     //取得查詢條件的值
                     where = "a.DROPDAT is null and a.CANCELDAT is null and a.FINISHDAT is not null and a.freecode<>'Y' and b.DROPDAT is null and b.CANCELDAT is null ";
                     where = where + " and (a.duedat between '" + due1S + "' and '" + due1E + "' OR a.duedat between '" + due2S + "' and '" + due2E + "') ";
-
-                    alert(where);
                 }
                 $(dg).datagrid('setWhere', where);
             }
+        }
+
+        function serverMethod() {
+
+            //var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var syr = $("#DUEDAT_Query").combobox('getValue'); //年
+            var smm = $("#DROPDAT_Query").combobox('getValue'); //月
+            var sdd = $("#cusnc_Query").combobox('getValue'); //期別
+            var usr = getClientInfo('_usercode');
+            alert(syr);
+
+            $.ajax({
+                type: "POST",
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT302.cmdRT3021', //連接的Server端，command
+                //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                data: "mode=method&method=" + "smRT3021" + "&parameters=" + syr + "," + smm + "," + sdd + ","+usr,
+                cache: false,
+                async: false,
+                success: function (data) {
+                    var rows = $.parseJSON(data);//將JSon轉會到Object類型提供給Grid顯示
+                    //$('#dataGridMaster0').datagrid('loadData', rows);//通過loadData方法清除掉原有Grid中的舊有資料並填補新資料
+                    alert(rows);
+                }
+            });
+        }
+
+        function WriteToFile(text) {
+   
+            var fso = new ActiveXObject("Scripting.FileSystemObject");
+
+            var fileFrom =document.getElementById("fileFrom").value;
+            var fileTo =document.getElementById("fileTo").value;
+            var file="Data"+fileFrom+"0000-"+fileTo+"0000.txt";
+            var folder ="c:\\GovData\\LonLat\\";
+            var f=folder+file;
+
+            var s = fso.CreateTextFile(f, true);
+            s.WriteLine('<?xml version="1.0" encoding="utf-8" ?>');
+            s.WriteLine(text);
+            s.Close();
         }
     </script>
 </head>
@@ -103,7 +137,7 @@
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
             <JQTools:JQDataGrid ID="dataGridMaster" data-options="pagination:true,view:commandview" RemoteName="sRT302.RT3021" runat="server" AutoApply="True"
                 DataMember="RT3021" Pagination="True" QueryTitle="Query"
-                Title="每月續約帳單轉檔作業" AllowDelete="False" AllowInsert="False" AllowUpdate="False" QueryMode="Panel" AlwaysClose="true" AllowAdd="False" ViewCommandVisible="False" OnLoadSuccess="OnLoadSuccess">
+                Title="每月續約帳單轉檔作業" AllowDelete="False" AllowInsert="False" AllowUpdate="False" QueryMode="Panel" AlwaysClose="True" AllowAdd="False" ViewCommandVisible="False" OnLoadSuccess="OnLoadSuccess" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="right" Caption="社區序號" Editor="numberbox" FieldName="comq1" Format="" Width="120" />
                     <JQTools:JQGridColumn Alignment="right" Caption="主線序號" Editor="numberbox" FieldName="lineq1" Format="" Width="120" />
@@ -114,21 +148,21 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="週期" Editor="text" FieldName="codenc" Format="" MaxLength="0" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="繳款" Editor="text" FieldName="codenc1" Format="" MaxLength="0" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="連絡電話" Editor="text" FieldName="TEL" Format="" MaxLength="0" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="申請日" Editor="datebox" FieldName="APPLYDAT" Format="" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="完工日" Editor="datebox" FieldName="FINISHDAT" Format="" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="開始計費" Editor="datebox" FieldName="STRBILLINGDAT" Format="" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="最近續約日" Editor="datebox" FieldName="newBILLINGDAT" Format="" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="申請日" Editor="datebox" FieldName="APPLYDAT" Format="yyyy/mm/dd" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="完工日" Editor="datebox" FieldName="FINISHDAT" Format="yyyy/mm/dd" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="開始計費" Editor="datebox" FieldName="STRBILLINGDAT" Format="yyyy/mm/dd" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="最近續約日" Editor="datebox" FieldName="newBILLINGDAT" Format="yyyy/mm/dd" Width="120" />
                     <JQTools:JQGridColumn Alignment="right" Caption="調整日數" Editor="numberbox" FieldName="adjustday" Format="" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="到期日" Editor="datebox" FieldName="DUEDAT" Format="" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="退租日" Editor="datebox" FieldName="DROPDAT" Format="" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="CANCELDAT" Format="" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="到期日" Editor="datebox" FieldName="DUEDAT" Format="yyyy/mm/dd" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="退租日" Editor="datebox" FieldName="DROPDAT" Format="yyyy/mm/dd" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="CANCELDAT" Format="yyyy/mm/dd" Width="120" />
                     <JQTools:JQGridColumn Alignment="right" Caption="期數" Editor="numberbox" FieldName="PERIOD" Format="" Width="120" />
                     <JQTools:JQGridColumn Alignment="right" Caption="可用日數" Editor="numberbox" FieldName="validdat" Format="" Width="120" />
                 </Columns>
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
                         OnClick="openQuery" Text="查詢" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="轉續約單" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="轉續約單" Visible="True" OnClick="serverMethod" />
                 </TooItems>
                 <QueryColumns>
                     <JQTools:JQQueryColumn AndOr="and" Caption="續約年" Condition="&gt;=" DataType="string" Editor="infocombobox" EditorOptions="items:[{value:'2013',text:'2013',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" FieldName="DUEDAT" Format="yyyy/mm" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />

@@ -122,27 +122,39 @@
     <value>0, 362</value>
   </data>
   <data name="serviceManager1" type="System.Drawing.Point, System.Drawing">
-    <value>37, 76</value>
+    <value>17, 134</value>
   </data>
   <data name="InfoConnection1" type="System.Drawing.Point, System.Drawing">
-    <value>37, 37</value>
+    <value>17, 56</value>
   </data>
   <data name="RTLessorAVSCustBillingPrt" type="System.Drawing.Point, System.Drawing">
-    <value>642, 168</value>
+    <value>537, 188</value>
   </data>
   <data name="ucRTLessorAVSCustBillingPrt" type="System.Drawing.Point, System.Drawing">
-    <value>644, 121</value>
+    <value>591, 121</value>
   </data>
   <data name="RTLessorAVSCustBillingPrtSub" type="System.Drawing.Point, System.Drawing">
-    <value>638, 287</value>
+    <value>539, 353</value>
   </data>
   <data name="ucRTLessorAVSCustBillingPrtSub" type="System.Drawing.Point, System.Drawing">
-    <value>638, 333</value>
+    <value>574, 451</value>
   </data>
   <data name="idRTLessorAVSCustBillingPrt_RTLessorAVSCustBillingPrtSub" type="System.Drawing.Point, System.Drawing">
-    <value>544, 227</value>
+    <value>464, 277</value>
   </data>
   <data name="View_RTLessorAVSCustBillingPrt" type="System.Drawing.Point, System.Drawing">
-    <value>415, 56</value>
+    <value>17, 95</value>
+  </data>
+  <data name="RT302" type="System.Drawing.Point, System.Drawing">
+    <value>17, 368</value>
+  </data>
+  <data name="ucRT302" type="System.Drawing.Point, System.Drawing">
+    <value>17, 290</value>
+  </data>
+  <data name="RT3021" type="System.Drawing.Point, System.Drawing">
+    <value>17, 251</value>
+  </data>
+  <data name="cmdRT3021" type="System.Drawing.Point, System.Drawing">
+    <value>382, 347</value>
   </data>
 </root>

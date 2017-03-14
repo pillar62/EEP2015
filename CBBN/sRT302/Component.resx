@@ -118,31 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="serviceManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>37, 76</value>
+    <value>17, 134</value>
   </metadata>
   <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>37, 37</value>
+    <value>17, 56</value>
   </metadata>
   <metadata name="RTLessorAVSCustBillingPrt.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>642, 168</value>
+    <value>537, 188</value>
   </metadata>
   <metadata name="ucRTLessorAVSCustBillingPrt.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>644, 121</value>
+    <value>591, 121</value>
   </metadata>
   <metadata name="RTLessorAVSCustBillingPrtSub.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>638, 287</value>
+    <value>539, 353</value>
   </metadata>
   <metadata name="ucRTLessorAVSCustBillingPrtSub.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>638, 333</value>
+    <value>574, 451</value>
   </metadata>
   <metadata name="idRTLessorAVSCustBillingPrt_RTLessorAVSCustBillingPrtSub.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>544, 227</value>
+    <value>464, 277</value>
   </metadata>
   <metadata name="View_RTLessorAVSCustBillingPrt.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>415, 56</value>
+    <value>17, 95</value>
   </metadata>
   <metadata name="RT302.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>297, 256</value>
+    <value>17, 368</value>
   </metadata>
   <data name="RT302.CommandText" xml:space="preserve">
     <value>SELECT BATCH, DUEDATSB, DUEDATEB, DUEDATSA, DUEDATEA, CDAT, c.CUSNC, 
@@ -155,10 +155,10 @@ left outer join RTEmployee h inner join RTObj i on h.cusid =i.cusid on h.emply =
 ORDER BY BATCH DESC</value>
   </data>
   <metadata name="ucRT302.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>291, 210</value>
+    <value>17, 290</value>
   </metadata>
   <metadata name="RT3021.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>128, 207</value>
+    <value>17, 251</value>
   </metadata>
   <data name="RT3021.CommandText" xml:space="preserve">
     <value>SELECT a.comq1, a.lineq1, a.cusid, 
@@ -177,6 +177,27 @@ left outer join rtcode e on a.paycycle=e.code and e.kind='M8'
 left outer join rtcode f on a.paytype=f.code and f.kind='M9' 
 WHERE 	a.DROPDAT is null and a.CANCELDAT is null and a.FINISHDAT is not null and a.freecode&lt;&gt;'Y' 
 and 	b.DROPDAT is null and b.CANCELDAT is null </value>
+  </data>
+  <metadata name="cmdRT3021.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>382, 347</value>
+  </metadata>
+  <metadata name="infoParameter1.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter2.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter3.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter4.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdRT3022.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>216, 348</value>
+  </metadata>
+  <data name="cmdRT3022.CommandText" xml:space="preserve">
+    <value> select a.batch, convert(varchar(7), convert(int, convert(varchar(8), dateadd(m, 2, a.duedat), 112)) - 19110000) +';'+ d.csnoticeid + ';' +  convert(varchar(3), datepart(yy, a.duedat) - 1911) + substring(convert(varchar(6), a.duedat, 12), 3, 2) + ';' +  convert(varchar(9), case b.secondcase when 'Y' then c.amt2 else c.amt end) + ';' +  d.cscusid + ';' +' ' + ';' +c.memo + ';' +b.cusnc + ';' as bcodesrc from RTLessorAvsCustBillingPrtSub a  inner join RTLessorAvsCust b on a.cusid = b.cusid inner join RTLessorAVSCustBillingBarcode d on d.noticeid = a.noticeid  inner join RTBillCharge c on c.casekind = d.casekind and c.paycycle = d.paycycle and c.casetype = '07'  where a.batch ='20170201'  order by b.comq1, b.lineq1, b.cusnc, c.paycycle</value>
   </data>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>

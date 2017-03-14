@@ -533,7 +533,7 @@
                     <JQTools:JQDrillDownKeyFields FieldName="FAQNO" />
                 </KeyFields>
             </JQTools:JQDrillDown>
-            <JQTools:JQDrillDown ID="JQDrillDown2" runat="server" DataMember="RTLessorAVSCmtyLineSNDWORK" FormCaption="派工資料維護" FormName="~/CBBN/RT1011.aspx" RemoteName="sRT203.RTLessorAVSCmtyLineSNDWORK">
+            <JQTools:JQDrillDown ID="JQDrillDown2" runat="server" DataMember="RTLessorAVSCmtyLineSNDWORK" FormCaption="派工資料維護" FormName="~/CBBN/RT1011.aspx" RemoteName="sRT203.RTLessorAVSCmtyLineSNDWORK" OpenMode="NewTab">
                 <KeyFields>
                     <JQTools:JQDrillDownKeyFields FieldName="PRTNO" />
                 </KeyFields>

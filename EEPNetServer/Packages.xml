@@ -13,5 +13,6 @@
     <PackageFile Name="sRT202.dll" Active="1" />
     <PackageFile Name="sRT203.dll" Active="1" />
     <PackageFile Name="sRT302.dll" Active="1" />
+    <PackageFile Name="sRT204.dll" Active="1" />
   </CBBN>
 </InfolightPackages>

@@ -14,8 +14,47 @@
             parent.addTab("每月續約帳單轉檔作業", "CBBN/RT3021.aspx?COMQ1=" + ss + "&LINEQ1=" + s1);
         }
 
+        function WriteToFile(text) {
+            //轉出檔案 預設呼叫後端產生檔案之後再開啟網頁下載功能
+            var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var sbatch = row.BATCH; //批號
+            alert(sbatch);
+            
+            $.ajax({
+                type: "POST",
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT302.cmdRT3022', //連接的Server端，command
+                //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                data: "mode=method&method=" + "smRT3022" + "&parameters=" + sbatch,
+                cache: false,
+                async: false,
+                success: function (data) {
+                    //var rows = $.parseJSON(data);//將JSon轉會到Object類型提供給Grid顯示                    
+                    alert(data);
+                    //window.open('../download/test1.txt', 'file download', config = 'height=500,width=500');
+                    //window.location.href = '../download/334.20170310';
+                    myCSFunction();
+                }
+            });
+        }
 
-    </script>
+        function myCSFunction() {
+            $.ajax({
+
+                type: "POST",
+
+                data: "mode=getFile",  //Test隨意定義
+
+                cache: false,
+
+                async: true,
+
+                success: function (data1) {
+                    alert(data1);  //可以顯示出"CS Function test！"字樣
+                },
+                error: function (data) {
+                }
+            });
+        }    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -44,7 +83,7 @@
                         OnClick="openQuery" Text="查詢" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="0.產生續約單" Visible="True" Icon="icon-view" OnClick="LinkRT3021" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="0.產生續約單(過期)" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="1.匯出續約文字檔" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="1.匯出續約文字檔" Visible="True" Icon="icon-view" OnClick="WriteToFile" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="2.上傳續約文字檔" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="3.匯入條碼檔" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="4.列印續約單" Visible="True" />
