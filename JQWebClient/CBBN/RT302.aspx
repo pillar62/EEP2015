@@ -49,12 +49,21 @@
                 async: true,
 
                 success: function (data1) {
-                    alert(data1);  //可以顯示出"CS Function test！"字樣
+                    if (data1!=""){
+                        alert(data1);  //可以顯示出"CS Function test！"字樣
+                    }
                 },
                 error: function (data) {
                 }
             });
-        }    </script>
+        }
+
+        function fileUpLoad() {
+            $('#JQFileUpload1').next().remove()
+            initInfoFileUpload($('#JQFileUpload1'));
+            //openImport("#dataGridMaster", 2, 0);
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -84,7 +93,7 @@
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="0.產生續約單" Visible="True" Icon="icon-view" OnClick="LinkRT3021" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="0.產生續約單(過期)" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="1.匯出續約文字檔" Visible="True" Icon="icon-view" OnClick="WriteToFile" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="2.上傳續約文字檔" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="2.上傳續約文字檔" Visible="True" OnClick="fileUpLoad" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="3.匯入條碼檔" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="4.列印續約單" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="5.列印信封" Visible="True" />
@@ -92,8 +101,10 @@
                 </TooItems>
                 <QueryColumns>
                     <JQTools:JQQueryColumn AndOr="and" Caption="續約通知書批次" Condition="%" DataType="string" Editor="text" FieldName="BATCH" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="上傳檔案" Condition="%" DataType="string" Editor="infofileupload" FieldName="CUSNC3" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                 </QueryColumns>
             </JQTools:JQDataGrid>
+            <JQTools:JQFileUpload ID="JQFileUpload1" runat="server" BorderWidth="600px" FileSizeLimited="50000" ShowButton="True" ShowLocalFile="True" UpLoadFolder="barcode" Width="600px" />
         </div>
 
     </form>

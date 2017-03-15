@@ -26,8 +26,41 @@ public partial class Template_JQueryQuery1 : System.Web.UI.Page
         }
     }
 
+
+
     protected void ButtonDownloadFile(string xFile)
     {
+        FileInfo file = new FileInfo(xFile);//filePath為你在Server上路徑
+        if (file.Exists)
+        {
+            Response.Clear();
+            Response.Buffer = false;
+            Response.ContentType = "application/x-msdownload";
+            Response.AddHeader("Content-Disposition", "attachment; filename=" + file.Name);
+            Response.AddHeader("Content-Length", file.Length.ToString());
+            Response.Filter.Close();
+            Response.WriteFile(file.FullName);
+            Response.End();
+        }
+        /*
+        HttpContext.Current.Response.ClearHeaders();
+        HttpContext.Current.Response.Clear();
+        HttpContext.Current.Response.AddHeader("Accept-Language", "zh-tw");
+        //attachment = 此頁為附件檔，預設為 inline ，會直接顯示在網頁上
+        HttpContext.Current.Response.AddHeader("content-disposition", "attachment; filename="+xFile);
+        //若要使用中文檔名
+        HttpContext.Current.Response.AddHeader("content-disposition", "attachment;filename=334.20170310");
+        //欲輸出的檔案類型
+        HttpContext.Current.Response.ContentType = "application/txt";
+        //指定欲輸出的實體檔案路徑(Server端)
+        HttpContext.Current.Response.TransmitFile("c:\\MyFolder\\334.txt");
+        HttpContext.Current.Response.Flush();
+        HttpContext.Current.Response.End();
+
+        //這是專門寫文字的
+        //HttpContext.Current.Response.Write();
+        HttpContext.Current.Response.End();
+        */
 
         /*
         string srv_file = "C:\\EEP2015\\JQWebClient\\download\\334.20170310";
@@ -113,7 +146,7 @@ public partial class Template_JQueryQuery1 : System.Web.UI.Page
         HttpContext.Current.Response.End();
         */
 
-
+        /*
         var out_file = xFile;
         if (File.Exists(xFile))
         {
@@ -147,5 +180,6 @@ public partial class Template_JQueryQuery1 : System.Web.UI.Page
         {
                 //return false;
         }
+        */
     }
 }
