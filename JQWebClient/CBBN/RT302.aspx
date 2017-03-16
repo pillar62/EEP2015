@@ -28,11 +28,26 @@
                 cache: false,
                 async: false,
                 success: function (data) {
+                    Date.prototype.yyyymmdd = function () {
+                        var mm = this.getMonth() + 1; // getMonth() is zero-based
+                        var dd = this.getDate();
+
+                        return [this.getFullYear(),
+                                (mm > 9 ? '' : '0') + mm,
+                                (dd > 9 ? '' : '0') + dd].join('');
+                    };
+
+                    var date = new Date();
+                    var val = '334' + date.yyyymmdd();
+
+                    //function downloadScript(val, rowData) {
+                        //return '<a href="../handler/JqFileHandler2.ashx?File=' + val + '">' + val + '</a>';
+                    //}
                     //var rows = $.parseJSON(data);//將JSon轉會到Object類型提供給Grid顯示                    
-                    alert(data);
+                    //alert(data);
                     //window.open('../download/test1.txt', 'file download', config = 'height=500,width=500');
-                    //window.location.href = '../download/334.20170310';
-                    myCSFunction();
+                    window.location.href = "../handler/JqFileHandler2.ashx?File=" + val;
+                    //myCSFunction();
                 }
             });
         }
@@ -63,12 +78,30 @@
             initInfoFileUpload($('#JQFileUpload1'));
             //openImport("#dataGridMaster", 2, 0);
         }
+
+        function fileuploadsuccess(value) {
+            //這個value值就是文件名。
+            alert(value);
+            $('#JQFileUpload1').next().remove()
+            initInfoFileUpload($('#JQFileUpload1'));
+        }
+
+        function getFileUploadValue() {
+            //寫在onBeforeUpload事件
+            var infofileUpload = $('#JQFileUpload1');
+            var infofileUploadvalue = $.data(this, "infofileupload").value;
+            var infofileUploadfile = $.data(this, "infofileupload").file;
+            infofileUploadvalue.val()//取得文件名稱
+            infofileUploadfile.val()//上傳路徑
+
+        }
     </script>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
+            <JQTools:JQFileUpload ID="JQFileUpload1" runat="server" BorderWidth="600px" FileSizeLimited="50000" ShowButton="True" ShowLocalFile="True" UpLoadFolder="barcode" Width="600px" onSuccess="fileuploadsuccess" />
             <JQTools:JQDataGrid ID="dataGridMaster" data-options="pagination:true,view:commandview" RemoteName="sRT302.RT302" runat="server" AutoApply="True"
                 DataMember="RT302" Pagination="True" QueryTitle="查詢條件"
                 Title="每月續約帳單列印查詢" AllowDelete="False" AllowInsert="False" AllowUpdate="False" QueryMode="Panel" AlwaysClose="True" AllowAdd="False" ViewCommandVisible="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False">
@@ -89,7 +122,7 @@
                 </Columns>
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
-                        OnClick="openQuery" Text="查詢" />
+                        OnClick="openQuery" Text="查詢" Visible="False" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="0.產生續約單" Visible="True" Icon="icon-view" OnClick="LinkRT3021" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="0.產生續約單(過期)" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="1.匯出續約文字檔" Visible="True" Icon="icon-view" OnClick="WriteToFile" />
@@ -104,7 +137,6 @@
                     <JQTools:JQQueryColumn AndOr="and" Caption="上傳檔案" Condition="%" DataType="string" Editor="infofileupload" FieldName="CUSNC3" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                 </QueryColumns>
             </JQTools:JQDataGrid>
-            <JQTools:JQFileUpload ID="JQFileUpload1" runat="server" BorderWidth="600px" FileSizeLimited="50000" ShowButton="True" ShowLocalFile="True" UpLoadFolder="barcode" Width="600px" />
         </div>
 
     </form>

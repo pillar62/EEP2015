@@ -1,7 +1,7 @@
 <InfolightUsers EnableDataBase="False">
   <String UserId="001" UserName="ANDY">
     <Computer Name="192.168.1.123" LoginTime="2015-09-21 14:29:31" Count="25" />
-    <Computer Name="192.168.1.168" LoginTime="2017-01-17 16:52:43" Count="106" />
+    <Computer Name="192.168.1.168" LoginTime="2017-01-17 16:52:43" Count="122" />
     <Computer Name="192.168.1.106" LoginTime="2015-09-23 15:06:24" Count="1" />
     <Computer Name="192.168.1.107" LoginTime="2015-10-28 12:16:07" Count="20" />
     <Computer Name="220.135.126.136" LoginTime="2017-02-23 08:33:52" Count="1" />

@@ -77,11 +77,13 @@ namespace sRT302
                 DataSet ds = this.ExecuteSql("cmdRT3022", sql, this.GetClientInfo(ClientInfoType.LoginDB).ToString(), true);
                 if (ds.Tables[0].Rows.Count > 0)
                 {
-                    FileStream fileStream = new FileStream(@"c:\test1.txt", FileMode.Create);
+                    DateTime dt = DateTime.Now;
+                    var sfile = "334" + string.Format("{0:yyyyMMdd}", dt);
+                    FileStream fileStream = new FileStream(@"c:\"+ sfile, FileMode.Create);
 
                     fileStream.Close();   //切記開了要關,不然會被佔用而無法修改喔!!!
 
-                    using (StreamWriter sw = new StreamWriter(@"..\JQWebClient\download\334.20170310"))
+                    using (StreamWriter sw = new StreamWriter(@"..\JQWebClient\download\"+ sfile))
                     {
                             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
                         {

@@ -107,7 +107,7 @@ public partial class Template_JQueryQuery1 : System.Web.UI.Page
         /*
         //用戶端的物件
         string fileUrlPath = "C:\\EEP2015\\JQWebClient\\download\\334.20170310";
-        //string cli_file = "C:\\334.20170310";
+        //string cli_file = "C:\\myfolder\\334.20170310";
         System.Net.WebClient wc = new System.Net.WebClient();
         byte[] file = null;
 
