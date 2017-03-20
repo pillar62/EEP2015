@@ -13,6 +13,7 @@
         {
             if (flag)
             {
+                //處理下拉的年月等欄位
                 var data, json, i, yr;
                 var Today = new Date();
                 yr = Today.getFullYear();
