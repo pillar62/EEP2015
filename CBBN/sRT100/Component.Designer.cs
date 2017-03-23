@@ -198,6 +198,7 @@
             Srvtools.KeyItem keyItem40 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem41 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem42 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem43 = new Srvtools.KeyItem();
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTCounty = new Srvtools.InfoCommand(this.components);
@@ -245,6 +246,8 @@
             this.RTConsignee = new Srvtools.InfoCommand(this.components);
             this.ucRTConsignee = new Srvtools.UpdateComponent(this.components);
             this.V_RTConsignee = new Srvtools.InfoCommand(this.components);
+            this.RTDept = new Srvtools.InfoCommand(this.components);
+            this.ucRTDept = new Srvtools.UpdateComponent(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCounty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCtyTown)).BeginInit();
@@ -275,6 +278,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RTArea)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTConsignee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.V_RTConsignee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RTDept)).BeginInit();
             // 
             // InfoConnection1
             // 
@@ -2398,7 +2402,7 @@
             this.ucRTArea.AutoTrans = true;
             this.ucRTArea.ExceptJoin = false;
             this.ucRTArea.LogInfo = null;
-            this.ucRTArea.Name = null;
+            this.ucRTArea.Name = "ucRTArea";
             this.ucRTArea.RowAffectsCheck = true;
             this.ucRTArea.SelectCmd = this.RTArea;
             this.ucRTArea.SelectCmdForUpdate = null;
@@ -2441,7 +2445,7 @@
             this.ucRTConsignee.AutoTrans = true;
             this.ucRTConsignee.ExceptJoin = false;
             this.ucRTConsignee.LogInfo = null;
-            this.ucRTConsignee.Name = null;
+            this.ucRTConsignee.Name = "ucRTConsignee";
             this.ucRTConsignee.RowAffectsCheck = true;
             this.ucRTConsignee.SelectCmd = this.RTConsignee;
             this.ucRTConsignee.SelectCmdForUpdate = null;
@@ -2477,6 +2481,49 @@
             this.V_RTConsignee.SiteControl = false;
             this.V_RTConsignee.SiteFieldName = null;
             this.V_RTConsignee.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // RTDept
+            // 
+            this.RTDept.CacheConnection = false;
+            this.RTDept.CommandText = "SELECT * FROM RTDept";
+            this.RTDept.CommandTimeout = 30;
+            this.RTDept.CommandType = System.Data.CommandType.Text;
+            this.RTDept.DynamicTableName = false;
+            this.RTDept.EEPAlias = null;
+            this.RTDept.EncodingAfter = null;
+            this.RTDept.EncodingBefore = "Windows-1252";
+            this.RTDept.EncodingConvert = null;
+            this.RTDept.InfoConnection = this.InfoConnection1;
+            keyItem43.KeyName = "DEPT";
+            this.RTDept.KeyFields.Add(keyItem43);
+            this.RTDept.MultiSetWhere = false;
+            this.RTDept.Name = "RTDept";
+            this.RTDept.NotificationAutoEnlist = false;
+            this.RTDept.SecExcept = null;
+            this.RTDept.SecFieldName = null;
+            this.RTDept.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.RTDept.SelectPaging = false;
+            this.RTDept.SelectTop = 0;
+            this.RTDept.SiteControl = false;
+            this.RTDept.SiteFieldName = null;
+            this.RTDept.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // ucRTDept
+            // 
+            this.ucRTDept.AutoTrans = true;
+            this.ucRTDept.ExceptJoin = false;
+            this.ucRTDept.LogInfo = null;
+            this.ucRTDept.Name = null;
+            this.ucRTDept.RowAffectsCheck = true;
+            this.ucRTDept.SelectCmd = this.RTDept;
+            this.ucRTDept.SelectCmdForUpdate = null;
+            this.ucRTDept.SendSQLCmd = true;
+            this.ucRTDept.ServerModify = true;
+            this.ucRTDept.ServerModifyGetMax = false;
+            this.ucRTDept.TranscationScopeTimeOut = System.TimeSpan.Parse("00:02:00");
+            this.ucRTDept.TransIsolationLevel = System.Data.IsolationLevel.ReadCommitted;
+            this.ucRTDept.UseTranscationScope = false;
+            this.ucRTDept.WhereMode = Srvtools.WhereModeType.Keyfields;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCounty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCtyTown)).EndInit();
@@ -2507,6 +2554,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RTArea)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTConsignee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.V_RTConsignee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RTDept)).EndInit();
 
         }
 
@@ -2559,5 +2607,7 @@
         private Srvtools.InfoCommand RTConsignee;
         private Srvtools.UpdateComponent ucRTConsignee;
         private Srvtools.InfoCommand V_RTConsignee;
+        private Srvtools.InfoCommand RTDept;
+        private Srvtools.UpdateComponent ucRTDept;
     }
 }

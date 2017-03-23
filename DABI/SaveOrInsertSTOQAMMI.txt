@@ -1,0 +1,133 @@
+    private Boolean SaveOrInsertSTQAMMI(string excel_filename, ref string ErrorMessage)
+    {
+
+        try
+        {
+            //取得年月
+            //string sYYMM = txtSDATE.Text.Trim().Replace("/", "").Substring(0, 5);
+            string sYYMM = txtSDATE.Text.Trim().Replace("/", "");
+            //刪除原來同年月的資料(全部)
+            using (ACTIONEntity DelEntity = new ACTIONEntity())
+            {
+                string delSQL = "DELETE FROM STQAMMI WHERE DATE1 LIKE '" + sYYMM.Substring(0, 5) + "%'";
+                DelEntity.ExecuteStoreCommand(delSQL);
+                DelEntity.SaveChanges();
+            }
+            //開啟工作簿
+            HSSFWorkbook wk;
+            using (FileStream fs = new FileStream(excel_filename, FileMode.Open, FileAccess.ReadWrite))
+            {
+                wk = new HSSFWorkbook(fs);
+            }
+            //取得excel檔案第一個sheet
+            HSSFSheet hst = (HSSFSheet)wk.GetSheetAt(0);
+            //增加抬頭
+            //第一個是成功寫入的grid
+            string sTABLEHtmlSuccess = "<h3>匯入日期：" + txtSDATE.Text+ "</h3>"; 
+            sTABLEHtmlSuccess += "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\" class=\"style2\" style=\"font-size: small; font-family: 微軟正黑體; color: #000000\"><tr>";
+            sTABLEHtmlSuccess += "<td bgcolor=\"#006699\" style=\"color: #FFFFFF\">門市</td>";
+            sTABLEHtmlSuccess += "<td bgcolor=\"#006699\" style=\"color: #FFFFFF\">業務代號</td><td bgcolor=\"#006699\" style=\"color: #FFFFFF\">業務名稱</td>";
+            sTABLEHtmlSuccess += "<td bgcolor=\"#006699\" style=\"color: #FFFFFF\">加/扣批事項</td><td bgcolor=\"#006699\" style=\"color: #FFFFFF\">加批金額</td>";
+            sTABLEHtmlSuccess += "<td bgcolor=\"#006699\" style=\"color: #FFFFFF\">扣批金額</td>";
+            //第二個是失敗寫入的grid
+            string sTABLEHtmlError = "<table border=\"1\" cellpadding=\"5\" cellspacing=\"0\" class=\"style2\" style=\"font-size: small; font-family: 微軟正黑體; color: #000000\"><tr>";
+            sTABLEHtmlError += "<td bgcolor=\"#006699\" style=\"color: #FFFFFF\">門市</td>";
+            sTABLEHtmlError += "<td bgcolor=\"#006699\" style=\"color: #FFFFFF\">業務代號</td><td bgcolor=\"#006699\" style=\"color: #FFFFFF\">業務名稱</td>";
+            sTABLEHtmlError += "<td bgcolor=\"#006699\" style=\"color: #FFFFFF\">加/扣批事項</td><td bgcolor=\"#006699\" style=\"color: #FFFFFF\">加批金額</td>";
+            sTABLEHtmlError += "<td bgcolor=\"#006699\" style=\"color: #FFFFFF\">扣批金額</td><td bgcolor=\"#006699\" style=\"color: #FFFFFF\">失敗原因</td>";
+            //記錄成功與失敗的資料列總數
+            int iQTY1 = 0, iQTY2 = 0;//1:成功，2:失敗
+            //記錄匯入excel每列的欄位數
+            int ColumnQTY;
+            decimal totqty1 = 0, totqty2 = 0;
+            //從第二列開始讀
+            for (int j = 1; j <= hst.LastRowNum; j++)
+            {
+                //取得單列
+                HSSFRow Row2 = (HSSFRow)hst.GetRow(j);
+                //取得該列的欄位數
+                ColumnQTY = Row2.LastCellNum;
+                //宣告存放欄位值的字串陣列
+                string[] CellsData = new string[ColumnQTY + 1];
+                //第0欄就放日期
+                CellsData[0] = sYYMM;
+                //接著取excel的欄位值()
+                //門市|業務人員編號|業務人員|加/扣批事項|加批金額|扣批金額
+                HSSFCell aCell;
+                for (int i = 0; i < ColumnQTY; i++)
+                {
+                    aCell = (HSSFCell)Row2.GetCell(i);
+                    //陣列索引要從index = 1 開始記錄
+                    CellsData[i + 1] = aCell != null ? aCell.ToString() : " ";
+                }
+                //判斷是否錯誤(只要前四個欄位有空值 或是 後面兩個皆為空值 就是錯誤)
+                string FormatString_TableTR_Error = "<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td><td>{4}</td><td>{5}</td><td>{6}</td></tr>";
+                string FormatString_TableTR_Success = "<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td><td>{4}</td><td>{5}</td></tr>";
+
+                string YN_INSERT = "Y";
+                if ((CellsData[1] == " ") || (CellsData[2] == " ") || (CellsData[3] == " ") || (CellsData[4] == " "))
+                {
+                    sTABLEHtmlError += String.Format(FormatString_TableTR_Error, CellsData[1], CellsData[2], CellsData[3], CellsData[4], CellsData[5], CellsData[6], "前四個欄位無資料");
+                    //是否能新增
+                    YN_INSERT = "N";
+                }
+                if (CellsData[5] == " " && CellsData[6] == " ")
+                {
+                    sTABLEHtmlError += String.Format(FormatString_TableTR_Error, CellsData[1], CellsData[2], CellsData[3], CellsData[4], CellsData[5], CellsData[6], "加批/扣批無金額");
+                    //是否能新增
+                    YN_INSERT = "N";
+                }
+                if (YN_INSERT == "Y")
+                {
+                    sTABLEHtmlSuccess += String.Format(FormatString_TableTR_Success, CellsData[1], CellsData[2], CellsData[3], CellsData[4], CellsData[5], CellsData[6]);
+                    //開始寫入table
+                    STQAMMI sSTQAMMI = new STQAMMI()
+                    {
+                        DATE1 = CellsData[0],
+                        OFFNO = CellsData[1],
+                        SALESNO = int.Parse(CellsData[2]),
+                        SALESNM = CellsData[3],
+                        ITEMS = CellsData[4],
+                        AMT1 = decimal.Parse(CellsData[5]),
+                        AMT2 = decimal.Parse(CellsData[6])
+                    };
+                    MyEntity.AddToSTQAMMI(sSTQAMMI);
+                    iQTY1++;
+                    totqty1 += decimal.Parse(CellsData[5]);
+                    totqty2 += decimal.Parse(CellsData[6]);
+                }
+                else
+                {
+                    iQTY2++;
+                }
+
+            }
+            //加上總金額(加、扣批)
+            string FormatString_total = "<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td><td>{4}</td><td>{5}</td></tr>";
+            sTABLEHtmlSuccess += String.Format(FormatString_total, "", "", "", "總計：", totqty1, totqty2);
+            
+            MyEntity.SaveChanges();
+
+            sTABLEHtmlSuccess = sTABLEHtmlSuccess + "</table>";
+            sTABLEHtmlError = sTABLEHtmlError + "</table>";
+            Q1Label1.Text = iQTY1.ToString();
+            Q2Label1.Text = iQTY2.ToString();
+            Literal1.Text = sTABLEHtmlSuccess;
+            Literal2.Text = sTABLEHtmlError;
+            if (iQTY2 > 0)
+                Literal2.Visible = true;
+            else
+                Literal2.Visible = false;
+            if (iQTY1 > 0)
+                Literal1.Visible = true;
+            else
+                Literal1.Visible = false;
+
+            return true;
+        }
+        catch (Exception E)
+        {
+            ErrorMessage = E.Message;
+            return false;
+        }
+    }

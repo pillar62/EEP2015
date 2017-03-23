@@ -6,6 +6,26 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+    <script>
+        var flag = true;
+        function MySelect(rowIndex, rowData) {
+            var ss = rowData.INVNO;
+            $("#JQDataGrid1").datagrid('setWhere', "INVNO='" + ss + "'"); //發票明細
+        }
+        function dgOnloadSuccess() {
+            flag = false;
+
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.INVNO;
+            $("#JQDataGrid1").datagrid('setWhere', "INVNO='" + ss + "'");
+        }
+
+        function LinkRT2061(val) {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.INVNO;
+            parent.addTab("發票明細", "CBBN/RT2061.aspx?INVNO=" + ss);
+        }
+    </script>
 
 </head>
 <body>
@@ -14,7 +34,7 @@
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
             <JQTools:JQDataGrid ID="dataGridView" data-options="pagination:true,view:commandview" RemoteName="sRT206.RTInvoice" runat="server" AutoApply="True"
                 DataMember="RTInvoice" Pagination="True" QueryTitle="查詢條件" EditDialogID="JQDialog1"
-                Title="發票主檔維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Panel" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
+                Title="發票主檔維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Panel" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True" OnSelect="MySelect">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="發票號碼" Editor="text" FieldName="INVNO" Format="" MaxLength="10" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="發票日期" Editor="datebox" FieldName="INVDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
@@ -23,9 +43,9 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="檢查號" Editor="text" FieldName="CHKNO" Format="" MaxLength="10" Visible="False" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="發票聯數" Editor="text" FieldName="INVTYPE" Format="" MaxLength="0" Visible="true" Width="40" />
                     <JQTools:JQGridColumn Alignment="left" Caption="課稅別" Editor="inforefval" FieldName="TAXTYPE" Format="" Visible="true" Width="60" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'P1'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'CODE',textFieldCaption:'CODENC',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" MaxLength="1" />
-                    <JQTools:JQGridColumn Alignment="right" Caption="銷售額" Editor="numberbox" FieldName="SALESUM" Format="" Visible="true" Width="90" />
-                    <JQTools:JQGridColumn Alignment="right" Caption="稅額" Editor="numberbox" FieldName="TAXSUM" Format="" Visible="true" Width="90" />
-                    <JQTools:JQGridColumn Alignment="right" Caption="發票總金額" Editor="numberbox" FieldName="TOTALSUM" Format="" Visible="true" Width="90" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="銷售額" Editor="numberbox" FieldName="SALESUM" Format="N0" Visible="true" Width="90" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="稅額" Editor="numberbox" FieldName="TAXSUM" Format="N0" Visible="true" Width="90" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="發票總金額" Editor="numberbox" FieldName="TOTALSUM" Format="N0" Visible="true" Width="90" />
                     <JQTools:JQGridColumn Alignment="right" Caption="列印批次" Editor="numberbox" FieldName="BATCH" Format="" MaxLength="0" Visible="true" Width="90" />
                     <JQTools:JQGridColumn Alignment="left" Caption="發票作廢日期" Editor="datebox" FieldName="CANCELDAT" Format="yyyy/mm/dd" MaxLength="0" Visible="true" Width="90" />
                 </Columns>
@@ -38,6 +58,7 @@
                         Text="取消"  />
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
                         OnClick="openQuery" Text="查詢" Visible="False" />
+                    <JQTools:JQToolItem Enabled="True" Icon="icon-view" ItemType="easyui-linkbutton" OnClick="LinkRT2061" Text="發票明細" Visible="True" />
                 </TooItems>
                 <QueryColumns>
                     <JQTools:JQQueryColumn AndOr="and" Caption="發票號碼" Condition="%" DataType="string" Editor="text" FieldName="INVNO" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="80" />
@@ -83,6 +104,39 @@
                 </JQTools:JQValidate>
             </JQTools:JQDialog>
         </div>
+        <JQTools:JQDataGrid ID="JQDataGrid1" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" AutoApply="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="RTInvoiceSub" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT206.RTInvoiceSub" RowNumbers="True" Title="發票明細" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="True">
+            <Columns>
+                <JQTools:JQGridColumn Alignment="left" Caption="發票號碼" Editor="text" FieldName="INVNO" Frozen="False" IsNvarChar="False" MaxLength="10" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="20">
+                </JQTools:JQGridColumn>
+                <JQTools:JQGridColumn Alignment="left" Caption="項次" Editor="text" FieldName="ENTRY" Frozen="False" IsNvarChar="False" MaxLength="10" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                </JQTools:JQGridColumn>
+                <JQTools:JQGridColumn Alignment="left" Caption="產品名稱" Editor="text" FieldName="PRODNC" Frozen="False" IsNvarChar="False" MaxLength="100" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="200">
+                </JQTools:JQGridColumn>
+                <JQTools:JQGridColumn Alignment="right" Caption="數量" Editor="text" FieldName="QTY" Frozen="False" IsNvarChar="False" MaxLength="10" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                </JQTools:JQGridColumn>
+                <JQTools:JQGridColumn Alignment="right" Caption="單價" Editor="text" FieldName="UNITAMT" Frozen="False" IsNvarChar="False" MaxLength="15" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90" Format="N4">
+                </JQTools:JQGridColumn>
+                <JQTools:JQGridColumn Alignment="right" Caption="銷售額" Editor="text" FieldName="SALEAMT" Frozen="False" IsNvarChar="False" MaxLength="10" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                </JQTools:JQGridColumn>
+                <JQTools:JQGridColumn Alignment="right" Caption="稅額" Editor="text" FieldName="TAXAMT" Frozen="False" IsNvarChar="False" MaxLength="10" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                </JQTools:JQGridColumn>
+                <JQTools:JQGridColumn Alignment="left" Caption="備註" Editor="text" FieldName="MEMOSUB" Frozen="False" IsNvarChar="False" MaxLength="250" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="500">
+                </JQTools:JQGridColumn>
+                <JQTools:JQGridColumn Alignment="left" Caption="最後異動人員" Editor="text" FieldName="UUSR" Frozen="False" IsNvarChar="False" MaxLength="6" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="12">
+                </JQTools:JQGridColumn>
+                <JQTools:JQGridColumn Alignment="left" Caption="最後異動日期" Editor="text" FieldName="UDAT" Format="yyyy/mm/dd" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                </JQTools:JQGridColumn>
+            </Columns>
+            <TooItems>
+                <JQTools:JQToolItem Enabled="True" Icon="icon-add" ItemType="easyui-linkbutton" OnClick="insertItem" Text="Insert" Visible="False" />
+                <JQTools:JQToolItem Enabled="True" Icon="icon-edit" ItemType="easyui-linkbutton" OnClick="updateItem" Text="Update" Visible="False" />
+                <JQTools:JQToolItem Enabled="True" Icon="icon-remove" ItemType="easyui-linkbutton" OnClick="deleteItem" Text="Delete" Visible="False" />
+                <JQTools:JQToolItem Enabled="True" Icon="icon-save" ItemType="easyui-linkbutton" OnClick="apply" Text="Apply" Visible="False" />
+                <JQTools:JQToolItem Enabled="True" Icon="icon-cancel" ItemType="easyui-linkbutton" OnClick="cancel" Text="Cancel" Visible="False" />
+                <JQTools:JQToolItem Enabled="True" Icon="icon-search" ItemType="easyui-linkbutton" OnClick="openQuery" Text="Query" Visible="False" />
+                <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="Export" Visible="False" />
+            </TooItems>
+        </JQTools:JQDataGrid>
     </form>
 </body>
 </html>

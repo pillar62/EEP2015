@@ -43,6 +43,7 @@
         function MySelect(rowIndex, rowData)
         {
             var ss = rowData.CUSID;
+            if (ss == "") ss = "ZZZZZ";
             $("#V_RTLessorAVSCustFaqH").datagrid('setWhere', "RTLessorAVSCustFaqH.cusid='" + ss + "'"); //維護單 
             $("#RTLessorAVSCustCont").datagrid('setWhere', "RTLessorAVSCustCont.cusid='" + ss + "'"); //客戶續約單
             $("#RTLessorAVSCustDrop").datagrid('setWhere', "RTLessorAVSCustDrop.cusid='" + ss + "'"); //客戶退租單 
@@ -72,7 +73,8 @@
             flag = false;
 
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            var ss = row.CUSID; 
+            var ss = row.CUSID;
+            if (ss == "") ss = "ZZZZZ";
             $("#V_RTLessorAVSCustFaqH").datagrid('setWhere', "RTLessorAVSCustFaqH.cusid='" + ss + "'");
             $("#RTLessorAVSCustCont").datagrid('setWhere', "RTLessorAVSCustCont.cusid='" + ss + "'");
             $("#RTLessorAVSCustDrop").datagrid('setWhere', "RTLessorAVSCustDrop.cusid='" + ss + "'"); //客戶退租單
@@ -127,7 +129,7 @@
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
             <JQTools:JQDataGrid ID="dataGridView" data-options="pagination:true,view:commandview" RemoteName="sRT104.RTLessorAVSCust" runat="server" AutoApply="True"
                 DataMember="RTLessorAVSCust" Pagination="True" QueryTitle="Query" EditDialogID="JQDialog1"
-                Title="用戶維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True" OnLoadSuccess="dgOnloadSuccess" OnSelect="MySelect">
+                Title="用戶維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True" OnLoadSuccess="dgOnloadSuccess" OnSelect="MySelect">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="right" Caption="社區序號" Editor="infocombobox" FieldName="COMQ1" Format="" Visible="true" Width="120" EditorOptions="valueField:'COMQ1',textField:'COMN',remoteName:'sRT101.RTLessorAVSCmtyH',tableName:'RTLessorAVSCmtyH',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200"/>
                     <JQTools:JQGridColumn Alignment="right" Caption="主線序號" Editor="numberbox" FieldName="LINEQ1" Format="" Visible="true" Width="60" />
@@ -188,7 +190,7 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="客戶代號" Editor="text" FieldName="CUSID" Format="" maxlength="15" Width="180" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="第二戶(Y)" Editor="text" FieldName="SECONDCASE" Format="" maxlength="1" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="公關戶(Y)" Editor="text" FieldName="FREECODE" Format="" maxlength="1" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="用戶申請日" Editor="datebox" FieldName="APPLYDAT" Format="" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="用戶申請日" Editor="datebox" FieldName="APPLYDAT" Format="yyyy/mm/dd" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="客戶名" Editor="text" FieldName="CUSNC" Format="" maxlength="30" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="第一證照別" Editor="text" FieldName="IDNUMBERTYPE" Format="" maxlength="2" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="身份證字號" Editor="text" FieldName="SOCIALID" Format="" maxlength="10" Width="180" />                        
@@ -217,11 +219,11 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="公司負責人" Editor="text" FieldName="COBOSS" Format="" maxlength="30" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="負責人身份證字號" Editor="text" FieldName="COBOSSID" Format="" maxlength="10" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="行業別" Editor="text" FieldName="COKIND" Format="" maxlength="2" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="建檔日" Editor="text" FieldName="EUSR" Format="" maxlength="6" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="建檔員" Editor="datebox" FieldName="EDAT" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="修改日" Editor="text" FieldName="UUSR" Format="" maxlength="6" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="修改員" Editor="datebox" FieldName="UDAT" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="CANCELDAT" Format="" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="建檔人" Editor="infocombobox" FieldName="EUSR" Format="" maxlength="6" Width="180" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="建檔日" Editor="datebox" FieldName="EDAT" Format="yyyy/mm/dd" Width="180" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="修改人" Editor="infocombobox" FieldName="UUSR" Format="" maxlength="6" Width="180" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="修改日" Editor="datebox" FieldName="UDAT" Format="yyyy/mm/dd" Width="180" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="CANCELDAT" Format="yyyy/mm/dd" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="作廢員" Editor="text" FieldName="CANCELUSR" Format="" maxlength="6" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="方案" Editor="text" FieldName="CASEKIND" Format="" maxlength="2" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="用戶速率" Editor="text" FieldName="USERRATE" Format="" maxlength="10" Width="180" />
@@ -237,15 +239,15 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="信用卡有效截止月" Editor="text" FieldName="CREDITDUEM" Format="" maxlength="2" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="信用卡有效截止年" Editor="text" FieldName="CREDITDUEY" Format="" maxlength="2" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="應收帳款編號" Editor="text" FieldName="BATCHNO" Format="" maxlength="12" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="轉應收帳款日" Editor="datebox" FieldName="CDAT" Format="" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="轉應收帳款日" Editor="datebox" FieldName="CDAT" Format="yyyy/mm/dd" Width="180" EditorOptions="" />
                         <JQTools:JQFormColumn Alignment="left" Caption="裝機費" Editor="numberbox" FieldName="SETMONEY" Format="" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="保證金序號" Editor="text" FieldName="GTSERIAL" Format="" maxlength="12" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="保證金收據列印人" Editor="text" FieldName="GTPRTUSR" Format="" maxlength="10" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="保證金收據列印日" Editor="datebox" FieldName="GTPRTDAT" Format="" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="保證金收據列印日" Editor="datebox" FieldName="GTPRTDAT" Format="yyyy/mm/dd" Width="180" EditorOptions="" />
                         <JQTools:JQFormColumn Alignment="left" Caption="保證金" Editor="numberbox" FieldName="GTMONEY" Format="" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="用戶保管CPE設備" Editor="text" FieldName="GTEQUIP" Format="" maxlength="10" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="用戶保管STB設備" Editor="text" FieldName="EQUIP" Format="" maxlength="2" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="保證金退還日期" Editor="datebox" FieldName="GTREPAYDAT" Format="" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="保證金退還日期" Editor="datebox" FieldName="GTREPAYDAT" Format="yyyy/mm/dd" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="IP(XXX.xxx.xxx.xxx)" Editor="text" FieldName="IP11" Format="" maxlength="3" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="IP(xxx.XXX.xxx.xxx)" Editor="text" FieldName="IP12" Format="" maxlength="3" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="IP(xxx.xxx.XXX.xxx)" Editor="text" FieldName="IP13" Format="" maxlength="3" Width="180" />
@@ -255,15 +257,15 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="STB Mac Address" Editor="text" FieldName="STBMAC" Format="" maxlength="12" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="PPPoE 帳號" Editor="text" FieldName="PPPOEID" Format="" maxlength="15" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="PPPoE 密碼" Editor="text" FieldName="PPPOEPW" Format="" maxlength="15" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="完工日" Editor="datebox" FieldName="FINISHDAT" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="報竣日" Editor="datebox" FieldName="DOCKETDAT" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="開始計費日" Editor="datebox" FieldName="STRBILLINGDAT" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="最近續約計費日" Editor="datebox" FieldName="NEWBILLINGDAT" Format="" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="完工日" Editor="datebox" FieldName="FINISHDAT" Format="yyyy/mm/dd" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="報竣日" Editor="datebox" FieldName="DOCKETDAT" Format="yyyy/mm/dd" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="開始計費日" Editor="datebox" FieldName="STRBILLINGDAT" Format="yyyy/mm/dd" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="最近續約計費日" Editor="datebox" FieldName="NEWBILLINGDAT" Format="yyyy/mm/dd" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="可使用期數" Editor="numberbox" FieldName="PERIOD" Format="" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="調整日數" Editor="numberbox" FieldName="ADJUSTDAY" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="使用截止日" Editor="datebox" FieldName="DUEDAT" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="退租日" Editor="datebox" FieldName="DROPDAT" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="備註" Editor="text" FieldName="MEMO" Format="" maxlength="500" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="使用截止日" Editor="datebox" FieldName="DUEDAT" Format="yyyy/mm/dd" Width="180" EditorOptions="" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="退租日" Editor="datebox" FieldName="DROPDAT" Format="yyyy/mm/dd" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="備註" Editor="text" FieldName="MEMO" Format="" maxlength="500" Width="180" Span="2" />
                     </Columns>
                 </JQTools:JQDataForm>
 
@@ -327,7 +329,7 @@
             </JQTools:JQDialog>
         </div>
         <p>
-            <JQTools:JQDataGrid ID="V_RTLessorAVSCustFaqH" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="False" AutoApply="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="V_RTLessorAVSCustFaqH" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT104.V_RTLessorAVSCustFaqH" RowNumbers="True" Title="客戶服務單" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="True">
+            <JQTools:JQDataGrid ID="V_RTLessorAVSCustFaqH" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" AutoApply="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="V_RTLessorAVSCustFaqH" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT104.V_RTLessorAVSCustFaqH" RowNumbers="True" Title="客戶服務單" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="True">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="CUSID" Editor="text" FieldName="CUSID" Frozen="False" IsNvarChar="False" MaxLength="10" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="20">
                     </JQTools:JQGridColumn>
@@ -378,7 +380,7 @@
                     <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="Export" Visible="False" />
                 </TooItems>
             </JQTools:JQDataGrid>
-            <JQTools:JQDataGrid ID="RTLessorAVSCustCont" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="False" AutoApply="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="V_RTLessorAVSCustCont" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT104.V_RTLessorAVSCustCont" RowNumbers="True" Title="客戶續約單" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
+            <JQTools:JQDataGrid ID="RTLessorAVSCustCont" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" AutoApply="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="V_RTLessorAVSCustCont" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT104.V_RTLessorAVSCustCont" RowNumbers="True" Title="客戶續約單" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="用戶序號" Editor="text" FieldName="CUSID" Frozen="False" IsNvarChar="False" MaxLength="15" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="30">
                     </JQTools:JQGridColumn>
@@ -419,7 +421,7 @@
                     <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="Export" Visible="False" />
                 </TooItems>
             </JQTools:JQDataGrid>
-            <JQTools:JQDataGrid ID="RTLessorAVSCustDrop" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="False" AutoApply="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="V_RTLessorAVSCustDrop" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT104.V_RTLessorAVSCustDrop" RowNumbers="True" Title="客戶退租單" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
+            <JQTools:JQDataGrid ID="RTLessorAVSCustDrop" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" AutoApply="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="V_RTLessorAVSCustDrop" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT104.V_RTLessorAVSCustDrop" RowNumbers="True" Title="客戶退租單" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="CUSID" Editor="text" FieldName="CUSID" Frozen="False" IsNvarChar="False" MaxLength="10" QueryCondition="" ReadOnly="False" Sortable="False" Visible="false" Width="20">
                     </JQTools:JQGridColumn>
@@ -454,7 +456,7 @@
                     <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="Export" Visible="False" />
                 </TooItems>
             </JQTools:JQDataGrid>
-            <JQTools:JQDataGrid ID="RTLessorAVSCustReturn" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="False" AutoApply="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="V_RTLessorAVSCustReturn" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT104.V_RTLessorAVSCustReturn" RowNumbers="True" Title="客戶復機單" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
+            <JQTools:JQDataGrid ID="RTLessorAVSCustReturn" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" AutoApply="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="V_RTLessorAVSCustReturn" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT104.V_RTLessorAVSCustReturn" RowNumbers="True" Title="客戶復機單" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="CUSID" Editor="text" FieldName="CUSID" Frozen="False" IsNvarChar="False" MaxLength="15" QueryCondition="" ReadOnly="False" Sortable="False" Visible="false" Width="30">
                     </JQTools:JQGridColumn>
@@ -495,7 +497,7 @@
                     <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="Export" Visible="False" />
                 </TooItems>
             </JQTools:JQDataGrid>
-            <JQTools:JQDataGrid ID="RTLessorAVSCustAR" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="False" AutoApply="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="V_RTLessorAVSCustAR" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT104.V_RTLessorAVSCustAR" RowNumbers="True" Title="客戶應收付帳款" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
+            <JQTools:JQDataGrid ID="RTLessorAVSCustAR" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" AutoApply="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="V_RTLessorAVSCustAR" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT104.V_RTLessorAVSCustAR" RowNumbers="True" Title="客戶應收付帳款" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="客戶編號G+YYMMDD001(YY西元後二位)" Editor="text" FieldName="CUSID" Frozen="False" IsNvarChar="False" MaxLength="15" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="30">
                     </JQTools:JQGridColumn>

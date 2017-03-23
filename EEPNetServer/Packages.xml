@@ -4,6 +4,7 @@
   <CBBN>
     <PackageFile Name="sRT100.dll" Active="1" />
     <PackageFile Name="sRT101.dll" Active="1" />
+    <PackageFile Name="sRT102.dll" Active="1" />
     <PackageFile Name="sRT103.dll" Active="1" />
     <PackageFile Name="sRT104.dll" Active="1" />
     <PackageFile Name="sRT1041.dll" Active="1" />
@@ -14,11 +15,13 @@
     <PackageFile Name="sRT203.dll" Active="1" />
     <PackageFile Name="sRT204.dll" Active="1" />
     <PackageFile Name="sRT205.dll" Active="1" />
+    <PackageFile Name="sRT206.dll" Active="1" />
+    <PackageFile Name="sRT207.dll" Active="1" />
     <PackageFile Name="sRT302.dll" Active="1" />
     <PackageFile Name="sRT303.dll" Active="1" />
     <PackageFile Name="sRT304.dll" Active="1" />
     <PackageFile Name="sRT305.dll" Active="1" />
     <PackageFile Name="sRT401.dll" Active="1" />
-    <PackageFile Name="sRT206.dll" Active="1" />
+    <PackageFile Name="sRT301.dll" Active="1" />
   </CBBN>
 </InfolightPackages>

@@ -262,4 +262,10 @@
   <data name="V_RTConsignee" type="System.Drawing.Point, System.Drawing">
     <value>532, 400</value>
   </data>
+  <data name="RTDept" type="System.Drawing.Point, System.Drawing">
+    <value>307, 486</value>
+  </data>
+  <data name="ucRTDept" type="System.Drawing.Point, System.Drawing">
+    <value>299, 449</value>
+  </data>
 </root>

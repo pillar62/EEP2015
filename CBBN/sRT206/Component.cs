@@ -21,5 +21,12 @@ namespace sRT206
 
             InitializeComponent();
         }
+
+        public double myval01()
+        {
+            double aamt = Convert.ToDouble(ucRTInvoiceSub.GetFieldCurrentValue("SALEAMT"));
+            double rhrs = Convert.ToDouble(ucRTInvoiceSub.GetFieldCurrentValue("TAXAMT"));
+            return aamt + rhrs;
+        }
     }
 }

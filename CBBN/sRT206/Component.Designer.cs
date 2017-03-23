@@ -65,6 +65,11 @@
             Srvtools.KeyItem keyItem4 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem5 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem6 = new Srvtools.KeyItem();
+            Srvtools.Transaction transaction1 = new Srvtools.Transaction();
+            Srvtools.TransField transField1 = new Srvtools.TransField();
+            Srvtools.TransField transField2 = new Srvtools.TransField();
+            Srvtools.TransField transField3 = new Srvtools.TransField();
+            Srvtools.TransKeyField transKeyField1 = new Srvtools.TransKeyField();
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTInvoice = new Srvtools.InfoCommand(this.components);
@@ -73,6 +78,7 @@
             this.ucRTInvoiceSub = new Srvtools.UpdateComponent(this.components);
             this.View_RTInvoice = new Srvtools.InfoCommand(this.components);
             this.View_RTInvoiceSub = new Srvtools.InfoCommand(this.components);
+            this.infoTransaction1 = new Srvtools.InfoTransaction(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTInvoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTInvoiceSub)).BeginInit();
@@ -494,6 +500,59 @@
             this.View_RTInvoiceSub.SiteControl = false;
             this.View_RTInvoiceSub.SiteFieldName = null;
             this.View_RTInvoiceSub.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // infoTransaction1
+            // 
+            this.infoTransaction1.Name = null;
+            transaction1.AutoNumber = null;
+            transField1.DesField = "SALESUM";
+            transField1.DesValue = null;
+            transField1.FieldType = null;
+            transField1.FieldTypeName = null;
+            transField1.ReadOnly = false;
+            transField1.SrcField = "SALEAMT";
+            transField1.SrcGetValue = null;
+            transField1.SrcValue = null;
+            transField1.UpdateMode = Srvtools.UpdateMode.Inc;
+            transField2.DesField = "TAXSUM";
+            transField2.DesValue = null;
+            transField2.FieldType = null;
+            transField2.FieldTypeName = null;
+            transField2.ReadOnly = false;
+            transField2.SrcField = "TAXAMT";
+            transField2.SrcGetValue = null;
+            transField2.SrcValue = null;
+            transField2.UpdateMode = Srvtools.UpdateMode.Inc;
+            transField3.DesField = "TOTALSUM";
+            transField3.DesValue = null;
+            transField3.FieldType = null;
+            transField3.FieldTypeName = null;
+            transField3.ReadOnly = false;
+            transField3.SrcField = "SALEAMT";
+            transField3.SrcGetValue = "myval01";
+            transField3.SrcValue = null;
+            transField3.UpdateMode = Srvtools.UpdateMode.Inc;
+            transaction1.TransFields.Add(transField1);
+            transaction1.TransFields.Add(transField2);
+            transaction1.TransFields.Add(transField3);
+            transKeyField1.DesField = "INVNO";
+            transKeyField1.DesValue = null;
+            transKeyField1.FieldType = null;
+            transKeyField1.FieldTypeName = null;
+            transKeyField1.ReadOnly = false;
+            transKeyField1.SrcField = "INVNO";
+            transKeyField1.SrcGetValue = null;
+            transKeyField1.SrcValue = null;
+            transKeyField1.WhereMode = Srvtools.WhereMode.Both;
+            transaction1.TransKeyFields.Add(transKeyField1);
+            transaction1.TransMode = Srvtools.TransMode.AutoAppend;
+            transaction1.TransStep = 0;
+            transaction1.TransTableName = "RTInvoice";
+            transaction1.WhenDelete = true;
+            transaction1.WhenInsert = true;
+            transaction1.WhenUpdate = true;
+            this.infoTransaction1.Transactions.Add(transaction1);
+            this.infoTransaction1.UpdateComp = this.ucRTInvoiceSub;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTInvoice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTInvoiceSub)).EndInit();
@@ -512,5 +571,6 @@
         private Srvtools.UpdateComponent ucRTInvoiceSub;
         private Srvtools.InfoCommand View_RTInvoice;
         private Srvtools.InfoCommand View_RTInvoiceSub;
+        private Srvtools.InfoTransaction infoTransaction1;
     }
 }
