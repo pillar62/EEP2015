@@ -118,23 +118,135 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="serviceManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 173</value>
-  </metadata>
-  <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 134</value>
   </metadata>
+  <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 212</value>
+  </metadata>
   <metadata name="RTLessorAVSCustRepair.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
+    <value>300, 145</value>
   </metadata>
   <metadata name="ucRTLessorAVSCustRepair.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>302, 100</value>
   </metadata>
   <metadata name="View_RTLessorAVSCustRepair.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>711, 17</value>
+    <value>17, 56</value>
   </metadata>
   <metadata name="cmdRT1041.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>168, 173</value>
+    <value>345, 295</value>
   </metadata>
+  <metadata name="infoParameter1.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter2.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter3.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter4.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter5.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="V_RTLessorAVSCUST.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>465, 295</value>
+  </metadata>
+  <metadata name="V_RTLessorAVSCUSTAR.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>473, 331</value>
+  </metadata>
+  <metadata name="RTLessorAVSCustAR.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>662, 331</value>
+  </metadata>
+  <metadata name="ucRTLessorAVSCustAR.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>666, 292</value>
+  </metadata>
+  <metadata name="cmdRT10411.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 368</value>
+  </metadata>
+  <data name="cmdRT10411.CommandText" xml:space="preserve">
+    <value>SELECT  RTLessorAVSCustAR.CUSID, 
+RTLessorAVSCustAR.BATCHNO, 
+RTCode.CODENC, RTLessorAVSCustAR.PERIOD, RTLessorAVSCustAR.AMT, RTLessorAVSCustAR.REALAMT,
+case when RTLessorAVSCustAR.CANCELDAT is not null then 0 else RTLessorAVSCustAR.AMT - RTLessorAVSCustAR.REALAMT end AS AMTL, 
+RTLessorAVSCustAR.COD1, RTLessorAVSCustAR.COD2, RTLessorAVSCustAR.COD3, 
+RTLessorAVSCustAR.COD4, RTLessorAVSCustAR.COD5, RTLessorAVSCustAR.CDAT, 
+RTLessorAVSCustAR.MDAT, RTLessorAVSCustAR.CANCELDAT 
+FROM    RTLessorAVSCustAR LEFT OUTER JOIN 
+RTCode ON RTLessorAVSCustAR.ARTYPE = RTCode.CODE AND 
+RTCode.KIND = 'N2' 
+</value>
+  </data>
+  <metadata name="cmdRT104111.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 407</value>
+  </metadata>
+  <metadata name="infoParameter6.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter7.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter8.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter9.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdRT104112.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>20, 443</value>
+  </metadata>
+  <data name="cmdRT104112.CommandText" xml:space="preserve">
+    <value>SELECT RTLessorAVSCustARDTL.CUSID, RTLessorAVSCustARDTL.BATCHNO, 
+RTLessorAVSCustARDTL.SEQ, RTLessorAVSCustARDTL.L14 + '-' + RTLessorAVSCustARDTL.L23 AS Expr2, 
+RTAccountNo.ACNAMEC,convert(varchar(4),RTLessorAVSCustARDTL.syy)+'/'+convert(varchar(2),RTLessorAVSCustARDTL.smm) AS TYM1, 
+convert(varchar(4),RTLessorAVSCustARDTL.tyy)+'/'+convert(varchar(2),RTLessorAVSCustARDTL.tmm) AS TYM2, RTLessorAVSCustARDTL.ITEMNC, 
+RTLessorAVSCustARDTL.PORM, RTLessorAVSCustARDTL.AMT, 
+RTLessorAVSCustARDTL.REALAMT, 
+RTLessorAVSCustARDTL.AMT - RTLessorAVSCustARDTL.REALAMT AS Expr1, 
+RTLessorAVSCustARDTL.CDAT, RTLessorAVSCustARDTL.MDAT, 
+RTLessorAVSCustARDTL.CANCELDAT, RTLessorAVSCustARDTL.CANCELMEMO 
+FROM           RTLessorAVSCustARDTL LEFT OUTER JOIN 
+RTAccountNo ON RTLessorAVSCustARDTL.L14 = RTAccountNo.L14 AND 
+RTLessorAVSCustARDTL.L23 = RTAccountNo.L23 
+where 1=1 
+ORDER BY RTLessorAVSCustARDTL.SEQ </value>
+  </data>
+  <metadata name="cmdRT1041121.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>148, 443</value>
+  </metadata>
+  <metadata name="infoParameter10.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter11.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter12.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter13.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdRT104113.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>290, 443</value>
+  </metadata>
+  <data name="cmdRT104113.CommandText" xml:space="preserve">
+    <value>SELECT          RTLessorAVSCustARDTL.CUSID, RTLessorAVSCustARDTL.BATCHNO, 
+RTLessorAVSCustARDTL.SEQ, 
+RTLessorAVSCustARDTL.L14 + '-' + RTLessorAVSCustARDTL.L23 AS Expr2, 
+RTAccountNo.ACNAMEC,convert(varchar(4),RTLessorAVSCustARDTL.syy)+'/'+convert(varchar(2),RTLessorAVSCustARDTL.smm) as TYM1,
+convert(varchar(4),RTLessorAVSCustARDTL.tyy)+'/'+convert(varchar(2),RTLessorAVSCustARDTL.tmm) AS TYM2, RTLessorAVSCustARDTL.ITEMNC, 
+RTLessorAVSCustARDTL.PORM, RTLessorAVSCustARDTL.AMT, 
+RTLessorAVSCustARDTL.REALAMT, 
+RTLessorAVSCustARDTL.AMT - RTLessorAVSCustARDTL.REALAMT AS Expr1, 
+RTLessorAVSCustARDTL.CDAT, RTLessorAVSCustARDTL.MDAT, 
+RTLessorAVSCustARDTL.CANCELDAT, RTLessorAVSCustARDTL.CANCELMEMO 
+FROM           RTLessorAVSCustARDTL LEFT OUTER JOIN 
+RTAccountNo ON RTLessorAVSCustARDTL.L14 = RTAccountNo.L14 AND 
+RTLessorAVSCustARDTL.L23 = RTAccountNo.L23 
+where 1=1 
+ORDER BY RTLessorAVSCustARDTL.SEQ </value>
+  </data>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>

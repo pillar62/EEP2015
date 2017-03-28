@@ -28,36 +28,73 @@ namespace sRT1041
         {
             var ss = (string)objParam[0];
             var sdata = ss.Split(',');
-            var srcPath = @"..\JQWebClient\excel\" + sdata[0];
             //開啟資料連接
             IDbConnection conn = cmdRT1041.Connection;
             conn.Open();
             //設定輸入參數的值
             try
             {
-                if (System.IO.File.Exists(srcPath))
-                {
-                    string strConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + srcPath + ";Extended Properties=Excel 8.0;";
-                    OleDbConnection myConn = new System.Data.OleDb.OleDbConnection(strConn);
-                    OleDbCommand myCommand = new System.Data.OleDb.OleDbCommand("SELECT * FROM [Sheet1$]", myConn);
-                    OleDbDataAdapter myDA = new System.Data.OleDb.OleDbDataAdapter(myCommand);
-
-                    DataSet myDS = new DataSet();
-                    myDA.Fill(myDS);
-                    /*取得統計的結果，並將結果返回*/
-                    cmdRT1041.ExecuteNonQuery();
-                    return new object[] { 0, "處理成功" };
-                }
-                else
-                {
-                    return new object[] { 0, "檔案不存在" };
-                }
+                cmdRT1041.InfoParameters[0].Value = sdata[0];
+                cmdRT1041.InfoParameters[1].Value = sdata[1];
+                cmdRT1041.InfoParameters[2].Value = sdata[2];
+                cmdRT1041.InfoParameters[3].Value = sdata[3];
+                cmdRT1041.InfoParameters[4].Value = sdata[4];
+                /*取得統計的結果，並將結果返回*/
+                double ii = cmdRT1041.ExecuteNonQuery();
+                return new object[] { 0, ii };
             }
             catch (Exception ex)
             {
-                return new object[] { 0, "處理失敗" + ex };
+                return new object[] { 0, ex };
             }
+        }
 
+        public object[] smRT104111(object[] objParam)
+        {
+            var ss = (string)objParam[0];
+            var sdata = ss.Split(',');
+            //開啟資料連接
+            IDbConnection conn = cmdRT104111.Connection;
+            conn.Open();
+            //設定輸入參數的值
+            try
+            {
+                cmdRT104111.InfoParameters[0].Value = sdata[0];
+                cmdRT104111.InfoParameters[1].Value = sdata[1];
+                cmdRT104111.InfoParameters[2].Value = sdata[2];
+                cmdRT104111.InfoParameters[3].Value = sdata[3];
+                /*取得統計的結果，並將結果返回*/
+                double ii = cmdRT104111.ExecuteNonQuery();
+                return new object[] { 0, ii };
+            }
+            catch (Exception ex)
+            {
+                return new object[] { 0, ex };
+            }
+        }
+
+        public object[] smRT104112(object[] objParam)
+        {
+            var ss = (string)objParam[0];
+            var sdata = ss.Split(',');
+            //開啟資料連接
+            IDbConnection conn = cmdRT1041121.Connection;
+            conn.Open();
+            //設定輸入參數的值
+            try
+            {
+                cmdRT1041121.InfoParameters[0].Value = sdata[0];
+                cmdRT1041121.InfoParameters[1].Value = sdata[1];
+                cmdRT1041121.InfoParameters[2].Value = sdata[2];
+                cmdRT1041121.InfoParameters[3].Value = sdata[3];
+                /*取得統計的結果，並將結果返回*/
+                double ii = cmdRT1041121.ExecuteNonQuery();
+                return new object[] { 0, ii };
+            }
+            catch (Exception ex)
+            {
+                return new object[] { 0, ex };
+            }
         }
     }
 }

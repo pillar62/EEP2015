@@ -80,10 +80,13 @@
             this.ucRTLessorAVSCustSndwork = new Srvtools.UpdateComponent(this.components);
             this.View_RTLessorAVSCustSndwork = new Srvtools.InfoCommand(this.components);
             this.RT1042 = new Srvtools.InfoCommand(this.components);
+            this.autoNumber1 = new Srvtools.AutoNumber(this.components);
+            this.RT10421 = new Srvtools.InfoCommand(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustSndwork)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_RTLessorAVSCustSndwork)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT1042)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT10421)).BeginInit();
             // 
             // InfoConnection1
             // 
@@ -524,10 +527,53 @@
             this.RT1042.SiteControl = false;
             this.RT1042.SiteFieldName = null;
             this.RT1042.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // autoNumber1
+            // 
+            this.autoNumber1.Active = true;
+            this.autoNumber1.AutoNoID = "RT1042";
+            this.autoNumber1.Description = null;
+            this.autoNumber1.GetFixed = "getFix()";
+            this.autoNumber1.isNumFill = false;
+            this.autoNumber1.Name = "autoNumber1";
+            this.autoNumber1.Number = null;
+            this.autoNumber1.NumDig = 4;
+            this.autoNumber1.OldVersion = false;
+            this.autoNumber1.OverFlow = true;
+            this.autoNumber1.StartValue = 1;
+            this.autoNumber1.Step = 1;
+            this.autoNumber1.TargetColumn = "PRTNO";
+            this.autoNumber1.UpdateComp = this.ucRTLessorAVSCustSndwork;
+            // 
+            // RT10421
+            // 
+            this.RT10421.CacheConnection = false;
+            this.RT10421.CommandText = "SELECT CUSID, PRTNO, COUNT(*) AS CNT FROM RTLESSORAVSCUSTHARDWARE \r\nWHERE DROPDAT" +
+    " IS NULL AND RCVFINISHDAT IS NULL\r\nGROUP BY CUSID, PRTNO";
+            this.RT10421.CommandTimeout = 30;
+            this.RT10421.CommandType = System.Data.CommandType.Text;
+            this.RT10421.DynamicTableName = false;
+            this.RT10421.EEPAlias = null;
+            this.RT10421.EncodingAfter = null;
+            this.RT10421.EncodingBefore = "Windows-1252";
+            this.RT10421.EncodingConvert = null;
+            this.RT10421.InfoConnection = this.InfoConnection1;
+            this.RT10421.MultiSetWhere = false;
+            this.RT10421.Name = "RT10421";
+            this.RT10421.NotificationAutoEnlist = false;
+            this.RT10421.SecExcept = null;
+            this.RT10421.SecFieldName = null;
+            this.RT10421.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.RT10421.SelectPaging = false;
+            this.RT10421.SelectTop = 0;
+            this.RT10421.SiteControl = false;
+            this.RT10421.SiteFieldName = null;
+            this.RT10421.UpdatedRowSource = System.Data.UpdateRowSource.None;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustSndwork)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_RTLessorAVSCustSndwork)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT1042)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT10421)).EndInit();
 
         }
 
@@ -539,5 +585,7 @@
         private Srvtools.UpdateComponent ucRTLessorAVSCustSndwork;
         private Srvtools.InfoCommand View_RTLessorAVSCustSndwork;
         private Srvtools.InfoCommand RT1042;
+        private Srvtools.AutoNumber autoNumber1;
+        private Srvtools.InfoCommand RT10421;
     }
 }

@@ -21,5 +21,10 @@ namespace sRT1042
 
             InitializeComponent();
         }
+
+        public string getFix()
+        {
+            return string.Format("E{0:yyMMdd}", DateTime.Now.Date);
+        }
     }
 }
