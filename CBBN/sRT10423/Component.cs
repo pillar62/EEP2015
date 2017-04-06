@@ -71,5 +71,55 @@ namespace sRT10423
             }
 
         }
+
+        public object[] smRT104233(object[] objParam)
+        {
+            //轉物品領用單作業
+            var ss = (string)objParam[0];
+            var sdata = ss.Split(',');
+            //開啟資料連接
+            IDbConnection conn = cmdRT104233.Connection;
+            conn.Open();
+            //設定輸入參數的值
+            try
+            {
+                cmdRT104233.InfoParameters[0].Value = sdata[0];
+                cmdRT104233.InfoParameters[1].Value = sdata[1];
+                cmdRT104233.InfoParameters[2].Value = sdata[2];
+                cmdRT104233.InfoParameters[3].Value = sdata[3];
+                /*取得統計的結果，並將結果返回*/
+                double ii = cmdRT104233.ExecuteNonQuery();
+                return new object[] { 0, ii };
+            }
+            catch (Exception ex)
+            {
+                return new object[] { 0, ex };
+            }
+        }
+
+        public object[] smRT104234(object[] objParam)
+        {
+            //轉物品領用單作業
+            var ss = (string)objParam[0];
+            var sdata = ss.Split(',');
+            //開啟資料連接
+            IDbConnection conn = cmdRT104234.Connection;
+            conn.Open();
+            //設定輸入參數的值
+            try
+            {
+                cmdRT104234.InfoParameters[0].Value = sdata[0];
+                cmdRT104234.InfoParameters[1].Value = sdata[1];
+                cmdRT104234.InfoParameters[2].Value = sdata[2];
+                cmdRT104234.InfoParameters[3].Value = sdata[3];
+                /*取得統計的結果，並將結果返回*/
+                double ii = cmdRT104234.ExecuteNonQuery();
+                return new object[] { 0, ii };
+            }
+            catch (Exception ex)
+            {
+                return new object[] { 0, ex };
+            }
+        }
     }
 }
