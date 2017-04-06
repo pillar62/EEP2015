@@ -118,6 +118,15 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="infoCommand1" type="System.Drawing.Point, System.Drawing">
+    <value>479, 342</value>
+  </data>
+  <data name="cmdRT10423" type="System.Drawing.Point, System.Drawing">
+    <value>477, 301</value>
+  </data>
+  <data name="cmdRT10422" type="System.Drawing.Point, System.Drawing">
+    <value>485, 254</value>
+  </data>
   <data name="若要在類別中加入元件，請從工具箱拖所需元件，並利用 [屬性] 視窗設定它們的屬性。若要建立類別的方法與事件，請按這裡切換到程式碼檢視。" type="System.Drawing.Point, System.Drawing">
     <value>0, 362</value>
   </data>
@@ -125,18 +134,30 @@
     <value>194, 133</value>
   </data>
   <data name="InfoConnection1" type="System.Drawing.Point, System.Drawing">
-    <value>17, 134</value>
+    <value>35, 243</value>
   </data>
   <data name="RTLessorAVSCustSndwork" type="System.Drawing.Point, System.Drawing">
-    <value>17, 95</value>
+    <value>16, 290</value>
   </data>
   <data name="ucRTLessorAVSCustSndwork" type="System.Drawing.Point, System.Drawing">
-    <value>17, 56</value>
+    <value>18, 365</value>
   </data>
   <data name="View_RTLessorAVSCustSndwork" type="System.Drawing.Point, System.Drawing">
     <value>332, 54</value>
   </data>
   <data name="RT1042" type="System.Drawing.Point, System.Drawing">
-    <value>375, 131</value>
+    <value>377, 125</value>
+  </data>
+  <data name="autoNumber1" type="System.Drawing.Point, System.Drawing">
+    <value>69, 429</value>
+  </data>
+  <data name="RT10421" type="System.Drawing.Point, System.Drawing">
+    <value>377, 215</value>
+  </data>
+  <data name="RT10422" type="System.Drawing.Point, System.Drawing">
+    <value>374, 167</value>
+  </data>
+  <data name="cmdRT10421" type="System.Drawing.Point, System.Drawing">
+    <value>479, 215</value>
   </data>
 </root>

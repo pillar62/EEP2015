@@ -9,7 +9,8 @@
     <script>
         var CUSID = Request.getQueryStringByName2("CUSID");
         var flag = true;
-        
+        var usr = getClientInfo('_usercode');
+
         function InsDefault() {
             if (CUSID != "") {
                 return CUSID;
@@ -31,14 +32,243 @@
 
         function btnIns(val) {
             var sMODE = "I";
-            parent.addTab("用戶裝機派工單資料維護", "CBBN/RT10421.aspx?CUSID=" + CUSID + "&sMODE=" + sMODE);
+            parent.addTab("用戶裝機派工單資料新增", "CBBN/RT10421.aspx?CUSID=" + CUSID + "&PRTNO=自動編號" + "&sMODE=" + sMODE);
         }
 
         function btnEdit(val) {
             var sMODE = "E";
             var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var PRTNO = row.PRTNO;
-            parent.addTab("用戶裝機派工單資料維護", "CBBN/RT10421.aspx?CUSID=" + CUSID + "&PRTNO=" + PRTNO + "&sMODE=" + sMODE);
+            parent.addTab("用戶裝機派工單資料修改", "CBBN/RT10421.aspx?CUSID=" + CUSID + "&PRTNO=" + PRTNO + "&sMODE=" + sMODE);
+        }
+
+        //物品領用單
+        function btn1Click()
+        {
+            var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var PRTNO = row.PRTNO;
+            parent.addTab("物品領用單資料維護", "CBBN/RT10422.aspx?PRTNO=" + PRTNO);
+        }
+
+        //完工結案
+        function btn3Click() {
+            var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            try
+            {
+                var row1 = $('#JQDataGrid1').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            }
+            catch (err)
+            { alert(err); }
+
+            var PRTNO = row.PRTNO;
+            if ((row1.DROPDAT != "" &&row1.DROPDAT != null) || (row1.CANCELDAT != "" && row1.CANCELDAT != null))
+            {
+                alert("客戶已退租或作廢");
+                return false;
+            }
+
+            if (row1.RCVMONEY == 0)
+            {
+                alert("應收金額=0 (無法轉應收帳款)");
+                return false;
+            }
+            
+            if (row1.STRBILLINGDAT == "") {
+                alert("完工結案時,開始計費日不可空白");
+                return false;
+            }
+
+            if (row1.BATCHNO != "") {
+                alert("己產生應收帳款");
+                return false;
+            }
+
+            if (row1.FINISHDAT != "") {
+                alert("此客戶已完工結案，不可重複執行");
+                return false;
+            }
+
+            if (row.DROPDAT != "") {
+                alert("當已作廢時，不可執行完工結案或未完工結案");
+                return false;
+            }
+
+            if (row.CLOSEDAT != "" || row.UNCLOSEDAT != "") {
+                alert("此裝機派工單已完工結案或未完工結案，不可重複執行完工結案或未完工結案");
+                return false;
+            }
+
+            if (row.REALENGINEER == "" && row.REALCONSIGNEE == "") {
+                alert("此裝機派工單完工時，必須先輸入實際裝機人員或實際裝機經銷商");
+                return false;
+            }
+
+            $.ajax({
+                type: "POST",
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT1042.cmdRT10421', //連接的Server端，command
+                //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                data: "mode=method&method=" + "smRT10421" + "&parameters=" + CUSID + "," + PRTNO + "," + usr + "," + row1.PERIOD + "," + row1.RCVMONEY + ","
+                    + row1.PAYTYPE + "," + row1.CREDITCARDNO,
+                cache: false,
+                async: false,
+                success: function (data) {
+                    alert("已完工結案，請點選重新整理!");
+                }
+            });
+        }
+
+        //未完工結案
+        function btn4Click() {
+            var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            try {
+                var row1 = $('#JQDataGrid1').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            }
+            catch (err)
+            { alert(err); }
+
+            var PRTNO = row.PRTNO;
+            if ((row1.DROPDAT != "" && row1.DROPDAT != null) || (row1.CANCELDAT != "" && row1.CANCELDAT != null)) {
+                alert("客戶已退租或作廢");
+                return false;
+            }
+
+            if ((row.CLOSEDAT != "" && row.CLOSEDAT != null) || (row.UNCLOSEDAT != "" && row.UNCLOSEDAT != null)) {
+                alert("此裝機派工單已完工結案或未完工結案，不可重複執行完工結案或未完工結案");
+                return false;
+            }
+
+            if (row.BONUSCLOSEYM != "" || row.STOCKCLOSEYM != "") {
+                alert("此裝機派工單已月結，不可異動");
+                return false;
+            }
+
+            $.ajax({
+                type: "POST",
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT1042.cmdRT10422', //連接的Server端，command
+                //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                data: "mode=method&method=" + "smRT10422" + "&parameters=" + CUSID + "," + PRTNO + "," + usr,
+                cache: false,
+                async: false,
+                success: function (data) {
+                    alert("未完工結案完成，請點選重新整理");
+                }
+            });
+        }
+
+        //結案返轉
+        function btn5Click() {
+            var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            try {
+                var row1 = $('#JQDataGrid1').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            }
+            catch (err)
+            { alert(err); }
+
+            var PRTNO = row.PRTNO;
+            if ((row1.DROPDAT != "" && row1.DROPDAT != null) || (row1.CANCELDAT != "" && row1.CANCELDAT != null)) {
+                alert("客戶已退租或作廢");
+                return false;
+            }
+
+            if ((row.BONUSCLOSEYM != "" && row.BONUSCLOSEYM != null) || (row.STOCKCLOSEYM != "" && row.STOCKCLOSEYM != null)) {
+                alert("此裝機派工單已月結，不可異動");
+                return false;
+            }
+
+            if (row.closedat == "" && row.unclosedat == "" && row.closedat == null && row.unclosedat == null) {
+                alert("此裝機派工單尚未結案，不可執行結案返轉作業");
+                return false;
+            }
+
+            $.ajax({
+                type: "POST",
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT1042.cmdRT10423', //連接的Server端，command
+                //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                data: "mode=method&method=" + "smRT10423" + "&parameters=" + CUSID + "," + PRTNO + "," + usr + "," + row.batchno,
+                cache: false,
+                async: false,
+                success: function (data) {
+                    alert("結案返轉完成，請點選重新整理!");
+                }
+            });
+        }
+
+        //作廢
+        function btn6Click() {
+            var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            try {
+                var row1 = $('#JQDataGrid1').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            }
+            catch (err)
+            { alert(err); }
+
+            var PRTNO = row.PRTNO;
+            if (row.DROPDAT != "" && row.DROPDAT != null)  {
+                alert("此派工單已作廢，不可重覆執行作廢作業");
+                return false;
+            }
+
+            if ((row.BONUSCLOSEYM != "" && row.BONUSCLOSEYM != null) || (row.STOCKCLOSEYM != "" && row.STOCKCLOSEYM != null)) {
+                alert("此裝機派工單已月結，不可異動");
+                return false;
+            }
+
+            if ((row.closedat != "" && row.closedat != null)|| (row.unclosedat != "" && row.unclosedat != null)) {
+                alert("此派工單已完工結案，不可作廢(欲作廢請先清除裝機完工日)");
+                return false;
+            }
+
+            $.ajax({
+                type: "POST",
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT1042.cmdRT10424', //連接的Server端，command
+                //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                data: "mode=method&method=" + "smRT10424" + "&parameters=" + CUSID + "," + PRTNO + "," + usr + "," + row.batchno,
+                cache: false,
+                async: false,
+                success: function (data) {
+                    alert("資料已作廢，請點選重新整理!");
+                }
+            });
+        }
+
+        //作廢返轉
+        function btn7Click() {
+            var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            try {
+                var row1 = $('#JQDataGrid1').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            }
+            catch (err)
+            { alert(err); }
+
+            var PRTNO = row.PRTNO;
+            if (row.DROPDAT == "" || row.DROPDAT == null) {
+                alert("此派工單尚未作廢，不可重覆執行作廢返轉作業");
+                return false;
+            }
+
+            if (row.BONUSCLOSEYM != "" && row.BONUSCLOSEYM != null) {
+                alert("當獎金計算年月已存在資料時表示該筆資料完工日期當月之獎金已結算,不可再作廢返轉");
+                return false;
+            }
+            
+            $.ajax({
+                type: "POST",
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT1042.cmdRT10425', //連接的Server端，command
+                //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                data: "mode=method&method=" + "smRT10425" + "&parameters=" + CUSID + "," + PRTNO + "," + usr,
+                cache: false,
+                async: false,
+                success: function (data) {
+                    alert("資料已作廢返轉，請點選重新整理!");
+                }
+            });
+        }
+
+        function btn8Click(val) {
+            var sMODE = "E";
+            var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var PRTNO = row.PRTNO;
+            parent.addTab("用戶裝機派工設備資料維護", "CBBN/RT10423.aspx?CUSID=" + CUSID + "&PRTNO=" + PRTNO + "&sMODE=" + sMODE);
         }
 
         function mySelect()
@@ -47,7 +277,6 @@
             //var PRTNO = row.PRTNO;
             var sWhere = "CUSID='" + CUSID + "'";
             $("#JQDataGrid1").datagrid('setWhere', sWhere);
-
         }
 
     </script>
@@ -58,7 +287,7 @@
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
             <JQTools:JQDataGrid ID="dataGridMaster" data-options="pagination:true,view:commandview" RemoteName="sRT1042.RT1042" runat="server" AutoApply="True"
                 DataMember="RT1042" Pagination="True" QueryTitle="Query"
-                Title="用戶裝機派工單資料維護" AllowDelete="False" AllowInsert="False" AllowUpdate="False" QueryMode="Panel" AlwaysClose="True" AllowAdd="False" ViewCommandVisible="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="False" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" OnLoadSuccess="dgOnloadSuccess" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" EnableViewState="False" OnSelect="mySelect">
+                Title="用戶裝機派工單資料維護" AllowDelete="False" AllowInsert="False" AllowUpdate="False" QueryMode="Fuzzy" AlwaysClose="True" AllowAdd="False" ViewCommandVisible="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="False" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" OnLoadSuccess="dgOnloadSuccess" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" EnableViewState="False" OnSelect="mySelect">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="用戶" Editor="infocombobox" FieldName="CUSID" Format="" MaxLength="15" Width="120" EditorOptions="valueField:'CUSID',textField:'CUSNC',remoteName:'sRT104.View_RTLessorAVSCust',tableName:'View_RTLessorAVSCust',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
                     <JQTools:JQGridColumn Alignment="left" Caption="主線" Editor="text" FieldName="comqline" Format="" MaxLength="0" Width="60" />
@@ -85,20 +314,23 @@
                         OnClick="openQuery" Text="查詢" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btnIns" Text="新增" Visible="True" Icon="icon-add" ID="btnIns" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-edit" ItemType="easyui-linkbutton" OnClick="btnEdit" Text="修改" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn1Click" Text="物品領用單" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn1Click" Text="物品領用單" Visible="True" Icon="icon-view" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn2Click" Text="列印" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn3Click" Text="完工結案" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn4Click" Text="未完工結案" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn5Click" Text="結案返轉" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn6Click" Text="作廢" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn7Click" Text="作廢返轉" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn8Click" Text="設備明細" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn3Click" Text="完工結案" Visible="True" Icon="icon-view" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn4Click" Text="未完工結案" Visible="True" Icon="icon-view" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn5Click" Text="結案返轉" Visible="True" Icon="icon-undo" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn6Click" Text="作廢" Visible="True" Icon="icon-view" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn7Click" Text="作廢返轉" Visible="True" Icon="icon-redo" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn8Click" Text="設備明細" Visible="True" Icon="icon-view" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn9Click" Text="歷史異動" Visible="True" />
                 </TooItems>
                 <QueryColumns>
                 </QueryColumns>
             </JQTools:JQDataGrid>
      
+               </div>
+        
+     <div hidden="hidden">
         <JQTools:JQDataGrid ID="JQDataGrid1" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" AutoApply="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="View_RTLessorAVSCust" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT104.View_RTLessorAVSCust" RowNumbers="True" Title="JQDataGrid" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
             <Columns>
                 <JQTools:JQGridColumn Alignment="left" Caption="客戶代號" Editor="text" FieldName="CUSID" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="80">
@@ -133,7 +365,7 @@
                 </JQTools:JQGridColumn>
             </Columns>
         </JQTools:JQDataGrid>
-               </div>
+        </div>
     </form>
 </body>
 </html>

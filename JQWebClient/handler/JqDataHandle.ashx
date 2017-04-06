@@ -214,6 +214,10 @@ public class JqDataHandle : IHttpHandler, IRequiresSessionState
             context.Response.ContentType = "text/plain";
             context.Response.Write(DataTableToJson(returnDataSet.Tables[masterTableName]));
         }
+        else
+        {
+            context.Response.Write("0");
+        }
         //}
         //else
         //{
@@ -359,8 +363,7 @@ public class JqDataHandle : IHttpHandler, IRequiresSessionState
         var keys = (Newtonsoft.Json.Linq.JArray)JsonConvert.DeserializeObject(context.Request.Form["keys"]);
         var jdo = new JqDataObject(GetParameter(context, Data));
         jdo.TableName = GetParameter(context, "TableName");
-        jdo.RemoteName = context.Request.Form["remoteName"];
-
+        jdo.RemoteName = GetFormValue(context, "remoteName");
         var returnType = LockType.Idle;
         var user = string.Empty;
         var lockRow = new Dictionary<string, object>();
@@ -400,6 +403,14 @@ public class JqDataHandle : IHttpHandler, IRequiresSessionState
         EFClientTools.ClientUtility.Client.RemoveRecordLock(EFClientTools.ClientUtility.ClientInfo, userID);
     }
 
+    private string GetFormValue(HttpContext context, string name) {
+        var keys = new List<string>(context.Request.Form.AllKeys);
+        if (keys.IndexOf(name) >= 0) {
+            return context.Request.Form[name];
+        }
+        return null;
+    }
+    
     public const string Data = "RemoteName";
 
     private void SelectData(HttpContext context)
@@ -409,7 +420,7 @@ public class JqDataHandle : IHttpHandler, IRequiresSessionState
         //from database
         var jdo = new JqDataObject(GetParameter(context, Data));
         jdo.TableName = GetParameter(context, "TableName");
-        jdo.RemoteName = context.Request.Form["remoteName"];
+        jdo.RemoteName = GetFormValue(context,"remoteName");
         var pageSize = 10;
         if (context.Request.Form["rows"] != null)
         {
@@ -591,7 +602,7 @@ public class JqDataHandle : IHttpHandler, IRequiresSessionState
         EFClientTools.ClientUtility.ClientInfo.cErrorCode = 1110;//context properties
         var jdo = new JqDataObject(GetParameter(context, Data));
         jdo.TableName = GetParameter(context, "TableName");
-        jdo.RemoteName = context.Request.Form["remoteName"];
+        jdo.RemoteName = GetFormValue(context, "remoteName");
         var whereString = "";
         //if (context.Request.QueryString["whereString"] != null)
         //{
@@ -980,7 +991,7 @@ public class JqDataHandle : IHttpHandler, IRequiresSessionState
         sb.Append("{\"total\":");
         sb.Append(rowscount.ToString());
         sb.Append(",\"tableName\":");
-        sb.Append("\"" + tableName + "\"");
+        sb.Append("\"" + HttpUtility.HtmlEncode(tableName) + "\"");
         sb.Append(",\"keys\":");
         string sPrimaryKey = "";
         foreach (var PrimaryKey in dt.PrimaryKey)
