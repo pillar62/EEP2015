@@ -33,6 +33,12 @@
             parent.addTab("裝機派工單資料維護", "CBBN/RT1042.aspx?CUSID=" + ss);
         }
 
+        function btn2Click(val) {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.CUSID;
+            parent.addTab("用戶續約作業", "CBBN/RT1043.aspx?CUSID=" + ss);
+        }
+
         function InsDefaultLINEQ1() {
             if (LINEQ1 != "") {
                 return LINEQ1;
@@ -168,7 +174,7 @@
                         OnClick="openQuery" Text="查詢" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="維修收款" Visible="True" OnClick="LinkRT1041" Icon="icon-view" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="裝機派工" Visible="True" OnClick="btn1Click" Icon="icon-view" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="續約作業" Visible="True" OnClick="btn2Click" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="續約作業" Visible="True" OnClick="btn2Click" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="復機作業" Visible="True" OnClick="btn3Click" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="退租作業" Visible="True" OnClick="btn4Click" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="應收應付" Visible="True" OnClick="btn5Click" />

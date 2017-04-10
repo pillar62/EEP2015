@@ -122,45 +122,54 @@
     <value>0, 362</value>
   </data>
   <data name="serviceManager1" type="System.Drawing.Point, System.Drawing">
-    <value>57, 56</value>
+    <value>28, 83</value>
   </data>
   <data name="InfoConnection1" type="System.Drawing.Point, System.Drawing">
-    <value>41, 124</value>
+    <value>28, 44</value>
   </data>
-  <data name="RTLessorAVSCustSndwork" type="System.Drawing.Point, System.Drawing">
-    <value>23, 221</value>
+  <data name="RTLessorAVSCustCont" type="System.Drawing.Point, System.Drawing">
+    <value>346, 225</value>
   </data>
-  <data name="ucRTLessorAVSCustSndwork" type="System.Drawing.Point, System.Drawing">
-    <value>16, 294</value>
+  <data name="ucRTLessorAVSCustCont" type="System.Drawing.Point, System.Drawing">
+    <value>342, 264</value>
   </data>
-  <data name="View_RTLessorAVSCustSndwork" type="System.Drawing.Point, System.Drawing">
-    <value>332, 54</value>
+  <data name="RTLessorAVSCustContHardware" type="System.Drawing.Point, System.Drawing">
+    <value>608, 82</value>
   </data>
-  <data name="RT1042" type="System.Drawing.Point, System.Drawing">
-    <value>377, 125</value>
+  <data name="ucRTLessorAVSCustContHardware" type="System.Drawing.Point, System.Drawing">
+    <value>600, 133</value>
   </data>
-  <data name="autoNumber1" type="System.Drawing.Point, System.Drawing">
-    <value>56, 369</value>
+  <data name="RTLessorAVSCustContSndwork" type="System.Drawing.Point, System.Drawing">
+    <value>341, 76</value>
   </data>
-  <data name="RT10421" type="System.Drawing.Point, System.Drawing">
-    <value>377, 215</value>
+  <data name="ucRTLessorAVSCustContSndwork" type="System.Drawing.Point, System.Drawing">
+    <value>336, 127</value>
   </data>
-  <data name="RT10422" type="System.Drawing.Point, System.Drawing">
-    <value>374, 167</value>
+  <data name="View_RTLessorAVSCustCont" type="System.Drawing.Point, System.Drawing">
+    <value>989, 137</value>
   </data>
-  <data name="cmdRT10421" type="System.Drawing.Point, System.Drawing">
-    <value>479, 215</value>
+  <data name="View_RTLessorAVSCustContHardware" type="System.Drawing.Point, System.Drawing">
+    <value>984, 94</value>
   </data>
-  <data name="cmdRT10422" type="System.Drawing.Point, System.Drawing">
-    <value>485, 254</value>
+  <data name="View_RTLessorAVSCustContSndwork" type="System.Drawing.Point, System.Drawing">
+    <value>981, 56</value>
   </data>
-  <data name="cmdRT10423" type="System.Drawing.Point, System.Drawing">
-    <value>477, 301</value>
+  <data name="RT10431" type="System.Drawing.Point, System.Drawing">
+    <value>19, 201</value>
   </data>
-  <data name="cmdRT10424" type="System.Drawing.Point, System.Drawing">
-    <value>485, 336</value>
+  <data name="cmdRT10431" type="System.Drawing.Point, System.Drawing">
+    <value>17, 251</value>
   </data>
-  <data name="cmdRT10425" type="System.Drawing.Point, System.Drawing">
-    <value>479, 384</value>
+  <data name="cmdRT10432" type="System.Drawing.Point, System.Drawing">
+    <value>17, 290</value>
+  </data>
+  <data name="cmdRT10433" type="System.Drawing.Point, System.Drawing">
+    <value>17, 329</value>
+  </data>
+  <data name="cmdRT10435" type="System.Drawing.Point, System.Drawing">
+    <value>17, 407</value>
+  </data>
+  <data name="cmdRT10434" type="System.Drawing.Point, System.Drawing">
+    <value>18, 369</value>
   </data>
 </root>

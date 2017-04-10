@@ -118,96 +118,69 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="serviceManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>57, 56</value>
+    <value>28, 83</value>
   </metadata>
   <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>41, 124</value>
+    <value>28, 44</value>
   </metadata>
-  <metadata name="RTLessorAVSCustSndwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>23, 221</value>
+  <metadata name="RTLessorAVSCustCont.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>346, 225</value>
   </metadata>
-  <metadata name="ucRTLessorAVSCustSndwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>16, 294</value>
+  <metadata name="ucRTLessorAVSCustCont.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>342, 264</value>
   </metadata>
-  <metadata name="View_RTLessorAVSCustSndwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>332, 54</value>
+  <metadata name="RTLessorAVSCustContHardware.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>608, 82</value>
   </metadata>
-  <metadata name="RT1042.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>377, 125</value>
+  <metadata name="ucRTLessorAVSCustContHardware.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>600, 133</value>
   </metadata>
-  <data name="RT1042.CommandText" xml:space="preserve">
-    <value>SELECT RTLessorAVSCustSNDWORK.CUSID, RTLessorAVSCustSNDWORK.PRTNO,rtrim(convert(char(6),RTLessorAVScust.COMQ1)) +'-'+ rtrim(convert(char(6),RTLessorAVScust.lineQ1))  as comqline,
-RTLessorAVSCustSNDWORK.PRTNO, RTLessorAVSCustSNDWORK.SENDWORKDAT, 
-RTOBJ.CUSNC,CASE WHEN RTOBJ_2.SHORTNC &lt;&gt;'' THEN RTOBJ_2.SHORTNC ELSE RTOBJ_1.CUSNC END,CASE WHEN RTOBJ_4.SHORTNC &lt;&gt;'' THEN RTOBJ_4.SHORTNC ELSE RTOBJ_3.CUSNC END, 
-RTLessorAVSCustSNDWORK.closedat,RTLessorAVSCustSNDWORK.unclosedat,RTLessorAVSCustSNDWORK.BONUSCLOSEYM, RTLessorAVSCustSNDWORK.BONUSFINCHK,RTLessorAVSCustSNDWORK.batchno, 
-RTLessorAVSCustSNDWORK.STOCKCLOSEYM, RTLessorAVSCustSNDWORK.STOCKFINCHK, 
-RTLessorAVSCustSNDWORK.DROPDAT,SUM(CASE WHEN RTLessorAVSCustHARDWARE.dropdat IS NULL AND RTLessorAVSCustHARDWARE.QTY &gt; 0 
-THEN RTLessorAVSCustHARDWARE.QTY ELSE 0 END), SUM(CASE WHEN RTLessorAVSCustHARDWARE.dropdat IS NULL AND 
-RCVPRTNO &lt;&gt; '' THEN RTLessorAVSCustHARDWARE.QTY ELSE 0 END), SUM(CASE WHEN RTLessorAVSCustHARDWARE.dropdat IS NULL 
-AND RCVPRTNO &lt;&gt; '' AND RTLessorAVSCustHARDWARE.rcvfinishdat IS NOT NULL THEN RTLessorAVSCustHARDWARE.QTY ELSE 0 END), 
-SUM(CASE WHEN RTLessorAVSCustHARDWARE.dropdat IS NULL AND RTLessorAVSCustHARDWARE.QTY &gt; 0 THEN RTLessorAVSCustHARDWARE.QTY ELSE 0 END) - 
-SUM(CASE WHEN RTLessorAVSCustHARDWARE.dropdat IS NULL AND RCVPRTNO &lt;&gt; '' AND RTLessorAVSCustHARDWARE.rcvfinishdat IS NOT NULL THEN RTLessorAVSCustHARDWARE.QTY ELSE 0 END) 
-FROM RTLessorAVSCustSNDWORK LEFT OUTER JOIN RTObj RTObj_4 ON RTLessorAVSCustSNDWORK.REALCONSIGNEE = RTObj_4.CUSID LEFT OUTER JOIN 
-RTEmployee RTEmployee_2 INNER JOIN RTObj RTObj_3 ON RTEmployee_2.CUSID = RTObj_3.CUSID ON RTLessorAVSCustSNDWORK.REALENGINEER = RTEmployee_2.EMPLY LEFT OUTER JOIN 
-RTObj RTObj_2 ON RTLessorAVSCustSNDWORK.ASSIGNCONSIGNEE = RTObj_2.CUSID LEFT OUTER JOIN RTEmployee RTEmployee_1 INNER JOIN 
-RTObj RTObj_1 ON RTEmployee_1.CUSID = RTObj_1.CUSID ON RTLessorAVSCustSNDWORK.ASSIGNENGINEER = RTEmployee_1.EMPLY LEFT OUTER JOIN 
-RTObj INNER JOIN RTEmployee ON RTObj.CUSID = RTEmployee.CUSID ON RTLessorAVSCustSNDWORK.PRTUSR = RTEmployee.EMPLY left outer join 
-RTLessorAVScust on RTLessorAVSCustSNDWORK.cusid=RTLessorAVScust.cusid LEFT OUTER JOIN 
-RTLessorAVSCustHARDWARE ON RTLessorAVSCustSNDWORK.cusid = RTLessorAVSCustHARDWARE.CUSID AND 
-RTLessorAVSCustSNDWORK.PRTNO = RTLessorAVSCustHARDWARE.PRTNO 
-where 1=1
-GROUP BY  RTLessorAVSCustSNDWORK.CUSID, RTLessorAVSCustSNDWORK.PRTNO, 
+  <metadata name="RTLessorAVSCustContSndwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>341, 76</value>
+  </metadata>
+  <metadata name="ucRTLessorAVSCustContSndwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>336, 127</value>
+  </metadata>
+  <metadata name="View_RTLessorAVSCustCont.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>989, 137</value>
+  </metadata>
+  <metadata name="View_RTLessorAVSCustContHardware.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>984, 94</value>
+  </metadata>
+  <metadata name="View_RTLessorAVSCustContSndwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>981, 56</value>
+  </metadata>
+  <metadata name="RT10431.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>19, 201</value>
+  </metadata>
+  <data name="RT10431.CommandText" xml:space="preserve">
+    <value>SELECT A.CUSID, A.ENTRYNO, A.PRTNO,rtrim(convert(char(6),RTLessorAVScust.COMQ1)) +'-'+ rtrim(convert(char(6),RTLessorAVScust.lineQ1))  as comqline
+, A.PRTNO, A.SENDWORKDAT, RTOBJ.CUSNC,CASE WHEN RTOBJ_2.SHORTNC &lt;&gt;'' THEN RTOBJ_2.SHORTNC ELSE RTOBJ_1.CUSNC END AS Column1
+,CASE WHEN RTOBJ_4.SHORTNC &lt;&gt;'' THEN RTOBJ_4.SHORTNC ELSE RTOBJ_3.CUSNC END AS Column2, 
+A.closedat,A.unclosedat,A.BONUSCLOSEYM, A.BONUSFINCHK,A.batchno, A.STOCKCLOSEYM, A.STOCKFINCHK, 
+A.DROPDAT ,SUM(CASE WHEN B.dropdat IS NULL AND B.QTY &gt; 0 THEN B.QTY ELSE 0 END) AS Column3
+, SUM(CASE WHEN B.dropdat IS NULL AND RCVPRTNO &lt;&gt; '' THEN B.QTY ELSE 0 END) AS Column4
+, SUM(CASE WHEN B.dropdat IS NULL AND RCVPRTNO &lt;&gt; '' AND B.rcvfinishdat IS NOT NULL THEN B.QTY ELSE 0 END) AS Column5, 
+SUM(CASE WHEN B.dropdat IS NULL AND B.QTY &gt; 0 THEN B.QTY ELSE 0 END) - 
+SUM(CASE WHEN B.dropdat IS NULL AND RCVPRTNO &lt;&gt; '' AND B.rcvfinishdat IS NOT NULL THEN B.QTY ELSE 0 END) Column6
+FROM RTLessorAVSCustContSNDWORK A LEFT OUTER JOIN RTObj RTObj_4 ON A.REALCONSIGNEE = RTObj_4.CUSID LEFT OUTER JOIN 
+RTEmployee RTEmployee_2 INNER JOIN RTObj RTObj_3 ON RTEmployee_2.CUSID = RTObj_3.CUSID ON A.REALENGINEER = RTEmployee_2.EMPLY LEFT OUTER JOIN 
+RTObj RTObj_2 ON A.ASSIGNCONSIGNEE = RTObj_2.CUSID LEFT OUTER JOIN RTEmployee RTEmployee_1 INNER JOIN 
+RTObj RTObj_1 ON RTEmployee_1.CUSID = RTObj_1.CUSID ON A.ASSIGNENGINEER = RTEmployee_1.EMPLY LEFT OUTER JOIN 
+RTObj INNER JOIN RTEmployee ON RTObj.CUSID = RTEmployee.CUSID ON A.PRTUSR = RTEmployee.EMPLY left outer join RTLessorAVScust on 
+A.cusid=RTLessorAVScust.cusid LEFT OUTER JOIN 
+RTLessorAVSCustcontHARDWARE B ON A.cusid = B.CUSID AND 
+A.PRTNO = B.PRTNO 
+where  1=1
+GROUP BY  A.CUSID, A.ENTRYNO, A.PRTNO, 
 rtrim(CONVERT(char(6), RTLessorAVScust.COMQ1)) + '-' + rtrim(CONVERT(char(6), RTLessorAVScust.lineQ1)), 
-RTLessorAVSCustSNDWORK.PRTNO, RTLessorAVSCustSNDWORK.SENDWORKDAT, RTOBJ.CUSNC, 
+A.PRTNO, A.SENDWORKDAT, RTOBJ.CUSNC, 
 CASE WHEN RTOBJ_2.SHORTNC &lt;&gt; '' THEN RTOBJ_2.SHORTNC ELSE RTOBJ_1.CUSNC END, 
-CASE WHEN RTOBJ_4.SHORTNC &lt;&gt; '' THEN RTOBJ_4.SHORTNC ELSE RTOBJ_3.CUSNC END, RTLessorAVSCustSNDWORK.closedat, 
-RTLessorAVSCustSNDWORK.unclosedat, RTLessorAVSCustSNDWORK.BONUSCLOSEYM, RTLessorAVSCustSNDWORK.BONUSFINCHK, 
-RTLessorAVSCustSNDWORK.batchno, RTLessorAVSCustSNDWORK.STOCKCLOSEYM, RTLessorAVSCustSNDWORK.STOCKFINCHK, 
-RTLessorAVSCustSNDWORK.DROPDAT </value>
+CASE WHEN RTOBJ_4.SHORTNC &lt;&gt; '' THEN RTOBJ_4.SHORTNC ELSE RTOBJ_3.CUSNC END, A.closedat, 
+A.unclosedat, A.BONUSCLOSEYM, A.BONUSFINCHK, A.batchno, A.STOCKCLOSEYM, A.STOCKFINCHK, A.DROPDAT </value>
   </data>
-  <metadata name="autoNumber1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>56, 369</value>
-  </metadata>
-  <metadata name="RT10421.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>377, 215</value>
-  </metadata>
-  <metadata name="RT10422.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>374, 167</value>
-  </metadata>
-  <data name="RT10422.CommandText" xml:space="preserve">
-    <value>SELECT  RTLessorAVSCustRCVHardware.PRTNO, RTLessorAVSCustRCVHardware.RCVPRTNO AS RCVPRTNO, 
-RTCODE_1.CODENC, 
-RTLessorAVSCustRCVHardware.APPLYDAT AS APPLYDAT, 
-CASE WHEN RTObj_7.CUSNC='' OR RTObj_7.CUSNC IS NULL THEN RTObj_2.SHORTNC ELSE  RTObj_7.CUSNC END AS CUSNC1, 
-CASE WHEN RTObj_1.CUSNC='' OR RTObj_1.CUSNC IS NULL THEN RTObj_3.SHORTNC ELSE RTObj_1.CUSNC END AS CUSNC2, 
-RTLessorAVSCustRCVHardware.CLOSEDAT AS CLOSEDAT, RTObj_4.CUSNC AS CUSNC5, RTLessorAVSCustRCVHardware.CANCELDAT AS CANCELDAT, RTObj_5.CUSNC AS CUSNC6, 
-RTLessorAVSCustRCVHardware.PRTNO AS PRTNO, 
-RTObj_6.CUSNC AS cusnc7,SUM(RTLessorAVSCustRCVHardwareDTL.QTY) AS QTY 
-FROM RTEmployee RTEmployee_4 INNER JOIN RTObj RTObj_6 ON RTEmployee_4.CUSID = RTObj_6.CUSID RIGHT OUTER JOIN 
-RTLessorAVSCustRCVHardware ON RTEmployee_4.EMPLY = RTLessorAVSCustRCVHardware.RCVUSR LEFT OUTER JOIN 
-RTEmployee RTEmployee_3 INNER JOIN RTObj RTObj_5 ON RTEmployee_3.CUSID = RTObj_5.CUSID ON 
-RTLessorAVSCustRCVHardware.CANCELUSR = RTEmployee_3.EMPLY LEFT OUTER JOIN 
-RTEmployee RTEmployee_2 INNER JOIN RTObj RTObj_4 ON RTEmployee_2.CUSID = RTObj_4.CUSID ON 
-RTLessorAVSCustRCVHardware.CLOSEUSR = RTEmployee_2.EMPLY LEFT OUTER JOIN RTObj RTObj_3 ON 
-RTLessorAVSCustRCVHardware.REALCONSIGNEE = RTObj_3.CUSID LEFT OUTER JOIN RTObj RTObj_2 ON 
-RTLessorAVSCustRCVHardware.ASSIGNCONSIGNEE = RTObj_2.CUSID LEFT OUTER JOIN 
-RTEmployee RTEmployee_1 INNER JOIN RTObj RTObj_1 ON RTEmployee_1.CUSID = RTObj_1.CUSID ON 
-RTLessorAVSCustRCVHardware.REALENGINEER = RTEmployee_1.EMPLY LEFT OUTER JOIN 
-RTObj RTObj_7 INNER JOIN RTEmployee RTEmployee_5 ON RTObj_7.CUSID = RTEmployee_5.CUSID ON 
-RTLessorAVSCustRCVHardware.ASSIGNENGINEER = RTEmployee_5.EMPLY LEFT OUTER JOIN RTLessorAVSCustRCVHardwareDTL ON 
-RTLessorAVSCustRCVHardware.RCVPRTNO=RTLessorAVSCustRCVHardwareDTL.RCVPRTNO left outer join 
-rtcode rtcode_1 on RTLessorAVSCustRCVHardware.datasrc=rtcode_1.code and rtcode_1.kind='N8' 
-where 1=1
-GROUP BY  RTLessorAVSCustRCVHardware.RCVPRTNO , 
-RTCODE_1.CODENC, 
-RTLessorAVSCustRCVHardware.APPLYDAT , 
-CASE WHEN RTObj_7.CUSNC='' OR RTObj_7.CUSNC IS NULL THEN RTObj_2.SHORTNC ELSE  RTObj_7.CUSNC END , 
-CASE WHEN RTObj_1.CUSNC='' OR RTObj_1.CUSNC IS NULL THEN RTObj_3.SHORTNC ELSE RTObj_1.CUSNC END, 
-RTLessorAVSCustRCVHardware.CLOSEDAT, RTObj_4.CUSNC, RTObj_5.CUSNC, RTLessorAVSCustRCVHardware.PRTNO, 
-RTLessorAVSCustRCVHardware.CANCELDAT, RTObj_6.CUSNC </value>
-  </data>
-  <metadata name="cmdRT10421.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>479, 215</value>
+  <metadata name="cmdRT10431.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 251</value>
   </metadata>
   <metadata name="infoParameter1.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -230,11 +203,11 @@ RTLessorAVSCustRCVHardware.CANCELDAT, RTObj_6.CUSNC </value>
   <metadata name="infoParameter7.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="cmdRT10422.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>485, 254</value>
-  </metadata>
   <metadata name="infoParameter8.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
+  </metadata>
+  <metadata name="cmdRT10432.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 290</value>
   </metadata>
   <metadata name="infoParameter9.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -242,23 +215,20 @@ RTLessorAVSCustRCVHardware.CANCELDAT, RTObj_6.CUSNC </value>
   <metadata name="infoParameter10.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="cmdRT10423.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>477, 301</value>
-  </metadata>
   <metadata name="infoParameter11.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="infoParameter12.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="cmdRT10433.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 329</value>
+  </metadata>
   <metadata name="infoParameter13.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="infoParameter14.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
-  </metadata>
-  <metadata name="cmdRT10424.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>485, 336</value>
   </metadata>
   <metadata name="infoParameter15.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -269,8 +239,8 @@ RTLessorAVSCustRCVHardware.CANCELDAT, RTObj_6.CUSNC </value>
   <metadata name="infoParameter17.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="cmdRT10425.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>479, 384</value>
+  <metadata name="cmdRT10435.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 407</value>
   </metadata>
   <metadata name="infoParameter18.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -279,6 +249,24 @@ RTLessorAVSCustRCVHardware.CANCELDAT, RTObj_6.CUSNC </value>
     <value>False</value>
   </metadata>
   <metadata name="infoParameter20.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter21.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdRT10434.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>18, 369</value>
+  </metadata>
+  <metadata name="infoParameter22.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter23.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter24.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter25.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">

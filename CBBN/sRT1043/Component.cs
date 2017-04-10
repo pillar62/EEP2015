@@ -7,7 +7,7 @@ using System.Text;
 using Srvtools;
 using System.Data;
 
-namespace sRT1042
+namespace sRT1043
 {
     public partial class Component : DataModule
     {
@@ -22,31 +22,25 @@ namespace sRT1042
 
             InitializeComponent();
         }
-
-        public string getFix()
-        {
-            return string.Format("E{0:yyMMdd}", DateTime.Now.Date);
-        }
-
-        public object[] smRT10421(object[] objParam)
+        public object[] smRT10431(object[] objParam)
         {
             var ss = (string)objParam[0];
             var sdata = ss.Split(',');
             //開啟資料連接
-            IDbConnection conn = cmdRT10421.Connection;
+            IDbConnection conn = cmdRT10431.Connection;
             conn.Open();
             //設定輸入參數的值
             try
             {
-                cmdRT10421.InfoParameters[0].Value = sdata[0];
-                cmdRT10421.InfoParameters[1].Value = sdata[1];
-                cmdRT10421.InfoParameters[2].Value = sdata[2];
-                cmdRT10421.InfoParameters[3].Value = sdata[3];
-                cmdRT10421.InfoParameters[4].Value = sdata[4];
-                cmdRT10421.InfoParameters[5].Value = sdata[5];
-                cmdRT10421.InfoParameters[6].Value = sdata[6];
+                cmdRT10431.InfoParameters[0].Value = sdata[0];
+                cmdRT10431.InfoParameters[1].Value = sdata[1];
+                cmdRT10431.InfoParameters[2].Value = sdata[2];
+                cmdRT10431.InfoParameters[3].Value = sdata[3];
+                cmdRT10431.InfoParameters[4].Value = sdata[4];
+                cmdRT10431.InfoParameters[5].Value = sdata[5];
+                cmdRT10431.InfoParameters[6].Value = sdata[6];
                 /*取得統計的結果，並將結果返回*/
-                double ii = cmdRT10421.ExecuteNonQuery();
+                double ii = cmdRT10431.ExecuteNonQuery();
                 return new object[] { 0, ii };
             }
             catch (Exception ex)
@@ -55,21 +49,21 @@ namespace sRT1042
             }
         }
 
-        public object[] smRT10422(object[] objParam)
+        public object[] smRT10432(object[] objParam)
         {
             var ss = (string)objParam[0];
             var sdata = ss.Split(',');
             //開啟資料連接
-            IDbConnection conn = cmdRT10422.Connection;
+            IDbConnection conn = cmdRT10432.Connection;
             conn.Open();
             //設定輸入參數的值
             try
             {
-                cmdRT10422.InfoParameters[0].Value = sdata[0];
-                cmdRT10422.InfoParameters[1].Value = sdata[1];
-                cmdRT10422.InfoParameters[2].Value = sdata[2];
+                cmdRT10432.InfoParameters[0].Value = sdata[0];
+                cmdRT10432.InfoParameters[1].Value = sdata[1];
+                cmdRT10432.InfoParameters[2].Value = sdata[2];
                 /*取得統計的結果，並將結果返回*/
-                double ii = cmdRT10422.ExecuteNonQuery();
+                double ii = cmdRT10432.ExecuteNonQuery();
                 return new object[] { 0, ii };
             }
             catch (Exception ex)
@@ -78,22 +72,22 @@ namespace sRT1042
             }
         }
 
-        public object[] smRT10423(object[] objParam)
+        public object[] smRT10433(object[] objParam)
         {
             var ss = (string)objParam[0];
             var sdata = ss.Split(',');
             //開啟資料連接
-            IDbConnection conn = cmdRT10423.Connection;
+            IDbConnection conn = cmdRT10433.Connection;
             conn.Open();
             //設定輸入參數的值
             try
             {
-                cmdRT10423.InfoParameters[0].Value = sdata[0];
-                cmdRT10423.InfoParameters[1].Value = sdata[1];
-                cmdRT10423.InfoParameters[2].Value = sdata[2];
-                cmdRT10423.InfoParameters[3].Value = sdata[3];
+                cmdRT10433.InfoParameters[0].Value = sdata[0];
+                cmdRT10433.InfoParameters[1].Value = sdata[1];
+                cmdRT10433.InfoParameters[2].Value = sdata[2];
+                cmdRT10433.InfoParameters[3].Value = sdata[3];
                 /*取得統計的結果，並將結果返回*/
-                double ii = cmdRT10423.ExecuteNonQuery();
+                double ii = cmdRT10433.ExecuteNonQuery();
                 return new object[] { 0, ii };
             }
             catch (Exception ex)
@@ -102,21 +96,21 @@ namespace sRT1042
             }
         }
 
-        public object[] smRT10424(object[] objParam)
+        public object[] smRT10434(object[] objParam)
         {
             var ss = (string)objParam[0];
             var sdata = ss.Split(',');
             //開啟資料連接
-            IDbConnection conn = cmdRT10424.Connection;
+            IDbConnection conn = cmdRT10434.Connection;
             conn.Open();
             //設定輸入參數的值
             try
             {
-                cmdRT10424.InfoParameters[0].Value = sdata[0];
-                cmdRT10424.InfoParameters[1].Value = sdata[1];
-                cmdRT10424.InfoParameters[2].Value = sdata[2];
+                cmdRT10434.InfoParameters[0].Value = sdata[0];
+                cmdRT10434.InfoParameters[1].Value = sdata[1];
+                cmdRT10434.InfoParameters[2].Value = sdata[2];
                 /*取得統計的結果，並將結果返回*/
-                double ii = cmdRT10424.ExecuteNonQuery();
+                double ii = cmdRT10434.ExecuteNonQuery();
                 return new object[] { 0, ii };
             }
             catch (Exception ex)
@@ -125,21 +119,21 @@ namespace sRT1042
             }
         }
 
-        public object[] smRT10425(object[] objParam)
+        public object[] smRT10435(object[] objParam)
         {
             var ss = (string)objParam[0];
             var sdata = ss.Split(',');
             //開啟資料連接
-            IDbConnection conn = cmdRT10425.Connection;
+            IDbConnection conn = cmdRT10435.Connection;
             conn.Open();
             //設定輸入參數的值
             try
             {
-                cmdRT10425.InfoParameters[0].Value = sdata[0];
-                cmdRT10425.InfoParameters[1].Value = sdata[1];
-                cmdRT10425.InfoParameters[2].Value = sdata[2];
+                cmdRT10435.InfoParameters[0].Value = sdata[0];
+                cmdRT10435.InfoParameters[1].Value = sdata[1];
+                cmdRT10435.InfoParameters[2].Value = sdata[2];
                 /*取得統計的結果，並將結果返回*/
-                double ii = cmdRT10425.ExecuteNonQuery();
+                double ii = cmdRT10435.ExecuteNonQuery();
                 return new object[] { 0, ii };
             }
             catch (Exception ex)
