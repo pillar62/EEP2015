@@ -39,6 +39,30 @@
             parent.addTab("用戶續約作業", "CBBN/RT1043.aspx?CUSID=" + ss);
         }
 
+        function btn3Click(val) {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.CUSID;
+            parent.addTab("用戶復機作業", "CBBN/RT1044.aspx?CUSID=" + ss);
+        }
+
+        function btn4Click(val) {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.CUSID;
+            parent.addTab("用戶退租作業", "CBBN/RT1045.aspx?CUSID=" + ss);
+        }
+
+        function btn5Click(val) {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.CUSID;
+            parent.addTab("用戶應收應付帳款查詢", "CBBN/RT1046.aspx?CUSID=" + ss);
+        }
+
+        function btn6Click(val) {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.CUSID;
+            parent.addTab("用戶客服單資料維護", "CBBN/RT1047.aspx?CUSID=" + ss);
+        }
+
         function InsDefaultLINEQ1() {
             if (LINEQ1 != "") {
                 return LINEQ1;
@@ -175,10 +199,10 @@
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="維修收款" Visible="True" OnClick="LinkRT1041" Icon="icon-view" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="裝機派工" Visible="True" OnClick="btn1Click" Icon="icon-view" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="續約作業" Visible="True" OnClick="btn2Click" Icon="icon-edit" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="復機作業" Visible="True" OnClick="btn3Click" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="退租作業" Visible="True" OnClick="btn4Click" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="應收應付" Visible="True" OnClick="btn5Click" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="客服案件" Visible="True" OnClick="btn6Click" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="復機作業" Visible="True" OnClick="btn3Click" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="退租作業" Visible="True" OnClick="btn4Click" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="應收應付" Visible="True" OnClick="btn5Click" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="客服案件" Visible="True" OnClick="btn6Click" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="設備保管收據列印" Visible="True" OnClick="btn7Click" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="用戶移動" Visible="True" OnClick="btn8Click" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="調整到期" Visible="True" OnClick="btn9Click" />

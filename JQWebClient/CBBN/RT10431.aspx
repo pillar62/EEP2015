@@ -8,6 +8,7 @@
     <title></title>
     <script>
         var CUSID = Request.getQueryStringByName2("CUSID");
+        var ENTRYNO = Request.getQueryStringByName2("ENTRYNO");
         var flag = true;
         var usr = getClientInfo('_usercode');
 
@@ -25,7 +26,7 @@
                 $("#dataGridMaster").datagrid('setWhere', sWhere);
                 var row = $("#dataGridView").datagrid("selectRow", 0);
                 $("#JQDataGrid1").datagrid('setWhere', "CUSID='" + CUSID + "'"); //過濾用戶資料
-                $("#JQDataGrid2").datagrid('setWhere', "CUSID='" + CUSID + "' AND PRTNO='" + row.PRTNO + "'"); //過濾用戶資料
+                $("#JQDataGrid2").datagrid('setWhere', "CUSID='" + CUSID + "' AND ENTRYNO = " + ENTRYNO ); //過濾用戶資料
             }
             flag = false;
         }
@@ -39,7 +40,7 @@
             var sMODE = "E";
             var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var PRTNO = row.PRTNO;
-            parent.addTab("用戶裝機派工單資料修改", "CBBN/RT104311.aspx?CUSID=" + CUSID + "&PRTNO=" + PRTNO + "&sMODE=" + sMODE);
+            parent.addTab("用戶裝機派工單資料修改", "CBBN/RT104311.aspx?CUSID=" + CUSID + "&ENTRYNO = " + ENTRYNO + "&PRTNO=" + PRTNO + "&sMODE=" + sMODE);
         }
 
         //物品領用單
@@ -61,7 +62,8 @@
             { alert(err); }
 
             var PRTNO = row.PRTNO;
-            if ((row1.DROPDAT != "" &&row1.DROPDAT != null) || (row1.CANCELDAT != "" && row1.CANCELDAT != null))
+            var ENTRYNO = row.ENTRYNO;
+            if ((row1.DROPDAT != "" && row1.DROPDAT != null) || (row1.CANCELDAT != "" && row1.CANCELDAT != null))
             {
                 alert("客戶已退租或作廢");
                 return false;
@@ -105,9 +107,9 @@
 
             $.ajax({
                 type: "POST",
-                url: '../handler/jqDataHandle.ashx?RemoteName=sRT1042.cmdRT10421', //連接的Server端，command
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT1043.cmdRT10431', //連接的Server端，command
                 //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
-                data: "mode=method&method=" + "smRT10421" + "&parameters=" + CUSID + "," + PRTNO + "," + usr + "," + row1.PERIOD + "," + row1.RCVMONEY + ","
+                data: "mode=method&method=" + "smRT10431" + "&parameters=" + CUSID  + "," + ENTRYNO + "," + PRTNO + "," + usr + "," + row1.PERIOD + "," + row1.RCVMONEY + ","
                     + row1.PAYTYPE + "," + row1.CREDITCARDNO,
                 cache: false,
                 async: false,
@@ -127,6 +129,7 @@
             { alert(err); }
 
             var PRTNO = row.PRTNO;
+            var ENTRYNO = row.ENTRYNO;
             if ((row1.DROPDAT != "" && row1.DROPDAT != null) || (row1.CANCELDAT != "" && row1.CANCELDAT != null)) {
                 alert("客戶已退租或作廢");
                 return false;
@@ -146,7 +149,7 @@
                 type: "POST",
                 url: '../handler/jqDataHandle.ashx?RemoteName=sRT1042.cmdRT10422', //連接的Server端，command
                 //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
-                data: "mode=method&method=" + "smRT10422" + "&parameters=" + CUSID + "," + PRTNO + "," + usr,
+                data: "mode=method&method=" + "smRT10432" + "&parameters=" + CUSID + "," + ENTRYNO + "," + PRTNO + "," + usr,
                 cache: false,
                 async: false,
                 success: function (data) {
@@ -165,6 +168,8 @@
             { alert(err); }
 
             var PRTNO = row.PRTNO;
+            var ENTRYNO = row.ENTRYNO;
+
             if ((row1.DROPDAT != "" && row1.DROPDAT != null) || (row1.CANCELDAT != "" && row1.CANCELDAT != null)) {
                 alert("客戶已退租或作廢");
                 return false;
@@ -184,7 +189,7 @@
                 type: "POST",
                 url: '../handler/jqDataHandle.ashx?RemoteName=sRT1042.cmdRT10423', //連接的Server端，command
                 //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
-                data: "mode=method&method=" + "smRT10423" + "&parameters=" + CUSID + "," + PRTNO + "," + usr + "," + row.batchno,
+                data: "mode=method&method=" + "smRT10433" + "&parameters=" + CUSID + "," + ENTRYNO + "," + PRTNO + "," + usr + "," + row.batchno,
                 cache: false,
                 async: false,
                 success: function (data) {
@@ -203,7 +208,8 @@
             { alert(err); }
 
             var PRTNO = row.PRTNO;
-            if (row.DROPDAT != "" && row.DROPDAT != null)  {
+            var ENTRYNO = row.ENTRYNO;
+            if (row.DROPDAT != "" && row.DROPDAT != null) {
                 alert("此派工單已作廢，不可重覆執行作廢作業");
                 return false;
             }
@@ -222,7 +228,7 @@
                 type: "POST",
                 url: '../handler/jqDataHandle.ashx?RemoteName=sRT1042.cmdRT10424', //連接的Server端，command
                 //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
-                data: "mode=method&method=" + "smRT10424" + "&parameters=" + CUSID + "," + PRTNO + "," + usr + "," + row.batchno,
+                data: "mode=method&method=" + "smRT10434" + "&parameters=" + CUSID + "," + ENTRYNO + "," + PRTNO + "," + usr + "," + row.batchno,
                 cache: false,
                 async: false,
                 success: function (data) {
@@ -241,6 +247,8 @@
             { alert(err); }
 
             var PRTNO = row.PRTNO;
+            var ENTRYNO = row.ENTRYNO;
+
             if (row.DROPDAT == "" || row.DROPDAT == null) {
                 alert("此派工單尚未作廢，不可重覆執行作廢返轉作業");
                 return false;
@@ -255,7 +263,7 @@
                 type: "POST",
                 url: '../handler/jqDataHandle.ashx?RemoteName=sRT1042.cmdRT10425', //連接的Server端，command
                 //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
-                data: "mode=method&method=" + "smRT10425" + "&parameters=" + CUSID + "," + PRTNO + "," + usr,
+                data: "mode=method&method=" + "smRT10435" + "&parameters=" + CUSID + "," + ENTRYNO + "," + PRTNO + "," + usr,
                 cache: false,
                 async: false,
                 success: function (data) {
@@ -291,23 +299,25 @@
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="用戶" Editor="infocombobox" FieldName="CUSID" Format="" MaxLength="15" Width="120" EditorOptions="valueField:'CUSID',textField:'CUSNC',remoteName:'sRT104.View_RTLessorAVSCust',tableName:'View_RTLessorAVSCust',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
                     <JQTools:JQGridColumn Alignment="left" Caption="主線" Editor="text" FieldName="comqline" Format="" MaxLength="0" Width="60" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="項次" Editor="text" FieldName="ENTRYNO" MaxLength="0" Width="60" />
                     <JQTools:JQGridColumn Alignment="left" Caption="派工單號" Editor="text" FieldName="PRTNO" Format="" MaxLength="12" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="完工日期" Editor="datebox" FieldName="SENDWORKDAT" Format="yyyy/mm/dd" MaxLength="0" Width="80" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="列印人員" Editor="text" FieldName="CUSNC" Format="" Width="90" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="完工日期" Editor="datebox" FieldName="SENDWORKDAT" Format="yyyy/mm/dd" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="列印人員" Editor="text" FieldName="CUSNC" Format="" MaxLength="0" Width="90" />
                     <JQTools:JQGridColumn Alignment="left" Caption="預定施工員" Editor="text" FieldName="Column1" Format="" MaxLength="0" Width="90" />
                     <JQTools:JQGridColumn Alignment="left" Caption="實際施工員" Editor="text" FieldName="Column2" Format="" MaxLength="0" Width="90" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="結案日" Editor="datebox" FieldName="closedat" Format="yyyy/mm/dd" MaxLength="0" Width="80" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="未完工結案日" Editor="datebox" FieldName="unclosedat" Format="yyyy/mm/dd" Width="80" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="獎金計算月" Editor="text" FieldName="BONUSCLOSEYM" Format="yyyy/mm" Width="70" MaxLength="6" Visible="False" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="獎金會計審核日" Editor="datebox" FieldName="BONUSFINCHK" Format="yyyy/mm/dd" MaxLength="0" Width="80" Visible="False" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="應收帳款編號" Editor="text" FieldName="batchno" Format="" Width="120" MaxLength="12" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="結案日" Editor="datebox" FieldName="closedat" Format="yyyy/mm/dd" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="未完工結案日" Editor="datebox" FieldName="unclosedat" Format="yyyy/mm/dd" Width="80" MaxLength="0" Visible="True" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="獎金計算月" Editor="text" FieldName="BONUSCLOSEYM" Format="yyyy/mm" MaxLength="6" Width="70" Visible="False" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="獎金會計審核日" Editor="datebox" FieldName="BONUSFINCHK" Format="yyyy/mm/dd" Width="80" MaxLength="0" Visible="False" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="應收帳款編號" Editor="text" FieldName="batchno" Format="" MaxLength="12" Width="120" Visible="True" />
                     <JQTools:JQGridColumn Alignment="left" Caption="庫存結算月" Editor="text" FieldName="STOCKCLOSEYM" Format="yyyy/mm" MaxLength="6" Width="70" Visible="False" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="庫存會計審核日" Editor="datebox" FieldName="STOCKFINCHK" Format="yyyy/mm/dd" MaxLength="0" Width="80" Visible="False" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="庫存會計審核日" Editor="datebox" FieldName="STOCKFINCHK" Format="yyyy/mm/dd" Width="80" Visible="False" />
                     <JQTools:JQGridColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="DROPDAT" Format="yyyy/mm/dd" Width="80" />
                     <JQTools:JQGridColumn Alignment="right" Caption="設備數量" Editor="numberbox" FieldName="Column3" Format="" Width="80" />
                     <JQTools:JQGridColumn Alignment="right" Caption="轉領用單數量" Editor="numberbox" FieldName="Column4" Format="" Width="80" />
                     <JQTools:JQGridColumn Alignment="right" Caption="已領數量" Editor="numberbox" FieldName="Column5" Format="" Width="80" />
-                    <JQTools:JQGridColumn Alignment="right" Caption="待領數量" Editor="numberbox" FieldName="Column6" Format="" Width="80" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="待領數量" Editor="numberbox" FieldName="Column6" Format="" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="80">
+                    </JQTools:JQGridColumn>
                 </Columns>
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
@@ -355,13 +365,13 @@
                 </JQTools:JQGridColumn>
             </Columns>
         </JQTools:JQDataGrid>
-        <JQTools:JQDataGrid ID="JQDataGrid2" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" AutoApply="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="RT10421" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT1042.RT10421" RowNumbers="True" Title="JQDataGrid" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
+        <JQTools:JQDataGrid ID="JQDataGrid2" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" AutoApply="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="View_RTLessorAVSCustCont" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT1043.View_RTLessorAVSCustCont" RowNumbers="True" Title="JQDataGrid" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="True">
             <Columns>
                 <JQTools:JQGridColumn Alignment="left" Caption="CUSID" Editor="text" FieldName="CUSID" Frozen="False" IsNvarChar="False" MaxLength="15" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="30">
                 </JQTools:JQGridColumn>
-                <JQTools:JQGridColumn Alignment="left" Caption="PRTNO" Editor="text" FieldName="PRTNO" Frozen="False" IsNvarChar="False" MaxLength="12" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="24">
+                <JQTools:JQGridColumn Alignment="left" Caption="ENTRYNO" Editor="text" FieldName="ENTRYNO" Frozen="False" IsNvarChar="False" MaxLength="12" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="24">
                 </JQTools:JQGridColumn>
-                <JQTools:JQGridColumn Alignment="left" Caption="CNT" Editor="text" FieldName="CNT" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                <JQTools:JQGridColumn Alignment="left" Caption="AMT" Editor="text" FieldName="AMT" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
                 </JQTools:JQGridColumn>
             </Columns>
         </JQTools:JQDataGrid>
