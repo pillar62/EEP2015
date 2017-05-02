@@ -65,7 +65,8 @@
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("已完工結案，請點選重新整理!");
+                    alert(data);
+                    $('#dataGridMaster').datagrid('reload');
                 }
             });
         }
@@ -84,7 +85,8 @@
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("結案返轉完成，請點選重新整理!");
+                    alert(data);
+                    $('#dataGridMaster').datagrid('reload');
                 }
             });
         }
@@ -102,7 +104,8 @@
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("資料已作廢，請點選重新整理!");
+                    alert(data);
+                    $('#dataGridMaster').datagrid('reload');
                 }
             });
         }
@@ -121,7 +124,8 @@
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("資料已作廢返轉，請點選重新整理!");
+                    alert(data);
+                    $('#dataGridMaster').datagrid('reload');
                 }
             });
         }

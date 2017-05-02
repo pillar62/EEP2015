@@ -252,8 +252,174 @@ WHERE  RTLessorAVSCustAR.canceldat IS NULL
 ORDER BY RTLessorAVSCustAR.CDAT </value>
   </data>
   <metadata name="autoNumber1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>656, 67</value>
+    <value>659, 74</value>
   </metadata>
+  <metadata name="RT104A.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>38, 498</value>
+  </metadata>
+  <data name="RT104A.CommandText" xml:space="preserve">
+    <value>SELECT * FROM (
+SELECT         RTLessorAVSCustHardware.CUSID, RTLessorAVSCustHardware.PRTNO,
+RTLessorAVSCustHardware.ENTRYNO,'新戶' AS Column1,'' AS Column2, RTLessorAVSCustHardware.PRODNO,
+ RTLessorAVSCustHardware.ITEMNO, RTProdH.PRODNC, RTProdD1.SPEC,
+ RTLessorAVSCustHardware.QTY, RTLessorAVSCustHardware.AMT,
+ RTLessorAVSCustSndwork.CLOSEDAT, RTLessorAVSCustHardware.BATCHNO,
+ ISNULL(RTLessorAVSCustAR.REALAMT,0) AS Column3, RTLessorAVSCustHardware.RCVPRTNO,
+ RTLessorAVSCustRCVHardware.CLOSEDAT AS Expr1
+FROM             RTLessorAVSCustHardware LEFT OUTER JOIN
+RTLessorAVSCustRCVHardware ON 
+RTLessorAVSCustHardware.RCVPRTNO = RTLessorAVSCustRCVHardware.RCVPRTNO AND
+ RTLessorAVSCustRCVHardware.CANCELDAT IS NULL LEFT OUTER JOIN
+RTLessorAVSCustAR ON 
+RTLessorAVSCustHardware.BATCHNO = RTLessorAVSCustAR.BATCHNO AND 
+RTLessorAVSCustHardware.CUSID = RTLessorAVSCustAR.CUSID AND 
+RTLessorAVSCustAR.CANCELDAT IS NULL LEFT OUTER JOIN
+RTLessorAVSCustSndwork ON 
+RTLessorAVSCustHardware.PRTNO = RTLessorAVSCustSndwork.PRTNO AND 
+RTLessorAVSCustSndwork.DROPDAT IS NULL AND 
+RTLessorAVSCustSndwork.UNCLOSEDAT IS NULL LEFT OUTER JOIN
+RTProdD1 ON RTLessorAVSCustHardware.PRODNO = RTProdD1.PRODNO AND 
+RTLessorAVSCustHardware.ITEMNO = RTProdD1.ITEMNO LEFT OUTER JOIN
+RTProdH ON 
+                         RTLessorAVSCustHardware.PRODNO = RTProdH.PRODNO LEFT OUTER JOIN
+RTLessorAVSCust ON 
+RTLessorAVSCustHardware.CUSID = RTLessorAVSCust.CUSID
+WHERE         (RTLessorAVSCustHardware.DROPDAT IS NULL) 
+UNION
+SELECT         RTLessorAVSCustContHardware.CUSID, RTLessorAVSCustContHardware.PRTNO, 
+RTLessorAVSCustContHardware.SEQ,'續約','', RTLessorAVSCustContHardware.PRODNO, 
+RTLessorAVSCustContHardware.ITEMNO, RTProdH.PRODNC, RTProdD1.SPEC, 
+RTLessorAVSCustContHardware.QTY, RTLessorAVSCustContHardware.AMT, 
+RTLessorAVSCustContSndwork.CLOSEDAT, RTLessorAVSCustContHardware.BATCHNO, 
+ISNULL(RTLessorAVSCustAR.REALAMT,0), RTLessorAVSCustContHardware.RCVPRTNO, 
+RTLessorAVSCustRCVHardware.CLOSEDAT AS Expr1
+FROM             RTLessorAVSCustContHardware LEFT OUTER JOIN
+RTLessorAVSCustRCVHardware ON 
+RTLessorAVSCustContHardware.RCVPRTNO = RTLessorAVSCustRCVHardware.RCVPRTNO AND
+ RTLessorAVSCustRCVHardware.CANCELDAT IS NULL LEFT OUTER JOIN 
+RTLessorAVSCustAR ON 
+RTLessorAVSCustContHardware.BATCHNO = RTLessorAVSCustAR.BATCHNO AND 
+RTLessorAVSCustContHardware.CUSID = RTLessorAVSCustAR.CUSID AND 
+RTLessorAVSCustAR.CANCELDAT IS NULL LEFT OUTER JOIN
+RTLessorAVSCustContSndwork ON 
+RTLessorAVSCustContHardware.PRTNO = RTLessorAVSCustContSndwork.PRTNO AND 
+RTLessorAVSCustContSndwork.DROPDAT IS NULL AND 
+RTLessorAVSCustContSndwork.UNCLOSEDAT IS NULL LEFT OUTER JOIN
+RTProdD1 ON RTLessorAVSCustContHardware.PRODNO = RTProdD1.PRODNO AND 
+RTLessorAVSCustContHardware.ITEMNO = RTProdD1.ITEMNO LEFT OUTER JOIN
+RTProdH ON 
+RTLessorAVSCustContHardware.PRODNO = RTProdH.PRODNO LEFT OUTER JOIN
+RTLessorAVSCust ON 
+RTLessorAVSCustContHardware.CUSID = RTLessorAVSCust.CUSID
+WHERE         (RTLessorAVSCustContHardware.DROPDAT IS NULL) 
+UNION
+SELECT         RTLessorAVSCustReturnHardware.CUSID, RTLessorAVSCustReturnHardware.PRTNO, 
+RTLessorAVSCustReturnHardware.SEQ,'復機','', RTLessorAVSCustReturnHardware.PRODNO, 
+RTLessorAVSCustReturnHardware.ITEMNO, RTProdH.PRODNC, RTProdD1.SPEC, 
+RTLessorAVSCustReturnHardware.QTY, RTLessorAVSCustReturnHardware.AMT, 
+RTLessorAVSCustReturnSndwork.CLOSEDAT, RTLessorAVSCustReturnHardware.BATCHNO, 
+ISNULL(RTLessorAVSCustAR.REALAMT,0), RTLessorAVSCustReturnHardware.RCVPRTNO, 
+RTLessorAVSCustRCVHardware.CLOSEDAT AS Expr1
+FROM             RTLessorAVSCustReturnHardware LEFT OUTER JOIN
+RTLessorAVSCustRCVHardware ON 
+RTLessorAVSCustReturnHardware.RCVPRTNO = RTLessorAVSCustRCVHardware.RCVPRTNO AND
+ RTLessorAVSCustRCVHardware.CANCELDAT IS NULL LEFT OUTER JOIN
+RTLessorAVSCustAR ON 
+RTLessorAVSCustReturnHardware.BATCHNO = RTLessorAVSCustAR.BATCHNO AND 
+RTLessorAVSCustReturnHardware.CUSID = RTLessorAVSCustAR.CUSID AND 
+RTLessorAVSCustAR.CANCELDAT IS NULL LEFT OUTER JOIN
+RTLessorAVSCustReturnSndwork ON 
+RTLessorAVSCustReturnHardware.PRTNO = RTLessorAVSCustReturnSndwork.PRTNO AND 
+RTLessorAVSCustReturnSndwork.DROPDAT IS NULL AND 
+RTLessorAVSCustReturnSndwork.UNCLOSEDAT IS NULL LEFT OUTER JOIN
+RTProdD1 ON RTLessorAVSCustReturnHardware.PRODNO = RTProdD1.PRODNO AND 
+RTLessorAVSCustReturnHardware.ITEMNO = RTProdD1.ITEMNO LEFT OUTER JOIN
+RTProdH ON 
+RTLessorAVSCustReturnHardware.PRODNO = RTProdH.PRODNO LEFT OUTER JOIN
+RTLessorAVSCust ON 
+RTLessorAVSCustReturnHardware.CUSID = RTLessorAVSCust.CUSID
+WHERE         (RTLessorAVSCustReturnHardware.DROPDAT IS NULL) 
+UNION
+SELECT         RTLessorAVSCustFaqHardware.CUSID, RTLessorAVSCustFaqHardware.PRTNO, 
+RTLessorAVSCustFaqHardware.seq,'客服',RTLessorAVSCustFaqHardware.FAQNO, RTLessorAVSCustFaqHardware.PRODNO, 
+RTLessorAVSCustFaqHardware.ITEMNO, RTProdH.PRODNC, RTProdD1.SPEC, 
+RTLessorAVSCustFaqHardware.QTY, RTLessorAVSCustFaqHardware.AMT, 
+RTLessorAVSCustFaqSndwork.CLOSEDAT, RTLessorAVSCustFaqHardware.BATCHNO, 
+ISNULL(RTLessorAVSCustAR.REALAMT,0), RTLessorAVSCustFaqHardware.RCVPRTNO, 
+RTLessorAVSCustRCVHardware.CLOSEDAT AS Expr1
+FROM             RTLessorAVSCustFaqHardware LEFT OUTER JOIN
+RTLessorAVSCustRCVHardware ON 
+RTLessorAVSCustFaqHardware.RCVPRTNO = RTLessorAVSCustRCVHardware.RCVPRTNO AND
+ RTLessorAVSCustRCVHardware.CANCELDAT IS NULL LEFT OUTER JOIN
+RTLessorAVSCustAR ON 
+RTLessorAVSCustFaqHardware.BATCHNO = RTLessorAVSCustAR.BATCHNO AND 
+RTLessorAVSCustFaqHardware.CUSID = RTLessorAVSCustAR.CUSID AND 
+RTLessorAVSCustAR.CANCELDAT IS NULL LEFT OUTER JOIN
+RTLessorAVSCustFaqSndwork ON 
+RTLessorAVSCustFaqHardware.PRTNO = RTLessorAVSCustFaqSndwork.PRTNO AND 
+RTLessorAVSCustFaqSndwork.DROPDAT IS NULL AND 
+RTLessorAVSCustFaqSndwork.UNCLOSEDAT IS NULL LEFT OUTER JOIN
+RTProdD1 ON RTLessorAVSCustFaqHardware.PRODNO = RTProdD1.PRODNO AND 
+RTLessorAVSCustFaqHardware.ITEMNO = RTProdD1.ITEMNO LEFT OUTER JOIN
+RTProdH ON 
+RTLessorAVSCustFaqHardware.PRODNO = RTProdH.PRODNO LEFT OUTER JOIN
+RTLessorAVSCust ON 
+RTLessorAVSCustFaqHardware.CUSID = RTLessorAVSCust.CUSID
+WHERE         (RTLessorAVSCustFaqHardware.DROPDAT IS NULL) ) A</value>
+  </data>
+  <metadata name="cmd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>134, 498</value>
+  </metadata>
+  <metadata name="cmdRT104B.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>215, 496</value>
+  </metadata>
+  <metadata name="infoParameter1.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter2.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter3.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter4.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdRT104C.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>343, 496</value>
+  </metadata>
+  <metadata name="infoParameter5.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter6.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter7.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter8.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="RT104D.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>465, 496</value>
+  </metadata>
+  <data name="RT104D.CommandText" xml:space="preserve">
+    <value>SELECT     RTLessorAVSCUSTLOG.CUSID, RTLessorAVSCUSTLOG.ENTRYNO, 
+RTRIM(CONVERT(char(6), RTLessorAVScust.COMQ1)) 
++ '-' + RTRIM(CONVERT(char(6), RTLessorAVScust.LINEQ1)) AS comqline, 
+RTLessorAVSCUSTLOG.CHGDAT, RTCode.CODENC, RTObj.CUSNC, 
+RTLessorAVSCUSTLOG.APPLYDAT,RTLessorAVSCUSTLOG.FINISHDAT, RTLessorAVSCUSTLOG.strbillingDAT, 
+RTLessorAVSCUSTLOG.NEWBILLINGDAT,RTLessorAVSCUSTLOG.DROPDAT, RTLessorAVSCUSTLOG.FREECODE 
+FROM          RTObj INNER JOIN 
+RTEmployee ON RTObj.CUSID = RTEmployee.CUSID RIGHT OUTER JOIN 
+RTLessorAVSCUSTLOG ON 
+RTEmployee.EMPLY = RTLessorAVSCUSTLOG.CHGUSR LEFT OUTER JOIN 
+RTCode ON RTLessorAVSCUSTLOG.CHGCODE = RTCode.CODE AND  
+RTCode.KIND = 'G2' left outer join 
+RTLessorAVScust on RTLessorAVSCUSTLOG.cusid=RTLessorAVScust.cusid 
+where 1=1 
+ORDER BY ENTRYNO</value>
+  </data>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>

@@ -33,7 +33,7 @@ namespace sRT1047
         {
             var ss = (string)objParam[0];
             var sdata = ss.Split(',');
-            string ss2 = "";
+
             //開啟資料連接
             IDbConnection conn = cmdRT10471.Connection;
             conn.Open();
@@ -58,6 +58,69 @@ namespace sRT1047
             {
                 return new object[] { 0, "找不到客戶基本檔，無法結案。" };
             }
+
+            if (ds1.Tables[0].Rows.Count > 0)
+            {
+                if (ds1.Tables[0].Rows[0]["CANCELDAT"].ToString() != "")
+                {
+                    return new object[] { 0, "此維修派工單所屬客服單資料已作廢，不可執行完工結案作業" };
+                }
+                if (ds1.Tables[0].Rows[0]["SNDCLOSEDAT"].ToString() != "")
+                {
+                    return new object[] { 0, "此維修派工單所屬客服單已有派工單結案日，請連絡資訊部" };
+                }
+            }
+            else
+            {
+                return new object[] { 0, "找不到此維修派工單所屬客服單資料" };
+            }
+
+            //判斷是否有領用單未結
+            selectSql = "select count(*) as CNT FROM RTLessorAVSCustFAQHardware WHERE CUSID='" + sdata[0] + "' and FAQNO='" + sdata[1] + "' and prtno = '" + sdata[2] + "' and dropdat is null and rcvfinishdat is null ";
+            cmd.CommandText = selectSql;
+            ds = cmd.ExecuteDataSet();
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                if (Convert.ToInt32(ds.Tables[0].Rows[0]["CNT"].ToString()) > 0)
+                {
+                    return new object[] { 0, "此維修派工單設備資料中，尚有設備未辦妥物品領用程序(未領用或領用未結案)，不可執行完工結案作業。" };
+                }
+            }
+
+            string sqlxx = "select * FROM RTLessorAVSCustFAQsndwork WHERE CUSID='" + sdata[0] + "' and FAQNO='" + sdata[1] + "' and prtno='" + sdata[2] + "' ";
+            string sqlyy = "select count(*) as cnt FROM RTLessorAVSCustFaqSndworkFixCode WHERE CUSID='" + sdata[0]+ "' and FAQNO='"+ sdata[1] + "' and prtno='" + sdata[2] + "' ";
+            cmd.CommandText = sqlxx;
+            ds = cmd.ExecuteDataSet();
+            cmd.CommandText = sqlyy;
+            ds1 = cmd.ExecuteDataSet();
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                if (ds.Tables[0].Rows[0]["DROPDAT"].ToString() != "")
+                {
+                    return new object[] { 0, "當已作廢時，不可執行完工結案或未完工結案" };
+                }
+                if (ds.Tables[0].Rows[0]["CLOSEDAT"].ToString() != "" && ds.Tables[0].Rows[0]["UNCLOSEDAT"].ToString() != "") 
+                {
+                    return new object[] { 0, "此維修派工單已完工結案或未完工結案，不可重複執行完工結案或未完工結案。" };
+                }
+                if (ds.Tables[0].Rows[0]["REALENGINEER"].ToString() == "" && ds.Tables[0].Rows[0]["REALCONSIGNEE"].ToString() == "")
+                {
+                    return new object[] { 0, "此維修派工單完工時，必須先輸入實際裝機人員或實際裝機經銷商。" };
+                }
+                if (ds.Tables[0].Rows[0]["BONUSCLOSEYM"].ToString() != "" && ds.Tables[0].Rows[0]["STOCKCLOSEYM"].ToString() != "")
+                {
+                    return new object[] { 0, "此維修派工單已月結，不可異動。" };
+                }
+                if (ds.Tables[0].Rows[0]["BATCHNO"].ToString() != "")
+                {
+                    return new object[] { 0, "此維修派工單已產生應收帳款，無法重複結案，請連絡資訊部" };
+                }
+                if (ds.Tables[0].Rows[0]["MEMO"].ToString() == "" && Convert.ToInt32(ds1.Tables[0].Rows[0]["cnt"].ToString()) < 1)
+                {
+                    return new object[] { 0, "維修派工單結案時，必須輸入維修處理過程說明。" };
+                }
+            }
+            
             //設定輸入參數的值
             try
             {
@@ -67,11 +130,11 @@ namespace sRT1047
                 cmdRT10471.InfoParameters[3].Value = sdata[3];
                 /*取得統計的結果，並將結果返回*/
                 double ii = cmdRT10471.ExecuteNonQuery();
-                return new object[] { 0, "用戶拆機派工單完工結案成功" };
+                return new object[] { 0, "用戶維修派工單完工結案成功" };
             }
             catch (Exception ex)
             {
-                return new object[] { 0, "無法執行拆機派工單完工結案作業,錯誤訊息" + ex };
+                return new object[] { 0, "無法執行維修派工單完工結案作業,錯誤訊息" + ex };
             }
         }
 
@@ -128,28 +191,85 @@ namespace sRT1047
         {
             var ss = (string)objParam[0];
             var sdata = ss.Split(',');
-            //開啟資料連接
-            IDbConnection conn = cmdRT10473.Connection;
+            string selectSql = "";
+            string XXSNDWORK = "";
+            string XXSNDUSR = "";
+            string XXSNDPRTNO = "";
+        //開啟資料連接
+        IDbConnection conn = cmdRT10473.Connection;
             conn.Open();
-            string selectSql = "select * FROM RTLessorAVSCUSTFaqsndwork WHERE CUSID='" + sdata[0] + "' and FAQNO='" + sdata[1] + "' and prtno = '" + sdata[2] + "'";
-            string ss2 = "";
-            string ss1 = "";
+            selectSql = "select * FROM RTLessorAvsCUST WHERE CUSID='" + sdata[0] + "' ";
             cmd.CommandText = selectSql;
             DataSet ds = cmd.ExecuteDataSet();
+            selectSql = "select * FROM RTLessorAvsCustFaqH WHERE CUSID='" + sdata[0] + "' and Faqno='" + sdata[1] + "' ";
+            cmd.CommandText = selectSql;
+            DataSet ds1 = cmd.ExecuteDataSet();
             if (ds.Tables[0].Rows.Count > 0)
             {
-                ss1 = ds.Tables[0].Rows[0]["CLOSEDAT"].ToString();
-                ss2 = ds.Tables[0].Rows[0]["UNCLOSEDAT"].ToString();
-                if (ss1 == "" && ss2 == "")
+                if (ds.Tables[0].Rows[0]["CANCELDAT"].ToString() != "")
                 {
-                    return new object[] { 0, "此拆機派工單尚未結案，不可執行結案返轉作業。" };
-                }
-                ss1 = ds.Tables[0].Rows[0]["DROPDAT"].ToString();
-                if (ss1 != "")
-                {
-                    return new object[] { 0, "此拆機派工單已作廢，不可返轉。" };
+                    return new object[] { 0, "客戶資料已作廢，無法返轉。" };
                 }
             }
+            else
+            {
+                return new object[] { 0, "找不到客戶基本檔，無法返轉。" };
+            }
+
+            if (ds1.Tables[0].Rows.Count > 0)
+            {
+                if (ds.Tables[0].Rows[0]["CALLBACKDAT"].ToString() != "")
+                {
+                    return new object[] { 0, "客服單已押回覆日，不可執行派工單結案返轉。" };
+                }
+                if (ds.Tables[0].Rows[0]["FINISHDAT"].ToString() != "")
+                {
+                    return new object[] { 0, "客服單已結案，不可執行派工單結案返轉。" };
+                }
+                if (ds.Tables[0].Rows[0]["CANCELDAT"].ToString() != "")
+                {
+                    return new object[] { 0, "客戶客服單資料已作廢，不可返轉。" };
+                }
+                XXSNDWORK = ds.Tables[0].Rows[0]["SNDWORK"].ToString();  
+                XXSNDUSR = ds.Tables[0].Rows[0]["SNDUSR"].ToString(); 
+                XXSNDPRTNO = ds.Tables[0].Rows[0]["SNDPRTNO"].ToString(); 
+            }
+            else
+            {
+                return new object[] { 0, "找不到客戶客服單資料檔，無法返轉。" };
+            }
+
+            selectSql = "select * FROM RTLessorAvsCustfaqsndwork WHERE CUSID='" + sdata[0] + "' and FAQNO='" + sdata[1] + "' and prtno = '" + sdata[2] + "'";
+            cmd.CommandText = selectSql;
+            ds = cmd.ExecuteDataSet();
+            selectSql = "select * FROM RTLessorAvsCUSTAR WHERE CUSID='" + sdata[0] + "' AND BATCHNO='" + ds.Tables[0].Rows[0]["BATCHNO"].ToString() + "'";
+            cmd.CommandText = selectSql;
+            ds1 = cmd.ExecuteDataSet();
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                if (ds1.Tables[0].Rows.Count > 0)
+                {
+                    if (ds1.Tables[0].Rows[0]["MDAT"].ToString() != "" && Convert.ToInt32(ds1.Tables[0].Rows[0]["REALAMT"].ToString()) > 1)
+                    {
+                        return new object[] { 0, "應收帳款已沖帳，不可執行結案返轉作業(請與資訊部連繫)。" };
+                    }
+                }
+
+                if (ds.Tables[0].Rows[0]["CLOSEDAT"].ToString() == "" && ds.Tables[0].Rows[0]["UNCLOSEDAT"].ToString() == "")
+                {
+                    return new object[] { 0, "此派工單尚未結案，不可執行結案返轉作業。" };
+                }
+                if (ds.Tables[0].Rows[0]["DROPDAT"].ToString() != "")
+                {
+                    return new object[] { 0, "此維修派工單已作廢，不可返轉。" };
+                }
+                if ((XXSNDPRTNO != "" || XXSNDWORK != "") && ds.Tables[0].Rows[0]["UNCLOSEDAT"].ToString() != "") 
+                {
+                    return new object[] { 0, "此維修派工單所屬客服單已產生其它派工單，因此不能執行此派工單返轉作業。" };
+                }
+            }
+
             //設定輸入參數的值
             try
             {
@@ -159,11 +279,11 @@ namespace sRT1047
                 cmdRT10473.InfoParameters[3].Value = sdata[3];
                 /*取得統計的結果，並將結果返回*/
                 double ii = cmdRT10473.ExecuteNonQuery();
-                return new object[] { 0, "用戶拆機派工單結案返轉成功" };
+                return new object[] { 0, "用戶維修派工單結案返轉成功" };
             }
             catch (Exception ex)
             {
-                return new object[] { 0, "無法執行拆機派工單完工結案作業,錯誤訊息" + ex };
+                return new object[] { 0, "無法執行維修派工單完工結案返轉作業,錯誤訊息" + ex };
             }
         }
 
@@ -175,35 +295,41 @@ namespace sRT1047
             //開啟資料連接
             IDbConnection conn = cmdRT10474.Connection;
             conn.Open();
-            string ss2 = "";
-            string ss1 = "";
-            string selectSql = "select * FROM RTLessorAVSCUSTFaqsndwork WHERE CUSID='" + sdata[0] + "' and FAQNO='" + sdata[1] + "' and prtno = '" + sdata[2] + "'";
-            cmd.CommandText = selectSql;
-            DataSet ds = cmd.ExecuteDataSet();
-            selectSql = "select * FROM RTLessorAVSCUSTFaqH WHERE CUSID='" + sdata[0] + "' and FAQNO='" + sdata[1] + "'";
-            cmd.CommandText = selectSql;
-            DataSet ds1 = cmd.ExecuteDataSet();
-            if (ds.Tables[0].Rows.Count > 0)
-            {
-                ss1 = ds.Tables[0].Rows[0]["CLOSEDAT"].ToString();
-                ss2 = ds.Tables[0].Rows[0]["UNCLOSEDAT"].ToString();
-                if (ss1 != "" || ss2 != "")
+            string sqlxx = "select * FROM RTLessorAVSCUSTFAQsndwork WHERE CUSID='" + sdata[0] + "' and faqno='" + sdata[1] + "' and prtno='" + sdata[2] + "' ";
+            string sqlYY = "select * FROM RTLessorAVSCUSTFAQH WHERE CUSID='" + sdata[0] + "' and faqno='" + sdata[1] + "' ";
+            string sqlzz = "select * FROM RTLessorAVSCustRCVHardware WHERE prtno='" + sdata[2] + "' and canceldat is null ";
+            cmd.CommandText = sqlxx;
+            DataSet RSXX = cmd.ExecuteDataSet();
+            cmd.CommandText = sqlYY;
+            DataSet RSYY = cmd.ExecuteDataSet();
+            cmd.CommandText = sqlzz;
+            DataSet RSzz = cmd.ExecuteDataSet();
+            if (RSXX.Tables[0].Rows.Count > 0)
+            {                
+                if (RSXX.Tables[0].Rows[0]["CLOSEDAT"].ToString() != "" || RSXX.Tables[0].Rows[0]["UNCLOSEDAT"].ToString() != "")
                 {
-                    return new object[] { 0, "此拆機派工單已完工結案，不可作廢(欲作廢請先執行結案返轉)" };
+                    return new object[] { 0, "此派工單已完工結案，不可作廢(欲作廢請先執行結案返轉)" };
                 }
-                ss1 = ds.Tables[0].Rows[0]["DROPDAT"].ToString();
-                if (ss1 != "")
+                
+                if (RSXX.Tables[0].Rows[0]["DROPDAT"].ToString() != "")
                 {
-                    return new object[] { 0, "此拆機派工單已作廢，不可重覆執行作廢作業。" };
+                    return new object[] { 0, "此派工單已作廢，不可重覆執行作廢作業。" };
                 }
             }
-            if (ds1.Tables[0].Rows.Count > 0)
-            {
-                ss1 = ds1.Tables[0].Rows[0]["FINISHDAT"].ToString();
-                if (ss1 != "")
+            if (RSYY.Tables[0].Rows.Count > 0)
+            {                
+                if (RSYY.Tables[0].Rows[0]["CALLBACKDAT"].ToString() != "")
                 {
-                    return new object[] { 0, "此拆機派工單所屬退租資料已結案，不可作廢派工單。" };
+                    return new object[] { 0, "此派工單所屬客服單已執行CALLBACK(押回覆日)，不可作廢派工單(請先取消回覆)。" };
                 }
+                if (RSYY.Tables[0].Rows[0]["FINISHDAT"].ToString() != "")
+                {
+                    return new object[] { 0, "此派工單所屬客服單已結案，不可作廢派工單。" };
+                }
+            }
+            if (RSYY.Tables[0].Rows.Count > 0)
+            {
+                return new object[] { 0, "此派工單已產生物品領用單，不可直接作廢(請先返轉物品領用單)。" };
             }
             //設定輸入參數的值
             try
@@ -214,11 +340,11 @@ namespace sRT1047
                 cmdRT10474.InfoParameters[3].Value = sdata[3];
                 /*取得統計的結果，並將結果返回*/
                 double ii = cmdRT10474.ExecuteNonQuery();
-                return new object[] { 0, "用戶拆機派工單作廢成功" };
+                return new object[] { 0, "用戶維修派工單作廢成功" };
             }
             catch (Exception ex)
             {
-                return new object[] { 0, "無法執行拆機派工單作廢作業,錯誤訊息：" + ex };
+                return new object[] { 0, "無法執行派工單作廢作業,錯誤訊息：" + ex };
             }
         }
 
@@ -230,49 +356,32 @@ namespace sRT1047
             //開啟資料連接
             IDbConnection conn = cmdRT10475.Connection;
             conn.Open();
-            string ss2 = "";
-            string ss1 = "";
-            string selectSql = "select * FROM RTLessorAVSCUSTFaqsndwork WHERE CUSID='" + sdata[0] + "' and FAQNO='" + sdata[1] + "' and prtno = '" + sdata[2] + "'";
-            cmd.CommandText = selectSql;
-            DataSet ds = cmd.ExecuteDataSet();
-            selectSql = "select * FROM RTLessorAVSCUSTFaqH WHERE CUSID='" + sdata[0] + "' and FAQNO='" + sdata[1] + "'";
-            cmd.CommandText = selectSql;
-            DataSet ds1 = cmd.ExecuteDataSet();
-            selectSql = "select MAX(prtno) AS XXPRTNO FROM RTLessorAVSCUSTFaqsndwork WHERE CUSID='" + sdata[0] + "' and FAQNO='" + sdata[1] +"'";
-            cmd.CommandText = selectSql;
-            DataSet ds2 = cmd.ExecuteDataSet();
-            if (ds.Tables[0].Rows.Count > 0)
+            string sqlxx = "select * FROM RTLessorAVSCUSTFAQsndwork WHERE CUSID='" + sdata[0] + "' and faqno='" + sdata[1] + "' and prtno='" + sdata[2] + "' ";
+            string sqlYY = "select * FROM RTLessorAVSCUSTFAQH WHERE CUSID='" + sdata[0] + "' and faqno='" + sdata[1] + "' ";
+            cmd.CommandText = sqlxx;
+            DataSet RSXX = cmd.ExecuteDataSet();
+            cmd.CommandText = sqlYY;
+            DataSet RSYY = cmd.ExecuteDataSet();
+
+            if (RSXX.Tables[0].Rows.Count > 0)
             {
-                ss1 = ds.Tables[0].Rows[0]["BONUSCLOSEYM"].ToString();
-                if (ss1 != "")
+                if (RSXX.Tables[0].Rows[0]["BONUSCLOSEYM"].ToString() != "")
                 {
                     return new object[] { 0, "當獎金計算年月已存在資料時表示該筆資料完工日期當月之獎金已結算,不可再作廢返轉。" };
                 }
-                ss1 = ds.Tables[0].Rows[0]["DROPDAT"].ToString();
-                if (ss1 == "")
-                {
-                    return new object[] { 0, "此用戶拆機派工單尚未作廢，不可執行作廢返轉作業" };
-                }
-            }
-            if (ds1.Tables[0].Rows.Count > 0)
-            {
-                ss1 = ds1.Tables[0].Rows[0]["SNDPRTNO"].ToString();
-                ss2 = ds1.Tables[0].Rows[0]["SNDWORK"].ToString();
-                if (ss1 != "" || ss2 != "")
-                {
-                    return new object[] { 0, "此拆機派工單所屬退租資料已另外產生拆機派工單，因此不能執行派工單作廢返轉。" };
-                }
-            }
 
-            if (ds2.Tables[0].Rows.Count > 0)
-            {
-                ss1 = ds2.Tables[0].Rows[0]["XXPRTNO"].ToString();
-                if (ss1.CompareTo(sdata[2]) > 0)
+                if (RSXX.Tables[0].Rows[0]["DROPDAT"].ToString() == "")
                 {
-                    return new object[] { 0, "當有其它拆機派工單存在時(且拆機單號大於本單單號，則不允許作廢返轉) 。" };
+                    return new object[] { 0, "此用戶派工單尚未作廢，不可執行作廢返轉作業。" };
                 }
             }
-
+            if (RSYY.Tables[0].Rows.Count > 0)
+            {
+                if (RSXX.Tables[0].Rows[0]["SNDPRTNO"].ToString() != "" || RSXX.Tables[0].Rows[0]["SNDWORK"].ToString() != "")
+                {
+                    return new object[] { 0, "此派工單所屬客服單已另外產生派工單，因此不能執行派工單作廢返轉" };
+                }
+            }
             //設定輸入參數的值
             try
             {
@@ -282,11 +391,11 @@ namespace sRT1047
                 cmdRT10475.InfoParameters[3].Value = sdata[3];
                 /*取得統計的結果，並將結果返回*/
                 double ii = cmdRT10475.ExecuteNonQuery();
-                return new object[] { 0, "用戶拆機派工單作廢返轉成功" };
+                return new object[] { 0, "用戶維修派工單作廢返轉成功" };
             }
             catch (Exception ex)
             {
-                return new object[] { 0, "無法執行用戶拆機派工單作廢返轉作業, 錯誤訊息：" + ex };
+                return new object[] { 0, "無法執行用戶派工單作廢返轉作業,錯誤訊息：" + ex };
             }
         }
 
@@ -526,7 +635,7 @@ namespace sRT1047
                 return new object[] { 0, "無法執行客服單轉派工單作業,錯誤訊息：" + ex };
             }
         }
-        //退租作廢
+        //客服作廢
         public object[] smRT1047B(object[] objParam)
         {
             var ss = (string)objParam[0];

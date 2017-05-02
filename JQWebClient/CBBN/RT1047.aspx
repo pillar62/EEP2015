@@ -133,10 +133,9 @@
         }
 
         //作廢
-        function btn5Click() {
+        function btn7Click() {
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            var FAQNO = row.FAQNO;            
-
+            var FAQNO = row.FAQNO;
             $.ajax({
                 type: "POST",
                 url: '../handler/jqDataHandle.ashx?RemoteName=sRT1047.cmdRT1047B', //連接的Server端，command
@@ -152,7 +151,7 @@
         }
 
         //作廢返轉
-        function btn6Click() {
+        function btn8Click() {
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var FAQNO = row.FAQNO;
 
@@ -191,7 +190,7 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="派工人員" Editor="infocombobox" FieldName="SNDUSR" Format="" MaxLength="6" Visible="False" Width="90" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
                     <JQTools:JQGridColumn Alignment="left" Caption="派工單號" Editor="text" FieldName="SNDPRTNO" Format="" Visible="true" Width="90" MaxLength="13" />
                     <JQTools:JQGridColumn Alignment="left" Caption="列印日" Editor="datebox" FieldName="PRTDAT" Format="yyyy/mm/dd" MaxLength="0" Visible="true" Width="90" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="派工結案日" Editor="datebox" FieldName="SNDCLOSEDAT" Format="yyyy/mm/dd" MaxLength="0" Visible="true" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="派工結案日" Editor="datebox" FieldName="SNDCLOSEDAT" Format="yyyy/mm/dd" MaxLength="0" Visible="true" Width="90" />
                     <JQTools:JQGridColumn Alignment="left" Caption="客服回覆" Editor="datebox" FieldName="CALLBACKDAT" Format="yyyy/mm/dd" Visible="true" Width="90" />
                     <JQTools:JQGridColumn Alignment="left" Caption="回覆人員" Editor="infocombobox" FieldName="CALLBACKUSR" Format="" MaxLength="6" Visible="true" Width="90" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
                     <JQTools:JQGridColumn Alignment="left" Caption="結案日期" Editor="datebox" FieldName="FINISHDAT" Format="yyyy/mm/dd" Visible="true" Width="90" />

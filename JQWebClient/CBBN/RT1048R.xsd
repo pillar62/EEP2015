@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="RT1048R" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="RT1048R" msdata:IsDataSet="true" msdata:CaseSensitive="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="RTLessorAVSCustHardware">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CUSID" type="xs:string" />
+              <xs:element name="PRTNO" type="xs:string" />
+              <xs:element name="ENTRYNO" type="xs:int" />
+              <xs:element name="PRODNO" type="xs:string" minOccurs="0" />
+              <xs:element name="ITEMNO" type="xs:string" minOccurs="0" />
+              <xs:element name="QTY" type="xs:int" minOccurs="0" />
+              <xs:element name="DROPDAT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DROPREASON" type="xs:string" minOccurs="0" />
+              <xs:element name="WAREHOUSE" type="xs:string" minOccurs="0" />
+              <xs:element name="ASSETNO" type="xs:string" minOccurs="0" />
+              <xs:element name="DROPUSR" type="xs:string" minOccurs="0" />
+              <xs:element name="UNIT" type="xs:string" minOccurs="0" />
+              <xs:element name="AMT" type="xs:int" minOccurs="0" />
+              <xs:element name="EUSR" type="xs:string" minOccurs="0" />
+              <xs:element name="EDAT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="UUSR" type="xs:string" minOccurs="0" />
+              <xs:element name="UDAT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MEMO" type="xs:string" minOccurs="0" />
+              <xs:element name="BATCHNO" type="xs:string" minOccurs="0" />
+              <xs:element name="TARDAT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TUSR" type="xs:string" minOccurs="0" />
+              <xs:element name="RCVPRTNO" type="xs:string" minOccurs="0" />
+              <xs:element name="RCVDAT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RCVFINISHDAT" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//RTLessorAVSCustHardware" />
+      <xs:field xpath="CUSID" />
+      <xs:field xpath="PRTNO" />
+      <xs:field xpath="ENTRYNO" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

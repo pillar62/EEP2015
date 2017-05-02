@@ -118,20 +118,17 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="V_RTLessorAVSCustAR" type="System.Drawing.Point, System.Drawing">
-    <value>828, 461</value>
+  <data name="RT104D" type="System.Drawing.Point, System.Drawing">
+    <value>465, 496</value>
   </data>
-  <data name="V_RTLessorAVSCustReturn" type="System.Drawing.Point, System.Drawing">
-    <value>622, 461</value>
+  <data name="cmdRT104C" type="System.Drawing.Point, System.Drawing">
+    <value>343, 496</value>
   </data>
-  <data name="V_RTLessorAVSCustDrop" type="System.Drawing.Point, System.Drawing">
-    <value>426, 461</value>
+  <data name="cmdRT104B" type="System.Drawing.Point, System.Drawing">
+    <value>215, 496</value>
   </data>
-  <data name="V_RTLessorAVSCustCont" type="System.Drawing.Point, System.Drawing">
-    <value>231, 461</value>
-  </data>
-  <data name="V_RTLessorAVSCustFaqH" type="System.Drawing.Point, System.Drawing">
-    <value>34, 461</value>
+  <data name="cmd" type="System.Drawing.Point, System.Drawing">
+    <value>134, 498</value>
   </data>
   <data name="若要在類別中加入元件，請從工具箱拖所需元件，並利用 [屬性] 視窗設定它們的屬性。若要建立類別的方法與事件，請按這裡切換到程式碼檢視。" type="System.Drawing.Point, System.Drawing">
     <value>0, 362</value>
@@ -177,5 +174,26 @@
   </data>
   <data name="View_RTLessorAVSCust" type="System.Drawing.Point, System.Drawing">
     <value>152, 68</value>
+  </data>
+  <data name="V_RTLessorAVSCustFaqH" type="System.Drawing.Point, System.Drawing">
+    <value>34, 461</value>
+  </data>
+  <data name="V_RTLessorAVSCustCont" type="System.Drawing.Point, System.Drawing">
+    <value>231, 461</value>
+  </data>
+  <data name="V_RTLessorAVSCustDrop" type="System.Drawing.Point, System.Drawing">
+    <value>426, 461</value>
+  </data>
+  <data name="V_RTLessorAVSCustReturn" type="System.Drawing.Point, System.Drawing">
+    <value>622, 461</value>
+  </data>
+  <data name="V_RTLessorAVSCustAR" type="System.Drawing.Point, System.Drawing">
+    <value>828, 461</value>
+  </data>
+  <data name="autoNumber1" type="System.Drawing.Point, System.Drawing">
+    <value>659, 74</value>
+  </data>
+  <data name="RT104A" type="System.Drawing.Point, System.Drawing">
+    <value>38, 498</value>
   </data>
 </root>

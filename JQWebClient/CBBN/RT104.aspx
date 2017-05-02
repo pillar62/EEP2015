@@ -9,6 +9,7 @@
     <script>
         var COMQ1 = Request.getQueryStringByName2("COMQ1");
         var LINEQ1 = Request.getQueryStringByName2("LINEQ1");
+        var usr = getClientInfo('_usercode');
         
         var flag = true;
         if (COMQ1 == "") {
@@ -61,6 +62,81 @@
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var ss = row.CUSID;
             parent.addTab("用戶客服單資料維護", "CBBN/RT1047.aspx?CUSID=" + ss);
+        }
+
+        function btn7Click(val) {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.CUSID;
+            parent.addTab("設備保管收據列印", "CBBN/RT1048.aspx?CUSID=" + ss);
+        }
+
+        function btn9Click(val) {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.CUSID;
+            parent.addTab("用戶調整到期日資料維護", "CBBN/RT1049.aspx?CUSID=" + ss);
+        }
+
+        function btn10Click(val) {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.CUSID;
+            parent.addTab("用戶設備資料查詢", "CBBN/RT104A.aspx?CUSID=" + ss);
+        }
+
+        //作廢
+        function btn11Click() {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var COMQ1 = row.COMQ1;
+            var LINEQ1 = row.LINEQ1;
+            var CUSID = row.CUSID;
+            alert(COMQ1);
+            
+            $.ajax({
+                type: "POST",
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT104.cmdRT104B', //連接的Server端，command
+                //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                data: "mode=method&method=" + "smRT104B" + "&parameters=" + COMQ1 + "," + LINEQ1 + "," + CUSID + "," + usr,
+                cache: false,
+                async: false,
+                success: function (data) {
+                    alert(data);
+                    $('#dataGridView').datagrid('reload');
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status);
+                    alert(thrownError);
+                }
+            });
+        }
+
+        //作廢返轉
+        function btn12Click() {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var COMQ1 = row.COMQ1;
+            var LINEQ1 = row.LINEQ1;
+            var CUSID = row.CUSID;
+
+            $.ajax({
+                type: "POST",
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT104.cmdRT104C', //連接的Server端，command
+                //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                data: "mode=method&method=" + "smRT104C" + "&parameters=" + COMQ1 + "," + LINEQ1 + "," + CUSID + "," + usr,
+                cache: false,
+                async: false,
+                success: function (data) {
+                    alert(data);
+                    $('#dataGridView').datagrid('reload');
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status);
+                    alert(thrownError);
+                }
+            });
+        }
+
+        function btn13Click(val) {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.CUSID;
+            parent.addTab("用戶異動資料查詢", "CBBN/RT104D.aspx?CUSID=" + ss);
         }
 
         function InsDefaultLINEQ1() {
@@ -203,13 +279,13 @@
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="退租作業" Visible="True" OnClick="btn4Click" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="應收應付" Visible="True" OnClick="btn5Click" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="客服案件" Visible="True" OnClick="btn6Click" Icon="icon-edit" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="設備保管收據列印" Visible="True" OnClick="btn7Click" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="設備保管收據列印" Visible="True" OnClick="btn7Click" Icon="icon-print" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="用戶移動" Visible="True" OnClick="btn8Click" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="調整到期" Visible="True" OnClick="btn9Click" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="設備查詢" Visible="True" OnClick="btn10Click" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="作廢" Visible="True" OnClick="btn11Click" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="作廢反轉" Visible="True" OnClick="btn12Click" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="歷史異動" Visible="True" OnClick="btn13Click" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="調整到期" Visible="True" OnClick="btn9Click" Icon="icon-edit "/>
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="設備查詢" Visible="True" OnClick="btn10Click" Icon="icon-view" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="作廢" Visible="True" OnClick="btn11Click" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="作廢反轉" Visible="True" OnClick="btn12Click" Icon="icon-undo" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="歷史異動" Visible="True" OnClick="btn13Click" Icon="icon-view" />
                 </TooItems>
                 <QueryColumns>
                     <JQTools:JQQueryColumn AndOr="and" Caption="客戶代號" Condition="%" DataType="string" Editor="text" FieldName="CUSID" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
