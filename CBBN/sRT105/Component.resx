@@ -118,22 +118,22 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="serviceManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 173</value>
+    <value>248, 64</value>
   </metadata>
   <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 134</value>
+    <value>244, 29</value>
   </metadata>
   <metadata name="RTLessorAVSCase.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
+    <value>242, 160</value>
   </metadata>
   <metadata name="ucRTLessorAVSCase.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>249, 110</value>
   </metadata>
   <metadata name="View_RTLessorAVSCase.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>640, 17</value>
+    <value>748, 234</value>
   </metadata>
   <metadata name="V_RTLessorAVSCustFaqH.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>328, 95</value>
+    <value>740, 36</value>
   </metadata>
   <data name="V_RTLessorAVSCustFaqH.CommandText" xml:space="preserve">
     <value>SELECT RTLessorAVSCustFaqH.CUSID,RTLessorAVSCustFaqH.FAQNO,RTLessorAVSCustFaqH.RCVDAT, RTCode.CODENC,
@@ -160,7 +160,7 @@ RTLessorAVSCustFaqH.SERVICETYPE = RTCode.CODE AND RTCode.KIND = 'N4'
 WHERE    RTLessorAVSCustFaqH.canceldat IS NULL </value>
   </data>
   <metadata name="V_RTLessorAVSCustCont.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>329, 138</value>
+    <value>740, 75</value>
   </metadata>
   <data name="V_RTLessorAVSCustCont.CommandText" xml:space="preserve">
     <value>SELECT RTLessorAVSCustCont.CUSID, RTLessorAVSCustCont.ENTRYNO,RTLessorAVSCust.CUSNC,
@@ -176,7 +176,7 @@ AND RTCode_2.KIND = 'M8'
 WHERE   RTLessorAVSCustCont.canceldat IS NULL </value>
   </data>
   <metadata name="V_RTLessorAVSCustDrop.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>327, 179</value>
+    <value>740, 114</value>
   </metadata>
   <data name="V_RTLessorAVSCustDrop.CommandText" xml:space="preserve">
     <value>SELECT  RTLessorAVSCustDrop.CUSID,RTLessorAVSCustDrop.ENTRYNO,RTCODE.CODENC,RTLessorAVSCustDrop.APPLYDAT,
@@ -195,7 +195,7 @@ RTLessorAVSCustDrop.FUSR = RTEmployee.EMPLY  LEFT OUTER JOIN RTCODE ON RTLessorA
 where RTLessorAVSCustDrop.canceldat is null</value>
   </data>
   <metadata name="V_RTLessorAVSCustReturn.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>329, 221</value>
+    <value>740, 153</value>
   </metadata>
   <data name="V_RTLessorAVSCustReturn.CommandText" xml:space="preserve">
     <value>SELECT RTLessorAVSCustReturn.CUSID, RTLessorAVSCustReturn.ENTRYNO,RTLessorAVSCust.CUSNC,
@@ -211,7 +211,7 @@ AND RTCode_2.KIND = 'M8'
 WHERE   RTLessorAVSCustReturn.canceldat IS NULL </value>
   </data>
   <metadata name="V_RTLessorAVSCustAR.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>330, 268</value>
+    <value>739, 189</value>
   </metadata>
   <data name="V_RTLessorAVSCustAR.CommandText" xml:space="preserve">
     <value>SELECT RTLessorAVSCustAR.CUSID, RTLessorAVSCustAR.BATCHNO, RTCode.CODENC, RTLessorAVSCustAR.PERIOD,
