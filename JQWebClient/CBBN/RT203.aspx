@@ -183,6 +183,7 @@
             });
         }
 
+        //設備查詢
         function btn8Click(val) {
             var sMODE = "E";
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data

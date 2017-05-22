@@ -169,7 +169,7 @@ RTLessorAVSCustSNDWORK.DROPDAT </value>
     <value>56, 369</value>
   </metadata>
   <metadata name="RT10421.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>377, 215</value>
+    <value>371, 202</value>
   </metadata>
   <metadata name="RT10422.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>374, 167</value>
@@ -281,6 +281,21 @@ RTLessorAVSCustRCVHardware.CANCELDAT, RTObj_6.CUSNC </value>
   <metadata name="infoParameter20.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="RT104221.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>481, 169</value>
+  </metadata>
+  <data name="RT104221.CommandText" xml:space="preserve">
+    <value>SELECT A.RCVPRTNO, A.ENTRYNO, A.PRODNO + '-' + A.ITEMNO 
+ AS Expr1, RTProdH.PRODNC, RTProdD1.SPEC, A.QTY, RTCode.CODENC, 
+A.MEMO FROM RTLessorAVSCustRCVHardwareDTL A 
+LEFT OUTER JOIN RTCode ON A.UNIT = RTCode.CODE AND 
+RTCode.KIND = 'B5' 
+LEFT OUTER JOIN RTProdD1 ON A.PRODNO = RTProdD1.PRODNO AND 
+          A.ITEMNO = RTProdD1.ITEMNO LEFT OUTER JOIN 
+          RTProdH ON A.PRODNO = RTProdH.PRODNO 
+where 1=1
+order by A.entryno </value>
+  </data>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>

@@ -141,6 +141,52 @@
   <metadata name="ucRTLessorAVSCmtyLineHARDWARE.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>553, 187</value>
   </metadata>
+  <metadata name="RT1012.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>404, 299</value>
+  </metadata>
+  <data name="RT1012.CommandText" xml:space="preserve">
+    <value>SELECT A.* FROM (
+SELECT A.comq1,A.lineq1, 
+'' AS FAQNO,A.PRTNO, A.seq,'裝機' AS KD,B.SENDWORKDAT, 
+RTProdH.PRODNC + '--' + RTProdD1.itemnc + '('+ RTProdD1.SPEC+')' AS PROD, A.QTY, A.amt, 
+HBwarehouse.WARENAME, A.DROPDAT, A.DROPREASON, RTObj.CUSNC,A.BATCHNO,A.TARDAT,A.rcvprtno,A.rcvfinishdat  
+FROM RTProdH RIGHT OUTER JOIN RTLessorAVSCmtyLineHARDWARE A LEFT OUTER JOIN 
+RTObj INNER JOIN RTEmployee ON RTObj.CUSID = RTEmployee.CUSID ON 
+A.DROPUSR = RTEmployee.EMPLY LEFT OUTER JOIN 
+HBwarehouse ON A.WAREHOUSE = HBwarehouse.WAREHOUSE LEFT OUTER 
+JOIN RTProdD1 ON A.PRODNO = RTProdD1.PRODNO AND 
+A.ITEMNO = RTProdD1.ITEMNO ON RTProdH.PRODNO = A.PRODNO 
+LEFT OUTER JOIN RTLessorAVSCmtyLinesndwork B on A.comq1=B.comq1 and A.lineq1=B.lineq1 and A.prtno=B.prtno 
+WHERE 1=1
+ union ALL
+SELECT A.comq1,A.lineq1, 
+A.FAQNO,A.PRTNO, A.seq,'維修' AS KD,B.SENDWORKDAT, 
+RTProdH.PRODNC + '--' + RTProdD1.itemnc + '('+ RTProdD1.SPEC+')'  AS PROD, A.QTY, A.amt, 
+HBwarehouse.WARENAME, A.DROPDAT, A.DROPREASON, RTObj.CUSNC,A.BATCHNO,A.TARDAT,A.rcvprtno,A.rcvfinishdat  
+FROM RTProdH RIGHT OUTER JOIN RTLessorAVSCmtyLinefaqHARDWARE A LEFT OUTER JOIN 
+RTObj INNER JOIN RTEmployee ON RTObj.CUSID = RTEmployee.CUSID ON 
+A.DROPUSR = RTEmployee.EMPLY LEFT OUTER JOIN 
+HBwarehouse ON A.WAREHOUSE = HBwarehouse.WAREHOUSE LEFT OUTER 
+JOIN RTProdD1 ON A.PRODNO = RTProdD1.PRODNO AND 
+A.ITEMNO = RTProdD1.ITEMNO ON RTProdH.PRODNO = A.PRODNO 
+LEFT OUTER JOIN RTLessorAVSCmtyLinefaqsndwork B on A.comq1=B.comq1 and A.lineq1=B.lineq1 and A.faqno=B.faqno and A.prtno=B.prtno 
+WHERE 1=1) A
+order by rcvfinishdat </value>
+  </data>
+  <metadata name="RT10121.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>520, 294</value>
+  </metadata>
+  <data name="RT10121.CommandText" xml:space="preserve">
+    <value>SELECT     A.comq1, 
+A.lineq1,A.PRTNO, A.seq, A.SEQ2, A.CHGDAT, 
+RTCode.CODENC, RTObj.CUSNC, RTProdH.PRODNC+'--'+ RTProdD1.SPEC, A.QTY, A.DROPDAT, 
+HBwarehouse.WARENAME, A.ASSETNO,A.BATCHNO,A.TARDAT 
+FROM RTProdD1 RIGHT OUTER JOIN RTLessorAVSCmtyLineHARDWARELOG A LEFT OUTER JOIN 
+HBwarehouse ON A.WAREHOUSE = HBwarehouse.WAREHOUSE ON  RTProdD1.PRODNO = A.PRODNO AND 
+RTProdD1.ITEMNO = A.ITEMNO LEFT OUTER JOIN RTProdH ON A.PRODNO = RTProdH.PRODNO 
+LEFT OUTER JOIN RTCode ON A.CHGCODE = RTCode.CODE AND RTCode.KIND = 'G2' LEFT OUTER JOIN RTObj INNER JOIN 
+RTEmployee ON RTObj.CUSID = RTEmployee.CUSID ON A.CHGUsR = RTEmployee.EMPLY </value>
+  </data>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>

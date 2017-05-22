@@ -143,7 +143,7 @@
     <value>56, 369</value>
   </data>
   <data name="RT10421" type="System.Drawing.Point, System.Drawing">
-    <value>377, 215</value>
+    <value>371, 202</value>
   </data>
   <data name="RT10422" type="System.Drawing.Point, System.Drawing">
     <value>374, 167</value>
@@ -162,5 +162,8 @@
   </data>
   <data name="cmdRT10425" type="System.Drawing.Point, System.Drawing">
     <value>479, 384</value>
+  </data>
+  <data name="RT104221" type="System.Drawing.Point, System.Drawing">
+    <value>481, 169</value>
   </data>
 </root>

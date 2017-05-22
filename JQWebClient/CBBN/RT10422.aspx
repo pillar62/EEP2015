@@ -27,7 +27,17 @@
             flag = false;
         }
        
-        
+        //列印領用單
+        function btn1Click() {
+        }
+
+        //領用明細查詢
+        function btn2Click() {
+            var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var PRTNO = row.PRTNO;
+            parent.addTab("物品領用明細", "CBBN/RT104221.aspx?PRTNO=" + PRTNO);
+        }
+
         function CloseTab()
         {
             window.parent.closeCurrentTab();

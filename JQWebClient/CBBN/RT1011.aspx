@@ -23,6 +23,12 @@
             }            
         }
 
+        function InsDefaultLineq() {
+            if (LINEQ1 != "") {
+                return LINEQ1;
+            }
+        }
+
         function dgOnloadSuccess() {
             if (flag) {
                 var sWhere = "COMQ1='" + COMQ1 + "'";
@@ -35,6 +41,13 @@
             }
             flag = false;
         }
+
+        //異動查詢
+        function btn1Click() {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var PRTNO = row.PRTNO;
+            parent.addTab("物品領用單資料維護", "CBBN/RT10111.aspx?PRTNO=" + PRTNO);
+        }
     </script>
 </head>
 <body>
@@ -43,7 +56,7 @@
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
             <JQTools:JQDataGrid ID="dataGridView" data-options="pagination:true,view:commandview" RemoteName="sRT101.RTLessorAVSCmtyLineHARDWARE" runat="server" AutoApply="True"
                 DataMember="RTLessorAVSCmtyLineHARDWARE" Pagination="True" QueryTitle="Query" EditDialogID="JQDialog1"
-                Title="用戶派工單設備資料維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" OnLoadSuccess="dgOnloadSuccess" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
+                Title="用戶派工單設備資料維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" OnLoadSuccess="dgOnloadSuccess" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="社區序號" Editor="infocombobox" FieldName="COMQ1" Format="" Visible="true" Width="120" EditorOptions="valueField:'COMQ1',textField:'COMN',remoteName:'sRT101.RTLessorAVSCmtyH',tableName:'RTLessorAVSCmtyH',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
                     <JQTools:JQGridColumn Alignment="right" Caption="主線序號" Editor="numberbox" FieldName="LINEQ1" Format="" Visible="true" Width="120" />
@@ -64,13 +77,14 @@
                 </Columns>
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton"
-                        OnClick="insertItem" Text="新增" />
+                        OnClick="insertItem" Text="新增" Visible="False" />
                     <JQTools:JQToolItem Icon="icon-save" ItemType="easyui-linkbutton" OnClick="apply"
-                        Text="存檔" />
+                        Text="存檔" Visible="False" />
                     <JQTools:JQToolItem Icon="icon-undo" ItemType="easyui-linkbutton" OnClick="cancel"
-                        Text="取消"  />
+                        Text="取消" Visible="False"  />
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
                         OnClick="openQuery" Text="查詢" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn1Click" Text="異動查詢" Visible="True" />
                 </TooItems>
                 <QueryColumns>
                 </QueryColumns>
@@ -79,8 +93,8 @@
             <JQTools:JQDialog ID="JQDialog1" runat="server" BindingObjectID="dataFormMaster" Title="用戶派工單設備資料維護">
                 <JQTools:JQDataForm ID="dataFormMaster" runat="server" DataMember="RTLessorAVSCmtyLineHARDWARE" HorizontalColumnsCount="2" RemoteName="sRT101.RTLessorAVSCmtyLineHARDWARE" AlwaysReadOnly="False" Closed="False" ContinueAdd="False" disapply="False" DivFramed="False" DuplicateCheck="False" HorizontalGap="0" IsAutoPageClose="False" IsAutoPause="False" IsAutoSubmit="False" IsNotifyOFF="False" IsRejectNotify="False" IsRejectON="False" IsShowFlowIcon="False" ShowApplyButton="False" ValidateStyle="Hint" VerticalGap="0" >
                     <Columns>
-                        <JQTools:JQFormColumn Alignment="left" Caption="社區序號" Editor="infocombobox" FieldName="COMQ1" Format="" Width="180" EditorOptions="valueField:'COMQ1',textField:'COMN',remoteName:'sRT101.RTLessorAVSCmtyH',tableName:'RTLessorAVSCmtyH',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="主線序號" Editor="numberbox" FieldName="LINEQ1" Format="" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="社區序號" Editor="infocombobox" FieldName="COMQ1" Format="" Width="180" EditorOptions="valueField:'COMQ1',textField:'COMN',remoteName:'sRT101.RTLessorAVSCmtyH',tableName:'RTLessorAVSCmtyH',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="主線序號" Editor="numberbox" FieldName="LINEQ1" Format="" Width="180" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="派工單號" Editor="text" FieldName="PRTNO" Format="" maxlength="12" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="項次" Editor="numberbox" FieldName="SEQ" Format="" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="設備名稱" Editor="infocombobox" FieldName="PRODNO" Format="" maxlength="6" Width="180" EditorOptions="valueField:'PRODNO',textField:'PRODNC',remoteName:'sRT100.RTprodh',tableName:'RTprodh',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
@@ -105,7 +119,11 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="備註" Editor="textarea" FieldName="MEMO" Format="" maxlength="50" Width="300" Span="2" />
                     </Columns>
                 </JQTools:JQDataForm>
-                <JQTools:JQDefault ID="defaultMaster" runat="server" BindingObjectID="dataFormMaster" BorderStyle="NotSet" ClientIDMode="Inherit" Enabled="True" EnableTheming="True" EnableViewState="True" ViewStateMode="Inherit">
+                <JQTools:JQDefault ID="defaultMaster" runat="server" BindingObjectID="dataFormMaster" EnableTheming="True">
+                    <Columns>
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="" FieldName="COMQ1" RemoteMethod="False" DefaultMethod="InsDefault" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="" FieldName="LINEQ1" RemoteMethod="False" DefaultMethod="InsDefaultLineq" />
+                    </Columns>
                 </JQTools:JQDefault>
                 <JQTools:JQValidate ID="validateMaster" runat="server" BindingObjectID="dataFormMaster" BorderStyle="NotSet" ClientIDMode="Inherit" Enabled="True" EnableTheming="True" EnableViewState="True" ViewStateMode="Inherit">
                 </JQTools:JQValidate>

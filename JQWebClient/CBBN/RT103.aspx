@@ -37,7 +37,7 @@
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var ss = row.COMQ1;
             var s1 = row.LINEQ1;
-            parent.addTab("設備查詢", "CBBN/RT1011.aspx?COMQ1=" + ss + "&LINEQ1=" + s1);
+            parent.addTab("設備查詢", "CBBN/RT1012.aspx?COMQ1=" + ss + "&LINEQ1=" + s1);
         }
 
         function LinkRT202(val) {
