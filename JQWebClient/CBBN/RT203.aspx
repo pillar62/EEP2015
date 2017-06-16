@@ -188,7 +188,9 @@
             var sMODE = "E";
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var PRTNO = row.PRTNO;
-            parent.addTab("用戶裝機派工設備資料維護", "CBBN/RT2033.aspx?CUSID=" + CUSID + "&PRTNO=" + PRTNO + "&sMODE=" + sMODE);
+            alert(PRTNO);
+            parent.addTab("用戶裝機派工設備資料維護", "CBBN/RT1011.aspx");
+            //parent.addTab("用戶裝機派工設備資料維護", "CBBN/RT1011.aspx?CUSID=" + CUSID + "&PRTNO=" + PRTNO + "&sMODE=" + sMODE);
         }
 
         function btn9Click(val) {

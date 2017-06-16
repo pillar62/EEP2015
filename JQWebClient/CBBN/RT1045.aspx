@@ -198,6 +198,14 @@
                 }
             });
         }
+
+        //派工單查詢
+        function btn7Click() {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.CUSID;
+            var s2 = row.ENTRYNO;
+            parent.addTab("用戶退租拆機派工單異動資料查詢", "CBBN/RT10459.aspx?CUSID=" + ss + "&ENTRYNO=" + s2);
+        }
     </script>
 </head>
 <body>

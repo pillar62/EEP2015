@@ -156,6 +156,13 @@
             parent.addTab("用戶裝機派工設備資料維護", "CBBN/RT10453.aspx?CUSID=" + CUSID + "&PRTNO=" + PRTNO + "&sMODE=" + sMODE);
         }
 
+        function btn9Click(val) {
+            var sMODE = "E";
+            var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var PRTNO = row.PRTNO;
+            parent.addTab("用戶退租拆機派工單異動資料查詢", "CBBN/RT10459.aspx?CUSID=" + CUSID + "&PRTNO=" + PRTNO + "&sMODE=" + sMODE);
+        }
+
         function mySelect()
         {
         }

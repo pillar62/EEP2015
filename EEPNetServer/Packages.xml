@@ -18,9 +18,11 @@
     <PackageFile Name="sRT1048.dll" Active="1" />
     <PackageFile Name="sRT1049.dll" Active="1" />
     <PackageFile Name="sRT105.dll" Active="1" />
+    <PackageFile Name="sRT106.dll" Active="1" />
     <PackageFile Name="sRT201.dll" Active="1" />
     <PackageFile Name="sRT202.dll" Active="1" />
     <PackageFile Name="sRT203.dll" Active="1" />
+    <PackageFile Name="sRT2033.dll" Active="1" />
     <PackageFile Name="sRT204.dll" Active="1" />
     <PackageFile Name="sRT205.dll" Active="1" />
     <PackageFile Name="sRT206.dll" Active="1" />
@@ -32,6 +34,6 @@
     <PackageFile Name="sRT305.dll" Active="1" />
     <PackageFile Name="sRT401.dll" Active="1" />
     <PackageFile Name="sSYS001.dll" Active="1" />
-    <PackageFile Name="sRT106.dll" Active="1" />
+    <PackageFile Name="sRT306.dll" Active="1" />
   </CBBN>
 </InfolightPackages>

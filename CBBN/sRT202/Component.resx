@@ -118,31 +118,143 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="serviceManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 290</value>
+    <value>27, 18</value>
   </metadata>
   <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 251</value>
+    <value>17, 56</value>
   </metadata>
   <metadata name="RTLessorAVSCmtyLineFAQH.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>363, 187</value>
+    <value>1018, 371</value>
   </metadata>
   <metadata name="ucRTLessorAVSCmtyLineFAQH.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>350, 146</value>
+    <value>1024, 419</value>
   </metadata>
   <metadata name="RTLessorAVSCmtyLineFaqList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>349, 283</value>
+    <value>1040, 252</value>
   </metadata>
   <metadata name="ucRTLessorAVSCmtyLineFaqList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>341, 361</value>
+    <value>1041, 193</value>
   </metadata>
   <metadata name="idRTLessorAVSCmtyLineFAQH_RTLessorAVSCmtyLineFaqList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>256, 229</value>
+    <value>920, 308</value>
   </metadata>
   <metadata name="View_RTLessorAVSCmtyLineFAQH.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>421, 56</value>
+    <value>868, 73</value>
   </metadata>
   <metadata name="RTCODEA9.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>719, 319</value>
+    <value>246, 217</value>
+  </metadata>
+  <metadata name="RT2022.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 134</value>
+  </metadata>
+  <data name="RT2022.CommandText" xml:space="preserve">
+    <value>SELECT  A.comq1,A.lineq1, A.FAQNO,A.entryno,rtcode_7.codenc,A.chgdat,rtobj_7.cusnc, A.RCVDAT, RTCode.CODENC, 
+LEFT(A.MEMO, 15) AS Expr6,A.CONTACTTEL, A.MOBILE,  A.EMAIL, A.PRTDAT,  A.SNDWORK, RTObj_4.CUSNC,  
+A.SNDPRTNO, A.SNDCLOSEDAT,  A.CALLBACKDAT, RTObj_5.CUSNC AS Expr1,  A.FINISHDAT, RTObj_6.CUSNC AS Expr2,  
+A.CANCELDAT, RTObj_1.CUSNC AS Expr3,   RTObj_2.CUSNC AS Expr4,  
+RTObj_3.CUSNC AS Expr5,case when A.finishdat is null then datediff(dd,A.rcvdat,getdate())+1 else datediff(dd,A.rcvdat,A.finishdat)+1 end finishdat
+FROM  RTEmployee RTEmployee_5 INNER JOIN 
+RTObj RTObj_5 ON RTEmployee_5.CUSID = RTObj_5.CUSID RIGHT OUTER JOIN 
+RTLessorAVSCmtyLineFaqHLog A ON  
+RTEmployee_5.EMPLY = A.CALLBACKUSR LEFT OUTER JOIN 
+RTEmployee RTEmployee_4 INNER JOIN 
+RTObj RTObj_4 ON RTEmployee_4.CUSID = RTObj_4.CUSID ON   
+A.SNDUSR = RTEmployee_4.EMPLY LEFT OUTER JOIN 
+RTEmployee RTEmployee_3 INNER JOIN 
+RTObj RTObj_3 ON RTEmployee_3.CUSID = RTObj_3.CUSID ON  
+A.UUSR = RTEmployee_3.EMPLY LEFT OUTER JOIN 
+RTEmployee RTEmployee_2 INNER JOIN 
+RTObj RTObj_2 ON RTEmployee_2.CUSID = RTObj_2.CUSID ON  
+A.EUSR = RTEmployee_2.EMPLY LEFT OUTER JOIN 
+RTEmployee RTEmployee_1 INNER JOIN 
+RTObj RTObj_1 ON RTEmployee_1.CUSID = RTObj_1.CUSID ON  
+A.CANCELUSR = RTEmployee_1.EMPLY LEFT OUTER JOIN 
+RTObj RTObj_6 INNER JOIN 
+RTEmployee RTEmployee_6 ON RTObj_6.CUSID = RTEmployee_6.CUSID ON  
+A.FUSR = RTEmployee_6.EMPLY LEFT OUTER JOIN 
+RTCode ON A.SERVICETYPE = RTCode.CODE AND  
+RTCode.KIND = 'N4' left outer join RTcode rtcode_7 on A.chgcode=rtcode_7.code and rtcode_7.kind='G2' 
+LEFT OUTER JOIN RTemployee rtemployee_7 on A.chgusr=rtemployee_7.emply left outer join 
+rtobj rtobj_7 on rtemployee_7.cusid=rtobj_7.cusid 
+where 1=1</value>
+  </data>
+  <metadata name="cmdRT2021.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 173</value>
+  </metadata>
+  <metadata name="infoParameter1.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter2.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter3.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter4.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdRT2022.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 212</value>
+  </metadata>
+  <metadata name="infoParameter5.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter6.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter7.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter8.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdRT2023.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 251</value>
+  </metadata>
+  <metadata name="infoParameter9.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter10.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter11.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter12.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdRT2025.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>19, 331</value>
+  </metadata>
+  <metadata name="infoParameter13.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter14.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter15.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter16.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmdRT2024.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 290</value>
+  </metadata>
+  <metadata name="infoParameter17.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter18.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter19.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter20.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="cmd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>244, 176</value>
   </metadata>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>

@@ -296,6 +296,23 @@ LEFT OUTER JOIN RTProdD1 ON A.PRODNO = RTProdD1.PRODNO AND
 where 1=1
 order by A.entryno </value>
   </data>
+  <metadata name="RT10424.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>332, 254</value>
+  </metadata>
+  <data name="RT10424.CommandText" xml:space="preserve">
+    <value>SELECT  A.CUSID,A.ENTRYNO,A.PRTNO, 
+A.SEQ, RTRIM(CONVERT(CHAR(6),RTLESSORAVSCUST.COMQ1)) +'-'+ RTRIM(CONVERT(CHAR(6),RTLESSORAVSCUST.LINEQ1))  AS COMQLINE, 
+A.PRTNO,A.ENTRYNO,A.CHGDAT, RTCODE.CODENC, RTOBJ.CUSNC, 
+A.SENDWORKDAT, A.DROPDAT, 
+A.DROPDESC, A.CLOSEDAT, A.UNCLOSEDAT, 
+A.BONUSCLOSEYM FROM RTCODE RIGHT OUTER JOIN 
+RTLESSORAVSCUSTCONTSNDWORKLOG A ON RTCODE.CODE = A.CHGCODE 
+AND RTCODE.KIND = 'G2' LEFT OUTER JOIN RTOBJ INNER JOIN 
+RTEMPLOYEE ON RTOBJ.CUSID = RTEMPLOYEE.CUSID ON 
+A.CHGUSR = RTEMPLOYEE.EMPLY LEFT OUTER JOIN 
+RTLESSORAVSCUST ON A.CUSID=RTLESSORAVSCUST.CUSID
+WHERE 1=1</value>
+  </data>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>

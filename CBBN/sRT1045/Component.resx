@@ -291,7 +291,7 @@ A.unclosedat, A.BONUSCLOSEYM, A.BONUSFINCHK,A.batchno, A.STOCKCLOSEYM, A.STOCKFI
     <value>False</value>
   </metadata>
   <metadata name="cmdRT1045A.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>20, 526</value>
+    <value>17, 563</value>
   </metadata>
   <metadata name="infoParameter34.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -305,6 +305,21 @@ A.unclosedat, A.BONUSCLOSEYM, A.BONUSFINCHK,A.batchno, A.STOCKCLOSEYM, A.STOCKFI
   <metadata name="cmd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>162, 526</value>
   </metadata>
+  <metadata name="RT10459.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>146, 563</value>
+  </metadata>
+  <data name="RT10459.CommandText" xml:space="preserve">
+    <value>SELECT  A.CUSID,A.entryno,A.PRTNO, A.entryno
+, rtrim(convert(char(6),RTLessorAVScust.COMQ1)) +'-'+ rtrim(convert(char(6),RTLessorAVScust.lineQ1))  as comqline, 
+A.PRTNO,A.ENTRYNO,A.CHGDAT, RTCode.CODENC, RTObj.CUSNC, 
+A.SENDWORKDAT, A.DROPDAT, A.DROPDESC, A.CLOSEDAT, A.unCLOSEDAT, 
+A.BONUSCLOSEYM FROM RTCode RIGHT OUTER JOIN 
+RTLessorAVSCUSTdropsndworkLog A ON RTCode.CODE = A.CHGCODE 
+AND RTCode.KIND = 'G2' LEFT OUTER JOIN RTObj INNER JOIN 
+RTEmployee ON RTObj.CUSID = RTEmployee.CUSID ON 
+A.CHGUSR = RTEmployee.EMPLY left outer join 
+RTLessorAVScust on A.cusid=RTLessorAVScust.cusid </value>
+  </data>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>

@@ -271,6 +271,13 @@
             parent.addTab("用戶裝機派工設備資料維護", "CBBN/RT10423.aspx?CUSID=" + CUSID + "&PRTNO=" + PRTNO + "&sMODE=" + sMODE);
         }
 
+        function btn9Click(val) {
+            var sMODE = "E";
+            var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var PRTNO = row.PRTNO;
+            parent.addTab("用戶裝機派工設備資料維護", "CBBN/RT10424.aspx?CUSID=" + CUSID + "&PRTNO=" + PRTNO + "&sMODE=" + sMODE);
+        }
+
         function mySelect()
         {
             //var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data

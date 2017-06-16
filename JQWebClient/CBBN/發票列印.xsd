@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="發票列印" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="發票列印" msdata:IsDataSet="true" msdata:CaseSensitive="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="cmdRT3061">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="INVNO" type="xs:string" minOccurs="0" />
+              <xs:element name="INVTITLE" type="xs:string" minOccurs="0" />
+              <xs:element name="UNINO" type="xs:string" minOccurs="0" />
+              <xs:element name="CHKNO" type="xs:string" minOccurs="0" />
+              <xs:element name="INVDAT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TAXTYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="TAXTYPE1" type="xs:string" minOccurs="0" />
+              <xs:element name="SALESUM" type="xs:int" minOccurs="0" />
+              <xs:element name="TAXSUM" type="xs:int" minOccurs="0" />
+              <xs:element name="TOTALSUM" type="xs:int" minOccurs="0" />
+              <xs:element name="ENTRY" type="xs:int" minOccurs="0" />
+              <xs:element name="PRODNC" type="xs:string" minOccurs="0" />
+              <xs:element name="BATCH" type="xs:int" minOccurs="0" />
+              <xs:element name="QTY" type="xs:int" minOccurs="0" />
+              <xs:element name="UNITAMT" type="xs:double" minOccurs="0" />
+              <xs:element name="SALEAMT" type="xs:int" minOccurs="0" />
+              <xs:element name="TAXAMT" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -119,33 +119,54 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="若要在類別中加入元件，請從工具箱拖所需元件，並利用 [屬性] 視窗設定它們的屬性。若要建立類別的方法與事件，請按這裡切換到程式碼檢視。" type="System.Drawing.Point, System.Drawing">
-    <value>0, 362</value>
+    <value>0, 361</value>
   </data>
   <data name="serviceManager1" type="System.Drawing.Point, System.Drawing">
-    <value>17, 290</value>
+    <value>27, 18</value>
   </data>
   <data name="InfoConnection1" type="System.Drawing.Point, System.Drawing">
-    <value>17, 251</value>
+    <value>17, 56</value>
   </data>
   <data name="RTLessorAVSCmtyLineFAQH" type="System.Drawing.Point, System.Drawing">
-    <value>363, 187</value>
+    <value>1018, 371</value>
   </data>
   <data name="ucRTLessorAVSCmtyLineFAQH" type="System.Drawing.Point, System.Drawing">
-    <value>350, 146</value>
+    <value>1024, 419</value>
   </data>
   <data name="RTLessorAVSCmtyLineFaqList" type="System.Drawing.Point, System.Drawing">
-    <value>349, 283</value>
+    <value>1040, 252</value>
   </data>
   <data name="ucRTLessorAVSCmtyLineFaqList" type="System.Drawing.Point, System.Drawing">
-    <value>341, 361</value>
+    <value>1041, 193</value>
   </data>
   <data name="idRTLessorAVSCmtyLineFAQH_RTLessorAVSCmtyLineFaqList" type="System.Drawing.Point, System.Drawing">
-    <value>256, 229</value>
+    <value>920, 308</value>
   </data>
   <data name="View_RTLessorAVSCmtyLineFAQH" type="System.Drawing.Point, System.Drawing">
-    <value>421, 56</value>
+    <value>868, 73</value>
   </data>
   <data name="RTCODEA9" type="System.Drawing.Point, System.Drawing">
-    <value>719, 319</value>
+    <value>246, 217</value>
+  </data>
+  <data name="RT2031" type="System.Drawing.Point, System.Drawing">
+    <value>17, 134</value>
+  </data>
+  <data name="cmdRT2021" type="System.Drawing.Point, System.Drawing">
+    <value>17, 173</value>
+  </data>
+  <data name="cmdRT2022" type="System.Drawing.Point, System.Drawing">
+    <value>17, 212</value>
+  </data>
+  <data name="cmdRT2023" type="System.Drawing.Point, System.Drawing">
+    <value>17, 251</value>
+  </data>
+  <data name="cmdRT2025" type="System.Drawing.Point, System.Drawing">
+    <value>19, 331</value>
+  </data>
+  <data name="cmdRT2024" type="System.Drawing.Point, System.Drawing">
+    <value>17, 290</value>
+  </data>
+  <data name="cmd" type="System.Drawing.Point, System.Drawing">
+    <value>244, 176</value>
   </data>
 </root>

@@ -9,6 +9,7 @@
     <script>
         var COMQ1 = Request.getQueryStringByName2("COMQ1");
         var LINEQ1 = Request.getQueryStringByName2("LINEQ1");
+        var usr = getClientInfo('_usercode');
         var flag = true;
         if (COMQ1 == "") {
             flag = false;
@@ -100,6 +101,120 @@
             }
 
         }
+
+        //轉派工單
+        function btn1Click(val) {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var FAQNO = row.FAQNO;
+            $.ajax({
+                type: "POST",
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT202.cmdRT2021', //連接的Server端，command
+                //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                data: "mode=method&method=" + "smRT2021" + "&parameters=" + COMQ1 + "," + LINEQ1 + "," + FAQNO + "," + usr,
+                cache: false,
+                async: false,
+                success: function (data) {
+                    alert(data);
+                    $('#dataGridView').datagrid('reload');
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status);
+                    alert(thrownError);
+                }
+            });
+        }
+
+        //派工單查詢
+        function btn2Click() {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.CUSID;
+            var s2 = row.FAQNO;
+            parent.addTab("用戶維修派工單資料維護", "CBBN/RT2021.aspx?CUSID=" + ss + "&FAQNO=" + s2);
+        }
+
+        //客服結案
+        function btn3Click() {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var FAQNO = row.FAQNO;
+
+            $.ajax({
+                type: "POST",
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT202.cmdRT2022', //連接的Server端，command
+                //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                data: "mode=method&method=" + "smRT2022" + "&parameters=" + COMQ1 + "," + LINEQ1 + "," + FAQNO + "," + usr,
+                cache: false,
+                async: false,
+                success: function (data) {
+                    alert(data);
+                    $('#dataGridView').datagrid('reload');
+                }
+            });
+        }
+
+        //結案返轉
+        function btn4Click() {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var FAQNO = row.FAQNO;
+
+            $.ajax({
+                type: "POST",
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT202.cmdRT2023', //連接的Server端，command
+                //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                data: "mode=method&method=" + "smRT2023" + "&parameters=" + COMQ1 + "," + LINEQ1 + "," + FAQNO + "," + usr,
+                cache: false,
+                async: false,
+                success: function (data) {
+                    alert(data);
+                    $('#dataGridView').datagrid('reload');
+                }
+            });
+        }
+
+        //客服作廢
+        function btn5Click() {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var FAQNO = row.FAQNO;
+
+            $.ajax({
+                type: "POST",
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT202.cmdRT2024', //連接的Server端，command
+                //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                data: "mode=method&method=" + "smRT2024" + "&parameters=" + COMQ1 + "," + LINEQ1 + "," + FAQNO + "," + usr,
+                cache: false,
+                async: false,
+                success: function (data) {
+                    alert(data);
+                    $('#dataGridView').datagrid('reload');
+                }
+            });
+        }
+
+        //作廢返轉
+        function btn6Click() {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var FAQNO = row.FAQNO;
+
+            $.ajax({
+                type: "POST",
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT202.cmdRT2025', //連接的Server端，command
+                //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                data: "mode=method&method=" + "smRT2025" + "&parameters=" + COMQ1 + "," + LINEQ1 + "," + FAQNO + "," + usr,
+                cache: false,
+                async: false,
+                success: function (data) {
+                    alert(data);
+                    $('#dataGridView').datagrid('reload');
+                }
+            });
+        }
+
+        //歷史異動查詢
+        function btn7Click() {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.CUSID;
+            var s2 = row.FAQNO;
+            parent.addTab("用戶維修派工單資料維護", "CBBN/RT2022.aspx?CUSID=" + ss + "&FAQNO=" + s2);
+        }
     </script>
 </head>
 <body>
@@ -108,7 +223,7 @@
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
             <JQTools:JQDataGrid ID="dataGridView" data-options="pagination:true,view:commandview" RemoteName="sRT202.RTLessorAVSCmtyLineFAQH" runat="server" AutoApply="True"
                 DataMember="RTLessorAVSCmtyLineFAQH" Pagination="True" QueryTitle="Query" EditDialogID="JQDialog1"
-                Title="主線客服資料維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True" OnLoadSuccess="dgOnloadSuccess">
+                Title="主線客服資料維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True" OnLoadSuccess="dgOnloadSuccess">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="客服單號" Editor="text" FieldName="FAQNO" Format="" MaxLength="13" Visible="true" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="社區序號" Editor="infocombobox" FieldName="COMQ1" Format="" Visible="true" Width="120" EditorOptions="valueField:'COMQ1',textField:'COMN',remoteName:'sRT101.RTLessorAVSCmtyH',tableName:'RTLessorAVSCmtyH',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
@@ -133,13 +248,13 @@
                         Text="取消" />
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
                         OnClick="openQuery" Text="查詢" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="轉派工單" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="派工查詢" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="客服結案" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="結案返轉" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="客服作廢" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="作廢返轉" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="歷史異動" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="轉派工單" Visible="True" OnClick="btn1Click" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="派工查詢" Visible="True" OnClick="btn2Click" Icon="icon-view" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="客服結案" Visible="True" OnClick="btn3Click" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="結案返轉" Visible="True" OnClick="btn4Click" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="客服作廢" Visible="True" OnClick="btn5Click" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="作廢返轉" Visible="True" OnClick="btn6Click" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="歷史異動" Visible="True" OnClick="btn7Click" Icon="icon-view" />
                 </TooItems>
                 <QueryColumns>
                     <JQTools:JQQueryColumn AndOr="and" Caption="客訴單狀態" Condition="%" DataType="string" Editor="infocombobox" EditorOptions="items:[{value:'0',text:'全部',selected:'true'},{value:'1',text:'已結案',selected:'false'},{value:'2',text:'未結案',selected:'false'},{value:'3',text:'已作廢',selected:'false'},{value:'4',text:'全部(不含作廢)',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" FieldName="SERVICETYPE" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />

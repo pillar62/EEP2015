@@ -220,6 +220,7 @@ namespace sRT1043
 
         public object[] smRT10439(object[] objParam)
         {
+			
             var ss = (string)objParam[0];
             var sdata = ss.Split(',');
             //開啟資料連接

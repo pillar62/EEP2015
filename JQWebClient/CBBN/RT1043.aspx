@@ -285,6 +285,14 @@
                 }
             });
         }
+
+        //
+        function btn7Click() {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var CUSID = row.CUSID;
+            var BATCHNO = row.BATCHNO;
+            parent.addTab("用戶應收應付帳款查詢", "CBBN/RT10433.aspx?CUSID=" + CUSID + "&BATCHNO=" + BATCHNO);
+        }
     </script>
 </head>
 <body>

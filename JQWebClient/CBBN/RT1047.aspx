@@ -168,6 +168,14 @@
                 }
             });
         }
+
+        //派工單查詢
+        function btn9Click() {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.CUSID;
+            var s2 = row.FAQNO;
+            parent.addTab("用戶維修派工單資料維護", "CBBN/RT10479.aspx?CUSID=" + ss + "&FAQNO=" + s2);
+        }
     </script>
 </head>
 <body>

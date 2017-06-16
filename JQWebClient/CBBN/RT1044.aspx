@@ -268,6 +268,14 @@
                 }
             });
         }
+
+        //歷史異動
+        function btn7Click() {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var CUSID = row.CUSID;
+            var BATCHNO = row.BATCHNO;
+            parent.addTab("用戶復機異動資料查詢", "CBBN/RT10447.aspx?CUSID=" + CUSID + "&BATCHNO=" + BATCHNO);
+        }
     </script>
 
 </head>

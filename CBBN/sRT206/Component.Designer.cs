@@ -503,7 +503,7 @@
             // 
             // infoTransaction1
             // 
-            this.infoTransaction1.Name = null;
+            this.infoTransaction1.Name = "infoTransaction1";
             transaction1.AutoNumber = null;
             transField1.DesField = "SALESUM";
             transField1.DesValue = null;

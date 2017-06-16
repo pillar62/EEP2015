@@ -33,9 +33,16 @@
 
         //領用明細查詢
         function btn2Click() {
-            var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            var PRTNO = row.PRTNO;
-            parent.addTab("物品領用明細", "CBBN/RT104221.aspx?PRTNO=" + PRTNO);
+            var rows = $('#dataGridMaster').datagrid('getRows');
+            if (rows.length == 0) {
+                alert("無資料可供查詢!");
+                }
+            else
+            {
+                var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+                var PRTNO = row.PRTNO;
+                parent.addTab("物品領用明細", "CBBN/RT104221.aspx?PRTNO=" + PRTNO);
+            }
         }
 
         function CloseTab()
@@ -69,8 +76,8 @@
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
                         OnClick="openQuery" Text="查詢" />
-                    <JQTools:JQToolItem ID="btn1" Enabled="True" ItemType="easyui-linkbutton" OnClick="btn1Click" Text="列印領用單" Visible="True" />
-                    <JQTools:JQToolItem ID="btn2" Enabled="True" ItemType="easyui-linkbutton" OnClick="btn2Click" Text="領用明細" Visible="True" />
+                    <JQTools:JQToolItem ID="btn1" Enabled="True" ItemType="easyui-linkbutton" OnClick="btn1Click" Text="列印領用單" Visible="True" Icon="icon-no" />
+                    <JQTools:JQToolItem ID="btn2" Enabled="True" ItemType="easyui-linkbutton" OnClick="btn2Click" Text="領用明細" Visible="True" Icon="icon-view" />
                 </TooItems>
                 <QueryColumns>
                 </QueryColumns>

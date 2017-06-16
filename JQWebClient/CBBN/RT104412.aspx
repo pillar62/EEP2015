@@ -1,4 +1,4 @@
-﻿復機 Page Language="C#" AutoEventWireup="true" CodeFile="RT104412.aspx.cs" Inherits="Template_JQueryQuery1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="RT104412.aspx.cs" Inherits="Template_JQueryQuery1" %>
 
 <!DOCTYPE html>
 
