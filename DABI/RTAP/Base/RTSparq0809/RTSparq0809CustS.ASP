@@ -1,0 +1,185 @@
+<%
+    Dim rs,i,conn
+    Dim search1Opt,search2Opt,search6Opt, search12pt
+    Set conn=Server.CreateObject("ADODB.Connection")
+    conn.open "DSN=RTLib"
+    
+    Set rs=Server.CreateObject("ADODB.Recordset")
+'----------經銷商
+    S15=""
+    rs.Open "SELECT  CASE WHEN RTSparq0809Cust.CONSIGNEE = '' THEN '直銷' ELSE RTOBJ.SHORTNC END AS shortnc " _
+           &"FROM  RTSparq0809Cust LEFT OUTER JOIN RTOBJ ON RTSparq0809Cust.CONSIGNEE= RTOBJ.CUSID " _
+           &"GROUP BY  CASE WHEN RTSparq0809Cust.CONSIGNEE = '' THEN '直銷' ELSE RTOBJ.SHORTNC END " _
+           &"ORDER BY  CASE WHEN RTSparq0809Cust.CONSIGNEE = '' THEN '直銷' ELSE RTOBJ.SHORTNC END",CONN
+    s15="<option value=""*"" selected>全部</option>" &vbCrLf    
+    Do While Not rs.Eof
+       s15=s15 &"<option value=""" & rs("SHORTNC") & """>" &rs("SHORTNC") &"</option>"
+       rs.MoveNext
+    Loop
+    rs.Close
+'----------營運點
+    S14=""
+    rs.Open "SELECT OPERATIONID, OPERATIONNAME FROM RTCtyTown WHERE (OPERATIONNAME <> '') GROUP BY  OPERATIONID, OPERATIONNAME ORDER BY  OPERATIONID ",CONN
+    s14="<option value=""*"" selected>全部</option>" &vbCrLf    
+    Do While Not rs.Eof
+       s14=s14 &"<option value=""" & rs("OPERATIONNAME") & """>" &rs("OPERATIONNAME") &"</option>"
+       rs.MoveNext
+    Loop
+    s14=s14 &"<option value=""無法歸屬"">無法歸屬</option>"
+    rs.Close                
+    
+    conn.Close
+    Set rs=Nothing
+    Set conn=Nothing
+%>
+<html>
+<head>
+<link REL="stylesheet" HREF="/WebUtilityV4ebt/DBAUDI/dataList.css" TYPE="text/css">
+<link REL="stylesheet" HREF="dataList.css" TYPE="text/css">
+<script language="VBScript">
+<!--
+Sub btn_onClick()
+  dim s,t
+  t=""
+  s=""
+  '--名稱------------
+  s1=document.all("search1").value
+  if len(trim(s1)) > 0 then
+     s="客戶名稱：含('" & s1 & "')字元"  
+     t=t & " RTSparq0809Cust.cusnc like '%" & s1 & "%' "
+  else
+     s="客戶名稱：全部  "
+     t=t & " RTSparq0809Cust.cusnc <> '' "
+  end if
+  '--身份證號
+  s2=document.all("search2").value
+  if len(trim(s2)) > 0 then
+     s="，身份證號：含('" & s2 & "')字元"  
+     t=t & " and RTSparq0809Cust.socialid like '%" & s2 & "%' "
+  end if  
+  '--行動電話
+  s3=document.all("search3").value
+  if len(trim(s3)) > 0 then
+     s="，行動電話：含('" & s3 & "')字元"  
+     t=t & " and RTSparq0809Cust.mobile like '%" & s3 & "%' "
+  end if    
+  '--電子郵件
+  s4=document.all("search4").value
+  if len(trim(s4)) > 0 then
+     s="，電子郵件：含('" & s4 & "')字元"  
+     t=t & " and RTSparq0809Cust.email like '%" & s4 & "%' "
+  end if      
+  '--帳單地址
+  s5=document.all("search5").value
+  if len(trim(s5)) > 0 then
+     s="，帳單地址：含('" & s5 & "')字元"  
+     t=t & " and RTCounty.CUTNC + RTSparq0809Cust.TOWNSHIP2 + RTSparq0809Cust.RADDR2 like '%" & s5 & "%' "
+  end if       
+  '-----租約狀況
+  s6=document.all("search6").value
+  s6ary=split(s6,";")
+  
+  s=S & "，租約狀況：" & s6ary(1)  
+  if s6ary(0)="" then 
+  '((全部))
+  elseif s6ary(0)="1" then
+     t=t & " and RTSparq0809Cust.canceldat is null and RTSparq0809Cust.dropdat is null"
+  '((未作廢未退租戶))
+  elseif s6ary(0)="2" then
+     t=t & " and RTSparq0809Cust.canceldat is not null " 
+  '((已作廢))
+  elseif s6ary(0)="3" then
+     t=t & " and RTSparq0809Cust.dropdat is not null " 
+  '((已退租))
+  end if
+   s14=document.all("search14").value
+  if S14 <> "*" and s14<>"無法歸屬" then
+     t=t &" AND (RTCTYTOWNX.OPERATIONNAME='" & S14 & "') AND RTSparq0809Cust.consignee='' "
+  elseif s14="無法歸屬" then
+     t=t &" AND (RTCTYTOWNX.OPERATIONNAME='') and RTSparq0809Cust.consignee='' "
+  end if
+  s15=document.all("search15").value
+  s=S & "經銷商:" &S15 &"  "
+  if S15 <> "*" AND S15 <> "直銷" then
+     t=t &" AND (rtobj.shortnc='" & S15 & "') "
+  ELSEIF S15="直銷" THEN 
+     t=t &" AND (RTSparq0809Cust.consignee='') "
+  end if    
+  
+  Dim winP,docP
+  Set winP=window.Opener
+  Set docP=winP.document
+  docP.all("searchQry").value=t
+  docP.all("searchShow").value=s
+  docP.all("keyform").Submit
+  winP.focus()
+  window.close
+End Sub
+Sub btn1_onClick()
+  Dim winP,docP
+  Set winP=window.Opener
+  Set docP=winP.document
+  winP.focus()
+  window.close
+End Sub
+Sub SrReNew()
+  Window.form.Submit
+End Sub
+-->
+</script>
+</head>
+<body>
+<form method="post" id="form">
+<center>
+<table width="80%">
+  <tr class=dataListTitle align=center>請輸入(選擇)客戶資料搜尋條件</td><tr>
+</table>
+<table width="80%" border=1 cellPadding=0 cellSpacing=0>
+<tr><td class=dataListHead width="40%">營運點</td>
+    <td width="60%" bgcolor="silver">
+      <select name="search14" size="1" class=dataListEntry ID="Select1">
+        <%=S14%>
+    </select>      
+    </td></tr>        
+<tr><td class=dataListHead width="40%">經銷商</td>
+    <td width="60%"  bgcolor="silver">
+    <select name="search15" size="1" class=dataListEntry ID="Select1">
+        <%=S15%>
+    </select>      
+    </td>
+</tr>    
+<tr><td class=dataListHead width="30%">客戶名稱</td>
+    <td width="70%" bgcolor="silver" >
+    <input type=text name="search1" size="25" maxlength="25" class=dataListEntry>
+    </td></tr>
+<tr><td class=dataListHead width="30%">身份證號</td>
+    <td width="70%" bgcolor="silver" >
+    <input type=text name="search2" size="10" maxlength="10" class=dataListEntry ID="Text1">
+    </td></tr>    
+<tr><td class=dataListHead width="30%">行動電話</td>
+    <td width="70%" bgcolor="silver" >
+    <input type=text name="search3" size="10" maxlength="10" class=dataListEntry ID="Text2">
+    </td></tr>    
+<tr><td class=dataListHead width="30%">電子郵件</td>
+    <td width="70%" bgcolor="silver" >
+    <input type=text name="search4" size="30" maxlength="50" class=dataListEntry ID="Text3">
+    </td></tr>                
+<tr><td class=dataListHead width="30%">帳單地址</td>
+    <td width="70%" bgcolor="silver" >
+    <input type=text name="search5" size="30" maxlength="60" class=dataListEntry>
+    </td></tr>    
+<tr><td class=dataListHead width="30%">租約狀況</td>
+    <td width="70%" bgcolor="silver" >
+      <select name="search6" size="1" class=dataListEntry>
+        <option value=";全部"  selected >(1)全部</option>
+        <option value="1;未作廢未退租戶">(2)未作廢未退租戶</option>
+        <option value="2;已作廢">(3)已作廢</option>
+        <option value="3;已退租">(4)已退租</option>        
+      </select>    </td></tr>    
+</table>
+<table width="80%" align=right><tr><td></td><td align=right>
+  <input type="submit" value=" 查詢 " class=dataListButton name="btn" onsubmit="btn_onclick" style="cursor:hand">
+  <input type="button" value=" 結束 " class=dataListButton name="btn1" style="cursor:hand">
+</FORM>
+</body>
+</html>

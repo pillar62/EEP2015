@@ -1,0 +1,286 @@
+<%
+ Dim dspkey(100),DSN
+ DSN="DSN=RTLib"
+ dspkey(3)=Request.Form("search3")
+ dspkey(4)=Request.Form("search4")
+ dspkey(5)=Request.Form("search5")
+ 
+Set conn=Server.CreateObject("ADODB.Connection")
+    Set rs=Server.CreateObject("ADODB.Recordset")
+    DSN="DSN=RTLIB"
+    conn.open DSN
+    sql="SELECT RTSalesGroup.GROUPID, RTSalesGroup.GROUPNC, RTSalesGroupREF.EMPLY, " _
+       &"RTObj.CUSNC " _
+       &"FROM RTSalesGroup INNER JOIN " _
+       &"RTSalesGroupREF ON RTSalesGroup.AREAID = RTSalesGroupREF.AREAID AND " _
+       &"RTSalesGroup.GROUPID = RTSalesGroupREF.GROUPID AND " _
+       &"RTSalesGroupREF.EDATE IS NULL INNER JOIN " _
+       &"RTEmployee ON RTSalesGroupREF.EMPLY = RTEmployee.EMPLY AND " _
+       &"RTEmployee.TRAN2 <> '10' INNER JOIN " _
+       &"RTObj ON RTEmployee.CUSID = RTObj.CUSID " _
+       &"WHERE (RTSalesGroup.EDATE IS NULL) " _
+       &"ORDER BY RTSalesGroup.GROUPID "
+    s10="<option value="";"" >(全部)</option>"   
+    rs.Open sql,conn
+    sx=""
+    areaCnt=0
+    pregroupID=""    
+    Do While Not rs.Eof
+       If pregroupID <> rs("groupID") Then
+          If areaCnt > 0 Then
+             s11=s11 &"</select>""" &vbCrLf      
+          End If
+          areaCnt=areaCnt + 1           
+          s11=s11 &"arygroup(" &areaCnt &")=""<select name=""""search11"""" size=""""1"""">" _   
+              &"<option value=""""<>'*';全部"""">全部</option>"
+          s10=s10 &"<option value=""" &rs("GROUPID") & ";" & rs("GROUPnc") &"""" &sx &">" &rs("GROUPnc") &"</option>"
+
+          pregroupID=rs("groupID")
+       End If
+       s11=s11 &"<option value=""""='" &rs("EMPLY") &"';" &rs("CUSNC") &""""">" _
+                             &rs("CUSNC") &"</option>"            
+       rs.MoveNext
+       sx=""
+    Loop
+    If areaCnt > 0 Then
+       s11=s11 &"</select>""" &vbCrLf
+       s11="Dim arygroup(" &areaCnt &")" &vbCrLf _
+        &"arygroup(0)=""<select name=""""search11""""><option value=""""<>'*';全部"""">全部</option></select>""" &vbCrLf &s11     
+    End If         
+    rs.Close    
+'--------- 廠商 
+    S5=""
+    rs.Open "SELECT RTObj.CUSID AS CusID, RTObj.SHORTNC AS SHORTNC " _
+           &"FROM RTObj INNER JOIN RTObjLink ON RTObj.CUSID = RTObjLink.CUSID " _
+           &"WHERE (((RTObjLink.CUSTYID)='02')) " _
+           &"ORDER BY RTObj.SHORTNC ",conn
+    s5="<option value=""<>'*';：全部"" selected>全部</option>" &vbCrLf   
+    Do While not rs.eof
+       s5= s5 & "<option value=""='" & rs("cusid") & "';" & "：" & trim(rs("shortnc")) & """>" & trim(rs("shortNC")) & "</option>" & vbcrlf    
+    rs.MoveNext
+    Loop
+    rs.Close    
+'--------- 其它方案移轉 
+    S12=""
+    rs.Open "SELECT CODE,CODENC FROM RTCODE WHERE KIND='H8'",CONN
+    s12="<option value="";全部"" selected>全部</option>" &vbCrLf    
+    Do While Not rs.Eof
+       s12=s12 &"<option value=""" &rs("CODE") & ";" & rs("CODENC") & """>" &rs("CODENC") &"</option>"
+       rs.MoveNext
+    Loop
+    rs.Close    
+    conn.close       
+    set rs=nothing
+    set conn=nothing
+
+%>
+<html>
+<head>
+<link REL="stylesheet" HREF="/WebUtilityV3/DBAUDI/dataList.css" TYPE="text/css">
+<link REL="stylesheet" HREF="dataList.css" TYPE="text/css">
+<script language="VBScript">
+<!--
+Sub search10_OnChange()
+    <%=s11%>
+    document.all("search11TD").innerHTML=arygroup(document.all("search10").selectedIndex)
+End Sub
+Sub btn_onClick()
+  dim s,t
+  t=""
+  s=""
+  '--------------
+  s1=document.all("search1").value
+  if len(trim(s1)) > 0 then
+     s="客戶名稱：含('" & s1 & "')字元"  
+     t=t & " rtobj.cusnc like '%" & s1 & "%' "
+  else
+     s="客戶名稱：全部  "
+     t=t & " rtsparqadslcust.cusid <> '*' "
+  end if
+  '-----安裝進度
+  s2=document.all("search2").value
+  s2ary=split(s2,";")
+  
+  s=S & "安裝進度狀況：" & s2ary(1)  
+  '((全部==不含已退租、撤銷或不可建置戶))
+  if s2ary(0)="" then 
+     t=t & " and rtsparqadslcust.dropdat is null and rtsparqadslcust.agree <>'N' " 
+  '((全部))
+  elseif s2ary(0)="99" then
+     t=t & " and rtsparqadslcust.CUSID IS NOT NULL "
+  '((已完工尚未報峻))  
+  elseif s2ary(0)="1" then
+     t=t & " and rtsparqadslcust.docketdat is not null "
+  '((已完工尚未報峻))
+  elseif s2ary(0)="2" then
+     t=t & " and rtsparqadslcust.finishdat is not null and rtsparqadslcust.docketdat is null " 
+  '((已取得附掛電話))--尚未裝機
+  elseif s2ary(0)="3" then
+     t=t & " and rtsparqadslcust.workingreply is not null and rtsparqadslcust.finishdat is null and rtsparqadslcust.docketdat is null " 
+  '((已送至營運處等待附掛電話))
+  elseif s2ary(0)="4" then
+     t=t & " and rtsparqadslcust.sendworking is not null and rtsparqadslcust.workingreply is null and rtsparqadslcust.docketdat is null and rtsparqadslcust.finishdat is null " 
+  '((中華電信已簽回尚未送營運處))
+  elseif s2ary(0)="5" then
+     t=t & " and rtsparqadslcust.chtsigndat is not null and rtsparqadslcust.sendworking is null and rtsparqadslcust.workingreply is null and rtsparqadslcust.docketdat is null and rtsparqadslcust.finishdat is null " 
+  '((已送件中華電信尚未簽回))
+  elseif s2ary(0)="6" then
+     t=t & " and rtsparqadslcust.deliverdat is not null and rtsparqadslcust.chtsigndat is null and  rtsparqadslcust.sendworking is null and rtsparqadslcust.workingreply is null and rtsparqadslcust.docketdat is null and rtsparqadslcust.finishdat is null " 
+  '((尚未送件))
+  elseif s2ary(0)="7" then
+     t=t & " and rtsparqadslcust.deliverdat is null and rtsparqadslcust.dropdat is null and rtsparqadslcust.chtsigndat is null and  rtsparqadslcust.sendworking is null and rtsparqadslcust.workingreply is null and rtsparqadslcust.docketdat is null and rtsparqadslcust.finishdat is null " 
+  '((不可建置戶))
+  elseif s2ary(0)="8" then
+     t=t & " and rtsparqadslcust.agree ='N' "
+  '((撤銷申請戶))
+  elseif s2ary(0)="9" then
+     t=t & " and rtsparqadslcust.dropdat is not null and rtsparqadslcust.finishdat is null "
+  '((退租申請戶))
+  elseif s2ary(0)="10" then
+     t=t & " and rtsparqadslcust.dropdat is not null and rtsparqadslcust.finishdat is not null "
+  elseif s2ary(0)="11" then
+     t=t & " and ( rtsparqadslcust.agree = '' or rtsparqadslcust.agree is null ) "     
+  end if
+  
+  '-------------
+  s5ary=SPLIT(document.all("search5").value,";")
+  t=t & " and rtsparqadslcust.CONSIGNEE " & s5ary(0)
+  S=S & " 經銷商" & s5ary(1) 
+  s6=document.all("search6").value
+  if len(trim(s6))>0 then
+     t=t & " and RTCOUNTY.CUTNC + rtsparqadslcust.TOWNSHIP2 + rtsparqadslcust.RADDR2 like '%" & s6 & "%' "
+     s=S & "　裝機地址：含('" & s6 & "')字元"
+  end if  
+  s7=document.all("search7").value
+  if len(trim(s7))>0 then
+     t=t & " and rtsparqadslcust.housename like '%" & s7 & "%' "
+     s=S & "　社區名稱：含('" & s7 & "')字元"
+  end if    
+  s8=document.all("search8").value
+  if len(trim(s8))>0 then
+     t=t & " and rtsparqadslcust.ORDERNO like '%" & s8 & "%' "
+     s=S & "　收件編號：含('" & s8 & "')字元"
+  end if    
+  s9=document.all("search9").value
+  if len(trim(s9))>0 then
+     t=t & " and rtsparqadslcust.EXTTEL + rtsparqadslcust.SPHNNO like '%" & s9 & "%' "
+     s=S & "　速博對帳號碼：含('" & s9 & "')字元"
+  end if    
+  s10=document.all("search10").value  
+  S10ary=split(s10,";")
+  s=s & " 業務組別︰" & s10ary(1)
+  
+  'Modified by Laputa 2002/06/19 -------------------------------------------------
+  if S10ary(1) <>"" then t=t & " and rtsparqadslcmty.groupid ='" & s10ary(0) & "' "  
+  
+  s11=document.all("search11").value
+  s11ary=split(s11,";")  
+  s=s & "  業務工程師:" & s11ary(1) & "  "
+  t=t & " and rtsparqadslcust.bussid " & s11ary(0)   
+  
+  s12ary=split(document.all("search12").value,";")  
+  IF S12ARY(0) <> "" THEN
+     S=S & " 其它方案移轉︰('" & S12ARY(1) & "') "
+     T=T & " AND rtsparqadslcust.TNSCUSTCASE='" & S12ARY(0) & "' "
+  END IF  
+ 
+  Dim winP,docP
+  Set winP=window.Opener
+  Set docP=winP.document
+  docP.all("searchQry").value=t
+  docP.all("searchShow").value=s
+  docP.all("keyform").Submit
+  winP.focus()
+  window.close
+End Sub
+Sub btn1_onClick()
+  Dim winP,docP
+  Set winP=window.Opener
+  Set docP=winP.document
+  winP.focus()
+  window.close
+End Sub
+Sub SrReNew()
+  Window.form.Submit
+End Sub
+-->
+</script>
+</head>
+<body>
+<form method="post" id="form">
+<center>
+<table width="80%">
+  <tr class=dataListTitle align=center>請輸入(選擇)客戶資料搜尋條件</td><tr>
+</table>
+<table width="80%" border=1 cellPadding=0 cellSpacing=0>
+<TR><td width="30%" class="dataListHead" height="32">經銷商</td>                                      
+        <td width="70%" height="32" bgcolor="silver">
+         <select size="1" name="search5"  class="dataListEntry">               
+              <%=S5%>
+         </select> 
+        </td>
+</TR>
+<tr><td class=dataListHead width="40%">業務組別</td>
+    <td width="60%" bgcolor="silver">
+
+      <select name="search10" size="1" class=dataListEntry>
+        <%=s10%>
+      </select>
+    </td></tr>
+<tr><td class=dataListHead width="40%">業務工程師</td>
+    <td width="60%"  id="search11TD" bgcolor="silver">
+      <select name="search11" size="1" class=dataListEntry>
+        <option value="<>'*';全部">全部</option>
+      </select>
+    </td>
+    </td></tr>             
+<tr><td class=dataListHead width="30%">客戶名稱</td>
+    <td width="70%" bgcolor="silver" >
+    <input type=text name="search1" size="25" maxlength="25" class=dataListEntry>
+    </td></tr>
+<tr><td class=dataListHead width="30%">收件編號</td>
+    <td width="70%" bgcolor="silver" >
+    <input type=text name="search8" size="7" maxlength="25" class=dataListEntry>
+    </td></tr>    
+<tr><td class=dataListHead width="30%">速博對帳號碼</td>
+    <td width="70%" bgcolor="silver" >
+    <input type=text name="search9" size="10" maxlength="10" class=dataListEntry>
+    </td></tr>    
+<tr><td class=dataListHead width="30%">裝機地址</td>
+    <td width="70%" bgcolor="silver" >
+    <input type=text name="search6" size="40" maxlength="50" class=dataListEntry>
+    </td></tr>    
+<tr><td class=dataListHead width="30%">社區名稱</td>
+    <td width="70%" bgcolor="silver" >
+    <input type=text name="search7" size="30" maxlength="60" class=dataListEntry>
+    </td></tr>        
+<tr><td class=dataListHead width="30%">安裝進度狀況</td>
+    <td width="70%" bgcolor="silver" >
+      <select name="search2" size="1" class=dataListEntry>
+        <option value="99;全部">全部</option>
+        <option value=";全部(不含撤銷戶、退租戶及不可建置戶)"  selected >(1)全部(不含撤銷戶、退租戶及不可建置戶)</option>
+        <option value="1;已報峻客戶">(2)已報峻客戶</option>
+        <option value="2;已裝機完工客戶(未報峻)">(3)已裝機完工客戶(未報峻)</option>
+        <option value="3;已取得附掛電話客戶(未裝機)">(4)已取得附掛電話客戶(未裝機)</option>        
+        <option value="4;已送件至營運處(等待附掛電話)">(5)已送件至營運處(等待附掛電話)</option>
+        <option value="5;中華電信已簽回(尚未送營運處)">(6)中華電信已簽回(尚未送營運處)</option>
+        <option value="6;已送件至中華電信(尚未簽回)">(7)已送件至中華電信(尚未簽回)</option>
+        <option value="7;尚未送件">(8)尚未送件</option>             
+        <option value="8;不可建置戶">(9)不可建置戶</option>             
+        <option value="9;撤銷申請戶">(10)撤銷申請戶</option>                                                        
+        <option value="10;退租戶">(11)退租戶</option>     
+        <option value="11;尚未評估戶">(12)尚未評估戶</option>                                                                        
+      </select>    </td></tr>    
+<tr><td class=dataListHead width="40%">其它方案移轉</td>
+    <td width="60%" bgcolor="silver">
+      <select name="search12" size="1" class=dataListEntry ID="Select1">
+        <%=s12%>
+      </select>
+    </td></tr>      
+</table>
+<table width="80%" align=right><tr><td></td><td align=right>
+  <input type="submit" value=" 查詢 " class=dataListButton name="btn" onsubmit="btn_onclick" style="cursor:hand">
+  <input type="button" value=" 結束 " class=dataListButton name="btn1" style="cursor:hand">
+</FORM>
+</body>
+</html>

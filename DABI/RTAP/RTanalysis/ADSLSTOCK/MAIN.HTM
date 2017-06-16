@@ -1,0 +1,57 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>ADSL券商專案業績資料分析</title>
+<script language="JavaScript" fptype="dynamicanimation">
+<!--
+function dynAnimation() {}
+function clickSwapImg() {}
+//-->
+</script>
+<script language="JavaScript1.2" fptype="dynamicanimation" src="animate.js">
+</script>
+<script language=vbscript>
+  sub newurl(num)
+    select case num
+      case 1
+        prog="stockadslpivotMSOWC1.asp"
+      case 2
+        prog="stockadslpivotMSOWC2.asp"  
+      case 3
+  '      prog="workmanSelfCnt.asp"
+      case 4
+  '      prog="workmanPercent.asp"        
+      case 5
+  '      prog="TotalpivotMSOWC4.asp"                
+      case else
+
+    end select
+    xx=window.screen.width -7
+    yy=window.screen.height -74
+    features="top=0,left=0,status=yes,location=no,menubar=no,scrollbars=yes" & ",height=" & yy & ",width=" & xx
+    result=window.open (prog,"ppAP",features)
+    window.event.returnValue=False
+  end sub
+</script>
+
+</head>
+
+<body style="BACKGROUND-COLOR: lightblue" onload="dynAnimation()">
+<p style="FONT-SIZE: 16pt; COLOR: #ff0082; FONT-FAMILY: 細明體">ADSL券商專案業績資料分析</p>
+<p onclick="newurl(1)" onmouseover="rollIn(this)" onmouseout         
+="rollOut(this)"
+ language="Javascript1.2" dynamicanimation="fpAnimformatRolloverFP1" fprolloverstyle="font-size: 12pt; color: #FF0000; font-family: 標楷體; background-color: #e0ffff; cursor:hand">
+ <font color="#0000ff" size="4" face="細明體"><IMG  src="bgnAnalysisa.gif" width=30 height=30> 券商專案 業務組別 分析圖表</font></p>
+<p onclick="newurl(2)" onmouseover="rollIn(this)" onmouseout         
+="rollOut(this)"
+ language="Javascript1.2" dynamicanimation="fpAnimformatRolloverFP1" fprolloverstyle="font-size: 12pt; color: #FF0000; font-family: 標楷體; background-color: #e0ffff; cursor:hand">
+ <font color="#0000ff" size="4" face="細明體"><IMG  src="bgnAnalysisa.gif" width=30 height=30> 券商專案 證券公司 分析圖表</font></p>
+&nbsp;</FONT>請選擇上列分析項目 
+,並依照查詢畫面點選查詢條件</P></FONT>
+
+</body>
+
+</html>

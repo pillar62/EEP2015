@@ -1,0 +1,6 @@
+8.0
+3
+1       SQLCHAR       0       15      ";"                       1     CSCUSID       Chinese_Taiwan_Stroke_CI_AS
+2       SQLCHAR       0       40      ";"                       2     CSBARCOD      Chinese_Taiwan_Stroke_CI_AS
+3       SQLCHAR       0       16      "
+"                    3     ATMCOD        Chinese_Taiwan_Stroke_CI_AS

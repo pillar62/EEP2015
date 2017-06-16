@@ -1,0 +1,155 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=big5">
+		<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+		<meta name="ProgId" content="FrontPage.Editor.Document">
+		<title>東森業績資料查詢</title>
+		<OBJECT classid="CLSID:B8C54992-B7BF-11D3-AACE-0080C8BA466E" codebase="/webap/activex/EF2KDT.CAB#version=9,0,0,3" height="60" id="objEF2KDT" style="DISPLAY: none; HEIGHT: 0px; LEFT: 0px; TOP: 0px; WIDTH: 0px" width="60" VIEWASTEXT>
+			<PARAM NAME="_ExtentX" VALUE="1270">
+			<PARAM NAME="_ExtentY" VALUE="1270">
+		</OBJECT>
+		<script language="vbscript">
+  sub newurl(num)
+    select case num
+      case 1
+           IF LEN(TRIM(document.all("key1").value)) = 0 THEN
+              STRTIME=""
+           ELSE
+              STRTIME=" 00:00:00 "
+           END IF
+           IF LEN(TRIM(document.all("key2").value)) = 0 THEN
+              ENDTIME=""
+           ELSE
+              ENDTIME=" 23:59:59 "
+           END IF
+           prog="AVSadslpivotMSOWC1.asp" & "?key=" & document.all("key1").value & STRTIME & ";"& document.all("key2").value & ENDTIME 
+      case 2
+           IF LEN(TRIM(document.all("key3").value)) = 0 THEN
+              STRTIME=""
+           ELSE
+              STRTIME=" 00:00:00 "
+           END IF
+           IF LEN(TRIM(document.all("key4").value)) = 0 THEN
+              ENDTIME=""
+           ELSE
+              ENDTIME=" 23:59:59 "
+           END IF
+           prog="AVSadslpivotMSOWC2.asp" & "?key=" & document.all("key3").value & STRTIME  &";"& document.all("key4").value& ENDTIME 
+      case 3
+           IF LEN(TRIM(document.all("key5").value)) = 0 THEN
+              STRTIME=""
+           ELSE
+              STRTIME=" 00:00:00 "
+           END IF
+           IF LEN(TRIM(document.all("key6").value)) = 0 THEN
+              ENDTIME=""
+           ELSE
+              ENDTIME=" 23:59:59 "
+           END IF
+           prog="AVSadslpivotMSOWC3.asp" & "?key=" & document.all("key5").value & STRTIME  &";"& document.all("key6").value& ENDTIME 
+      case 4
+           IF LEN(TRIM(document.all("key7").value)) = 0 THEN
+              STRTIME=""
+           ELSE
+              STRTIME=" 00:00:00 "
+           END IF
+           IF LEN(TRIM(document.all("key8").value)) = 0 THEN
+              ENDTIME=""
+           ELSE
+              ENDTIME=" 23:59:59 "
+           END IF
+           prog="AVSadslpivotMSOWC4.asp" & "?key=" & document.all("key7").value & STRTIME  &";"& document.all("key8").value& ENDTIME            
+      case 5
+           IF LEN(TRIM(document.all("key9").value)) = 0 THEN
+              STRTIME=""
+           ELSE
+              STRTIME=" 00:00:00 "
+           END IF
+           IF LEN(TRIM(document.all("key10").value)) = 0 THEN
+              ENDTIME=""
+           ELSE
+              ENDTIME=" 23:59:59 "
+           END IF
+           prog="AVSadslpivotMSOWC5.asp" & "?key=" & document.all("key9").value & STRTIME  &";"& document.all("key10").value& ENDTIME                       
+    end select
+    xx=window.screen.width -7
+    yy=window.screen.height -74
+    features="top=0,left=0,status=yes,location=no,menubar=no,scrollbars=yes" & ",height=" & yy & ",width=" & xx
+    result=window.open (prog,"ppAP",features)
+    window.event.returnValue=False
+  end sub
+Sub Srbtnonclick()
+    Dim ClickID
+    ClickID=mid(window.event.srcElement.id,2,len(window.event.srcElement.id)-1)
+    clickkey="key" & clickid
+    if isdate(document.all(clickkey).value) then
+	   objEF2KDT.varDefaultDateTime=document.all(clickkey).value
+    end if
+    call objEF2KDT.show(1)
+    if objEF2KDT.strDateTime <> "" then
+       document.all(clickkey).value = objEF2KDT.strDateTime
+    end if
+END SUB
+Sub SrClear()
+       Dim ClickID
+       ClickID=mid(window.event.srcElement.id,2,len(window.event.srcElement.id)-1)
+       clickkey="C" & clickid
+       clearkey="key" & clickid       
+       if len(trim(document.all(clearkey).value)) <> 0 then
+          document.all(clearkey).value =  ""
+          '當處理人員及處理廠商皆為空白時，才可清除此欄位資料
+       end if
+End Sub      
+Sub ImageIconOver()
+       self.event.srcElement.style.borderBottom = "black 1px solid"
+       self.event.srcElement.style.borderLeft="white 1px solid"
+       self.event.srcElement.style.borderRight="black 1px solid"
+       self.event.srcElement.style.borderTop="white 1px solid"   
+End Sub
+   
+Sub ImageIconOut()
+       self.event.srcElement.style.borderBottom = ""
+       self.event.srcElement.style.borderLeft=""
+       self.event.srcElement.style.borderRight=""
+       self.event.srcElement.style.borderTop=""
+End Sub          
+		</script>
+	</head>
+	<body style="BACKGROUND-COLOR: lightblue">
+		<p style="COLOR: #ff0082; FONT-FAMILY: 細明體; FONT-SIZE: 16pt">業績分析</p>
+		<p onclick="newurl(1)" STYLE="cursor:hand">
+			<font color="#0000ff" size="4" face="細明體"><IMG height="30" src="bgnAnalysisa.gif" width="30">東森AVS499業務組別業績統計</font></p>
+		<p>資料起迄日︰<input type="text" size="12" readonly name="key1"> <input type="button" id="B1" name="B1" height="100%" width="100%" style="Z-INDEX: 1" value="...." onclick="SrBtnOnClick">
+			<IMG SRC="/WEBAP/IMAGE/IMGDELETE.GIF" alt="清除" id="C1" name="C1" style="Z-INDEX: 1" border="0" onmouseover="ImageIconOver" onmouseout="ImageIconOut" onclick="SrClear">
+			迄<input type="text" size="12" readonly name="key2"><input type="button" id="B2" name="B2" height="100%" width="100%" style="Z-INDEX: 1" value="...." onclick="SrBtnOnClick">
+			<IMG SRC="/WEBAP/IMAGE/IMGDELETE.GIF" alt="清除" id="C2" name="C2" style="Z-INDEX: 1" border="0" onmouseover="ImageIconOver" onmouseout="ImageIconOut" onclick="SrClear">
+		<p onclick="newurl(2)" STYLE="cursor:hand">
+			<font color="#0000ff" size="4" face="細明體"><IMG height="30" src="bgnAnalysisa.gif" width="30">東森AVS499業務人員裝機統計</font></p>
+		<p>資料起迄日︰<input type="text" size="12" readonly name="key3"> <input type="button" id="B3" name="B3" height="100%" width="100%" style="Z-INDEX: 1" value="...." onclick="SrBtnOnClick">
+			<IMG SRC="/WEBAP/IMAGE/IMGDELETE.GIF" alt="清除" id="C3" name="C3" style="Z-INDEX: 1" border="0" onmouseover="ImageIconOver" onmouseout="ImageIconOut" onclick="SrClear">
+			迄<input type="text" size="12" readonly name="key4"><input type="button" id="B4" name="B4" height="100%" width="100%" style="Z-INDEX: 1" value="...." onclick="SrBtnOnClick">
+			<IMG SRC="/WEBAP/IMAGE/IMGDELETE.GIF" alt="清除" id="C4" name="C4" style="Z-INDEX: 1" border="0" onmouseover="ImageIconOver" onmouseout="ImageIconOut" onclick="SrClear">
+		<p onclick="newurl(3)" STYLE="cursor:hand">
+			<font color="#0000ff" size="4" face="細明體"><IMG height="30" src="bgnAnalysisa.gif" width="30">東森AVS499工務主線裝機統計</font></p>
+		<p>資料起迄日︰<input type="text" size="12" readonly name="key5"> <input type="button" id="B5" name="B5" height="100%" width="100%" style="Z-INDEX: 1" value="...." onclick="SrBtnOnClick">
+			<IMG SRC="/WEBAP/IMAGE/IMGDELETE.GIF" alt="清除" id="C5" name="C5" style="Z-INDEX: 1" border="0" onmouseover="ImageIconOver" onmouseout="ImageIconOut" onclick="SrClear">
+			迄<input type="text" size="12" readonly name="key6"><input type="button" id="B6" name="B6" height="100%" width="100%" style="Z-INDEX: 1" value="...." onclick="SrBtnOnClick">
+			<IMG SRC="/WEBAP/IMAGE/IMGDELETE.GIF" alt="清除" id="C6" name="C6" style="Z-INDEX: 1" border="0" onmouseover="ImageIconOver" onmouseout="ImageIconOut" onclick="SrClear">
+		<p onclick="newurl(4)" STYLE="cursor:hand">
+			<font color="#0000ff" size="4" face="細明體"><IMG height="30" src="bgnAnalysisa.gif" width="30">東森AVS499主線派工狀態統計</font></p>
+		<p STYLE="DISPLAY:NONE">資料起迄日︰<input type="text" size="12" readonly name="key7" ID="Text1">
+			<input type="button" id="B7" name="B7" height="100%" width="100%" style="Z-INDEX: 1" value="...." onclick="SrBtnOnClick">
+			<IMG SRC="/WEBAP/IMAGE/IMGDELETE.GIF" alt="清除" id="Img1" name="C7" style="Z-INDEX: 1" border="0" onmouseover="ImageIconOver" onmouseout="ImageIconOut" onclick="SrClear">
+			迄<input type="text" size="12" readonly name="key8" ID="Text2"><input type="button" id="B8" name="B8" height="100%" width="100%" style="Z-INDEX: 1" value="...." onclick="SrBtnOnClick">
+			<IMG SRC="/WEBAP/IMAGE/IMGDELETE.GIF" alt="清除" id="C8" name="C8" style="Z-INDEX: 1" border="0" onmouseover="ImageIconOver" onmouseout="ImageIconOut" onclick="SrClear">
+		<p onclick="newurl(5)" STYLE="cursor:hand">
+			<font color="#0000ff" size="4" face="細明體"><IMG height="30" src="bgnAnalysisa.gif" width="30">東森AVS499用戶派工狀態統計</font></p>
+		<p STYLE="DISPLAY:NONE">資料起迄日︰<input type="text" size="12" readonly name="key9" ID="Text3">
+			<input type="button" id="B9" name="B9" height="100%" width="100%" style="Z-INDEX: 1" value="...." onclick="SrBtnOnClick">
+			<IMG SRC="/WEBAP/IMAGE/IMGDELETE.GIF" alt="清除" id="C9" name="C9" style="Z-INDEX: 1" border="0" onmouseover="ImageIconOver" onmouseout="ImageIconOut" onclick="SrClear">
+			迄<input type="text" size="12" readonly name="key10" ID="Text4"><input type="button" id="B10" name="B10" height="100%" width="100%" style="Z-INDEX: 1" value="...." onclick="SrBtnOnClick">
+			<IMG SRC="/WEBAP/IMAGE/IMGDELETE.GIF" alt="清除" id="C10" name="C10" style="Z-INDEX: 1" border="0" onmouseover="ImageIconOver" onmouseout="ImageIconOut" onclick="SrClear">
+		<P style="COLOR: #ff0082; FONT-FAMILY: 細明體; FONT-SIZE: 12pt">
+			請選擇上列分析項目,並依照查詢畫面點選查詢條件</P>
+	</body>
+</html>

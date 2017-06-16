@@ -1,0 +1,12 @@
+
+Pinging 122.146.77.56 with 32 bytes of data:
+
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 122.146.77.56:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum =  0ms, Average =  0ms

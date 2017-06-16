@@ -1,0 +1,32 @@
+<style>
+<!--
+  .dataListTitle
+    {font-family:新細明體;font-size:15;color:blue;}
+  .dataListHead
+    {font-family:新細明體;font-size:12;background-color:teal;color:white;}
+  .dataListData
+    {font-family:新細明體;font-size:12;background-color:lightblue;}
+  .dataListEntry
+    {font-family:新細明體;font-size:12;background-color:lightyellow;}
+  .dataListMessage
+    {font-family:新細明體;font-size:12;color:red;font-weight:bold;}
+  .dataListButton
+    {font-family:新細明體;font-size:15;background-color:purple;color:white;}
+  .dataListSearch
+    {background-color:purple;font-family:新細明體;font-size:12;color:white;}
+  .dataListSearch2
+    {background-color:#C1C1C1;font-family:新細明體;font-size:12;}
+  .dataListTagOn
+    {background-color:#C3C3C3;display:''}
+  .dataListTagOf
+    {background-color:#F3F3F3;display:none}
+  .dataListTagsOn
+    {background-color:#C3C3C3;cursor:hand}
+  .dataListTagsOf
+    {background-color:#F3F3F3;cursor:hand}
+  .dataListT1ON
+    {background-color:#F3F3F3;cursor:hand}   
+  .dataListT1OF
+    {background-color:#C3C3C3;display:''}     
+-->
+</style>

@@ -1,0 +1,9 @@
+8.0
+7
+1       SQLCHAR       0       10      "\t"                      3     CUSNO         Chinese_Taiwan_Stroke_CI_AS
+2       SQLCHAR       0       10      "\t"                      4     HBNO          Chinese_Taiwan_Stroke_CI_AS
+3       SQLCHAR       0       10      "\t"                      5     APPLYDATC     Chinese_Taiwan_Stroke_CI_AS
+4       SQLCHAR       0       20      "\t"                      6     STATUS        Chinese_Taiwan_Stroke_CI_AS
+5       SQLCHAR       0       200     "\t"                      7     CUSNC         Chinese_Taiwan_Stroke_CI_AS
+6       SQLCHAR       0       100     "\t"                      8     TEL           Chinese_Taiwan_Stroke_CI_AS
+7       SQLCHAR       0       400     "\r\n"                    9     ADDR          Chinese_Taiwan_Stroke_CI_AS

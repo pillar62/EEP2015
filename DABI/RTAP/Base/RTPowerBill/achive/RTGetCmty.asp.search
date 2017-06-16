@@ -1,0 +1,129 @@
+<%@ Language=VBScript%>
+<!-- #include virtual="/Webap/include/RTGetUserLevel.inc" -->
+<!-- #include virtual="/Webap/include/RTGetUserEmply.inc" -->
+<% 
+  Dim conn, rs, casetype, sql, comn, billno
+  
+  key=Request("key")
+  If len(trim(key))=0 Then key=Request.Form("key")
+  if len(trim(comn))=0 then comn = request.Form("txtSearchCOMN")
+  
+'response.Write "comn="&request.Form("txtSearchCOMN")
+  
+  set conn=server.CreateObject("ADODB.Connection")
+  set rs=server.CreateObject("ADODB.Recordset")
+  DSN="DSN=RTLib"
+  Conn.Open DSN
+  sql ="select casetype from RTPowerBillH where BillNo ='" &key&"' "
+'Response.Write SQL  
+  rs.Open sql,conn  
+  if not rs.EOF then casetype = rs("casetype")
+  rs.Close
+
+'response.Write "casetype="&casetype  
+
+  if casetype ="01" then		'CHT 599'
+		sql="select a.COMQ1, 0 as LINEQ1, min(b.DOCKETDAT) as FIRSTDOCKET, a.COMN "_
+		   &"from RTCmty a inner join RTCust b on a.COMQ1 = b.COMQ1 "_
+		   &"where a.RCOMDROP is Null and b.DROPDAT is Null and b.DOCKETDAT is not null "_
+		   &"and a.comn like '%" &comn& "%' "_
+		   &"group by a.COMQ1, COMN ORDER BY COMN "
+  elseif casetype ="02" then	'CHT 399'
+		sql="select b.COMQ1, 0 as LINEQ1, min(b.DOCKETDAT) as FIRSTDOCKET, a.COMN "_
+		   &"from RTCustAdslCmty a inner join RTCustAdsl b on a.CUTYID = b.COMQ1 "_
+		   &"where a.RCOMDROP is Null and b.DROPDAT is Null and b.DOCKETDAT is not null "_
+		   &"and a.comn like '%" &comn& "%' "_
+		   &"group by b.COMQ1, COMN ORDER BY COMN "
+  elseif casetype ="03" then	'Sparq 399'
+		sql="select b.COMQ1, 0 as LINEQ1, min(b.DOCKETDAT) as FIRSTDOCKET, a.COMN "_
+		   &"from RTSparqAdslCmty a inner join RTSparqAdslCust b on a.CUTYID = b.COMQ1 "_
+		   &"where a.RCOMDROP is Null and b.DROPDAT is Null and b.DOCKETDAT is not null "_
+		   &"and a.comn like '%" &comn& "%' "_
+		   &"group by b.COMQ1, COMN ORDER BY COMN "
+  elseif casetype ="04" then	'EBT'
+		sql="select b.COMQ1, b.LINEQ1, min(c.DOCKETDAT) as FIRSTDOCKET, a.COMN +'-'+ convert(varchar(4),b.LINEQ1) as COMN "_
+		   &"from RTEbtCmtyH a inner join RTEbtCmtyLine b on a.COMQ1 = b.COMQ1 "_
+		   &"inner join RTEbtCust c on b.COMQ1 = c.COMQ1 and b.LINEQ1 = c.LINEQ1 "_
+		   &"where b.DROPDAT is Null and b.CANCELDAT is Null "_
+		   &"and c.DROPDAT is Null and c.CANCELDAT is Null and c.DOCKETDAT is not null "_
+		   &"and a.comn like '%" &comn& "%' "_
+		   &"group by b.COMQ1, b.LINEQ1, a.COMN +'-'+ convert(varchar(4),b.LINEQ1) ORDER BY a.COMN +'-'+ convert(varchar(4),b.LINEQ1) "
+  else
+		sql=""
+  end if
+'Response.Write SQL
+  rs.Open sql,conn
+  s1=""
+  Do While Not rs.Eof
+     s1=s1 &"<option value=""" &rs("COMQ1") & ";" & rs("LINEQ1") & ";" & rs("FIRSTDOCKET") &""">" &rs("COMN") &"</option>"
+     rs.MoveNext
+  Loop
+  rs.Close    
+
+  conn.Close   
+  set rs=Nothing   
+   set conn=Nothing
+%>
+<HTML>
+<HEAD>
+	<meta http-equiv="Content-Type" content="text/html; charset=Big5">
+	<TITLE>社區選擇清單</TITLE>
+</HEAD>
+<BODY style="BACKGROUND: lightblue">
+<SCRIPT LANGUAGE="VBScript">
+  Sub lstOrder1_onclick()
+      selno=lstorder1.selectedIndex
+      if selno >=0 then
+         window.document.all("cmdtext").value= lstOrder1(selno).innerHTML
+         window.document.all("cmdtext1").value=lstOrder1(selno).value
+         window.document.all("cmdtext2").value="Y"         
+      end if
+  End Sub
+  
+  Sub cmdSure_onClick()
+    ReturnValue=""
+    'if len(trim(window.document.all("cmdtext").value)) = 0 then
+    '   msgbox "請選擇鄉鎮市區!",vbokonly,"錯誤訊息視窗"
+    'else    
+       returnvalue= window.document.all("cmdtext1").value &";"& window.document.all("cmdtext").value &";"& window.document.all("cmdtext2").value
+       window.close
+    'end if
+  End Sub
+
+  Sub cmdCancel_onClick()
+      returnvalue=""
+      window.close
+  End Sub
+  
+  'Sub BtnSearch_onClick()
+	'window.document.all("lstOrder1").outerHTML =""
+	'window.document.all("lstOrder1").options(0)="123"
+'     window.document.all("lstOrder1").outerText =""
+ ' End Sub
+</SCRIPT>
+
+<form name="form1"  action ="RTGetCmty.asp" method="post" ID="Form1" >
+<table id="table1">
+<tr><td><INPUT name ="txtSearchCOMN" size="30" type="text" value="<%=comn%>">
+		<INPUT id="BtnSearch" type="submit" value="尋找"></td>
+		<INPUT name ="key" style="display:none;" type="text" size="20" value="<%=key%>">		
+</tr>
+</form>
+
+<tr><td>社區選擇清單</td></tr>
+
+<tr><td><SELECT id="lstOrder1" size="5">
+			<%=s1%></SELECT>
+</td></tr>
+
+<tr><td>目前選擇內容</td></tr>
+<tr><td><INPUT id="cmdtext" size="30" type="text" readonly>
+		<INPUT id="cmdtext1" style="display:none;" size="30" type="text" readonly>
+		<INPUT id="cmdtext2" style="display:none;" size="30" type="text" readonly>
+</td></tr>		
+<tr><td><INPUT id="cmdCancel" type="button" value="取消">
+		<INPUT id="cmdSure" type="button" value="確定">
+</td></tr>
+</table>
+</BODY>
+</HTML>

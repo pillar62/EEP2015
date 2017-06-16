@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=big5">
+		<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+		<meta name="ProgId" content="FrontPage.Editor.Document">
+		<title>中華ADSL399業績資料查詢</title>
+		<OBJECT classid="CLSID:B8C54992-B7BF-11D3-AACE-0080C8BA466E" codebase="/webap/activex/EF2KDT.CAB#version=9,0,0,3" height="60" id="objEF2KDT" style="DISPLAY: none; HEIGHT: 0px; LEFT: 0px; TOP: 0px; WIDTH: 0px" width="60" VIEWASTEXT>
+			<PARAM NAME="_ExtentX" VALUE="1270">
+			<PARAM NAME="_ExtentY" VALUE="1270">
+		</OBJECT>
+		<script language="vbscript">
+  sub newurl(num)
+    select case num
+      case 1
+           IF LEN(TRIM(document.all("key1").value)) = 0 THEN
+              STRTIME=""
+              ENDTIME=""
+           ELSE
+              STRTIME=" 00:00:00 "
+              ENDTIME=" 23:59:59 "
+           END IF
+           IF LEN(TRIM(document.all("key1").value)) = 0 THEN
+              ENDTIME=""
+           ELSE
+              ENDTIME=" 23:59:59 "
+           END IF
+        prog="CHTadslpivotMSOWC1.asp" & "?key=" & document.all("key1").value & STRTIME &";" & document.all("key1").value & ENDTIME & ";1" 
+      case 2
+           IF LEN(TRIM(document.all("key2").value)) = 0 THEN
+              STRTIME=""
+           ELSE
+              STRTIME=" 00:00:00 "
+           END IF
+           IF LEN(TRIM(document.all("key3").value)) = 0 THEN
+              ENDTIME=""
+           ELSE
+              ENDTIME=" 23:59:59 "
+           END IF
+        prog="CHTadslpivotMSOWC1.asp" & "?key=" & document.all("key2").value & STRTIME &";"& document.all("key3").value & ENDTIME & ";2"         
+    end select
+    xx=window.screen.width -7
+    yy=window.screen.height -74
+    features="top=0,left=0,status=yes,location=no,menubar=no,scrollbars=yes" & ",height=" & yy & ",width=" & xx
+    result=window.open (prog,"ppAP",features)
+    window.event.returnValue=False
+  end sub
+Sub Srbtnonclick()
+    Dim ClickID
+    ClickID=mid(window.event.srcElement.id,2,len(window.event.srcElement.id)-1)
+    clickkey="key" & clickid
+    if isdate(document.all(clickkey).value) then
+	   objEF2KDT.varDefaultDateTime=document.all(clickkey).value
+    end if
+    call objEF2KDT.show(1)
+    if objEF2KDT.strDateTime <> "" then
+       document.all(clickkey).value = objEF2KDT.strDateTime
+    end if
+END SUB
+Sub SrClear()
+       Dim ClickID
+       ClickID=mid(window.event.srcElement.id,2,len(window.event.srcElement.id)-1)
+       clickkey="C" & clickid
+       clearkey="key" & clickid       
+       if len(trim(document.all(clearkey).value)) <> 0 then
+          document.all(clearkey).value =  ""
+          '當處理人員及處理廠商皆為空白時，才可清除此欄位資料
+       end if
+End Sub      
+Sub ImageIconOver()
+       self.event.srcElement.style.borderBottom = "black 1px solid"
+       self.event.srcElement.style.borderLeft="white 1px solid"
+       self.event.srcElement.style.borderRight="black 1px solid"
+       self.event.srcElement.style.borderTop="white 1px solid"   
+End Sub
+   
+Sub ImageIconOut()
+       self.event.srcElement.style.borderBottom = ""
+       self.event.srcElement.style.borderLeft=""
+       self.event.srcElement.style.borderRight=""
+       self.event.srcElement.style.borderTop=""
+End Sub          
+		</script>
+	</head>
+	<body style="BACKGROUND-COLOR: lightblue">
+		<p style="COLOR: #ff0082; FONT-FAMILY: 細明體; FONT-SIZE: 16pt">業績分析</p>
+		<p onclick="newurl(1)" STYLE="cursor:hand">
+			<font color="#0000ff" size="4" face="細明體"><IMG height="30" src="bgnAnalysisa.gif" width="30">中華ADSL399業績查詢(累計--扣除退租)</font></p>
+		<p>資料累計至︰<input type="text" size="12" readonly name="key1"> <input type="button" id="B1" name="B1" height="100%" width="100%" style="Z-INDEX: 1" value="...." onclick="SrBtnOnClick">
+			<IMG SRC="/WEBAP/IMAGE/IMGDELETE.GIF" alt="清除" id="C1" name="C1" style="Z-INDEX: 1" border="0" onmouseover="ImageIconOver" onmouseout="ImageIconOut" onclick="SrClear">
+		<p onclick="newurl(2)" STYLE="cursor:hand">
+			<font color="#0000ff" size="4" face="細明體"><IMG height="30" src="bgnAnalysisa.gif" width="30">中華ADSL399業績查詢(期間--不扣退租)</font></p>
+		<p>資料起迄日︰<input type="text" size="12" readonly name="key2" ID="Text1"> <input type="button" id="B2" name="B2" height="100%" width="100%" style="Z-INDEX: 1" value="...." onclick="SrBtnOnClick">
+			<IMG SRC="/WEBAP/IMAGE/IMGDELETE.GIF" alt="清除" id="C2" name="C2" style="Z-INDEX: 1" border="0" onmouseover="ImageIconOver" onmouseout="ImageIconOut" onclick="SrClear">
+			迄<input type="text" size="12" readonly name="key3" ID="Text2"> <input type="button" id="B3" name="B3" height="100%" width="100%" style="Z-INDEX: 1" value="...." onclick="SrBtnOnClick">
+			<IMG SRC="/WEBAP/IMAGE/IMGDELETE.GIF" alt="清除" id="C3" name="C3" style="Z-INDEX: 1" border="0" onmouseover="ImageIconOver" onmouseout="ImageIconOut" onclick="SrClear">
+		<P style="COLOR: #ff0082; FONT-FAMILY: 細明體; FONT-SIZE: 12pt">
+			請選擇上列分析項目,並依照查詢畫面點選查詢條件</P>
+	</body>
+</html>

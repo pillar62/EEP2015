@@ -1,0 +1,150 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="zh-tw">
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>客訴狀況處理表</title>
+</head>
+<Script Language="VBScript">
+sub b1_onclick()
+	if isdate(document.all("T11").value) then
+		objEF2KDT.varDefaultDateTime=document.all("T11").value
+	end if
+	call objEF2KDT.show(0)
+	if objEF2KDT.strDateTime <> "" then
+	    document.all("T11").value = objEF2KDT.strDateTime
+	end if
+end sub
+sub b2_onclick()
+	if isdate(document.all("T9").value) then
+		objEF2KDT.varDefaultDateTime=document.all("T9").value
+	end if
+	call objEF2KDT.show(1)
+	if objEF2KDT.strDateTime <> "" then
+	    document.all("T9").value = objEF2KDT.strDateTime
+	end if
+end sub
+sub b3_onclick()
+	if isdate(document.all("T10").value) then
+		objEF2KDT.varDefaultDateTime=document.all("T10").value
+	end if
+	call objEF2KDT.show(2)
+	if objEF2KDT.strDateTime <> "" then
+	    document.all("T10").value = objEF2KDT.strDateTime
+	end if
+end sub
+</script>
+<body>
+<OBJECT classid=CLSID:B8C54992-B7BF-11D3-AACE-0080C8BA466E 
+codeBase=/webap/activex/EF2KDT.CAB#version=9,0,0,3 
+height=60 id=objEF2KDT 
+style="DISPLAY: none; HEIGHT: 0px; LEFT: 0px; TOP: 0px; WIDTH: 0px" width=60>
+  <param name="_ExtentX" value="1588">
+  <param name="_ExtentY" value="1588"></OBJECT>
+
+<center><H3>客訴狀況處理表</H3>
+<table border="1" width="100%" cellspacing="0" cellpadding="0" height="717">
+  <tr>
+    <td width="14%" bgcolor="#006666" class="datalisthead" height="23"><font size="1" color="#FFFFFF">案件編號</font></td>
+    <td width="36%" bgcolor="#c0c0c0" class="DataListEntry" height="23"><!--webbot
+      bot="Validation" B-Value-Required="TRUE" I-Minimum-Length="10"
+      I-Maximum-Length="10" --><input name="key0" size="30" value="<%=dspkey(0)%>" maxlength="10" ></td>
+    <td width="15%" bgcolor="#006666" class="DataListHead" height="23"><font size="1" color="#FFFFFF">產品</font></td>
+    <td width="35%" bgcolor="#c0c0c0" class="DataLIstEntry" height="23"><input name="key1" size="30" value="<%=dspkey(1)%>" ></td>
+  </tr>
+  <tr>
+    <td width="14%" bgcolor="#006666" class="datalisthead" height="23"><font size="1" color="#FFFFFF">客戶名稱</font></td>
+    <td width="36%" bgcolor="#c0c0c0" class="DataListEntry" height="23"><input name="key2" size="30" value="<%=dspkey(2)%>" ></td>
+    <td width="15%" bgcolor="#006666" class="DataListHead" height="23"><font size="1" color="#FFFFFF">身份證字號</font></td>
+    <td width="35%" bgcolor="#c0c0c0" class="DataLIstEntry" height="23"><input name="key3" size="30" value="<%=dspkey(3)%>" ></td>
+  </tr>
+  <tr>
+    <td width="14%" bgcolor="#006666" class="datalisthead" height="23"><font size="1" color="#FFFFFF">客戶電話(1)</font></td>
+    <td width="36%" bgcolor="#c0c0c0" class="DataListEntry" height="23"><input name="key4" size="30" value="<%=dspkey(4)%>" ></td>
+    <td width="15%" bgcolor="#006666" class="DataListHead" height="23"><font size="1" color="#FFFFFF">客戶電話(2)</font></td>
+    <td width="35%" bgcolor="#c0c0c0" class="DataLIstEntry" height="23"><input name="key5" size="30" value="<%=dspkey(5)%>" ></td>
+  </tr>
+  <tr>
+    <td width="14%" bgcolor="#006666" class="datalisthead" height="23"><font size="1" color="#FFFFFF">客戶行動電話</font></td>
+    <td width="36%" bgcolor="#c0c0c0" class="DataListEntry" height="23"><input name="key6" size="30" value="<%=dspkey(6)%>" ></td>
+    <td width="15%" bgcolor="#006666" class="DataListHead" height="23"><font size="1" color="#FFFFFF">受理人員</font></td>
+    <td width="35%" bgcolor="#c0c0c0" class="DataLIstEntry" height="23"><input name="key7" size="30" value="<%=dspkey(7)%>" ></td>
+  </tr>
+  <tr>
+    <td width="14%" bgcolor="#006666" class="datalisthead" height="23"><font size="1" color="#FFFFFF">社區名稱</font></td>
+    <td width="36%" bgcolor="#c0c0c0" class="DataListEntry" height="23"><input name="key8" size="30" value="<%=dspkey(8)%>" ></td>
+    <td width="15%" bgcolor="#006666" class="DataListHead" height="23"><font size="1" color="#FFFFFF">地址</font></td>
+    <td width="35%" bgcolor="#c0c0c0" class="DataLIstEntry" height="23"><input name="key9" size="30" value="<%=dspkey(9)%>" ></td>
+  </tr>
+  <tr>
+    <td width="14%" bgcolor="#006666" class="datalisthead" height="25"><font size="1" color="#FFFFFF">受理時間</font></td>
+    <td width="36%" bgcolor="#c0c0c0" class="DataListEntry" height="25"><input name="key10" size="30" readonly value="<%=dspkey(10)%>">
+    <input type="button" id="B2"  name="B2" height="100%" width="100%" style="Z-INDEX: 1" value="...."> 
+    </td> 
+    <td width="15%" bgcolor="#006666" class="DataListHead" height="25"><font size="1" color="#FFFFFF">發文時間</font></td>
+    <td width="35%" bgcolor="#c0c0c0" class="DataLIstEntry" height="25"><input name="key11" size="30" readonly value="<%=dspkey(11)%>">
+    <input type="button" id="B3"  name="B3" height="100%" width="100%" style="Z-INDEX: 1" value="...."> 
+    </td> 
+  </tr> 
+  <tr> 
+    <td width="100%" colspan="4" bgcolor="#a4bcdb" height="11"> 
+   <p align="center"><font color="#000000" size=1>客戶問題描述</font></p></td> 
+  </tr> 
+  <tr> 
+    <td width="100%" colspan="4" bgcolor="#c0c0c0" class="DataListEntry" height="311"> 
+      <p style="LINE-HEIGHT: 100%; MARGIN-BOTTOM: 5px; MARGIN-TOP: 5px"  
+     ><font color="#ff0000" size=1>無法上網時間為&nbsp;&nbsp;&nbsp; <input name="key12" size="20" value="<%=dspkey(12)%>" 
+     ><input type="button" id="B1"  name="B1" height="100%" width="100%" style="Z-INDEX: 1" value="...."></font>   
+     <font size=1>                            
+      <p style="LINE-HEIGHT: 100%; MARGIN-BOTTOM: 5px; MARGIN-TOP: 5px" 
+     >問題：</p>                               
+      <p style="LINE-HEIGHT: 100%; MARGIN-BOTTOM: 5px; MARGIN-TOP: 5px" 
+     >　 RT可以亮至　<input type="checkbox" name="C1">PWR&nbsp;                                    
+        <input type="checkbox" name="C2">TR&nbsp;   <input type="checkbox" name="C3">CD 燈 
+      　</p>
+      <p style="LINE-HEIGHT: 100%; MARGIN-BOTTOM: 5px; MARGIN-TOP: 5px" 
+     >　<input type="checkbox" name="C4">用戶COM PORT設定無誤 　</p>
+      <p style="LINE-HEIGHT: 100%; MARGIN-BOTTOM: 5px; MARGIN-TOP: 5px" 
+     >　<input type="checkbox" name="C5">用戶電腦螢幕出現『檢查使用者名稱及密碼』 
+      　</p>
+      <p style="LINE-HEIGHT: 100%; MARGIN-BOTTOM: 5px; MARGIN-TOP: 5px" 
+     >　<input type="checkbox" name="C6">用戶電腦螢幕出現『錯誤訊息 650 或 629，對方電腦沒有回應，請檢查伺服器的類型設定值』</p>                                  
+      <p style="LINE-HEIGHT: 100%; MARGIN-BOTTOM: 5px; MARGIN-TOP: 5px"  
+     >　<input type="checkbox" name="C7">連上網路，但速度過慢無法開啟網頁&nbsp;</p>
+      <p style="LINE-HEIGHT: 100%; MARGIN-BOTTOM: 5px; MARGIN-TOP: 5px" 
+     >　<input type="checkbox" name="C8">客戶要約定裝機時間&nbsp;</p>
+      <p style="LINE-HEIGHT: 100%; MARGIN-BOTTOM: 5px; MARGIN-TOP: 5px" 
+     >　<input type="checkbox" name="C9">其他</p>
+      <p style="LINE-HEIGHT: 100%; MARGIN-BOTTOM: 3px; MARGIN-TOP: 3px" align="center">
+      </font>
+      <TEXTAREA cols=91 name=S1 rows=5></TEXTAREA></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="4" bgcolor="#a4bcdb" height="11">
+      <p align="center"><font color="#000000" size=1>客服部處理措施</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="4" bgcolor="#c0c0c0" class="DataListEntry" height="117">
+      <p align="center"><TEXTAREA cols=91 name=S2 rows=5></TEXTAREA></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="4" bgcolor="#a4bcdb" height="11">
+      <p align="center"><font color="#000000" size=1>其它部門處理措施及說明</font></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="4" bgcolor="#c0c0c0" class="DataListEntry" height="117">
+      <p align="center"><TEXTAREA cols=91 name=S3 rows=5></TEXTAREA></p>
+    </td>
+  </tr>
+</table></center>
+
+</body>
+
+</html>

@@ -439,6 +439,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>txtTAXTYPE</rd:DefaultName>
+          <Top>0.03528cm</Top>
           <Left>6.87375cm</Left>
           <Height>0.64cm</Height>
           <Width>2.54cm</Width>
@@ -466,7 +467,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>txtTAXTYPE1</rd:DefaultName>
-          <Top>0.17639cm</Top>
+          <Top>0.10583cm</Top>
           <Left>3.21639cm</Left>
           <Height>0.64cm</Height>
           <Width>2.54cm</Width>

@@ -1,0 +1,147 @@
+<style>
+<!--
+.tochar
+	{font-size:10.0pt;mso-number-format:"\@";}
+.titleY
+	{font-size:10.0pt;font-weight:bold;background:peachpuff;}
+.titleN
+	{font-size:10.0pt;font-weight:bold;background:silver;}
+-->
+</style>
+
+<%
+    parm=request("parm")
+    v=split(parm,";")
+
+    Dim rs,conn, formid
+    Set conn=Server.CreateObject("ADODB.Connection")
+    conn.open "DSN=RTLib"
+    Set rs=Server.CreateObject("ADODB.Recordset")    
+    rs.Open "usp_RTSparqFtp '2','" & v(0) &"'", CONN
+    
+    ' 文字檔  =============================================
+	'Do While Not rs.Eof
+    '   response.Write rs("ftptext") & "<br><br>"
+    '   rs.MoveNext
+    'Loop
+    
+    ' EXCEL 檔 ==========================================
+	Response.Charset ="BIG5"    
+	Response.ContentType = "Content-Language;content=zh-tw"     
+	response.ContentType = "application/vnd.ms-excel"
+	Response.AddHeader "Content-Disposition","filename="& replace(v(0), "/", "") & ".xls"
+	response.Write "<table border=2>"
+	response.Write "<tr><td align =center colspan=49><b>元訊電子轉檔報竣及異動</b></td></tr>"
+	response.Write "<tr><td colspan=49><font size=2>文檔日期：" &now()& "</font></td></tr>"
+    response.Write "<TR>" &_
+				   "<td class=titleY>流水號</td>" &_
+				   "<td class=titleY>申請日期</td>" &_
+				   "<td class=titleY>竣工日期</td>" &_
+				   "<td class=titleY>申請種類</td>" &_
+				   "<td class=titleN>異動代碼</td>" &_
+				   "<td class=titleN>電話號碼</td>" &_
+				   "<td class=titleY>對帳號碼</td>" &_
+				   "<td class=titleY>協力商代碼</td>" &_
+				   "<td class=titleY>業務員代碼</td>" &_
+				   "<td class=titleY>客戶類別</td>" &_
+				   "<td class=titleN>公司名稱</td>" &_
+				   "<td class=titleN>公司負責人</td>" &_
+				   "<td class=titleN>負責人身份證字號</td>" &_
+				   "<td class=titleN>公司統編</td>" &_
+				   "<td class=titleY>服務方案</td>" &_
+				   "<td class=titleY>優惠代碼</td>" &_
+				   "<td class=titleY>用戶名稱</td>" &_
+				   "<td class=titleY>聯絡人證照類別</td>" &_
+				   "<td class=titleY>聯絡人證照號碼</td>" &_
+				   "<td class=titleY>聯絡人稱謂</td>" &_
+				   "<td class=titleY>聯絡人名稱</td>" &_
+				   "<td class=titleY>聯絡人聯絡電話</td>" &_
+				   "<td class=titleN>聯絡人出生日期</td>" &_
+				   "<td class=titleN>聯絡人行動電話</td>" &_
+				   "<td class=titleN>代理人證照類別</td>" &_
+				   "<td class=titleN>代理人證照號碼</td>" &_
+				   "<td class=titleN>代理人稱謂</td>" &_
+				   "<td class=titleN>代理人名稱</td>" &_
+				   "<td class=titleN>代理人聯絡電話</td>" &_
+				   "<td class=titleN>代理人出生日期</td>" &_
+				   "<td class=titleY>帳寄郵遞區號</td>" &_
+				   "<td class=titleY>帳寄縣市</td>" &_
+				   "<td class=titleY>帳寄鄉鎮市區</td>" &_
+				   "<td class=titleY>帳寄地址</td>" &_
+				   "<td class=titleN>戶籍郵遞區號</td>" &_
+				   "<td class=titleN>戶籍縣市</td>" &_
+				   "<td class=titleN>戶籍鄉鎮市區</td>" &_
+				   "<td class=titleN>戶籍地址</td>" &_
+				   "<td class=titleY>裝機郵遞區號</td>" &_
+				   "<td class=titleY>裝機縣市</td>" &_
+				   "<td class=titleY>裝機鄉鎮市區</td>" &_
+				   "<td class=titleY>裝機地址</td>" &_
+				   "<td class=titleY>社區名稱</td>" &_
+				   "<td class=titleY>IP ADDRESS FROM</td>" &_
+				   "<td class=titleY>IP ADDRESS END</td>" &_
+				   "<td class=titleY>NCIC預處理日期</td>" &_
+				   "<td class=titleY>第二證照類別</td>" &_
+				   "<td class=titleY>第二證照號碼</td>" &_
+				   "<td class=titleY>申請書編號</td>" &_
+				   "</TR>"
+	Do While Not rs.Eof
+    response.Write "<TR>" &_
+				   "<td class=tochar>"& rs("FORMID") &"</td>" &_
+				   "<td class=tochar>"& rs("RCVD") &"</td>" &_
+				   "<td class=tochar>"& rs("DOCKETDAT") &"</td>" &_
+				   "<td class=tochar>"& rs("APPLYKIND") &"</td>" &_
+				   "<td class=tochar>"& rs("UPDEVENT") &"</td>" &_
+				   "<td class=tochar>"& rs("EXTTEL") &"</td>" &_
+				   "<td class=tochar>"& rs("SPHNNO") &"</td>" &_
+				   "<td class=tochar>"& rs("COCOCODE") &"</td>" &_
+				   "<td class=tochar>"& rs("SALESID") &"</td>" &_
+				   "<td class=tochar>"& rs("CUSTKIND") &"</td>" &_
+				   "<td class=tochar>"& rs("CONAME") &"</td>" &_
+				   "<td class=tochar>"& rs("CORESPMAN") &"</td>" &_
+				   "<td class=tochar>"& rs("CORESPID") &"</td>" &_
+				   "<td class=tochar>"& rs("COID") &"</td>" &_
+				   "<td class=tochar>"& rs("CONNECTTYPE") &"</td>" &_
+				   "<td class=tochar>"& rs("CONNFEEOFF") &"</td>" &_
+				   "<td class=tochar>"& rs("CUSNC") &"</td>" &_
+				   "<td class=tochar>"& rs("CONTACTIDTYPE") &"</td>" &_
+				   "<td class=tochar>"& rs("CONTACTID") &"</td>" &_
+				   "<td class=tochar>"& rs("CONTACTSALU") &"</td>" &_
+				   "<td class=tochar>"& rs("CONTACT") &"</td>" &_
+				   "<td class=tochar>"& rs("CONTACTTEL") &"</td>" &_
+				   "<td class=tochar>"& rs("CONTACTBIRTH") &"</td>" &_
+				   "<td class=tochar>"& rs("CONTACTNOBILE") &"</td>" &_
+				   "<td class=tochar>"& rs("AGENTIDTYPE") &"</td>" &_
+				   "<td class=tochar>"& rs("AGENTID") &"</td>" &_
+				   "<td class=tochar>"& rs("AGENTSALU") &"</td>" &_
+				   "<td class=tochar>"& rs("AGENT") &"</td>" &_
+				   "<td class=tochar>"& rs("AGENTTEL") &"</td>" &_
+				   "<td class=tochar>"& rs("AGENTBIRTH") &"</td>" &_
+				   "<td class=tochar>"& rs("RZONE1") &"</td>" &_
+				   "<td class=tochar>"& rs("CUTNC1") &"</td>" &_
+				   "<td class=tochar>"& rs("TOWNSHIP1") &"</td>" &_
+				   "<td class=tochar>"& rs("RADDR1") &"</td>" &_
+				   "<td class=tochar>"& rs("RZONE3") &"</td>" &_
+				   "<td class=tochar>"& rs("CUTNC3") &"</td>" &_
+				   "<td class=tochar>"& rs("TOWNSHIP3") &"</td>" &_
+				   "<td class=tochar>"& rs("RADDR3") &"</td>" &_
+				   "<td class=tochar>"& rs("RZONE2") &"</td>" &_
+				   "<td class=tochar>"& rs("CUTNC2") &"</td>" &_
+				   "<td class=tochar>"& rs("TOWNSHIP2") &"</td>" &_
+				   "<td class=tochar>"& rs("RADDR2") &"</td>" &_
+				   "<td class=tochar>"& rs("COMN") &"</td>" &_
+				   "<td class=tochar>"& rs("IPADDR") &"</td>" &_
+				   "<td class=tochar>"& rs("IPADDR") &"</td>" &_
+				   "<td class=tochar>"& rs("NCICPREDATE") &"</td>" &_
+				   "<td class=tochar>"& rs("CONTACTIDTYPE2") &"</td>" &_
+				   "<td class=tochar>"& rs("CONTACTID2") &"</td>" &_
+				   "<td class=tochar>"& rs("APPLYNO") &"</td>" &_
+				   "</TR>"
+       rs.MoveNext
+    Loop
+	response.Write "</table>"   
+   
+    rs.Close
+    conn.Close
+    Set rs=Nothing
+    Set conn=Nothing
+%>

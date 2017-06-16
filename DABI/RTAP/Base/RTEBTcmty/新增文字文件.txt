@@ -1,0 +1,17 @@
+SELECT         RTEBTCMTYLINESNDWORKLOG.COMQ1, 
+                          RTEBTCMTYLINESNDWORKLOG.LINEQ1, 
+                          RTEBTCMTYLINESNDWORKLOG.PRTNO, 
+                          RTEBTCMTYLINESNDWORKLOG.ENTRYNO, 
+                          RTEBTCMTYLINESNDWORKLOG.CHGDAT, RTCode.CODENC, RTObj.CUSNC, 
+                          RTEBTCMTYLINESNDWORKLOG.SENDWORKDAT, 
+                          RTEBTCMTYLINESNDWORKLOG.DROPDAT, 
+                          RTEBTCMTYLINESNDWORKLOG.DROPDESC, 
+                          RTEBTCMTYLINESNDWORKLOG.CLOSEDAT, 
+                          RTEBTCMTYLINESNDWORKLOG.BONUSCLOSEYM
+FROM             RTCode RIGHT OUTER JOIN
+                          RTEBTCMTYLINESNDWORKLOG ON 
+                          RTCode.CODE = RTEBTCMTYLINESNDWORKLOG.CHGCODE AND 
+                          RTCode.KIND = 'G3' LEFT OUTER JOIN
+                          RTObj INNER JOIN
+                          RTEmployee ON RTObj.CUSID = RTEmployee.CUSID ON 
+                          RTEBTCMTYLINESNDWORKLOG.CHGUSR = RTEmployee.EMPLY
