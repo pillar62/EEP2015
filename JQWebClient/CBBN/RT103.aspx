@@ -54,6 +54,14 @@
             parent.addTab("主線派工", "CBBN/RT203.aspx?COMQ1=" + ss +"&LINEQ1="+s1);
         }
 
+        function LinkRT1031(val) {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.COMQ1;
+            var s1 = row.LINEQ1;
+            
+            parent.addTab("到期續約", "CBBN/RT1031.aspx?COMQ1=" + ss + "&LINEQ1=" + s1);
+        }
+
         function dgOnloadSuccess() {
             if (flag)
             {
@@ -142,7 +150,7 @@
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="設備查詢" Visible="True" Icon="icon-view" OnClick="LinkRT1011" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="用戶維護" Visible="True" Icon="icon-view" OnClick="LinkRT104" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="客服案件" Visible="True" Icon="icon-view" OnClick="LinkRT202" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="到期續約" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="到期續約" Visible="True" OnClick="LinkRT1031" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="撤線作業" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="做廢" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="作廢反轉" Visible="True" />

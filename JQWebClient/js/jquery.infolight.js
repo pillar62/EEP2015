@@ -6804,6 +6804,163 @@ function exportReport(dgid, remoteName, tableName, reportFileName, whereString, 
     //    });
 }
 
+function exportDevReport(dgid, remoteName, tableName, reportFileName, whereString, options) {
+    $.fn.Error.errorCode = 1080;
+    var RemoteName = "";
+    var TableName = "";
+    var ReportFileName = "";
+    var WhereString = "";
+    var WhereTextString = "";
+    var DataSetName = "";
+    if ($(dgid) != undefined && $(dgid).length != 0) {
+        RemoteName = getInfolightOption($(dgid)).remoteName;
+        TableName = getInfolightOption($(dgid)).tableName;
+        DataSetName = TableName;
+        ReportFileName = getInfolightOption($(dgid)).reportFileName;
+        var queryParams = $(dgid).datagrid('options').queryParams;
+        if (queryParams.queryWord != "") {
+            var queryWord = eval('(' + queryParams.queryWord + ')');
+            if (queryWord != undefined && queryWord != null)
+                WhereString = queryWord.whereString;
+        }
+        //WhereString = $(dgid).datagrid('getWhere');
+        WhereTextString = $(dgid).datagrid('getWhereText');
+    }
+    if (remoteName != undefined && remoteName != "undefined" && remoteName != "")
+        RemoteName = remoteName;
+    if (tableName != undefined && tableName != "undefined" && tableName != "")
+        TableName = tableName;
+    if (reportFileName != undefined && reportFileName != "undefined" && reportFileName != "")
+        ReportFileName = reportFileName;
+    if (whereString != undefined && whereString != "undefined" && whereString != "")
+        WhereString = whereString;
+    if (options && options.DataSetName) {
+        DataSetName = options.DataSetName;
+    }
+    if (RemoteName != "" && TableName != "" && ReportFileName != "") {
+        if (ReportFileName.toLowerCase().indexOf('.aspx') > 0) { //jquery 或者 sd 使用reportName
+            var developer = $('#_DEVELOPERID').val();
+            if (developer) {
+                ReportFileName = 'preview' + developer + '/' + ReportFileName;
+            }
+            var url = "DevReportForm/RT306RF.aspx?RemoteName=" + RemoteName + "&TableName=" + TableName + "&ReportPath=" + ReportFileName + "&WhereString=" + encodeURIComponent(WhereString) + "&WhereTextString=" + WhereTextString;
+
+            //var url = ReportFileName + "?RemoteName=" + RemoteName + "&TableName=" + TableName + "&ReportPath=" + ReportFileName + "&WhereString=" + encodeURIComponent(WhereString) + "&WhereTextString=" + WhereTextString;
+            url += "&DataSetName=" + DataSetName;
+            /*if (options) {
+                if (options.Parameters) {
+                    for (var p in options.Parameters) {
+                        url += "&RP" + p + "=" + options.Parameters[p];
+                    }
+                }
+                if (options.SP) {
+                    url += "&SP=" + options.SP;
+                }
+                if (options.SPParam) {
+                    url += "&SPParam=" + options.SPParam;
+                }
+                if (options.AssemblyName) {
+                    url += "&AssemblyName=" + options.AssemblyName;
+                }
+                if (options.MethodName) {
+                    url += "&MethodName=" + options.MethodName;
+                }
+                if (options.pdf) {
+                    url += "&pdf=true";
+                }
+                if (options.word) {
+                    url += "&word=true";
+                }
+                if (options.excel) {
+                    url += "&excel=true";
+                }
+                if (options.reportname) {
+                    url += "&reportname=" + options.reportname;
+                }
+            }*/
+            var height = $(window).height() - 20;
+            var width = $(window).width() - 20;
+            if ($.browser.msie) {
+                window.open(url, '_blank', 'scrollbars=yes, resizable=yes, location=no, width=' + width + ', height=' + height);
+            }
+            else {
+                var dialog = $('<div/>')
+                    .dialog({
+                        draggable: false,
+                        modal: true,
+                        height: height,
+                        width: width,
+                        title: "Report"//,
+                        //maximizable: true
+                    });
+                $('<iframe style="border: 0px;" src="' + url + '" width="100%" height="95%"></iframe>').appendTo(dialog.find('.panel-body'));
+                dialog.dialog('open');
+            }
+        }
+        else { //sd 不使用reportName
+            $.fn.Error.errorCode = 1081;
+            var DataSetName = options && options.DataSetName ? options.DataSetName : '';
+            var HeaderDataSetName = options && options.HeaderDataSetName ? options.HeaderDataSetName : '';
+            var HeaderTableName = options && options.HeaderTableName ? options.HeaderTableName : '';
+            $.ajax({
+                type: 'post',
+                dataType: 'text',
+                url: getParentFolder() + '../handler/SystemHandler.ashx?type=Menu',
+                data: {
+                    mode: 'Run',
+                    id: ReportFileName,
+                    type: 'report',
+                    remoteName: RemoteName,
+                    whereString: WhereString,
+                    whereTextString: WhereTextString,
+                    DataSetName: DataSetName,
+                    HeaderDataSetName: HeaderDataSetName,
+                    HeaderTableName: HeaderTableName
+                },
+                async: true,
+                success: function (url) {
+                    url = '../' + url;
+                    var height = $(window).height() - 20;
+                    var width = $(window).width() - 20;
+                    if ($.browser.msie) {
+                        window.open(url, '_blank', 'scrollbars=yes, resizable=yes, location=no, width=' + width + ', height=' + height);
+                        //window.showModalDialog(url, '', 'dialogHeight=' + height + 'px;dialogWidth=' + width + 'px;location=no;');
+                    }
+                    else {
+                        var dialog = $('<div/>')
+                            .dialog({
+                                draggable: false,
+                                modal: true,
+                                height: height,
+                                width: width,
+                                title: "Report"//,
+                                //maximizable: true
+                            });
+                        $('<iframe style="border: 0px;" src="' + url + '" width="100%" height="100%"></iframe>').appendTo(dialog.find('.panel-body'));
+                        //dialog.dialog('maximize');
+                        dialog.dialog('open');
+                    }
+                },
+                complete: function () {
+                    $.messager.progress('close');
+                }
+            });
+        }
+    }
+    //    var url = "../handler/jqDataHandle.ashx?RemoteName=S001.Master&TableName=Master";
+    //    $.ajax({
+    //        type: "POST",
+    //        url: url,
+    //        data: "mode=reportview",
+    //        cache: false,
+    //        async: false,
+    //        success: function (data) {
+    //            window.open(data);
+    //        }
+    //    });
+}
+
+
 function apply(dgid) {
     //    var editIndex = getEditIndex($(dgid));
     //    if (editIndex == -1) {

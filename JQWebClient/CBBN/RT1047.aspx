@@ -8,6 +8,7 @@
     <title></title>
     <script>
         var CUSID = Request.getQueryStringByName2("CUSID");
+        var kind = Request.getQueryStringByName2("kind");
         var flag = true;
         var usr = getClientInfo('_usercode');
 
@@ -20,7 +21,15 @@
         function dgOnloadSuccess() {
             if (flag) {
                 //查詢出該用戶的資料
-                var sWhere = " CUSID='" + CUSID + "'";
+                if (kind == 'Q')
+                {
+                    var sWhere = " 1=1 ";
+                    $("#toolItemdataGridView新增").hide();
+                }
+                else
+                {
+                    var sWhere = " CUSID='" + CUSID + "'";
+                }
                 $("#dataGridView").datagrid('setWhere', sWhere);
             }
             flag = false;
