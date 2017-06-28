@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">
+  <Styles>
+    <Style ss:ID="title">
+      <Alignment ss:Horizontal="Center" />
+    </Style>
+  </Styles>
+  <Worksheet ss:Name="Orders0" xmlns="urn:schemas-microsoft-com:office:spreadsheet">
+    <Table>
+      <Row>
+        <Cell>
+          <Data ss:Type="String">員工編號</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">訂單日期</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">需求日期</Data>
+        </Cell>
+      </Row>
+      <Row>
+        <Cell>
+          <Data ss:Type="Number">4</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">1996/07/09</Data>
+        </Cell>
+        <Cell>
+          <Data ss:Type="String">1996/08/06</Data>
+        </Cell>
+      </Row>
+    </Table>
+  </Worksheet>
+</Workbook>

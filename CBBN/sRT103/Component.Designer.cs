@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Srvtools.KeyItem keyItem3 = new Srvtools.KeyItem();
-            Srvtools.KeyItem keyItem4 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem1 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem2 = new Srvtools.KeyItem();
             Srvtools.FieldAttr fieldAttr1 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr2 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr3 = new Srvtools.FieldAttr();
@@ -105,8 +105,8 @@
             Srvtools.FieldAttr fieldAttr72 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr73 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr74 = new Srvtools.FieldAttr();
-            Srvtools.KeyItem keyItem5 = new Srvtools.KeyItem();
-            Srvtools.KeyItem keyItem6 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem3 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem4 = new Srvtools.KeyItem();
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTLessorAVSCmtyLine = new Srvtools.InfoCommand(this.components);
@@ -133,10 +133,10 @@
             this.RTLessorAVSCmtyLine.EncodingBefore = "Windows-1252";
             this.RTLessorAVSCmtyLine.EncodingConvert = null;
             this.RTLessorAVSCmtyLine.InfoConnection = this.InfoConnection1;
-            keyItem3.KeyName = "COMQ1";
-            keyItem4.KeyName = "LINEQ1";
-            this.RTLessorAVSCmtyLine.KeyFields.Add(keyItem3);
-            this.RTLessorAVSCmtyLine.KeyFields.Add(keyItem4);
+            keyItem1.KeyName = "COMQ1";
+            keyItem2.KeyName = "LINEQ1";
+            this.RTLessorAVSCmtyLine.KeyFields.Add(keyItem1);
+            this.RTLessorAVSCmtyLine.KeyFields.Add(keyItem2);
             this.RTLessorAVSCmtyLine.MultiSetWhere = false;
             this.RTLessorAVSCmtyLine.Name = "RTLessorAVSCmtyLine";
             this.RTLessorAVSCmtyLine.NotificationAutoEnlist = false;
@@ -844,10 +844,10 @@
             this.View_RTLessorAVSCmtyLine.EncodingBefore = "Windows-1252";
             this.View_RTLessorAVSCmtyLine.EncodingConvert = null;
             this.View_RTLessorAVSCmtyLine.InfoConnection = this.InfoConnection1;
-            keyItem5.KeyName = "COMQ1";
-            keyItem6.KeyName = "LINEQ1";
-            this.View_RTLessorAVSCmtyLine.KeyFields.Add(keyItem5);
-            this.View_RTLessorAVSCmtyLine.KeyFields.Add(keyItem6);
+            keyItem3.KeyName = "COMQ1";
+            keyItem4.KeyName = "LINEQ1";
+            this.View_RTLessorAVSCmtyLine.KeyFields.Add(keyItem3);
+            this.View_RTLessorAVSCmtyLine.KeyFields.Add(keyItem4);
             this.View_RTLessorAVSCmtyLine.MultiSetWhere = false;
             this.View_RTLessorAVSCmtyLine.Name = "View_RTLessorAVSCmtyLine";
             this.View_RTLessorAVSCmtyLine.NotificationAutoEnlist = false;
@@ -867,7 +867,7 @@
             this.autoNumber1.Description = null;
             this.autoNumber1.GetFixed = "getFix()";
             this.autoNumber1.isNumFill = true;
-            this.autoNumber1.Name = null;
+            this.autoNumber1.Name = "autoNumber1";
             this.autoNumber1.Number = null;
             this.autoNumber1.NumDig = 6;
             this.autoNumber1.OldVersion = false;

@@ -6825,6 +6825,7 @@ function exportDevReport(dgid, remoteName, tableName, reportFileName, whereStrin
         }
         //WhereString = $(dgid).datagrid('getWhere');
         WhereTextString = $(dgid).datagrid('getWhereText');
+
     }
     if (remoteName != undefined && remoteName != "undefined" && remoteName != "")
         RemoteName = remoteName;
@@ -6843,10 +6844,13 @@ function exportDevReport(dgid, remoteName, tableName, reportFileName, whereStrin
             if (developer) {
                 ReportFileName = 'preview' + developer + '/' + ReportFileName;
             }
-            var url = "DevReportForm/RT306RF.aspx?RemoteName=" + RemoteName + "&TableName=" + TableName + "&ReportPath=" + ReportFileName + "&WhereString=" + encodeURIComponent(WhereString) + "&WhereTextString=" + WhereTextString;
-
+           
+            var url = ReportFileName.replace("~", "..") + "?RemoteName=" + RemoteName + "&TableName=" + TableName + "&ReportPath=" + ReportFileName + "&WhereString=" + encodeURIComponent(WhereString) + "&WhereTextString=" + WhereTextString;
+            
             //var url = ReportFileName + "?RemoteName=" + RemoteName + "&TableName=" + TableName + "&ReportPath=" + ReportFileName + "&WhereString=" + encodeURIComponent(WhereString) + "&WhereTextString=" + WhereTextString;
             url += "&DataSetName=" + DataSetName;
+
+            alert(url);
             /*if (options) {
                 if (options.Parameters) {
                     for (var p in options.Parameters) {

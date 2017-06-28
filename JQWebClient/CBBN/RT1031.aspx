@@ -152,38 +152,18 @@
                     <JQTools:JQGridColumn Alignment="right" Caption="社區序號" Editor="infocombobox" FieldName="COMQ1" Format="" Visible="true" Width="120" EditorOptions="valueField:'COMQ1',textField:'COMN',remoteName:'sRT101.View_RTLessorAVSCmtyH',tableName:'View_RTLessorAVSCmtyH',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
                     <JQTools:JQGridColumn Alignment="right" Caption="主線" Editor="numberbox" FieldName="LINEQ1" Format="" Visible="true" Width="40" />
                     <JQTools:JQGridColumn Alignment="right" Caption="項次" Editor="numberbox" FieldName="ENTRYNO" Format="" Visible="true" Width="40" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="續約申請日" Editor="datebox" FieldName="CONTAPPLYDAT" Format="yyyy/mm/dd" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="申請人姓名" Editor="text" FieldName="APPLYNAME" Format="" MaxLength="30" Visible="true" Width="80" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="申請人身份證(統編)" Editor="text" FieldName="APPLYSOCIAL" Format="" MaxLength="10" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="申請人連絡電話" Editor="text" FieldName="APPLYCONTACTTEL" Format="" MaxLength="15" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="申請人行動電話" Editor="text" FieldName="APPLYMOBILE" Format="" MaxLength="10" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="借名用戶連絡電話" Editor="text" FieldName="LOANCONTACTTEL" Format="" MaxLength="15" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="借名用戶行動電話" Editor="text" FieldName="LOANMOBILE" Format="" MaxLength="10" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="ADSL主線頻寬" Editor="text" FieldName="LINERATE" Format="" MaxLength="2" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="線路IP種類" Editor="inforefval" FieldName="LINEIPTYPE" Format="" MaxLength="2" Visible="true" Width="120" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M5'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'CODE',textFieldCaption:'CODENC',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="線路ISP" Editor="inforefval" FieldName="LINEISP" Format="" MaxLength="2" Visible="true" Width="120" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'C3'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'CODE',textFieldCaption:'CODENC',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="線路到期日" Editor="datebox" FieldName="LINEDUEDAT" Format="yyyy/mm/dd" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="附掛電話" Editor="text" FieldName="LINETEL" Format="" MaxLength="15" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="right" Caption="IP數量" Editor="numberbox" FieldName="IPCNT" Format="" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="主線網路IP" Editor="text" FieldName="LINEIP" Format="" MaxLength="20" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="GATEWAY IP" Editor="text" FieldName="GATEWAY" Format="" MaxLength="20" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="主線網路IP網段" Editor="text" FieldName="SUBNET" Format="" MaxLength="20" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="DNS IP" Editor="text" FieldName="DNSIP" Format="" MaxLength="20" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="PPPOE撥接帳號" Editor="text" FieldName="PPPOEACCOUNT" Format="" MaxLength="10" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="PPPOE撥接密碼" Editor="text" FieldName="PPPOEPASSWORD" Format="" MaxLength="10" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="HINET線班通知開通日" Editor="datebox" FieldName="HINETNOTIFYDAT" Format="" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="主線測通日" Editor="datebox" FieldName="ADSLAPPLYDAT" Format="" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="結案日期" Editor="datebox" FieldName="CLOSEDAT" Format="" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="結案人員" Editor="text" FieldName="CLOSEUSR" Format="" MaxLength="6" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="CANCELDAT" Format="" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="作廢人員" Editor="text" FieldName="CANCELUSR" Format="" MaxLength="6" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="備註" Editor="text" FieldName="MEMO" Format="" MaxLength="500" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="建檔員" Editor="text" FieldName="EUSR" Format="" MaxLength="6" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="輸入日期" Editor="datebox" FieldName="EDAT" Format="" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="修改員" Editor="text" FieldName="UUSR" Format="" MaxLength="6" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="修改日" Editor="datebox" FieldName="UDAT" Format="" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="藉名用戶名稱" Editor="text" FieldName="LOANNAME" Format="" MaxLength="30" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="藉名用戶身份證號" Editor="text" FieldName="LOANSOCIAL" Format="" MaxLength="10" Visible="true" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="主線IP" Editor="text" FieldName="LINEIP" Format="" MaxLength="20" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="附掛電話" Editor="text" FieldName="LINETEL" Format="" MaxLength="15" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="線路ISP" Editor="inforefval" FieldName="LINEISP" Format="" MaxLength="2" Visible="true" Width="80" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'C3'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'CODE',textFieldCaption:'CODENC',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="線路IP種類" Editor="inforefval" FieldName="LINEIPTYPE" Format="" MaxLength="2" Visible="true" Width="100" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M5'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'CODE',textFieldCaption:'CODENC',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="ADSL主線頻寬" Editor="text" FieldName="LINERATE" Format="" MaxLength="2" Visible="true" Width="100" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="IP數量" Editor="numberbox" FieldName="IPCNT" Format="" MaxLength="0" Visible="true" Width="60" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="續約申請日" Editor="datebox" FieldName="CONTAPPLYDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="線路到期日" Editor="datebox" FieldName="LINEDUEDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="HINET線班通知開通日" Editor="datebox" FieldName="HINETNOTIFYDAT" Format="" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="主線測通日" Editor="datebox" FieldName="ADSLAPPLYDAT" Format="" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="結案日期" Editor="datebox" FieldName="CLOSEDAT" Format="" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="CANCELDAT" Format="" Visible="true" Width="80" />
                 </Columns>
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton"
@@ -206,10 +186,10 @@
             <JQTools:JQDialog ID="JQDialog1" runat="server" BindingObjectID="dataFormMaster" Title="主線續約資料維護">
                 <JQTools:JQDataForm ID="dataFormMaster" runat="server" DataMember="RTLessorAVSCmtyLineCont" HorizontalColumnsCount="2" RemoteName="sRT1031.RTLessorAVSCmtyLineCont" AlwaysReadOnly="False" Closed="False" ContinueAdd="False" disapply="False" DivFramed="False" DuplicateCheck="False" HorizontalGap="0" IsAutoPageClose="False" IsAutoPause="False" IsAutoSubmit="False" IsNotifyOFF="False" IsRejectNotify="False" IsRejectON="False" IsShowFlowIcon="False" ShowApplyButton="False" ValidateStyle="Hint" VerticalGap="0" >
                     <Columns>
-                        <JQTools:JQFormColumn Alignment="left" Caption="社區序號" Editor="infocombobox" FieldName="COMQ1" Format="" Width="180" EditorOptions="valueField:'COMQ1',textField:'COMN',remoteName:'sRT101.View_RTLessorAVSCmtyH',tableName:'View_RTLessorAVSCmtyH',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="主線序號" Editor="numberbox" FieldName="LINEQ1" Format="" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="社區序號" Editor="infocombobox" FieldName="COMQ1" Format="" Width="180" EditorOptions="valueField:'COMQ1',textField:'COMN',remoteName:'sRT101.View_RTLessorAVSCmtyH',tableName:'View_RTLessorAVSCmtyH',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="主線序號" Editor="numberbox" FieldName="LINEQ1" Format="" Width="180" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="項次" Editor="numberbox" FieldName="ENTRYNO" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="續約申請日" Editor="datebox" FieldName="CONTAPPLYDAT" Format="" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="續約申請日" Editor="datebox" FieldName="CONTAPPLYDAT" Format="yyyy/mm/dd" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="申請人姓名" Editor="text" FieldName="APPLYNAME" Format="" maxlength="30" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="申請人身份證(統編)" Editor="text" FieldName="APPLYSOCIAL" Format="" maxlength="10" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="申請人連絡電話" Editor="text" FieldName="APPLYCONTACTTEL" Format="" maxlength="15" Width="180" />
@@ -217,9 +197,9 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="借名用戶連絡電話" Editor="text" FieldName="LOANCONTACTTEL" Format="" maxlength="15" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="借名用戶行動電話" Editor="text" FieldName="LOANMOBILE" Format="" maxlength="10" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="ADSL主線頻寬" Editor="text" FieldName="LINERATE" Format="" maxlength="2" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="線路IP種類(KIND='M5')" Editor="text" FieldName="LINEIPTYPE" Format="" maxlength="2" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="線路ISP(KIND='C3')" Editor="text" FieldName="LINEISP" Format="" maxlength="2" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="--- 線路到期日" Editor="datebox" FieldName="LINEDUEDAT" Format="" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="線路IP種類" Editor="inforefval" FieldName="LINEIPTYPE" Format="" maxlength="2" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M5'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'CODE',textFieldCaption:'CODENC',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="線路ISP" Editor="inforefval" FieldName="LINEISP" Format="" maxlength="2" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'C3'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'CODE',textFieldCaption:'CODENC',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="線路到期日" Editor="datebox" FieldName="LINEDUEDAT" Format="yyyy/mm/dd" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="附掛電話" Editor="text" FieldName="LINETEL" Format="" maxlength="15" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="IP數量" Editor="numberbox" FieldName="IPCNT" Format="" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="主線網路IP" Editor="text" FieldName="LINEIP" Format="" maxlength="20" Width="180" />
@@ -228,17 +208,17 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="DNS IP" Editor="text" FieldName="DNSIP" Format="" maxlength="20" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="PPPOE撥接帳號" Editor="text" FieldName="PPPOEACCOUNT" Format="" maxlength="10" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="PPPOE撥接密碼" Editor="text" FieldName="PPPOEPASSWORD" Format="" maxlength="10" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="HINET線班通知開通日" Editor="datebox" FieldName="HINETNOTIFYDAT" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="主線測通日" Editor="datebox" FieldName="ADSLAPPLYDAT" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="結案日期" Editor="datebox" FieldName="CLOSEDAT" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="結案人員" Editor="text" FieldName="CLOSEUSR" Format="" maxlength="6" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="作廢日(未完工時才可執行)" Editor="datebox" FieldName="CANCELDAT" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="作廢人員" Editor="text" FieldName="CANCELUSR" Format="" maxlength="6" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="HINET線班通知開通日" Editor="datebox" FieldName="HINETNOTIFYDAT" Format="yyyy/mm/dd" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="主線測通日" Editor="datebox" FieldName="ADSLAPPLYDAT" Format="yyyy/mm/dd" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="結案日期" Editor="datebox" FieldName="CLOSEDAT" Format="yyyy/mm/dd" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="結案人員" Editor="infocombobox" FieldName="CLOSEUSR" Format="" maxlength="6" Width="180" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="CANCELDAT" Format="yyyy/mm/dd" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="作廢人員" Editor="infocombobox" FieldName="CANCELUSR" Format="" maxlength="6" Width="180" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="備註" Editor="text" FieldName="MEMO" Format="" maxlength="500" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="建檔員" Editor="text" FieldName="EUSR" Format="" maxlength="6" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="輸入日期" Editor="datebox" FieldName="EDAT" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="修改員" Editor="text" FieldName="UUSR" Format="" maxlength="6" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="修改日" Editor="datebox" FieldName="UDAT" Format="" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="建檔員" Editor="infocombobox" FieldName="EUSR" Format="" maxlength="6" Width="180" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="輸入日期" Editor="datebox" FieldName="EDAT" Format="yyyy/mm/dd" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="修改員" Editor="infocombobox" FieldName="UUSR" Format="" maxlength="6" Width="180" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="修改日" Editor="datebox" FieldName="UDAT" Format="yyyy/mm/dd" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="藉名用戶名稱" Editor="text" FieldName="LOANNAME" Format="" maxlength="30" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="藉名用戶身份證號" Editor="text" FieldName="LOANSOCIAL" Format="" maxlength="10" Width="180" />
                     </Columns>

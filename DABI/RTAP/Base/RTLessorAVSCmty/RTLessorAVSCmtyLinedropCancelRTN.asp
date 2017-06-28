@@ -19,7 +19,7 @@
    RSYY.OPEN SQLYY,Conn
    endpgm="1"
    '當尚未作廢時，不可作廢返轉
-   IF isnull(RSXX("canceldat")) THEN
+   IF isnull(RSXX("CANCELDAT")) THEN
       ENDPGM="3"
    '若存在其它撤線資料且該資料未作廢時，不可進行作廢返轉(否則會同時存在兩筆)
    ELSEIF RSYY("CNT") > 0 then

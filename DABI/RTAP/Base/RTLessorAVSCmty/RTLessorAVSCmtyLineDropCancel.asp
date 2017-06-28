@@ -16,13 +16,13 @@
    RSXX.OPEN SQLXX,Conn
    endpgm="1"
    '當撤線資料已作廢時，不可重複作廢
-   IF LEN(TRIM(RSXX("CANCELdat"))) <> 0 THEN
+   IF LEN(TRIM(RSXX("CANCELDAT"))) <> 0 THEN
       ENDPGM="3"
    '當撤線資料已產生拆機派工單時，不可作廢
-   elseif LEN(TRIM(RSXX("sndprtno"))) <> 0 then
+   elseif LEN(TRIM(RSXX("SNDPRTNO"))) <> 0 then
       endpgm="4"      
    '當撤線資料已結案時，不可作廢
-   elseif LEN(TRIM(RSXX("closedat"))) <> 0 then
+   elseif LEN(TRIM(RSXX("CLOSEDAT"))) <> 0 then
       endpgm="5"
    ELSE
      '呼叫store procedure更新相關檔案
