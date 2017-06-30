@@ -18,9 +18,9 @@
 
         function dgOnloadSuccess() {
             if (flag) {
-                var sWhere = " A.COMQ1='" + COMQ1 + "'";
+                var sWhere = " COMQ1='" + COMQ1 + "'";
                 if (LINEQ1 != "") {
-                    sWhere = sWhere + " AND A.LINEQ1='" + LINEQ1 + "'"
+                    sWhere = sWhere + " AND LINEQ1='" + LINEQ1 + "'"
                 }
 
                 $("#dataGridView").datagrid('setWhere', sWhere);
@@ -161,12 +161,12 @@
                         Text="取消"  />
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
                         OnClick="openQuery" Text="查詢" />
-                    <JQTools:JQToolItem ID="btn1Click" Enabled="True" ItemType="easyui-linkbutton" Text="轉拆機單" Visible="True" />
-                    <JQTools:JQToolItem ID="btn2Click" Enabled="True" ItemType="easyui-linkbutton" Text="派工查詢" Visible="True" />
-                    <JQTools:JQToolItem ID="btn3Click" Enabled="True" ItemType="easyui-linkbutton" Text="撤線結案" Visible="True" />
-                    <JQTools:JQToolItem ID="btn4Click" Enabled="True" ItemType="easyui-linkbutton" Text="作　　廢" Visible="True" />
-                    <JQTools:JQToolItem ID="btn5Click" Enabled="True" ItemType="easyui-linkbutton" Text="作廢返轉" Visible="True" />
-                    <JQTools:JQToolItem ID="btn6Click" Enabled="True" ItemType="easyui-linkbutton" Text="異動查詢" Visible="True" />
+                    <JQTools:JQToolItem ID="btn1Click" Enabled="True" ItemType="easyui-linkbutton" Text="轉拆機單" Visible="True" Icon="icon-edit" OnClick="btn1Click" />
+                    <JQTools:JQToolItem ID="btn2Click" Enabled="True" ItemType="easyui-linkbutton" Text="派工查詢" Visible="True" Icon="icon-view" OnClick="btn2Click" />
+                    <JQTools:JQToolItem ID="btn3Click" Enabled="True" ItemType="easyui-linkbutton" Text="撤線結案" Visible="True" Icon="icon-edit" OnClick="btn3Click" />
+                    <JQTools:JQToolItem ID="btn4Click" Enabled="True" ItemType="easyui-linkbutton" Text="作　　廢" Visible="True" Icon="icon-no" OnClick="btn4Click" />
+                    <JQTools:JQToolItem ID="btn5Click" Enabled="True" ItemType="easyui-linkbutton" Text="作廢返轉" Visible="True" Icon="icon-redo" OnClick="btn5Click" />
+                    <JQTools:JQToolItem ID="btn6Click" Enabled="True" ItemType="easyui-linkbutton" Text="異動查詢" Visible="True" Icon="icon-view" OnClick="btn6Click" />
                 </TooItems>
                 <QueryColumns>
                 </QueryColumns>

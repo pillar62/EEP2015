@@ -160,7 +160,7 @@ public class RT1042R : DevExpress.XtraReports.UI.XtraReport
             this.xrTable2.Name = "xrTable2";
             this.xrTable2.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow4});
-            this.xrTable2.SizeF = new System.Drawing.SizeF(888.0001F, 23F);
+            this.xrTable2.SizeF = new System.Drawing.SizeF(888.0001F, 12.99999F);
             // 
             // xrTableRow4
             // 
@@ -337,7 +337,6 @@ public class RT1042R : DevExpress.XtraReports.UI.XtraReport
             // xrTableCell7
             // 
             this.xrTableCell7.CanGrow = false;
-            this.xrTableCell7.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold);
             this.xrTableCell7.Name = "xrTableCell7";
             this.xrTableCell7.StyleName = "FieldCaption";
             this.xrTableCell7.StylePriority.UseFont = false;
@@ -348,7 +347,6 @@ public class RT1042R : DevExpress.XtraReports.UI.XtraReport
             // xrTableCell9
             // 
             this.xrTableCell9.CanGrow = false;
-            this.xrTableCell9.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold);
             this.xrTableCell9.Name = "xrTableCell9";
             this.xrTableCell9.StyleName = "FieldCaption";
             this.xrTableCell9.StylePriority.UseFont = false;
@@ -359,7 +357,6 @@ public class RT1042R : DevExpress.XtraReports.UI.XtraReport
             // xrTableCell11
             // 
             this.xrTableCell11.CanGrow = false;
-            this.xrTableCell11.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold);
             this.xrTableCell11.Name = "xrTableCell11";
             this.xrTableCell11.StyleName = "FieldCaption";
             this.xrTableCell11.StylePriority.UseFont = false;
@@ -370,7 +367,6 @@ public class RT1042R : DevExpress.XtraReports.UI.XtraReport
             // xrTableCell13
             // 
             this.xrTableCell13.CanGrow = false;
-            this.xrTableCell13.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold);
             this.xrTableCell13.Name = "xrTableCell13";
             this.xrTableCell13.StyleName = "FieldCaption";
             this.xrTableCell13.StylePriority.UseFont = false;
@@ -381,7 +377,6 @@ public class RT1042R : DevExpress.XtraReports.UI.XtraReport
             // xrTableCell15
             // 
             this.xrTableCell15.CanGrow = false;
-            this.xrTableCell15.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold);
             this.xrTableCell15.Name = "xrTableCell15";
             this.xrTableCell15.StyleName = "FieldCaption";
             this.xrTableCell15.StylePriority.UseFont = false;
@@ -392,7 +387,6 @@ public class RT1042R : DevExpress.XtraReports.UI.XtraReport
             // xrTableCell17
             // 
             this.xrTableCell17.CanGrow = false;
-            this.xrTableCell17.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold);
             this.xrTableCell17.Name = "xrTableCell17";
             this.xrTableCell17.StyleName = "FieldCaption";
             this.xrTableCell17.StylePriority.UseFont = false;
@@ -403,7 +397,6 @@ public class RT1042R : DevExpress.XtraReports.UI.XtraReport
             // xrTableCell19
             // 
             this.xrTableCell19.CanGrow = false;
-            this.xrTableCell19.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold);
             this.xrTableCell19.Name = "xrTableCell19";
             this.xrTableCell19.StyleName = "FieldCaption";
             this.xrTableCell19.StylePriority.UseFont = false;
@@ -414,7 +407,6 @@ public class RT1042R : DevExpress.XtraReports.UI.XtraReport
             // xrTableCell21
             // 
             this.xrTableCell21.CanGrow = false;
-            this.xrTableCell21.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold);
             this.xrTableCell21.Name = "xrTableCell21";
             this.xrTableCell21.StyleName = "FieldCaption";
             this.xrTableCell21.StylePriority.UseFont = false;
@@ -425,7 +417,6 @@ public class RT1042R : DevExpress.XtraReports.UI.XtraReport
             // xrTableCell27
             // 
             this.xrTableCell27.CanGrow = false;
-            this.xrTableCell27.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold);
             this.xrTableCell27.Name = "xrTableCell27";
             this.xrTableCell27.StyleName = "FieldCaption";
             this.xrTableCell27.StylePriority.UseFont = false;
@@ -436,7 +427,6 @@ public class RT1042R : DevExpress.XtraReports.UI.XtraReport
             // xrTableCell29
             // 
             this.xrTableCell29.CanGrow = false;
-            this.xrTableCell29.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Bold);
             this.xrTableCell29.Name = "xrTableCell29";
             this.xrTableCell29.StyleName = "FieldCaption";
             this.xrTableCell29.StylePriority.UseFont = false;
@@ -534,13 +524,13 @@ public class RT1042R : DevExpress.XtraReports.UI.XtraReport
             // 
             // xrLabel1
             // 
-            this.xrLabel1.Font = new System.Drawing.Font("標楷體", 20F, System.Drawing.FontStyle.Bold);
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(6F, 6F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel1.SizeF = new System.Drawing.SizeF(888F, 35F);
             this.xrLabel1.StyleName = "Title";
             this.xrLabel1.StylePriority.UseFont = false;
+            this.xrLabel1.StylePriority.UseTextAlignment = false;
             this.xrLabel1.Text = "主線派工單";
             // 
             // Title

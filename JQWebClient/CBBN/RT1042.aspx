@@ -55,7 +55,6 @@
             var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var PRTNO = row.PRTNO;
             var WhereString = "";
-            alert(PRTNO);
             exportDevReport("#dataGridMaster", "sRT1042.RT1042", "RT1042", "~/CBBN/DevReportForm/RT1042RF.aspx", WhereString);
         }
 

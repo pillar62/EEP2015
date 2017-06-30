@@ -6850,7 +6850,6 @@ function exportDevReport(dgid, remoteName, tableName, reportFileName, whereStrin
             //var url = ReportFileName + "?RemoteName=" + RemoteName + "&TableName=" + TableName + "&ReportPath=" + ReportFileName + "&WhereString=" + encodeURIComponent(WhereString) + "&WhereTextString=" + WhereTextString;
             url += "&DataSetName=" + DataSetName;
 
-            alert(url);
             /*if (options) {
                 if (options.Parameters) {
                     for (var p in options.Parameters) {

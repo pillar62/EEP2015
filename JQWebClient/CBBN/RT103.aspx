@@ -62,6 +62,14 @@
             parent.addTab("到期續約", "CBBN/RT1031.aspx?COMQ1=" + ss + "&LINEQ1=" + s1);
         }
 
+        function LinkRT1032(val) {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.COMQ1;
+            var s1 = row.LINEQ1;
+
+            parent.addTab("撤線作業", "CBBN/RT1032.aspx?COMQ1=" + ss + "&LINEQ1=" + s1);
+        }
+
         function dgOnloadSuccess() {
             if (flag)
             {
@@ -138,20 +146,16 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="撤線日" Editor="datebox" FieldName="DROPDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
                 </Columns>
                 <TooItems>
-                    <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton"
-                        OnClick="insertItem" Text="新增" ID="btnIns" />
-                    <JQTools:JQToolItem Icon="icon-save" ItemType="easyui-linkbutton" OnClick="apply"
-                        Text="存檔" ID="btnsave" />
-                    <JQTools:JQToolItem Icon="icon-undo" ItemType="easyui-linkbutton" OnClick="cancel"
-                        Text="取消" ID="btncancel"  />
-                    <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
-                        OnClick="openQuery" Text="查詢" />
+                    <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton" OnClick="insertItem" Text="新增" ID="btnIns" />
+                    <JQTools:JQToolItem Icon="icon-save" ItemType="easyui-linkbutton" OnClick="apply" Text="存檔" ID="btnsave" />
+                    <JQTools:JQToolItem Icon="icon-undo" ItemType="easyui-linkbutton" OnClick="cancel" Text="取消" ID="btncancel"  />
+                    <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton" OnClick="openQuery" Text="查詢" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="主線派工" Visible="True" Icon="icon-view" OnClick="LinkRT203" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="設備查詢" Visible="True" Icon="icon-view" OnClick="LinkRT1011" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="用戶維護" Visible="True" Icon="icon-view" OnClick="LinkRT104" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="客服案件" Visible="True" Icon="icon-view" OnClick="LinkRT202" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="到期續約" Visible="True" OnClick="LinkRT1031" Icon="icon-edit" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="撤線作業" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="撤線作業" Visible="True" Icon="icon-edit" OnClick="LinkRT1032" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="做廢" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="作廢反轉" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="歷史異動" Visible="True" />
@@ -159,7 +163,7 @@
                 <QueryColumns>
                     <JQTools:JQQueryColumn AndOr="and" Caption="社區序號" Condition="%" DataType="string" Editor="text" FieldName="COMQ1" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="主線序號" Condition="%" DataType="string" Editor="text" FieldName="LINEQ1" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="經銷商" Condition="%" DataType="string" Editor="infocombobox" EditorOptions="valueField:'CUSID',textField:'SHORTNC',remoteName:'sRT100.RTObj',tableName:'RTObj',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" FieldName="CONSIGNEE" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="經銷商" Condition="%" DataType="string" Editor="text" EditorOptions="" FieldName="CONSIGNEE" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="業務轄區" Condition="%" DataType="string" Editor="infocombobox" FieldName="AREAID" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="主線網路IP" Condition="%" DataType="string" Editor="text" FieldName="LINEIP" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="附掛電話" Condition="%" DataType="string" Editor="text" FieldName="LINETEL" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
