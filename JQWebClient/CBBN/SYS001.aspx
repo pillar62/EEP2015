@@ -44,6 +44,7 @@
                     <JQTools:JQQueryColumn AndOr="and" Caption="需要(Y/N)" Condition="%" DataType="string" Editor="text" FieldName="YN_DO" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="備註" Condition="%" DataType="string" Editor="text" FieldName="NM_DESC" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="系統別" Condition="%" DataType="string" Editor="text" FieldName="ITEMTYPE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="功能別" Condition="%" DataType="string" Editor="infocombobox" EditorOptions="items:[{value:'M',text:'MENU',selected:'false'},{value:'F',text:'FUNCTION',selected:'false'},{value:'P',text:'PROCESS',selected:'false'},{value:'R',text:'REPORT',selected:'false'},{value:'O',text:'OTHER',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" FieldName="FUNCTIONS" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                 </QueryColumns>
             </JQTools:JQDataGrid>
         </div>

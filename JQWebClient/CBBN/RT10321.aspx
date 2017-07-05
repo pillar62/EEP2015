@@ -47,12 +47,13 @@
         function btn3Click() {
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var ENTRYNO = row.ENTRYNO;
+            var prtno = row.PRTNO;
 
             $.ajax({
                 type: "POST",
                 url: '../handler/jqDataHandle.ashx?RemoteName=sRT1032.cmdRT103213', //連接的Server端，command
                 //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
-                data: "mode=method&method=" + "smRT103213" + "&parameters=" + COMQ1 + "," + LINEQ1 + "," + ENTRYNO + "," + usr,
+                data: "mode=method&method=" + "smRT103213" + "&parameters=" + COMQ1 + "," + LINEQ1 + "," + ENTRYNO + "," + prtno + "," + usr,
                 cache: false,
                 async: false,
                 success: function (data) {
@@ -66,12 +67,13 @@
         function btn4Click() {
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var ENTRYNO = row.ENTRYNO;
+            var prtno = row.PRTNO;
 
             $.ajax({
                 type: "POST",
                 url: '../handler/jqDataHandle.ashx?RemoteName=sRT1032.cmdRT103214', //連接的Server端，command
                 //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
-                data: "mode=method&method=" + "smRT103214" + "&parameters=" + COMQ1 + "," + LINEQ1 + "," + ENTRYNO + "," + usr,
+                data: "mode=method&method=" + "smRT103214" + "&parameters=" + COMQ1 + "," + LINEQ1 + "," + ENTRYNO + "," + prtno + "," + usr,
                 cache: false,
                 async: false,
                 success: function (data) {
@@ -84,14 +86,14 @@
         //結案返轉
         function btn5Click() {
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            var PRTNO = row.PRTNO;
+            var prtno = row.PRTNO;
             var ENTRYNO = row.ENTRYNO;
 
             $.ajax({
                 type: "POST",
                 url: '../handler/jqDataHandle.ashx?RemoteName=sRT1032.cmdRT103215', //連接的Server端，command
                 //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
-                data: "mode=method&method=" + "smRT103215" + "&parameters=" + COMQ1 + "," + LINEQ1 + "," + ENTRYNO + "," + usr,
+                data: "mode=method&method=" + "smRT103215" + "&parameters=" + COMQ1 + "," + LINEQ1 + "," + ENTRYNO + "," + prtno + "," + usr,
                 cache: false,
                 async: false,
                 success: function (data) {
@@ -105,12 +107,13 @@
         function btn6Click() {
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var ENTRYNO = row.ENTRYNO;
+            var prtno = row.PRTNO;
 
             $.ajax({
                 type: "POST",
                 url: '../handler/jqDataHandle.ashx?RemoteName=sRT1032.cmdRT103216', //連接的Server端，command
                 //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
-                data: "mode=method&method=" + "smRT103216" + "&parameters=" + COMQ1 + "," + LINEQ1 + "," + ENTRYNO + "," + usr,
+                data: "mode=method&method=" + "smRT103216" + "&parameters=" + COMQ1 + "," + LINEQ1 + "," + ENTRYNO + "," + prtno + "," + usr,
                 cache: false,
                 async: false,
                 success: function (data) {
@@ -123,14 +126,14 @@
         //作廢返轉
         function btn7Click() {
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            var PRTNO = row.PRTNO;
+            var prtno = row.PRTNO;
             var ENTRYNO = row.ENTRYNO;
 
             $.ajax({
                 type: "POST",
                 url: '../handler/jqDataHandle.ashx?RemoteName=sRT1032.cmdRT103217', //連接的Server端，command
                 //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
-                data: "mode=method&method=" + "smRT103217" + "&parameters=" + COMQ1 + "," + LINEQ1 + "," + ENTRYNO + "," + usr,
+                data: "mode=method&method=" + "smRT103217" + "&parameters=" + COMQ1 + "," + LINEQ1 + "," + ENTRYNO + "," + prtno + "," + usr,
                 cache: false,
                 async: false,
                 success: function (data) {
@@ -184,15 +187,15 @@
                         Text="取消"  />
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
                         OnClick="openQuery" Text="查詢" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn1Click" Text="物品移轉單" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn2Click" Text="列　　印" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn3Click" Text="完工結案" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn4Click" Text="未完工結案" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn5Click" Text="結案返轉" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn6Click" Text="作　　廢" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn7Click" Text="作廢返轉" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn8Click" Text="設備明細" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn9Click" Text="歷史異動" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn1Click" Text="物品移轉單" Visible="True" Icon="icon-view" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn2Click" Text="列　　印" Visible="True" Icon="icon-print" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn3Click" Text="完工結案" Visible="True" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn4Click" Text="未完工結案" Visible="True" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn5Click" Text="結案返轉" Visible="True" Icon="icon-undo" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn6Click" Text="作　　廢" Visible="True" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn7Click" Text="作廢返轉" Visible="True" Icon="icon-undo" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn8Click" Text="設備明細" Visible="True" Icon="icon-view" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn9Click" Text="歷史異動" Visible="True" Icon="icon-view" />
                 </TooItems>
                 <QueryColumns>
                 </QueryColumns>

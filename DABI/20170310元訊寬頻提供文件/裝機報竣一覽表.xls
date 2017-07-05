@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Version>12.00</Version>
+ </DocumentProperties>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>10005</WindowHeight>
+  <WindowWidth>10005</WindowWidth>
+  <WindowTopX>120</WindowTopX>
+  <WindowTopY>135</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman" ss:Size="12"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman"/>
+  </Style>
+  <Style ss:ID="s65">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman" ss:Bold="1"/>
+   <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s66">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman" ss:Bold="1"/>
+   <Interior ss:Color="#FFDA89" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s67">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s68">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman"/>
+   <NumberFormat ss:Format="Short Date"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="報竣戶">
+  <Table ss:ExpandedColumnCount="14" ss:ExpandedRowCount="3" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="16.5">
+   <Row>
+    <Cell ss:MergeAcross="13" ss:StyleID="s63"><Data ss:Type="String">報竣日：2016/12/6～2016/12/6 </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">方案別</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">直/經銷</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">轄區所屬</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">社區名稱</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">線路到位日</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">裝機員</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">客戶名稱</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">方案</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">速率</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">繳費週期</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">完工日</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">報竣日</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">退租日</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">公關線</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">Avs City</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">直銷</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">元訊</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">元訊</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">2015/4/30</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">元訊</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">元訊</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">中資費</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">30M</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">兩年繳</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">2016/12/6</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String">2016/12/6</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="String"></Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String"></Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>7</ActiveRow>
+     <ActiveCol>4</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

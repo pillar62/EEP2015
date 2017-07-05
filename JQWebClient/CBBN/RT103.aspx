@@ -8,6 +8,7 @@
     <title></title>
     <script>
         var COMQ1 = Request.getQueryStringByName2("COMQ1");
+        var usr = getClientInfo('_usercode');
         var flag = true;
         if (COMQ1 == "")
         {
@@ -68,6 +69,54 @@
             var s1 = row.LINEQ1;
 
             parent.addTab("撤線作業", "CBBN/RT1032.aspx?COMQ1=" + ss + "&LINEQ1=" + s1);
+        }
+
+        function LinkRT1033(val) {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.COMQ1;
+            var s1 = row.LINEQ1;
+
+            parent.addTab("主線資料異動記錄查詢", "CBBN/RT1033.aspx?COMQ1=" + ss + "&LINEQ1=" + s1);
+        }
+
+        //作　　廢
+        function btn1Click() {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var COMQ1 = row.COMQ1;//主線
+            var LINEQ1 = row.LINEQ1;;//主線
+
+            $.ajax({
+                type: "POST",
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT103.cmdRT1031', //連接的Server端，command
+                //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                data: "mode=method&method=" + "smRT1031" + "&parameters=" + COMQ1 + "," + LINEQ1 + "," + usr,
+                cache: false,
+                async: false,
+                success: function (data) {
+                    alert(data);
+                    $('#dataGridView').datagrid('reload');
+                }
+            });
+        }
+
+        //作廢返轉
+        function btn2Click() {
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var COMQ1 = row.COMQ1;//主線
+            var LINEQ1 = row.LINEQ1;;//主線
+
+            $.ajax({
+                type: "POST",
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT103.cmdRT1032', //連接的Server端，command
+                //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                data: "mode=method&method=" + "smRT1032" + "&parameters=" + COMQ1 + "," + LINEQ1 + "," + usr,
+                cache: false,
+                async: false,
+                success: function (data) {
+                    alert(data);
+                    $('#dataGridView').datagrid('reload');
+                }
+            });
         }
 
         function dgOnloadSuccess() {
@@ -156,9 +205,9 @@
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="客服案件" Visible="True" Icon="icon-view" OnClick="LinkRT202" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="到期續約" Visible="True" OnClick="LinkRT1031" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="撤線作業" Visible="True" Icon="icon-edit" OnClick="LinkRT1032" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="做廢" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="作廢反轉" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="歷史異動" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="作廢" Visible="True" Icon="icon-edit" OnClick="btn1Click" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="作廢反轉" Visible="True" Icon="icon-undo" OnClick="btn2Click" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="歷史異動" Visible="True" Icon="icon-view" OnClick="LinkRT1033" />
                 </TooItems>
                 <QueryColumns>
                     <JQTools:JQQueryColumn AndOr="and" Caption="社區序號" Condition="%" DataType="string" Editor="text" FieldName="COMQ1" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />

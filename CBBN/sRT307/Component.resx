@@ -118,93 +118,46 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="serviceManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
+    <value>45, 84</value>
   </metadata>
   <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 134</value>
+    <value>45, 45</value>
   </metadata>
-  <metadata name="RTLessorAVSCmtyLine.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>491, 170</value>
+  <metadata name="RTLessorCustSndwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>680, 123</value>
   </metadata>
-  <metadata name="ucRTLessorAVSCmtyLine.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>486, 220</value>
+  <metadata name="ucRTLessorCustSndwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>680, 84</value>
   </metadata>
-  <metadata name="View_RTLessorAVSCmtyLine.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+  <metadata name="View_RTLessorCustSndwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>691, 17</value>
   </metadata>
-  <metadata name="autoNumber1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>516, 268</value>
+  <metadata name="RT307.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>48, 137</value>
   </metadata>
-  <metadata name="RT1033.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>203, 225</value>
-  </metadata>
-  <data name="RT1033.CommandText" xml:space="preserve">
-    <value>SELECT A.COMQ1, A.LINEQ1, A.entryno,rtrim(convert(char(6),A.COMQ1)) +'-'+ rtrim(convert(char(6),A.lineQ1)) as Lineeno, 
-A.chgdat,RTCODE_9.CODENC,rtobj_9.cusnc,A.TOWNSHIP,A.LINEGROUP,A.LINEIP,A.GATEWAY, 
-A.PPPOEACCOUNT, A.PPPOEPASSWORD, A.LINETEL, RTCode_1.CODENC, RTCode_3.CODENC AS Expr1, RTCode_2.CODENC AS Expr2, A.IPCNT, 
-A.RCVDAT, A.INSPECTDAT, A.HINETNOTIFYDAT, A.HARDWAREDAT, A.ADSLAPPLYDAT, A.LINEDUEDAT, 
-A.DROPDAT, A.CANCELDAT, 
-SUM(CASE WHEN B.cusid is not null and B.CANCELDAT IS NULL THEN 1 ELSE 0 END) as Q1, 
-SUM(CASE WHEN B.cusid is not null and B.CANCELDAT IS NULL AND B.FINISHDAT IS NOT NULL THEN 1 ELSE 0 END) as Q1, 
-SUM(CASE WHEN B.cusid is not null and B.CANCELDAT IS NULL AND B.FINISHDAT IS NOT NULL AND B.DROPDAT IS NOT NULL THEN 1 ELSE 0 END) AS Q3
-, SUM(CASE  WHEN B.cusid is not null and B.CANCELDAT IS NULL AND 
-(B.STRBILLINGDAT IS NOT NULL OR B.NEWBILLINGDAT IS NOT NULL) AND 
-B.DROPDAT IS NULL THEN 1 ELSE 0 END) AS Q4
-, SUM(CASE WHEN B.cusid is not null and B.CANCELDAT IS NULL AND 
-B.FINISHDAT IS NOT NULL THEN 1 ELSE 0 END) - SUM(CASE WHEN B.cusid is not null and B.CANCELDAT IS NULL AND 
-B.FINISHDAT IS NOT NULL AND B.DROPDAT IS NOT NULL THEN 1 ELSE 0 END) 
-- SUM(CASE WHEN B.cusid is not null and B.CANCELDAT IS NULL AND (B.STRBILLINGDAT IS NOT NULL OR 
-B.NEWBILLINGDAT IS NOT NULL) AND B.DROPDAT IS NULL THEN 1 ELSE 0 END) AS Q5
-FROM    RTLessorAVSCmtyLineLog A 
-LEFT OUTER JOIN RTLessorAVSCust B ON A.COMQ1 = B.COMQ1 AND 
-A.LINEQ1 = B.LINEQ1 LEFT OUTER JOIN RTCode RTCode_3 ON 
-A.LINEIPTYPE = RTCode_3.CODE AND RTCode_3.KIND = 'M5' LEFT OUTER JOIN 
-RTCode RTCode_1 ON A.LINEISP = RTCode_1.CODE AND RTCode_1.KIND = 'C3' LEFT OUTER JOIN 
-RTCode RTCode_2 ON A.LINERATE = RTCode_2.CODE AND RTCode_2.KIND = 'D3' LEFT OUTER JOIN 
-RTEmployee INNER JOIN RTObj RTObj_1 ON RTEmployee.CUSID = RTObj_1.CUSID ON 
-A.SALESID = RTEmployee.EMPLY LEFT OUTER JOIN RTObj RTObj_2 ON 
-A.CONSIGNEE = RTObj_2.CUSID LEFT OUTER JOIN RTLessorAVSCMTYH ON 
-A.COMQ1 = RTLessorAVSCMTYH.COMQ1 LEFT OUTER JOIN RTCOUNTY ON 
-A.CUTID = RTCOUNTY.CUTID left outer join rtcode rtcode_9 on A.chgcodE=rtcode_9.code and rtcode_9.kind='G2' 
-LEFT OUTER JOIN rtemployee rtemployee_9 on A.chgusr=rtemployee.emply left outer join rtobj rtobj_9 on rtemployee_9.cusid=rtobj_9.cusid 
-WHERE 1=1 
-GROUP BY  A.COMQ1, A.LINEQ1, A.entryno,rtrim(convert(char(6),A.COMQ1)) +'-'+ rtrim(convert(char(6),A.lineQ1)) , 
-A.chgdat,RTCODE_9.CODENC,rtobj_9.cusnc,
-A.TOWNSHIP,A.LINEGROUP,A.LINEIP,A.GATEWAY, 
-A.PPPOEACCOUNT, A.PPPOEPASSWORD, A.LINETEL, 
-RTCode_1.CODENC, RTCode_3.CODENC, RTCode_2.CODENC, A.IPCNT, 
-A.RCVDAT, A.INSPECTDAT, A.HINETNOTIFYDAT, 
-A.HARDWAREDAT, A.ADSLAPPLYDAT, A.LINEDUEDAT, 
-A.DROPDAT, A.CANCELDAT 
-ORDER BY  A.COMQ1, A.LINEGROUP, A.LINEQ1</value>
+  <data name="RT307.CommandText" xml:space="preserve">
+    <value>SELECT * FROM (
+select	CODENC, belongnc, rcvnc as amtnc, qty, rcvmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
+	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
+from 	V_RT307
+where 	rcvmoney &gt;0
+UNION
+select	CODENC, belongnc, setnc as amtnc, qty, setmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
+	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
+from 	V_RT307
+where 	setmoney &gt;0
+UNION
+select	CODENC, belongnc, gtnc as amtnc, qty, gtmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
+	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
+from 	V_RT307
+where 	gtmoney &gt;0
+UNION
+select	CODENC, belongnc, returnnc as amtnc, qty, returnmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
+	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
+from 	V_RT307
+where 	  	returnmoney &gt;0) A
+order  by  	rcvmoneydat, belongnc, comn, cusnc, amtnc</value>
   </data>
-  <metadata name="cmdRT1031.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>49, 299</value>
-  </metadata>
-  <metadata name="infoParameter1.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="infoParameter2.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="infoParameter3.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="cmdRT1032.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>52, 347</value>
-  </metadata>
-  <metadata name="infoParameter4.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="infoParameter5.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="infoParameter6.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
-  <metadata name="cmd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>172, 347</value>
-  </metadata>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>

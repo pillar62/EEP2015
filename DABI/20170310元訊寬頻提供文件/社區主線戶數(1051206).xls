@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Version>12.00</Version>
+ </DocumentProperties>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>10005</WindowHeight>
+  <WindowWidth>10005</WindowWidth>
+  <WindowTopX>120</WindowTopX>
+  <WindowTopY>135</WindowTopY>
+  <ActiveSheet>2</ActiveSheet>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Center"/>
+   <Borders/>
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman" ss:Size="12"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Horizontal="Right" ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman"/>
+  </Style>
+  <Style ss:ID="s65">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman" ss:Bold="1"/>
+   <Interior ss:Color="#C0C0C0" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s66">
+   <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman" ss:Bold="1"/>
+   <Interior ss:Color="#FFDA89" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s67">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman"/>
+   <NumberFormat ss:Format="@"/>
+  </Style>
+  <Style ss:ID="s68">
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"
+     ss:Color="#000000"/>
+   </Borders>
+   <Font ss:FontName="新細明體" x:CharSet="136" x:Family="Roman"/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="AVS-City">
+  <Table ss:ExpandedColumnCount="9" ss:ExpandedRowCount="3" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="16.5">
+   <Row>
+    <Cell ss:MergeAcross="8" ss:StyleID="s63"><Data ss:Type="String">統計截止日期：2016/12/6 </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">轄區</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">主線序號</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">社區名稱</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">縣市</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">鄉鎮</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">地址</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">主線速率</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">客戶數</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">公關戶數</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">元訊</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">363-1</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">元訊</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">新北市</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">汐止區</Data></Cell>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">100M/40M</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="Number">30</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="Number">8</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>2</ActiveRow>
+     <ActiveCol>5</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="ET-City">
+  <Table ss:ExpandedColumnCount="9" ss:ExpandedRowCount="3" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="16.5">
+   <Row>
+    <Cell ss:MergeAcross="8" ss:StyleID="s63"><Data ss:Type="String">統計截止日期：2016/12/6 </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">轄區</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">主線序號</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">社區名稱</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">縣市</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">鄉鎮</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">地址</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">主線速率</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">客戶數</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">公關戶數</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">元訊</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">85-2</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">元訊</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">新北市</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">土城區</Data></Cell>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">60M/20M</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="Number">9</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="Number">2</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>2</ActiveRow>
+     <ActiveCol>6</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+ <Worksheet ss:Name="專案社區">
+  <Table ss:ExpandedColumnCount="9" ss:ExpandedRowCount="3" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="54" ss:DefaultRowHeight="16.5" ID="Table1">
+   <Row>
+    <Cell ss:MergeAcross="8" ss:StyleID="s63"><Data ss:Type="String">統計截止日期：2016/12/6 </Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">轄區</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">主線序號</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">社區名稱</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">縣市</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">鄉鎮</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">地址</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">主線速率</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">客戶數</Data></Cell>
+    <Cell ss:StyleID="s66"><Data ss:Type="String">公關戶數</Data></Cell>
+   </Row>
+   <Row>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">元訊</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">8-1</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">元訊</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">台北市</Data></Cell>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">中山區</Data></Cell>
+    <Cell ss:StyleID="s67"/>
+    <Cell ss:StyleID="s67"><Data ss:Type="String">300M/100M</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s68"><Data ss:Type="Number">1</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Selected/>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>2</ActiveRow>
+     <ActiveCol>5</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

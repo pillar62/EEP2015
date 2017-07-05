@@ -117,77 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="若要在類別中加入元件，請從工具箱拖所需元件，並利用 [屬性] 視窗設定它們的屬性。若要建立類別的方法與事件，請按這裡切換到程式碼檢視。" type="System.Drawing.Point, System.Drawing">
-    <value>0, 361</value>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="customSqlQuery1.Sql" xml:space="preserve">
+    <value>select	CODENC, belongnc, rcvnc as amtnc, qty, rcvmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
+	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
+from 	V_RT307
+where 	rcvmoney &gt;0
+UNION
+select	CODENC, belongnc, setnc as amtnc, qty, setmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
+	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
+from 	V_RT307
+where 	setmoney &gt;0
+UNION
+select	CODENC, belongnc, gtnc as amtnc, qty, gtmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
+	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
+from 	V_RT307
+where 	gtmoney &gt;0
+UNION
+select	CODENC, belongnc, returnnc as amtnc, qty, returnmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
+	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
+from 	V_RT307
+where 	  	returnmoney &gt;0
+order  by  	rcvmoneydat, belongnc, comn, cusnc, amtnc</value>
   </data>
-  <data name="serviceManager1" type="System.Drawing.Point, System.Drawing">
-    <value>48, 75</value>
-  </data>
-  <data name="InfoConnection1" type="System.Drawing.Point, System.Drawing">
-    <value>48, 36</value>
-  </data>
-  <data name="RTLessorAVSCmtyLineDrop" type="System.Drawing.Point, System.Drawing">
-    <value>720, 377</value>
-  </data>
-  <data name="ucRTLessorAVSCmtyLineDrop" type="System.Drawing.Point, System.Drawing">
-    <value>720, 338</value>
-  </data>
-  <data name="RTLessorAVSCmtyLineDropHardware" type="System.Drawing.Point, System.Drawing">
-    <value>702, 247</value>
-  </data>
-  <data name="ucRTLessorAVSCmtyLineDropHardware" type="System.Drawing.Point, System.Drawing">
-    <value>702, 208</value>
-  </data>
-  <data name="RTLessorAVSCmtyLineDropSndwork" type="System.Drawing.Point, System.Drawing">
-    <value>706, 53</value>
-  </data>
-  <data name="ucRTLessorAVSCmtyLineDropSndwork" type="System.Drawing.Point, System.Drawing">
-    <value>701, 99</value>
-  </data>
-  <data name="View_RTLessorAVSCmtyLineDrop" type="System.Drawing.Point, System.Drawing">
-    <value>1020, 132</value>
-  </data>
-  <data name="View_RTLessorAVSCmtyLineDropHardware" type="System.Drawing.Point, System.Drawing">
-    <value>1019, 57</value>
-  </data>
-  <data name="View_RTLessorAVSCmtyLineDropSndwork" type="System.Drawing.Point, System.Drawing">
-    <value>1020, 93</value>
-  </data>
-  <data name="cmdRT10321" type="System.Drawing.Point, System.Drawing">
-    <value>13, 286</value>
-  </data>
-  <data name="cmdRT10323" type="System.Drawing.Point, System.Drawing">
-    <value>14, 362</value>
-  </data>
-  <data name="cmdRT10324" type="System.Drawing.Point, System.Drawing">
-    <value>16, 404</value>
-  </data>
-  <data name="cmd" type="System.Drawing.Point, System.Drawing">
-    <value>57, 168</value>
-  </data>
-  <data name="RT10326" type="System.Drawing.Point, System.Drawing">
-    <value>17, 446</value>
-  </data>
-  <data name="cmdRT10322" type="System.Drawing.Point, System.Drawing">
-    <value>15, 320</value>
-  </data>
-  <data name="cmdRT103213" type="System.Drawing.Point, System.Drawing">
-    <value>187, 241</value>
-  </data>
-  <data name="cmdRT103214" type="System.Drawing.Point, System.Drawing">
-    <value>187, 280</value>
-  </data>
-  <data name="cmdRT103215" type="System.Drawing.Point, System.Drawing">
-    <value>187, 319</value>
-  </data>
-  <data name="cmdRT103216" type="System.Drawing.Point, System.Drawing">
-    <value>187, 358</value>
-  </data>
-  <data name="RT103211" type="System.Drawing.Point, System.Drawing">
-    <value>17, 251</value>
-  </data>
-  <data name="cmdRT103217" type="System.Drawing.Point, System.Drawing">
-    <value>186, 397</value>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZT0iQ09ERU5DIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImJlbG9uZ25jIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImFtdG5jIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InF0eSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9ImFtdCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9InVuaW5vIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImludnRpdGxlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImNvbW4iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iY3VzbmMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0icmFkZHIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iY29udGFjdHRlbCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJkb2NrZXRkYXQiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJyY3Ztb25leWRhdCIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9InN0cmJpbGxpbmdkYXQiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJkdWVkYXQiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJtZW1vIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Imd0c2VyaWFsIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjwvRGF0YVNldD4=</value>
   </data>
 </root>

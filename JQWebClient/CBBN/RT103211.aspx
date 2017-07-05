@@ -31,6 +31,8 @@
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
                         OnClick="openQuery" Text="查詢" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="列印移轉單" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="移轉明細" Visible="True" />
                 </TooItems>
                 <QueryColumns>
                 </QueryColumns>

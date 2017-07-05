@@ -151,7 +151,7 @@
     <value>1020, 93</value>
   </metadata>
   <metadata name="cmdRT10321.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>52, 219</value>
+    <value>13, 286</value>
   </metadata>
   <metadata name="infoParameter1.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -166,7 +166,7 @@
     <value>False</value>
   </metadata>
   <metadata name="cmdRT10323.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>53, 295</value>
+    <value>14, 362</value>
   </metadata>
   <metadata name="infoParameter5.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -181,7 +181,7 @@
     <value>False</value>
   </metadata>
   <metadata name="cmdRT10324.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>55, 337</value>
+    <value>16, 404</value>
   </metadata>
   <metadata name="infoParameter9.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -199,7 +199,7 @@
     <value>57, 168</value>
   </metadata>
   <metadata name="RT10326.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>206, 211</value>
+    <value>17, 446</value>
   </metadata>
   <data name="RT10326.CommandText" xml:space="preserve">
     <value>SELECT    A.COMQ1, A.LINEQ1, A.ENTRYNO,A.seq,rtrim(convert(char(6),A.COMQ1)) +'-'+ rtrim(convert(char(6),A.lineQ1)),
@@ -223,7 +223,7 @@ ORDER BY A.seq
                  </value>
   </data>
   <metadata name="cmdRT10322.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>54, 253</value>
+    <value>15, 320</value>
   </metadata>
   <metadata name="infoParameter13.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -238,7 +238,7 @@ ORDER BY A.seq
     <value>False</value>
   </metadata>
   <metadata name="cmdRT103213.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>326, 208</value>
+    <value>187, 241</value>
   </metadata>
   <metadata name="infoParameter17.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -256,7 +256,7 @@ ORDER BY A.seq
     <value>False</value>
   </metadata>
   <metadata name="cmdRT103214.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>329, 254</value>
+    <value>187, 280</value>
   </metadata>
   <metadata name="infoParameter22.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -274,7 +274,7 @@ ORDER BY A.seq
     <value>False</value>
   </metadata>
   <metadata name="cmdRT103215.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>330, 299</value>
+    <value>187, 319</value>
   </metadata>
   <metadata name="infoParameter27.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -292,7 +292,7 @@ ORDER BY A.seq
     <value>False</value>
   </metadata>
   <metadata name="cmdRT103216.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>329, 345</value>
+    <value>187, 358</value>
   </metadata>
   <metadata name="infoParameter32.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -310,7 +310,7 @@ ORDER BY A.seq
     <value>False</value>
   </metadata>
   <metadata name="RT103211.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>474, 207</value>
+    <value>17, 251</value>
   </metadata>
   <data name="RT103211.CommandText" xml:space="preserve">
     <value>SELECT  A.RCVPRTNO AS RCVPRTNO, rtcode_1.codenc, A.APPLYDAT AS APPLYDAT, 
@@ -339,7 +339,7 @@ CASE WHEN RTObj_1.CUSNC='' OR RTObj_1.CUSNC IS NULL THEN RTObj_3.SHORTNC ELSE RT
 A.CLOSEDAT, RTObj_4.CUSNC, RTObj_5.CUSNC, A.PRTNO, A.CANCELDAT, RTObj_6.CUSNC </value>
   </data>
   <metadata name="cmdRT103217.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>325, 394</value>
+    <value>186, 397</value>
   </metadata>
   <metadata name="infoParameter37.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -356,6 +356,35 @@ A.CLOSEDAT, RTObj_4.CUSNC, RTObj_5.CUSNC, A.PRTNO, A.CANCELDAT, RTObj_6.CUSNC </
   <metadata name="infoParameter41.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
+  <metadata name="RT1032111.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>23, 488</value>
+  </metadata>
+  <data name="RT1032111.CommandText" xml:space="preserve">
+    <value>SELECT  A.RCVPRTNO AS RCVPRTNO, rtcode_1.codenc, A.APPLYDAT AS APPLYDAT, 
+CASE WHEN RTObj_7.CUSNC='' OR RTObj_7.CUSNC IS NULL THEN RTObj_2.SHORTNC ELSE  RTObj_7.CUSNC END , 
+CASE WHEN RTObj_1.CUSNC='' OR RTObj_1.CUSNC IS NULL THEN RTObj_3.SHORTNC ELSE RTObj_1.CUSNC END, 
+A.CLOSEDAT AS CLOSEDAT, RTObj_4.CUSNC AS CUSNC5, A.CANCELDAT AS CANCELDAT, RTObj_5.CUSNC AS CUSNC6, 
+A.PRTNO AS PRTNO, RTObj_6.CUSNC AS cusnc7,SUM(RTLessorAVSCustRTNHardwareDTL.QTY) 
+FROM RTEmployee RTEmployee_4 INNER JOIN RTObj RTObj_6 ON RTEmployee_4.CUSID = RTObj_6.CUSID RIGHT OUTER JOIN 
+RTLessorAVSCustRTNHardware A ON RTEmployee_4.EMPLY = A.RCVUSR LEFT OUTER JOIN 
+RTEmployee RTEmployee_3 INNER JOIN RTObj RTObj_5 ON RTEmployee_3.CUSID = RTObj_5.CUSID ON 
+A.CANCELUSR = RTEmployee_3.EMPLY LEFT OUTER JOIN 
+RTEmployee RTEmployee_2 INNER JOIN RTObj RTObj_4 ON RTEmployee_2.CUSID = RTObj_4.CUSID ON 
+A.CLOSEUSR = RTEmployee_2.EMPLY LEFT OUTER JOIN RTObj RTObj_3 ON 
+A.REALCONSIGNEE = RTObj_3.CUSID LEFT OUTER JOIN RTObj RTObj_2 ON 
+A.ASSIGNCONSIGNEE = RTObj_2.CUSID LEFT OUTER JOIN 
+RTEmployee RTEmployee_1 INNER JOIN RTObj RTObj_1 ON RTEmployee_1.CUSID = RTObj_1.CUSID ON 
+A.REALENGINEER = RTEmployee_1.EMPLY LEFT OUTER JOIN 
+RTObj RTObj_7 INNER JOIN RTEmployee RTEmployee_5 ON RTObj_7.CUSID = RTEmployee_5.CUSID ON 
+A.ASSIGNENGINEER = RTEmployee_5.EMPLY LEFT OUTER JOIN RTLessorAVSCustRTNHardwareDTL ON 
+A.RCVPRTNO=RTLessorAVSCustRTNHardwareDTL.RCVPRTNO left outer join rtcode rtcode_1 on 
+A.datasrc=rtcode_1.code and rtcode_1.kind='O1' 
+where 1=1
+GROUP BY  A.RCVPRTNO , rtcode_1.codenc, A.APPLYDAT , 
+CASE WHEN RTObj_7.CUSNC='' OR RTObj_7.CUSNC IS NULL THEN RTObj_2.SHORTNC ELSE  RTObj_7.CUSNC END , 
+CASE WHEN RTObj_1.CUSNC='' OR RTObj_1.CUSNC IS NULL THEN RTObj_3.SHORTNC ELSE RTObj_1.CUSNC END, 
+A.CLOSEDAT, RTObj_4.CUSNC, RTObj_5.CUSNC, A.PRTNO, A.CANCELDAT, RTObj_6.CUSNC </value>
+  </data>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
