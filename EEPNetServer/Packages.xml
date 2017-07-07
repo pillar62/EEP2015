@@ -35,8 +35,12 @@
     <PackageFile Name="sRT304.dll" Active="1" />
     <PackageFile Name="sRT305.dll" Active="1" />
     <PackageFile Name="sRT306.dll" Active="1" />
+    <PackageFile Name="sRT307.dll" Active="1" />
+    <PackageFile Name="sRT308.dll" Active="1" />
+    <PackageFile Name="sRT309.dll" Active="1" />
+    <PackageFile Name="sRT310.dll" Active="1" />
     <PackageFile Name="sRT401.dll" Active="1" />
     <PackageFile Name="sSYS001.dll" Active="1" />
-    <PackageFile Name="sRT307.dll" Active="1" />
+    <PackageFile Name="sRT311.dll" Active="1" />
   </CBBN>
 </InfolightPackages>

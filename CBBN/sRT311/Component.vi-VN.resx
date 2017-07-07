@@ -117,48 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="serviceManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>33, 27</value>
-  </metadata>
-  <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>31, 72</value>
-  </metadata>
-  <metadata name="RTLessorCustSndwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>424, 71</value>
-  </metadata>
-  <metadata name="ucRTLessorCustSndwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>422, 127</value>
-  </metadata>
-  <metadata name="View_RTLessorCustSndwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>434, 187</value>
-  </metadata>
-  <metadata name="RT307.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>48, 137</value>
-  </metadata>
-  <data name="RT307.CommandText" xml:space="preserve">
-    <value>SELECT * FROM (
-select	CODENC, belongnc, rcvnc as amtnc, qty, rcvmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
-	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
-from 	V_RT307
-where 	rcvmoney &gt;0
-UNION
-select	CODENC, belongnc, setnc as amtnc, qty, setmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
-	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
-from 	V_RT307
-where 	setmoney &gt;0
-UNION
-select	CODENC, belongnc, gtnc as amtnc, qty, gtmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
-	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
-from 	V_RT307
-where 	gtmoney &gt;0
-UNION
-select	CODENC, belongnc, returnnc as amtnc, qty, returnmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
-	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
-from 	V_RT307
-where 	  	returnmoney &gt;0) A
-order  by  	rcvmoneydat, belongnc, comn, cusnc, amtnc</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="若要在類別中加入元件，請從工具箱拖所需元件，並利用 [屬性] 視窗設定它們的屬性。若要建立類別的方法與事件，請按這裡切換到程式碼檢視。" type="System.Drawing.Point, System.Drawing">
+    <value>0, 349</value>
   </data>
-  <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
+  <data name="serviceManager1" type="System.Drawing.Point, System.Drawing">
+    <value>17, 134</value>
+  </data>
+  <data name="InfoConnection1" type="System.Drawing.Point, System.Drawing">
+    <value>17, 212</value>
+  </data>
+  <data name="RTLessorAVSCmtyLine" type="System.Drawing.Point, System.Drawing">
+    <value>17, 173</value>
+  </data>
+  <data name="ucRTLessorAVSCmtyLine" type="System.Drawing.Point, System.Drawing">
+    <value>17, 95</value>
+  </data>
+  <data name="View_RTLessorAVSCmtyLine" type="System.Drawing.Point, System.Drawing">
+    <value>17, 56</value>
+  </data>
+  <data name="RT311" type="System.Drawing.Point, System.Drawing">
+    <value>266, 81</value>
+  </data>
 </root>

@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <script>
-        //列印派工單
+        //列印收款明細表
         function btnPrintClick() {
             var WhereString = "";
             exportDevReport("#dataGridMaster", "sRT307.RT307", "RT307", "~/CBBN/DevReportForm/RT307RF.aspx", WhereString);
@@ -40,8 +40,6 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="備註" Editor="text" FieldName="memo" Format="" MaxLength="0" Width="120" />
                 </Columns>
                 <TooItems>
-                    <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
-                        OnClick="openQuery" Text="查詢" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-print" ItemType="easyui-linkbutton" OnClick="btnPrintClick" Text="印表" Visible="True" />
                 </TooItems>
                 <QueryColumns>

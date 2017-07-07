@@ -12,19 +12,15 @@ namespace EFClientTools.EFServerReference
 {
     using System.Runtime.Serialization;
     using System;
-    using System.Xml.Serialization;
-    using System.Xml;
-    using System.Text;
-    using System.IO;
-    using System.Linq;
-
+    
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ClientInfo", Namespace="http://schemas.datacontract.org/2004/07/EFWCFModule")]
-    [Serializable]
-    public partial class ClientInfo : object, System.ComponentModel.INotifyPropertyChanged
+    public partial class ClientInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged
     {
-       
+        
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         private string AUTOLOGINField;
         
@@ -36,7 +32,7 @@ namespace EFClientTools.EFServerReference
         
         private string DatabaseTypeField;
         
-       // private EFClientTools.EFServerReference.GroupInfo[] GroupsField;
+        private System.Collections.Generic.List<EFClientTools.EFServerReference.GroupInfo> GroupsField;
         
         private string IPAddressField;
         
@@ -74,7 +70,17 @@ namespace EFClientTools.EFServerReference
         
         private int sErrorCodeField;
         
-
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
+        {
+            get
+            {
+                return this.extensionDataField;
+            }
+            set
+            {
+                this.extensionDataField = value;
+            }
+        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string AUTOLOGIN
@@ -160,69 +166,21 @@ namespace EFClientTools.EFServerReference
                 }
             }
         }
-
-        public string Serialize<T>(T value) {
-            var xml = string.Empty;
-            XmlSerializer serializer = new XmlSerializer(typeof(T));
-            XmlWriterSettings settings = new XmlWriterSettings();
-            settings.Encoding = new UnicodeEncoding(false, false);
-            settings.Indent = false;
-            settings.OmitXmlDeclaration = false;
-            using (StringWriter textWriter = new StringWriter())
-            {
-                using (XmlWriter xmlWriter = XmlWriter.Create(textWriter, settings))
-                {
-                    serializer.Serialize(xmlWriter, value);
-                }
-                xml = textWriter.ToString();
-            }
-            return xml;
-        }
-
-        private static T Deserialize<T>(string xml)
-        {
-            if (string.IsNullOrEmpty(xml))
-            {
-                return default(T);
-            }
-
-            XmlSerializer serializer = new XmlSerializer(typeof(T));
-            XmlReaderSettings settings = new XmlReaderSettings();
-            // No settings need modifying here      
-            using (StringReader textReader = new StringReader(xml))
-            {
-                using (XmlReader xmlReader = XmlReader.Create(textReader, settings))
-                {
-                    return (T)serializer.Deserialize(xmlReader);
-                }
-            }
-        }
-
-
-        private string groups = string.Empty;
         
-
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Collections.Generic.List<EFClientTools.EFServerReference.GroupInfo> Groups
         {
             get
             {
-                if (string.IsNullOrEmpty(groups))
-                {
-                    return new System.Collections.Generic.List<GroupInfo>(); ;
-                }
-                else {
-                    return Deserialize<EFClientTools.EFServerReference.GroupInfo[]>(groups).ToList();
-                }
+                return this.GroupsField;
             }
             set
             {
-                groups = Serialize<EFClientTools.EFServerReference.GroupInfo[]>(value.ToArray());
-                //if ((object.ReferenceEquals(this.GroupsField, value) != true))
-                //{
-                //    //this.GroupsField = value;
-                //    this.RaisePropertyChanged("Groups");
-                //}
+                if ((object.ReferenceEquals(this.GroupsField, value) != true))
+                {
+                    this.GroupsField = value;
+                    this.RaisePropertyChanged("Groups");
+                }
             }
         }
         
@@ -547,9 +505,10 @@ namespace EFClientTools.EFServerReference
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GroupInfo", Namespace="http://schemas.datacontract.org/2004/07/EFWCFModule")]
-    public partial class GroupInfo : object, System.ComponentModel.INotifyPropertyChanged
+    public partial class GroupInfo : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged
     {
         
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         private string IDField;
         
@@ -557,7 +516,17 @@ namespace EFClientTools.EFServerReference
         
         private EFClientTools.EFServerReference.GroupType TypeField;
         
-
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
+        {
+            get
+            {
+                return this.extensionDataField;
+            }
+            set
+            {
+                this.extensionDataField = value;
+            }
+        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string ID
@@ -1578,7 +1547,6 @@ namespace EFClientTools.EFServerReference
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GROUPS", Namespace="http://schemas.datacontract.org/2004/07/EFGlobalModule", IsReference=true)]
-    [Serializable]
     public partial class GROUPS : EFClientTools.EFServerReference.EntityObject
     {
         
@@ -3675,15 +3643,39 @@ namespace EFClientTools.EFServerReference
         
         private string ALIASNAMEField;
         
+        private string AliasName1Field;
+        
+        private string CAPACITYField;
+        
+        private string DBAliasField;
+        
         private string DBNAMEField;
         
+        private string DBName1Field;
+        
         private string DBTYPEField;
+        
+        private string DBType1Field;
+        
+        private System.Nullable<int> DatabaseQtyField;
+        
+        private System.Nullable<decimal> FileUploadCapacityField;
+        
+        private System.Nullable<decimal> FileUploadLimitCapacityField;
+        
+        private System.Nullable<int> MAXUSERSField;
         
         private System.Nullable<bool> SPLITField;
         
         private string SYSTEMALIASField;
         
+        private System.Nullable<bool> Split1Field;
+        
+        private string SystemAlias1Field;
+        
         private string USERIDField;
+        
+        private string UserID1Field;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string ALIASNAME
@@ -3698,6 +3690,57 @@ namespace EFClientTools.EFServerReference
                 {
                     this.ALIASNAMEField = value;
                     this.RaisePropertyChanged("ALIASNAME");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="AliasName")]
+        public string AliasName1
+        {
+            get
+            {
+                return this.AliasName1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.AliasName1Field, value) != true))
+                {
+                    this.AliasName1Field = value;
+                    this.RaisePropertyChanged("AliasName1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CAPACITY
+        {
+            get
+            {
+                return this.CAPACITYField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.CAPACITYField, value) != true))
+                {
+                    this.CAPACITYField = value;
+                    this.RaisePropertyChanged("CAPACITY");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string DBAlias
+        {
+            get
+            {
+                return this.DBAliasField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.DBAliasField, value) != true))
+                {
+                    this.DBAliasField = value;
+                    this.RaisePropertyChanged("DBAlias");
                 }
             }
         }
@@ -3719,6 +3762,23 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="DBName")]
+        public string DBName1
+        {
+            get
+            {
+                return this.DBName1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.DBName1Field, value) != true))
+                {
+                    this.DBName1Field = value;
+                    this.RaisePropertyChanged("DBName1");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string DBTYPE
         {
@@ -3732,6 +3792,91 @@ namespace EFClientTools.EFServerReference
                 {
                     this.DBTYPEField = value;
                     this.RaisePropertyChanged("DBTYPE");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="DBType")]
+        public string DBType1
+        {
+            get
+            {
+                return this.DBType1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.DBType1Field, value) != true))
+                {
+                    this.DBType1Field = value;
+                    this.RaisePropertyChanged("DBType1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> DatabaseQty
+        {
+            get
+            {
+                return this.DatabaseQtyField;
+            }
+            set
+            {
+                if ((this.DatabaseQtyField.Equals(value) != true))
+                {
+                    this.DatabaseQtyField = value;
+                    this.RaisePropertyChanged("DatabaseQty");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> FileUploadCapacity
+        {
+            get
+            {
+                return this.FileUploadCapacityField;
+            }
+            set
+            {
+                if ((this.FileUploadCapacityField.Equals(value) != true))
+                {
+                    this.FileUploadCapacityField = value;
+                    this.RaisePropertyChanged("FileUploadCapacity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<decimal> FileUploadLimitCapacity
+        {
+            get
+            {
+                return this.FileUploadLimitCapacityField;
+            }
+            set
+            {
+                if ((this.FileUploadLimitCapacityField.Equals(value) != true))
+                {
+                    this.FileUploadLimitCapacityField = value;
+                    this.RaisePropertyChanged("FileUploadLimitCapacity");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> MAXUSERS
+        {
+            get
+            {
+                return this.MAXUSERSField;
+            }
+            set
+            {
+                if ((this.MAXUSERSField.Equals(value) != true))
+                {
+                    this.MAXUSERSField = value;
+                    this.RaisePropertyChanged("MAXUSERS");
                 }
             }
         }
@@ -3770,6 +3915,40 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="Split")]
+        public System.Nullable<bool> Split1
+        {
+            get
+            {
+                return this.Split1Field;
+            }
+            set
+            {
+                if ((this.Split1Field.Equals(value) != true))
+                {
+                    this.Split1Field = value;
+                    this.RaisePropertyChanged("Split1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="SystemAlias")]
+        public string SystemAlias1
+        {
+            get
+            {
+                return this.SystemAlias1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.SystemAlias1Field, value) != true))
+                {
+                    this.SystemAlias1Field = value;
+                    this.RaisePropertyChanged("SystemAlias1");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string USERID
         {
@@ -3786,6 +3965,23 @@ namespace EFClientTools.EFServerReference
                 }
             }
         }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="UserID")]
+        public string UserID1
+        {
+            get
+            {
+                return this.UserID1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.UserID1Field, value) != true))
+                {
+                    this.UserID1Field = value;
+                    this.RaisePropertyChanged("UserID1");
+                }
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3797,6 +3993,10 @@ namespace EFClientTools.EFServerReference
         private string GROUPIDField;
         
         private string GROUPNAMEField;
+        
+        private string GroupID1Field;
+        
+        private string GroupName1Field;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string GROUPID
@@ -3831,6 +4031,40 @@ namespace EFClientTools.EFServerReference
                 }
             }
         }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="GroupID")]
+        public string GroupID1
+        {
+            get
+            {
+                return this.GroupID1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.GroupID1Field, value) != true))
+                {
+                    this.GroupID1Field = value;
+                    this.RaisePropertyChanged("GroupID1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="GroupName")]
+        public string GroupName1
+        {
+            get
+            {
+                return this.GroupName1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.GroupName1Field, value) != true))
+                {
+                    this.GroupName1Field = value;
+                    this.RaisePropertyChanged("GroupName1");
+                }
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3841,7 +4075,11 @@ namespace EFClientTools.EFServerReference
         
         private System.Nullable<System.DateTime> CREATETIMEField;
         
+        private System.Nullable<System.DateTime> CreateTime1Field;
+        
         private byte[] DOCUMENTField;
+        
+        private byte[] Document1Field;
         
         private string FILENAMEField;
         
@@ -3849,15 +4087,27 @@ namespace EFClientTools.EFServerReference
         
         private System.Nullable<System.DateTime> FINISHTIMEField;
         
+        private string FileName1Field;
+        
+        private bool FinishFlag1Field;
+        
+        private System.Nullable<System.DateTime> FinishTime1Field;
+        
         private int IDField;
         
         private string PAGETYPEField;
         
         private string PRINTSETTINGField;
         
+        private string PageType1Field;
+        
+        private string PrintSetting1Field;
+        
         private System.Collections.Generic.List<EFClientTools.EFServerReference.SYS_SDQUEUEPAGE> SYS_SDQUEUEPAGEField;
         
         private string USERIDField;
+        
+        private string UserID1Field;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<System.DateTime> CREATETIME
@@ -3876,6 +4126,23 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="CreateTime")]
+        public System.Nullable<System.DateTime> CreateTime1
+        {
+            get
+            {
+                return this.CreateTime1Field;
+            }
+            set
+            {
+                if ((this.CreateTime1Field.Equals(value) != true))
+                {
+                    this.CreateTime1Field = value;
+                    this.RaisePropertyChanged("CreateTime1");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public byte[] DOCUMENT
         {
@@ -3889,6 +4156,23 @@ namespace EFClientTools.EFServerReference
                 {
                     this.DOCUMENTField = value;
                     this.RaisePropertyChanged("DOCUMENT");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="Document")]
+        public byte[] Document1
+        {
+            get
+            {
+                return this.Document1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.Document1Field, value) != true))
+                {
+                    this.Document1Field = value;
+                    this.RaisePropertyChanged("Document1");
                 }
             }
         }
@@ -3944,6 +4228,57 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="FileName")]
+        public string FileName1
+        {
+            get
+            {
+                return this.FileName1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.FileName1Field, value) != true))
+                {
+                    this.FileName1Field = value;
+                    this.RaisePropertyChanged("FileName1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="FinishFlag")]
+        public bool FinishFlag1
+        {
+            get
+            {
+                return this.FinishFlag1Field;
+            }
+            set
+            {
+                if ((this.FinishFlag1Field.Equals(value) != true))
+                {
+                    this.FinishFlag1Field = value;
+                    this.RaisePropertyChanged("FinishFlag1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="FinishTime")]
+        public System.Nullable<System.DateTime> FinishTime1
+        {
+            get
+            {
+                return this.FinishTime1Field;
+            }
+            set
+            {
+                if ((this.FinishTime1Field.Equals(value) != true))
+                {
+                    this.FinishTime1Field = value;
+                    this.RaisePropertyChanged("FinishTime1");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int ID
         {
@@ -3995,6 +4330,40 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="PageType")]
+        public string PageType1
+        {
+            get
+            {
+                return this.PageType1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.PageType1Field, value) != true))
+                {
+                    this.PageType1Field = value;
+                    this.RaisePropertyChanged("PageType1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="PrintSetting")]
+        public string PrintSetting1
+        {
+            get
+            {
+                return this.PrintSetting1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.PrintSetting1Field, value) != true))
+                {
+                    this.PrintSetting1Field = value;
+                    this.RaisePropertyChanged("PrintSetting1");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Collections.Generic.List<EFClientTools.EFServerReference.SYS_SDQUEUEPAGE> SYS_SDQUEUEPAGE
         {
@@ -4028,6 +4397,23 @@ namespace EFClientTools.EFServerReference
                 }
             }
         }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="UserID")]
+        public string UserID1
+        {
+            get
+            {
+                return this.UserID1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.UserID1Field, value) != true))
+                {
+                    this.UserID1Field = value;
+                    this.RaisePropertyChanged("UserID1");
+                }
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4038,11 +4424,17 @@ namespace EFClientTools.EFServerReference
         
         private byte[] DOCUMENTField;
         
+        private byte[] Document1Field;
+        
         private int IDField;
         
         private string PAGENAMEField;
         
         private byte[] PHOTOField;
+        
+        private string PageName1Field;
+        
+        private byte[] Photo1Field;
         
         private EFClientTools.EFServerReference.SYS_SDQUEUE SYS_SDQUEUEField;
         
@@ -4061,6 +4453,23 @@ namespace EFClientTools.EFServerReference
                 {
                     this.DOCUMENTField = value;
                     this.RaisePropertyChanged("DOCUMENT");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="Document")]
+        public byte[] Document1
+        {
+            get
+            {
+                return this.Document1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.Document1Field, value) != true))
+                {
+                    this.Document1Field = value;
+                    this.RaisePropertyChanged("Document1");
                 }
             }
         }
@@ -4116,6 +4525,40 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="PageName")]
+        public string PageName1
+        {
+            get
+            {
+                return this.PageName1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.PageName1Field, value) != true))
+                {
+                    this.PageName1Field = value;
+                    this.RaisePropertyChanged("PageName1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="Photo")]
+        public byte[] Photo1
+        {
+            get
+            {
+                return this.Photo1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.Photo1Field, value) != true))
+                {
+                    this.Photo1Field = value;
+                    this.RaisePropertyChanged("Photo1");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public EFClientTools.EFServerReference.SYS_SDQUEUE SYS_SDQUEUE
         {
@@ -4159,19 +4602,37 @@ namespace EFClientTools.EFServerReference
         
         private string ALIASOPTIONSField;
         
+        private string AliasOptions1Field;
+        
         private string BGENDCOLORField;
+        
+        private string BGEndColor1Field;
         
         private string BGSTARTCOLORField;
         
+        private string BGStartColor1Field;
+        
         private string COMPANYField;
         
-        private byte[] COMPANYIMAGEField;
+        private System.Nullable<bool> COMPANYIMAGEField;
+        
+        private string Company1Field;
+        
+        private string ExclusiveField;
+        
+        private string ImagesField;
         
         private byte[] LOGONIMAGEField;
         
+        private byte[] LogOnImage1Field;
+        
         private string MOUDLEXMLTEXTField;
         
+        private string MoudleXmlText1Field;
+        
         private System.Nullable<int> PAGESAVEOPTIONField;
+        
+        private System.Nullable<int> PageSaveOption1Field;
         
         private byte[] SETTINGField;
         
@@ -4179,9 +4640,23 @@ namespace EFClientTools.EFServerReference
         
         private string SOLUTIONNAMEField;
         
+        private byte[] Setting1Field;
+        
+        private string SolutionID1Field;
+        
+        private string SolutionName1Field;
+        
+        private string SystemsField;
+        
         private string THEMEField;
         
+        private string Theme1Field;
+        
         private string USERIDField;
+        
+        private string UserID1Field;
+        
+        private string serversField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string ALIASOPTIONS
@@ -4196,6 +4671,23 @@ namespace EFClientTools.EFServerReference
                 {
                     this.ALIASOPTIONSField = value;
                     this.RaisePropertyChanged("ALIASOPTIONS");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="AliasOptions")]
+        public string AliasOptions1
+        {
+            get
+            {
+                return this.AliasOptions1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.AliasOptions1Field, value) != true))
+                {
+                    this.AliasOptions1Field = value;
+                    this.RaisePropertyChanged("AliasOptions1");
                 }
             }
         }
@@ -4217,6 +4709,23 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="BGEndColor")]
+        public string BGEndColor1
+        {
+            get
+            {
+                return this.BGEndColor1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.BGEndColor1Field, value) != true))
+                {
+                    this.BGEndColor1Field = value;
+                    this.RaisePropertyChanged("BGEndColor1");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string BGSTARTCOLOR
         {
@@ -4230,6 +4739,23 @@ namespace EFClientTools.EFServerReference
                 {
                     this.BGSTARTCOLORField = value;
                     this.RaisePropertyChanged("BGSTARTCOLOR");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="BGStartColor")]
+        public string BGStartColor1
+        {
+            get
+            {
+                return this.BGStartColor1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.BGStartColor1Field, value) != true))
+                {
+                    this.BGStartColor1Field = value;
+                    this.RaisePropertyChanged("BGStartColor1");
                 }
             }
         }
@@ -4252,7 +4778,7 @@ namespace EFClientTools.EFServerReference
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public byte[] COMPANYIMAGE
+        public System.Nullable<bool> COMPANYIMAGE
         {
             get
             {
@@ -4260,10 +4786,61 @@ namespace EFClientTools.EFServerReference
             }
             set
             {
-                if ((object.ReferenceEquals(this.COMPANYIMAGEField, value) != true))
+                if ((this.COMPANYIMAGEField.Equals(value) != true))
                 {
                     this.COMPANYIMAGEField = value;
                     this.RaisePropertyChanged("COMPANYIMAGE");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="Company")]
+        public string Company1
+        {
+            get
+            {
+                return this.Company1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.Company1Field, value) != true))
+                {
+                    this.Company1Field = value;
+                    this.RaisePropertyChanged("Company1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Exclusive
+        {
+            get
+            {
+                return this.ExclusiveField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.ExclusiveField, value) != true))
+                {
+                    this.ExclusiveField = value;
+                    this.RaisePropertyChanged("Exclusive");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Images
+        {
+            get
+            {
+                return this.ImagesField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.ImagesField, value) != true))
+                {
+                    this.ImagesField = value;
+                    this.RaisePropertyChanged("Images");
                 }
             }
         }
@@ -4285,6 +4862,23 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="LogOnImage")]
+        public byte[] LogOnImage1
+        {
+            get
+            {
+                return this.LogOnImage1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.LogOnImage1Field, value) != true))
+                {
+                    this.LogOnImage1Field = value;
+                    this.RaisePropertyChanged("LogOnImage1");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string MOUDLEXMLTEXT
         {
@@ -4302,6 +4896,23 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="MoudleXmlText")]
+        public string MoudleXmlText1
+        {
+            get
+            {
+                return this.MoudleXmlText1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.MoudleXmlText1Field, value) != true))
+                {
+                    this.MoudleXmlText1Field = value;
+                    this.RaisePropertyChanged("MoudleXmlText1");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<int> PAGESAVEOPTION
         {
@@ -4315,6 +4926,23 @@ namespace EFClientTools.EFServerReference
                 {
                     this.PAGESAVEOPTIONField = value;
                     this.RaisePropertyChanged("PAGESAVEOPTION");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="PageSaveOption")]
+        public System.Nullable<int> PageSaveOption1
+        {
+            get
+            {
+                return this.PageSaveOption1Field;
+            }
+            set
+            {
+                if ((this.PageSaveOption1Field.Equals(value) != true))
+                {
+                    this.PageSaveOption1Field = value;
+                    this.RaisePropertyChanged("PageSaveOption1");
                 }
             }
         }
@@ -4370,6 +4998,74 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="Setting")]
+        public byte[] Setting1
+        {
+            get
+            {
+                return this.Setting1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.Setting1Field, value) != true))
+                {
+                    this.Setting1Field = value;
+                    this.RaisePropertyChanged("Setting1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="SolutionID")]
+        public string SolutionID1
+        {
+            get
+            {
+                return this.SolutionID1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.SolutionID1Field, value) != true))
+                {
+                    this.SolutionID1Field = value;
+                    this.RaisePropertyChanged("SolutionID1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="SolutionName")]
+        public string SolutionName1
+        {
+            get
+            {
+                return this.SolutionName1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.SolutionName1Field, value) != true))
+                {
+                    this.SolutionName1Field = value;
+                    this.RaisePropertyChanged("SolutionName1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Systems
+        {
+            get
+            {
+                return this.SystemsField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.SystemsField, value) != true))
+                {
+                    this.SystemsField = value;
+                    this.RaisePropertyChanged("Systems");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string THEME
         {
@@ -4383,6 +5079,23 @@ namespace EFClientTools.EFServerReference
                 {
                     this.THEMEField = value;
                     this.RaisePropertyChanged("THEME");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="Theme")]
+        public string Theme1
+        {
+            get
+            {
+                return this.Theme1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.Theme1Field, value) != true))
+                {
+                    this.Theme1Field = value;
+                    this.RaisePropertyChanged("Theme1");
                 }
             }
         }
@@ -4403,6 +5116,40 @@ namespace EFClientTools.EFServerReference
                 }
             }
         }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="UserID")]
+        public string UserID1
+        {
+            get
+            {
+                return this.UserID1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.UserID1Field, value) != true))
+                {
+                    this.UserID1Field = value;
+                    this.RaisePropertyChanged("UserID1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string servers
+        {
+            get
+            {
+                return this.serversField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.serversField, value) != true))
+                {
+                    this.serversField = value;
+                    this.RaisePropertyChanged("servers");
+                }
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4411,19 +5158,73 @@ namespace EFClientTools.EFServerReference
     public partial class SYS_SDUSERS : EFClientTools.EFServerReference.EntityObject
     {
         
+        private string ACTIVEField;
+        
+        private System.Nullable<int> DatabaseQtyField;
+        
         private string EMAILField;
+        
+        private string Email1Field;
+        
+        private System.Nullable<System.DateTime> ExpiryDateField;
         
         private string GROUPIDField;
         
+        private string GroupID1Field;
+        
         private System.Nullable<System.DateTime> LASTDATEField;
         
+        private System.Nullable<System.DateTime> LastDate1Field;
+        
         private string PASSWORDField;
+        
+        private string Password1Field;
+        
+        private string ReceiveMessageField;
         
         private string SYSTYPEField;
         
         private string USERIDField;
         
         private string USERNAMEField;
+        
+        private string UserID1Field;
+        
+        private string UserName1Field;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ACTIVE
+        {
+            get
+            {
+                return this.ACTIVEField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.ACTIVEField, value) != true))
+                {
+                    this.ACTIVEField = value;
+                    this.RaisePropertyChanged("ACTIVE");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> DatabaseQty
+        {
+            get
+            {
+                return this.DatabaseQtyField;
+            }
+            set
+            {
+                if ((this.DatabaseQtyField.Equals(value) != true))
+                {
+                    this.DatabaseQtyField = value;
+                    this.RaisePropertyChanged("DatabaseQty");
+                }
+            }
+        }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string EMAIL
@@ -4438,6 +5239,40 @@ namespace EFClientTools.EFServerReference
                 {
                     this.EMAILField = value;
                     this.RaisePropertyChanged("EMAIL");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="Email")]
+        public string Email1
+        {
+            get
+            {
+                return this.Email1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.Email1Field, value) != true))
+                {
+                    this.Email1Field = value;
+                    this.RaisePropertyChanged("Email1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> ExpiryDate
+        {
+            get
+            {
+                return this.ExpiryDateField;
+            }
+            set
+            {
+                if ((this.ExpiryDateField.Equals(value) != true))
+                {
+                    this.ExpiryDateField = value;
+                    this.RaisePropertyChanged("ExpiryDate");
                 }
             }
         }
@@ -4459,6 +5294,23 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="GroupID")]
+        public string GroupID1
+        {
+            get
+            {
+                return this.GroupID1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.GroupID1Field, value) != true))
+                {
+                    this.GroupID1Field = value;
+                    this.RaisePropertyChanged("GroupID1");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<System.DateTime> LASTDATE
         {
@@ -4476,6 +5328,23 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="LastDate")]
+        public System.Nullable<System.DateTime> LastDate1
+        {
+            get
+            {
+                return this.LastDate1Field;
+            }
+            set
+            {
+                if ((this.LastDate1Field.Equals(value) != true))
+                {
+                    this.LastDate1Field = value;
+                    this.RaisePropertyChanged("LastDate1");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string PASSWORD
         {
@@ -4489,6 +5358,40 @@ namespace EFClientTools.EFServerReference
                 {
                     this.PASSWORDField = value;
                     this.RaisePropertyChanged("PASSWORD");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="Password")]
+        public string Password1
+        {
+            get
+            {
+                return this.Password1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.Password1Field, value) != true))
+                {
+                    this.Password1Field = value;
+                    this.RaisePropertyChanged("Password1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ReceiveMessage
+        {
+            get
+            {
+                return this.ReceiveMessageField;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.ReceiveMessageField, value) != true))
+                {
+                    this.ReceiveMessageField = value;
+                    this.RaisePropertyChanged("ReceiveMessage");
                 }
             }
         }
@@ -4543,6 +5446,40 @@ namespace EFClientTools.EFServerReference
                 }
             }
         }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="UserID")]
+        public string UserID1
+        {
+            get
+            {
+                return this.UserID1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.UserID1Field, value) != true))
+                {
+                    this.UserID1Field = value;
+                    this.RaisePropertyChanged("UserID1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="UserName")]
+        public string UserName1
+        {
+            get
+            {
+                return this.UserName1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.UserName1Field, value) != true))
+                {
+                    this.UserName1Field = value;
+                    this.RaisePropertyChanged("UserName1");
+                }
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4555,11 +5492,19 @@ namespace EFClientTools.EFServerReference
         
         private string IPADDRESSField;
         
+        private string IPAddress1Field;
+        
         private System.DateTime LOGINTIMEField;
         
         private System.DateTime LOGOUTTIMEField;
         
+        private System.DateTime LoginTime1Field;
+        
+        private System.DateTime LogoutTime1Field;
+        
         private string USERIDField;
+        
+        private string UserID1Field;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int ID
@@ -4591,6 +5536,23 @@ namespace EFClientTools.EFServerReference
                 {
                     this.IPADDRESSField = value;
                     this.RaisePropertyChanged("IPADDRESS");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="IPAddress")]
+        public string IPAddress1
+        {
+            get
+            {
+                return this.IPAddress1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.IPAddress1Field, value) != true))
+                {
+                    this.IPAddress1Field = value;
+                    this.RaisePropertyChanged("IPAddress1");
                 }
             }
         }
@@ -4629,6 +5591,40 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="LoginTime")]
+        public System.DateTime LoginTime1
+        {
+            get
+            {
+                return this.LoginTime1Field;
+            }
+            set
+            {
+                if ((this.LoginTime1Field.Equals(value) != true))
+                {
+                    this.LoginTime1Field = value;
+                    this.RaisePropertyChanged("LoginTime1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="LogoutTime")]
+        public System.DateTime LogoutTime1
+        {
+            get
+            {
+                return this.LogoutTime1Field;
+            }
+            set
+            {
+                if ((this.LogoutTime1Field.Equals(value) != true))
+                {
+                    this.LogoutTime1Field = value;
+                    this.RaisePropertyChanged("LogoutTime1");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string USERID
         {
@@ -4642,6 +5638,23 @@ namespace EFClientTools.EFServerReference
                 {
                     this.USERIDField = value;
                     this.RaisePropertyChanged("USERID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="UserID")]
+        public string UserID1
+        {
+            get
+            {
+                return this.UserID1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.UserID1Field, value) != true))
+                {
+                    this.UserID1Field = value;
+                    this.RaisePropertyChanged("UserID1");
                 }
             }
         }
@@ -6195,17 +7208,37 @@ namespace EFClientTools.EFServerReference
         
         private byte[] CONTENTField;
         
+        private System.Nullable<bool> CheckOut1Field;
+        
+        private System.Nullable<System.DateTime> CheckOutDate1Field;
+        
+        private string CheckOutUser1Field;
+        
+        private byte[] Content1Field;
+        
         private string DESCRIPTIONField;
+        
+        private string Description1Field;
         
         private string PAGENAMEField;
         
         private string PAGETYPEField;
         
+        private string PageName1Field;
+        
+        private string PageType1Field;
+        
         private byte[] SERVERDLLField;
         
         private string SOLUTIONIDField;
         
+        private string SolutionID1Field;
+        
         private string USERIDField;
+        
+        private System.Nullable<System.DateTime> UpdateDateTimeField;
+        
+        private string UserID1Field;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<bool> CHECKOUT
@@ -6275,6 +7308,74 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="CheckOut")]
+        public System.Nullable<bool> CheckOut1
+        {
+            get
+            {
+                return this.CheckOut1Field;
+            }
+            set
+            {
+                if ((this.CheckOut1Field.Equals(value) != true))
+                {
+                    this.CheckOut1Field = value;
+                    this.RaisePropertyChanged("CheckOut1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="CheckOutDate")]
+        public System.Nullable<System.DateTime> CheckOutDate1
+        {
+            get
+            {
+                return this.CheckOutDate1Field;
+            }
+            set
+            {
+                if ((this.CheckOutDate1Field.Equals(value) != true))
+                {
+                    this.CheckOutDate1Field = value;
+                    this.RaisePropertyChanged("CheckOutDate1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="CheckOutUser")]
+        public string CheckOutUser1
+        {
+            get
+            {
+                return this.CheckOutUser1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.CheckOutUser1Field, value) != true))
+                {
+                    this.CheckOutUser1Field = value;
+                    this.RaisePropertyChanged("CheckOutUser1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="Content")]
+        public byte[] Content1
+        {
+            get
+            {
+                return this.Content1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.Content1Field, value) != true))
+                {
+                    this.Content1Field = value;
+                    this.RaisePropertyChanged("Content1");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string DESCRIPTION
         {
@@ -6288,6 +7389,23 @@ namespace EFClientTools.EFServerReference
                 {
                     this.DESCRIPTIONField = value;
                     this.RaisePropertyChanged("DESCRIPTION");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="Description")]
+        public string Description1
+        {
+            get
+            {
+                return this.Description1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.Description1Field, value) != true))
+                {
+                    this.Description1Field = value;
+                    this.RaisePropertyChanged("Description1");
                 }
             }
         }
@@ -6326,6 +7444,40 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="PageName")]
+        public string PageName1
+        {
+            get
+            {
+                return this.PageName1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.PageName1Field, value) != true))
+                {
+                    this.PageName1Field = value;
+                    this.RaisePropertyChanged("PageName1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="PageType")]
+        public string PageType1
+        {
+            get
+            {
+                return this.PageType1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.PageType1Field, value) != true))
+                {
+                    this.PageType1Field = value;
+                    this.RaisePropertyChanged("PageType1");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public byte[] SERVERDLL
         {
@@ -6360,6 +7512,23 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="SolutionID")]
+        public string SolutionID1
+        {
+            get
+            {
+                return this.SolutionID1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.SolutionID1Field, value) != true))
+                {
+                    this.SolutionID1Field = value;
+                    this.RaisePropertyChanged("SolutionID1");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string USERID
         {
@@ -6373,6 +7542,40 @@ namespace EFClientTools.EFServerReference
                 {
                     this.USERIDField = value;
                     this.RaisePropertyChanged("USERID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> UpdateDateTime
+        {
+            get
+            {
+                return this.UpdateDateTimeField;
+            }
+            set
+            {
+                if ((this.UpdateDateTimeField.Equals(value) != true))
+                {
+                    this.UpdateDateTimeField = value;
+                    this.RaisePropertyChanged("UpdateDateTime");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="UserID")]
+        public string UserID1
+        {
+            get
+            {
+                return this.UserID1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.UserID1Field, value) != true))
+                {
+                    this.UserID1Field = value;
+                    this.RaisePropertyChanged("UserID1");
                 }
             }
         }
@@ -6392,7 +7595,17 @@ namespace EFClientTools.EFServerReference
         
         private byte[] CONTENTField;
         
+        private System.DateTime CheckInDate1Field;
+        
+        private string CheckInDescription1Field;
+        
+        private string CheckInUser1Field;
+        
+        private byte[] Content1Field;
+        
         private string DESCRIPTIONField;
+        
+        private string Description1Field;
         
         private int IDField;
         
@@ -6400,11 +7613,19 @@ namespace EFClientTools.EFServerReference
         
         private string PAGETYPEField;
         
+        private string PageName1Field;
+        
+        private string PageType1Field;
+        
         private byte[] SERVERDLLField;
         
         private string SOLUTIONIDField;
         
+        private string SolutionID1Field;
+        
         private string USERIDField;
+        
+        private string UserID1Field;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime CHECKINDATE
@@ -6474,6 +7695,74 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="CheckInDate")]
+        public System.DateTime CheckInDate1
+        {
+            get
+            {
+                return this.CheckInDate1Field;
+            }
+            set
+            {
+                if ((this.CheckInDate1Field.Equals(value) != true))
+                {
+                    this.CheckInDate1Field = value;
+                    this.RaisePropertyChanged("CheckInDate1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="CheckInDescription")]
+        public string CheckInDescription1
+        {
+            get
+            {
+                return this.CheckInDescription1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.CheckInDescription1Field, value) != true))
+                {
+                    this.CheckInDescription1Field = value;
+                    this.RaisePropertyChanged("CheckInDescription1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="CheckInUser")]
+        public string CheckInUser1
+        {
+            get
+            {
+                return this.CheckInUser1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.CheckInUser1Field, value) != true))
+                {
+                    this.CheckInUser1Field = value;
+                    this.RaisePropertyChanged("CheckInUser1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="Content")]
+        public byte[] Content1
+        {
+            get
+            {
+                return this.Content1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.Content1Field, value) != true))
+                {
+                    this.Content1Field = value;
+                    this.RaisePropertyChanged("Content1");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string DESCRIPTION
         {
@@ -6487,6 +7776,23 @@ namespace EFClientTools.EFServerReference
                 {
                     this.DESCRIPTIONField = value;
                     this.RaisePropertyChanged("DESCRIPTION");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="Description")]
+        public string Description1
+        {
+            get
+            {
+                return this.Description1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.Description1Field, value) != true))
+                {
+                    this.Description1Field = value;
+                    this.RaisePropertyChanged("Description1");
                 }
             }
         }
@@ -6542,6 +7848,40 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="PageName")]
+        public string PageName1
+        {
+            get
+            {
+                return this.PageName1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.PageName1Field, value) != true))
+                {
+                    this.PageName1Field = value;
+                    this.RaisePropertyChanged("PageName1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="PageType")]
+        public string PageType1
+        {
+            get
+            {
+                return this.PageType1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.PageType1Field, value) != true))
+                {
+                    this.PageType1Field = value;
+                    this.RaisePropertyChanged("PageType1");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public byte[] SERVERDLL
         {
@@ -6576,6 +7916,23 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="SolutionID")]
+        public string SolutionID1
+        {
+            get
+            {
+                return this.SolutionID1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.SolutionID1Field, value) != true))
+                {
+                    this.SolutionID1Field = value;
+                    this.RaisePropertyChanged("SolutionID1");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string USERID
         {
@@ -6592,6 +7949,23 @@ namespace EFClientTools.EFServerReference
                 }
             }
         }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="UserID")]
+        public string UserID1
+        {
+            get
+            {
+                return this.UserID1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.UserID1Field, value) != true))
+                {
+                    this.UserID1Field = value;
+                    this.RaisePropertyChanged("UserID1");
+                }
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -6602,13 +7976,23 @@ namespace EFClientTools.EFServerReference
         
         private byte[] CONTENTField;
         
+        private byte[] Content1Field;
+        
         private string PAGENAMEField;
         
         private string PAGETYPEField;
         
+        private string PageName1Field;
+        
+        private string PageType1Field;
+        
         private string SOLUTIONIDField;
         
+        private string SolutionID1Field;
+        
         private string USERIDField;
+        
+        private string UserID1Field;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public byte[] CONTENT
@@ -6623,6 +8007,23 @@ namespace EFClientTools.EFServerReference
                 {
                     this.CONTENTField = value;
                     this.RaisePropertyChanged("CONTENT");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="Content")]
+        public byte[] Content1
+        {
+            get
+            {
+                return this.Content1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.Content1Field, value) != true))
+                {
+                    this.Content1Field = value;
+                    this.RaisePropertyChanged("Content1");
                 }
             }
         }
@@ -6661,6 +8062,40 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="PageName")]
+        public string PageName1
+        {
+            get
+            {
+                return this.PageName1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.PageName1Field, value) != true))
+                {
+                    this.PageName1Field = value;
+                    this.RaisePropertyChanged("PageName1");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="PageType")]
+        public string PageType1
+        {
+            get
+            {
+                return this.PageType1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.PageType1Field, value) != true))
+                {
+                    this.PageType1Field = value;
+                    this.RaisePropertyChanged("PageType1");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string SOLUTIONID
         {
@@ -6678,6 +8113,23 @@ namespace EFClientTools.EFServerReference
             }
         }
         
+        [System.Runtime.Serialization.DataMemberAttribute(Name="SolutionID")]
+        public string SolutionID1
+        {
+            get
+            {
+                return this.SolutionID1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.SolutionID1Field, value) != true))
+                {
+                    this.SolutionID1Field = value;
+                    this.RaisePropertyChanged("SolutionID1");
+                }
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string USERID
         {
@@ -6691,6 +8143,23 @@ namespace EFClientTools.EFServerReference
                 {
                     this.USERIDField = value;
                     this.RaisePropertyChanged("USERID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Name="UserID")]
+        public string UserID1
+        {
+            get
+            {
+                return this.UserID1Field;
+            }
+            set
+            {
+                if ((object.ReferenceEquals(this.UserID1Field, value) != true))
+                {
+                    this.UserID1Field = value;
+                    this.RaisePropertyChanged("UserID1");
                 }
             }
         }

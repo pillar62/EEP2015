@@ -117,48 +117,30 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="serviceManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>33, 27</value>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
-  <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>31, 72</value>
-  </metadata>
-  <metadata name="RTLessorCustSndwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>424, 71</value>
-  </metadata>
-  <metadata name="ucRTLessorCustSndwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>422, 127</value>
-  </metadata>
-  <metadata name="View_RTLessorCustSndwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>434, 187</value>
-  </metadata>
-  <metadata name="RT307.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>48, 137</value>
-  </metadata>
-  <data name="RT307.CommandText" xml:space="preserve">
-    <value>SELECT * FROM (
-select	CODENC, belongnc, rcvnc as amtnc, qty, rcvmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
-	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
-from 	V_RT307
-where 	rcvmoney &gt;0
-UNION
-select	CODENC, belongnc, setnc as amtnc, qty, setmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
-	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
-from 	V_RT307
-where 	setmoney &gt;0
-UNION
-select	CODENC, belongnc, gtnc as amtnc, qty, gtmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
-	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
-from 	V_RT307
-where 	gtmoney &gt;0
-UNION
-select	CODENC, belongnc, returnnc as amtnc, qty, returnmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
-	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
-from 	V_RT307
-where 	  	returnmoney &gt;0) A
-order  by  	rcvmoneydat, belongnc, comn, cusnc, amtnc</value>
+  <data name="customSqlQuery1.Sql" xml:space="preserve">
+    <value>select f.areanc, isnull(isnull(h.shortnc, j.cusnc), '') as salesnc, a.comq1, a.comn, a.comcnt, 
+d.linenum, isnull(c.custnum,0) as custnum, k.cutnc, a.township, a.raddr 
+from	RTLessorAvsCmtyH a 
+inner join RTLessorAvsCmtyLine b on a.comq1 = b.comq1 
+left outer join (select x.comq1, count(*) as custnum from rtLessorAvscmtyline x 
+	inner join rtLessorAvscust y on x.comq1 = y.comq1 and x.lineq1 = y.lineq1 
+	and y.freecode &lt;&gt;'Y' and y.dropdat is null and y.canceldat is null and (y.strbillingdat is not null or y.newbillingdat is not null) 
+	group by x.comq1) c on c.comq1 = a.comq1 
+left outer join (select comq1 , count(*) as linenum from rtLessorAvscmtyline where dropdat  is null and canceldat is null and hardwaredat is not null group by comq1) d on d.comq1 = a.comq1 
+left outer join RTCtyTown e inner join RTArea f on f.areaid = e.areaid and f.areatype='3' on e.cutid = a.cutid and e.township = a.township 
+left outer join RTCode g on b.linerate = g.code and g.kind ='D3' 
+left outer join RTobj h on b.consignee = h.cusid 
+left outer join RTEmployee i inner join RTObj j on i.cusid = j.cusid on i.emply = b.salesid 
+left outer join RTCounty k on k.cutid = a.cutid 
+where	b.dropdat  is null and b.canceldat is null 
+group by f.areanc, isnull(isnull(h.shortnc, j.cusnc), ''), a.comq1, a.comn, a.comcnt, 
+	d.linenum, isnull(c.custnum,0), k.cutnc, a.township, a.raddr, e.areaid 
+order by e.areaid, 2, custnum desc </value>
   </data>
-  <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZT0iYXJlYW5jIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InNhbGVzbmMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iY29tcTEiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJjb21uIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImNvbWNudCIgVHlwZT0iSW50MTYiIC8+PEZpZWxkIE5hbWU9ImxpbmVudW0iIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJjdXN0bnVtIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iY3V0bmMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0idG93bnNoaXAiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0icmFkZHIiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
+  </data>
 </root>

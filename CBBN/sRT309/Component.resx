@@ -118,45 +118,48 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="serviceManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>33, 27</value>
+    <value>17, 134</value>
   </metadata>
   <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>31, 72</value>
+    <value>17, 212</value>
   </metadata>
-  <metadata name="RTLessorCustSndwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>424, 71</value>
+  <metadata name="RTLessorAVSCust.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 173</value>
   </metadata>
-  <metadata name="ucRTLessorCustSndwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>422, 127</value>
+  <metadata name="ucRTLessorAVSCust.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 95</value>
   </metadata>
-  <metadata name="View_RTLessorCustSndwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>434, 187</value>
+  <metadata name="View_RTLessorAVSCust.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
   </metadata>
-  <metadata name="RT307.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>48, 137</value>
+  <metadata name="RT309.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>168, 173</value>
   </metadata>
-  <data name="RT307.CommandText" xml:space="preserve">
-    <value>SELECT * FROM (
-select	CODENC, belongnc, rcvnc as amtnc, qty, rcvmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
-	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
-from 	V_RT307
-where 	rcvmoney &gt;0
-UNION
-select	CODENC, belongnc, setnc as amtnc, qty, setmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
-	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
-from 	V_RT307
-where 	setmoney &gt;0
-UNION
-select	CODENC, belongnc, gtnc as amtnc, qty, gtmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
-	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
-from 	V_RT307
-where 	gtmoney &gt;0
-UNION
-select	CODENC, belongnc, returnnc as amtnc, qty, returnmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
-	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
-from 	V_RT307
-where 	  	returnmoney &gt;0) A
-order  by  	rcvmoneydat, belongnc, comn, cusnc, amtnc</value>
+  <data name="RT309.CommandText" xml:space="preserve">
+    <value>select convert(varchar(6), a.COMQ1) +'-'+ convert(varchar(2), a.lineq1) as comq, 
+b.comn, a.CUSID, a.cusnc, h.codenc as paytype, g.codenc as paycycle, 
+a.FINISHDAT, a.STRBILLINGDAT, a.newBILLINGDAT, a.DUEDAT, 
+a.DROPDAT, d.TYY, d.TMM,  	sum(d.amt) as amt, 
+case c.consignee when '' then 0 else 0.5 end as ratio, isnull(e.shortnc, i.cusnc) as belongnc, 
+sum(case c.consignee when '' then 0 else 0.5 end * d.amt) as shareamt 
+from 	RTLessorAVSCust a 
+inner join RTLessorAVSCmtyH b on b.comq1 = a.comq1 
+inner join RTLessorAVScmtyline c on c.comq1 = a.comq1 and c.lineq1 = a.lineq1 
+inner join RTLessorAVSCustARDTL d on d.cusid = a.cusid 
+left outer join rtobj e on e.cusid = c.consignee 
+left outer join rtcode g on g.code = a.paycycle and g.kind ='M8' 
+left outer join rtcode h on h.code = a.paytype and h.kind ='M9' 
+left outer join rtemployee j inner join rtobj i on i.cusid = j.cusid on j.emply = c.salesid 
+WHERE	a.freecode &lt;&gt;'Y' 
+and d.canceldat is null 
+and (d.ITEMNC LIKE '%網路服務費%') 
+group by isnull(e.shortnc, i.cusnc), convert(varchar(6), a.COMQ1) +'-'+ convert(varchar(2), a.lineq1), 
+b.comn, a.CUSID, a.cusnc, h.codenc, g.codenc, 
+a.FINISHDAT, a.STRBILLINGDAT, a.newBILLINGDAT, a.DUEDAT, 
+a.DROPDAT, d.TYY, d.TMM, 
+case c.consignee when '' then 0 else 0.5 end 
+having sum(amt) &gt;0 
+order by 1,3,5 </value>
   </data>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>

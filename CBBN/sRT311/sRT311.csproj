@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E1068D49-0652-49AB-BA94-6026C92BBA70}</ProjectGuid>
+    <ProjectGuid>{B68948F5-F55C-49A2-AE59-0186256F0491}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>sRT307</RootNamespace>
-    <AssemblyName>sRT307</AssemblyName>
+    <RootNamespace>sRT311</RootNamespace>
+    <AssemblyName>sRT311</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
