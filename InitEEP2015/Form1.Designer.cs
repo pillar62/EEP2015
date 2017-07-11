@@ -45,12 +45,13 @@ namespace InitEEP
             this.button8 = new System.Windows.Forms.Button();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
             this.label1.Location = new System.Drawing.Point(18, 23);
             this.label1.Name = "label1";
@@ -63,7 +64,7 @@ namespace InitEEP
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
             this.label2.Location = new System.Drawing.Point(18, 59);
             this.label2.Name = "label2";
@@ -75,21 +76,23 @@ namespace InitEEP
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox1.Location = new System.Drawing.Point(166, 21);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(260, 22);
+            this.textBox1.Size = new System.Drawing.Size(260, 25);
             this.textBox1.TabIndex = 3;
             // 
             // textBox2
             // 
+            this.textBox2.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox2.Location = new System.Drawing.Point(166, 56);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(260, 22);
+            this.textBox2.Size = new System.Drawing.Size(260, 25);
             this.textBox2.TabIndex = 4;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(125, 167);
+            this.button1.Location = new System.Drawing.Point(128, 207);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 28);
             this.button1.TabIndex = 6;
@@ -99,9 +102,10 @@ namespace InitEEP
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button2.Location = new System.Drawing.Point(426, 20);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(24, 18);
+            this.button2.Size = new System.Drawing.Size(34, 26);
             this.button2.TabIndex = 7;
             this.button2.Text = "...";
             this.button2.UseVisualStyleBackColor = true;
@@ -109,9 +113,10 @@ namespace InitEEP
             // 
             // button3
             // 
+            this.button3.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button3.Location = new System.Drawing.Point(426, 56);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(24, 18);
+            this.button3.Size = new System.Drawing.Size(34, 26);
             this.button3.TabIndex = 8;
             this.button3.Text = "...";
             this.button3.UseVisualStyleBackColor = true;
@@ -121,7 +126,7 @@ namespace InitEEP
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button4.Location = new System.Drawing.Point(223, 167);
+            this.button4.Location = new System.Drawing.Point(226, 207);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(92, 28);
             this.button4.TabIndex = 9;
@@ -131,9 +136,10 @@ namespace InitEEP
             // 
             // button6
             // 
+            this.button6.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button6.Location = new System.Drawing.Point(426, 95);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(24, 18);
+            this.button6.Size = new System.Drawing.Size(34, 26);
             this.button6.TabIndex = 14;
             this.button6.Text = "...";
             this.button6.UseVisualStyleBackColor = true;
@@ -141,15 +147,16 @@ namespace InitEEP
             // 
             // textBox4
             // 
+            this.textBox4.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox4.Location = new System.Drawing.Point(166, 95);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(260, 22);
+            this.textBox4.Size = new System.Drawing.Size(260, 25);
             this.textBox4.TabIndex = 12;
             // 
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Navy;
             this.label4.Location = new System.Drawing.Point(18, 98);
             this.label4.Name = "label4";
@@ -163,7 +170,7 @@ namespace InitEEP
             // 
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button7.Location = new System.Drawing.Point(321, 167);
+            this.button7.Location = new System.Drawing.Point(324, 207);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(125, 28);
             this.button7.TabIndex = 9;
@@ -173,9 +180,10 @@ namespace InitEEP
             // 
             // button8
             // 
+            this.button8.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.button8.Location = new System.Drawing.Point(426, 130);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(24, 18);
+            this.button8.Size = new System.Drawing.Size(34, 26);
             this.button8.TabIndex = 18;
             this.button8.Text = "...";
             this.button8.UseVisualStyleBackColor = true;
@@ -183,15 +191,16 @@ namespace InitEEP
             // 
             // textBox5
             // 
+            this.textBox5.Font = new System.Drawing.Font("微軟正黑體", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.textBox5.Location = new System.Drawing.Point(166, 130);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(260, 22);
+            this.textBox5.Size = new System.Drawing.Size(260, 25);
             this.textBox5.TabIndex = 17;
             // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Navy;
             this.label5.Location = new System.Drawing.Point(18, 134);
             this.label5.Name = "label5";
@@ -201,13 +210,28 @@ namespace InitEEP
             this.label5.Text = "EEP Addin";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
+            this.checkBox1.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.checkBox1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.checkBox1.Location = new System.Drawing.Point(127, 172);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(133, 23);
+            this.checkBox1.TabIndex = 19;
+            this.checkBox1.Text = "轉換為目前目錄";
+            this.checkBox1.UseVisualStyleBackColor = false;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // InitEEP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::InitEEP.Properties.Resources.EEPINIT;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(478, 223);
+            this.ClientSize = new System.Drawing.Size(508, 265);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label5);
@@ -253,6 +277,7 @@ namespace InitEEP
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 

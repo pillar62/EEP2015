@@ -18,8 +18,9 @@ namespace InitEEP
 //        const string REGISTRYNAME = "infolight\\eep.net2008";
 //#else
         const string REGISTRYNAME = "infolight\\eep.net";
-//#endif
+        //#endif
 
+        string patho_textBox1 = "", patho_textBox2 = "", patho_textBox3 = "", patho_textBox4 = "";
         public InitEEP()
         {
             InitializeComponent();
@@ -149,6 +150,14 @@ namespace InitEEP
             }
 
             rk.Close();
+            //20170708 JamesLin：將註冊的路徑放在全域變數
+            patho_textBox1 = textBox1.Text;
+            patho_textBox2 = textBox2.Text;
+            patho_textBox3 = textBox4.Text;
+            patho_textBox4 = textBox5.Text;
+            //預設checkbox1打勾
+            checkBox1.Checked = true;
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -334,6 +343,29 @@ namespace InitEEP
             if (dirDlg.ShowDialog() == DialogResult.OK)
             {
                 textBox5.Text = dirDlg.SelectedPath;
+            }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            string basePath = Path.GetFullPath(System.Environment.CurrentDirectory + @"\..\");
+            //MessageBox.Show(basePath);
+            //如果勾選，路徑就改為initEEP執行檔目前路徑，否則就用原來的路徑
+            if (checkBox1.Checked)
+            {
+                //如果勾選，就帶相對的路徑
+                textBox1.Text = basePath + "EEPNetServer";
+                textBox2.Text = basePath + "EEPNetClient";
+                textBox4.Text = basePath + "EEPWebClient";
+                textBox5.Text = basePath + "AddIns";
+            }
+            else
+            {
+                //如果沒勾選，就帶註冊的路徑
+                textBox1.Text = patho_textBox1;
+                textBox2.Text = patho_textBox2;
+                textBox4.Text = patho_textBox3;
+                textBox5.Text = patho_textBox4;
             }
         }
     }
