@@ -1,6 +1,6 @@
 <InfolightDB>
   <DataBase>
-    <ERPS String="User Id=sa;database=Northwind;server=.\SQLEXPRESS;Connect Timeout=5" Type="1" OdbcType="-1" MaxCount="30" TimeOut="5" Master="0" Encrypt="False" Password="yffkbiGU]^" />
+    <ERPS String="User Id=sa;database=Northwind;server=cbbnserver;Connect Timeout=5" Type="1" OdbcType="-1" MaxCount="30" TimeOut="5" Master="0" Encrypt="False" Password="mfe`" />
     <RTLib String="User Id=sa;database=RTLib;server=.\SQLEXPRESS;Connect Timeout=5" Type="1" OdbcType="-1" MaxCount="20" TimeOut="5" Master="0" Encrypt="False" Password="yffkbiGU]^" />
   </DataBase>
   <SystemDB>RTLib</SystemDB>
