@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="customSqlQuery1.Sql" xml:space="preserve">
+    <value>select isnull(CONVERT(varchar(100), GETDATE(), 112),'') as seq,isnull(CONVERT(varchar(100),a.applydat,101),'')  as applydat,
+isnull(CONVERT(varchar(100),a.docketdat,101),'') as docketdat, a.docketdat as docketdatq,
+'A' as applykind,'' as updcode,''  as updtel,
+isnull(a.memberid,'') as memberid,'C51A030000' as mak_id,'73885' as sale_id,
+case when a.IDNUMBERTYPE='02' then '51' else '1' end as cust_kind,
+case when a.IDNUMBERTYPE='02' then isnull(a.cusnc,'') else '' end as company_name,
+case when  a.IDNUMBERTYPE='02' then isnull(coboss,'') else '' end as coboss,
+case when  a.IDNUMBERTYPE='02' then isnull(cobossid,'') else '' end as cobossid,
+case when  a.IDNUMBERTYPE='02' then isnull(cusid,'') else '' end as company_id,
+case when rtcode3.codenc='20M' then '1054' when   rtcode3.codenc='40M' then '1053'  when   rtcode3.codenc='70M' then '1052' else '' end  as case_no,'' as dis_no,isnull(a.cusnc,'') as cusnc,isnull(rtcode.codenc,'') as codenc,isnull(a.socialid,'') as socialid,
+case when  a.IDNUMBERTYPE='02'  then
+                  case when substring(a.cobossid,2,1)='1' then '先生'  when substring(a.cobossid,2,1)='2' then '女士'  else '' end 
+       else 
+                 case when substring(a.socialid,2,1)='1' then '先生'  when substring(a.socialid,2,1)='2' then '女士'  else '' end 
+       end as sex_KIND,
+case when  a.IDNUMBERTYPE='02'  then isnull(a.cocontact,'') else isnull(a.cusnc,'') end as contact_name,
+case when  a.IDNUMBERTYPE='02'  then isnull(a.cocontacttel,'') else isnull(a.contacttel,'') end as contact_tel,
+case when  a.IDNUMBERTYPE='02' then '' else isnull(CONVERT(varchar(100),a.birthday, 101),'') end as contact_birth,
+case when  a.IDNUMBERTYPE='02' then '' else isnull(a.mobile,'') end as contact_mobile,
+'' as agent_cardtype,'' as agent_idno,'' as agent_callname,'' as agent_name,'' as agent_tel,'' as agent_birth,
+isnull(rtctytown.zip,'') as zip3,isnull(rtcounty.cutnc,'') as cutnc3,isnull(a.township3,'') as township3,isnull(a.raddr3,'') as raddr3,
+isnull(rtctytown1.zip,'') as zip2,isnull(rtcounty1.cutnc,'') as cutnc2,isnull(a.township1,'') as township2,isnull(a.raddr1,'') as raddr2,
+isnull(rtctytown2.zip,'') as zip1,isnull(rtcounty2.cutnc,'') as cutnc1,isnull(a.township2,'') as township1,isnull(a.raddr2,'') as raddr1,
+isnull(rtfareastcmtyh.comn,'') as comn,isnull(a.ip11,'') as ip11s,
+isnull(a.ip11,'') as ip11e,isnull(CONVERT(varchar(100), GETDATE(), 101),'') as ncicdate,isnull(rtcode2.codenc,'') as codenc2,isnull(a.secondno,'') as secondno,'' as apply_no,
+isnull(a.paycycle,'') as paycycle
+from rtfareastcust a
+left outer join rtcode on a.idnumbertype=rtcode.code and rtcode.kind='J5'
+left outer join rtctytown on a.cutid3=rtctytown.cutid and  a.township3=rtctytown.township 
+left outer join rtcounty on a.cutid3=rtcounty.cutid
+left outer join rtcounty rtcounty1 on a.cutid1=rtcounty1.cutid
+left outer join rtctytown rtctytown2 on a.cutid2=rtctytown2.cutid and  a.township2=rtctytown2.township 
+left outer join rtctytown rtctytown1 on a.cutid1=rtctytown1.cutid and  a.township1=rtctytown1.township 
+left outer join rtcounty rtcounty2 on a.cutid2=rtcounty2.cutid
+left outer join rtfareastcmtyh on a.comq1=rtfareastcmtyh.comq1
+left outer join rtcode rtcode2 on a.secondidtype=rtcode2.code and rtcode2.kind='L3'
+left outer join rtcode rtcode3 on a.userrate=rtcode3.code and rtcode3.kind='R6'
+where a.freecode&lt;&gt;'Y' and a.dropdat is null and a.canceldat is null and 
+a.overduedat is null  </value>
+  </data>
+  <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZT0ic2VxIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImFwcGx5ZGF0IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImRvY2tldGRhdCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJkb2NrZXRkYXRxIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iYXBwbHlraW5kIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InVwZGNvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0idXBkdGVsIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Im1lbWJlcmlkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Im1ha19pZCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJzYWxlX2lkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImN1c3Rfa2luZCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJjb21wYW55X25hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iY29ib3NzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImNvYm9zc2lkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImNvbXBhbnlfaWQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iY2FzZV9ubyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJkaXNfbm8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iY3VzbmMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iY29kZW5jIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InNvY2lhbGlkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InNleF9LSU5EIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImNvbnRhY3RfbmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJjb250YWN0X3RlbCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJjb250YWN0X2JpcnRoIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImNvbnRhY3RfbW9iaWxlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImFnZW50X2NhcmR0eXBlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImFnZW50X2lkbm8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iYWdlbnRfY2FsbG5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iYWdlbnRfbmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJhZ2VudF90ZWwiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iYWdlbnRfYmlydGgiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iemlwMyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJjdXRuYzMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0idG93bnNoaXAzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InJhZGRyMyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJ6aXAyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImN1dG5jMiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJ0b3duc2hpcDIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0icmFkZHIyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InppcDEiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iY3V0bmMxIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InRvd25zaGlwMSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJyYWRkcjEiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iY29tbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJpcDExcyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJpcDExZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJuY2ljZGF0ZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJjb2RlbmMyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InNlY29uZG5vIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImFwcGx5X25vIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InBheWN5Y2xlIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjwvRGF0YVNldD4=</value>
+  </data>
+</root>
