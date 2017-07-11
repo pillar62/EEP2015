@@ -211,5 +211,5 @@ GeneratedArtifacts/
 _Pvt_Extensions/
 ModelManifest.xml
 
-#Setup xml Files
-*.xml
+#EEPNetServer xml Files
+/EEPNetServer/*.xml
