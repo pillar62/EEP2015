@@ -1,4 +1,0 @@
-<ServerConfig>
-  <MaxTimeOut Value="0.00" />
-  <LocalServer MaxUser="50" IsMaster="False" MasterServerIP="" MasterServerPort="" />
-</ServerConfig>

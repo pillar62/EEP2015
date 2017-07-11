@@ -1,3 +1,0 @@
-<InfolightAllowUserToPerLogin Enable="True" EnableSameIP="True">
-  <PasswordPolicy MinSize="2" MaxSize="10" CharNum="True" />
-</InfolightAllowUserToPerLogin>
