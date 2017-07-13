@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Microsoft.Reporting.WebForms;
 using System.Data;
 using Newtonsoft.Json;
 using DevExpress.XtraReports.UI;
@@ -11,7 +12,7 @@ using System.IO;
 using System.Diagnostics;
 using System.Net;
 
-public partial class RT312RF : System.Web.UI.Page
+public partial class rvOrders01E : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -68,23 +69,26 @@ public partial class RT312RF : System.Web.UI.Page
             //else
             //    ReportViewer1.LocalReport.DataSources.Add(new Microsoft.Reporting.WebForms.ReportDataSource(DataSetName, DataSource.InnerDataSet.Tables[0]));
             #endregion
-
             //資料存到dataset(注意報表的預設table名稱就是CustomSqlQuery)
             DataSet ds = new DataSet();
             DataTable dt = new DataTable();
             dt = this.DataSource.InnerDataSet.Tables[0].Copy();
-            dt.TableName = "CustomSqlQuery";
+            dt.TableName = "Query";
             ds.Tables.Add(dt);
-           
+
             //將資料寫入宣告的report，然後再指定給view
             //this.DataSource.DataMember
-            RT312R report = new RT312R();
+            XtraReport1 report = new XtraReport1();
             report.DataSource = ds;
-            report.DataMember = "CustomSqlQuery";
+            report.DataMember = "Query";
+            //套到VIEWER(如果是直接輸出到excel的話，那就不能夠預覽報表)
+            //ASPxDocumentViewer1.Report = report;
+            //ASPxDocumentViewer1.DataBind();
+
             //直接轉成excel檔
             string strNow = DateTime.Now.ToString("yyyyMMddhhmmss");
             string FileName = "orders" + strNow + ".xlsx";
-            string reportpath = Request.PhysicalApplicationPath + "Files\\" + FileName;
+            string reportpath = Request.PhysicalApplicationPath+ "Files\\" + FileName;
             report.ExportToXlsx(reportpath);
             //宣告並建立WebClient物件
             WebClient wc = new WebClient();
@@ -93,17 +97,15 @@ public partial class RT312RF : System.Web.UI.Page
             //清除Response內的HTML
             Response.Clear();
             //設定標頭檔資訊 attachment 是本文章的關鍵字
-
+ 
             Response.AddHeader("Content-Disposition", "attachment; filename = " + FileName);
             //開始輸出讀取到的檔案
             Response.BinaryWrite(b);
             //一定要加入這一行，否則會持續把Web內的HTML文字也輸出。
             Response.End();
-            //套到VIEWER
-            //ASPxDocumentViewer1.Report = report;
-            //ASPxDocumentViewer1.DataBind();
         }
     }
+
 
     protected void ASPxDocumentViewer1_RestoreReportDocumentFromCache(object sender, DevExpress.XtraReports.Web.RestoreReportDocumentFromCacheEventArgs e)
     {
