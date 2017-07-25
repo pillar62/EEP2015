@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="RT3021.aspx.cs" Inherits="Template_JQueryQuery1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="RT3022.aspx.cs" Inherits="Template_JQueryQuery1" %>
 
 <!DOCTYPE html>
 
@@ -83,8 +83,9 @@
                 due2E = "1999/1/1";
 
                 if (where.length > 0) {
+                    where = "1=1";
                     //取得查詢條件的值
-                    where = "a.DROPDAT is null and a.CANCELDAT is null and a.FINISHDAT is not null and a.freecode<>'Y' and b.DROPDAT is null and b.CANCELDAT is null ";
+                    //where = "a.DROPDAT is null and a.CANCELDAT is null and a.FINISHDAT is not null and a.freecode<>'Y' and b.DROPDAT is null and b.CANCELDAT is null ";
                     where = where + " and (a.duedat between '" + due1S + "' and '" + due1E + "' OR a.duedat between '" + due2S + "' and '" + due2E + "') ";
                 }
                 $(dg).datagrid('setWhere', where);
@@ -102,9 +103,9 @@
 
             $.ajax({
                 type: "POST",
-                url: '../handler/jqDataHandle.ashx?RemoteName=sRT302.cmdRT3021', //連接的Server端，command
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT302.cmdRT3023', //連接的Server端，command
                 //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
-                data: "mode=method&method=" + "smRT3021" + "&parameters=" + syr + "," + smm + "," + sdd + ","+usr,
+                data: "mode=method&method=" + "smRT3023" + "&parameters=" + syr + "," + smm + "," + sdd + ","+usr,
                 cache: false,
                 async: false,
                 success: function (data) {
@@ -135,33 +136,33 @@
     <form id="form1" runat="server">
         <div>
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
-            <JQTools:JQDataGrid ID="dataGridMaster" data-options="pagination:true,view:commandview" RemoteName="sRT302.RT3021" runat="server" AutoApply="True"
-                DataMember="RT3021" Pagination="True" QueryTitle="查詢條件"
-                Title="每月續約帳單轉檔作業" AllowDelete="False" AllowInsert="False" AllowUpdate="False" QueryMode="Panel" AlwaysClose="True" AllowAdd="False" ViewCommandVisible="False" OnLoadSuccess="OnLoadSuccess" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False">
+            <JQTools:JQDataGrid ID="dataGridMaster" data-options="pagination:true,view:commandview" RemoteName="sRT302.RT3022" runat="server" AutoApply="True"
+                DataMember="RT3022" Pagination="True" QueryTitle="查詢條件"
+                Title="每月續約帳單轉檔作業(過期專用)" AllowDelete="False" AllowInsert="False" AllowUpdate="False" QueryMode="Panel" AlwaysClose="True" AllowAdd="False" ViewCommandVisible="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" OnLoadSuccess="OnLoadSuccess">
                 <Columns>
-                    <JQTools:JQGridColumn Alignment="right" Caption="社區序號" Editor="numberbox" FieldName="comq1" Format="" Width="40" />
-                    <JQTools:JQGridColumn Alignment="right" Caption="主線序號" Editor="numberbox" FieldName="lineq1" Format="" Width="40" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="客戶代號" Editor="text" FieldName="cusid" Format="" MaxLength="15" Width="60" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="comq1" Editor="numberbox" FieldName="comq1" Format="" Width="120" Visible="False" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="lineq1" Editor="numberbox" FieldName="lineq1" Format="" Width="120" Visible="False" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="cusid" Editor="text" FieldName="cusid" Format="" MaxLength="0" Width="120" Visible="False" />
                     <JQTools:JQGridColumn Alignment="left" Caption="主線" Editor="text" FieldName="comqline" Format="" MaxLength="0" Width="60" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="社區" Editor="text" FieldName="comn" Format="" MaxLength="0" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="客戶名" Editor="text" FieldName="cusnc" Format="" MaxLength="30" Width="60" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="社區名稱" Editor="text" FieldName="comn" Format="" MaxLength="0" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="用戶" Editor="text" FieldName="cusnc" Format="" MaxLength="0" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="週期" Editor="text" FieldName="codenc" Format="" MaxLength="0" Width="80" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="繳款" Editor="text" FieldName="codenc1" Format="" MaxLength="0" Width="60" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="連絡電話" Editor="text" FieldName="TEL" Format="" MaxLength="0" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="繳款" Editor="text" FieldName="codenc1" Format="" MaxLength="0" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="連絡電話" Editor="text" FieldName="TEL" Format="" MaxLength="0" Width="100" />
                     <JQTools:JQGridColumn Alignment="left" Caption="申請日" Editor="datebox" FieldName="APPLYDAT" Format="yyyy/mm/dd" Width="70" />
                     <JQTools:JQGridColumn Alignment="left" Caption="完工日" Editor="datebox" FieldName="FINISHDAT" Format="yyyy/mm/dd" Width="70" />
                     <JQTools:JQGridColumn Alignment="left" Caption="開始計費" Editor="datebox" FieldName="STRBILLINGDAT" Format="yyyy/mm/dd" Width="70" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="最近續約日" Editor="datebox" FieldName="newBILLINGDAT" Format="yyyy/mm/dd" Width="70" />
-                    <JQTools:JQGridColumn Alignment="right" Caption="調整日數" Editor="numberbox" FieldName="adjustday" Format="" Width="60" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="最近續約日" Editor="datebox" FieldName="newBILLINGDAT" Format="yyyy/mm/dd" Width="120" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="調整日數" Editor="numberbox" FieldName="adjustday" Format="" Width="50" />
                     <JQTools:JQGridColumn Alignment="left" Caption="到期日" Editor="datebox" FieldName="DUEDAT" Format="yyyy/mm/dd" Width="70" />
                     <JQTools:JQGridColumn Alignment="left" Caption="退租日" Editor="datebox" FieldName="DROPDAT" Format="yyyy/mm/dd" Width="70" />
                     <JQTools:JQGridColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="CANCELDAT" Format="yyyy/mm/dd" Width="70" />
-                    <JQTools:JQGridColumn Alignment="right" Caption="期數" Editor="numberbox" FieldName="PERIOD" Format="" Width="30" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="期數" Editor="numberbox" FieldName="PERIOD" Format="" Width="40" />
                     <JQTools:JQGridColumn Alignment="right" Caption="可用日數" Editor="numberbox" FieldName="validdat" Format="" Width="50" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="已收" Editor="text" FieldName="codenc2" Format="" MaxLength="0" Width="60" />
                 </Columns>
                 <TooItems>
-                    <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
-                        OnClick="openQuery" Text="查詢" Visible="False" />
+                    <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton" OnClick="openQuery" Text="查詢" Visible="False" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="轉續約單" Visible="True" OnClick="serverMethod" />
                 </TooItems>
                 <QueryColumns>
@@ -171,6 +172,7 @@
                 </QueryColumns>
             </JQTools:JQDataGrid>
         </div>
+
     </form>
 </body>
 </html>

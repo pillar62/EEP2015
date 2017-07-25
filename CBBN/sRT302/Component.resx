@@ -158,7 +158,7 @@ ORDER BY BATCH DESC</value>
     <value>17, 290</value>
   </metadata>
   <metadata name="RT3021.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 251</value>
+    <value>124, 206</value>
   </metadata>
   <data name="RT3021.CommandText" xml:space="preserve">
     <value>SELECT a.comq1, a.lineq1, a.cusid, 
@@ -198,6 +198,74 @@ and 	b.DROPDAT is null and b.CANCELDAT is null </value>
   </metadata>
   <data name="cmdRT3022.CommandText" xml:space="preserve">
     <value> select a.batch, convert(varchar(7), convert(int, convert(varchar(8), dateadd(m, 2, a.duedat), 112)) - 19110000) +';'+ d.csnoticeid + ';' +  convert(varchar(3), datepart(yy, a.duedat) - 1911) + substring(convert(varchar(6), a.duedat, 12), 3, 2) + ';' +  convert(varchar(9), case b.secondcase when 'Y' then c.amt2 else c.amt end) + ';' +  d.cscusid + ';' +' ' + ';' +c.memo + ';' +b.cusnc + ';' as bcodesrc from RTLessorAvsCustBillingPrtSub a  inner join RTLessorAvsCust b on a.cusid = b.cusid inner join RTLessorAVSCustBillingBarcode d on d.noticeid = a.noticeid  inner join RTBillCharge c on c.casekind = d.casekind and c.paycycle = d.paycycle and c.casetype = '07'  where a.batch ='20170201'  order by b.comq1, b.lineq1, b.cusnc, c.paycycle</value>
+  </data>
+  <metadata name="RT3022.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>123, 250</value>
+  </metadata>
+  <data name="RT3022.CommandText" xml:space="preserve">
+    <value>SELECT distinct a.comq1, a.lineq1, a.cusid, 
+convert(varchar(6), a.COMQ1) +'-'+ convert(varchar(2), a.LINEQ1) as comqline, 
+c.comn, a.cusnc, e.codenc, f.codenc, 
+a.CONTACTTEL + case when a.CONTACTTEL &lt;&gt;'' and a.MOBILE &lt;&gt;'' then ' / ' else '' end + a.MOBILE AS TEL, 
+a.APPLYDAT, a.FINISHDAT, a.STRBILLINGDAT, a.newBILLINGDAT, a.adjustday, 
+a.DUEDAT, a.DROPDAT, a.CANCELDAT, a.PERIOD, 
+case when a.DUEDAT is null then 0 
+when a.canceldat is not null or a.dropdat is not null then 0 
+else DATEDiFF(d,getdate(),a.DUEDAT) end as validdat,i.codenc 
+FROM RTLessorAVSCustBillingPrt 
+inner join RTLessorAVSCustBillingPrtsub on RTLessorAVSCustBillingPrt.batch=RTLessorAVSCustBillingPrtsub.batch 
+inner join RTLessorAVSCust a on a.cusid=RTLessorAVSCustBillingPrtsub.cusid and a.canceldat is null 
+inner join RTLessorAVSCmtyLine b on a.COMQ1 = b.COMQ1 and a.LINEQ1 = b.LINEQ1 
+inner join RTLessorAVSCmtyH c on a.COMQ1 = c.COMQ1 
+left outer join RTLessorAVSCustcont g on g.cusid=RTLessorAVSCustBillingPrtsub.cusid 
+left outer join rtcode e on a.paycycle=e.code and e.kind='M8' 
+left outer join rtcode f on a.paytype=f.code and f.kind='M9' 
+left outer join rtcode i on i.code = g.paytype and i.kind ='M9' 
+WHERE 	a.DROPDAT is null and a.CANCELDAT is null and a.FINISHDAT is not null and a.freecode&lt;&gt;'Y' 
+and 	b.DROPDAT is null and b.CANCELDAT is null 
+ and g.paytype is null and case when a.DUEDAT is null then 0 
+when a.canceldat is not null or a.dropdat is not null then 0 
+else DATEDiFF(d,getdate(),a.DUEDAT) end &lt; 0 
+order by a.comq1,a.lineq1,a.cusnc </value>
+  </data>
+  <metadata name="cmdRT3023.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>217, 403</value>
+  </metadata>
+  <metadata name="infoParameter5.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter6.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter7.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="infoParameter8.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="RT3028.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>122, 288</value>
+  </metadata>
+  <data name="RT3028.CommandText" xml:space="preserve">
+    <value>SELECT	a.noticeid, a.batch, case c.consignee when '' then '直銷' else '經銷' end as consignee
+, isnull(k.shortnc, m.cusnc) as shortnc, 
+convert(varchar(5), a.comq1) +'-'+ convert(varchar(2), a.lineq1) as comlineq1, d.comn, b.cusnc, a.duedat, 
+b.contacttel + case when b.contacttel&lt;&gt;'' and b.mobile&lt;&gt;'' then '&lt;br&gt;' else '' end + b.mobile as tel, 
+isnull(e.cutnc,'')+b.township3+b.raddr3 as raddr, b.dropdat, b.strbillingdat, b.newbillingdat, h.codenc, g.codenc, j.codenc 
+FROM	RTLessorAVSCustBillingPrtSub a 
+inner join RTLessorAVSCust b on a.comq1 = b.comq1 and a.lineq1 = b.lineq1 and a.cusid = b.cusid 
+inner join RTLessorAVSCmtyLine c on c.comq1 = b.comq1 and c.lineq1 = b.lineq1 
+inner join RTLessorAVSCmtyH d on d.comq1 = c.comq1 
+left outer join RTCounty e on e.cutid = b.cutid3 
+left outer join RTCode g on g.code = a.paycycle and g.kind ='M8' 
+left outer join RTCode h on h.code = a.casekind and h.kind ='O9' 
+left outer join RTLessorAVSCustCont i on i.cusid = a.cusid and i.canceldat is null 
+	and i.strbillingdat = dateadd(d, 1, a.duedat) 
+left outer join rtcode j on j.code = i.paytype and j.kind ='M9' 
+left outer join RTObj k on k.cusid = c.consignee 
+left outer join RTEmployee l inner join RTObj m on m.cusid = l.cusid on l.emply = c.salesid 			
+WHERE b.freecode &lt;&gt;'Y' 
+ORDER BY d.comn, b.cusnc</value>
   </data>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>

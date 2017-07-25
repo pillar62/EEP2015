@@ -50,19 +50,21 @@
             Srvtools.FieldAttr fieldAttr17 = new Srvtools.FieldAttr();
             Srvtools.KeyItem keyItem3 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem4 = new Srvtools.KeyItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Component));
             Srvtools.KeyItem keyItem5 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem6 = new Srvtools.KeyItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Component));
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTLessorAVSCustAR = new Srvtools.InfoCommand(this.components);
             this.ucRTLessorAVSCustAR = new Srvtools.UpdateComponent(this.components);
             this.View_RTLessorAVSCustAR = new Srvtools.InfoCommand(this.components);
             this.cmRT204 = new Srvtools.InfoCommand(this.components);
+            this.RT2044 = new Srvtools.InfoCommand(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_RTLessorAVSCustAR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmRT204)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT2044)).BeginInit();
             // 
             // InfoConnection1
             // 
@@ -297,7 +299,7 @@
             // cmRT204
             // 
             this.cmRT204.CacheConnection = false;
-            this.cmRT204.CommandText = resources.GetString("cmRT204.CommandText");
+            this.cmRT204.CommandText = "SELECT * FROM V_RT204 A\r\nORDER BY  A.CDAT desc";
             this.cmRT204.CommandTimeout = 30;
             this.cmRT204.CommandType = System.Data.CommandType.Text;
             this.cmRT204.DynamicTableName = false;
@@ -321,10 +323,35 @@
             this.cmRT204.SiteControl = false;
             this.cmRT204.SiteFieldName = null;
             this.cmRT204.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // RT2044
+            // 
+            this.RT2044.CacheConnection = false;
+            this.RT2044.CommandText = resources.GetString("RT2044.CommandText");
+            this.RT2044.CommandTimeout = 30;
+            this.RT2044.CommandType = System.Data.CommandType.Text;
+            this.RT2044.DynamicTableName = false;
+            this.RT2044.EEPAlias = null;
+            this.RT2044.EncodingAfter = null;
+            this.RT2044.EncodingBefore = "Windows-1252";
+            this.RT2044.EncodingConvert = null;
+            this.RT2044.InfoConnection = this.InfoConnection1;
+            this.RT2044.MultiSetWhere = false;
+            this.RT2044.Name = "RT2044";
+            this.RT2044.NotificationAutoEnlist = false;
+            this.RT2044.SecExcept = null;
+            this.RT2044.SecFieldName = null;
+            this.RT2044.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.RT2044.SelectPaging = false;
+            this.RT2044.SelectTop = 0;
+            this.RT2044.SiteControl = false;
+            this.RT2044.SiteFieldName = null;
+            this.RT2044.UpdatedRowSource = System.Data.UpdateRowSource.None;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustAR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_RTLessorAVSCustAR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmRT204)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT2044)).EndInit();
 
         }
 
@@ -336,5 +363,6 @@
         private Srvtools.UpdateComponent ucRTLessorAVSCustAR;
         private Srvtools.InfoCommand View_RTLessorAVSCustAR;
         private Srvtools.InfoCommand cmRT204;
+        private Srvtools.InfoCommand RT2044;
     }
 }

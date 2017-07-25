@@ -125,36 +125,29 @@
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
             <JQTools:JQDataGrid ID="dataGridView" data-options="pagination:true,view:commandview" RemoteName="sRT2033.RTLessorAVSCmtyLineHardware" runat="server" AutoApply="True"
                 DataMember="RTLessorAVSCmtyLineHardware" Pagination="True" QueryTitle="Query" EditDialogID="JQDialog1"
-                Title="主線派工設備資料維護" OnLoadSuccess="dgOnloadSuccess">
+                Title="主線派工設備資料維護" OnLoadSuccess="dgOnloadSuccess" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
                 <Columns>
-                    <JQTools:JQGridColumn Alignment="right" Caption="社區序號" Editor="numberbox" FieldName="COMQ1" Format="" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="right" Caption="主線序號" Editor="numberbox" FieldName="LINEQ1" Format="" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="派工單號(K-YYMMDD000X)" Editor="text" FieldName="PRTNO" Format="" MaxLength="12" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="right" Caption="序號" Editor="numberbox" FieldName="SEQ" Format="" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="更換(RESET)設備 " Editor="text" FieldName="PRODNO" Format="" MaxLength="6" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="更換(RESET)設備 " Editor="text" FieldName="ITEMNO" Format="" MaxLength="3" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="right" Caption="數量" Editor="numberbox" FieldName="QTY" Format="" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="DROPDAT" Format="" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="退租(撤銷)原因" Editor="text" FieldName="DROPREASON" Format="" MaxLength="100" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="庫別代號" Editor="text" FieldName="WAREHOUSE" Format="" MaxLength="2" Visible="true" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="社區序號" Editor="infocombobox" FieldName="COMQ1" Format="" Visible="true" Width="120" EditorOptions="valueField:'COMQ1',textField:'COMN',remoteName:'sRT101.View_RTLessorAVSCmtyH',tableName:'View_RTLessorAVSCmtyH',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="主線序號" Editor="numberbox" FieldName="LINEQ1" Format="" Visible="true" Width="50" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="派工單號" Editor="text" FieldName="PRTNO" Format="" MaxLength="12" Visible="true" Width="90" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="序號" Editor="numberbox" FieldName="SEQ" Format="" Visible="true" Width="40" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="設備名稱" Editor="text" FieldName="PRODNO" Format="" MaxLength="6" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="規格" Editor="text" FieldName="ITEMNO" Format="" MaxLength="3" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="數量" Editor="numberbox" FieldName="QTY" Format="" Visible="true" Width="40" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="DROPDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="作廢原因" Editor="text" FieldName="DROPREASON" Format="" MaxLength="100" Visible="true" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="作廢人員" Editor="infocombobox" FieldName="DROPUSR" Format="" MaxLength="6" Visible="true" Width="80" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
                     <JQTools:JQGridColumn Alignment="left" Caption="資產編號" Editor="text" FieldName="ASSETNO" Format="" MaxLength="20" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="作廢人員" Editor="text" FieldName="DROPUSR" Format="" MaxLength="6" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="單位" Editor="text" FieldName="UNIT" Format="" MaxLength="2" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="right" Caption="付款金額" Editor="numberbox" FieldName="AMT" Format="" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="建檔員" Editor="text" FieldName="EUSR" Format="" MaxLength="6" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="輸入日期" Editor="datebox" FieldName="EDAT" Format="" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="修改員" Editor="text" FieldName="UUSR" Format="" MaxLength="6" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="修改日" Editor="datebox" FieldName="UDAT" Format="" Visible="true" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="單位" Editor="inforefval" FieldName="UNIT" Format="" MaxLength="2" Visible="true" Width="40" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'B5'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代碼',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="付款金額" Editor="numberbox" FieldName="AMT" Format="" Visible="true" Width="60" />
                     <JQTools:JQGridColumn Alignment="left" Caption="備註" Editor="text" FieldName="MEMO" Format="" MaxLength="50" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="應收帳款編號" Editor="text" FieldName="BATCHNO" Format="" MaxLength="12" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="轉應收帳款日" Editor="datebox" FieldName="TARDAT" Format="" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="轉應收帳款人員" Editor="text" FieldName="TUSR" Format="" MaxLength="6" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="RCVPRTNO" Editor="text" FieldName="RCVPRTNO" Format="" MaxLength="13" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="收件日" Editor="datebox" FieldName="RCVDAT" Format="" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="RCVFINISHDAT" Editor="datebox" FieldName="RCVFINISHDAT" Format="" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="主機編號" Editor="text" FieldName="HOSTNO" Format="" MaxLength="3" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="PRELEVELHOSTNO" Editor="text" FieldName="PRELEVELHOSTNO" Format="" MaxLength="3" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="PRELEVELPORTNO" Editor="text" FieldName="PRELEVELPORTNO" Format="" MaxLength="3" Visible="true" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="帳款編號" Editor="text" FieldName="BATCHNO" Format="" Visible="true" Width="80" MaxLength="12" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="轉應收帳款日" Editor="datebox" FieldName="TARDAT" Format="yyyy/mm/dd" MaxLength="0" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="轉應收帳款人員" Editor="text" FieldName="TUSR" Format="" Visible="true" Width="80" MaxLength="6" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="領用單號" Editor="text" FieldName="RCVPRTNO" Format="" MaxLength="13" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="領用日期" Editor="datebox" FieldName="RCVDAT" Format="yyyy/mm/dd" MaxLength="0" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="領用結案日" Editor="datebox" FieldName="RCVFINISHDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="主機編號" Editor="text" FieldName="HOSTNO" Format="" MaxLength="3" Visible="true" Width="60" />
                 </Columns>
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton"

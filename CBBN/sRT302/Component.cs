@@ -44,13 +44,36 @@ namespace sRT302
                 cmdRT3021.InfoParameters[3].Value = sdata[3];
                 /*取得統計的結果，並將結果返回*/
                 cmdRT3021.ExecuteDataSet();
-                return new object[] { 0, true };
+                return new object[] { 0, "轉續約單成功" };
             }
-            catch
+            catch (Exception ex)
             {
-                return new object[] { 0, false };
+                return new object[] { 0, "無法執行轉續約單,錯誤訊息" + ex };
             }
+        }
 
+        public object[] smRT3023(object[] objParam)
+        {
+            var ss = (string)objParam[0];
+            var sdata = ss.Split(',');
+            //開啟資料連接
+            IDbConnection conn = cmdRT3023.Connection;
+            conn.Open();
+            //設定輸入參數的值
+            try
+            {
+                cmdRT3023.InfoParameters[0].Value = sdata[0];
+                cmdRT3023.InfoParameters[1].Value = sdata[1];
+                cmdRT3023.InfoParameters[2].Value = sdata[2];
+                cmdRT3023.InfoParameters[3].Value = sdata[3];
+                /*取得統計的結果，並將結果返回*/
+                cmdRT3023.ExecuteDataSet();
+                return new object[] { 0, "轉續約單成功" };
+            }
+            catch (Exception ex)
+            {
+                return new object[] { 0, "無法執行轉續約單,錯誤訊息" + ex };
+            }
         }
 
         public object[] smRT3022(object[] objParam)

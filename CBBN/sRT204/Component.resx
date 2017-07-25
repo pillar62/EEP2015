@@ -118,42 +118,40 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="serviceManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 173</value>
+    <value>17, 95</value>
   </metadata>
   <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 134</value>
   </metadata>
   <metadata name="RTLessorAVSCustAR.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>249, 153</value>
+    <value>17, 173</value>
   </metadata>
   <metadata name="ucRTLessorAVSCustAR.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>259, 120</value>
+    <value>17, 212</value>
   </metadata>
   <metadata name="View_RTLessorAVSCustAR.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>670, 17</value>
+    <value>17, 56</value>
   </metadata>
   <metadata name="cmRT204.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>264, 196</value>
   </metadata>
-  <data name="cmRT204.CommandText" xml:space="preserve">
-    <value>SELECT  RTLessorAVSCustAR.CUSID, RTLessorAVSCustAR.BATCHNO,RTLessorAVSCust.COMQ1, RTLessorAVSCmtyH.COMN,RTLessorAVSCust.CUSNC,
-RTCode.CODENC, RTLessorAVSCustAR.PERIOD,RTLessorAVSCustAR.AMT,RTLessorAVSCustAR.REALAMT, 
-RTLessorAVSCustAR.AMT - RTLessorAVSCustAR.REALAMT AS DIFFAMT, RTLessorAVSCustAR.MDAT, RTObj_1.CUSNC AS MUSR,
-RTLessorAVSCustAR.COD1, 
-case when RTLessorAVSCustAR.COD2 like '超商%' then RTLessorAVSCustAR.COD2 
-		when RTLessorAVSCustAR.COD2 like '退租%' then RTLessorAVSCustAR.COD2 
-		when RTLessorAVSCustAR.COD2 like '信用卡%' then RTLessorAVSCustAR.COD2 
-else RTLessorAVSCustAR.COD2 end as COD2, 
-RTLessorAVSCustAR.COD3, RTLessorAVSCustAR.CDAT, 
-RTLessorAVSCustAR.CANCELDAT, RTObj_2.CUSNC AS CANCELUSR, RTLessorAVSCustAR.CANCELMEMO, RTLessorAVSCust.Dropdat 
-FROM    RTLessorAVSCmtyH RIGHT OUTER JOIN RTLessorAVSCust ON RTLessorAVSCmtyH.COMQ1 = RTLessorAVSCust.COMQ1 
-RIGHT OUTER JOIN RTEmployee RTEmployee_2 INNER JOIN RTObj RTObj_2 ON RTEmployee_2.CUSID = 
-RTObj_2.CUSID RIGHT OUTER JOIN RTLessorAVSCustAR ON RTEmployee_2.EMPLY = RTLessorAVSCustAR.CANCELUSR 
-LEFT OUTER JOIN RTEmployee RTEmployee_1 INNER JOIN RTObj RTObj_1 ON RTEmployee_1.CUSID = 
-RTObj_1.CUSID ON RTLessorAVSCustAR.MUSR = RTEmployee_1.EMPLY LEFT OUTER JOIN 
-RTCode ON RTLessorAVSCustAR.ARTYPE = RTCode.CODE AND RTCode.KIND = 'N2' ON RTLessorAVSCust.CUSID = RTLessorAVSCustAR.CUSID 
-WHERE 1=1
-ORDER BY  RTLessorAVSCustAR.CDAT desc</value>
+  <metadata name="RT2044.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>267, 142</value>
+  </metadata>
+  <data name="RT2044.CommandText" xml:space="preserve">
+    <value>SELECT  c.BATCHNO, a.COMN,b.CUSNC, g.CODENC as ARAC, c.PERIOD, c.AMT, c.REALAMT, 
+c.AMT - c.REALAMT AS DIFFAMT, c.MDAT, h.CUSNC AS MUSR, c.COD1, 
+case when c.COD2 like '超商%' then ''+c.COD2+'' 
+when c.COD2 like '退租%' then ''+c.COD2+'' 
+when c.COD2 like '信用卡%' then ''+c.COD2+'' else c.COD2 end as COD2, 
+c.CDAT, b.Dropdat 
+FROM RTLessorAVSCmtyH a 
+INNER JOIN RTLessorAVSCust b ON a.COMQ1 = b.COMQ1 
+RIGHT OUTER JOIN RTLessorAVSCustAR c ON b.CUSID = c.CUSID 
+LEFT OUTER JOIN RTEmployee f INNER JOIN RTObj h ON f.CUSID = h.CUSID ON c.MUSR = f.EMPLY 
+LEFT OUTER JOIN RTCode g ON c.ARTYPE = g.CODE AND g.KIND = 'N2' 
+WHERE (c.AMT &lt;&gt; c.REALAMT) and c.canceldat is null and cod2 like '%超商%' 
+ORDER BY c.CDAT desc </value>
   </data>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>

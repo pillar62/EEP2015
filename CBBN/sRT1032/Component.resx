@@ -357,7 +357,7 @@ A.CLOSEDAT, RTObj_4.CUSNC, RTObj_5.CUSNC, A.PRTNO, A.CANCELDAT, RTObj_6.CUSNC </
     <value>False</value>
   </metadata>
   <metadata name="RT1032111.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>23, 488</value>
+    <value>17, 524</value>
   </metadata>
   <data name="RT1032111.CommandText" xml:space="preserve">
     <value>SELECT  A.RCVPRTNO AS RCVPRTNO, rtcode_1.codenc, A.APPLYDAT AS APPLYDAT, 
@@ -384,6 +384,21 @@ GROUP BY  A.RCVPRTNO , rtcode_1.codenc, A.APPLYDAT ,
 CASE WHEN RTObj_7.CUSNC='' OR RTObj_7.CUSNC IS NULL THEN RTObj_2.SHORTNC ELSE  RTObj_7.CUSNC END , 
 CASE WHEN RTObj_1.CUSNC='' OR RTObj_1.CUSNC IS NULL THEN RTObj_3.SHORTNC ELSE RTObj_1.CUSNC END, 
 A.CLOSEDAT, RTObj_4.CUSNC, RTObj_5.CUSNC, A.PRTNO, A.CANCELDAT, RTObj_6.CUSNC </value>
+  </data>
+  <metadata name="RT103219.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>188, 448</value>
+  </metadata>
+  <data name="RT103219.CommandText" xml:space="preserve">
+    <value>SELECT  A.comq1,A.lineq1,A.entryno,A.PRTNO, A.seq, 
+rtrim(convert(char(6),B.COMQ1)) +'-'+ rtrim(convert(char(6),B.lineQ1))  as comqline, 
+A.PRTNO,A.ENTRYNO,A.CHGDAT, RTCode.CODENC, RTObj.CUSNC, 
+A.SENDWORKDAT, A.DROPDAT, A.DROPDESC, A.CLOSEDAT, A.unCLOSEDAT, A.BONUSCLOSEYM 
+FROM RTCode RIGHT OUTER JOIN 
+RTLessorAVSCmtyLineDropsndworkLog A ON RTCode.CODE = A.CHGCODE 
+AND RTCode.KIND = 'G2' LEFT OUTER JOIN RTObj INNER JOIN 
+RTEmployee ON RTObj.CUSID = RTEmployee.CUSID ON 
+A.CHGUSR = RTEmployee.EMPLY 
+left outer join RTLessorAVSCmtyLine B on A.comq1=B.comq1 and B.lineq1=A.lineq1 </value>
   </data>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>

@@ -205,6 +205,13 @@
             Srvtools.KeyItem keyItem37 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem38 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem39 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem40 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem41 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem42 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem43 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem44 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem45 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem46 = new Srvtools.KeyItem();
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTLessorAVSCmtyLineDrop = new Srvtools.InfoCommand(this.components);
@@ -229,6 +236,7 @@
             this.RT103211 = new Srvtools.InfoCommand(this.components);
             this.cmdRT103217 = new Srvtools.InfoCommand(this.components);
             this.RT1032111 = new Srvtools.InfoCommand(this.components);
+            this.RT103219 = new Srvtools.InfoCommand(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCmtyLineDrop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCmtyLineDropHardware)).BeginInit();
@@ -249,6 +257,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RT103211)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT103217)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT1032111)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT103219)).BeginInit();
             // 
             // serviceManager1
             // 
@@ -2063,6 +2072,44 @@
             this.RT1032111.SiteControl = false;
             this.RT1032111.SiteFieldName = null;
             this.RT1032111.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // RT103219
+            // 
+            this.RT103219.CacheConnection = false;
+            this.RT103219.CommandText = resources.GetString("RT103219.CommandText");
+            this.RT103219.CommandTimeout = 30;
+            this.RT103219.CommandType = System.Data.CommandType.Text;
+            this.RT103219.DynamicTableName = false;
+            this.RT103219.EEPAlias = null;
+            this.RT103219.EncodingAfter = null;
+            this.RT103219.EncodingBefore = "Windows-1252";
+            this.RT103219.EncodingConvert = null;
+            this.RT103219.InfoConnection = this.InfoConnection1;
+            keyItem40.KeyName = "comq1";
+            keyItem41.KeyName = "lineq1";
+            keyItem42.KeyName = "entryno";
+            keyItem43.KeyName = "PRTNO";
+            keyItem44.KeyName = "seq";
+            keyItem45.KeyName = "PRTNO1";
+            keyItem46.KeyName = "ENTRYNO1";
+            this.RT103219.KeyFields.Add(keyItem40);
+            this.RT103219.KeyFields.Add(keyItem41);
+            this.RT103219.KeyFields.Add(keyItem42);
+            this.RT103219.KeyFields.Add(keyItem43);
+            this.RT103219.KeyFields.Add(keyItem44);
+            this.RT103219.KeyFields.Add(keyItem45);
+            this.RT103219.KeyFields.Add(keyItem46);
+            this.RT103219.MultiSetWhere = false;
+            this.RT103219.Name = "RT103219";
+            this.RT103219.NotificationAutoEnlist = false;
+            this.RT103219.SecExcept = null;
+            this.RT103219.SecFieldName = null;
+            this.RT103219.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.RT103219.SelectPaging = false;
+            this.RT103219.SelectTop = 0;
+            this.RT103219.SiteControl = false;
+            this.RT103219.SiteFieldName = null;
+            this.RT103219.UpdatedRowSource = System.Data.UpdateRowSource.None;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCmtyLineDrop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCmtyLineDropHardware)).EndInit();
@@ -2083,6 +2130,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RT103211)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT103217)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT1032111)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT103219)).EndInit();
 
         }
 
@@ -2112,5 +2160,6 @@
         private Srvtools.InfoCommand RT103211;
         private Srvtools.InfoCommand cmdRT103217;
         private Srvtools.InfoCommand RT1032111;
+        private Srvtools.InfoCommand RT103219;
     }
 }
