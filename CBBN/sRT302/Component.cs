@@ -128,5 +128,40 @@ namespace sRT302
                 return new object[] { 0, "Excel匯入BOM展開，請查看Log!"+ ex.Message };
             }
         }
+
+        public object[] smRT3025(object[] objParam)
+        {
+            var ss = (string)objParam[0];
+            var sdata = ss.Split(',');
+            //開啟資料連接
+            IDbConnection conn = cmdRT3023.Connection;
+            conn.Open();
+            //設定輸入參數的值
+            try
+            {
+                int counter = 0;
+                string line;
+
+                // Read the file and display it line by line.
+                System.IO.StreamReader file =
+                   new System.IO.StreamReader("..\\\\test.txt");
+                while ((line = file.ReadLine()) != null)
+                {
+                    Console.WriteLine(line);
+                    counter++;
+                }
+
+                file.Close();
+
+                // Suspend the screen.
+                Console.ReadLine();
+
+                return new object[] { 0, "處理完成" };
+            }
+            catch (Exception ex)
+            {
+                return new object[] { 0, "無法執行轉續約單,錯誤訊息" + ex };
+            }
+        }
     }
 }

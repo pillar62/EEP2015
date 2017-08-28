@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Srvtools.Service service1 = new Srvtools.Service();
+            Srvtools.Service service2 = new Srvtools.Service();
+            Srvtools.Service service3 = new Srvtools.Service();
             Srvtools.KeyItem keyItem1 = new Srvtools.KeyItem();
             Srvtools.FieldAttr fieldAttr1 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr2 = new Srvtools.FieldAttr();
@@ -55,17 +58,45 @@
             Srvtools.KeyItem keyItem2 = new Srvtools.KeyItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Component));
             Srvtools.KeyItem keyItem3 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem4 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem5 = new Srvtools.KeyItem();
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTFaqM = new Srvtools.InfoCommand(this.components);
             this.ucRTFaqM = new Srvtools.UpdateComponent(this.components);
             this.View_RTFaqM = new Srvtools.InfoCommand(this.components);
-            this.cmRT205 = new Srvtools.InfoCommand(this.components);
-            this.updateComponent1 = new Srvtools.UpdateComponent(this.components);
+            this.RT205 = new Srvtools.InfoCommand(this.components);
+            this.RTFaqAdd = new Srvtools.InfoCommand(this.components);
+            this.ucRTFaqAdd = new Srvtools.UpdateComponent(this.components);
+            this.autoNumber1 = new Srvtools.AutoNumber(this.components);
+            this.V_RT205 = new Srvtools.InfoCommand(this.components);
+            this.V_RT2051 = new Srvtools.InfoCommand(this.components);
+            this.V_RT2052 = new Srvtools.InfoCommand(this.components);
+            this.cmd = new Srvtools.InfoCommand(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTFaqM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_RTFaqM)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmRT205)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT205)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RTFaqAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.V_RT205)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.V_RT2051)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.V_RT2052)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmd)).BeginInit();
+            // 
+            // serviceManager1
+            // 
+            service1.DelegateName = "smRT2055";
+            service1.NonLogin = false;
+            service1.ServiceName = "smRT2055";
+            service2.DelegateName = "smRT2056";
+            service2.NonLogin = false;
+            service2.ServiceName = "smRT2056";
+            service3.DelegateName = "smRT2057";
+            service3.NonLogin = false;
+            service3.ServiceName = "smRT2057";
+            this.serviceManager1.ServiceCollection.Add(service1);
+            this.serviceManager1.ServiceCollection.Add(service2);
+            this.serviceManager1.ServiceCollection.Add(service3);
             // 
             // InfoConnection1
             // 
@@ -74,7 +105,8 @@
             // RTFaqM
             // 
             this.RTFaqM.CacheConnection = false;
-            this.RTFaqM.CommandText = "SELECT dbo.[RTFaqM].* FROM dbo.[RTFaqM]";
+            this.RTFaqM.CommandText = "SELECT A.*, B.* \r\nFROM RTFaqM A\r\nLEFT JOIN V_RT205 B ON B.COMQ1=A.COMQ1 AND B.CUS" +
+    "ID=A.CUSID AND ISNULL(B.LINEQ1, \'\')= ISNULL(A.LINEQ1, \'\')";
             this.RTFaqM.CommandTimeout = 30;
             this.RTFaqM.CommandType = System.Data.CommandType.Text;
             this.RTFaqM.DynamicTableName = false;
@@ -315,7 +347,8 @@
             // View_RTFaqM
             // 
             this.View_RTFaqM.CacheConnection = false;
-            this.View_RTFaqM.CommandText = "SELECT * FROM dbo.[RTFaqM]";
+            this.View_RTFaqM.CommandText = "SELECT A.*, B.* \r\nFROM RTFaqM A\r\nLEFT JOIN V_RT205 B ON B.COMQ1=A.COMQ1 AND B.CUS" +
+    "ID=A.CUSID AND ISNULL(B.LINEQ1, \'\')= ISNULL(A.LINEQ1, \'\')";
             this.View_RTFaqM.CommandTimeout = 30;
             this.View_RTFaqM.CommandType = System.Data.CommandType.Text;
             this.View_RTFaqM.DynamicTableName = false;
@@ -338,52 +371,198 @@
             this.View_RTFaqM.SiteFieldName = null;
             this.View_RTFaqM.UpdatedRowSource = System.Data.UpdateRowSource.None;
             // 
-            // cmRT205
+            // RT205
             // 
-            this.cmRT205.CacheConnection = false;
-            this.cmRT205.CommandText = resources.GetString("cmRT205.CommandText");
-            this.cmRT205.CommandTimeout = 30;
-            this.cmRT205.CommandType = System.Data.CommandType.Text;
-            this.cmRT205.DynamicTableName = false;
-            this.cmRT205.EEPAlias = null;
-            this.cmRT205.EncodingAfter = null;
-            this.cmRT205.EncodingBefore = "Windows-1252";
-            this.cmRT205.EncodingConvert = null;
-            this.cmRT205.InfoConnection = this.InfoConnection1;
+            this.RT205.CacheConnection = false;
+            this.RT205.CommandText = resources.GetString("RT205.CommandText");
+            this.RT205.CommandTimeout = 30;
+            this.RT205.CommandType = System.Data.CommandType.Text;
+            this.RT205.DynamicTableName = false;
+            this.RT205.EEPAlias = null;
+            this.RT205.EncodingAfter = null;
+            this.RT205.EncodingBefore = "Windows-1252";
+            this.RT205.EncodingConvert = null;
+            this.RT205.InfoConnection = this.InfoConnection1;
             keyItem3.KeyName = "caseno";
-            this.cmRT205.KeyFields.Add(keyItem3);
-            this.cmRT205.MultiSetWhere = false;
-            this.cmRT205.Name = "cmRT205";
-            this.cmRT205.NotificationAutoEnlist = false;
-            this.cmRT205.SecExcept = null;
-            this.cmRT205.SecFieldName = null;
-            this.cmRT205.SecStyle = Srvtools.SecurityStyle.ssByNone;
-            this.cmRT205.SelectPaging = false;
-            this.cmRT205.SelectTop = 0;
-            this.cmRT205.SiteControl = false;
-            this.cmRT205.SiteFieldName = null;
-            this.cmRT205.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            this.RT205.KeyFields.Add(keyItem3);
+            this.RT205.MultiSetWhere = false;
+            this.RT205.Name = "RT205";
+            this.RT205.NotificationAutoEnlist = false;
+            this.RT205.SecExcept = null;
+            this.RT205.SecFieldName = null;
+            this.RT205.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.RT205.SelectPaging = false;
+            this.RT205.SelectTop = 0;
+            this.RT205.SiteControl = false;
+            this.RT205.SiteFieldName = null;
+            this.RT205.UpdatedRowSource = System.Data.UpdateRowSource.None;
             // 
-            // updateComponent1
+            // RTFaqAdd
             // 
-            this.updateComponent1.AutoTrans = true;
-            this.updateComponent1.ExceptJoin = false;
-            this.updateComponent1.LogInfo = null;
-            this.updateComponent1.Name = null;
-            this.updateComponent1.RowAffectsCheck = true;
-            this.updateComponent1.SelectCmd = this.cmRT205;
-            this.updateComponent1.SelectCmdForUpdate = this.RTFaqM;
-            this.updateComponent1.SendSQLCmd = true;
-            this.updateComponent1.ServerModify = true;
-            this.updateComponent1.ServerModifyGetMax = false;
-            this.updateComponent1.TranscationScopeTimeOut = System.TimeSpan.Parse("00:02:00");
-            this.updateComponent1.TransIsolationLevel = System.Data.IsolationLevel.ReadCommitted;
-            this.updateComponent1.UseTranscationScope = false;
-            this.updateComponent1.WhereMode = Srvtools.WhereModeType.Keyfields;
+            this.RTFaqAdd.CacheConnection = false;
+            this.RTFaqAdd.CommandText = "SELECT * FROM RTFaqAdd";
+            this.RTFaqAdd.CommandTimeout = 30;
+            this.RTFaqAdd.CommandType = System.Data.CommandType.Text;
+            this.RTFaqAdd.DynamicTableName = false;
+            this.RTFaqAdd.EEPAlias = null;
+            this.RTFaqAdd.EncodingAfter = null;
+            this.RTFaqAdd.EncodingBefore = "Windows-1252";
+            this.RTFaqAdd.EncodingConvert = null;
+            this.RTFaqAdd.InfoConnection = this.InfoConnection1;
+            keyItem4.KeyName = "CASENO";
+            keyItem5.KeyName = "ENTRYNO";
+            this.RTFaqAdd.KeyFields.Add(keyItem4);
+            this.RTFaqAdd.KeyFields.Add(keyItem5);
+            this.RTFaqAdd.MultiSetWhere = false;
+            this.RTFaqAdd.Name = "RTFaqAdd";
+            this.RTFaqAdd.NotificationAutoEnlist = false;
+            this.RTFaqAdd.SecExcept = null;
+            this.RTFaqAdd.SecFieldName = null;
+            this.RTFaqAdd.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.RTFaqAdd.SelectPaging = false;
+            this.RTFaqAdd.SelectTop = 0;
+            this.RTFaqAdd.SiteControl = false;
+            this.RTFaqAdd.SiteFieldName = null;
+            this.RTFaqAdd.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // ucRTFaqAdd
+            // 
+            this.ucRTFaqAdd.AutoTrans = true;
+            this.ucRTFaqAdd.ExceptJoin = false;
+            this.ucRTFaqAdd.LogInfo = null;
+            this.ucRTFaqAdd.Name = "ucRTFaqAdd";
+            this.ucRTFaqAdd.RowAffectsCheck = true;
+            this.ucRTFaqAdd.SelectCmd = this.RTFaqAdd;
+            this.ucRTFaqAdd.SelectCmdForUpdate = null;
+            this.ucRTFaqAdd.SendSQLCmd = true;
+            this.ucRTFaqAdd.ServerModify = true;
+            this.ucRTFaqAdd.ServerModifyGetMax = false;
+            this.ucRTFaqAdd.TranscationScopeTimeOut = System.TimeSpan.Parse("00:02:00");
+            this.ucRTFaqAdd.TransIsolationLevel = System.Data.IsolationLevel.ReadCommitted;
+            this.ucRTFaqAdd.UseTranscationScope = false;
+            this.ucRTFaqAdd.WhereMode = Srvtools.WhereModeType.Keyfields;
+            // 
+            // autoNumber1
+            // 
+            this.autoNumber1.Active = true;
+            this.autoNumber1.AutoNoID = "aRT205";
+            this.autoNumber1.Description = null;
+            this.autoNumber1.GetFixed = "getFix()";
+            this.autoNumber1.isNumFill = false;
+            this.autoNumber1.Name = "autoNumber1";
+            this.autoNumber1.Number = null;
+            this.autoNumber1.NumDig = 3;
+            this.autoNumber1.OldVersion = false;
+            this.autoNumber1.OverFlow = true;
+            this.autoNumber1.StartValue = 1;
+            this.autoNumber1.Step = 1;
+            this.autoNumber1.TargetColumn = "CASENO";
+            this.autoNumber1.UpdateComp = this.ucRTFaqM;
+            // 
+            // V_RT205
+            // 
+            this.V_RT205.CacheConnection = false;
+            this.V_RT205.CommandText = "SELECT *\r\nFROM  V_RT205 ";
+            this.V_RT205.CommandTimeout = 30;
+            this.V_RT205.CommandType = System.Data.CommandType.Text;
+            this.V_RT205.DynamicTableName = false;
+            this.V_RT205.EEPAlias = null;
+            this.V_RT205.EncodingAfter = null;
+            this.V_RT205.EncodingBefore = "Windows-1252";
+            this.V_RT205.EncodingConvert = null;
+            this.V_RT205.InfoConnection = this.InfoConnection1;
+            this.V_RT205.MultiSetWhere = false;
+            this.V_RT205.Name = "V_RT205";
+            this.V_RT205.NotificationAutoEnlist = false;
+            this.V_RT205.SecExcept = null;
+            this.V_RT205.SecFieldName = null;
+            this.V_RT205.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.V_RT205.SelectPaging = false;
+            this.V_RT205.SelectTop = 0;
+            this.V_RT205.SiteControl = false;
+            this.V_RT205.SiteFieldName = null;
+            this.V_RT205.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // V_RT2051
+            // 
+            this.V_RT2051.CacheConnection = false;
+            this.V_RT2051.CommandText = "SELECT DISTINCT comtype, COMQ1, COMN\r\nFROM  V_RT205 ";
+            this.V_RT2051.CommandTimeout = 30;
+            this.V_RT2051.CommandType = System.Data.CommandType.Text;
+            this.V_RT2051.DynamicTableName = false;
+            this.V_RT2051.EEPAlias = null;
+            this.V_RT2051.EncodingAfter = null;
+            this.V_RT2051.EncodingBefore = "Windows-1252";
+            this.V_RT2051.EncodingConvert = null;
+            this.V_RT2051.InfoConnection = this.InfoConnection1;
+            this.V_RT2051.MultiSetWhere = false;
+            this.V_RT2051.Name = "V_RT2051";
+            this.V_RT2051.NotificationAutoEnlist = false;
+            this.V_RT2051.SecExcept = null;
+            this.V_RT2051.SecFieldName = null;
+            this.V_RT2051.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.V_RT2051.SelectPaging = false;
+            this.V_RT2051.SelectTop = 0;
+            this.V_RT2051.SiteControl = false;
+            this.V_RT2051.SiteFieldName = null;
+            this.V_RT2051.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // V_RT2052
+            // 
+            this.V_RT2052.CacheConnection = false;
+            this.V_RT2052.CommandText = "SELECT DISTINCT comtype, COMQ1, LINEQ1\r\nFROM  V_RT205 ";
+            this.V_RT2052.CommandTimeout = 30;
+            this.V_RT2052.CommandType = System.Data.CommandType.Text;
+            this.V_RT2052.DynamicTableName = false;
+            this.V_RT2052.EEPAlias = null;
+            this.V_RT2052.EncodingAfter = null;
+            this.V_RT2052.EncodingBefore = "Windows-1252";
+            this.V_RT2052.EncodingConvert = null;
+            this.V_RT2052.InfoConnection = this.InfoConnection1;
+            this.V_RT2052.MultiSetWhere = false;
+            this.V_RT2052.Name = "V_RT2052";
+            this.V_RT2052.NotificationAutoEnlist = false;
+            this.V_RT2052.SecExcept = null;
+            this.V_RT2052.SecFieldName = null;
+            this.V_RT2052.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.V_RT2052.SelectPaging = false;
+            this.V_RT2052.SelectTop = 0;
+            this.V_RT2052.SiteControl = false;
+            this.V_RT2052.SiteFieldName = null;
+            this.V_RT2052.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // cmd
+            // 
+            this.cmd.CacheConnection = false;
+            this.cmd.CommandText = "";
+            this.cmd.CommandTimeout = 30;
+            this.cmd.CommandType = System.Data.CommandType.Text;
+            this.cmd.DynamicTableName = false;
+            this.cmd.EEPAlias = null;
+            this.cmd.EncodingAfter = null;
+            this.cmd.EncodingBefore = "Windows-1252";
+            this.cmd.EncodingConvert = null;
+            this.cmd.InfoConnection = this.InfoConnection1;
+            this.cmd.MultiSetWhere = false;
+            this.cmd.Name = "cmd";
+            this.cmd.NotificationAutoEnlist = false;
+            this.cmd.SecExcept = null;
+            this.cmd.SecFieldName = null;
+            this.cmd.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.cmd.SelectPaging = false;
+            this.cmd.SelectTop = 0;
+            this.cmd.SiteControl = false;
+            this.cmd.SiteFieldName = null;
+            this.cmd.UpdatedRowSource = System.Data.UpdateRowSource.None;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTFaqM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_RTFaqM)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cmRT205)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT205)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RTFaqAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.V_RT205)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.V_RT2051)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.V_RT2052)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmd)).EndInit();
 
         }
 
@@ -394,7 +573,13 @@
         private Srvtools.InfoCommand RTFaqM;
         private Srvtools.UpdateComponent ucRTFaqM;
         private Srvtools.InfoCommand View_RTFaqM;
-        private Srvtools.InfoCommand cmRT205;
-        private Srvtools.UpdateComponent updateComponent1;
+        private Srvtools.InfoCommand RT205;
+        private Srvtools.InfoCommand RTFaqAdd;
+        private Srvtools.UpdateComponent ucRTFaqAdd;
+        private Srvtools.AutoNumber autoNumber1;
+        private Srvtools.InfoCommand V_RT205;
+        private Srvtools.InfoCommand V_RT2051;
+        private Srvtools.InfoCommand V_RT2052;
+        private Srvtools.InfoCommand cmd;
     }
 }

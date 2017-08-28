@@ -183,6 +183,10 @@
                 setReadOnly($('#dataGridView'), true);
             }
 
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.CUSID;
+            if (ss == "") ss = "ZZZZZ";
+
             if (flag == false)
             {
                 $("#V_RTLessorAVSCustFaqH").datagrid('setWhere', "RTLessorAVSCustFaqH.cusid='" + ss + "'");
@@ -193,10 +197,6 @@
             }
 
             flag = false;
-
-            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            var ss = row.CUSID;
-            if (ss == "") ss = "ZZZZZ";
         }
         function FilterTown1(val) {
             try {

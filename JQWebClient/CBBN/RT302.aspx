@@ -21,6 +21,15 @@
             parent.addTab("每月續約帳單轉檔作業(過期專用)", "CBBN/RT3022.aspx?COMQ1=" + ss + "&LINEQ1=" + s1);
         }
 
+        //信封列印
+        function btn7Click(val) {
+            var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.BATCH;
+            $("#JQDataGrid1").datagrid('setWhere', "BATCH='" + ss + "'"); //維護單 
+            var WhereString = "";
+            exportDevReport("#JQDataGrid1", "sRT302.RT302R", "RT302", "~/CBBN/DevReportForm/RT302RF.aspx", WhereString);
+        }
+
         function btn8Click(val) {
             var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var ss = row.BATCH;
@@ -87,9 +96,12 @@
         }
 
         function fileUpLoad() {
-            $('#JQFileUpload1').next().remove()
-            initInfoFileUpload($('#JQFileUpload1'));
+            //$('#JQFileUpload1').next().remove()
+            //initInfoFileUpload($('#JQFileUpload1'));
             //openImport("#dataGridMaster", 2, 0);
+            var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.BATCH;
+            parent.addTab("上傳續約文字檔", "https://service.seed.net.tw/proxy_portal.htm");
         }
 
         function fileuploadsuccess(value) {
@@ -114,7 +126,6 @@
     <form id="form1" runat="server">
         <div>
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
-            <JQTools:JQFileUpload ID="JQFileUpload1" runat="server" BorderWidth="600px" FileSizeLimited="50000" ShowButton="True" ShowLocalFile="True" UpLoadFolder="barcode" Width="600px" onSuccess="fileuploadsuccess" />
             <JQTools:JQDataGrid ID="dataGridMaster" data-options="pagination:true,view:commandview" RemoteName="sRT302.RT302" runat="server" AutoApply="True"
                 DataMember="RT302" Pagination="True" QueryTitle="查詢條件"
                 Title="每月續約帳單列印查詢" AllowDelete="False" AllowInsert="False" AllowUpdate="False" QueryMode="Panel" AlwaysClose="True" AllowAdd="False" ViewCommandVisible="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False">
@@ -140,9 +151,9 @@
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="0.產生續約單(過期)" Visible="True" Icon="icon-view" OnClick="LinkRT3022" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="1.匯出續約文字檔" Visible="True" Icon="icon-view" OnClick="WriteToFile" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="2.上傳續約文字檔" Visible="True" OnClick="fileUpLoad" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="3.匯入條碼檔" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="4.列印續約單" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="5.列印信封" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="3.匯入條碼檔" Visible="True" OnClick="btn5Click" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="4.列印續約單" Visible="True" OnClick="btn6Click" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="5.列印信封" Visible="True" OnClick="btn7Click" Icon="icon-print" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="用戶明細" Visible="True" OnClick="btn8Click" />
                 </TooItems>
                 <QueryColumns>
@@ -150,8 +161,49 @@
                     <JQTools:JQQueryColumn AndOr="and" Caption="上傳檔案" Condition="%" DataType="string" Editor="infofileupload" FieldName="CUSNC3" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                 </QueryColumns>
             </JQTools:JQDataGrid>
+            <JQTools:JQFileUpload ID="JQFileUpload1" runat="server" BorderWidth="600px" FileSizeLimited="50000" ShowButton="True" ShowLocalFile="True" UpLoadFolder="barcode" Width="600px" onSuccess="fileuploadsuccess" />
         </div>
 
+        <div id="plLetter">
+            <JQTools:JQDataGrid ID="JQDataGrid1" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" AutoApply="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="RT302R" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT302.RT302R" RowNumbers="True" Title="JQDataGrid" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
+                <Columns>
+                    <JQTools:JQGridColumn Alignment="left" Caption="cusnc" Editor="text" FieldName="cusnc" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="mydear" Editor="text" FieldName="mydear" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="duedat" Editor="text" FieldName="duedat" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="comn" Editor="text" FieldName="comn" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="applydat" Editor="text" FieldName="applydat" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="birthday" Editor="text" FieldName="birthday" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="contacttel" Editor="text" FieldName="contacttel" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="mobile" Editor="text" FieldName="mobile" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="socialid" Editor="text" FieldName="socialid" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="email" Editor="text" FieldName="email" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="codenc" Editor="text" FieldName="codenc" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="rzone3" Editor="text" FieldName="rzone3" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="newBillingDat" Editor="text" FieldName="newBillingDat" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="payselect" Editor="text" FieldName="payselect" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="casepay" Editor="text" FieldName="casepay" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="addr2" Editor="text" FieldName="addr2" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="addr3" Editor="text" FieldName="addr3" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                </Columns>
+            </JQTools:JQDataGrid>
+        </div>
     </form>
 </body>
 </html>

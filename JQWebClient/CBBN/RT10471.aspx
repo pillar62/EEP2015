@@ -22,11 +22,11 @@
         {
             if (flag) {
                 //查詢出該用戶的資料
-                var sWhere = "A.CUSID='" + CUSID + "'";
+                var sWhere = "A.CUSID='" + CUSID + "' AND A.FAQNO = '" + FAQNO +"'";
                 $("#dataGridMaster").datagrid('setWhere', sWhere);
                 var row = $("#dataGridView").datagrid("selectRow", 0);
                 $("#JQDataGrid1").datagrid('setWhere', "CUSID='" + CUSID + "'"); //過濾用戶資料
-                $("#JQDataGrid2").datagrid('setWhere', "CUSID='" + CUSID + "' AND FAQNO = " + FAQNO ); //過濾用戶資料
+                $("#JQDataGrid2").datagrid('setWhere', "CUSID='" + CUSID + "' AND FAQNO = '" + FAQNO +"'"); //過濾用戶資料
             }
             flag = false;
         }

@@ -268,7 +268,7 @@ public partial class LogOn : System.Web.UI.Page
 
     protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
     {
-        Session.Timeout = 60;
+        Session.Timeout = 6000;
         EFServiceClient client = EFClientTools.ClientUtility.Client;
         var locale = Request.UserLanguages.Length > 0 ? Request.UserLanguages[0] : "en-us";
         var ipAddress = Request.UserHostAddress;

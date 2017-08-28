@@ -1,0 +1,5 @@
+<Options>
+  <SelectType type="2" />
+  <PringOptions Alias="RTLib" UserID="001" Password="" Solution="C:\EEP2015\CBBN.sln" language="繁體" webType="A" waitTime="5" wordFolder="C:\EEP2015\DABI\SDM" />
+  <PrintSettings Value="true,false,false,false,true,true,true,true,false,false,false" />
+</Options>

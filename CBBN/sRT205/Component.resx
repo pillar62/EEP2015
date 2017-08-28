@@ -118,48 +118,61 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="serviceManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 173</value>
+    <value>17, 56</value>
   </metadata>
   <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 134</value>
+    <value>169, 54</value>
   </metadata>
   <metadata name="RTFaqM.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>133, 286</value>
+    <value>25, 137</value>
   </metadata>
   <metadata name="ucRTFaqM.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>128, 220</value>
+    <value>22, 193</value>
   </metadata>
   <metadata name="View_RTFaqM.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>152, 90</value>
+    <value>17, 95</value>
   </metadata>
-  <metadata name="cmRT205.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>353, 201</value>
+  <metadata name="RT205.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>393, 101</value>
   </metadata>
-  <data name="cmRT205.CommandText" xml:space="preserve">
-    <value>select a.caseno, a.comtype, p.consignee, n.leader,  convert(varchar(5), n.comq1)+case when n.lineq1=0 then '' else '-'+convert(varchar(5), n.lineq1) end comq1
-, n.comn,c.dropdat, a.faqman, left(convert(varchar(25), a.rcvdat, 20), 16) as rcvdat, a.closedat
-, count(g.caseno) as c_caseno, case when l.finishnum &gt;0 then '' else 'Y' end as finishnum
-from 	RTFaqM a
-left outer join HBAdslCmtyCust c on a.comtype = c.comtype and a.comq1 = c.comq1 and a.lineq1 = c.lineq1 and a.cusid = c.cusid and a.entryno = c.entryno
-left outer join HBAdslCmty n on a.comtype = n.comtype and a.comq1 = n.comq1 and a.lineq1 = n.lineq1
-left outer join RTFaqAdd g on g.caseno = a.caseno and g.canceldat is null
-left outer join RTSndWork h inner join (select max(workno) as maxworkno, linkno from RTSndWork where canceldat is null
-			and (worktype ='01' or worktype ='09') group by linkno) m on m.linkno = h.linkno and m.maxworkno = h.workno
-on h.linkno = a.caseno 
-left outer join RTObj k on k.cusid = h.assigncons
-left outer join (select linkno, count(*) as finishnum from RTSndwork
-				where finishdat is null and canceldat is null
-				and (worktype ='01' or worktype ='09')
-				group by linkno) l on a.caseno = l.linkno
-left outer join RTSparq499Cust p on p.comq1 = c.comq1 and p.lineq1 = c.lineq1 and p.cusid = c.cusid and c.comtype ='6'
+  <data name="RT205.CommandText" xml:space="preserve">
+    <value>select a.caseno, a.comtype, case when p.consignee ='12973008' then '原遠端戶' else n.groupnc end AS ANGENCY, n.leader
+, b.codenc, convert(varchar(5), n.comq1)+case when n.lineq1=0 then '' else '-'+convert(varchar(5), n.lineq1) end COMLINE, n.comn, 
+c.dropdat, a.faqman, j.codenc, d.codenc, isnull(f.cusnc,'') AS CUSNC, left(convert(varchar(25),a.rcvdat, 20), 16) AS RCVDATE
+, a.closedat, o.codenc, count(g.caseno) AS QT_CASE, isnull(k.shortnc,i.name) AS SNAME, 
+case when l.finishnum &gt;0 then '' else 'Y' end as finishnum , n.comq1, n.lineq1, c.cusid, c.entryno from RTFaqM a left outer join RTCode b on a.comtype = b.code and b.kind ='P5' left outer join HBAdslCmtyCust c on a.comtype = c.comtype and a.comq1 = c.comq1 and a.lineq1 = c.lineq1 and a.cusid = c.cusid and a.entryno = c.entryno 
+left outer join HBAdslCmty n on a.comtype = n.comtype and a.comq1 = n.comq1 and a.lineq1 = n.lineq1 left outer join RTCode o on a.custsrc = o.code and o.kind ='Q3' 
+left outer join RTCode d on a.faqreason = d.code and d.kind ='P7' left outer join RTEmployee e inner join RTObj f on f.cusid = e.cusid on e.emply = a.rcvusr 
+left outer join RTFaqAdd g on g.caseno = a.caseno and g.canceldat is null left outer join RTCode j on a.iobound = j.code and j.kind ='P8' 
+left outer join RTSndWork h inner join (select max(workno) as maxworkno, linkno from RTSndWork where canceldat is null 			and (worktype ='01' or worktype ='09') group by linkno) m on m.linkno = h.linkno and m.maxworkno = h.workno 
+on h.linkno = a.caseno  left outer join RTEmployee i on i.emply = h.assigneng left outer join RTObj k on k.cusid = h.assigncons left outer join (select linkno, count(*) as finishnum from RTSndwork 
+ where finishdat is null and canceldat is null and (worktype ='01' or worktype ='09') 
+ group by linkno) l on a.caseno = l.linkno left outer join RTSparq499Cust p on p.comq1 = c.comq1 and p.lineq1 = c.lineq1 and p.cusid = c.cusid and c.comtype ='6' 
 where a.caseno &gt;'' 
- group by a.caseno, a.comtype, n.leader, p.consignee
- , convert(varchar(5), n.comq1)+case when n.lineq1=0 then '' else '-'+convert(varchar(5), n.lineq1) end, n.comn,
-a.faqman, c.dropdat,left(convert(varchar(25), a.rcvdat, 20), 16), a.closedat,case when l.finishnum &gt;0 then '' else 'Y' end
-order by left(convert(varchar(25), a.rcvdat, 20), 16) desc </value>
+ group by a.caseno, a.comtype, case when p.consignee ='12973008' then '原遠端戶' else n.groupnc end, n.leader, b.codenc, convert(varchar(5), n.comq1)+case when n.lineq1=0 then '' else '-'+convert(varchar(5), n.lineq1) end, n.comn, 
+a.faqman, c.dropdat, j.codenc, d.codenc, isnull(f.cusnc,''), left(convert(varchar(25), a.rcvdat, 20), 16), a.closedat, o.codenc, isnull(k.shortnc,i.name), 
+case when l.finishnum &gt;0 then '' else 'Y' end , n.comq1, n.lineq1, c.cusid, c.entryno order by left(convert(varchar(25), a.rcvdat, 20), 16) desc </value>
   </data>
-  <metadata name="updateComponent1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>324, 286</value>
+  <metadata name="RTFaqAdd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>511, 62</value>
+  </metadata>
+  <metadata name="ucRTFaqAdd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>508, 114</value>
+  </metadata>
+  <metadata name="autoNumber1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>10, 258</value>
+  </metadata>
+  <metadata name="V_RT205.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>198, 100</value>
+  </metadata>
+  <metadata name="V_RT2051.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>198, 141</value>
+  </metadata>
+  <metadata name="V_RT2052.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>194, 187</value>
+  </metadata>
+  <metadata name="cmd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>387, 157</value>
   </metadata>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>

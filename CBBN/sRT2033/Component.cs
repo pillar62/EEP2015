@@ -123,7 +123,7 @@ namespace sRT2033
             try
             {
                 cmdRT20332.InfoParameters[0].Value = XXRCVPRTNO;
-                cmdRT20332.InfoParameters[1].Value = sdata[1];
+                cmdRT20332.InfoParameters[1].Value = sdata[4];
                 /*取得統計的結果，並將結果返回*/
                 double ii = cmdRT20332.ExecuteNonQuery();
                 return new object[] { 0, "主線派工設備返轉物品領用單作業成功" };
@@ -204,7 +204,7 @@ namespace sRT2033
             IDbConnection conn = cmdRT20334.Connection;
             conn.Open();
             string sqlxx = "select * FROM RTLessorAVSCustReturnhardware WHERE cusid=" + sdata[0] + " and entryno=" + sdata[1] + " and prtno = '" + sdata[2] + "' and seq = " + sdata[3];
-            string sqlYY = "select * FROM RTLessorAVSCmtyLinesndwork WHERE comq1=" + sdata[0] + " and lineq1=" + sdata[1] + " prtno='" + sdata[2] + "' ";
+            string sqlYY = "select * FROM RTLessorAVSCmtyLinesndwork WHERE comq1=" + sdata[0] + " and lineq1=" + sdata[1] + " and prtno='" + sdata[2] + "' ";
             cmd.CommandText = sqlxx;
             DataSet RSxx = cmd.ExecuteDataSet();
             cmd.CommandText = sqlYY;
@@ -233,7 +233,7 @@ namespace sRT2033
                 cmdRT20334.InfoParameters[1].Value = sdata[1];
                 cmdRT20334.InfoParameters[2].Value = sdata[2];
                 cmdRT20334.InfoParameters[3].Value = sdata[3];
-                cmdRT20334.InfoParameters[3].Value = sdata[4];
+                cmdRT20334.InfoParameters[4].Value = sdata[4];
                 /*取得統計的結果，並將結果返回*/
                 double ii = cmdRT20334.ExecuteNonQuery();
                 return new object[] { 0, "設備安裝資料作廢返轉成功" };
