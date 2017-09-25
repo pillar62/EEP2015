@@ -8,7 +8,43 @@
     <title></title>
     <script>
         var usr = getClientInfo('_usercode');
-        
+        var comtype = Request.getQueryStringByName2("comtype"); //個案編號
+        var lineq1 = Request.getQueryStringByName2("lineq1"); //個案編號
+        var comq1 = Request.getQueryStringByName2("comq1"); //個案編號
+        var cusid = Request.getQueryStringByName2("cusid"); //個案編號
+        var flag = true;
+
+        function dgOnloadSuccess() {
+            
+            if (flag) {
+                var sWhere = " 1=1 ";
+                if (comq1 != "") {
+                    sWhere = sWhere + " AND A.COMQ1='" + comq1 + "'";
+                }
+
+                if (lineq1 != "") {
+                    sWhere = sWhere + " AND A.LINEQ1='" + lineq1 + "'"
+                }
+
+                if (cusid != "") {
+                    sWhere = sWhere + " AND A.cusid='" + cusid + "'"
+                }
+
+                /*
+                if (comtype != "") {
+                    sWhere = sWhere + " AND A.comtype='" + comtype + "'"
+                }
+                */                
+
+                $("#dataGridMaster").datagrid('setWhere', sWhere);
+            }
+            else
+            {
+            }
+
+            flag = false;
+        }
+
         function queryGrid(dg) { //查詢后添加固定條件            
             if ($(dg).attr('id') == 'dataGridMaster') {
                 var where = $(dg).datagrid('getWhere');
@@ -60,8 +96,8 @@
 
         function btn1Click(val) {
             var sMODE = "I";
-            parent.addTab("客訴資料新增", "CBBN/RT2051.aspx?caseno=自動編號" + "&sMODE=" + sMODE);
-            $('#dataGridMaster').datagrid('reload');
+            parent.addTab("客訴資料新增", "CBBN/RT2051.aspx?caseno=自動編號" + "&sMODE=" + sMODE + "&comq1=" + comq1 + "&lineq1=" + lineq1 + "&comtype=" + comtype + "&cusid=" + cusid);
+            //$('#dataGridMaster').datagrid('reload');
 
         }
 
@@ -70,8 +106,17 @@
             var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var caseno = row.caseno;
             var custid = row.cusid;
-            parent.addTab("客訴資料修改", "CBBN/RT2051.aspx?caseno=" + caseno + "&sMODE=" + sMODE + "&sMODE=" + sMODE);
-            $('#dataGridMaster').datagrid('reload');
+            parent.addTab("客訴資料修改", "CBBN/RT2051.aspx?caseno=" + caseno + "&sMODE=" + sMODE);
+            //$('#dataGridMaster').datagrid('reload');
+        }
+
+        function btnViewClick(val) {
+            var sMODE = "B";
+            var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var caseno = row.caseno;
+            var custid = row.cusid;
+            parent.addTab("客訴資料查詢", "CBBN/RT2051.aspx?caseno=" + caseno + "&sMODE=" + sMODE);
+            //$('#dataGridMaster').datagrid('reload');
         }
 
         function btn3Click(val) {
@@ -153,7 +198,7 @@
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
             <JQTools:JQDataGrid ID="dataGridMaster" data-options="pagination:true,view:commandview" RemoteName="sRT205.RT205" runat="server" AutoApply="False"
                 DataMember="RT205" Pagination="True" QueryTitle="查詢條件"
-                Title="客訴資料維護" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Panel" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="True">
+                Title="客訴資料維護" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Panel" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="False" OnLoadSuccess="dgOnloadSuccess">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="客訴單號" Editor="text" FieldName="caseno" Format="" MaxLength="10" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="方案別" Editor="text" FieldName="comtype" Format="" MaxLength="1" Width="120" Visible="False" />
@@ -181,6 +226,7 @@
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton" OnClick="btn1Click" Text="新增" />
                     <JQTools:JQToolItem Icon="icon-edit" ItemType="easyui-linkbutton" OnClick="btn2Click" Text="更改" />
+                    <JQTools:JQToolItem Enabled="True" Icon="icon-view" ItemType="easyui-linkbutton" OnClick="btnViewClick" Text="瀏覽" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn3Click" Text="追 件" Visible="True" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn4Click" Text="派工單" Visible="True" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn5Click" Text="結 案" Visible="True" Icon="icon-edit" />

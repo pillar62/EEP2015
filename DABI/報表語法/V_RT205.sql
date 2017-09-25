@@ -56,7 +56,7 @@ UNION ALL
 select c.comtype, A.COMQ1, A.LINEQ1, A.CUSID, c.comtypenc, c.belongnc, c.salesnc, c.comq, d.comn, b.linetel as LINETEL, b.gateway, 
 replace(str(b.lineipstr1) +'.'+ str(b.lineipstr2) +'.'+ str(b.lineipstr3) +'.'+ str(b.lineipstr4) +'~'+ str(b.lineipend),' ','')  as CMTYIP, 
 f.codenc as LINERATE, b.linearrivedat as ARRIVEDAT, b.dropdat as RCOMDROP, b.idslamip, 
-c.cusnc, c.contacttel, c.companytel, c.raddr, replace(a.custip1+'.'+ a.custip2 +'.'+ a.custip3 +'.'+ a.custip4, '...', '') as CUSTIP, 
+c.cusnc, c.contacttel, c.companytel, c.raddr, replace(a.custip1, '...', '') as CUSTIP, 
 g.codenc as CASEKIND, h.codenc as paycycle, 
 '' as paytype, replace(a.overdue,'N','') as overdue, replace(a.freecode,'N','') as freecode, 
 c.docketdat, null as strbillingdat, null as newbillingdat, null as duedat, c.dropdat, c.canceldat, 
@@ -72,7 +72,7 @@ where 	c.comtype ='6'
 UNION ALL
 select	c.comtype, A.COMQ1, A.LINEQ1, A.CUSID, c.comtypenc, c.belongnc, c.salesnc, c.comq, d.comn, b.linetel as LINETEL, b.gateway, 
 b.lineip  as CMTYIP, f.codenc as LINERATE, b.hardwaredat as ARRIVEDAT, b.dropdat as RCOMDROP, '' as idslamip, 
-c.cusnc, c.contacttel, c.companytel, c.raddr, replace(a.ip11+'.'+a.ip12+'.'+a.ip13+'.'+a.ip14,'...','') as CUSTIP, 
+c.cusnc, c.contacttel, c.companytel, c.raddr, replace(a.ip11,'...','') as CUSTIP, 
 g.codenc as CASEKIND, h.codenc as paycycle, i.codenc as paytype, replace(a.overdue,'N','') as overdue, 
 replace(a.freecode,'N','') as freecode, c.docketdat, a.strbillingdat, a.newbillingdat, a.duedat, c.dropdat, c.canceldat, 
 replace(a.secondcase,'N','') as secondcase, '' as nciccusno, '' as Sp499cons, null as WtlApplyDat 
@@ -88,7 +88,7 @@ where 	c.comtype ='7'
 UNION ALL
 select	c.comtype, A.COMQ1, A.LINEQ1, A.CUSID, c.comtypenc, c.belongnc, c.salesnc, c.comq, d.comn, b.linetel as LINETEL, b.gateway, 
 b.lineip  as CMTYIP, f.codenc as LINERATE, b.hardwaredat as ARRIVEDAT, b.dropdat as RCOMDROP, '' as idslamip, 
-c.cusnc, c.contacttel, c.companytel, c.raddr, replace(a.ip11+'.'+a.ip12+'.'+a.ip13+'.'+a.ip14,'...','') as CUSTIP, 
+c.cusnc, c.contacttel, c.companytel, c.raddr, replace(a.ip11,'...','') as CUSTIP, 
 g.codenc as CASEKIND, h.codenc as paycycle, i.codenc as paytype, replace(a.overdue,'N','') as overdue, 
 replace(a.freecode,'N','') as freecode, c.docketdat, a.strbillingdat, a.newbillingdat, a.duedat, c.dropdat, c.canceldat, 
 replace(a.secondcase,'N','') as secondcase, '' as nciccusno, '' as Sp499cons, null as WtlApplyDat 
@@ -104,7 +104,7 @@ where 	c.comtype ='8'
 UNION ALL
 select	c.comtype, A.COMQ1, A.LINEQ1, A.CUSID, c.comtypenc, c.belongnc, c.salesnc, c.comq, d.comn, b.linetel as LINETEL, b.gateway, 
 b.lineip  as CMTYIP, f.codenc as LINERATE, b.arrivedat as ARRIVEDAT, b.dropdat as RCOMDROP, '' as idslamip, 
-c.cusnc, c.contacttel, c.companytel, c.raddr, replace(a.ip11+'.'+a.ip12+'.'+a.ip13+'.'+a.ip14,'...','') as CUSTIP, 
+c.cusnc, c.contacttel, c.companytel, c.raddr, replace(a.ip11,'...','') as CUSTIP, 
 '' as CASEKIND, '' as paycycle, '' as paytype, '' as overdue, 
 replace(a.freecode,'N','') as freecode, c.docketdat, a.strbillingdat, null as newbillingdat, null as duedat, c.dropdat, c.canceldat, 
 '' as secondcase, '' as nciccusno, '' as Sp499cons, null as WtlApplyDat 

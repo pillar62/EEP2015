@@ -121,7 +121,7 @@
     <value>17, 17</value>
   </metadata>
   <data name="customSqlQuery1.Sql" xml:space="preserve">
-    <value>select a.workno, a.linkno, g.comtype, l.CODENC, b.codenc as worktype, isnull(c.shortnc, d.name) as assigneng
+    <value>select top 100 a.workno, a.linkno, g.comtype, l.CODENC, b.codenc as worktype, isnull(c.shortnc, d.name) as assigneng
 , isnull(i.shortnc, f.name) as finisheng, h.comn, g.faqman
 , e.name as sndwrkusr, a.sndwrkdat, j.name as finishsur, a.finishdat, k.codenc, a.canceldat 
 , G.CUSID, G.RCVDAT, G.COMQ1, G.LINEQ1, m.LINERATE, m.idslamip, m.gateway, m.CUSTIP
@@ -143,7 +143,7 @@ left outer join RTCode k on k.code = a.finishtyp and k.kind ='P9'
 left outer join RTCode l on l.CODE = g.COMTYPE and l.kind ='P5' 
 left outer join V_RT205 m on m.COMQ1=g.COMQ1 and m.LINEQ1=g.LINEQ1 and m.CUSID=g.CUSID
 left outer join RTCode n on n.CODE = g.FAQREASON and n.kind ='P7' 
-where (a.worktype ='01' or a.worktype ='09') AND A.WORKNO = 'W20161101001'
+where (a.worktype ='01' or a.worktype ='09') 
 order by isnull(c.shortnc, d.name), h.comn </value>
   </data>
   <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">

@@ -15,8 +15,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
     private XRLabel xrLabel5;
     private XRLabel xrLabel7;
     private XRLabel xrLabel13;
-    private XRLabel xrLabel19;
-    private XRLabel xrLabel20;
     private XRLabel xrLabel22;
     private XRLabel xrLabel36;
     private XRLabel xrLabel37;
@@ -25,8 +23,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
     private XRLabel xrLabel45;
     private XRLabel xrLabel47;
     private XRLabel xrLabel48;
-    private XRLabel xrLabel51;
-    private XRLabel xrLabel52;
     private XRLabel xrLabel54;
     private XRLabel xrLabel55;
     private XRLabel xrLabel56;
@@ -117,7 +113,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
     private XRShape xrShape32;
     private XRShape xrShape33;
     private XRShape xrShape42;
-    private XRShape xrShape43;
     private XRShape xrShape44;
     private XRShape xrShape45;
     private XRShape xrShape46;
@@ -125,7 +120,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
     private XRShape xrShape48;
     private XRShape xrShape49;
     private XRShape xrShape34;
-    private XRShape xrShape35;
     private XRShape xrShape36;
     private XRShape xrShape37;
     private XRShape xrShape38;
@@ -133,7 +127,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
     private XRShape xrShape40;
     private XRShape xrShape41;
     private XRShape xrShape60;
-    private XRShape xrShape61;
     private XRShape xrShape62;
     private XRShape xrShape63;
     private XRShape xrShape64;
@@ -143,7 +136,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
     private XRShape xrShape68;
     private XRShape xrShape69;
     private XRShape xrShape50;
-    private XRShape xrShape51;
     private XRShape xrShape52;
     private XRShape xrShape53;
     private XRShape xrShape54;
@@ -275,10 +267,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             DevExpress.XtraPrinting.Shape.ShapeLine shapeLine63 = new DevExpress.XtraPrinting.Shape.ShapeLine();
             DevExpress.XtraPrinting.Shape.ShapeLine shapeLine64 = new DevExpress.XtraPrinting.Shape.ShapeLine();
             DevExpress.XtraPrinting.Shape.ShapeLine shapeLine65 = new DevExpress.XtraPrinting.Shape.ShapeLine();
-            DevExpress.XtraPrinting.Shape.ShapeLine shapeLine66 = new DevExpress.XtraPrinting.Shape.ShapeLine();
-            DevExpress.XtraPrinting.Shape.ShapeLine shapeLine67 = new DevExpress.XtraPrinting.Shape.ShapeLine();
-            DevExpress.XtraPrinting.Shape.ShapeLine shapeLine68 = new DevExpress.XtraPrinting.Shape.ShapeLine();
-            DevExpress.XtraPrinting.Shape.ShapeLine shapeLine69 = new DevExpress.XtraPrinting.Shape.ShapeLine();
             DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery1 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrLabel25 = new DevExpress.XtraReports.UI.XRLabel();
@@ -301,7 +289,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrShape60 = new DevExpress.XtraReports.UI.XRShape();
-            this.xrShape61 = new DevExpress.XtraReports.UI.XRShape();
             this.xrShape62 = new DevExpress.XtraReports.UI.XRShape();
             this.xrShape63 = new DevExpress.XtraReports.UI.XRShape();
             this.xrShape64 = new DevExpress.XtraReports.UI.XRShape();
@@ -311,7 +298,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrShape68 = new DevExpress.XtraReports.UI.XRShape();
             this.xrShape69 = new DevExpress.XtraReports.UI.XRShape();
             this.xrShape50 = new DevExpress.XtraReports.UI.XRShape();
-            this.xrShape51 = new DevExpress.XtraReports.UI.XRShape();
             this.xrShape52 = new DevExpress.XtraReports.UI.XRShape();
             this.xrShape53 = new DevExpress.XtraReports.UI.XRShape();
             this.xrShape54 = new DevExpress.XtraReports.UI.XRShape();
@@ -321,7 +307,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrShape58 = new DevExpress.XtraReports.UI.XRShape();
             this.xrShape59 = new DevExpress.XtraReports.UI.XRShape();
             this.xrShape42 = new DevExpress.XtraReports.UI.XRShape();
-            this.xrShape43 = new DevExpress.XtraReports.UI.XRShape();
             this.xrShape44 = new DevExpress.XtraReports.UI.XRShape();
             this.xrShape45 = new DevExpress.XtraReports.UI.XRShape();
             this.xrShape46 = new DevExpress.XtraReports.UI.XRShape();
@@ -329,7 +314,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrShape48 = new DevExpress.XtraReports.UI.XRShape();
             this.xrShape49 = new DevExpress.XtraReports.UI.XRShape();
             this.xrShape34 = new DevExpress.XtraReports.UI.XRShape();
-            this.xrShape35 = new DevExpress.XtraReports.UI.XRShape();
             this.xrShape36 = new DevExpress.XtraReports.UI.XRShape();
             this.xrShape37 = new DevExpress.XtraReports.UI.XRShape();
             this.xrShape38 = new DevExpress.XtraReports.UI.XRShape();
@@ -406,8 +390,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel22 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel36 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel37 = new DevExpress.XtraReports.UI.XRLabel();
@@ -416,8 +398,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel45 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel47 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel48 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel51 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel52 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel54 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel55 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel56 = new DevExpress.XtraReports.UI.XRLabel();
@@ -467,7 +447,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel2,
             this.xrLabel1,
             this.xrShape60,
-            this.xrShape61,
             this.xrShape62,
             this.xrShape63,
             this.xrShape64,
@@ -477,7 +456,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrShape68,
             this.xrShape69,
             this.xrShape50,
-            this.xrShape51,
             this.xrShape52,
             this.xrShape53,
             this.xrShape54,
@@ -487,7 +465,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrShape58,
             this.xrShape59,
             this.xrShape42,
-            this.xrShape43,
             this.xrShape44,
             this.xrShape45,
             this.xrShape46,
@@ -495,7 +472,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrShape48,
             this.xrShape49,
             this.xrShape34,
-            this.xrShape35,
             this.xrShape36,
             this.xrShape37,
             this.xrShape38,
@@ -572,8 +548,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel5,
             this.xrLabel7,
             this.xrLabel13,
-            this.xrLabel19,
-            this.xrLabel20,
             this.xrLabel22,
             this.xrLabel36,
             this.xrLabel37,
@@ -582,8 +556,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel45,
             this.xrLabel47,
             this.xrLabel48,
-            this.xrLabel51,
-            this.xrLabel52,
             this.xrLabel54,
             this.xrLabel55,
             this.xrLabel56,
@@ -813,10 +785,10 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.CMTYIP")});
             this.xrLabel1.Font = new System.Drawing.Font("標楷體", 10F);
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(78.49988F, 39.99999F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(78.49989F, 39.99999F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(207.5F, 17.00002F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(642.5F, 17.00002F);
             this.xrLabel1.StylePriority.UseFont = false;
             // 
             // xrShape60
@@ -826,473 +798,445 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrShape60.Shape = shapeLine1;
             this.xrShape60.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
-            // xrShape61
-            // 
-            this.xrShape61.LocationFloat = new DevExpress.Utils.PointFloat(595.9586F, 32.00003F);
-            this.xrShape61.Name = "xrShape61";
-            this.xrShape61.Shape = shapeLine2;
-            this.xrShape61.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
-            // 
             // xrShape62
             // 
             this.xrShape62.LocationFloat = new DevExpress.Utils.PointFloat(595.9586F, 62.00002F);
             this.xrShape62.Name = "xrShape62";
-            this.xrShape62.Shape = shapeLine3;
+            this.xrShape62.Shape = shapeLine2;
             this.xrShape62.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape63
             // 
             this.xrShape63.LocationFloat = new DevExpress.Utils.PointFloat(595.9586F, 92.00007F);
             this.xrShape63.Name = "xrShape63";
-            this.xrShape63.Shape = shapeLine4;
+            this.xrShape63.Shape = shapeLine3;
             this.xrShape63.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape64
             // 
             this.xrShape64.LocationFloat = new DevExpress.Utils.PointFloat(595.9586F, 122.0001F);
             this.xrShape64.Name = "xrShape64";
-            this.xrShape64.Shape = shapeLine5;
+            this.xrShape64.Shape = shapeLine4;
             this.xrShape64.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape65
             // 
             this.xrShape65.LocationFloat = new DevExpress.Utils.PointFloat(595.9586F, 152F);
             this.xrShape65.Name = "xrShape65";
-            this.xrShape65.Shape = shapeLine6;
+            this.xrShape65.Shape = shapeLine5;
             this.xrShape65.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape66
             // 
             this.xrShape66.LocationFloat = new DevExpress.Utils.PointFloat(595.9586F, 182F);
             this.xrShape66.Name = "xrShape66";
-            this.xrShape66.Shape = shapeLine7;
+            this.xrShape66.Shape = shapeLine6;
             this.xrShape66.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape67
             // 
             this.xrShape67.LocationFloat = new DevExpress.Utils.PointFloat(595.9586F, 212F);
             this.xrShape67.Name = "xrShape67";
-            this.xrShape67.Shape = shapeLine8;
+            this.xrShape67.Shape = shapeLine7;
             this.xrShape67.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape68
             // 
             this.xrShape68.LocationFloat = new DevExpress.Utils.PointFloat(595.9586F, 2.000046F);
             this.xrShape68.Name = "xrShape68";
-            this.xrShape68.Shape = shapeLine9;
+            this.xrShape68.Shape = shapeLine8;
             this.xrShape68.SizeF = new System.Drawing.SizeF(2F, 28F);
             // 
             // xrShape69
             // 
             this.xrShape69.LocationFloat = new DevExpress.Utils.PointFloat(595.9586F, 272.0001F);
             this.xrShape69.Name = "xrShape69";
-            this.xrShape69.Shape = shapeLine10;
+            this.xrShape69.Shape = shapeLine9;
             this.xrShape69.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape50
             // 
             this.xrShape50.LocationFloat = new DevExpress.Utils.PointFloat(515.9583F, 1.999964F);
             this.xrShape50.Name = "xrShape50";
-            this.xrShape50.Shape = shapeLine11;
+            this.xrShape50.Shape = shapeLine10;
             this.xrShape50.SizeF = new System.Drawing.SizeF(2F, 28F);
-            // 
-            // xrShape51
-            // 
-            this.xrShape51.LocationFloat = new DevExpress.Utils.PointFloat(515.9583F, 31.99995F);
-            this.xrShape51.Name = "xrShape51";
-            this.xrShape51.Shape = shapeLine12;
-            this.xrShape51.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape52
             // 
             this.xrShape52.LocationFloat = new DevExpress.Utils.PointFloat(515.9583F, 61.99994F);
             this.xrShape52.Name = "xrShape52";
-            this.xrShape52.Shape = shapeLine13;
+            this.xrShape52.Shape = shapeLine11;
             this.xrShape52.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape53
             // 
             this.xrShape53.LocationFloat = new DevExpress.Utils.PointFloat(515.9583F, 91.99999F);
             this.xrShape53.Name = "xrShape53";
-            this.xrShape53.Shape = shapeLine14;
+            this.xrShape53.Shape = shapeLine12;
             this.xrShape53.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape54
             // 
             this.xrShape54.LocationFloat = new DevExpress.Utils.PointFloat(515.9583F, 122F);
             this.xrShape54.Name = "xrShape54";
-            this.xrShape54.Shape = shapeLine15;
+            this.xrShape54.Shape = shapeLine13;
             this.xrShape54.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape55
             // 
             this.xrShape55.LocationFloat = new DevExpress.Utils.PointFloat(515.9583F, 152F);
             this.xrShape55.Name = "xrShape55";
-            this.xrShape55.Shape = shapeLine16;
+            this.xrShape55.Shape = shapeLine14;
             this.xrShape55.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape56
             // 
             this.xrShape56.LocationFloat = new DevExpress.Utils.PointFloat(515.9583F, 182F);
             this.xrShape56.Name = "xrShape56";
-            this.xrShape56.Shape = shapeLine17;
+            this.xrShape56.Shape = shapeLine15;
             this.xrShape56.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape57
             // 
             this.xrShape57.LocationFloat = new DevExpress.Utils.PointFloat(515.9583F, 211.9999F);
             this.xrShape57.Name = "xrShape57";
-            this.xrShape57.Shape = shapeLine18;
+            this.xrShape57.Shape = shapeLine16;
             this.xrShape57.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape58
             // 
             this.xrShape58.LocationFloat = new DevExpress.Utils.PointFloat(515.9583F, 242F);
             this.xrShape58.Name = "xrShape58";
-            this.xrShape58.Shape = shapeLine19;
+            this.xrShape58.Shape = shapeLine17;
             this.xrShape58.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape59
             // 
             this.xrShape59.LocationFloat = new DevExpress.Utils.PointFloat(515.9583F, 272F);
             this.xrShape59.Name = "xrShape59";
-            this.xrShape59.Shape = shapeLine20;
+            this.xrShape59.Shape = shapeLine18;
             this.xrShape59.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape42
             // 
             this.xrShape42.LocationFloat = new DevExpress.Utils.PointFloat(352F, 2F);
             this.xrShape42.Name = "xrShape42";
-            this.xrShape42.Shape = shapeLine21;
+            this.xrShape42.Shape = shapeLine19;
             this.xrShape42.SizeF = new System.Drawing.SizeF(2F, 28F);
-            // 
-            // xrShape43
-            // 
-            this.xrShape43.LocationFloat = new DevExpress.Utils.PointFloat(352F, 31.99996F);
-            this.xrShape43.Name = "xrShape43";
-            this.xrShape43.Shape = shapeLine22;
-            this.xrShape43.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape44
             // 
             this.xrShape44.LocationFloat = new DevExpress.Utils.PointFloat(352F, 61.99994F);
             this.xrShape44.Name = "xrShape44";
-            this.xrShape44.Shape = shapeLine23;
+            this.xrShape44.Shape = shapeLine20;
             this.xrShape44.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape45
             // 
             this.xrShape45.LocationFloat = new DevExpress.Utils.PointFloat(352F, 91.99999F);
             this.xrShape45.Name = "xrShape45";
-            this.xrShape45.Shape = shapeLine24;
+            this.xrShape45.Shape = shapeLine21;
             this.xrShape45.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape46
             // 
             this.xrShape46.LocationFloat = new DevExpress.Utils.PointFloat(352F, 122F);
             this.xrShape46.Name = "xrShape46";
-            this.xrShape46.Shape = shapeLine25;
+            this.xrShape46.Shape = shapeLine22;
             this.xrShape46.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape47
             // 
             this.xrShape47.LocationFloat = new DevExpress.Utils.PointFloat(352F, 211.9999F);
             this.xrShape47.Name = "xrShape47";
-            this.xrShape47.Shape = shapeLine26;
+            this.xrShape47.Shape = shapeLine23;
             this.xrShape47.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape48
             // 
             this.xrShape48.LocationFloat = new DevExpress.Utils.PointFloat(352F, 242F);
             this.xrShape48.Name = "xrShape48";
-            this.xrShape48.Shape = shapeLine27;
+            this.xrShape48.Shape = shapeLine24;
             this.xrShape48.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape49
             // 
             this.xrShape49.LocationFloat = new DevExpress.Utils.PointFloat(352F, 272F);
             this.xrShape49.Name = "xrShape49";
-            this.xrShape49.Shape = shapeLine28;
+            this.xrShape49.Shape = shapeLine25;
             this.xrShape49.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape34
             // 
             this.xrShape34.LocationFloat = new DevExpress.Utils.PointFloat(286F, 2F);
             this.xrShape34.Name = "xrShape34";
-            this.xrShape34.Shape = shapeLine29;
+            this.xrShape34.Shape = shapeLine26;
             this.xrShape34.SizeF = new System.Drawing.SizeF(2F, 28F);
-            // 
-            // xrShape35
-            // 
-            this.xrShape35.LocationFloat = new DevExpress.Utils.PointFloat(286F, 32F);
-            this.xrShape35.Name = "xrShape35";
-            this.xrShape35.Shape = shapeLine30;
-            this.xrShape35.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape36
             // 
             this.xrShape36.LocationFloat = new DevExpress.Utils.PointFloat(286F, 62F);
             this.xrShape36.Name = "xrShape36";
-            this.xrShape36.Shape = shapeLine31;
+            this.xrShape36.Shape = shapeLine27;
             this.xrShape36.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape37
             // 
             this.xrShape37.LocationFloat = new DevExpress.Utils.PointFloat(286F, 92F);
             this.xrShape37.Name = "xrShape37";
-            this.xrShape37.Shape = shapeLine32;
+            this.xrShape37.Shape = shapeLine28;
             this.xrShape37.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape38
             // 
             this.xrShape38.LocationFloat = new DevExpress.Utils.PointFloat(286F, 122F);
             this.xrShape38.Name = "xrShape38";
-            this.xrShape38.Shape = shapeLine33;
+            this.xrShape38.Shape = shapeLine29;
             this.xrShape38.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape39
             // 
             this.xrShape39.LocationFloat = new DevExpress.Utils.PointFloat(286F, 212F);
             this.xrShape39.Name = "xrShape39";
-            this.xrShape39.Shape = shapeLine34;
+            this.xrShape39.Shape = shapeLine30;
             this.xrShape39.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape40
             // 
             this.xrShape40.LocationFloat = new DevExpress.Utils.PointFloat(286F, 242F);
             this.xrShape40.Name = "xrShape40";
-            this.xrShape40.Shape = shapeLine35;
+            this.xrShape40.Shape = shapeLine31;
             this.xrShape40.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape41
             // 
             this.xrShape41.LocationFloat = new DevExpress.Utils.PointFloat(286F, 272F);
             this.xrShape41.Name = "xrShape41";
-            this.xrShape41.Shape = shapeLine36;
+            this.xrShape41.Shape = shapeLine32;
             this.xrShape41.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape23
             // 
             this.xrShape23.LocationFloat = new DevExpress.Utils.PointFloat(74F, 2F);
             this.xrShape23.Name = "xrShape23";
-            this.xrShape23.Shape = shapeLine37;
+            this.xrShape23.Shape = shapeLine33;
             this.xrShape23.SizeF = new System.Drawing.SizeF(2F, 28F);
             // 
             // xrShape24
             // 
             this.xrShape24.LocationFloat = new DevExpress.Utils.PointFloat(74F, 32F);
             this.xrShape24.Name = "xrShape24";
-            this.xrShape24.Shape = shapeLine38;
+            this.xrShape24.Shape = shapeLine34;
             this.xrShape24.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape25
             // 
             this.xrShape25.LocationFloat = new DevExpress.Utils.PointFloat(74F, 62F);
             this.xrShape25.Name = "xrShape25";
-            this.xrShape25.Shape = shapeLine39;
+            this.xrShape25.Shape = shapeLine35;
             this.xrShape25.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape26
             // 
             this.xrShape26.LocationFloat = new DevExpress.Utils.PointFloat(74F, 92F);
             this.xrShape26.Name = "xrShape26";
-            this.xrShape26.Shape = shapeLine40;
+            this.xrShape26.Shape = shapeLine36;
             this.xrShape26.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape27
             // 
             this.xrShape27.LocationFloat = new DevExpress.Utils.PointFloat(74F, 122F);
             this.xrShape27.Name = "xrShape27";
-            this.xrShape27.Shape = shapeLine41;
+            this.xrShape27.Shape = shapeLine37;
             this.xrShape27.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape28
             // 
             this.xrShape28.LocationFloat = new DevExpress.Utils.PointFloat(74F, 152F);
             this.xrShape28.Name = "xrShape28";
-            this.xrShape28.Shape = shapeLine42;
+            this.xrShape28.Shape = shapeLine38;
             this.xrShape28.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape29
             // 
             this.xrShape29.LocationFloat = new DevExpress.Utils.PointFloat(74F, 182F);
             this.xrShape29.Name = "xrShape29";
-            this.xrShape29.Shape = shapeLine43;
+            this.xrShape29.Shape = shapeLine39;
             this.xrShape29.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape30
             // 
             this.xrShape30.LocationFloat = new DevExpress.Utils.PointFloat(74F, 212F);
             this.xrShape30.Name = "xrShape30";
-            this.xrShape30.Shape = shapeLine44;
+            this.xrShape30.Shape = shapeLine40;
             this.xrShape30.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape31
             // 
             this.xrShape31.LocationFloat = new DevExpress.Utils.PointFloat(74F, 242F);
             this.xrShape31.Name = "xrShape31";
-            this.xrShape31.Shape = shapeLine45;
+            this.xrShape31.Shape = shapeLine41;
             this.xrShape31.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape32
             // 
             this.xrShape32.LocationFloat = new DevExpress.Utils.PointFloat(74F, 272F);
             this.xrShape32.Name = "xrShape32";
-            this.xrShape32.Shape = shapeLine46;
+            this.xrShape32.Shape = shapeLine42;
             this.xrShape32.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape33
             // 
             this.xrShape33.LocationFloat = new DevExpress.Utils.PointFloat(74F, 302F);
             this.xrShape33.Name = "xrShape33";
-            this.xrShape33.Shape = shapeLine47;
+            this.xrShape33.Shape = shapeLine43;
             this.xrShape33.SizeF = new System.Drawing.SizeF(2F, 58F);
             // 
             // xrShape12
             // 
             this.xrShape12.LocationFloat = new DevExpress.Utils.PointFloat(724F, 2F);
             this.xrShape12.Name = "xrShape12";
-            this.xrShape12.Shape = shapeLine48;
+            this.xrShape12.Shape = shapeLine44;
             this.xrShape12.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape13
             // 
             this.xrShape13.LocationFloat = new DevExpress.Utils.PointFloat(723.9999F, 31.39587F);
             this.xrShape13.Name = "xrShape13";
-            this.xrShape13.Shape = shapeLine49;
+            this.xrShape13.Shape = shapeLine45;
             this.xrShape13.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape14
             // 
             this.xrShape14.LocationFloat = new DevExpress.Utils.PointFloat(724F, 62.39589F);
             this.xrShape14.Name = "xrShape14";
-            this.xrShape14.Shape = shapeLine50;
+            this.xrShape14.Shape = shapeLine46;
             this.xrShape14.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape15
             // 
             this.xrShape15.LocationFloat = new DevExpress.Utils.PointFloat(724F, 91.3959F);
             this.xrShape15.Name = "xrShape15";
-            this.xrShape15.Shape = shapeLine51;
+            this.xrShape15.Shape = shapeLine47;
             this.xrShape15.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape16
             // 
             this.xrShape16.LocationFloat = new DevExpress.Utils.PointFloat(723.9999F, 121.3959F);
             this.xrShape16.Name = "xrShape16";
-            this.xrShape16.Shape = shapeLine52;
+            this.xrShape16.Shape = shapeLine48;
             this.xrShape16.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape17
             // 
             this.xrShape17.LocationFloat = new DevExpress.Utils.PointFloat(724F, 151.3959F);
             this.xrShape17.Name = "xrShape17";
-            this.xrShape17.Shape = shapeLine53;
+            this.xrShape17.Shape = shapeLine49;
             this.xrShape17.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape18
             // 
             this.xrShape18.LocationFloat = new DevExpress.Utils.PointFloat(724F, 182.3959F);
             this.xrShape18.Name = "xrShape18";
-            this.xrShape18.Shape = shapeLine54;
+            this.xrShape18.Shape = shapeLine50;
             this.xrShape18.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape19
             // 
             this.xrShape19.LocationFloat = new DevExpress.Utils.PointFloat(723.9999F, 212.3959F);
             this.xrShape19.Name = "xrShape19";
-            this.xrShape19.Shape = shapeLine55;
+            this.xrShape19.Shape = shapeLine51;
             this.xrShape19.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape20
             // 
             this.xrShape20.LocationFloat = new DevExpress.Utils.PointFloat(724F, 242.3959F);
             this.xrShape20.Name = "xrShape20";
-            this.xrShape20.Shape = shapeLine56;
+            this.xrShape20.Shape = shapeLine52;
             this.xrShape20.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape21
             // 
             this.xrShape21.LocationFloat = new DevExpress.Utils.PointFloat(724F, 271.3959F);
             this.xrShape21.Name = "xrShape21";
-            this.xrShape21.Shape = shapeLine57;
+            this.xrShape21.Shape = shapeLine53;
             this.xrShape21.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape22
             // 
             this.xrShape22.LocationFloat = new DevExpress.Utils.PointFloat(724F, 301.3958F);
             this.xrShape22.Name = "xrShape22";
-            this.xrShape22.Shape = shapeLine58;
+            this.xrShape22.Shape = shapeLine54;
             this.xrShape22.SizeF = new System.Drawing.SizeF(2F, 58F);
             // 
             // xrShape11
             // 
             this.xrShape11.LocationFloat = new DevExpress.Utils.PointFloat(1.000055F, 302F);
             this.xrShape11.Name = "xrShape11";
-            this.xrShape11.Shape = shapeLine59;
+            this.xrShape11.Shape = shapeLine55;
             this.xrShape11.SizeF = new System.Drawing.SizeF(2F, 58F);
             // 
             // xrShape10
             // 
             this.xrShape10.LocationFloat = new DevExpress.Utils.PointFloat(1.000055F, 272F);
             this.xrShape10.Name = "xrShape10";
-            this.xrShape10.Shape = shapeLine60;
+            this.xrShape10.Shape = shapeLine56;
             this.xrShape10.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape9
             // 
             this.xrShape9.LocationFloat = new DevExpress.Utils.PointFloat(1.000055F, 240F);
             this.xrShape9.Name = "xrShape9";
-            this.xrShape9.Shape = shapeLine61;
+            this.xrShape9.Shape = shapeLine57;
             this.xrShape9.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape8
             // 
             this.xrShape8.LocationFloat = new DevExpress.Utils.PointFloat(0.9999911F, 212F);
             this.xrShape8.Name = "xrShape8";
-            this.xrShape8.Shape = shapeLine62;
+            this.xrShape8.Shape = shapeLine58;
             this.xrShape8.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape7
             // 
             this.xrShape7.LocationFloat = new DevExpress.Utils.PointFloat(1.000055F, 182F);
             this.xrShape7.Name = "xrShape7";
-            this.xrShape7.Shape = shapeLine63;
+            this.xrShape7.Shape = shapeLine59;
             this.xrShape7.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape6
             // 
             this.xrShape6.LocationFloat = new DevExpress.Utils.PointFloat(1.000055F, 152F);
             this.xrShape6.Name = "xrShape6";
-            this.xrShape6.Shape = shapeLine64;
+            this.xrShape6.Shape = shapeLine60;
             this.xrShape6.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape5
             // 
             this.xrShape5.LocationFloat = new DevExpress.Utils.PointFloat(1F, 122F);
             this.xrShape5.Name = "xrShape5";
-            this.xrShape5.Shape = shapeLine65;
+            this.xrShape5.Shape = shapeLine61;
             this.xrShape5.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape4
             // 
             this.xrShape4.LocationFloat = new DevExpress.Utils.PointFloat(1.000055F, 91.99999F);
             this.xrShape4.Name = "xrShape4";
-            this.xrShape4.Shape = shapeLine66;
+            this.xrShape4.Shape = shapeLine62;
             this.xrShape4.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape3
             // 
             this.xrShape3.LocationFloat = new DevExpress.Utils.PointFloat(1.000055F, 61.99999F);
             this.xrShape3.Name = "xrShape3";
-            this.xrShape3.Shape = shapeLine67;
+            this.xrShape3.Shape = shapeLine63;
             this.xrShape3.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrShape2
             // 
             this.xrShape2.LocationFloat = new DevExpress.Utils.PointFloat(1F, 31.99999F);
             this.xrShape2.Name = "xrShape2";
-            this.xrShape2.Shape = shapeLine68;
+            this.xrShape2.Shape = shapeLine64;
             this.xrShape2.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrLabel87
@@ -1665,7 +1609,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             // 
             this.xrShape1.LocationFloat = new DevExpress.Utils.PointFloat(1.000046F, 1.999987F);
             this.xrShape1.Name = "xrShape1";
-            this.xrShape1.Shape = shapeLine69;
+            this.xrShape1.Shape = shapeLine65;
             this.xrShape1.SizeF = new System.Drawing.SizeF(2F, 28.00001F);
             // 
             // xrLine3
@@ -1713,32 +1657,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel13.StylePriority.UseForeColor = false;
             this.xrLabel13.Text = "客戶名稱";
             // 
-            // xrLabel19
-            // 
-            this.xrLabel19.Font = new System.Drawing.Font("新細明體", 10F, System.Drawing.FontStyle.Bold);
-            this.xrLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(524F, 40F);
-            this.xrLabel19.Name = "xrLabel19";
-            this.xrLabel19.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel19.SizeF = new System.Drawing.SizeF(61.04F, 14F);
-            this.xrLabel19.StyleName = "FieldCaption";
-            this.xrLabel19.StylePriority.UseFont = false;
-            this.xrLabel19.StylePriority.UseForeColor = false;
-            this.xrLabel19.Text = "GATE IP";
-            // 
-            // xrLabel20
-            // 
-            this.xrLabel20.Font = new System.Drawing.Font("標楷體", 8F, System.Drawing.FontStyle.Bold);
-            this.xrLabel20.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(290F, 40F);
-            this.xrLabel20.Name = "xrLabel20";
-            this.xrLabel20.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel20.SizeF = new System.Drawing.SizeF(60F, 14F);
-            this.xrLabel20.StyleName = "FieldCaption";
-            this.xrLabel20.StylePriority.UseFont = false;
-            this.xrLabel20.StylePriority.UseForeColor = false;
-            this.xrLabel20.Text = "IDSLAMIP";
-            // 
             // xrLabel22
             // 
             this.xrLabel22.Font = new System.Drawing.Font("標楷體", 10F, System.Drawing.FontStyle.Bold);
@@ -1755,14 +1673,13 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             // xrLabel36
             // 
             this.xrLabel36.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.CODENC")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.CASEKIND")});
             this.xrLabel36.Font = new System.Drawing.Font("標楷體", 10F);
             this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(78.00001F, 98.17F);
             this.xrLabel36.Name = "xrLabel36";
             this.xrLabel36.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel36.SizeF = new System.Drawing.SizeF(207.9999F, 18F);
             this.xrLabel36.StylePriority.UseFont = false;
-            this.xrLabel36.Text = "xrLabel36";
             // 
             // xrLabel37
             // 
@@ -1834,29 +1751,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel48.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel48.SizeF = new System.Drawing.SizeF(120.0414F, 17F);
             this.xrLabel48.StylePriority.UseFont = false;
-            // 
-            // xrLabel51
-            // 
-            this.xrLabel51.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.gateway")});
-            this.xrLabel51.Font = new System.Drawing.Font("標楷體", 10F);
-            this.xrLabel51.LocationFloat = new DevExpress.Utils.PointFloat(600.96F, 39.99999F);
-            this.xrLabel51.Name = "xrLabel51";
-            this.xrLabel51.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel51.SizeF = new System.Drawing.SizeF(116.0402F, 14F);
-            this.xrLabel51.StylePriority.UseFont = false;
-            // 
-            // xrLabel52
-            // 
-            this.xrLabel52.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.IDSLAMIP")});
-            this.xrLabel52.Font = new System.Drawing.Font("標楷體", 10F);
-            this.xrLabel52.LocationFloat = new DevExpress.Utils.PointFloat(358.0416F, 39.99999F);
-            this.xrLabel52.Name = "xrLabel52";
-            this.xrLabel52.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel52.SizeF = new System.Drawing.SizeF(157.9166F, 14F);
-            this.xrLabel52.StylePriority.UseFont = false;
-            this.xrLabel52.Text = "xrLabel52";
             // 
             // xrLabel54
             // 

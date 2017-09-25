@@ -96,6 +96,7 @@ public class RT302R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel4.SizeF = new System.Drawing.SizeF(141.8162F, 18F);
             this.xrLabel4.Text = "xrLabel4";
+            this.xrLabel4.Visible = false;
             // 
             // xrLabel5
             // 
@@ -103,12 +104,13 @@ public class RT302R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel5.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.addr3")});
             this.xrLabel5.Font = new System.Drawing.Font("標楷體", 18F);
-            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(136.3579F, 40.45833F);
+            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(92.60788F, 40.45833F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel5.SizeF = new System.Drawing.SizeF(595.0686F, 23.20833F);
+            this.xrLabel5.SizeF = new System.Drawing.SizeF(784.652F, 23.20833F);
             this.xrLabel5.StylePriority.UseFont = false;
             this.xrLabel5.Text = "xrLabel5";
+            this.xrLabel5.BeforePrint += new System.Drawing.Printing.PrintEventHandler(this.xrLabel5_BeforePrint);
             // 
             // xrLabel6
             // 
@@ -221,5 +223,10 @@ public class RT302R : DevExpress.XtraReports.UI.XtraReport
     private void xrLabel6_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
     {
         xrLabel6.Text = xrLabel6.Text + "  先生/女士 收";
+    }
+
+    private void xrLabel5_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+    {
+        xrLabel5.Text = xrLabel4.Text + " " + xrLabel5.Text;
     }
 }

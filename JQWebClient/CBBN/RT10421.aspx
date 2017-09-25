@@ -25,18 +25,27 @@
                 var sWhere = "CUSID='" + CUSID + "' AND PRTNO = '" + PRTNO + "'";
                 $("#dataGridView").datagrid('setWhere', sWhere);
                 $("#dataGridView").datagrid("selectRow", 0);
-                setTimeout(function () {
-                    if (sMODE == 'I') {
-                        openForm('#JQDialog1', $('#dataGridView').datagrid('getSelected'), "inserted", 'Dialog');
-                    }
-                    else
-                    if (sMODE == 'E') {
-                        openForm('#JQDialog1', $('#dataGridView').datagrid('getSelected'), "updated", 'Dialog');
-                    }
-                }, 500);
+                
                 flag = false;
             }
             flag = false;
+        }
+
+        function Selected()
+        {
+            setTimeout(function () {
+                if (sMODE == 'I') {
+                    openForm('#JQDialog1', $('#dataGridView').datagrid('getSelected'), "inserted", 'Dialog');
+                }
+                else
+                    if (sMODE == 'E') {
+                        openForm('#JQDialog1', $('#dataGridView').datagrid('getSelected'), "updated", 'Dialog');
+                    }
+                    else
+                        if (sMODE == 'V') {
+                            openForm('#JQDialog1', $('#dataGridView').datagrid('getSelected'), "viewed", 'Dialog');
+                        }
+            }, 500);
         }
        
         
@@ -54,7 +63,7 @@
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
             <JQTools:JQDataGrid ID="dataGridView" data-options="pagination:true,view:commandview" RemoteName="sRT1042.RTLessorAVSCustSndwork" runat="server" AutoApply="True"
                 DataMember="RTLessorAVSCustSndwork" Pagination="True" QueryTitle="Query" EditDialogID="JQDialog1"
-                Title="用戶裝機派工單資料維護" AllowAdd="False" AlwaysClose="True" OnDeleted="CloseTab" OnUpdated="CloseTab" OnLoadSuccess="dgOnloadSuccess" AllowDelete="True" AllowUpdate="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
+                Title="用戶裝機派工單資料維護" AllowAdd="False" AlwaysClose="True" OnDeleted="CloseTab" OnUpdated="CloseTab" OnLoadSuccess="dgOnloadSuccess" AllowDelete="True" AllowUpdate="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True" OnSelect="Selected">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="用戶" Editor="text" FieldName="CUSID" Format="" MaxLength="15" Visible="true" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="派工單號" Editor="text" FieldName="PRTNO" Format="" MaxLength="12" Visible="true" Width="120" />
