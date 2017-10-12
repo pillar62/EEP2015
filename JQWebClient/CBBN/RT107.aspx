@@ -76,6 +76,41 @@
 
             flag = false;
         }
+
+        /*
+        function queryGrid(dg) { //查詢后添加固定條件
+            if ($(dg).attr('id') == 'dataGridView') {
+                var where = $(dg).datagrid('getWhere');
+                alert(where);
+                if (where != "") {
+                    where = " 1=1 ";
+
+                    COMN = $("#COMN_Query").val(); //社區名稱
+                    CUSNC = $("#CUSNC_Query").val(); //客戶名稱
+                    MOBILE = $("#MOBILE_Query").val(); //行動電話
+                    RADDR2 = $("#RADDR2_Query").val(); //地址
+                    SOCIALID = $("#SOCIALID_Query").val(); //身分證號
+                    CONTACTTEL = $("#CONTACTTEL_Query").val(); //市內電話
+                    QQ = $("#A.QQ_Query").val(); //市內電話
+
+                    if (COMN != "")
+                        where = where + " and B.COMN like '%" + COMN + "%'";
+                    if (RADDR2 != "")
+                        where = where + " and A.RADDR2 like '%" + RADDR2 + "%'";
+                   
+                    if (MOBILE != "")
+                        where = where + " and A.MOBILE LIKE '%" + MOBILE + "%'";
+                    if (SOCIALID != "")
+                        where = where + " and A.SOCIALID LIKE '%" + SOCIALID + "%'";
+                    if (CONTACTTEL != "")
+                        where = where + " and A.CONTACTTEL LIKE '%" + CONTACTTEL + "%'";
+
+                }
+                $(dg).datagrid('setWhere', where);
+                $('#dataGridView').datagrid('reload');
+            }
+        }*/
+
         function FilterTown1(val) {
             try {
                 $('#dataFormMasterTOWNSHIP1').combobox('setValue', "");
@@ -162,12 +197,12 @@
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="客訴處理" Visible="True" OnClick="btn1Click" Icon="icon-view" />
                 </TooItems>
                 <QueryColumns>
-                    <JQTools:JQQueryColumn AndOr="and" Caption="社區名稱" Condition="%" DataType="string" Editor="text" FieldName="COMN" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="客戶名稱" Condition="%" DataType="string" Editor="text" FieldName="CUSNC" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="連絡手機" Condition="%" DataType="string" Editor="text" FieldName="MOBILE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="住戶地址" Condition="%%" DataType="string" Editor="text" FieldName="RADDR2" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="身份證號" Condition="%" DataType="string" Editor="text" FieldName="SOCIALID" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="連絡電話" Condition="%" DataType="string" Editor="text" FieldName="CONTACTTEL" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="社區名稱" Condition="%" DataType="string" Editor="text" FieldName="B.COMN" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="客戶名稱" Condition="%" DataType="string" Editor="text" FieldName="A.CUSNC" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="連絡手機" Condition="%" DataType="string" Editor="text" FieldName="A.MOBILE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="住戶地址" Condition="%%" DataType="string" Editor="text" FieldName="A.RADDR2" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="身份證號" Condition="%" DataType="string" Editor="text" FieldName="A.SOCIALID" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="連絡電話" Condition="%" DataType="string" Editor="text" FieldName="A.CONTACTTEL" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                 </QueryColumns>
             </JQTools:JQDataGrid>
 

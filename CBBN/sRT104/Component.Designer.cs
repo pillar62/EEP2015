@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             Srvtools.Service service1 = new Srvtools.Service();
             Srvtools.Service service2 = new Srvtools.Service();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Component));
             Srvtools.KeyItem keyItem1 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem2 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem3 = new Srvtools.KeyItem();
@@ -227,7 +228,6 @@
             Srvtools.KeyItem keyItem10 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem11 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem12 = new Srvtools.KeyItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Component));
             Srvtools.KeyItem keyItem13 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem14 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem15 = new Srvtools.KeyItem();
@@ -310,8 +310,7 @@
             // RTLessorAVSCust
             // 
             this.RTLessorAVSCust.CacheConnection = false;
-            this.RTLessorAVSCust.CommandText = "SELECT A.*, B.COMN\r\nFROM RTLessorAVSCust A\r\nLEFT JOIN RTLessorAVSCmtyH B ON B.COM" +
-    "Q1=A.COMQ1 \r\norder by A.IP11";
+            this.RTLessorAVSCust.CommandText = resources.GetString("RTLessorAVSCust.CommandText");
             this.RTLessorAVSCust.CommandTimeout = 30;
             this.RTLessorAVSCust.CommandType = System.Data.CommandType.Text;
             this.RTLessorAVSCust.DynamicTableName = false;
