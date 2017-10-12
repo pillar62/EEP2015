@@ -61,7 +61,9 @@
         function btn6Click(val) {
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var ss = row.CUSID;
-            parent.addTab("用戶客服單資料維護", "CBBN/RT1047.aspx?CUSID=" + ss);
+            var comq1 = row.COMQ1;
+            var linq1 = row.LINEQ1;
+            parent.addTab("用戶客服單資料維護", "CBBN/RT205.aspx?cusid=" + ss+"&comq1="+comq1+"&lineq1="+linq1+"&comtype=7");
         }
 
         function btn7Click(val) {
@@ -257,7 +259,7 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="地址" Editor="text" FieldName="RADDR2" Format="" MaxLength="60" Visible="true" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="連絡手機" Editor="text" FieldName="MOBILE" Format="" MaxLength="30" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="方案" Editor="inforefval" FieldName="CASEKIND" Format="" MaxLength="2" Visible="true" Width="120" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.View_RTCode',tableName:'View_RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'O9'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'CODE',textFieldCaption:'CODENC',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="IP(XXX.xxx.xxx.xxx)" Editor="text" FieldName="IP11" Format="" MaxLength="3" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="IP(XXX.xxx.xxx.xxx)" Editor="text" FieldName="IP11" Format="" MaxLength="3" Visible="true" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="用戶申請日" Editor="datebox" FieldName="APPLYDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="完工日" Editor="datebox" FieldName="FINISHDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="報竣日" Editor="datebox" FieldName="DOCKETDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
@@ -364,8 +366,8 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="保證金收據列印日" Editor="datebox" FieldName="GTPRTDAT" Format="yyyy/mm/dd" Width="200" EditorOptions="" />
                         <JQTools:JQFormColumn Alignment="left" Caption="保證金" Editor="numberbox" FieldName="GTMONEY" Format="" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="保證金退還日期" Editor="datebox" FieldName="GTREPAYDAT" Format="yyyy/mm/dd" Width="200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="IP(XXX.xxx.xxx.xxx)" Editor="text" FieldName="IP11" Format="" maxlength="3" Width="200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="用戶CPE Mac Address" Editor="text" FieldName="MAC" Format="" maxlength="12" Width="200" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="IP(XXX.xxx.xxx.xxx)" Editor="text" FieldName="IP11" Format="" maxlength="20" Width="200" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="用戶CPE Mac Address" Editor="text" FieldName="MAC" Format="" maxlength="12" Width="200" Visible="False" />
                         <JQTools:JQFormColumn Alignment="left" Caption="完工日" Editor="datebox" FieldName="FINISHDAT" Format="yyyy/mm/dd" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="報竣日" Editor="datebox" FieldName="DOCKETDAT" Format="yyyy/mm/dd" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="開始計費日" Editor="datebox" FieldName="STRBILLINGDAT" Format="yyyy/mm/dd" Width="200" />

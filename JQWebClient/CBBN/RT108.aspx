@@ -27,27 +27,29 @@
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
             <JQTools:JQDataGrid ID="dataGridView" data-options="pagination:true,view:commandview" RemoteName="sRT108.RT108" runat="server" AutoApply="True"
                 DataMember="RT108" Pagination="True" QueryTitle="查詢條件" EditDialogID="JQDialog1"
-                Title="社區資料查詢" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Panel" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
+                Title="社區資料查詢" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Panel" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="True">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="right" Caption="社區" Editor="numberbox" FieldName="COMQ1" Format="" Visible="False" Width="120" />
                     <JQTools:JQGridColumn Alignment="right" Caption="主線" Editor="numberbox" FieldName="LINEQ1" Format="" Visible="True" Width="40" />
                     <JQTools:JQGridColumn Alignment="left" Caption="個案別" Editor="text" FieldName="COMTYPE" Format="" MaxLength="30" Visible="False" Width="120" />
                     <JQTools:JQGridColumn Alignment="right" Caption="COMQ11" Editor="numberbox" FieldName="COMQ11" Format="" Visible="False" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="社區名稱" Editor="text" FieldName="COMN" Format="" MaxLength="100" Visible="true" Width="160" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="社區附掛" Editor="text" FieldName="LINETEL" Format="" MaxLength="20" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="主線IP" Editor="text" FieldName="IPADDR" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="社區附掛" Editor="text" FieldName="LINETEL" Format="" MaxLength="20" Visible="False" Width="80" />
                     <JQTools:JQGridColumn Alignment="right" Caption="規模戶數" Editor="numberbox" FieldName="COMCNT" Format="" Visible="true" Width="64" />
-                    <JQTools:JQGridColumn Alignment="right" Caption="用戶數" Editor="numberbox" FieldName="USERCNT" Format="" Visible="true" Width="50" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="用戶數" Editor="numberbox" FieldName="USERCNT" Format="" Visible="False" Width="50" />
                     <JQTools:JQGridColumn Alignment="left" Caption="方案別" Editor="text" FieldName="COMTYPENM" Format="" MaxLength="0" Visible="true" Width="80" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="開通日" Editor="datebox" FieldName="T1APPLYDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="撤線日" Editor="text" FieldName="RCOMDROP" Format="yyyy/mm/dd" MaxLength="20" Visible="true" Width="80" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="CANCELDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="開通日" Editor="datebox" FieldName="T1APPLYDAT" Format="yyyy/mm/dd" MaxLength="0" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="撤線日" Editor="text" FieldName="RCOMDROP" Format="yyyy/mm/dd" Visible="true" Width="80" MaxLength="20" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="CANCELDAT" Format="yyyy/mm/dd" MaxLength="0" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="經銷商" Editor="text" FieldName="GROUPNC" Format="" MaxLength="30" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="工程師" Editor="text" FieldName="LEADER" Format="" MaxLength="30" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="建置書" Editor="text" FieldName="COMAGREE" Format="" MaxLength="30" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="Reset電話" Editor="text" FieldName="TEL" Format="" MaxLength="0" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="整線派工" Editor="text" FieldName="YN_01" Format="" MaxLength="0" Visible="true" Width="64" />
                     <JQTools:JQGridColumn Alignment="left" Caption="整線完成" Editor="text" FieldName="YN_02" Format="" MaxLength="0" Visible="true" Width="64" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="審核完成" Editor="text" FieldName="YN_03" Format="" MaxLength="0" Visible="true" Width="64" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="審核完成" Editor="text" FieldName="YN_03" Format="" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="64">
+                    </JQTools:JQGridColumn>
                 </Columns>
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton"
@@ -57,7 +59,7 @@
                     <JQTools:JQToolItem Icon="icon-undo" ItemType="easyui-linkbutton" OnClick="cancel"
                         Text="取消"  />
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
-                        OnClick="openQuery" Text="查詢" />
+                        OnClick="openQuery" Text="查詢" Visible="False" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btnRT107Click" Text="客戶" Visible="True" Icon="icon-view" />
                 </TooItems>
                 <QueryColumns>

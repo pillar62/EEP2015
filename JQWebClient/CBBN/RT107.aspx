@@ -56,9 +56,9 @@
 
         function dgOnloadSuccess() {
             if (flag) {
-                var sWhere = "COMQ1='" + COMQ1 + "'";
+                var sWhere = "A.COMQ1='" + COMQ1 + "'";
                 if (LINEQ1 != "") {
-                    sWhere = sWhere + " AND LINEQ1='" + LINEQ1 + "'"
+                    sWhere = sWhere + " AND A.LINEQ1='" + LINEQ1 + "'"
                 }
                 $('#dataGridView').datagrid('setWhere', sWhere);//篩選資料
             }
@@ -158,19 +158,16 @@
                     <JQTools:JQToolItem Icon="icon-undo" ItemType="easyui-linkbutton" OnClick="cancel"
                         Text="取消" ID="btncancel" />
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
-                        OnClick="openQuery" Text="查詢" />
+                        OnClick="openQuery" Text="查詢" Visible="False" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="客訴處理" Visible="True" OnClick="btn1Click" Icon="icon-view" />
                 </TooItems>
                 <QueryColumns>
-                    <JQTools:JQQueryColumn AndOr="and" Caption="客戶代號" Condition="%" DataType="string" Editor="text" FieldName="CUSID" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="客戶名" Condition="%" DataType="string" Editor="text" FieldName="CUSNC" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="身份證號" Condition="%" DataType="string" Editor="text" FieldName="SOCIALID" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="繳費週期" Condition="=" DataType="string" Editor="inforefval" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M8'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代碼',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="PAYCYCLE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="繳費方式" Condition="=" DataType="string" Editor="inforefval" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M9'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="PAYTYPE" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="連絡電話" Condition="%" DataType="string" Editor="text" FieldName="CONTACTTEL" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="社區名稱" Condition="%" DataType="string" Editor="text" FieldName="COMN" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="客戶名稱" Condition="%" DataType="string" Editor="text" FieldName="CUSNC" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="連絡手機" Condition="%" DataType="string" Editor="text" FieldName="MOBILE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="到期日起" Condition="&gt;=" DataType="string" Editor="datebox" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" FieldName="DUEDAT" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="到期日迄" Condition="&lt;=" DataType="string" Editor="datebox" FieldName="DUEDAT" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="住戶地址" Condition="%%" DataType="string" Editor="text" FieldName="RADDR2" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="身份證號" Condition="%" DataType="string" Editor="text" FieldName="SOCIALID" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="連絡電話" Condition="%" DataType="string" Editor="text" FieldName="CONTACTTEL" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                 </QueryColumns>
             </JQTools:JQDataGrid>
 
@@ -234,11 +231,11 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="保證金收據列印人" Editor="text" FieldName="GTPRTUSR" Format="" maxlength="10" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="保證金收據列印日" Editor="datebox" EditorOptions="" FieldName="GTPRTDAT" Format="yyyy/mm/dd" Width="160" />
                         <JQTools:JQFormColumn Alignment="left" Caption="保證金" Editor="numberbox" FieldName="GTMONEY" Format="" Width="200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="用戶保管CPE設備" Editor="text" FieldName="GTEQUIP" Format="" maxlength="10" Width="200" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="用戶保管CPE設備" Editor="text" FieldName="GTEQUIP" Format="" maxlength="10" Width="200" Visible="False" />
                         <JQTools:JQFormColumn Alignment="left" Caption="用戶保管STB設備" Editor="text" FieldName="EQUIP" Format="" maxlength="2" Width="200" Visible="False" />
                         <JQTools:JQFormColumn Alignment="left" Caption="保證金退還日期" Editor="datebox" FieldName="GTREPAYDAT" Format="yyyy/mm/dd" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="IP(999.999.999.999)" Editor="text" FieldName="IP11" Format="" maxlength="3" Width="200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="用戶CPE Mac Address" Editor="text" FieldName="MAC" Format="" maxlength="12" Width="200" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="用戶CPE Mac Address" Editor="text" FieldName="MAC" Format="" maxlength="12" Width="200" Visible="False" />
                         <JQTools:JQFormColumn Alignment="left" Caption="完工日" Editor="datebox" FieldName="FINISHDAT" Format="yyyy/mm/dd" maxlength="0" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="報竣日" Editor="datebox" FieldName="DOCKETDAT" Format="yyyy/mm/dd" maxlength="0" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="開始計費日" Editor="datebox" FieldName="STRBILLINGDAT" Format="yyyy/mm/dd" maxlength="0" Width="200" />

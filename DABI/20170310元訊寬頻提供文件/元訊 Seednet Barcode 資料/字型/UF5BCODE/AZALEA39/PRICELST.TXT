@@ -1,0 +1,50 @@
+Azalea Software specializes in quality bar code printing tools for Windows, 
+the Macintosh, and other platforms.  Most of our products are TrueType and 
+Type 1 font collections, and can be used from within any Windows or Macintosh 
+application including database, word processor, and desktop publishing 
+applications.  Using Azalea's products, creating bar codes is as simple as 
+changing fonts.
+
+C128Tools   - makes Code 128 symbols, including Code set A, Code set B, Code
+              set C, and UCC/EAN-13 symbols.  US$149
+
+C39Tools    - creates Code 39 bar codes, the most popular bar code used for
+              ID, inventory, and labels.  Includes Visual Basic and database
+              sample code.  US$149
+
+UPCTools    - creates UPC, Bookland, EAN, and JAN symbols.  These are the bar 
+              codes that get scanned at the retail check out line.  US$149
+
+POSTools    - for the POSTNET bar codes used on US mail.  US$99
+
+I2of5Tools  - creates Interleaved 2 of 5 symbols.  US$99
+
+2 of 5      - creates non-interleaved 2 of 5 symbols.  US$99
+
+MSI-Plessey - US$99
+
+Codabar     - US$99
+
+OCR-A/OCR-B - US$99
+
+
+We accept MasterCard and VISA, and can deliver your product via email.  Site 
+licenses and quantity discounts are available.  We license our fonts so that 
+other developers can distribute them along with their own applications.  
+Custom development work is also available.
+
+Need to learn more about bar codes in general?  Read BARCODES.FAQ (Frequently 
+Asked Questions), an online publication that we publish on the Internet.
+
+Azalea Software also publishes Azalea UPC-EAN Barcodes XTension (US$129), a 
+Mac QuarkXPress add-on which creates bar codes as EPS files directly in 
+QuarkXPress.  Our XTension is available exclusively through XChange, 
+800 788 7557, 303 225 2484; in the UK, 011 44 171 637 2966; and in France, 
+33 146 227 900.
+
+
+Azalea Software, Inc.
+==============================================================================
+PO Box 16745                           800 48-ASOFT               206 932.6028
+Seattle WA  98116-0745  USA          206 937.5919 FAX        azalea@azalea.com
+

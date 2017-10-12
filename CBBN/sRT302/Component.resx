@@ -181,16 +181,16 @@ and 	b.DROPDAT is null and b.CANCELDAT is null </value>
   <metadata name="cmdRT3021.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>382, 347</value>
   </metadata>
-  <metadata name="infoParameter1.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="infoParameter5.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="infoParameter2.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="infoParameter6.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="infoParameter3.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="infoParameter7.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="infoParameter4.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="infoParameter8.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="cmdRT3022.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -231,16 +231,16 @@ order by a.comq1,a.lineq1,a.cusnc </value>
   <metadata name="cmdRT3023.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>217, 403</value>
   </metadata>
-  <metadata name="infoParameter5.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="infoParameter9.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="infoParameter6.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="infoParameter10.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="infoParameter7.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="infoParameter11.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
-  <metadata name="infoParameter8.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="infoParameter12.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
   <metadata name="RT3028.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -268,10 +268,38 @@ WHERE b.freecode &lt;&gt;'Y'
 ORDER BY d.comn, b.cusnc</value>
   </data>
   <metadata name="RT302R.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>238, 212</value>
+    <value>17, 251</value>
   </metadata>
   <data name="RT302R.CommandText" xml:space="preserve">
     <value>SELECT b.cusnc, b.cusnc + case when len(b.cusnc)&gt;4 then ' 您好！' else ' 先生/女士您好！' end as mydear, a.duedat,d.comn, b.applydat, b.birthday, b.contacttel, b.mobile, b.socialid, b.email, g.codenc, b.rzone3, dateadd(d,1, a.duedat) as newBillingDat,case b.casekind when '01' then '2. 經濟型　　　□季繳(1,197元)　□半年繳(2,100元)　□年繳(4,000元)' when '02' then '2. 專業型　　　□季繳(1,410元)　□半年繳(2,700元)　□年繳(4,800元)' else '' end as payselect, '□' + h.codenc + ' -- ' + g.codenc+'('+ convert(varchar(6), b.rcvmoney) +'元)'  as casepay, isnull(e.cutnc, '')+ b.township2+b.raddr2 as addr2, isnull(f.cutnc, '')+ b.township3+b.raddr3 as addr3 FROM RTLessorAVSCustBillingPrtSub a inner join RTLessorAVSCust b on a.comq1 = b.comq1 and a.lineq1 = b.lineq1 and a.cusid = b.cusid inner join RTLessorAVSCmtyLine c on b.comq1 = c.comq1 and b.lineq1 = c.lineq1 inner join RTLessorAVSCmtyH d on d.comq1 = c.comq1 left outer join RTCounty e on e.cutid = b.cutid2 left outer join RTCounty f on f.cutid = b.cutid3 left outer join RTCode g on g.code = b.paycycle and g.kind ='M8' left outer join RTCode h on h.code = b.casekind and h.kind ='O9' WHERE b.freecode&lt;&gt;'Y'  order by 	d.comn,b.cusnc</value>
+  </data>
+  <metadata name="RT3021R.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>234, 262</value>
+  </metadata>
+  <data name="RT3021R.CommandText" xml:space="preserve">
+    <value>SELECT BATCH, b.cusnc, b.cusnc + case when len(b.cusnc)&gt;4 then ' 您好！' else ' 先生/女士您好！' end as mydear, a.duedat, d.comn, b.applydat, b.birthday, b.contacttel
+, b.mobile, b.socialid, b.email, g.codenc, b.rzone3, dateadd(d,1, a.duedat) as newBillingDat
+, isnull(e.cutnc, '')+ b.township2+b.raddr2 as addr2
+, isnull(f.cutnc, '')+ b.township3+b.raddr3 as addr3 
+, I.CASEPAYD AS P01, I.CSBARCOD1 AS COD11, I.CSBARCOD2 AS COD12, I.CSBARCOD3 AS COD13, dateadd(M, I.QT_MON, a.duedat) AS D1
+, I.CSNOTICEID AS CSNOTICEID01, I.CSCUSID AS CSCUSID01, I.QT_MON AS Q1
+, J.CASEPAYD AS P02, J.CSBARCOD1 AS COD21, J.CSBARCOD2 AS COD22, J.CSBARCOD3 AS COD23, dateadd(M, J.QT_MON, a.duedat) AS D2
+, J.CSNOTICEID AS CSNOTICEID02, J.CSCUSID AS CSCUSID02, J.QT_MON AS Q2
+, K.CASEPAYD AS P03, K.CSBARCOD1 AS COD31, K.CSBARCOD2 AS COD32, K.CSBARCOD3 AS COD33, dateadd(M, K.QT_MON, a.duedat) AS D3
+, K.CSNOTICEID AS CSNOTICEID03, K.CSCUSID AS CSCUSID03, K.QT_MON AS Q3, A.NOTICEID FROM RTLessorAVSCustBillingPrtSub a 
+inner join RTLessorAVSCust b on a.comq1 = b.comq1 and a.lineq1 = b.lineq1 and a.cusid = b.cusid
+inner join RTLessorAVSCmtyLine c on b.comq1 = c.comq1 and b.lineq1 = c.lineq1 
+inner join RTLessorAVSCmtyH d on d.comq1 = c.comq1 
+left outer join RTCounty e on e.cutid = b.cutid2 
+left outer join RTCounty f on f.cutid = b.cutid3 
+left outer join RTCode g on g.code = b.paycycle and g.kind ='M8' 
+left outer join RTCode h on h.code = b.casekind and h.kind ='O9' 
+left outer join V_BARCODE I on i.NOTICEID=a.NOTICEID AND I.ITEMNO=1
+left outer join V_BARCODE J on J.NOTICEID=a.NOTICEID AND J.ITEMNO=2
+left outer join V_BARCODE K on K.NOTICEID=a.NOTICEID AND K.ITEMNO=3
+ WHERE b.freecode&lt;&gt;'Y' 
+order by BATCH
+</value>
   </data>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>

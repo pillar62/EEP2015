@@ -1,0 +1,449 @@
+From: azalea@igc.apc.org (Jerry Whiting)
+Newsgroups: 
+comp.fonts,comp.lang.posts,comp.text.desktop,comp.answers,news.answers
+Subject: Barcodes Frequently Asked Questions (FAQ)
+Followup-To: poster
+Reply-To: azalea@igc.apc.org
+Approved: news-answers-request@MIT.EDU
+Summary: This posting contains an introduction to bar codes and OCR fonts.
+
+Archive-name: barcodes-faq
+Posting-Frequency: bimonthly
+Last-modified: 7.26.95
+Version: 1.6
+Location via anonymous FTP:
+  joule.pcl.ox.ac.uk:/pub/mark
+  rtfm.mit.edu:/pub/usenet/news.answers/barcodes-faq
+
+
+BARCODES FAQ
+copyright 1995 Jerry Whiting
+azalea@igc.apc.org
+
+
+>>> Introduction
+>>> Printing Bar Codes
+>>> UPC, EAN, JAN, Bookland, ISSN
+>>> Code 39
+>>> POSTNET
+>>> Interleaved 2 of 5
+>>> Code 128
+>>> Codabar & MSI-Plessey
+>>> The New 2D Symbologies
+>>> OCR Fonts
+>>> Specifications
+>>> Credits
+
+
+>>> Introduction
+
+I've read many a note on the Net asking about bar codes.  I love to hack bar 
+codes.  In fact, I've been writing bar code software for over five years 
+with no end in sight.  This modest FAQ is a chance to share a bit of my 
+experience while answering some of the reoccurring questions I see posted.
+
+While it will undoubtedly make its way to other places, I will post this FAQ 
+periodically to comp.fonts, comp.lang.posts, comp.text.desktop, comp.answers, 
+news.answers, and put it into the DTPFORUM on CompuServe.
+
+Bar codes are alternating patterns of light and dark that encode 
+specific chunks of information.  When scanned, bar code symbols can be 
+converted back into the original string of text.  Most bar codes consist of 
+patterns of rectangles but some of the newer symbologies use other shapes.
+
+Bar codes are part of the automatic ID industry and are sometimes 
+referred to as "keyless data entry" because they can be used to encode and 
+decode information automatically.  Bar codes can be scanned with little or no 
+error under less than ideal conditions.  In some situations they can even be 
+scanned automatically without human intervention.  Beats typing.
+
+This FAQ will focus on creating and printing bar codes rather than the physics 
+of scanners.  The scanners which read bar codes emit a red laser of a specific 
+frequency that works by distinguishing the edges within a symbol allowing 
+them to be scanned omnidirectionally.  "I'm sensing my own light reflected 
+back at me.  Now there's none.  Ah, there's some more.  No reflection., etc." 
+
+There are two types of scanners: portable readers and those that hook up 
+directly to your computer.  If you have to go to the bar code, you need a 
+portable reader; if the bar code can come to you, consider a scanner that 
+attaches to your PC.  Portable readers hold data in a buffer that can be 
+downloaded into your computer via a cable.  Walk around the warehouse scanning 
+items as you do inventory.  Go back to your desk and download the collected 
+data into your database.  The non-portable readers plug into your keyboard 
+port and the keyboard plugs into them.  With the reader between your keyboard 
+and the computer, the computer assumes you're typing really fast, without any 
+errors.
+
+The firmware in most scanners can decode more than one type of bar code.  Each 
+symbology (type of bar code) has a unique start bar and stop bar at the 
+beginning and end of the symbol, or some other unique pattern that allows the 
+scanner to autodiscriminate between symbologies without human intervention on 
+the fly. Some scanners can scan a pre-printed bar code that will then turn on 
+or off additional capabilities.
+
+In general, each symbology tends to be used by a different industry or within 
+a different vertical market.  In many ways, your decision as to which 
+symbology to use is dictated by what is being bar coded and where it will be 
+used.  Or if you need to encode alphabetic data, some symbologies like UPC or 
+Codabar are out because they only encode numeric data.  Your suppliers or 
+customers may have established conventions or standards that determine the 
+nature and structure of the symbols you can use.  Bar codes may be part of a 
+larger labeling format that dictates what you have to adhere to.  These are 
+issues that need to be determined _before_ you commit to a plan.
+
+Most bar code symbologies employ one or more check digits within them to 
+ensure accuracy and data integrity when scanned.  Others like Interleaved 
+2 of 5 employ other internal methods to guard against misreads.  Human-
+readable characters may be required or optional.
+
+
+>>> Printing Bar Codes
+
+Bar codes can be printed one of two ways: either from within a dedicated 
+bar code labeling programming (often using a thermal transfer printer), or 
+from within your favorite application using bar code fonts or graphic 
+elements.  The former is where the auto ID industry is coming from.  The 
+latter is more flexible and can be integrated into your existing work 
+process.
+
+
+>>> UPC, EAN, JAN, Bookland, ISSN
+
+UPC, EAN, JAN, Bookland, and ISSN bar codes are all related.  (Purists will 
+insist that all are a subset of EAN.) These are the symbols used on items 
+destined to be scanned at the checkout line in retail settings.  All are 
+fixed length symbols that consist of numbers only.  The UPC symbols used in 
+the US are a subset of EAN.  JAN are equivalent to EAN.  Bookland is an EAN-
+13 with a 978 country code and a 5-digit supplemental code.  ISSN is an EAN-
+13 with a 977 country code and a 2-digit supplemental code.
+
+UPC (Uniform Product Code) bar codes are the symbols that get scanned at 
+the checkout line at the grocery store.  Contrary to popular belief, they 
+do not include the price of the item.  There are four parts to a UPC 
+symbol:
+ - the number system, a single digit in the lower left corner
+ - a 5-digit manufacturer number assigned by the Uniform Code Council in 
+   the left hand notch
+ - a 5-digit product number assigned by the manufacturer that uniquely
+   identifies each product in the right hand notch
+ - a check digit found in the lower right corner.
+
+When a bar of soap gets scanned, the numbers in the UPC symbol are a 
+pointer into the inventory database in the back room of the store.  This is 
+how the cash register display and the printed receipt know what item you 
+bought and how much it costs.  Price changes involve changing the central 
+database.  (Otherwise a price change would require a new bar code on each 
+affected item.)
+
+UPC symbols are numeric-only, are of a fixed length, mandatory in the 
+retail channel, and not used anywhere else (for the most part).  There are 
+two flavors of UPC symbols: UPC version A and UPC version E.  The former 
+is the full length symbol and the latter is a narrower, zero-suppressed 
+version.  Version E symbols are used where space is at a premium (such as on 
+a small package label).
+
+An optional 2- or 5-digit supplemental code is sometimes used with UPC 
+symbols.  Supplemental codes appear to the right of the main symbol and have 
+the human-readable digits above the bars.  For instance, a 2-digit 
+supplemental code is used for the issue date on a magazine cover.
+
+EAN (European Article Number) and JAN (Japanese Article Number) symbols 
+are used on retail items in Europe, Japan, and other non-US parts of the 
+world.  There are two flavors of EAN/JAN symbols: EAN-8/JAN-8 and EAN-
+13/JAN-13.  EAN symbols include a two-digit country code which reflects 
+the origin of a product.
+
+Bookland bar codes are based on ISBN numbers and are used on book 
+covers.  They are sometimes referred to as ISBN bar codes, howerver this is an 
+inaccurate description.  Bookland symbols are EAN-13 bar codes, with a 978 
+country code and a five-digit supplemental code based on the book's retail 
+price.  The supplemental code begins with "5" in the US, "6" in Canada, etc.   
+The price is represented by the second through fifth digits.  If the retail 
+price is less than four digits, it's padded with leading 0's.  Therefore a 
+book that costs $4.99 would have a supplemental code of 50499.
+
+ISSN bar codes are based on the ISSN number and are used on periodicals 
+outside of the US.  These are EAN-13 bar codes, with a 977 country code, and 
+include a 2-digit supplemental code which represents the issue date (01 for 
+January, 02 for February, etc.).
+
+The human-readable characaters found under UPC, EAN, JAN, Bookland, and ISSN 
+symbols are created using the OCR-B font.  The ISBN number itself is usually 
+created in OCR-A.
+
+
+>>> Code 39
+
+Code 39 (a.k.a. Code 3 of 9) is by far the most popular bar code 
+symbology used for ID, inventory, and tracking purposes.  For instance, 
+when you rent a videotape, it's a Code 39 symbol that gets scanned at the 
+check out counter.
+
+Code 39 has several advantages:
+ - it can be read by all popular scanners
+ - its standard character set includes both uppercase letters and numbers
+ - the string the symbol represents can be of variable length
+ - a check digit is rarely used (but available if you need it)
+ - it can be printed in a wide variety of sizes and dimensions.
+
+The Code 39 character set is: A-Z (uppercase), 0-9, $, %, +, -, ., /, 
+the space character, and the asterisk (reserved for the start and stop 
+bars).  The full 128 lower ASCII characters can be represented by 
+combining two characters.  For instance "a" is represented by "+A".  
+There is an optional check digit that can be used with Code 39 where 
+data integrity is imperative.  (The health industry is one of the few 
+places where the Code 39 check digit is used.)
+
+The exact dimensions and aspect ratio of a Code 39 symbol's element can 
+vary depending on space requirements, the printing method used, and the 
+size of the desired symbol.  The only requirement for converting a string 
+into a Code 39 symbol is to add an asterisk (*) at the beginning and the end 
+of the string as the start and stop bar.  So to encode "FREEJAZZ" you 
+would format "*FREEJAZZ*" in Code 39 and it would yield "FREEJAZZ" when 
+scanned.
+
+Each character has a total of nine elements (bars and spaces) called 
+modules, of which 3 of the 9 are wide (hence the name Code 3 of 9).  The 
+wide element to narrow element ratio can be between 2:1 and 3:1.  Some 
+industry-specific specifications demand a 2.2:1 ratio for smaller symbols.
+
+Code 39 symbols can be recognized by their distinctive start and stop 
+bars, represented by an asterisk (*).  The pattern of the asterisk is 
+narrow bar, wide space, narrow bar, narrow space, wide bar, narrow 
+space, wide bar, narrow space, narrow bar.
+
+   |X|   |X| |XXX| |XXX| |X|
+   |X|   |X| |XXX| |XXX| |X|
+   |X|   |X| |XXX| |XXX| |X|
+   |X|   |X| |XXX| |XXX| |X|
+   |X|   |X| |XXX| |XXX| |X|
+   |X|   |X| |XXX| |XXX| |X|
+   |X|   |X| |XXX| |XXX| |X|
+   |X|   |X| |XXX| |XXX| |X|
+
+[Note that the above sample illustration must be viewed in a monospaced 
+font like Courier in order to make any sense.  This is simply a limitation 
+of using only ASCII text to do graphic images.]
+
+
+>>> POSTNET
+
+POSTNET bar codes are the bar code symbols used to encode ZIP codes on 
+US mail.  The Postal Service mail handling process is designed to be 
+fully automated and POSTNET bar codes are the glyphs that feed the 
+automated equipment.  Properly addressed pre-bar coded mail is the key to 
+routing mail.  Ideally every mail piece that enters the flow should be bar 
+coded.
+
+POSTNET symbols are different from other symbologies because the 
+individual bar height alternates rather than the bar width.  Each 
+number is represented by a pattern of five bars.  A single tall bar is 
+used for the start and stop bars.
+
+  || |  |  |    ||   || ||   | | |
+  ||||||||||||||||||||||||||||||||
+
+[Note that the above sample illustration must be viewed in a monospaced 
+font like Courier in order to make any sense.  This is simply a limitation 
+of using only ASCII text to do graphic images.]
+
+Each symbol includes a check digit defined as the single digit that must 
+be added to the sum of all the digits to make the total the next 
+multiple of 10.  For example, 98116's check digit is 5 because:
+  9+8+1+1+6=25 and 25 + 5 = 30.
+
+POSTNET can be used for 5-digit, 9-digit ZIP+4, and the new 11-digit 
+Delivery Point Barcode.  They are often used in conjunction with one of 
+the three FIM bars (Facing Identification Marks) which are found on the 
+upper right corner of a mail piece like Business Reply Mail.
+
+
+>>> Interleaved 2 of 5
+
+Interleaved 2 of 5 is one of the most popular symbologies used by the 
+shipping and warehouse industries.  It is also used in the medical field.  
+Interleaved 2 of 5 is unique because the widths of both the spaces and of 
+the bars vary.  The bars and spaces are interleaved: the odd-numbered digits 
+are represented by the bars and the even-number ones by the spaces.  One 
+strong advantage of Interleaved 2 of 5 is that it is very compact given, 
+that the spaces encode information too.
+
+To find a sample of Interleaved 2 of 5, check out the corrugated boxes 
+in which things are shipped to the grocery store.  The bar codes are often 
+located within bearer bars, creating a 1/4" frame around the bar code itself.
+
+
+>>> Code 128
+
+Code 128 is a symbology used in the shipping industry and on labels.  
+Code 128 is becoming more and more popular, especially in Europe.  There are 
+four different versions of Code 128: code set A, code set B, code set C, and 
+UCC/EAN-128.  Code 128 is very, very compact and results in a denser symbol 
+than Code 39.
+
+Code set A includes 0-9, A-Z upper case, and the ASCII control characters.
+Code set B includes 0-9 and A-Z, both upper case and lower case.
+Code set C encodes pairs of numbers, 00-99, yielding dense symbols.
+UCC/EAN-128 symbols have a specific format and are used for shipping container 
+codes.
+
+One way to recognize a Code 128 symbol is by looking for its distinctive stop 
+bar.  The pattern of the stop bar is bar2, space3, bar3, space1, bar1, space1, 
+bar2.
+
+   |XX|   |XXX| |X| |XX|
+   |XX|   |XXX| |X| |XX|
+   |XX|   |XXX| |X| |XX|
+   |XX|   |XXX| |X| |XX|
+   |XX|   |XXX| |X| |XX|
+   |XX|   |XXX| |X| |XX|
+   |XX|   |XXX| |X| |XX|
+   |XX|   |XXX| |X| |XX|
+
+[Note that the above sample illustration must be viewed in a monospaced 
+font like Courier in order to make any sense.  This is simply a limitation 
+of using only ASCII text to do graphic images.]
+
+
+>>> Code 93
+
+Code 93 is a compact alphanumeric symbology that is a complement to Code 
+39.  The two can be mixed within an environment.  Scanners are able to 
+autodiscriminate without human intervention.  Because of its small size it 
+is used on small electronic components.  Code 93 is not a very popular 
+bar code symbology.
+
+
+>>> Codabar & MSI-Plessey
+
+Codabar is a numeric symbology used in libraries and medical settings.  One 
+distinct feature of Codabar is that it has four different start and stop 
+bars, the selection of which you use can encode information as well as the 
+decoded string.
+
+MSI-Plessey is another numeric symbology used in libraries.
+
+
+>>> The New 2D Symbologies
+
+There is a new generation of extremely high-density, non-linear symbologies 
+that are called 2D (two dimensional) symbologies.  Some look like multiple 
+lines of bar codes stacked on top of each other, and others resemble a 
+honeycomb-like matrix.  While symbologies such as 16K, PDF417, and Code 1 are 
+being advocated by various groups, the jury is still out as to which of these 
+new symbologies will win wide acceptance.
+
+Now that PDF417's specification has been officially put into the public 
+domain, it appears that it will be the winner.  There is an ANSI committee 
+about to soldify 2D standards.  PDF417 and Maxicode are going to get the nod.
+
+One thing that PDF417 advocates point out is that because this symbology 
+encodes approximately 1100 bytes of information, it really is a portable 
+data file (PDF), as opposed to being a record index or that points back 
+into an external database.  Using PDF417, one can put a summary of your 
+driving record on the back of your drivers license or a photo of you in JPEG 
+format as the Pentagon is doing.
+
+
+>>> OCR Fonts
+
+Three related symbologies bear mentioning.  Three OCR (Optical Character 
+Recognition) fonts are in widespread use.
+
+OCR-A is used on book covers to format the ISBN number itself.  OCR-B is used 
+for the human readable digits under UPC, EAN, JAN, Bookland, and ISSN bar 
+codes.  It's also used for the optional human-readable digits used with Code 
+39 and Interleaved 2 of 5 symbols.
+
+MICR (Magnetic Ink Character Recognition) is the font used for the 
+numbers in the lower left corner of your checks.  When printed with a 
+special magnetic ink or toner, they can be scanned by the bank's check 
+processing machines.
+
+
+>>> Specifications
+
+To get a manufacturer number assigned to you or for more information 
+about UPC symbols, contact:
+  Uniform Code Council, Inc.
+  8163 Old Yankee Rd. Ste J
+  Dayton OH  45458
+  513 435.3870
+  513 435.4749 FAX
+
+For information on EAN symbols, contact:
+  International Article Numbering Association (EAN)
+  Rue Royale 29
+  B-1000 Bruxelles
+  Belgium
+  011 32 22 18 76 74
+  011 32 22 18 75 85 FAX
+
+For information on JAN symbols, contact:
+  Japanese Standards Association
+  1-24, Akasaka 4, Minato-ku
+  Tokyo  107  Japan
+
+To get an ISBN number for a book assigned to you, contact:
+  ISBN Agency
+  121 Chanlon Rd
+  New Providence NJ  07974
+  908 665.6770
+
+To get an ISSN number for a periodical assigned to you, contact:
+  National Serials Data Program
+  Library of Congress
+  Washington, D.C. 20540
+  202 707-6452
+  
+  ISSN Canada
+  National Library of Canada
+  395 Wellington Street
+  Ottawa, Ontario
+  K1A 0N4
+
+  Publishers outside the U.S. should contact their country's national
+  library for information about ISSN.
+
+
+For specifications on other bar codes, contact:
+  AIM USA
+  634 Alpha Dr.
+  Pittsburgh PA  15238-2802
+  412 963.8588
+  800 338.0206
+  412 963.8753 FAX
+
+  ANSI
+  11 West 42nd St
+  New York NY  10036
+  212 642.4900
+  212 302.1286 FAX
+
+
+>>> Credits
+
+Let's get one thing straight: I own Azalea Software, Inc., a bar code 
+software company.  FLAME>NUL if you must.  While I sell bar code tools for 
+a living, I'm just as happy to tell you who my competitors are as I am 
+to sell you my own stuff.
+
+Azalea Software specializes in quality bar code printing tools.  We sell 
+fonts and utilities for Windows, the Macintosh, and other platforms.  
+Azalea also does custom software development.  WE LOVE TO HACK BAR CODES!
+
+Many thanks to Brenda Lee Morris for editing, ILean and Scotty for all 
+their help, and Eric Bear Albright for the extra set of eyes.
+
+
+Jerry Whiting
+
+Azalea Software, Inc.
+PO Box 16745 Seattle WA  98116-0745
+
+1.206.932.4030
+1.206.937.5919 FAX
+
+azalea@igc.apc.org
+
+Look for our new Web site, coming soon:  WWW.AZALEA.COM

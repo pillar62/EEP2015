@@ -48,8 +48,7 @@
                 //查詢出該用戶的資料
                 if (sMODE != ""){
                     if (sMODE != 'I') {
-                        var sWhere = " A.caseno='" + caseno + "'";
-                        alert(caseno);
+                        var sWhere = " caseno='" + caseno + "'";
                         $("#dataGridView").datagrid('setWhere', sWhere);
                     }
                     $("#dataGridView").datagrid("selectRow", 0);
@@ -58,12 +57,10 @@
                 {
 
                 }
-                alert("2");
                 flag = false;
             }
             else
             {
-                alert("1");
             }
             flag = false;
         }

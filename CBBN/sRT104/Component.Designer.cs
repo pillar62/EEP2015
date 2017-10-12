@@ -310,7 +310,8 @@
             // RTLessorAVSCust
             // 
             this.RTLessorAVSCust.CacheConnection = false;
-            this.RTLessorAVSCust.CommandText = "SELECT dbo.[RTLessorAVSCust].* FROM dbo.[RTLessorAVSCust]";
+            this.RTLessorAVSCust.CommandText = "SELECT A.*, B.COMN\r\nFROM RTLessorAVSCust A\r\nLEFT JOIN RTLessorAVSCmtyH B ON B.COM" +
+    "Q1=A.COMQ1 \r\norder by A.IP11";
             this.RTLessorAVSCust.CommandTimeout = 30;
             this.RTLessorAVSCust.CommandType = System.Data.CommandType.Text;
             this.RTLessorAVSCust.DynamicTableName = false;
