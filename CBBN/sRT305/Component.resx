@@ -118,35 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="serviceManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 173</value>
-  </metadata>
-  <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 134</value>
   </metadata>
+  <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 212</value>
+  </metadata>
   <metadata name="HBAdslCmtyCust.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
+    <value>17, 173</value>
   </metadata>
   <metadata name="ucHBAdslCmtyCust.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>17, 95</value>
   </metadata>
   <metadata name="View_HBAdslCmtyCust.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>631, 17</value>
+    <value>17, 56</value>
   </metadata>
   <metadata name="cmRT305.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>168, 173</value>
   </metadata>
   <data name="cmRT305.CommandText" xml:space="preserve">
-    <value>SELECT HBADSLCMTYcust.comtype, HBADSLCMTYcust.comq1, HBADSLCMTYcust.lineq1, HBADSLCMTYcust.cusid, HBADSLCMTYcust.entryno,
-HBADSLCMTYcust.comn, HBADSLCMTYcust.cusnc, HBADSLCMTYcust.entryno AS Expr1,HBADSLCMTYcust.comtypenc, 
-HBADSLCMTYcust.rcvdat, HBADSLCMTYcust.finishdat, HBADSLCMTYcust.docketdat, HBADSLCMTYcust.dropdat, HBADSLCMTYcust.canceldat, HBADSLCMTYcust.RADDR, 
-SUM(CASE WHEN RTFaqM.CASENO IS NOT NULL THEN 1 ELSE 0 END) as CASENO, SUM(CASE WHEN RTFaqM.CASENO IS NOT NULL and RTFaqM.closedat IS NULL THEN 1 ELSE 0 END) as yn_close
-FROM HBADSLCMTYcust LEFT OUTER JOIN RTFaqM ON HBADSLCMTYcust.comq1 = RTFaqM.COMQ1 AND HBADSLCMTYcust.ENTRYNO = RTFaqM.ENTRYNO 
-AND HBADSLCMTYcust.comtype = RTFaqM.COMTYPE AND HBADSLCMTYcust.cusid = RTFaqM.CUSID and HBADSLCMTYcust.lineq1 = RTFaqM.lineq1 
-WHERE HBADSLCMTYcust.comtype in ('3','6','7','8','9','A','B') 
-GROUP BY  HBADSLCMTYcust.comq1, HBADSLCMTYcust.lineq1, HBADSLCMTYcust.comtype, HBADSLCMTYcust.cusid, 
-HBADSLCMTYcust.entryno, HBADSLCMTYcust.comn, HBADSLCMTYcust.cusnc, HBADSLCMTYcust.entryno,HBADSLCMTYcust.comtypenc, 
-HBADSLCMTYcust.rcvdat, HBADSLCMTYcust.finishdat, HBADSLCMTYcust.docketdat, HBADSLCMTYcust.dropdat, HBADSLCMTYcust.canceldat, 
-HBADSLCMTYcust.RADDR </value>
+    <value>SELECT A.COMTYPE, A.COMQ1, A.LINEQ1, A.CUSID, A.ENTRYNO, A.COMN, A.CUSNC,A.COMTYPENC, A.RCVDAT, A.FINISHDAT, A.DOCKETDAT, A.DROPDAT, A.CANCELDAT, A.RADDR, A.CONTACTTEL, A.COMPANYTEL, A.IP11, SUM(CASE WHEN B.CASENO IS NOT NULL THEN 1 ELSE 0 END) AS CASENO, SUM(CASE WHEN B.CASENO IS NOT NULL AND B.CLOSEDAT IS NULL THEN 1 ELSE 0 END) AS YN_CLOSE FROM HBADSLCMTYCUST A  LEFT OUTER JOIN RTFAQM B ON A.COMQ1 = B.COMQ1 AND A.ENTRYNO = B.ENTRYNO AND A.COMTYPE = B.COMTYPE AND A.CUSID = B.CUSID AND A.LINEQ1 = B.LINEQ1 WHERE 1=1 GROUP BY  A.COMQ1, A.LINEQ1, A.COMTYPE, A.CUSID, A.ENTRYNO, A.COMN, A.CUSNC, A.ENTRYNO,A.COMTYPENC, A.RCVDAT, A.FINISHDAT, A.DOCKETDAT, A.DROPDAT, A.CANCELDAT, A.RADDR , A.CONTACTTEL, A.COMPANYTEL, A.IP11</value>
   </data>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>

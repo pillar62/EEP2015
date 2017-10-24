@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Component));
             Srvtools.KeyItem keyItem1 = new Srvtools.KeyItem();
             Srvtools.FieldAttr fieldAttr1 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr2 = new Srvtools.FieldAttr();
@@ -114,7 +115,6 @@
             Srvtools.FieldAttr fieldAttr77 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr78 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr79 = new Srvtools.FieldAttr();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Component));
             Srvtools.KeyItem keyItem7 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem8 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem9 = new Srvtools.KeyItem();
@@ -144,7 +144,7 @@
             // RTLessorAVSCmtyH
             // 
             this.RTLessorAVSCmtyH.CacheConnection = false;
-            this.RTLessorAVSCmtyH.CommandText = "SELECT dbo.[RTLessorAVSCmtyH].* FROM dbo.[RTLessorAVSCmtyH]";
+            this.RTLessorAVSCmtyH.CommandText = resources.GetString("RTLessorAVSCmtyH.CommandText");
             this.RTLessorAVSCmtyH.CommandTimeout = 30;
             this.RTLessorAVSCmtyH.CommandType = System.Data.CommandType.Text;
             this.RTLessorAVSCmtyH.DynamicTableName = false;

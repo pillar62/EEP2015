@@ -16,7 +16,15 @@
             var COMQ1 = row.COMQ1;
             var LINEQ1 = row.LINEQ1;
             var COMTYPE = row.COMTYPE;
-            parent.addTab("用戶維護", "CBBN/RT107.aspx?COMQ1=" + COMQ1 + "&sMODE=" + sMODE + "&LINEQ1=" + LINEQ1 + "&COMTYPE=" + COMTYPE);
+            if (COMTYPE == "7")
+            {
+                parent.addTab("用戶維護", "CBBN/RT107.aspx?COMQ1=" + COMQ1 + "&sMODE=" + sMODE + "&LINEQ1=" + LINEQ1 + "&COMTYPE=" + COMTYPE);
+            }
+            else
+            {
+                parent.addTab("用戶查詢", "CBBN/RT305.aspx?COMQ1=" + COMQ1 + "&sMODE=" + sMODE + "&LINEQ1=" + LINEQ1 + "&COMTYPE=" + COMTYPE);
+            }
+            
         }
     </script>
 
@@ -34,11 +42,11 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="個案別" Editor="text" FieldName="COMTYPE" Format="" MaxLength="30" Visible="False" Width="120" />
                     <JQTools:JQGridColumn Alignment="right" Caption="COMQ11" Editor="numberbox" FieldName="COMQ11" Format="" Visible="False" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="社區名稱" Editor="text" FieldName="COMN" Format="" MaxLength="100" Visible="true" Width="160" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="主線IP" Editor="text" FieldName="IPADDR" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="主線IP" Editor="text" FieldName="IPADDR" Visible="true" Width="100" />
                     <JQTools:JQGridColumn Alignment="left" Caption="社區附掛" Editor="text" FieldName="LINETEL" Format="" MaxLength="20" Visible="False" Width="80" />
                     <JQTools:JQGridColumn Alignment="right" Caption="規模戶數" Editor="numberbox" FieldName="COMCNT" Format="" Visible="true" Width="64" />
-                    <JQTools:JQGridColumn Alignment="right" Caption="用戶數" Editor="numberbox" FieldName="USERCNT" Format="" Visible="False" Width="50" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="方案別" Editor="text" FieldName="COMTYPENM" Format="" MaxLength="0" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="使用戶數" Editor="numberbox" FieldName="USERCNT" Format="" Visible="True" Width="50" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="方案別" Editor="text" FieldName="COMTYPENM" Format="" MaxLength="0" Visible="true" Width="100" />
                     <JQTools:JQGridColumn Alignment="left" Caption="開通日" Editor="datebox" FieldName="T1APPLYDAT" Format="yyyy/mm/dd" MaxLength="0" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="撤線日" Editor="text" FieldName="RCOMDROP" Format="yyyy/mm/dd" Visible="true" Width="80" MaxLength="20" />
                     <JQTools:JQGridColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="CANCELDAT" Format="yyyy/mm/dd" MaxLength="0" Visible="true" Width="80" />
@@ -63,18 +71,14 @@
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btnRT107Click" Text="客戶" Visible="True" Icon="icon-view" />
                 </TooItems>
                 <QueryColumns>
-                    <JQTools:JQQueryColumn AndOr="and" Caption="社區名稱" Condition="%" DataType="string" Editor="text" FieldName="COMN" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="個案別" Condition="=" DataType="string" Editor="inforefval" EditorOptions="title:'方案別',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'P5'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代碼',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="COMTYPE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="150" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="個案名稱" Condition="%" DataType="string" Editor="text" FieldName="COMTYPENM" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="工程師" Condition="%" DataType="string" Editor="text" FieldName="LEADER" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="經銷商" Condition="%" DataType="string" Editor="text" FieldName="GROUPNC" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="社區名稱" Condition="%%" DataType="string" Editor="text" FieldName="COMN" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="開通日起" Condition="&gt;=" DataType="datetime" Editor="datebox" FieldName="T1APPLYDAT" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="150" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="開通日迄" Condition="&lt;=" DataType="datetime" Editor="datebox" FieldName="T1APPLYDAT" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="150" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="同意書" Condition="%" DataType="string" Editor="text" FieldName="COMAGREE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="寬頻使用戶" Condition="%" DataType="string" Editor="text" FieldName="USERCNT" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="社區總戶數︰" Condition="%" DataType="string" Editor="text" FieldName="COMCNT" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="社區主線IP含︰" Condition="%" DataType="string" Editor="text" FieldName="IPADDR" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="社區主線附掛含︰" Condition="%" DataType="string" Editor="text" FieldName="LINETEL" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="寬頻使用戶數起" Condition="&gt;=" DataType="string" Editor="text" FieldName="USERCNT" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="寬頻使用戶數迄" Condition="&lt;=" DataType="string" Editor="text" FieldName="USERCNT" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="社區總戶數起" Condition="&gt;=" DataType="string" Editor="text" FieldName="COMCNT" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="社區總戶數迄" Condition="&lt;=" DataType="string" Editor="text" FieldName="COMCNT" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="社區地址" Condition="%%" DataType="string" Editor="text" FieldName="addr" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />                                    
                 </QueryColumns>
             </JQTools:JQDataGrid>
 
