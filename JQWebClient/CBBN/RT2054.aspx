@@ -63,6 +63,7 @@
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var ss = row.WORKNO;
             $("#JQDataGrid1").datagrid('setWhere', "a.workno='" + ss + "'"); //維護單 
+            
             var WhereString = "";
             exportDevReport("#JQDataGrid1", "sRT2054.cmdRT2054R", "cmdRT2054R", "~/CBBN/DevReportForm/RT205RF.aspx", WhereString);
         }

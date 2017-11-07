@@ -14,7 +14,6 @@
         var gcomq1 = Request.getQueryStringByName2("comq1"); //個案編號
         var gcusid = Request.getQueryStringByName2("cusid"); //個案編號
 
-
         var flag = true;
 
         function InsDefault() {
@@ -39,6 +38,7 @@
         }
         function InsDefault4() {
             if (gcusid != "") {
+                
                 return gcusid;
             }
         }
@@ -72,6 +72,8 @@
                     if (sMODE == 'I') {
                         openForm('#JQDialog1', $('#dataGridView').datagrid('getSelected'), "inserted", 'Dialog');
                         sMODE = "";
+                        $('#dataFormMasterCUSID').data("inforefval").refval.find("input.refval-text").focus();
+                        $('#dataFormMasterMEMO').focus();
                     }
                     else
                         if (sMODE == 'E') {
@@ -79,6 +81,8 @@
                             var ss = "";
                             $("#JQDataForm1").datagrid('setWhere', ss);
                             sMODE = "";
+                            $('#dataFormMasterCUSID').data("inforefval").refval.find("input.refval-text").focus();
+                            $('#dataFormMasterMEMO').focus();
                         }
                         else
                             if (sMODE == 'B') {
@@ -89,7 +93,7 @@
             }
             else
             {
-                alert("1");
+                //alert("1");
             }
         }
 
@@ -108,14 +112,14 @@
         function getcust()
         {
             var ss = $("#dataFormMasterCUSID").refval('getValue');
-            alert(ss);
+            alert(ss);//
         }
     </script>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
+            <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" LocaleAuto="True" UseFlow="False" />
             <JQTools:JQDataGrid ID="dataGridView" data-options="pagination:true,view:commandview" RemoteName="sRT2051.RTFaqM" runat="server" AutoApply="True"
                 DataMember="RTFaqM" Pagination="True" QueryTitle="Query" EditDialogID="JQDialog1"
                 Title="客訴資料維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True" OnLoadSuccess="dgOnloadSuccess" OnSelect="dgSelect">
@@ -169,7 +173,7 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="客訴單號" Editor="text" FieldName="CASENO" maxlength="10" Width="180" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="用戶方案" Editor="text" FieldName="CASEKIND" maxlength="0" Width="180" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="個案別" Editor="inforefval" FieldName="COMTYPE" maxlength="1" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'P5'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'CODE',textFieldCaption:'CODENC',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="True" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="社區序號" Editor="inforefval" FieldName="COMQ1" maxlength="10" Width="180" EditorOptions="title:'社區查詢',panelWidth:350,panelHeight:200,remoteName:'sRT205.V_RT2051',tableName:'V_RT2051',columns:[],columnMatches:[],whereItems:[{field:'comtype',value:'row[COMTYPE]'}],valueField:'COMQ1',textField:'COMN',valueFieldCaption:'社區代號',textFieldCaption:'社區名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="社區序號" Editor="inforefval" FieldName="COMQ1" maxlength="10" Width="180" EditorOptions="title:'社區查詢',panelWidth:350,panelHeight:200,remoteName:'sRT101.View_RTLessorAVSCmtyH',tableName:'View_RTLessorAVSCmtyH',columns:[],columnMatches:[],whereItems:[{field:'comtype',value:'row[COMTYPE]'}],valueField:'COMQ1',textField:'COMN',valueFieldCaption:'社區代號',textFieldCaption:'社區名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
                         <JQTools:JQFormColumn Alignment="left" Caption="主線序號" Editor="inforefval" EditorOptions="title:'主線查詢',panelWidth:350,panelHeight:200,remoteName:'sRT205.V_RT2052',tableName:'V_RT2052',columns:[],columnMatches:[],whereItems:[{field:'COMQ1',value:'row[COMQ1]'},{field:'comtype',value:'row[COMTYPE]'}],valueField:'LINEQ1',textField:'LINEQ1',valueFieldCaption:'主線代號',textFieldCaption:'主線代號',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="LINEQ1" maxlength="3" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="客戶編號" Editor="inforefval" FieldName="CUSID" MaxLength="15" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT205.V_RT205',tableName:'V_RT205',columns:[],columnMatches:[{field:'comtypenc',value:'comtypenc'},{field:'belongnc',value:'belongnc'},{field:'salesnc',value:'salesnc'},{field:'comq',value:'comq'},{field:'comn',value:'comn'},{field:'LINETEL',value:'LINETEL'},{field:'gateway',value:'gateway'},{field:'CMTYIP',value:'CMTYIP'},{field:'LINERATE',value:'LINERATE'},{field:'ARRIVEDAT',value:'ARRIVEDAT'},{field:'rcomdrop',value:'rcomdrop'},{field:'idslamip',value:'idslamip'},{field:'cusnc',value:'cusnc'},{field:'contacttel',value:'contacttel'},{field:'companytel',value:'companytel'},{field:'raddr',value:'raddr'},{field:'CUSTIP',value:'CUSTIP'},{field:'CASEKIND',value:'CASEKIND'},{field:'paycycle',value:'paycycle'},{field:'paytype',value:'paytype'},{field:'overdue',value:'overdue'},{field:'freecode',value:'freecode'},{field:'docketdat',value:'docketdat'},{field:'strbillingdat',value:'strbillingdat'},{field:'newbillingdat',value:'newbillingdat'},{field:'duedat',value:'duedat'},{field:'dropdat',value:'dropdat'},{field:'canceldat',value:'canceldat'},{field:'secondcase',value:'secondcase'},{field:'nciccusno',value:'nciccusno'},{field:'Sp499cons',value:'Sp499cons'},{field:'WtlApplyDat',value:'WtlApplyDat'},{field:'TEL',value:'contacttel'},{field:'MOBILE',value:'companytel'},{field:'FAQMAN',value:'cusnc'}],whereItems:[{field:'COMQ1',value:'row[COMQ1]'},{field:'LINEQ1',value:'row[LINEQ1]'},{field:'comtype',value:'row[COMTYPE]'}],valueField:'CUSID',textField:'cusnc',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" OnBlur="getcust" />
                         <JQTools:JQFormColumn Alignment="left" Caption="方案別" Editor="text" FieldName="comtypenc" MaxLength="0" NewRow="False" ReadOnly="True" RowSpan="1" Span="1" Visible="True" Width="180" />
@@ -204,13 +208,13 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="進出線" Editor="inforefval" FieldName="IOBOUND" Width="180" MaxLength="1" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'P8'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'CODE',textFieldCaption:'CODENC',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
                         <JQTools:JQFormColumn Alignment="left" Caption="備註" Editor="textarea" FieldName="MEMO" maxlength="1500" Width="400" EditorOptions="height:60" Span="2" />
                         <JQTools:JQFormColumn Alignment="left" Caption="受理人員" Editor="infocombobox" FieldName="RCVUSR" MaxLength="6" NewRow="False" ReadOnly="True" RowSpan="1" Span="1" Visible="True" Width="180" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="受理時間" Editor="datebox" FieldName="RCVDAT" MaxLength="0" NewRow="False" ReadOnly="True" RowSpan="1" Span="1" Visible="True" Width="180" Format="yyyy/mm/dd" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="受理時間" Editor="datebox" FieldName="RCVDAT" MaxLength="0" NewRow="False" ReadOnly="True" RowSpan="1" Span="1" Visible="True" Width="180" Format="yyyy/mm/dd HH:MM:SS" />
                         <JQTools:JQFormColumn Alignment="left" Caption="結案人員" Editor="infocombobox" FieldName="CLOSEUSR" MaxLength="6" NewRow="False" ReadOnly="True" RowSpan="1" Span="1" Visible="True" Width="180" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="結案時間" Editor="datebox" FieldName="CLOSEDAT" MaxLength="0" NewRow="False" ReadOnly="True" RowSpan="1" Span="1" Visible="True" Width="180" Format="yyyy/mm/dd" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="結案時間" Editor="datebox" FieldName="CLOSEDAT" MaxLength="0" NewRow="False" ReadOnly="True" RowSpan="1" Span="1" Visible="True" Width="180" Format="yyyy/mm/dd HH:mm:SS" />
                         <JQTools:JQFormColumn Alignment="left" Caption="異動人員" Editor="infocombobox" FieldName="UUSR" MaxLength="6" NewRow="False" ReadOnly="True" RowSpan="1" Span="1" Visible="True" Width="180" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="異動時間" Editor="datebox" FieldName="UDAT" MaxLength="0" NewRow="False" ReadOnly="True" RowSpan="1" Span="1" Visible="True" Width="180" Format="yyyy/mm/dd" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="異動時間" Editor="datebox" FieldName="UDAT" MaxLength="0" NewRow="False" ReadOnly="True" RowSpan="1" Span="1" Visible="True" Width="180" Format="yyyy/mm/dd HH:MM:SS" />
                         <JQTools:JQFormColumn Alignment="left" Caption="作廢人員" Editor="infocombobox" FieldName="CANCELUSR" MaxLength="6" NewRow="False" ReadOnly="True" RowSpan="1" Span="1" Visible="True" Width="180" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="作廢時間" Editor="datebox" FieldName="CANCELDAT" MaxLength="0" NewRow="False" ReadOnly="True" RowSpan="1" Span="1" Visible="True" Width="180" Format="yyyy/mm/dd" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="作廢時間" Editor="datebox" FieldName="CANCELDAT" MaxLength="0" NewRow="False" ReadOnly="True" RowSpan="1" Span="1" Visible="True" Width="180" Format="yyyy/mm/dd HH:mm:SS" />
                         <JQTools:JQFormColumn Alignment="left" Caption="客戶來電詢問方案" Editor="inforefval" FieldName="ASKCASE" MaxLength="2" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="True" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'Q2'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'CODE',textFieldCaption:'CODENC',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
                     </Columns>
                 </JQTools:JQDataForm>
@@ -218,11 +222,13 @@
                     <Columns>
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="自動編號" FieldName="CASENO" RemoteMethod="False" />
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="_usercode" FieldName="UUSR" RemoteMethod="False" />
-                        <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="_today" FieldName="UDAT" RemoteMethod="False" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="_today2" FieldName="UDAT" RemoteMethod="False" />
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefault1" FieldName="COMTYPE" RemoteMethod="False" />
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefault2" FieldName="LINEQ1" RemoteMethod="False" />
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefault3" FieldName="COMQ1" RemoteMethod="False" />
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefault4" FieldName="CUSID" RemoteMethod="False" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="_usercode" FieldName="RCVUSR" RemoteMethod="False" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="_today2" FieldName="RCVDAT" RemoteMethod="False" />
                     </Columns>
                 </JQTools:JQDefault>
                 <JQTools:JQValidate ID="validateMaster" runat="server" BindingObjectID="dataFormMaster" EnableTheming="True">

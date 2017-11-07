@@ -235,6 +235,7 @@ public class JqHttpHandler
             case "_ipaddress": strval = ClientInfo.IPAddress; break;
             case "_language": strval = ClientInfo.Locale; break;
             case "_today": strval = DateTimeToString(DateTime.Now); break;
+            case "_today2": strval = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"); break;
             case "_sysdate": strval = DateTimeToString(DateTime.Now); break;
             case "_servertoday":
                 break;

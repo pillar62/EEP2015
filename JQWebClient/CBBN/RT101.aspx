@@ -85,54 +85,46 @@
         function queryGrid(dg) { //查詢后添加固定條件
             if ($(dg).attr('id') == 'dataGridView') {
                 var where = $(dg).datagrid('getWhere');
+                var ssub = "";
                 if (where != "")
                 {
                     where = " 1=1 ";
                     COMN = $("#COMN_Query").val(); //社區名稱
-                    RADDR = $("#RADDR_Query").val(); //社區地址
-                    SURVEYDAT = $("#SURVEYDAT_Query").combobox('getValue'); //勘查進度
-                    AGREE = $("#AGREE_Query").combobox('getValue'); //可建置否
-                    COMCNT = $("#COMCNT_Query").val(''); //規模戶數
-                    BUILDTYPE = $("#BUILDTYPE_Query").refval('getValue'); //建築物型式
-                    SETUPTYPE = $("#SETUPTYPE_Query").refval('getValue'); //主機建置方式
-                    AGREEDAT = $("#AGREEDAT_Query").combobox('getValue'); //簽訂同意書
-                    TELCOMROOM = $("#TELCOMROOM_Query").combobox('getValue'); //集中電信箱
+                    DTS = $("#DTS_Query").datebox("getValue");; //規模戶數
+                    DTE = $("#DTE_Query").datebox("getValue");; //規模戶數
+                    Q1S = $("#Q1S_Query").val(); //規模戶數
+                    Q1E = $("#Q1E_Query").val(); //規模戶數
+                    Q2S = $("#Q2S_Query").val(); //規模戶數
+                    Q2E = $("#Q2E_Query").val(); //規模戶數
+                    ADDR = $("#ADDR_Query").val(); //社區地址
 
                     if (COMN!="")
-                        where = where + " and COMN like '%"+COMN+"%'";
-                    if (RADDR != "")
-                        where = where + " and RADDR like '%" + RADDR + "%'";
+                        where = where + " and A.COMN like '%" + COMN + "%'";
+
+                    if (ADDR != "")
+                        where = where + " and A.RADDR like '%" + ADDR + "%'";
+                    
+                    if (DTS != "" || DTE != "")
+                    {
+                        ssub = " AND A.COMQ1 IN (SELECT COMQ1 FROM RTLessorAVSCmtyLine WHERE 1=1 "
+                        if (DTS != "")
+                            ssub = ssub + " and APPLYDAT >= '" + DTS + "'";
+                        if (DTE != "")
+                            ssub = ssub + " and APPLYDAT <= '" + DTE + "'";
+                        ssub = ssub + " ) ";
+
+                        where = where + ssub;
+                    }
                     //
-                    if (SURVEYDAT == 1)
-                        where = where + " and surveydat is not null ";
-                    if (SURVEYDAT == 2)
-                        where = where + " and surveydat is null ";
+                    if (Q1S != "")
+                        where = where + " and B.QT_CUST >= " + Q1S;
+                    if (Q1E != "")
+                        where = where + " and B.QT_CUST <= " + Q1E;
                     //
-                    if (AGREE==1) 
-                        where = where + " AND (agree='Y') ";
-                    if (AGREE==2) 
-                        where = where + " AND (agree='N') ";
-                    if (AGREE==3) 
-                        where = where + " AND (agree='H') ";
-                    if (AGREE==4) 
-                        where = where + " AND (agree='') ";
-                    //
-                    if (BUILDTYPE != "")
-                        where = where + " and BUILDTYPE = '" + BUILDTYPE + "'";
-                    if (SETUPTYPE != "")
-                        where = where + " and SETUPTYPE = '" + SETUPTYPE + "'";
-                    //
-                    if (AGREEDAT == 1)
-                        where = where + " and AGREEDAT is not null ";
-                    if (AGREEDAT == 2)
-                        where = where + " and AGREEDAT is null ";
-                    //
-                    if (TELCOMROOM == 1)
-                        where = where + " and telcomroom='Y' ";
-                    if (TELCOMROOM == 2)
-                        where = where + " and telcombox='Y' ";
-                    if (TELCOMROOM == 3)
-                        where = where + " and telcomroom='Y' and telcombox='Y' ";
+                    if (Q2S != "")
+                        where = where + " and A.COMCNT >= " + Q2S;
+                    if (Q2E != "")
+                        where = where + " and A.COMCNT <= " + Q2E;
                 }
                 $(dg).datagrid('setWhere', where);
             }
@@ -178,15 +170,14 @@
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="合約維護" Visible="True" Icon="icon-edit" OnClick="LinkRT106" />
                 </TooItems>
                 <QueryColumns>
-                    <JQTools:JQQueryColumn AndOr="and" Caption="社區名稱" Condition="%%" DataType="string" Editor="text" FieldName="COMN" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="社區地址" Condition="%%" DataType="string" Editor="text" FieldName="RADDR" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="勘察進度" Condition="%" DataType="string" Editor="infocombobox" EditorOptions="items:[{value:'A',text:'全部',selected:'false'},{value:'1',text:'已勘察',selected:'false'},{value:'2',text:'未勘查',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" FieldName="SURVEYDAT" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="是否可建置" Condition="%" DataType="string" Editor="infocombobox" EditorOptions="items:[{value:'A',text:'全部',selected:'false'},{value:'1',text:'可建置',selected:'false'},{value:'2',text:'不可建置',selected:'false'},{value:'3',text:'社區回覆中',selected:'false'},{value:'4',text:'尚未勘查',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" FieldName="AGREE" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="規模戶數" Condition="%" DataType="string" Editor="text" FieldName="COMCNT" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="建築物型式" Condition="%" DataType="string" Editor="inforefval" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'C2'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="BUILDTYPE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="主機建置方式" Condition="%" DataType="string" Editor="inforefval" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'G4'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="SETUPTYPE" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="簽訂同意書" Condition="%" DataType="string" Editor="infocombobox" EditorOptions="items:[{value:'A',text:'全部',selected:'false'},{value:'1',text:'有',selected:'false'},{value:'2',text:'無',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" FieldName="AGREEDAT" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="集中電信室" Condition="%" DataType="string" Editor="infocombobox" EditorOptions="items:[{value:'A',text:'全部',selected:'false'},{value:'1',text:'有集中電信室',selected:'false'},{value:'2',text:'有集中電信箱',selected:'false'},{value:'3',text:'有集中電信室、箱',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" FieldName="TELCOMROOM" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="社區名稱" Condition="%%" DataType="string" Editor="text" FieldName="COMN" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="開通日起" Condition="&gt;=" DataType="datetime" Editor="datebox" FieldName="DTS" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="150" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="開通日迄" Condition="&lt;=" DataType="datetime" Editor="datebox" FieldName="DTE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="150" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="寬頻使用戶數起" Condition="&gt;=" DataType="string" Editor="text" FieldName="Q1S" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="寬頻使用戶數迄" Condition="&lt;=" DataType="string" Editor="text" FieldName="Q1E" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="社區總戶數起" Condition="&gt;=" DataType="string" Editor="text" FieldName="Q2S" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="社區總戶數迄" Condition="&lt;=" DataType="string" Editor="text" FieldName="Q2E" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="社區地址" Condition="%%" DataType="string" Editor="text" FieldName="ADDR" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />                                    
                 </QueryColumns>
             </JQTools:JQDataGrid>
 

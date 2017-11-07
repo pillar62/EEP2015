@@ -63,7 +63,9 @@
             var ss = row.CUSID;
             var comq1 = row.COMQ1;
             var linq1 = row.LINEQ1;
-            parent.addTab("用戶客服單資料維護", "CBBN/RT205.aspx?cusid=" + ss+"&comq1="+comq1+"&lineq1="+linq1+"&comtype=7");
+            var comtype = row.COMTYPE;
+            
+            parent.addTab("用戶客服單資料維護-RT205", "CBBN/RT205.aspx?cusid=" + ss + "&comq1=" + comq1 + "&lineq1=" + linq1 + "&comtype=" + comtype);
         }
 
         function btn7Click(val) {
@@ -90,7 +92,7 @@
             var COMQ1 = row.COMQ1;
             var LINEQ1 = row.LINEQ1;
             var CUSID = row.CUSID;
-            alert(COMQ1);
+            
             
             $.ajax({
                 type: "POST",
@@ -158,7 +160,7 @@
         {
             var ss = rowData.CUSID;
             if (ss == "") ss = "ZZZZZ";
-            $("#V_RTLessorAVSCustFaqH").datagrid('setWhere', "RTLessorAVSCustFaqH.cusid='" + ss + "'"); //維護單 
+            $("#V_RTLessorAVSCustFaqH").datagrid('setWhere', "A.cusid='" + ss + "'"); //維護單 
             $("#RTLessorAVSCustCont").datagrid('setWhere', "RTLessorAVSCustCont.cusid='" + ss + "'"); //客戶續約單
             $("#RTLessorAVSCustDrop").datagrid('setWhere', "RTLessorAVSCustDrop.cusid='" + ss + "'"); //客戶退租單 
             $("#RTLessorAVSCustReturn").datagrid('setWhere', "RTLessorAVSCustReturn.cusid='" + ss + "'"); //客戶復機單 
@@ -176,14 +178,14 @@
                 $('#btnIns').show();
             }
 
-            if (LINEQ1 == "")
+            /*if (LINEQ1 == "")
             {
                 $('#btnIns').hide();
                 $('#btnsave').hide();
                 $('#btncancel').hide();
                 //設定唯讀
                 setReadOnly($('#dataGridView'), true);
-            }
+            }*/
 
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var ss = row.CUSID;
@@ -191,7 +193,7 @@
 
             if (flag == false)
             {
-                $("#V_RTLessorAVSCustFaqH").datagrid('setWhere', "RTLessorAVSCustFaqH.cusid='" + ss + "'");
+                $("#V_RTLessorAVSCustFaqH").datagrid('setWhere', "A.cusid='" + ss + "'");
                 $("#RTLessorAVSCustCont").datagrid('setWhere', "RTLessorAVSCustCont.cusid='" + ss + "'");
                 $("#RTLessorAVSCustDrop").datagrid('setWhere', "RTLessorAVSCustDrop.cusid='" + ss + "'"); //客戶退租單
                 $("#RTLessorAVSCustReturn").datagrid('setWhere', "RTLessorAVSCustReturn.cusid='" + ss + "'"); //客戶復機單
@@ -203,7 +205,7 @@
         function FilterTown1(val) {
             try {
                 $('#dataFormMasterTOWNSHIP1').combobox('setValue', "");
-                $('#dataFormMasterTOWNSHIP1').combobox('setWhere', "CUTID = '" + val.CUTID + "'");
+                //$('#dataFormMasterTOWNSHIP1').combobox('setWhere', "CUTID = '" + val.CUTID + "'");
             }
             catch (err) {
                 alert(err);
@@ -211,8 +213,8 @@
         }
         function FilterTown2(val) {
             try {
-                $('#dataFormMasterTOWNSHIP2').combobox('setValue', "");
-                $('#dataFormMasterTOWNSHIP2').combobox('setWhere', "CUTID = '" + val.CUTID + "'");
+                $('#dataFormMasterTOWNSHIP2').refval('setValue', "");
+                //$('#dataFormMasterTOWNSHIP2').combobox('setWhere', "CUTID = '" + val.CUTID + "'");
             }
             catch (err) {
                 alert(err);
@@ -220,8 +222,8 @@
         }
         function FilterTown3(val) {
             try {
-                $('#dataFormMasterTOWNSHIP3').combobox('setValue', "");
-                $('#dataFormMasterTOWNSHIP3').combobox('setWhere', "CUTID = '" + val.CUTID + "'");
+                $('#dataFormMasterTOWNSHIP3').refval('setValue', "");
+                //$('#dataFormMasterTOWNSHIP3').combobox('setWhere', "CUTID = '" + val.CUTID + "'");
             }
             catch (err) {
                 alert(err);
@@ -229,12 +231,12 @@
         }
         function OnLoadSuccess(val) {
             try {
-                var val = $('#dataFormMasterCUTID1').combobox('getValue');
+                /*var val = $('#dataFormMasterCUTID1').combobox('getValue');
                 $('#dataFormMasterTOWNSHIP1').combobox('setWhere', "CUTID = '" + val + "'");
                 var val = $('#dataFormMasterCUTID2').combobox('getValue');
                 $('#dataFormMasterTOWNSHIP2').combobox('setWhere', "CUTID = '" + val + "'");
                 var val = $('#dataFormMasterCUTID3').combobox('getValue');
-                $('#dataFormMasterTOWNSHIP3').combobox('setWhere', "CUTID = '" + val + "'");
+                $('#dataFormMasterTOWNSHIP3').combobox('setWhere', "CUTID = '" + val + "'");*/
             }
             catch (err) {
                 alert(err);
@@ -250,8 +252,8 @@
                 DataMember="RTLessorAVSCust" Pagination="True" QueryTitle="查詢" EditDialogID="JQDialog1"
                 Title="用戶維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Panel" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True" OnLoadSuccess="dgOnloadSuccess" OnSelect="MySelect">
                 <Columns>
-                    <JQTools:JQGridColumn Alignment="right" Caption="社區序號" Editor="infocombobox" FieldName="COMQ1" Format="" Visible="true" Width="120" EditorOptions="valueField:'COMQ1',textField:'COMN',remoteName:'sRT101.RTLessorAVSCmtyH',tableName:'RTLessorAVSCmtyH',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200"/>
-                    <JQTools:JQGridColumn Alignment="right" Caption="主線序號" Editor="numberbox" FieldName="LINEQ1" Format="" Visible="true" Width="60" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="社區序號" Editor="infocombobox" FieldName="COMQ1" Format="" Visible="true" Width="120" EditorOptions="valueField:'COMQ1',textField:'COMN',remoteName:'sRT101.View_RTLessorAVSCmtyH',tableName:'View_RTLessorAVSCmtyH',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200"/>
+                    <JQTools:JQGridColumn Alignment="right" Caption="主線序號" Editor="numberbox" FieldName="LINEQ1" Format="" Visible="true" Width="50" />
                     <JQTools:JQGridColumn Alignment="left" Caption="客戶代號" Editor="text" FieldName="CUSID" Format="" MaxLength="15" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="客戶名" Editor="text" FieldName="CUSNC" Format="" MaxLength="30" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="裝機縣市" Editor="infocombobox" FieldName="CUTID2" Format="" MaxLength="2" Visible="true" Width="60" EditorOptions="valueField:'CUTID',textField:'CUTNC',remoteName:'sRT100.View_RTCounty',tableName:'View_RTCounty',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
@@ -259,16 +261,18 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="地址" Editor="text" FieldName="RADDR2" Format="" MaxLength="60" Visible="true" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="連絡手機" Editor="text" FieldName="MOBILE" Format="" MaxLength="30" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="方案" Editor="inforefval" FieldName="CASEKIND" Format="" MaxLength="2" Visible="true" Width="120" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.View_RTCode',tableName:'View_RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'O9'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'CODE',textFieldCaption:'CODENC',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="IP(XXX.xxx.xxx.xxx)" Editor="text" FieldName="IP11" Format="" MaxLength="3" Visible="true" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="IP" Editor="text" FieldName="IP11" Format="" MaxLength="3" Visible="true" Width="100" />
                     <JQTools:JQGridColumn Alignment="left" Caption="用戶申請日" Editor="datebox" FieldName="APPLYDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="完工日" Editor="datebox" FieldName="FINISHDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="報竣日" Editor="datebox" FieldName="DOCKETDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="開始計費日" Editor="datebox" FieldName="STRBILLINGDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="最近續約計費日" Editor="datebox" FieldName="NEWBILLINGDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="到期日" Editor="datebox" FieldName="DUEDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="公關戶(Y)" Editor="text" FieldName="FREECODE" Format="" MaxLength="1" Visible="true" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="公關戶" Editor="text" FieldName="FREECODE" Format="" MaxLength="1" Visible="true" Width="60" />
                     <JQTools:JQGridColumn Alignment="left" Caption="退租日" Editor="datebox" FieldName="DROPDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="CANCELDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="COMTYPE" Editor="text" FieldName="COMTYPE" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80">
+                    </JQTools:JQGridColumn>
                 </Columns>
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton"
@@ -278,32 +282,30 @@
                     <JQTools:JQToolItem Icon="icon-undo" ItemType="easyui-linkbutton" OnClick="cancel"
                         Text="取消" ID="btncancel" />
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
-                        OnClick="openQuery" Text="查詢" />
+                        OnClick="openQuery" Text="查詢" Visible="False" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="維修收款" Visible="True" OnClick="LinkRT1041" Icon="icon-view" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="裝機派工" Visible="True" OnClick="btn1Click" Icon="icon-view" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="裝機派工" Visible="False" OnClick="btn1Click" Icon="icon-view" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="續約作業" Visible="True" OnClick="btn2Click" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="復機作業" Visible="True" OnClick="btn3Click" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="退租作業" Visible="True" OnClick="btn4Click" Icon="icon-edit" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="應收應付" Visible="True" OnClick="btn5Click" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="應收應付" Visible="False" OnClick="btn5Click" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="客服案件" Visible="True" OnClick="btn6Click" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="設備保管收據列印" Visible="True" OnClick="btn7Click" Icon="icon-print" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="用戶移動" Visible="True" OnClick="btn8Click" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="用戶移動" Visible="False" OnClick="btn8Click" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="調整到期" Visible="True" OnClick="btn9Click" Icon="icon-edit "/>
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="設備查詢" Visible="True" OnClick="btn10Click" Icon="icon-view" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="設備查詢" Visible="False" OnClick="btn10Click" Icon="icon-view" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="作廢" Visible="True" OnClick="btn11Click" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="作廢反轉" Visible="True" OnClick="btn12Click" Icon="icon-undo" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="歷史異動" Visible="True" OnClick="btn13Click" Icon="icon-view" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="歷史異動" Visible="False" OnClick="btn13Click" Icon="icon-view" />
                 </TooItems>
                 <QueryColumns>
-                    <JQTools:JQQueryColumn AndOr="and" Caption="客戶代號" Condition="%" DataType="string" Editor="text" FieldName="A.CUSID" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="客戶名" Condition="%" DataType="string" Editor="text" FieldName="A.CUSNC" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="身份證號" Condition="%" DataType="string" Editor="text" FieldName="A.SOCIALID" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="繳費週期" Condition="=" DataType="string" Editor="inforefval" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M8'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代碼',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="A.PAYCYCLE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="繳費方式" Condition="=" DataType="string" Editor="inforefval" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M9'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="A.PAYTYPE" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="連絡電話" Condition="%" DataType="string" Editor="text" FieldName="A.CONTACTTEL" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="連絡手機" Condition="%" DataType="string" Editor="text" FieldName="A.MOBILE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="到期日起" Condition="&gt;=" DataType="string" Editor="datebox" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" FieldName="A.DUEDAT" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="到期日迄" Condition="&lt;=" DataType="string" Editor="datebox" FieldName="A.DUEDAT" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="社區名稱" Condition="%%" DataType="string" Editor="text" FieldName="B.COMN" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="客戶名稱" Condition="%%" DataType="string" Editor="text" FieldName="A.CUSNC" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="連絡手機" Condition="%%" DataType="string" Editor="text" FieldName="A.MOBILE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="住戶地址" Condition="%%" DataType="string" Editor="text" FieldName="A.RADDR2" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="身份證號" Condition="%%" DataType="string" Editor="text" FieldName="A.SOCIALID" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="連絡電話" Condition="%%" DataType="string" Editor="text" FieldName="A.CONTACTTEL" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="個案別" Condition="%" DataType="string" Editor="inforefval" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'P5'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="A.COMTYPE" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="140" />
                 </QueryColumns>
             </JQTools:JQDataGrid>
 
@@ -311,10 +313,11 @@
                 <JQTools:JQDataForm ID="dataFormMaster" runat="server" DataMember="RTLessorAVSCust" HorizontalColumnsCount="2" RemoteName="sRT104.RTLessorAVSCust" AlwaysReadOnly="False" Closed="False" ContinueAdd="False" disapply="False" DivFramed="False" DuplicateCheck="False" HorizontalGap="0" IsAutoPageClose="False" IsAutoPause="False" IsAutoSubmit="False" IsNotifyOFF="False" IsRejectNotify="False" IsRejectON="False" IsShowFlowIcon="False" ShowApplyButton="False" ValidateStyle="Hint" VerticalGap="0" >
 
                     <Columns>
-                        <JQTools:JQFormColumn Alignment="left" Caption="社區序號" Editor="infocombobox" FieldName="COMQ1" Format="" Width="200" EditorOptions="valueField:'COMQ1',textField:'COMN',remoteName:'sRT101.RTLessorAVSCmtyH',tableName:'RTLessorAVSCmtyH',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" ReadOnly="True" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="主線序號" Editor="numberbox" FieldName="LINEQ1" Format="" Width="200" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="個案別" Editor="inforefval" EditorOptions="title:'個案別',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'P5'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'個案代號',textFieldCaption:'個案名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="COMTYPE" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="True" Width="200" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="社區序號" Editor="inforefval" FieldName="COMQ1" Format="" Width="200" EditorOptions="title:'社區查詢',panelWidth:350,panelHeight:200,remoteName:'sRT101.View_RTLessorAVSCmtyH',tableName:'View_RTLessorAVSCmtyH',columns:[],columnMatches:[],whereItems:[],valueField:'COMQ1',textField:'COMN',valueFieldCaption:'社區代號',textFieldCaption:'社區名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" ReadOnly="False" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="主線序號" Editor="inforefval" FieldName="LINEQ1" Format="" Width="200" ReadOnly="False" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT103.View_RTLessorAVSCmtyLine',tableName:'View_RTLessorAVSCmtyLine',columns:[],columnMatches:[],whereItems:[{field:'COMQ1',value:'row[COMQ1]'}],valueField:'LINEQ1',textField:'LINEQ1',valueFieldCaption:'主線序號',textFieldCaption:'主線序號',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
                         <JQTools:JQFormColumn Alignment="left" Caption="客戶代號" Editor="text" FieldName="CUSID" Format="" maxlength="15" Width="200" ReadOnly="True" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="第二戶" Editor="infocombobox" FieldName="SECONDCASE" Format="" maxlength="1" Width="200" EditorOptions="items:[{value:'Y',text:'Y',selected:'false'},{value:'N',text:'N',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="第二戶" Editor="infocombobox" FieldName="SECONDCASE" Format="" maxlength="1" Width="200" EditorOptions="items:[{value:'Y',text:'Y',selected:'false'},{value:'N',text:'N',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" Visible="False" />
                         <JQTools:JQFormColumn Alignment="left" Caption="公關戶(Y)" Editor="infocombobox" FieldName="FREECODE" Format="" maxlength="1" Width="200" EditorOptions="items:[{value:'Y',text:'Y',selected:'false'},{value:'N',text:'N',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="用戶申請日" Editor="datebox" FieldName="APPLYDAT" Format="yyyy/mm/dd" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="用戶(公司)名稱" Editor="text" FieldName="CUSNC" Format="" maxlength="30" Width="200" />
@@ -327,11 +330,11 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="連絡手機" Editor="text" FieldName="MOBILE" Format="" maxlength="30" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="E-Mail" Editor="text" FieldName="EMAIL" Format="" maxlength="50" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="裝機地址" Editor="infocombobox" FieldName="CUTID2" Format="" maxlength="2" Width="200" EditorOptions="valueField:'CUTID',textField:'CUTNC',remoteName:'sRT100.View_RTCounty',tableName:'View_RTCounty',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,onSelect:FilterTown2,panelHeight:200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="裝機地址" Editor="infocombobox" FieldName="TOWNSHIP2" Format="" maxlength="10" Width="200" EditorOptions="valueField:'TOWNSHIP',textField:'TOWNSHIP',remoteName:'sRT100.RTCtyTown',tableName:'RTCtyTown',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="裝機地址" Editor="inforefval" FieldName="TOWNSHIP2" Format="" maxlength="10" Width="200" EditorOptions="title:'鄉鎮市區查詢',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCtyTown',tableName:'RTCtyTown',columns:[],columnMatches:[{field:'RZONE2',value:'ZIP'}],whereItems:[{field:'CUTID',value:'row[CUTID2]'}],valueField:'TOWNSHIP',textField:'TOWNSHIP',valueFieldCaption:'鄉鎮區',textFieldCaption:'鄉鎮區',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
                         <JQTools:JQFormColumn Alignment="left" Caption="裝機地址" Editor="text" FieldName="RADDR2" Format="" maxlength="60" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="郵遞區號(裝機)" Editor="text" FieldName="RZONE2" Format="" maxlength="5" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="帳單地址" Editor="infocombobox" FieldName="CUTID3" Format="" maxlength="2" Width="200" EditorOptions="valueField:'CUTID',textField:'CUTNC',remoteName:'sRT100.View_RTCounty',tableName:'View_RTCounty',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,onSelect:FilterTown3,panelHeight:200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="帳單地址" Editor="infocombobox" FieldName="TOWNSHIP3" Format="" maxlength="10" Width="200" EditorOptions="valueField:'TOWNSHIP',textField:'TOWNSHIP',remoteName:'sRT100.RTCtyTown',tableName:'RTCtyTown',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="帳單地址" Editor="inforefval" FieldName="TOWNSHIP3" Format="" maxlength="10" Width="200" EditorOptions="title:'鄉鎮市區查詢',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCtyTown',tableName:'RTCtyTown',columns:[],columnMatches:[{field:'RZONE3',value:'ZIP'}],whereItems:[{field:'CUTID',value:'row[CUTID3]'}],valueField:'TOWNSHIP',textField:'TOWNSHIP',valueFieldCaption:'鄉鎮區',textFieldCaption:'鄉鎮區',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
                         <JQTools:JQFormColumn Alignment="left" Caption="帳單地址" Editor="text" FieldName="RADDR3" Format="" maxlength="60" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="郵遞區號(帳單)" Editor="text" FieldName="RZONE3" Format="" maxlength="5" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="公司連絡人" Editor="text" FieldName="COCONTACT" Format="" maxlength="30" Width="200" />
@@ -376,11 +379,12 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="調整日數" Editor="numberbox" FieldName="ADJUSTDAY" Format="" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="使用截止日" Editor="datebox" FieldName="DUEDAT" Format="yyyy/mm/dd" Width="200" EditorOptions="" />
                         <JQTools:JQFormColumn Alignment="left" Caption="退租日" Editor="datebox" FieldName="DROPDAT" Format="yyyy/mm/dd" Width="200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="備註" Editor="text" FieldName="MEMO" Format="" maxlength="500" Width="200" Span="2" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="客戶來源" Editor="infocombobox" FieldName="CUSTSRC" maxlength="0" Width="80" Span="1" EditorOptions="items:[{value:'01',text:'元訊客戶',selected:'true'},{value:'02',text:'社區潛戶',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="備註" Editor="textarea" EditorOptions="height:30" FieldName="MEMO" Format="" MaxLength="500" NewRow="False" ReadOnly="False" RowSpan="1" Span="2" Visible="True" Width="500" />
                     </Columns>
                 </JQTools:JQDataForm>
 
-                <JQTools:JQDataGrid ID="dataGridDetail" runat="server" AutoApply="False" DataMember="RTLessorAVSCustReturn" Pagination="False" ParentObjectID="dataFormMaster" RemoteName="sRT104.RTLessorAVSCust" Title="明細資料" AlwaysClose="True" >
+                <JQTools:JQDataGrid ID="dataGridDetail" runat="server" AutoApply="False" DataMember="RTLessorAVSCustReturn" Pagination="False" ParentObjectID="dataFormMaster" RemoteName="sRT104.RTLessorAVSCust" Title="明細資料" AlwaysClose="True" Visible="False" >
                     <Columns>
                         <JQTools:JQGridColumn Alignment="left" Caption="CUSID" Editor="text" FieldName="CUSID" Format="" Width="120" />
                         <JQTools:JQGridColumn Alignment="right" Caption="ENTRYNO" Editor="numberbox" FieldName="ENTRYNO" Format="" Width="120" />
@@ -430,6 +434,7 @@
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefaultLINEQ1" FieldName="LINEQ1" RemoteMethod="False" />
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="自動編號" FieldName="CUSID" RemoteMethod="False" />
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="_today" FieldName="EDAT" RemoteMethod="True" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="01" FieldName="CUSTSRC" RemoteMethod="True" />
                     </Columns>
                 </JQTools:JQDefault>
                 <JQTools:JQValidate ID="validateMaster" runat="server" BindingObjectID="dataFormMaster" BorderStyle="NotSet" ClientIDMode="Inherit" Enabled="True" EnableTheming="True" EnableViewState="True" ViewStateMode="Inherit">
@@ -441,46 +446,30 @@
             </JQTools:JQDialog>
         </div>
         <p>
-            <JQTools:JQDataGrid ID="V_RTLessorAVSCustFaqH" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" AutoApply="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="V_RTLessorAVSCustFaqH" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT104.V_RTLessorAVSCustFaqH" RowNumbers="True" Title="客戶服務單" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="True">
+            <JQTools:JQDataGrid ID="V_RTLessorAVSCustFaqH" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" AutoApply="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="RT205" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT205.RT205" RowNumbers="True" Title="客戶服務單" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="True">
                 <Columns>
-                    <JQTools:JQGridColumn Alignment="left" Caption="CUSID" Editor="text" FieldName="CUSID" Frozen="False" IsNvarChar="False" MaxLength="10" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="20">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="客服單號" Editor="text" FieldName="FAQNO" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90" FormatScript="" DrillObjectID="JQDrillDown1">
-                        <DrillFields>
-                            <JQTools:JQDrillDownFields FieldName="FAQNO" />
-                        </DrillFields>
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="來電日" Editor="text" FieldName="RCVDAT" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="70" Format="yyyy/mm/dd">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="類型" Editor="text" FieldName="CODENC" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="40">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="摘要" Editor="text" FieldName="memo15" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="140">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="連絡電話" Editor="text" FieldName="CONTACTTEL" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="70">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="行動電話" Editor="text" FieldName="MOBILE" Frozen="False" IsNvarChar="False" MaxLength="15" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="70">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="派工日" Editor="text" FieldName="SNDWORK" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="70" Format="yyyy/mm/dd">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="派工員" Editor="text" FieldName="CUSNC1" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="70">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="派工單號" Editor="text" FieldName="SNDPRTNO" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90" DrillObjectID="JQDrillDown2">
-                        <DrillFields>
-                            <JQTools:JQDrillDownFields FieldName="SNDPRTNO" />
-                        </DrillFields>
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="派工結案" Editor="text" FieldName="SNDCLOSEDAT" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="70" Format="yyyy/mm/dd">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="客服回覆" Editor="text" FieldName="CALLBACKDAT" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="70" Format="yyyy/mm/dd">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="回覆員" Editor="text" FieldName="CUSNC2" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="客服結案" Editor="text" FieldName="FINISHDAT" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="70" Format="yyyy/mm/dd">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="結案員" Editor="text" FieldName="CUSNC3" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="處理天數" Editor="text" FieldName="PROCESSDAT" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
-                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="客訴單號" Editor="text" FieldName="caseno" Format="" MaxLength="10" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="方案別" Editor="text" FieldName="comtype" Format="" MaxLength="1" Width="120" Visible="False" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="經銷" Editor="text" FieldName="ANGENCY" Format="" MaxLength="0" Width="60" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="業務" Editor="text" FieldName="leader" Format="" MaxLength="0" Width="60" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="方案別" Editor="text" FieldName="codenc" Format="" MaxLength="0" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="主線" Editor="text" FieldName="COMLINE" Format="" MaxLength="0" Width="40" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="社區名稱" Editor="text" FieldName="comn" Format="" MaxLength="0" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="客戶退租日" Editor="datebox" FieldName="dropdat" Format="yyyy/mm/dd" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="聯絡人" Editor="text" FieldName="faqman" Format="" MaxLength="50" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="進出線" Editor="text" FieldName="codenc1" Format="" MaxLength="0" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="報修原因" Editor="text" FieldName="codenc2" Format="" MaxLength="0" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="受理人" Editor="text" FieldName="CUSNC" Format="" MaxLength="0" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="受理時間" Editor="text" FieldName="RCVDATE" Format="yyyy/mm/dd" MaxLength="0" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="結案時間" Editor="datebox" FieldName="closedat" Format="yyyy/mm/dd" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="客戶來源" Editor="text" FieldName="codenc3" Format="" MaxLength="0" Width="120" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="追件數" Editor="numberbox" FieldName="QT_CASE" Format="" Width="60" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="預定施工人" Editor="text" FieldName="SNAME" Format="" MaxLength="0" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="已完工" Editor="text" FieldName="finishnum" Format="" MaxLength="0" Width="60" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="comq1" Editor="text" FieldName="comq1" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80"></JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="lineq1" Editor="text" FieldName="lineq1" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80"></JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="cusid" Editor="text" FieldName="cusid" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80"></JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="entryno" Editor="text" FieldName="entryno" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80"></JQTools:JQGridColumn>                    
                 </Columns>
                 <TooItems>
                     <JQTools:JQToolItem Enabled="True" Icon="icon-add" ItemType="easyui-linkbutton" OnClick="insertItem" Text="Insert" Visible="False" />

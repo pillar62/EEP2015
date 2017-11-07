@@ -783,7 +783,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             // xrLabel1
             // 
             this.xrLabel1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.CMTYIP")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.PP")});
             this.xrLabel1.Font = new System.Drawing.Font("標楷體", 10F);
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(78.49989F, 39.99999F);
             this.xrLabel1.Name = "xrLabel1";

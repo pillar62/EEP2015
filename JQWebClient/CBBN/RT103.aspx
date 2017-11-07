@@ -124,14 +124,15 @@
             {
                 $("#dataGridView").datagrid('setWhere', "COMQ1='" + COMQ1 + "'");
             }
-            if (COMQ1 == "") {
+
+            /*if (COMQ1 == "") {
                 flag = false;
                 $('#btnIns').hide();
                 $('#btnsave').hide();
                 $('#btncancel').hide();
                 //設定唯讀
                 setReadOnly($('#dataGridView'), true);
-            }
+            }*/
             flag = false;
         }
 
