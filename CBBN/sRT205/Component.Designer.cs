@@ -55,6 +55,7 @@
             Srvtools.FieldAttr fieldAttr20 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr21 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr22 = new Srvtools.FieldAttr();
+            Srvtools.FieldAttr fieldAttr23 = new Srvtools.FieldAttr();
             Srvtools.KeyItem keyItem2 = new Srvtools.KeyItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Component));
             Srvtools.KeyItem keyItem3 = new Srvtools.KeyItem();
@@ -309,6 +310,14 @@
             fieldAttr22.TrimLength = 0;
             fieldAttr22.UpdateEnable = true;
             fieldAttr22.WhereMode = true;
+            fieldAttr23.CharSetNull = false;
+            fieldAttr23.CheckNull = false;
+            fieldAttr23.DataField = "cusnc";
+            fieldAttr23.DefaultMode = Srvtools.DefaultModeType.Insert;
+            fieldAttr23.DefaultValue = null;
+            fieldAttr23.TrimLength = 0;
+            fieldAttr23.UpdateEnable = true;
+            fieldAttr23.WhereMode = true;
             this.ucRTFaqM.FieldAttrs.Add(fieldAttr1);
             this.ucRTFaqM.FieldAttrs.Add(fieldAttr2);
             this.ucRTFaqM.FieldAttrs.Add(fieldAttr3);
@@ -331,6 +340,7 @@
             this.ucRTFaqM.FieldAttrs.Add(fieldAttr20);
             this.ucRTFaqM.FieldAttrs.Add(fieldAttr21);
             this.ucRTFaqM.FieldAttrs.Add(fieldAttr22);
+            this.ucRTFaqM.FieldAttrs.Add(fieldAttr23);
             this.ucRTFaqM.LogInfo = null;
             this.ucRTFaqM.Name = "ucRTFaqM";
             this.ucRTFaqM.RowAffectsCheck = true;

@@ -15,7 +15,7 @@
         var flag = true;
 
         function dgOnloadSuccess() {
-            
+
             if (flag) {
                 var sWhere = " 1=1 ";
                 if (comq1 != "") {
@@ -35,7 +35,6 @@
                     sWhere = sWhere + " AND A.comtype='" + comtype + "'"
                 }
                 */                
-
                 $("#dataGridMaster").datagrid('setWhere', sWhere);
             }
             else
