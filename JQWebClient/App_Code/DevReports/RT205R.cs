@@ -1642,7 +1642,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel7.StyleName = "FieldCaption";
             this.xrLabel7.StylePriority.UseFont = false;
             this.xrLabel7.StylePriority.UseForeColor = false;
-            this.xrLabel7.Text = "社區類別";
+            this.xrLabel7.Text = "方案別";
             // 
             // xrLabel13
             // 
