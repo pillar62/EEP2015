@@ -227,7 +227,7 @@
                 <JQTools:JQDataForm ID="dataFormMaster" runat="server" DataMember="RTLessorAVSCmtyLine" HorizontalColumnsCount="2" RemoteName="sRT103.RTLessorAVSCmtyLine" AlwaysReadOnly="False" Closed="False" ContinueAdd="False" disapply="False" DivFramed="False" DuplicateCheck="False" HorizontalGap="0" IsAutoPageClose="False" IsAutoPause="False" IsAutoSubmit="True" IsNotifyOFF="False" IsRejectNotify="False" IsRejectON="False" IsShowFlowIcon="False" ShowApplyButton="False" ValidateStyle="Hint" VerticalGap="0" >
                     <Columns>
                         <JQTools:JQFormColumn Alignment="left" Caption="社區序號" Editor="infocombobox" FieldName="COMQ1" Format="" Width="180" EditorOptions="valueField:'COMQ1',textField:'COMN',remoteName:'sRT101.View_RTLessorAVSCmtyH',tableName:'View_RTLessorAVSCmtyH',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" Span="1" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="主線序號" Editor="numberbox" FieldName="LINEQ1" Format="" Width="20" Span="1" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="主線序號" Editor="numberbox" FieldName="LINEQ1" Format="" Width="180" Span="1" />
                         <JQTools:JQFormColumn Alignment="left" Caption="收件日" Editor="datebox" FieldName="RCVDAT" Format="yyyy/mm/dd" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="主線群組" Editor="text" FieldName="LINEGROUP" Format="" maxlength="1" Width="30" />
                         <JQTools:JQFormColumn Alignment="left" Caption="申請人姓名" Editor="text" FieldName="APPLYNAME" Format="" maxlength="30" Width="180" />
