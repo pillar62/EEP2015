@@ -155,7 +155,7 @@
             // RTLessorAVSCmtyLine
             // 
             this.RTLessorAVSCmtyLine.CacheConnection = false;
-            this.RTLessorAVSCmtyLine.CommandText = "SELECT dbo.[RTLessorAVSCmtyLine].* FROM dbo.[RTLessorAVSCmtyLine]";
+            this.RTLessorAVSCmtyLine.CommandText = "SELECT * FROM RTLessorAVSCmtyLine";
             this.RTLessorAVSCmtyLine.CommandTimeout = 30;
             this.RTLessorAVSCmtyLine.CommandType = System.Data.CommandType.Text;
             this.RTLessorAVSCmtyLine.DynamicTableName = false;

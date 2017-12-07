@@ -199,6 +199,8 @@
             Srvtools.KeyItem keyItem41 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem42 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem43 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem44 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem45 = new Srvtools.KeyItem();
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTCounty = new Srvtools.InfoCommand(this.components);
@@ -248,6 +250,7 @@
             this.V_RTConsignee = new Srvtools.InfoCommand(this.components);
             this.RTDept = new Srvtools.InfoCommand(this.components);
             this.ucRTDept = new Srvtools.UpdateComponent(this.components);
+            this.RTCode_D3 = new Srvtools.InfoCommand(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCounty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCtyTown)).BeginInit();
@@ -279,6 +282,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RTConsignee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.V_RTConsignee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTDept)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RTCode_D3)).BeginInit();
             // 
             // InfoConnection1
             // 
@@ -2513,7 +2517,7 @@
             this.ucRTDept.AutoTrans = true;
             this.ucRTDept.ExceptJoin = false;
             this.ucRTDept.LogInfo = null;
-            this.ucRTDept.Name = null;
+            this.ucRTDept.Name = "ucRTDept";
             this.ucRTDept.RowAffectsCheck = true;
             this.ucRTDept.SelectCmd = this.RTDept;
             this.ucRTDept.SelectCmdForUpdate = null;
@@ -2524,6 +2528,35 @@
             this.ucRTDept.TransIsolationLevel = System.Data.IsolationLevel.ReadCommitted;
             this.ucRTDept.UseTranscationScope = false;
             this.ucRTDept.WhereMode = Srvtools.WhereModeType.Keyfields;
+            // 
+            // RTCode_D3
+            // 
+            this.RTCode_D3.CacheConnection = false;
+            this.RTCode_D3.CommandText = "SELECT * FROM dbo.[RTCode]\r\nWHERE KIND = \'D3\' AND PARM1 LIKE \'%AVS%\'\r\nORDER BY PA" +
+    "RM1 DESC ";
+            this.RTCode_D3.CommandTimeout = 30;
+            this.RTCode_D3.CommandType = System.Data.CommandType.Text;
+            this.RTCode_D3.DynamicTableName = false;
+            this.RTCode_D3.EEPAlias = null;
+            this.RTCode_D3.EncodingAfter = null;
+            this.RTCode_D3.EncodingBefore = "Windows-1252";
+            this.RTCode_D3.EncodingConvert = null;
+            this.RTCode_D3.InfoConnection = this.InfoConnection1;
+            keyItem44.KeyName = "KIND";
+            keyItem45.KeyName = "CODE";
+            this.RTCode_D3.KeyFields.Add(keyItem44);
+            this.RTCode_D3.KeyFields.Add(keyItem45);
+            this.RTCode_D3.MultiSetWhere = false;
+            this.RTCode_D3.Name = "RTCode_D3";
+            this.RTCode_D3.NotificationAutoEnlist = false;
+            this.RTCode_D3.SecExcept = null;
+            this.RTCode_D3.SecFieldName = null;
+            this.RTCode_D3.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.RTCode_D3.SelectPaging = false;
+            this.RTCode_D3.SelectTop = 0;
+            this.RTCode_D3.SiteControl = false;
+            this.RTCode_D3.SiteFieldName = null;
+            this.RTCode_D3.UpdatedRowSource = System.Data.UpdateRowSource.None;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCounty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCtyTown)).EndInit();
@@ -2555,6 +2588,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RTConsignee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.V_RTConsignee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTDept)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RTCode_D3)).EndInit();
 
         }
 
@@ -2609,5 +2643,6 @@
         private Srvtools.InfoCommand V_RTConsignee;
         private Srvtools.InfoCommand RTDept;
         private Srvtools.UpdateComponent ucRTDept;
+        private Srvtools.InfoCommand RTCode_D3;
     }
 }

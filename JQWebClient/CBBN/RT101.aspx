@@ -63,15 +63,30 @@
             */
         }
 
+        function DownloadFile()
+        {
+            //下載上傳的檔案
+            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.UNAGREEDESC;
+            if (ss != "")
+            {
+                window.location.href = "../handler/JqFileHandler2.ashx?File=" + ss;
+            }
+            else
+            {
+                alert("未指定合約檔案!!");
+            }
+            
+        }
 
         function OnLoadSuccess(val) {
             try {
-                var val = $('#dataFormMasterCUTID').combobox('getValue');
-                $('#dataFormMasterTOWNSHIP').combobox('setWhere', "CUTID = '" + val + "'");
-                var val = $('#dataFormMasterCUTID2').combobox('getValue');
-                $('#dataFormMasterTOWNSHIP2').combobox('setWhere', "CUTID = '" + val + "'");
-                $('#dataFormMasterBUILDTYPE').combobox('setWhere', "KIND = 'C2'");
-                $('#dataGridViewBUILDTYPE').combobox('setWhere', "KIND = 'C2'");
+                //var val = $('#dataFormMasterCUTID').combobox('getValue');
+                //$('#dataFormMasterTOWNSHIP').combobox('setWhere', "CUTID = '" + val + "'");
+                //var val = $('#dataFormMasterCUTID2').combobox('getValue');
+                //$('#dataFormMasterTOWNSHIP2').combobox('setWhere', "CUTID = '" + val + "'");
+                //$('#dataFormMasterBUILDTYPE').combobox('setWhere', "KIND = 'C2'");
+                //$('#dataGridViewBUILDTYPE').combobox('setWhere', "KIND = 'C2'");
                 //$("#dataFormMasterCUTID").css('background-color', "#FEFFAF"); //text設定背景色
                 //$("#dataFormMasterCUTID").next(".datebox").find(".combo-text").css('background-color', "#FEFFAF"); //datebox 設定背景色
                 $("#dataFormMasterCUTID").combobox('textbox').css('background-color', "#FEFFAF"); //combobox 設定背景色
@@ -154,6 +169,8 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="建檔日" Editor="datebox" FieldName="EDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="修改日" Editor="datebox" FieldName="UDAT" Format="yyyy/mm/dd" MaxLength="0" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="個案別" Editor="inforefval" FieldName="COMTYPE" Visible="true" Width="80" EditorOptions="title:'個案別',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'P5'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代碼',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="合約檔案" Editor="text" FieldName="UNAGREEDESC" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="80">
+                    </JQTools:JQGridColumn>
                 </Columns>
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton"
@@ -168,6 +185,7 @@
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="社區用戶" Visible="True" Icon="icon-view" OnClick="LinkRT104" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="設備查詢" Visible="True" Icon="icon-view" OnClick="LinkRT1011" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="合約維護" Visible="True" Icon="icon-edit" OnClick="LinkRT106" />
+                    <JQTools:JQToolItem Enabled="True" Icon="icon-view" ItemType="easyui-linkbutton" OnClick="DownloadFile" Text="開啟合約檔" Visible="True" />
                 </TooItems>
                 <QueryColumns>
                     <JQTools:JQQueryColumn AndOr="and" Caption="社區名稱" Condition="%%" DataType="string" Editor="text" FieldName="COMN" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
@@ -182,54 +200,35 @@
             </JQTools:JQDataGrid>
 
             <JQTools:JQDialog ID="JQDialog1" runat="server" BindingObjectID="dataFormMaster" Title="社區查詢" Width="1024px">
-                <JQTools:JQDataForm ID="dataFormMaster" runat="server" DataMember="RTLessorAVSCmtyH" HorizontalColumnsCount="2" RemoteName="sRT101.RTLessorAVSCmtyH" AlwaysReadOnly="False" Closed="False" ContinueAdd="False" disapply="False" DivFramed="False" DuplicateCheck="False" HorizontalGap="0" IsAutoPageClose="False" IsAutoPause="False" IsAutoSubmit="False" IsNotifyOFF="False" IsRejectNotify="False" IsRejectON="False" IsShowFlowIcon="False" ShowApplyButton="False" ValidateStyle="Hint" VerticalGap="0" OnLoadSuccess="OnLoadSuccess" >
+                <JQTools:JQDataForm ID="dataFormMaster" runat="server" DataMember="RTLessorAVSCmtyH" HorizontalColumnsCount="3" RemoteName="sRT101.RTLessorAVSCmtyH" AlwaysReadOnly="False" Closed="False" ContinueAdd="False" disapply="False" DivFramed="False" DuplicateCheck="False" HorizontalGap="0" IsAutoPageClose="False" IsAutoPause="False" IsAutoSubmit="False" IsNotifyOFF="False" IsRejectNotify="False" IsRejectON="False" IsShowFlowIcon="False" ShowApplyButton="False" ValidateStyle="Hint" VerticalGap="0" OnLoadSuccess="OnLoadSuccess" >
                     <Columns>
-                        <JQTools:JQFormColumn Alignment="left" Caption="社區序號" Editor="numberbox" FieldName="COMQ1" Format="" Width="180" Visible="False" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="社區序號" Editor="numberbox" FieldName="COMQ1" Format="" Width="180" Visible="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="社區名稱" Editor="text" FieldName="COMN" Format="" maxlength="30" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="社區地址(縣市)" Editor="infocombobox" FieldName="CUTID" Format="" maxlength="2" Width="180" EditorOptions="valueField:'CUTID',textField:'CUTNC',remoteName:'sRT100.RTCounty',tableName:'RTCounty',pageSize:'-1',checkData:true,selectOnly:false,cacheRelationText:false,onSelect:FilterTown,panelHeight:200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="社區地址(鄉鎮)" Editor="infocombobox" FieldName="TOWNSHIP" Format="" maxlength="10" Width="180" EditorOptions="valueField:'TOWNSHIP',textField:'TOWNSHIP',remoteName:'sRT100.RTCtyTown',tableName:'RTCtyTown',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="社區地址" Editor="text" FieldName="RADDR" Format="" maxlength="60" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="社區郵遞區號" Editor="text" FieldName="RZONE" Format="" maxlength="5" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="電信箱(室)位址(縣市)" Editor="infocombobox" FieldName="CUTID2" Format="" maxlength="2" Width="180" EditorOptions="valueField:'CUTID',textField:'CUTNC',remoteName:'sRT100.RTCounty',tableName:'RTCounty',pageSize:'-1',checkData:true,selectOnly:false,cacheRelationText:false,onSelect:FilterTown2,panelHeight:200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="電信箱(室)位址(鄉鎮)" Editor="infocombobox" FieldName="TOWNSHIP2" Format="" maxlength="10" Width="180" EditorOptions="valueField:'TOWNSHIP',textField:'TOWNSHIP',remoteName:'sRT100.RTCtyTown',tableName:'RTCtyTown',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="電信箱(室)位址" Editor="text" FieldName="RADDR2" Format="" maxlength="60" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="可供裝範圍" Editor="text" FieldName="RADDR3" Format="" maxlength="60" Width="500" Visible="True" Span="2" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="規模戶數" Editor="numberbox" FieldName="COMCNT" Format="" maxlength="0" Width="180" Visible="True" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="建築物型式" Editor="infocombobox" FieldName="BUILDTYPE" Format="" maxlength="2" Width="180" EditorOptions="valueField:'CODE',textField:'CODENC',remoteName:'sRT100.RTCode',tableName:'RTCode',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="社區棟數" Editor="numberbox" FieldName="BUILDCNT" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="樓高" Editor="numberbox" FieldName="BUILDFLOOR" Format="" maxlength="0" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="有無主機插座" Editor="infocombobox" FieldName="POWERJECT" Format="" Width="180" EditorOptions="items:[{value:'Y',text:'有',selected:'false'},{value:'N',text:'無',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" MaxLength="1" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="電壓" Editor="text" FieldName="POWERTYPE" Format="" Width="180" MaxLength="4" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="電源距主機距離(M)" Editor="numberbox" FieldName="POWERDISTANCE" Format="" maxlength="0" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="主機建置方式(KIND='G4')" Editor="inforefval" FieldName="SETUPTYPE" Format="" maxlength="2" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'G4'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="10P纜線長度" Editor="numberbox" FieldName="CABLELENGTH" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="社區同意鑽孔(Y)" Editor="infocombobox" FieldName="AGREEDRILL" Format="" maxlength="1" Width="180" EditorOptions="items:[{value:'Y',text:'Y',selected:'true'},{value:'N',text:'N',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="集中電信室(Y)" Editor="infocombobox" FieldName="TELCOMROOM" Format="" Width="180" EditorOptions="items:[{value:'Y',text:'Y',selected:'true'},{value:'N',text:'N',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" MaxLength="1" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="勘察日期" Editor="datebox" FieldName="SURVEYDAT" Format="" maxlength="0" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="同意書簽訂日" Editor="datebox" FieldName="AGREEDAT" Format="" maxlength="0" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="是否可建置" Editor="infocombobox" FieldName="AGREE" Format="" Width="180" EditorOptions="items:[{value:'Y',text:'Y',selected:'true'},{value:'N',text:'N',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" MaxLength="1" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="不可建置原因" Editor="text" FieldName="UNAGREEDESC" Format="" Width="180" MaxLength="200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="社區申請日" Editor="datebox" FieldName="UPDEBTCHKDAT" Format="" maxlength="0" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="社區申請員工" Editor="text" FieldName="UPDEBTCHKUSR" Format="" maxlength="6" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="社區轉檔日" Editor="datebox" FieldName="UPDEBTDAT" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="集中電信箱(Y)" Editor="infocombobox" FieldName="TELCOMBOX" Format="" maxlength="1" Width="180" EditorOptions="items:[{value:'Y',text:'Y',selected:'true'},{value:'N',text:'N',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="社區聯絡人" Editor="text" FieldName="CONTACT" Format="" Width="180" MaxLength="20" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="社區聯絡電話" Editor="text" FieldName="CONTACTTEL" Format="" maxlength="30" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="公電補助同意書(Y, N)" Editor="infocombobox" FieldName="REMITAGREE" Format="" maxlength="1" Width="180" EditorOptions="items:[{value:'Y',text:'Y',selected:'true'},{value:'N',text:'N',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="公電補助同意書(正副影本)" Editor="text" FieldName="COPYREMIT" Format="" maxlength="2" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="公電補助同意書編號" Editor="text" FieldName="REMITNO" Format="" maxlength="7" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="社區地址" Editor="infocombobox" FieldName="CUTID" Format="" maxlength="2" Width="180" EditorOptions="valueField:'CUTID',textField:'CUTNC',remoteName:'sRT100.RTCounty',tableName:'RTCounty',pageSize:'-1',checkData:true,selectOnly:false,cacheRelationText:false,panelHeight:200" NewRow="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="鄉鎮市" Editor="inforefval" FieldName="TOWNSHIP" Format="" maxlength="10" Width="180" EditorOptions="title:'鄉鎮市',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCtyTown',tableName:'RTCtyTown',columns:[],columnMatches:[{field:'RZONE',value:'ZIP'}],whereItems:[{field:'CUTID',value:'row[CUTID]'}],valueField:'TOWNSHIP',textField:'TOWNSHIP',valueFieldCaption:'鄉鎮市',textFieldCaption:'TOWNSHIP',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="郵遞區號" Editor="text" FieldName="RZONE" Format="" maxlength="5" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="  " Editor="text" FieldName="RADDR" Format="" maxlength="60" Width="430" Span="2" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="可供裝範圍" Editor="text" FieldName="RADDR3" Format="" maxlength="60" Width="180" Span="1" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="規模戶數" Editor="numberbox" FieldName="COMCNT" Format="" maxlength="0" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="合約簽約日" Editor="datebox" FieldName="AGREEDAT" Format="" maxlength="0" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="是否可建置" Editor="infocombobox" FieldName="AGREE" Format="" maxlength="1" Width="180" Visible="False" Span="1" EditorOptions="items:[{value:'Y',text:'Y',selected:'false'},{value:'N',text:'N',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="合約查詢" Editor="infofileupload" EditorOptions="filter:'',isAutoNum:true,upLoadFolder:'download',showButton:true,showLocalFile:false,fileSizeLimited:'50000'" FieldName="UNAGREEDESC" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="True" Width="80" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="機房架構" Editor="inforefval" FieldName="TELCOMBOX" Format="" maxlength="4" Width="180" Visible="True" EditorOptions="title:'機房架構',panelWidth:350,panelHeight:200,remoteName:'sRT100.View_RTCode',tableName:'View_RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'R2'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="社區聯絡人" Editor="text" FieldName="CONTACT" Format="" maxlength="20" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="社區聯絡電話" Editor="text" FieldName="CONTACTTEL" Format="" Width="180" MaxLength="30" />
                         <JQTools:JQFormColumn Alignment="left" Caption="匯款銀行" Editor="inforefval" FieldName="REMITBANK" Format="" maxlength="3" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,remoteName:'sRT100.RTBank',tableName:'RTBank',columns:[],columnMatches:[],whereItems:[],valueField:'HEADNO',textField:'HEADNC',valueFieldCaption:'銀行代號',textFieldCaption:'銀行名稱',cacheRelationText:true,checkData:true,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="匯款分行" Editor="inforefval" FieldName="BANKBRANCH" Format="" maxlength="4" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,remoteName:'sRT100.RTBankBranch',tableName:'RTBankBranch',columns:[{field:'BRANCHNO',title:'分行代號',width:80,align:'left',table:'',isNvarChar:false,queryCondition:''},{field:'BRANCHNC',title:'分行名稱',width:80,align:'left',table:'',isNvarChar:false,queryCondition:''}],columnMatches:[],whereItems:[{field:'HEADNO',value:'row[REMITBANK]'}],valueField:'BRANCHNO',textField:'BRANCHNC',valueFieldCaption:'分行代號',textFieldCaption:'分行名稱',cacheRelationText:true,checkData:true,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="匯款帳號" Editor="text" FieldName="REMITACCOUNT" Format="" maxlength="15" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="匯款分行" Editor="inforefval" FieldName="BANKBRANCH" Format="" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,remoteName:'sRT100.RTBankBranch',tableName:'RTBankBranch',columns:[{field:'BRANCHNO',title:'分行代號',width:80,align:'left',table:'',isNvarChar:false,queryCondition:''},{field:'BRANCHNC',title:'分行名稱',width:80,align:'left',table:'',isNvarChar:false,queryCondition:''}],columnMatches:[],whereItems:[{field:'HEADNO',value:'row[REMITBANK]'}],valueField:'BRANCHNO',textField:'BRANCHNC',valueFieldCaption:'分行代號',textFieldCaption:'分行名稱',cacheRelationText:true,checkData:true,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" MaxLength="4" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="匯款帳號" Editor="text" FieldName="REMITACCOUNT" Format="" Width="180" MaxLength="15" />
                         <JQTools:JQFormColumn Alignment="left" Caption="匯款戶名" Editor="text" FieldName="REMITNAME" Format="" maxlength="50" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="支票抬頭" Editor="text" FieldName="CHECKTITLE" Format="" maxlength="60" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="支票寄送地址(縣市)" Editor="text" FieldName="CCUTID" Format="" maxlength="2" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="支票寄送地址(鄉鎮)" Editor="text" FieldName="CTOWNSHIP" Format="" maxlength="10" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="支票寄送地址" Editor="text" FieldName="CADDR" Format="" maxlength="60" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="支票寄送地址" Editor="infocombobox" FieldName="CCUTID" Format="" Width="180" MaxLength="2" EditorOptions="valueField:'CUTID',textField:'CUTNC',remoteName:'sRT100.View_RTCounty',tableName:'View_RTCounty',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" NewRow="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="鄉鎮市" Editor="inforefval" FieldName="CTOWNSHIP" Format="" maxlength="10" Width="180" EditorOptions="title:'鄉鎮市',panelWidth:350,panelHeight:200,remoteName:'sRT100.View_RTCtyTown',tableName:'View_RTCtyTown',columns:[],columnMatches:[{field:'CZONE',value:'ZIP'}],whereItems:[{field:'CUTID',value:'row[CCUTID]'}],valueField:'TOWNSHIP',textField:'TOWNSHIP',valueFieldCaption:'鄉鎮市',textFieldCaption:'鄉鎮市',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="郵遞區號" Editor="text" FieldName="CZONE" Width="80" MaxLength="0" Span="1" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="  " Editor="text" FieldName="CADDR" Format="" maxlength="60" Width="430" ReadOnly="False" Span="2" />
                         <JQTools:JQFormColumn Alignment="left" Caption="建檔員" Editor="text" FieldName="EUSR" Format="" maxlength="6" Width="180" ReadOnly="True" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="建檔日" Editor="datebox" FieldName="EDAT" Format="" maxlength="0" Width="180" ReadOnly="True" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="修改員" Editor="text" FieldName="UUSR" Format="" maxlength="6" Width="180" ReadOnly="True" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="修改日" Editor="datebox" FieldName="UDAT" Format="" Width="180" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="建檔日" Editor="datebox" FieldName="EDAT" Format="" Width="180" MaxLength="0" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="修改員" Editor="text" FieldName="UUSR" Format="" Width="180" MaxLength="6" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="修改日" Editor="datebox" FieldName="UDAT" maxlength="0" Width="180" Format="" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="個案別" Editor="inforefval" EditorOptions="title:'方案別',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'P5'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代碼',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="COMTYPE" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="True" Width="180" />
                     </Columns>
                 </JQTools:JQDataForm>

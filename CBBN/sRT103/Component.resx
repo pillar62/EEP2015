@@ -124,19 +124,19 @@
     <value>17, 134</value>
   </metadata>
   <metadata name="RTLessorAVSCmtyLine.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>491, 170</value>
+    <value>17, 173</value>
   </metadata>
   <metadata name="ucRTLessorAVSCmtyLine.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>486, 220</value>
+    <value>17, 212</value>
   </metadata>
   <metadata name="View_RTLessorAVSCmtyLine.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
   </metadata>
   <metadata name="autoNumber1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>516, 268</value>
+    <value>17, 290</value>
   </metadata>
   <metadata name="RT1033.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>203, 225</value>
+    <value>17, 251</value>
   </metadata>
   <data name="RT1033.CommandText" xml:space="preserve">
     <value>SELECT A.COMQ1, A.LINEQ1, A.entryno,rtrim(convert(char(6),A.COMQ1)) +'-'+ rtrim(convert(char(6),A.lineQ1)) as Lineeno, 
@@ -179,7 +179,7 @@ A.DROPDAT, A.CANCELDAT
 ORDER BY  A.COMQ1, A.LINEGROUP, A.LINEQ1</value>
   </data>
   <metadata name="cmdRT1031.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>49, 299</value>
+    <value>17, 329</value>
   </metadata>
   <metadata name="infoParameter1.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -191,7 +191,7 @@ ORDER BY  A.COMQ1, A.LINEGROUP, A.LINEQ1</value>
     <value>False</value>
   </metadata>
   <metadata name="cmdRT1032.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>52, 347</value>
+    <value>17, 368</value>
   </metadata>
   <metadata name="infoParameter4.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>

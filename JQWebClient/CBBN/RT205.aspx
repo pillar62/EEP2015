@@ -93,6 +93,13 @@
             }
         }
 
+        function btnRT103Click(val) {
+            var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var comq1 = row.comq1;
+            var lineq1 = row.lineq1;
+            parent.addTab("主線查詢", "CBBN/RT103.aspx?COMQ1=" + comq1);
+        }
+
         function btn1Click(val) {
             var sMODE = "I";
             
@@ -229,6 +236,7 @@
                     <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton" OnClick="btn1Click" Text="新增" />
                     <JQTools:JQToolItem Icon="icon-edit" ItemType="easyui-linkbutton" OnClick="btn2Click" Text="更改" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-view" ItemType="easyui-linkbutton" OnClick="btnViewClick" Text="瀏覽" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" Icon="icon-view" ItemType="easyui-linkbutton" OnClick="btnRT103Click" Text="主線查詢" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn3Click" Text="追 件" Visible="True" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn4Click" Text="派工單" Visible="True" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn5Click" Text="結 案" Visible="True" Icon="icon-edit" />
