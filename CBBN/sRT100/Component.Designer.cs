@@ -201,6 +201,12 @@
             Srvtools.KeyItem keyItem43 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem44 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem45 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem46 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem47 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem48 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem49 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem50 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem51 = new Srvtools.KeyItem();
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTCounty = new Srvtools.InfoCommand(this.components);
@@ -251,6 +257,10 @@
             this.RTDept = new Srvtools.InfoCommand(this.components);
             this.ucRTDept = new Srvtools.UpdateComponent(this.components);
             this.RTCode_D3 = new Srvtools.InfoCommand(this.components);
+            this.RT104P5 = new Srvtools.InfoCommand(this.components);
+            this.RT20541 = new Srvtools.InfoCommand(this.components);
+            this.RT20542 = new Srvtools.InfoCommand(this.components);
+            this.RT20543 = new Srvtools.InfoCommand(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCounty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCtyTown)).BeginInit();
@@ -283,6 +293,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.V_RTConsignee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTDept)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCode_D3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT104P5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT20541)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT20542)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT20543)).BeginInit();
             // 
             // InfoConnection1
             // 
@@ -2557,6 +2571,118 @@
             this.RTCode_D3.SiteControl = false;
             this.RTCode_D3.SiteFieldName = null;
             this.RTCode_D3.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // RT104P5
+            // 
+            this.RT104P5.CacheConnection = false;
+            this.RT104P5.CommandText = "select * from RTCode\r\nWHERE KIND=\'P5\' AND CODE IN (\'7\',\'8\', \'9\', \'B\')\r\nORDER BY P" +
+    "ARM1 ";
+            this.RT104P5.CommandTimeout = 30;
+            this.RT104P5.CommandType = System.Data.CommandType.Text;
+            this.RT104P5.DynamicTableName = false;
+            this.RT104P5.EEPAlias = null;
+            this.RT104P5.EncodingAfter = null;
+            this.RT104P5.EncodingBefore = "Windows-1252";
+            this.RT104P5.EncodingConvert = null;
+            this.RT104P5.InfoConnection = this.InfoConnection1;
+            keyItem46.KeyName = "KIND";
+            keyItem47.KeyName = "CODE";
+            this.RT104P5.KeyFields.Add(keyItem46);
+            this.RT104P5.KeyFields.Add(keyItem47);
+            this.RT104P5.MultiSetWhere = false;
+            this.RT104P5.Name = "RT104P5";
+            this.RT104P5.NotificationAutoEnlist = false;
+            this.RT104P5.SecExcept = null;
+            this.RT104P5.SecFieldName = null;
+            this.RT104P5.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.RT104P5.SelectPaging = false;
+            this.RT104P5.SelectTop = 0;
+            this.RT104P5.SiteControl = false;
+            this.RT104P5.SiteFieldName = null;
+            this.RT104P5.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // RT20541
+            // 
+            this.RT20541.CacheConnection = false;
+            this.RT20541.CommandText = "select c.cusnc, b.emply \r\nfrom RTAreaSales a \r\ninner join RTEmployee b on a.cusid" +
+    " = b.emply \r\ninner join RTobj c on b.cusid = c.cusid \r\nwhere b.tran2 <>\'10\' and " +
+    "a.areaid LIKE \'C%\'\r\n";
+            this.RT20541.CommandTimeout = 30;
+            this.RT20541.CommandType = System.Data.CommandType.Text;
+            this.RT20541.DynamicTableName = false;
+            this.RT20541.EEPAlias = null;
+            this.RT20541.EncodingAfter = null;
+            this.RT20541.EncodingBefore = "Windows-1252";
+            this.RT20541.EncodingConvert = null;
+            this.RT20541.InfoConnection = this.InfoConnection1;
+            this.RT20541.MultiSetWhere = false;
+            this.RT20541.Name = "RT20541";
+            this.RT20541.NotificationAutoEnlist = false;
+            this.RT20541.SecExcept = null;
+            this.RT20541.SecFieldName = null;
+            this.RT20541.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.RT20541.SelectPaging = false;
+            this.RT20541.SelectTop = 0;
+            this.RT20541.SiteControl = false;
+            this.RT20541.SiteFieldName = null;
+            this.RT20541.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // RT20542
+            // 
+            this.RT20542.CacheConnection = false;
+            this.RT20542.CommandText = "SELECT * FROM RTCODE\r\nWHERE KIND = \'R7\'\r\nORDER BY PARM1 ";
+            this.RT20542.CommandTimeout = 30;
+            this.RT20542.CommandType = System.Data.CommandType.Text;
+            this.RT20542.DynamicTableName = false;
+            this.RT20542.EEPAlias = null;
+            this.RT20542.EncodingAfter = null;
+            this.RT20542.EncodingBefore = "Windows-1252";
+            this.RT20542.EncodingConvert = null;
+            this.RT20542.InfoConnection = this.InfoConnection1;
+            keyItem48.KeyName = "KIND";
+            keyItem49.KeyName = "CODE";
+            this.RT20542.KeyFields.Add(keyItem48);
+            this.RT20542.KeyFields.Add(keyItem49);
+            this.RT20542.MultiSetWhere = false;
+            this.RT20542.Name = "RT20542";
+            this.RT20542.NotificationAutoEnlist = false;
+            this.RT20542.SecExcept = null;
+            this.RT20542.SecFieldName = null;
+            this.RT20542.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.RT20542.SelectPaging = false;
+            this.RT20542.SelectTop = 0;
+            this.RT20542.SiteControl = false;
+            this.RT20542.SiteFieldName = null;
+            this.RT20542.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // RT20543
+            // 
+            this.RT20543.CacheConnection = false;
+            this.RT20543.CommandText = "SELECT CODE,CODENC FROM RTCODE \r\nWHERE KIND=\'P6\'\r\n and code in (\'01\',\'02\',\'05\',\'0" +
+    "6\',\'07\',\'09\')";
+            this.RT20543.CommandTimeout = 30;
+            this.RT20543.CommandType = System.Data.CommandType.Text;
+            this.RT20543.DynamicTableName = false;
+            this.RT20543.EEPAlias = null;
+            this.RT20543.EncodingAfter = null;
+            this.RT20543.EncodingBefore = "Windows-1252";
+            this.RT20543.EncodingConvert = null;
+            this.RT20543.InfoConnection = this.InfoConnection1;
+            keyItem50.KeyName = "KIND";
+            keyItem51.KeyName = "CODE";
+            this.RT20543.KeyFields.Add(keyItem50);
+            this.RT20543.KeyFields.Add(keyItem51);
+            this.RT20543.MultiSetWhere = false;
+            this.RT20543.Name = "RT20543";
+            this.RT20543.NotificationAutoEnlist = false;
+            this.RT20543.SecExcept = null;
+            this.RT20543.SecFieldName = null;
+            this.RT20543.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.RT20543.SelectPaging = false;
+            this.RT20543.SelectTop = 0;
+            this.RT20543.SiteControl = false;
+            this.RT20543.SiteFieldName = null;
+            this.RT20543.UpdatedRowSource = System.Data.UpdateRowSource.None;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCounty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCtyTown)).EndInit();
@@ -2589,6 +2715,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.V_RTConsignee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTDept)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCode_D3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT104P5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT20541)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT20542)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT20543)).EndInit();
 
         }
 
@@ -2644,5 +2774,9 @@
         private Srvtools.InfoCommand RTDept;
         private Srvtools.UpdateComponent ucRTDept;
         private Srvtools.InfoCommand RTCode_D3;
+        private Srvtools.InfoCommand RT104P5;
+        private Srvtools.InfoCommand RT20541;
+        private Srvtools.InfoCommand RT20542;
+        private Srvtools.InfoCommand RT20543;
     }
 }
