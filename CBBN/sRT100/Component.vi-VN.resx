@@ -118,8 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="RT104P5" type="System.Drawing.Point, System.Drawing">
-    <value>843, 336</value>
+  <data name="RT20543" type="System.Drawing.Point, System.Drawing">
+    <value>856, 445</value>
+  </data>
+  <data name="RT20542" type="System.Drawing.Point, System.Drawing">
+    <value>854, 408</value>
+  </data>
+  <data name="RT20541" type="System.Drawing.Point, System.Drawing">
+    <value>854, 374</value>
   </data>
   <data name="若要在類別中加入元件，請從工具箱拖所需元件，並利用 [屬性] 視窗設定它們的屬性。若要建立類別的方法與事件，請按這裡切換到程式碼檢視。" type="System.Drawing.Point, System.Drawing">
     <value>0, 351</value>
@@ -273,5 +279,8 @@
   </data>
   <data name="RTCode_D3" type="System.Drawing.Point, System.Drawing">
     <value>847, 296</value>
+  </data>
+  <data name="RT104P5" type="System.Drawing.Point, System.Drawing">
+    <value>843, 336</value>
   </data>
 </root>

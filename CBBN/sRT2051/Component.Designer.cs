@@ -70,7 +70,7 @@
             // RTFaqM
             // 
             this.RTFaqM.CacheConnection = false;
-            this.RTFaqM.CommandText = "SELECT dbo.[RTFaqM].* FROM dbo.[RTFaqM]";
+            this.RTFaqM.CommandText = "SELECT A.* , B.CASEKIND\r\nFROM RTFaqM A\r\nLEFT JOIN V_RT205 B ON B.CUSID=A.CUSID";
             this.RTFaqM.CommandTimeout = 30;
             this.RTFaqM.CommandType = System.Data.CommandType.Text;
             this.RTFaqM.DynamicTableName = false;

@@ -14,7 +14,7 @@
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
             <JQTools:JQDataGrid ID="dataGridView" data-options="pagination:true,view:commandview" RemoteName="sRT207.RTInvMonth" runat="server" AutoApply="True"
                 DataMember="RTInvMonth" Pagination="True" QueryTitle="查詢條件" EditDialogID="JQDialog1"
-                Title="發票字軌維護" QueryMode="Panel" ReportFileName="~/CBBN/RT207R.rdlc">
+                Title="發票字軌維護" QueryMode="Panel" ReportFileName="~/CBBN/RT207R.rdlc" DeleteCommandVisible="False" UpdateCommandVisible="False" ViewCommandVisible="False">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="right" Caption="年份" Editor="numberbox" FieldName="INVYEAR" Format="" Visible="true" Width="60" />
                     <JQTools:JQGridColumn Alignment="left" Caption="月份" Editor="text" FieldName="INVMONTH" Format="" Visible="true" Width="60" />
@@ -25,14 +25,11 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="三聯發票止號" Editor="text" FieldName="INVNOE3" Format="" MaxLength="10" Visible="true" Width="120" />
                 </Columns>
                 <TooItems>
-                    <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton"
-                        OnClick="insertItem" Text="新增" />
-                    <JQTools:JQToolItem Icon="icon-save" ItemType="easyui-linkbutton" OnClick="apply"
-                        Text="存檔" />
-                    <JQTools:JQToolItem Icon="icon-undo" ItemType="easyui-linkbutton" OnClick="cancel"
-                        Text="取消"  />
-                    <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
-                        OnClick="openQuery" Text="查詢" />
+                    <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton" OnClick="insertItem" Text="新增" />
+                    <JQTools:JQToolItem Icon="icon-edit" ItemType="easyui-linkbutton" OnClick="updateItem" Text="修改" Visible="True" />
+                    <JQTools:JQToolItem Icon="icon-remove" ItemType="easyui-linkbutton" OnClick="deleteItem" Text="刪除" Visible="True"  />
+                    <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton" OnClick="viewItem" Text="瀏覽" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="匯出Excel" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="exportReport" Text="列印" Visible="True" />
                 </TooItems>
                 <QueryColumns>

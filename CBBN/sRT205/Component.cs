@@ -28,6 +28,7 @@ namespace sRT205
             return string.Format("{0:yyMMdd}", DateTime.Now.Date);
         }
 
+       
         public object[] smRT2055(object[] objParam)
         {
             var ss = (string)objParam[0];
@@ -151,6 +152,64 @@ namespace sRT205
             {
                 return new object[] { 0, "無法執行客訴單作廢作業,錯誤訊息：" + ex };
             }
+        }
+        public object[] smRT20531(object[] objParam)
+        {
+            var ss = (string)objParam[0];
+            var sdata = ss.Split(',');
+            //開啟資料連接
+            IDbConnection conn = cmd.Connection;
+            conn.Open();
+            //設定輸入參數的值
+            try
+            {
+                string selectSql = "select * FROM RTFaqAdd WHERE caseno='" + sdata[0] + "' and entryno=" + sdata[1];
+                cmd.CommandText = selectSql;
+                DataSet ds = cmd.ExecuteDataSet();
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    if (ds.Tables[0].Rows[0]["CANCELDAT"].ToString() != "")
+                    {
+                        return new object[] { 0, "客訴追件已作廢，不可重覆執行" };
+                    }
+                }
+
+                /*取得統計的結果，並將結果返回*/
+                selectSql = " update RTFaqAdd set canceldat=getdate(),cancelusr='" + sdata[2] + "' WHERE caseno='" + sdata[0] + "' and entryno=" + sdata[1];
+                cmd.CommandText = selectSql;
+                double ii = cmd.ExecuteNonQuery();
+                return new object[] { 0, "客訴追件作廢成功" + selectSql };
+            }
+            catch (Exception ex)
+            {
+                return new object[] { 0, "無法執行追件作廢作業,錯誤訊息：" + ex };
+            }
+        }
+
+        private void ucRTFaqAdd_BeforeInsert(object sender, UpdateComponentBeforeInsertEventArgs e)
+        {
+            //在新增之前取得最大流水號 加一寫入項次
+            object obj = ucRTFaqAdd.GetFieldCurrentValue("CASENO");
+            string caseno = obj.ToString();
+            string ssql = "select max(entryno) AS maxentryno from RTFaqAdd where caseno = '" + caseno + "' ";
+            int ii = 0;
+            cmd.CommandText = ssql;
+            IDbConnection conn = cmd.Connection;
+            conn.Open();
+            DataSet ds = cmd.ExecuteDataSet();
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                if (ds.Tables[0].Rows[0]["maxentryno"].ToString() != "")
+                {
+                    string ss = ds.Tables[0].Rows[0]["maxentryno"].ToString();
+                    ii = Int32.Parse(ss);
+                }
+            }
+
+            ii++;
+            ucRTFaqAdd.SetFieldValue("ENTRYNO", ii);
         }
     }
 }

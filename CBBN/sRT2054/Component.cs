@@ -89,11 +89,11 @@ namespace sRT2054
                     if (ds.Tables[0].Rows[0]["finisheng"].ToString() == "" && ds.Tables[0].Rows[0]["finishcons"].ToString() == "")
                     {
                         /*取得統計的結果，並將結果返回*/
-                        selectSql = " update RTSndWork set finishdat=convert(datetime,convert(varchar(10),getdate(),111)),finishusr='" + sdata[2] + "',finishtyp='" + sdata[1] + "', finisheng=assigneng, finishcons=assigncons WHERE workno='" + sdata[0] + "' ";
+                        selectSql = " update RTSndWork set finishdat=getdate(), finishusr='" + sdata[2] + "',finishtyp='" + sdata[1] + "', finisheng=assigneng, finishcons=assigncons WHERE workno='" + sdata[0] + "' ";
                     }
                     else
                     {
-                        selectSql = " update RTSndWork set finishdat=convert(datetime,convert(varchar(10),getdate(),111)),finishusr='" + sdata[2] + "',finishtyp='" + sdata[1] + "' WHERE workno='" + sdata[0] + "' ";
+                        selectSql = " update RTSndWork set finishdat=getdate(),finishusr='" + sdata[2] + "',finishtyp='" + sdata[1] + "' WHERE workno='" + sdata[0] + "' ";
                     }
                     cmd.CommandText = selectSql;
                     double ii = cmd.ExecuteNonQuery();

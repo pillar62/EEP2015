@@ -673,7 +673,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             // xrLabel15
             // 
             this.xrLabel15.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.sndwrkdat", "{0:yyyy/MM/dd}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.sndwrkdat", "{0:yyyy/MM/dd HH:mm}")});
             this.xrLabel15.Font = new System.Drawing.Font("標楷體", 10F);
             this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(358.0416F, 280F);
             this.xrLabel15.Name = "xrLabel15";
@@ -706,7 +706,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             // xrLabel11
             // 
             this.xrLabel11.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.RCVDAT", "{0:yyyy/MM/dd}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.RCVDAT", "{0:yyyy/MM/dd HH:mm}")});
             this.xrLabel11.Font = new System.Drawing.Font("標楷體", 10F);
             this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(600.96F, 219.7082F);
             this.xrLabel11.Name = "xrLabel11";
@@ -1549,11 +1549,11 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel67.LocationFloat = new DevExpress.Utils.PointFloat(290F, 100F);
             this.xrLabel67.Name = "xrLabel67";
             this.xrLabel67.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel67.SizeF = new System.Drawing.SizeF(60.00003F, 14F);
+            this.xrLabel67.SizeF = new System.Drawing.SizeF(61F, 14F);
             this.xrLabel67.StyleName = "FieldCaption";
             this.xrLabel67.StylePriority.UseFont = false;
             this.xrLabel67.StylePriority.UseForeColor = false;
-            this.xrLabel67.Text = "第二戶";
+            this.xrLabel67.Text = "用戶速率";
             // 
             // xrLabel39
             // 
@@ -1803,14 +1803,13 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             // xrLabel59
             // 
             this.xrLabel59.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.SECONDCASE")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.SPEED")});
             this.xrLabel59.Font = new System.Drawing.Font("標楷體", 10F);
             this.xrLabel59.LocationFloat = new DevExpress.Utils.PointFloat(358.0416F, 99.91998F);
             this.xrLabel59.Name = "xrLabel59";
             this.xrLabel59.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel59.SizeF = new System.Drawing.SizeF(157.9166F, 16.25F);
             this.xrLabel59.StylePriority.UseFont = false;
-            this.xrLabel59.Text = "xrLabel59";
             // 
             // xrLabel62
             // 

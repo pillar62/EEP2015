@@ -135,7 +135,7 @@
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
             <JQTools:JQDataGrid ID="dataGridView" data-options="pagination:true,view:commandview" RemoteName="sRT2054.RTSndWork" runat="server" AutoApply="True"
                 DataMember="RTSndWork" Pagination="True" QueryTitle="Query" EditDialogID="JQDialog1"
-                Title="客訴派工單維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True" OnLoadSuccess="dgOnloadSuccess" OnSelect="MySelect">
+                Title="客訴派工單維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="False" OnLoadSuccess="dgOnloadSuccess" OnSelect="MySelect">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="派工單號" Editor="text" FieldName="WORKNO" Format="" MaxLength="12" Visible="true" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="客訴單號" Editor="text" FieldName="LINKNO" Format="" MaxLength="15" Visible="true" Width="120" />
@@ -150,19 +150,16 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="派工日" Editor="datebox" FieldName="SNDWRKDAT" Format="yyyy/mm/dd HH:MM:SS" MaxLength="0" Visible="true" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="完工人員" Editor="infocombobox" FieldName="FINISHUSR" Format="" Visible="true" Width="120" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" MaxLength="6" />
                     <JQTools:JQGridColumn Alignment="left" Caption="完工日" Editor="datebox" FieldName="FINISHDAT" Format="yyyy/mm/dd HH:MM:SS" MaxLength="0" Visible="true" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="完工方式 (P9)" Editor="inforefval" FieldName="FINISHTYP" Format="" Visible="true" Width="120" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'P9'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'CODE',textFieldCaption:'CODENC',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" MaxLength="2" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="完工方式" Editor="inforefval" FieldName="FINISHTYP" Format="" Visible="true" Width="120" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'P9'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'CODE',textFieldCaption:'CODENC',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" MaxLength="2" />
                     <JQTools:JQGridColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="CANCELDAT" Format="yyyy/mm/dd HH:MM:SS" MaxLength="0" Visible="true" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="comtype" Editor="text" FieldName="comtype" Visible="False" Width="80" MaxLength="0" />
                 </Columns>
                 <TooItems>
-                    <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton"
-                        OnClick="insertItem" Text="新增" />
-                    <JQTools:JQToolItem Icon="icon-save" ItemType="easyui-linkbutton" OnClick="apply"
-                        Text="存檔" />
-                    <JQTools:JQToolItem Icon="icon-undo" ItemType="easyui-linkbutton" OnClick="cancel"
-                        Text="取消"  />
-                    <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
-                        OnClick="openQuery" Text="查詢" />
+                    <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton" OnClick="insertItem" Text="新增" />
+                    <JQTools:JQToolItem Icon="icon-edit" ItemType="easyui-linkbutton" OnClick="updateItem" Text="修改" Visible="True" />
+                    <JQTools:JQToolItem Icon="icon-remove" ItemType="easyui-linkbutton" OnClick="deleteItem" Text="刪除" Visible="True"  />
+                    <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton" OnClick="viewItem" Text="瀏覽" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="匯出Excel" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn1Click" Text="作 廢" Visible="True" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn2Click" Text="列 印" Visible="True" Icon="icon-print" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn3Click" Text="完 工" Visible="True" Icon="icon-ok" />
@@ -181,8 +178,8 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="預定施工員工" Editor="inforefval" FieldName="ASSIGNENG" Format="" maxlength="6" Width="180" EditorOptions="title:'員工',panelWidth:350,panelHeight:200,remoteName:'sRT100.RT20542',tableName:'RT20542',columns:[],columnMatches:[],whereItems:[],valueField:'CODE',textField:'CODENC',valueFieldCaption:'編號',textFieldCaption:'姓名',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
                         <JQTools:JQFormColumn Alignment="left" Caption="預定施工經銷商" Editor="inforefval" FieldName="ASSIGNCONS" Format="" maxlength="10" Width="180" EditorOptions="title:'經銷商',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTObj',tableName:'RTObj',columns:[],columnMatches:[],whereItems:[],valueField:'CUSID',textField:'SHORTNC',valueFieldCaption:'編號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
                         <JQTools:JQFormColumn Alignment="left" Caption="備註" Editor="textarea" FieldName="MEMO" Format="" maxlength="600" Width="500" EditorOptions="height:60" Span="2" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="派工人員" Editor="infocombobox" FieldName="SNDWRKUSR" Format="" maxlength="6" Width="180" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="派工日" Editor="datebox" FieldName="SNDWRKDAT" Format="yyyy/mm/dd HH:MM:SS" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="派工人員" Editor="infocombobox" FieldName="SNDWRKUSR" Format="" maxlength="6" Width="180" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="派工日" Editor="datebox" FieldName="SNDWRKDAT" Format="yyyy/mm/dd HH:MM:SS" Width="180" EditorOptions="dateFormat:'datetime',showTimeSpinner:true,showSeconds:false,editable:true" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="實際完工工桯師" Editor="inforefval" FieldName="FINISHENG" Format="" maxlength="6" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RT20541',tableName:'RT20541',columns:[],columnMatches:[],whereItems:[],valueField:'emply',textField:'cusnc',valueFieldCaption:'員工編號',textFieldCaption:'員工姓名',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
                         <JQTools:JQFormColumn Alignment="left" Caption="實際完工經銷商" Editor="inforefval" FieldName="FINISHCONS" Format="" maxlength="10" Width="180" EditorOptions="title:'經銷商',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTObj',tableName:'RTObj',columns:[],columnMatches:[],whereItems:[],valueField:'CUSID',textField:'SHORTNC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
                         <JQTools:JQFormColumn Alignment="left" Caption="完工人員" Editor="infocombobox" FieldName="FINISHUSR" Format="" maxlength="6" Width="180" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" ReadOnly="True" />
@@ -224,6 +221,8 @@
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="自動編號" FieldName="WORKNO" RemoteMethod="True" />
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="_usercode" FieldName="SNDWRKUSR" RemoteMethod="False" />
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="_usercode" FieldName="UUSR" RemoteMethod="True" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="_today2" FieldName="SNDWRKDAT" RemoteMethod="False" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="_today2" FieldName="UDAT" RemoteMethod="False" />
                     </Columns>
                 </JQTools:JQDefault>
                 <JQTools:JQValidate ID="validateMaster" runat="server" BindingObjectID="dataFormMaster" BorderStyle="NotSet" ClientIDMode="Inherit" Enabled="True" EnableTheming="True" EnableViewState="True" ViewStateMode="Inherit">

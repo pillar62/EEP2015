@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Srvtools.Service service1 = new Srvtools.Service();
-            Srvtools.Service service2 = new Srvtools.Service();
-            Srvtools.Service service3 = new Srvtools.Service();
-            Srvtools.KeyItem keyItem1 = new Srvtools.KeyItem();
+            Srvtools.Service service25 = new Srvtools.Service();
+            Srvtools.Service service26 = new Srvtools.Service();
+            Srvtools.Service service27 = new Srvtools.Service();
+            Srvtools.Service service28 = new Srvtools.Service();
+            Srvtools.KeyItem keyItem5 = new Srvtools.KeyItem();
             Srvtools.FieldAttr fieldAttr1 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr2 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr3 = new Srvtools.FieldAttr();
@@ -56,11 +57,11 @@
             Srvtools.FieldAttr fieldAttr21 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr22 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr23 = new Srvtools.FieldAttr();
-            Srvtools.KeyItem keyItem2 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem1 = new Srvtools.KeyItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Component));
+            Srvtools.KeyItem keyItem2 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem3 = new Srvtools.KeyItem();
-            Srvtools.KeyItem keyItem4 = new Srvtools.KeyItem();
-            Srvtools.KeyItem keyItem5 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem6 = new Srvtools.KeyItem();
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTFaqM = new Srvtools.InfoCommand(this.components);
@@ -86,18 +87,22 @@
             // 
             // serviceManager1
             // 
-            service1.DelegateName = "smRT2055";
-            service1.NonLogin = false;
-            service1.ServiceName = "smRT2055";
-            service2.DelegateName = "smRT2056";
-            service2.NonLogin = false;
-            service2.ServiceName = "smRT2056";
-            service3.DelegateName = "smRT2057";
-            service3.NonLogin = false;
-            service3.ServiceName = "smRT2057";
-            this.serviceManager1.ServiceCollection.Add(service1);
-            this.serviceManager1.ServiceCollection.Add(service2);
-            this.serviceManager1.ServiceCollection.Add(service3);
+            service25.DelegateName = "smRT2055";
+            service25.NonLogin = false;
+            service25.ServiceName = "smRT2055";
+            service26.DelegateName = "smRT2056";
+            service26.NonLogin = false;
+            service26.ServiceName = "smRT2056";
+            service27.DelegateName = "smRT2057";
+            service27.NonLogin = false;
+            service27.ServiceName = "smRT2057";
+            service28.DelegateName = "smRT20531";
+            service28.NonLogin = false;
+            service28.ServiceName = "smRT20531";
+            this.serviceManager1.ServiceCollection.Add(service25);
+            this.serviceManager1.ServiceCollection.Add(service26);
+            this.serviceManager1.ServiceCollection.Add(service27);
+            this.serviceManager1.ServiceCollection.Add(service28);
             // 
             // InfoConnection1
             // 
@@ -116,8 +121,8 @@
             this.RTFaqM.EncodingBefore = "Windows-1252";
             this.RTFaqM.EncodingConvert = null;
             this.RTFaqM.InfoConnection = this.InfoConnection1;
-            keyItem1.KeyName = "CASENO";
-            this.RTFaqM.KeyFields.Add(keyItem1);
+            keyItem5.KeyName = "CASENO";
+            this.RTFaqM.KeyFields.Add(keyItem5);
             this.RTFaqM.MultiSetWhere = false;
             this.RTFaqM.Name = "RTFaqM";
             this.RTFaqM.NotificationAutoEnlist = false;
@@ -367,8 +372,8 @@
             this.View_RTFaqM.EncodingBefore = "Windows-1252";
             this.View_RTFaqM.EncodingConvert = null;
             this.View_RTFaqM.InfoConnection = this.InfoConnection1;
-            keyItem2.KeyName = "CASENO";
-            this.View_RTFaqM.KeyFields.Add(keyItem2);
+            keyItem1.KeyName = "CASENO";
+            this.View_RTFaqM.KeyFields.Add(keyItem1);
             this.View_RTFaqM.MultiSetWhere = false;
             this.View_RTFaqM.Name = "View_RTFaqM";
             this.View_RTFaqM.NotificationAutoEnlist = false;
@@ -393,8 +398,8 @@
             this.RT205.EncodingBefore = "Windows-1252";
             this.RT205.EncodingConvert = null;
             this.RT205.InfoConnection = this.InfoConnection1;
-            keyItem3.KeyName = "caseno";
-            this.RT205.KeyFields.Add(keyItem3);
+            keyItem2.KeyName = "caseno";
+            this.RT205.KeyFields.Add(keyItem2);
             this.RT205.MultiSetWhere = false;
             this.RT205.Name = "RT205";
             this.RT205.NotificationAutoEnlist = false;
@@ -419,10 +424,10 @@
             this.RTFaqAdd.EncodingBefore = "Windows-1252";
             this.RTFaqAdd.EncodingConvert = null;
             this.RTFaqAdd.InfoConnection = this.InfoConnection1;
-            keyItem4.KeyName = "CASENO";
-            keyItem5.KeyName = "ENTRYNO";
-            this.RTFaqAdd.KeyFields.Add(keyItem4);
-            this.RTFaqAdd.KeyFields.Add(keyItem5);
+            keyItem3.KeyName = "CASENO";
+            keyItem6.KeyName = "ENTRYNO";
+            this.RTFaqAdd.KeyFields.Add(keyItem3);
+            this.RTFaqAdd.KeyFields.Add(keyItem6);
             this.RTFaqAdd.MultiSetWhere = false;
             this.RTFaqAdd.Name = "RTFaqAdd";
             this.RTFaqAdd.NotificationAutoEnlist = false;
@@ -451,6 +456,7 @@
             this.ucRTFaqAdd.TransIsolationLevel = System.Data.IsolationLevel.ReadCommitted;
             this.ucRTFaqAdd.UseTranscationScope = false;
             this.ucRTFaqAdd.WhereMode = Srvtools.WhereModeType.Keyfields;
+            this.ucRTFaqAdd.BeforeInsert += new Srvtools.UpdateComponentBeforeInsertEventHandler(this.ucRTFaqAdd_BeforeInsert);
             // 
             // autoNumber1
             // 

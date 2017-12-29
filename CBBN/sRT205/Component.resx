@@ -133,7 +133,7 @@
     <value>17, 95</value>
   </metadata>
   <metadata name="RT205.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>388, 101</value>
+    <value>393, 101</value>
   </metadata>
   <data name="RT205.CommandText" xml:space="preserve">
     <value>select a.caseno, a.comtype, case when p.consignee ='12973008' then '原遠端戶' else n.groupnc end AS ANGENCY, n.leader
@@ -155,7 +155,7 @@ and (worktype ='01' or worktype ='09') group by linkno) m on m.linkno = h.linkno
 left outer join RTEmployee i on i.emply = h.assigneng 
 left outer join RTObj k on k.cusid = h.assigncons 
 left outer join (select linkno, count(*) as finishnum from RTSndwork 
- where finishdat is null and canceldat is null and (worktype ='01' or worktype ='09') 
+ where finishdat is null and canceldat is null 
  group by linkno) l on a.caseno = l.linkno 
  left outer join RTSparq499Cust p on p.comq1 = c.comq1 and p.lineq1 = c.lineq1 and p.cusid = c.cusid and c.comtype ='6' 
 where a.caseno &gt; '' 

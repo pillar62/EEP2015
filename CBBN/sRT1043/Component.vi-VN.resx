@@ -172,19 +172,4 @@
   <data name="cmdRT10434" type="System.Drawing.Point, System.Drawing">
     <value>18, 369</value>
   </data>
-  <data name="autoNumber1" type="System.Drawing.Point, System.Drawing">
-    <value>387, 182</value>
-  </data>
-  <data name="cmdRT10436" type="System.Drawing.Point, System.Drawing">
-    <value>17, 445</value>
-  </data>
-  <data name="cmdRT10437" type="System.Drawing.Point, System.Drawing">
-    <value>20, 484</value>
-  </data>
-  <data name="cmdRT10438" type="System.Drawing.Point, System.Drawing">
-    <value>18, 519</value>
-  </data>
-  <data name="cmdRT10439" type="System.Drawing.Point, System.Drawing">
-    <value>19, 560</value>
-  </data>
 </root>
