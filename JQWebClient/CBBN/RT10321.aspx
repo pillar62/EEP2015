@@ -215,8 +215,7 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="實際安裝工程師1(經銷時空白)" Editor="text" FieldName="REALENGINEER" Format="" maxlength="6" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="實際安裝經銷商" Editor="text" FieldName="REALCONSIGNEE" Format="" maxlength="10" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="DROPDAT" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="撤銷原因說明
-" Editor="text" FieldName="DROPDESC" Format="" maxlength="200" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="撤銷原因說明" Editor="text" FieldName="DROPDESC" Format="" maxlength="200" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="結案日期" Editor="datebox" FieldName="CLOSEDAT" Format="" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="獎金結算年月(YYYYMM)(有DAT時不可作廢或異動)" Editor="text" FieldName="BONUSCLOSEYM" Format="" maxlength="6" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="獎金計算日" Editor="datebox" FieldName="BONUSCLOSEDAT" Format="" Width="180" />

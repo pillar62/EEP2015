@@ -16,7 +16,14 @@
                  $("#INVDAT_Query").val(row.dt_s);
              }             
              $('#dd').hide();
-             
+             var sWhere = " A.BATCH = '" + row.maxbatch + "'";
+             $('#dataGridMaster').datagrid('setWhere', sWhere);//篩選資料           
+         }
+
+         //發票列印
+         function btnINVOClick(val) {
+             var WhereString = "";
+             exportDevReport("#dataGridMaster", "sRT306.cmdRT3061", "cmdRT3061", "~/CBBN/DevReportForm/RT306RF.aspx", WhereString);
          }
     </script>
 </head>
@@ -25,8 +32,8 @@
         <div>
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
             <JQTools:JQDataGrid ID="dataGridMaster" data-options="pagination:true,view:commandview" RemoteName="sRT306.cmdRT3061" runat="server" AutoApply="False"
-                DataMember="cmdRT3061" Pagination="False" QueryTitle="Query"
-                Title="發票列印" AllowDelete="False" AllowInsert="False" AllowUpdate="False" QueryMode="Panel" AlwaysClose="True" AllowAdd="False" ViewCommandVisible="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="False" TotalCaption="Total:" UpdateCommandVisible="False" ReportFileName="/DevReportForm/RT306RF.aspx">
+                DataMember="cmdRT3061" Pagination="True" QueryTitle="發票列印"
+                Title="發票列印" AllowDelete="False" AllowInsert="False" AllowUpdate="False" QueryMode="Panel" AlwaysClose="True" AllowAdd="False" ViewCommandVisible="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" ReportFileName="/DevReportForm/RT306RF.aspx">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="發票號碼" Editor="text" FieldName="INVNO" Width="90" MaxLength="10" />
                     <JQTools:JQGridColumn Alignment="left" Caption="發票抬頭" Editor="text" FieldName="INVTITLE" Width="90" />
@@ -61,6 +68,8 @@
                 <TooItems>
                     <JQTools:JQToolItem Enabled="True" Icon="icon-search" ItemType="easyui-linkbutton" OnClick="openQuery" Text="Query" Visible="False" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="Export" Visible="True" />
+                    
+                    <JQTools:JQToolItem Enabled="True" Icon="icon-print" ItemType="easyui-linkbutton" OnClick="btnINVOClick" Text="列印發票" Visible="True" />
                     
                 </TooItems>
                 <QueryColumns>

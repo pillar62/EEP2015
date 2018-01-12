@@ -104,5 +104,71 @@ namespace sRT104
                 return new object[] { 0, "無法執行用戶申請作廢作業,錯誤訊息" + ex };
             }
         }
+
+        private void ucRTLessorAVSCust_BeforeModify(object sender, UpdateComponentBeforeModifyEventArgs e)
+        {
+            //取得保證金序號 以及 報竣日
+            string sgtserial = ucRTLessorAVSCust.GetFieldOldValue("GTSERIAL").ToString();
+            string sDOCKETDAT  = ucRTLessorAVSCust.GetFieldOldValue("DOCKETDAT").ToString();
+            string ss = "";
+            if (sgtserial== "" && sDOCKETDAT!="")
+            {
+                string ssql = " select isnull(max(gtserial),'') as maxgtserial from RTlessoravsCust where gtserial <> '' and substring(gtserial, 1,3) = 'AVS' ";
+
+                //開啟資料連接
+                IDbConnection conn = cmdRT104C.Connection;
+                conn.Open();
+                cmd.CommandText = ssql;
+                DataSet ds = cmd.ExecuteDataSet();
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    string ss1 = ds.Tables[0].Rows[0]["maxgtserial"].ToString();
+                    if (ss1 == "")
+                    {
+                        ss = "AVS000000001";
+                    }
+                    else
+                    {
+                        ss = "00000000" + (Convert.ToInt32((ss1.Substring(3, 9)) + 1).ToString());
+                        ss = "AVS" + ss.Substring(ss.Length-9, 9);
+                    }
+                }
+                ucRTLessorAVSCust.SetFieldValue("GTSERIAL", ss);
+            }
+        }
+
+        private void ucRTLessorAVSCust_BeforeInsert(object sender, UpdateComponentBeforeInsertEventArgs e)
+        {
+            //取得保證金序號 以及 報竣日
+            string sgtserial = ucRTLessorAVSCust.GetFieldCurrentValue("GTSERIAL").ToString();
+            string sDOCKETDAT = ucRTLessorAVSCust.GetFieldCurrentValue("DOCKETDAT").ToString();
+            string ss = "";
+            if (sgtserial == "" && sDOCKETDAT != "")
+            {
+                string ssql = " select isnull(max(gtserial),'') as maxgtserial from RTlessoravsCust where gtserial <> '' and substring(gtserial, 1,3) = 'AVS' ";
+
+                //開啟資料連接
+                IDbConnection conn = cmdRT104C.Connection;
+                conn.Open();
+                cmd.CommandText = ssql;
+                DataSet ds = cmd.ExecuteDataSet();
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    string ss1 = ds.Tables[0].Rows[0]["maxgtserial"].ToString();
+                    if (ss1 == "")
+                    {
+                        ss = "AVS000000001";
+                    }
+                    else
+                    {
+                        ss = "00000000" + (Convert.ToInt32((ss1.Substring(3, 9)) + 1).ToString());
+                        ss = "AVS" + ss.Substring(ss.Length - 9, 9);
+                    }
+                }
+                ucRTLessorAVSCust.SetFieldValue("GTSERIAL", ss);
+            }
+        }    
     }
 }

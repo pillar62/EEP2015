@@ -29,6 +29,7 @@
                     //var rows = $.parseJSON(data);//將JSon轉會到Object類型提供給Grid顯示
                     //$('#dataGridMaster0').datagrid('loadData', rows);//通過loadData方法清除掉原有Grid中的舊有資料並填補新資料
                     alert(data);
+                    parent.addTab("發票列印", "CBBN/RT306.aspx");
                 }
             });
         }

@@ -189,8 +189,7 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="SNDPRTNO" Editor="text" FieldName="SNDPRTNO" Format="" maxlength="12" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="SNDWORKDAT" Editor="datebox" FieldName="SNDWORKDAT" Format="" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="SNDCLOSEDAT" Editor="datebox" FieldName="SNDCLOSEDAT" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="發包通知人員
-" Editor="text" FieldName="SNDUSR" Format="" maxlength="6" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="發包通知人員" Editor="text" FieldName="SNDUSR" Format="" maxlength="6" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="建檔員" Editor="text" FieldName="EUSR" Format="" maxlength="6" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="輸入日期" Editor="datebox" FieldName="EDAT" Format="" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="修改員" Editor="text" FieldName="UUSR" Format="" maxlength="6" Width="180" />

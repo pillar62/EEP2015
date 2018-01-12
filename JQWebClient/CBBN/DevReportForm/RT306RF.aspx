@@ -1,13 +1,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeFile="RT306RF.aspx.cs"
     Inherits="RT306RF" %>
 <%@ Register Assembly="EFClientTools" Namespace="EFClientTools" TagPrefix="EFClientTools" %>
-
-
-<%@ Register assembly="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" namespace="Microsoft.Reporting.WebForms" tagprefix="rsweb" %>
-
-
 <%@ Register assembly="DevExpress.XtraReports.v15.2.Web, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.XtraReports.Web" tagprefix="dx" %>
-
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">

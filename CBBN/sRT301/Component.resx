@@ -118,25 +118,25 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="serviceManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 173</value>
-  </metadata>
-  <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 134</value>
   </metadata>
+  <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 251</value>
+  </metadata>
   <metadata name="RTLessorAVSCust.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
+    <value>17, 173</value>
   </metadata>
   <metadata name="ucRTLessorAVSCust.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>17, 95</value>
   </metadata>
   <metadata name="View_RTLessorAVSCust.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>637, 17</value>
+    <value>17, 56</value>
   </metadata>
   <metadata name="cmdRT301.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>168, 173</value>
+    <value>17, 212</value>
   </metadata>
   <data name="cmdRT301.CommandText" xml:space="preserve">
-    <value>SELECT	a.COMQ1, a.LINEQ1, a.CUSID, 
+    <value>SELECT	a.COMQ1, a.LINEQ1, a.CUSID, A.COMTYPE,
 RTRIM(LTRIM(CONVERT(char(6), a.COMQ1))) + '-' + RTRIM(LTRIM(CONVERT(char(6), a.LINEQ1))) as COMLINE, 
 c.COMN, case when len(a.CUSNC) &gt; 4 then substring(a.CUSNC,1,4)+'...' else a.CUSNC end AS CNM, a.SOCIALID,
 a.paycycle, e.CODENC, a.payTYPE, f.CODENC, 

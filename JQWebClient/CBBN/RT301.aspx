@@ -13,58 +13,46 @@
             $("#RTLessorAVSCustAR").datagrid('setWhere', "RTLessorAVSCustAR.cusid='" + ss + "'"); //客戶應收付單 
         }
 
+        function btnRT205Click(val) {
+            var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.CUSID;
+            var comq1 = row.COMQ1;
+            var linq1 = row.LINEQ1;
+            var comtype = '7';
+
+            parent.addTab("用戶客服單資料維護-RT205", "CBBN/RT205.aspx?cusid=" + ss + "&comq1=" + comq1 + "&lineq1=" + linq1 + "&comtype=" + comtype);
+        }
+
         function queryGrid(dg) { //查詢后添加固定條件
             if ($(dg).attr('id') == 'dataGridMaster') {
                 var where = $(dg).datagrid('getWhere');
+
                 if (where != "") {
                     where = " 1=1 ";
-                    COMQ1 = $("#COMQ1_Query").val(); //社區名稱
-                    LINEQ1 = $("#LINEQ1_Query").val(); //主線
-                    APPLYDAT = $("#APPLYDAT_Query").combobox('getValue'); //用戶進度
                     paycycle = $("#paycycle_Query").refval('getValue'); //繳款周期
                     payTYPE = $("#payTYPE_Query").refval('getValue'); //繳款方式
-                    TEL = $("#TEL_Query").val(); //電話
                     SOCIALID = $("#SOCIALID_Query").val(); //身分證
                     FINISHDAT = $("#FINISHDAT_Query").datebox('getValue'); //到期日起
                     DUEDAT = $("#DUEDAT_Query").datebox('getValue'); //到期日迄
                     COMN = $("#COMN_Query").val(); //社區名稱
-                    LINEIP = $("#LINEIP_Query").val(); //主線IP
-                    LINETEL = $("#LINETEL_Query").val(); //主線附掛電話
+                    CNM = $("#CNM_Query").val(); //用戶名稱
+                    ADR = $("#LINEIP_Query").val(); //裝機地址
 
-                    if (COMQ1 != "")
-                        where = where + " and a.COMQ1 = " + COMQ1;
-                    if (LINEQ1 != "")
-                        where = where + " and a.LINEQ1 = " + LINEQ1;
-                    //
-                    if (APPLYDAT == "1")
-                        where = where + " and (a.FINISHDAT IS NULL and a.dropdat is null and a.canceldat is null) ";
-                    if (APPLYDAT == "2")
-                        where = where + " AND a.FINISHDAT IS NOT NULL AND  a.strbillingdat IS NULL ";
-                    if (APPLYDAT == "3")
-                        where = where + " AND a.dropdat IS NOT NULL AND a.strbillingdat IS not NULL ";
-                    if (APPLYDAT == "4")
-                        where = where + " AND a.CANCELDAT IS NOT NULL AND a.finishdat IS NULL  ";
                     //
                     if (paycycle != "")
                         where = where + " and a.paycycle = '" + paycycle + "'";
                     if (payTYPE != "")
                         where = where + " and a.payTYPE = '" + payTYPE + "'";
-
-                    if (TEL != "")
-                        where = where + " and ((a.CONTACTTEL like '%" + TEL + "%') or (a.MOBILE like '%" + TEL + "%'))";
-
                     if (FINISHDAT != "")
                         where = where + " and a.duedat >= '" + FINISHDAT + "'";
                     if (DUEDAT != "")
                         where = where + " and a.duedat <= '" + DUEDAT + "'";
-
+                    if (CNM != "")
+                        where = where + " and A.CUSNC like  '%" + CNM + "%' ";
+                    if (ADR != "")
+                        where = where + " and A.RADDR2 like  '%" + ADR + "%' ";
                     if (COMN != "")
-                        where = where + " and c.COMN like  '%" + COMN + "%' ";
-                    if (LINEIP != "")
-                        where = where + " and b.LINEIP like  '%" + LINEIP + "%' ";
-                    if (LINETEL != "")
-                        where = where + " and b.LINETEL like  '%" + LINETEL + "%' ";
-                    alert(where);
+                        where = where + " and C.COMN like  '%" + COMN + "%' ";
                 }
                 $(dg).datagrid('setWhere', where);
             }
@@ -82,7 +70,7 @@
                     <JQTools:JQGridColumn Alignment="right" Caption="社區序號" Editor="numberbox" FieldName="COMQ1" Format="" Width="120" Visible="False" />
                     <JQTools:JQGridColumn Alignment="right" Caption="主線序號" Editor="numberbox" FieldName="LINEQ1" Format="" Width="120" Visible="False" />
                     <JQTools:JQGridColumn Alignment="left" Caption="客戶代號" Editor="text" FieldName="CUSID" Format="" MaxLength="15" Width="120" Visible="False" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="社區主線" Editor="text" FieldName="COMLINE" Format="" MaxLength="0" Width="72" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="社區主線" Editor="text" FieldName="COMLINE" Format="" MaxLength="0" Width="72" Visible="False" />
                     <JQTools:JQGridColumn Alignment="left" Caption="社區名稱" Editor="text" FieldName="COMN" Format="" MaxLength="0" Width="120" Sortable="True" />
                     <JQTools:JQGridColumn Alignment="left" Caption="用戶名稱" Editor="text" FieldName="CNM" Format="" MaxLength="0" Width="90" Sortable="True" />
                     <JQTools:JQGridColumn Alignment="left" Caption="週期" Editor="text" FieldName="CODENC" Format="" MaxLength="0" Width="64" />
@@ -104,21 +92,17 @@
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
                         OnClick="openQuery" Text="查詢" Visible="False" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="客服案件" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="客服案件" Visible="True" Icon="icon-view" OnClick="btnRT205Click" />
                 </TooItems>
                 <QueryColumns>
-                    <JQTools:JQQueryColumn AndOr="and" Caption="社區序號" Condition="%" DataType="string" Editor="text" FieldName="COMQ1" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="主線序號" Condition="%" DataType="string" Editor="text" FieldName="LINEQ1" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="用戶進度" Condition="%" DataType="string" Editor="infocombobox" EditorOptions="items:[{value:'A',text:'全部',selected:'false'},{value:'1',text:'未完工',selected:'false'},{value:'2',text:'已完工無計費日',selected:'false'},{value:'3',text:'已退租',selected:'false'},{value:'4',text:'已作廢',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" FieldName="APPLYDAT" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="繳款週期" Condition="%" DataType="string" Editor="inforefval" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M8'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="paycycle" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="繳款方式" Condition="%" DataType="string" Editor="inforefval" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M9'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'編號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="payTYPE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="電話" Condition="%" DataType="string" Editor="text" FieldName="TEL" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="身份證/統編" Condition="%" DataType="string" Editor="text" FieldName="SOCIALID" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="到期日起" Condition="%" DataType="string" Editor="datebox" FieldName="FINISHDAT" Format="yyyy/mm/dd" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="身份證/統編" Condition="%" DataType="string" Editor="text" FieldName="SOCIALID" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="到期日起" Condition="%" DataType="string" Editor="datebox" FieldName="FINISHDAT" Format="yyyy/mm/dd" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="到期日迄" Condition="%" DataType="string" Editor="datebox" FieldName="DUEDAT" Format="yyyy/mm/dd" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="社區名稱" Condition="%" DataType="string" Editor="text" FieldName="COMN" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="主線IP" Condition="%" DataType="string" Editor="text" FieldName="LINEIP" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="主線附掛電話" Condition="%" DataType="string" Editor="text" FieldName="LINETEL" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="社區名稱" Condition="%" DataType="string" Editor="text" FieldName="COMN" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="裝機地址" Condition="%" DataType="string" Editor="text" FieldName="LINEIP" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="用戶名稱" Condition="%" DataType="string" Editor="text" FieldName="CNM" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                 </QueryColumns>
             </JQTools:JQDataGrid>
         </div>
@@ -165,7 +149,7 @@
                     <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="Export" Visible="False" />
                 </TooItems>
             </JQTools:JQDataGrid>
-            <JQTools:JQDataGrid ID="RTLessorAVSCustAR" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="False" AutoApply="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="V_RTLessorAVSCustAR" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT104.V_RTLessorAVSCustAR" RowNumbers="True" Title="客戶應收付帳款" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="True">
+            <JQTools:JQDataGrid ID="RTLessorAVSCustAR" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="False" AutoApply="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="V_RTLessorAVSCustAR" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT104.V_RTLessorAVSCustAR" RowNumbers="True" Title="客戶應收付帳款" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="True" Visible="False">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="客戶編號G+YYMMDD001(YY西元後二位)" Editor="text" FieldName="CUSID" Frozen="False" IsNvarChar="False" MaxLength="15" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="30">
                     </JQTools:JQGridColumn>

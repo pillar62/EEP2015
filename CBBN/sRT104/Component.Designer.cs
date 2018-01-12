@@ -1190,6 +1190,8 @@
             this.ucRTLessorAVSCust.TransIsolationLevel = System.Data.IsolationLevel.ReadCommitted;
             this.ucRTLessorAVSCust.UseTranscationScope = false;
             this.ucRTLessorAVSCust.WhereMode = Srvtools.WhereModeType.Keyfields;
+            this.ucRTLessorAVSCust.BeforeInsert += new Srvtools.UpdateComponentBeforeInsertEventHandler(this.ucRTLessorAVSCust_BeforeInsert);
+            this.ucRTLessorAVSCust.BeforeModify += new Srvtools.UpdateComponentBeforeModifyEventHandler(this.ucRTLessorAVSCust_BeforeModify);
             // 
             // RTLessorAVSCustCont
             // 
