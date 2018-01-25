@@ -12,6 +12,7 @@
         var usr = getClientInfo('_usercode');
         
         var flag = true;
+        var bIns = false;
         if (COMQ1 == "") {
             flag = false;
         }
@@ -149,6 +150,7 @@
             }
             else
             {
+                return 1;
                 flag = false;
             }
         }
@@ -187,9 +189,15 @@
                 setReadOnly($('#dataGridView'), true);
             }*/
 
-            var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            var ss = row.CUSID;
-            if (ss == "") ss = "ZZZZZ";
+            var rows = $("#dataGridView").datagrid("getRows");
+            if (rows > 0) {
+                var row = $("#dataGridView").datagrid("getSelected");//取得當前主檔中選中的那個Data
+
+                var ss = row.CUSID;
+                if (ss == "") ss = "ZZZZZ";
+            }
+            else
+                ss = "ZZZZZZ";
 
             if (flag == false)
             {
@@ -278,6 +286,21 @@
                 }
             });
         })
+
+        function dataFormMaster_OnApplied(rows) {
+            //新增之後取得後端的鍵值資料後顯示新增的資料
+            if (getEditMode($(this)) == "inserted") {
+                var ss = rows[0].CUSID;
+                if (ss != "") {
+                    sWhere = " CUSID='" + ss + "' ";
+                    $("#dataGridView").datagrid('setWhere', sWhere);
+                }
+            }
+            else
+            {
+                $("#dataGridView").datagrid('reload');
+            }
+        }
     </script>
 </head>
 <body>
@@ -340,7 +363,7 @@
             </JQTools:JQDataGrid>
 
             <JQTools:JQDialog ID="JQDialog1" runat="server" BindingObjectID="dataFormMaster" Title="用戶維護" Width="1000px">
-                <JQTools:JQDataForm ID="dataFormMaster" runat="server" DataMember="RTLessorAVSCust" HorizontalColumnsCount="3" RemoteName="sRT104.RTLessorAVSCust" AlwaysReadOnly="False" Closed="False" ContinueAdd="False" disapply="False" DivFramed="False" DuplicateCheck="False" HorizontalGap="0" IsAutoPageClose="False" IsAutoPause="False" IsAutoSubmit="False" IsNotifyOFF="False" IsRejectNotify="False" IsRejectON="False" IsShowFlowIcon="False" ShowApplyButton="False" ValidateStyle="Hint" VerticalGap="0" >
+                <JQTools:JQDataForm ID="dataFormMaster" runat="server" DataMember="RTLessorAVSCust" HorizontalColumnsCount="3" RemoteName="sRT104.RTLessorAVSCust" AlwaysReadOnly="False" Closed="False" ContinueAdd="False" disapply="False" DivFramed="False" DuplicateCheck="False" HorizontalGap="0" IsAutoPageClose="False" IsAutoPause="False" IsAutoSubmit="False" IsNotifyOFF="False" IsRejectNotify="False" IsRejectON="False" IsShowFlowIcon="False" ShowApplyButton="True" ValidateStyle="Hint" VerticalGap="0" OnApplied="dataFormMaster_OnApplied" >
 
                     <Columns>
                         <JQTools:JQFormColumn Alignment="left" Caption="社區序號" Editor="inforefval" EditorOptions="title:'社區查詢',panelWidth:350,panelHeight:200,remoteName:'sRT101.View_RTLessorAVSCmtyH',tableName:'View_RTLessorAVSCmtyH',columns:[],columnMatches:[{field:'COMTYPE',value:'COMTYPE'}],whereItems:[],valueField:'COMQ1',textField:'COMN',valueFieldCaption:'社區代號',textFieldCaption:'社區名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="COMQ1" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="True" Width="200" Format="" />

@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="serviceManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 212</value>
-  </metadata>
-  <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 134</value>
   </metadata>
+  <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 212</value>
+  </metadata>
   <metadata name="RTSndWork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 290</value>
+    <value>17, 251</value>
   </metadata>
   <data name="RTSndWork.CommandText" xml:space="preserve">
     <value>select a.*, g.comtype, h.comn, g.faqman
@@ -134,7 +134,7 @@ left outer join HBAdslCmty h on g.comtype = h.comtype and g.comq1 = h.comq1 and 
 where 1=1</value>
   </data>
   <metadata name="ucRTSndWork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 251</value>
+    <value>17, 290</value>
   </metadata>
   <metadata name="View_RTSndWork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
@@ -148,16 +148,6 @@ where 1=1</value>
   <metadata name="cmdRT2054R.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>316, 145</value>
   </metadata>
-  <data name="cmdRT2054R.CommandText" xml:space="preserve">
-    <value>select a.workno, a.linkno, g.comtype, l.CODENC, b.codenc as worktype, isnull(c.shortnc, d.name) as assigneng, isnull(i.shortnc, f.name) as finisheng, h.comn, g.faqman
-, e.name as sndwrkusr, a.sndwrkdat, j.name as finishsur, a.finishdat, k.codenc, a.canceldat
-, G.CUSID, G.RCVDAT, G.COMQ1, G.LINEQ1, m.LINERATEM as LINERATE, m.idslamip, m.gateway, m.CUSTIP, m.CASEKIND, m.secondcase, m.raddr, m.docketdat, m.duedat, m.HOME+'/'+m.MOBILE as tel, m.cusnc, a.LINKNO, a.FINISHDAT, g.FAQREASON, n.CODENC as faqreasonnm, g.MEMO, m.CMTYIP, m.strbillingdat, m.dropdat, m.overdue, m.WtlApplyDat, m.paycycle, m.paytype, m.freecode, m.comtypenc, left((select LINEIP + '/ ' from RTLessorAVSCmtyLine where COMQ1=G.COMQ1 for XML PATH('')),len((select LINEIP + '/ ' from RTLessorAVSCmtyLine where COMQ1=G.COMQ1 for XML PATH('')))-1) as PP
-, m.SPEED
-from	RTSndWork a left outer join RTCode b on b.code = a.worktype and b.kind ='P6' 
-left outer join RTObj c on c.cusid = a.assigncons left outer join RTEmployee d on d.emply = a.assigneng left outer join RTEmployee e on e.emply = a.sndwrkusr left outer join RTEmployee j on j.emply = a.finishusr left outer join RTEmployee f on f.emply = a.finisheng 
-left outer join RTObj i on i.cusid = a.finishcons left outer join RTFaqM g on g.caseno = a.linkno  left outer join V_RT2051 h on g.comtype = h.comtype and g.comq1 = h.comq1 and g.lineq1 = h.lineq1 left outer join RTCode k on k.code = a.finishtyp and k.kind ='P9' 
-left outer join RTCode l on l.CODE = g.COMTYPE and l.kind ='P5' left outer join V_RT205 m on m.COMQ1=g.COMQ1 and m.LINEQ1=g.LINEQ1 and m.CUSID=g.CUSID left outer join RTCode n on n.CODE = g.FAQREASON and n.kind ='P7' where 1=1 order by isnull(c.shortnc, d.name), h.comn </value>
-  </data>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>

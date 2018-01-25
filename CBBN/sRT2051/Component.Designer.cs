@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             Srvtools.KeyItem keyItem1 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem2 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem3 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem4 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem5 = new Srvtools.KeyItem();
             Srvtools.FieldAttr fieldAttr1 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr2 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr3 = new Srvtools.FieldAttr();
@@ -52,7 +56,11 @@
             Srvtools.FieldAttr fieldAttr20 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr21 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr22 = new Srvtools.FieldAttr();
-            Srvtools.KeyItem keyItem2 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem6 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem7 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem8 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem9 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem10 = new Srvtools.KeyItem();
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTFaqM = new Srvtools.InfoCommand(this.components);
@@ -70,7 +78,8 @@
             // RTFaqM
             // 
             this.RTFaqM.CacheConnection = false;
-            this.RTFaqM.CommandText = "SELECT A.* , B.CASEKIND\r\nFROM RTFaqM A\r\nLEFT JOIN V_RT205 B ON B.CUSID=A.CUSID";
+            this.RTFaqM.CommandText = "SELECT A.* , B.CASEKIND\r\nFROM RTFaqM A\r\nLEFT JOIN V_RT205 B ON B.CUSID=A.CUSID AN" +
+    "D B.COMQ1=A.COMQ1 AND B.comtype=A.COMTYPE ";
             this.RTFaqM.CommandTimeout = 30;
             this.RTFaqM.CommandType = System.Data.CommandType.Text;
             this.RTFaqM.DynamicTableName = false;
@@ -80,7 +89,15 @@
             this.RTFaqM.EncodingConvert = null;
             this.RTFaqM.InfoConnection = this.InfoConnection1;
             keyItem1.KeyName = "CASENO";
+            keyItem2.KeyName = "COMTYPE";
+            keyItem3.KeyName = "COMQ1";
+            keyItem4.KeyName = "LINEQ1";
+            keyItem5.KeyName = "CUSID";
             this.RTFaqM.KeyFields.Add(keyItem1);
+            this.RTFaqM.KeyFields.Add(keyItem2);
+            this.RTFaqM.KeyFields.Add(keyItem3);
+            this.RTFaqM.KeyFields.Add(keyItem4);
+            this.RTFaqM.KeyFields.Add(keyItem5);
             this.RTFaqM.MultiSetWhere = false;
             this.RTFaqM.Name = "RTFaqM";
             this.RTFaqM.NotificationAutoEnlist = false;
@@ -320,8 +337,16 @@
             this.View_RTFaqM.EncodingBefore = "Windows-1252";
             this.View_RTFaqM.EncodingConvert = null;
             this.View_RTFaqM.InfoConnection = this.InfoConnection1;
-            keyItem2.KeyName = "CASENO";
-            this.View_RTFaqM.KeyFields.Add(keyItem2);
+            keyItem6.KeyName = "CASENO";
+            keyItem7.KeyName = "COMTYPE";
+            keyItem8.KeyName = "COMQ1";
+            keyItem9.KeyName = "LINEQ1";
+            keyItem10.KeyName = "CUSID";
+            this.View_RTFaqM.KeyFields.Add(keyItem6);
+            this.View_RTFaqM.KeyFields.Add(keyItem7);
+            this.View_RTFaqM.KeyFields.Add(keyItem8);
+            this.View_RTFaqM.KeyFields.Add(keyItem9);
+            this.View_RTFaqM.KeyFields.Add(keyItem10);
             this.View_RTFaqM.MultiSetWhere = false;
             this.View_RTFaqM.Name = "View_RTFaqM";
             this.View_RTFaqM.NotificationAutoEnlist = false;

@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Srvtools.Service service1 = new Srvtools.Service();
-            Srvtools.Service service2 = new Srvtools.Service();
-            Srvtools.Service service3 = new Srvtools.Service();
+            Srvtools.Service service13 = new Srvtools.Service();
+            Srvtools.Service service14 = new Srvtools.Service();
+            Srvtools.Service service15 = new Srvtools.Service();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Component));
-            Srvtools.KeyItem keyItem1 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem3 = new Srvtools.KeyItem();
             Srvtools.FieldAttr fieldAttr1 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr2 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr3 = new Srvtools.FieldAttr();
@@ -68,8 +68,7 @@
             Srvtools.FieldAttr fieldAttr32 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr33 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr34 = new Srvtools.FieldAttr();
-            Srvtools.KeyItem keyItem2 = new Srvtools.KeyItem();
-            Srvtools.KeyItem keyItem3 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem1 = new Srvtools.KeyItem();
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTSndWork = new Srvtools.InfoCommand(this.components);
@@ -86,18 +85,18 @@
             // 
             // serviceManager1
             // 
-            service1.DelegateName = "smRT20541";
-            service1.NonLogin = false;
-            service1.ServiceName = "smRT20541";
-            service2.DelegateName = "smRT20543";
-            service2.NonLogin = false;
-            service2.ServiceName = "smRT20543";
-            service3.DelegateName = "smRT20544";
-            service3.NonLogin = false;
-            service3.ServiceName = "smRT20544";
-            this.serviceManager1.ServiceCollection.Add(service1);
-            this.serviceManager1.ServiceCollection.Add(service2);
-            this.serviceManager1.ServiceCollection.Add(service3);
+            service13.DelegateName = "smRT20541";
+            service13.NonLogin = false;
+            service13.ServiceName = "smRT20541";
+            service14.DelegateName = "smRT20543";
+            service14.NonLogin = false;
+            service14.ServiceName = "smRT20543";
+            service15.DelegateName = "smRT20544";
+            service15.NonLogin = false;
+            service15.ServiceName = "smRT20544";
+            this.serviceManager1.ServiceCollection.Add(service13);
+            this.serviceManager1.ServiceCollection.Add(service14);
+            this.serviceManager1.ServiceCollection.Add(service15);
             // 
             // InfoConnection1
             // 
@@ -115,8 +114,8 @@
             this.RTSndWork.EncodingBefore = "Windows-1252";
             this.RTSndWork.EncodingConvert = null;
             this.RTSndWork.InfoConnection = this.InfoConnection1;
-            keyItem1.KeyName = "WORKNO";
-            this.RTSndWork.KeyFields.Add(keyItem1);
+            keyItem3.KeyName = "WORKNO";
+            this.RTSndWork.KeyFields.Add(keyItem3);
             this.RTSndWork.MultiSetWhere = false;
             this.RTSndWork.Name = "RTSndWork";
             this.RTSndWork.NotificationAutoEnlist = false;
@@ -464,8 +463,8 @@
             this.View_RTSndWork.EncodingBefore = "Windows-1252";
             this.View_RTSndWork.EncodingConvert = null;
             this.View_RTSndWork.InfoConnection = this.InfoConnection1;
-            keyItem2.KeyName = "WORKNO";
-            this.View_RTSndWork.KeyFields.Add(keyItem2);
+            keyItem1.KeyName = "WORKNO";
+            this.View_RTSndWork.KeyFields.Add(keyItem1);
             this.View_RTSndWork.MultiSetWhere = false;
             this.View_RTSndWork.Name = "View_RTSndWork";
             this.View_RTSndWork.NotificationAutoEnlist = false;
@@ -522,7 +521,7 @@
             // cmdRT2054R
             // 
             this.cmdRT2054R.CacheConnection = false;
-            this.cmdRT2054R.CommandText = resources.GetString("cmdRT2054R.CommandText");
+            this.cmdRT2054R.CommandText = "SELECT A.* FROM V_RT205R A";
             this.cmdRT2054R.CommandTimeout = 30;
             this.cmdRT2054R.CommandType = System.Data.CommandType.Text;
             this.cmdRT2054R.DynamicTableName = false;
@@ -531,8 +530,6 @@
             this.cmdRT2054R.EncodingBefore = "Windows-1252";
             this.cmdRT2054R.EncodingConvert = null;
             this.cmdRT2054R.InfoConnection = this.InfoConnection1;
-            keyItem3.KeyName = "workno";
-            this.cmdRT2054R.KeyFields.Add(keyItem3);
             this.cmdRT2054R.MultiSetWhere = false;
             this.cmdRT2054R.Name = "cmdRT2054R";
             this.cmdRT2054R.NotificationAutoEnlist = false;

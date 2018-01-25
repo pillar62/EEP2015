@@ -55,7 +55,7 @@
                 //查詢出該用戶的資料
                 if (sMODE != ""){
                     if (sMODE != 'I') {
-                        var sWhere = " caseno='" + caseno + "'";
+                        var sWhere = " A.CASENO='" + caseno + "'";
                         $("#dataGridView").datagrid('setWhere', sWhere);
                     }
                     $("#dataGridView").datagrid("selectRow", 0);
@@ -163,8 +163,7 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="方案別" Editor="inforefval" FieldName="COMTYPE" MaxLength="1" Visible="true" Width="80" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'P5'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'方案代號',textFieldCaption:'方案名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
                     <JQTools:JQGridColumn Alignment="left" Caption="社區序號" Editor="infocombobox" FieldName="COMQ1" MaxLength="10" Visible="true" Width="80" EditorOptions="valueField:'COMQ1',textField:'COMN',remoteName:'sRT101.View_RTLessorAVSCmtyH',tableName:'View_RTLessorAVSCmtyH',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
                     <JQTools:JQGridColumn Alignment="left" Caption="客戶編號" Editor="inforefval" FieldName="CUSID" MaxLength="15" Visible="true" Width="60" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT104.View_RTLessorAVSCust',tableName:'View_RTLessorAVSCust',columns:[],columnMatches:[],whereItems:[{field:'COMQ1',value:'row[COMQ1]'},{field:'LINEQ1',value:'row[LINEQ1]'}],valueField:'CUSID',textField:'CUSNC',valueFieldCaption:'用戶代號',textFieldCaption:'用戶名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="資費" Editor="text" FieldName="CASEKIND" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="80" EditorOptions="">
-                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="資費" Editor="text" FieldName="CASEKIND" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="80" EditorOptions=""></JQTools:JQGridColumn>
                     <JQTools:JQGridColumn Alignment="left" Caption="報修聯絡人" Editor="text" FieldName="FAQMAN" Visible="true" Width="80" MaxLength="50" />
                     <JQTools:JQGridColumn Alignment="left" Caption="聯絡電話" Editor="text" FieldName="TEL" MaxLength="50" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="手機" Editor="text" FieldName="MOBILE" MaxLength="50" Visible="true" Width="80" />

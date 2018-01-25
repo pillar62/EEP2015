@@ -268,9 +268,7 @@
                 </JQTools:JQGridColumn>
                 <JQTools:JQGridColumn Alignment="left" Caption="finishsur" Editor="text" FieldName="finishsur" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
                 </JQTools:JQGridColumn>
-                <JQTools:JQGridColumn Alignment="left" Caption="finishdat" Editor="text" FieldName="finishdat" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
-                </JQTools:JQGridColumn>
-                <JQTools:JQGridColumn Alignment="left" Caption="codenc1" Editor="text" FieldName="codenc1" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                <JQTools:JQGridColumn Alignment="left" Caption="FINISH_NM" Editor="text" FieldName="FINISH_NM" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
                 </JQTools:JQGridColumn>
                 <JQTools:JQGridColumn Alignment="left" Caption="canceldat" Editor="text" FieldName="canceldat" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
                 </JQTools:JQGridColumn>
@@ -304,15 +302,13 @@
                 </JQTools:JQGridColumn>
                 <JQTools:JQGridColumn Alignment="left" Caption="cusnc" Editor="text" FieldName="cusnc" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
                 </JQTools:JQGridColumn>
-                <JQTools:JQGridColumn Alignment="left" Caption="LINKNO1" Editor="text" FieldName="LINKNO1" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
-                </JQTools:JQGridColumn>
-                <JQTools:JQGridColumn Alignment="left" Caption="FINISHDAT1" Editor="text" FieldName="FINISHDAT1" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                <JQTools:JQGridColumn Alignment="left" Caption="FINISHDAT" Editor="text" FieldName="FINISHDAT" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
                 </JQTools:JQGridColumn>
                 <JQTools:JQGridColumn Alignment="left" Caption="FAQREASON" Editor="text" FieldName="FAQREASON" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
                 </JQTools:JQGridColumn>
                 <JQTools:JQGridColumn Alignment="left" Caption="faqreasonnm" Editor="text" FieldName="faqreasonnm" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
                 </JQTools:JQGridColumn>
-                <JQTools:JQGridColumn Alignment="left" Caption="備註" Editor="text" FieldName="MEMO" Frozen="False" IsNvarChar="False" MaxLength="600" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="1200">
+                <JQTools:JQGridColumn Alignment="left" Caption="MEMO" Editor="text" FieldName="MEMO" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
                 </JQTools:JQGridColumn>
                 <JQTools:JQGridColumn Alignment="left" Caption="CMTYIP" Editor="text" FieldName="CMTYIP" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
                 </JQTools:JQGridColumn>
@@ -329,6 +325,26 @@
                 <JQTools:JQGridColumn Alignment="left" Caption="paytype" Editor="text" FieldName="paytype" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
                 </JQTools:JQGridColumn>
                 <JQTools:JQGridColumn Alignment="left" Caption="freecode" Editor="text" FieldName="freecode" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                </JQTools:JQGridColumn>
+                <JQTools:JQGridColumn Alignment="left" Caption="comtypenc" Editor="text" FieldName="comtypenc" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                </JQTools:JQGridColumn>
+                <JQTools:JQGridColumn Alignment="left" Caption="PP" Editor="text" FieldName="PP" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                </JQTools:JQGridColumn>
+                <JQTools:JQGridColumn Alignment="left" Caption="SPEED" Editor="text" FieldName="SPEED" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                </JQTools:JQGridColumn>
+                <JQTools:JQGridColumn Alignment="left" Caption="ENTRYNO" Editor="text" FieldName="ENTRYNO" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                </JQTools:JQGridColumn>
+                <JQTools:JQGridColumn Alignment="left" Caption="IOBOUND" Editor="text" FieldName="IOBOUND" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                </JQTools:JQGridColumn>
+                <JQTools:JQGridColumn Alignment="left" Caption="NM_IOBOUND" Editor="text" FieldName="NM_IOBOUND" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                </JQTools:JQGridColumn>
+                <JQTools:JQGridColumn Alignment="left" Caption="ADDUSR" Editor="text" FieldName="ADDUSR" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                </JQTools:JQGridColumn>
+                <JQTools:JQGridColumn Alignment="left" Caption="NAME" Editor="text" FieldName="NAME" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                </JQTools:JQGridColumn>
+                <JQTools:JQGridColumn Alignment="left" Caption="ADDDAT" Editor="text" FieldName="ADDDAT" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                </JQTools:JQGridColumn>
+                <JQTools:JQGridColumn Alignment="left" Caption="MEMOADD" Editor="text" FieldName="MEMOADD" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
                 </JQTools:JQGridColumn>
             </Columns>
             <TooItems>

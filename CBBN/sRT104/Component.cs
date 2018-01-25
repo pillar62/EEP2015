@@ -108,10 +108,44 @@ namespace sRT104
         private void ucRTLessorAVSCust_BeforeModify(object sender, UpdateComponentBeforeModifyEventArgs e)
         {
             //取得保證金序號 以及 報竣日
-            string sgtserial = ucRTLessorAVSCust.GetFieldOldValue("GTSERIAL").ToString();
-            string sDOCKETDAT  = ucRTLessorAVSCust.GetFieldOldValue("DOCKETDAT").ToString();
+            string sgtserial = ucRTLessorAVSCust.GetFieldCurrentValue("GTSERIAL").ToString(); //保證金序號
+            string sDOCKETDAT  = ucRTLessorAVSCust.GetFieldCurrentValue("DOCKETDAT").ToString();; //報竣日
+            string sFINISHDAT = ucRTLessorAVSCust.GetFieldCurrentValue("FINISHDAT").ToString();//完工日
+            string sSTRBILLINGDAT = ucRTLessorAVSCust.GetFieldCurrentValue("STRBILLINGDAT").ToString(); //開始計費日
+            string sGTMONEY = ucRTLessorAVSCust.GetFieldCurrentValue("GTMONEY").ToString(); //保證金 金額
+            double dGTMONEY = 0;
+
             string ss = "";
-            if (sgtserial== "" && sDOCKETDAT!="")
+            if (sFINISHDAT!="" && (sDOCKETDAT == "" || sSTRBILLINGDAT == ""))
+            {
+                DateTime dDT = Convert.ToDateTime(ucRTLessorAVSCust.GetFieldCurrentValue("FINISHDAT"));
+                ss = Convert.ToString(dDT.AddDays(7));
+                
+                //判斷 如果完工日不為空白 且竣工日或是開始計費日為空白 就要押完工日+七天 作為報竣日 及 開始計費日
+                if (sDOCKETDAT == "")
+                {                    
+                    ucRTLessorAVSCust.SetFieldValue("DOCKETDAT", ss);
+                    sDOCKETDAT = ss;
+                }
+
+                if (sSTRBILLINGDAT == "")
+                {
+                    ucRTLessorAVSCust.SetFieldValue("STRBILLINGDAT", ss);
+                }
+            }
+
+            //判斷 如果保證金金額欄位="" 就給0 不然就轉換成數字
+            if (sGTMONEY != "")
+            {
+                dGTMONEY = Convert.ToInt64(sGTMONEY);
+            }
+            else
+            {
+                dGTMONEY = 0;
+            }
+
+            //判斷 保證金序號欄位為空 且保證金有金額 再處理
+            if (sgtserial == "" && dGTMONEY > 0)
             {
                 string ssql = " select isnull(max(gtserial),'') as maxgtserial from RTlessoravsCust where gtserial <> '' and substring(gtserial, 1,3) = 'AVS' ";
 
@@ -130,7 +164,9 @@ namespace sRT104
                     }
                     else
                     {
-                        ss = "00000000" + (Convert.ToInt32((ss1.Substring(3, 9)) + 1).ToString());
+                        ss = ss1.Substring(3, 9);
+                        ss = (Convert.ToInt64(ss) + 1).ToString();
+                        ss = "000000000" + ss;
                         ss = "AVS" + ss.Substring(ss.Length-9, 9);
                     }
                 }
@@ -143,8 +179,42 @@ namespace sRT104
             //取得保證金序號 以及 報竣日
             string sgtserial = ucRTLessorAVSCust.GetFieldCurrentValue("GTSERIAL").ToString();
             string sDOCKETDAT = ucRTLessorAVSCust.GetFieldCurrentValue("DOCKETDAT").ToString();
+            string sFINISHDAT = ucRTLessorAVSCust.GetFieldCurrentValue("FINISHDAT").ToString();//完工日
+            string sSTRBILLINGDAT = ucRTLessorAVSCust.GetFieldCurrentValue("STRBILLINGDAT").ToString(); //開始計費日
+            string sGTMONEY = ucRTLessorAVSCust.GetFieldCurrentValue("GTMONEY").ToString(); //保證金 金額
+            double dGTMONEY = 0;
+
             string ss = "";
-            if (sgtserial == "" && sDOCKETDAT != "")
+            if (sFINISHDAT != "" && (sDOCKETDAT == "" || sSTRBILLINGDAT == ""))
+            {
+                DateTime dDT = Convert.ToDateTime(ucRTLessorAVSCust.GetFieldCurrentValue("FINISHDAT"));
+                ss = Convert.ToString(dDT.AddDays(7));
+
+                //判斷 如果完工日不為空白 且竣工日或是開始計費日為空白 就要押完工日+七天 作為報竣日 及 開始計費日
+                if (sDOCKETDAT == "")
+                {
+                    ucRTLessorAVSCust.SetFieldValue("DOCKETDAT", ss);
+                    sDOCKETDAT = ss;
+                }
+
+                if (sSTRBILLINGDAT == "")
+                {
+                    ucRTLessorAVSCust.SetFieldValue("STRBILLINGDAT", ss);
+                }
+            }
+
+            //判斷 如果保證金金額欄位="" 就給0 不然就轉換成數字
+            if (sGTMONEY!="")
+            {
+                dGTMONEY = Convert.ToInt64(sGTMONEY);
+            }
+            else
+            {
+                dGTMONEY = 0;
+            }
+
+            //判斷 保證金序號欄位為空 且保證金有金額 再處理
+            if (sgtserial == "" && dGTMONEY > 0)
             {
                 string ssql = " select isnull(max(gtserial),'') as maxgtserial from RTlessoravsCust where gtserial <> '' and substring(gtserial, 1,3) = 'AVS' ";
 
@@ -163,7 +233,9 @@ namespace sRT104
                     }
                     else
                     {
-                        ss = "00000000" + (Convert.ToInt32((ss1.Substring(3, 9)) + 1).ToString());
+                        ss = ss1.Substring(3, 9);
+                        ss = (Convert.ToInt64(ss) + 1).ToString();
+                        ss = "000000000" + ss;
                         ss = "AVS" + ss.Substring(ss.Length - 9, 9);
                     }
                 }
