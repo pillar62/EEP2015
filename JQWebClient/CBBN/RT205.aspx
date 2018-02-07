@@ -35,7 +35,9 @@
                     sWhere = sWhere + " AND A.comtype='" + comtype + "'"
                 }
                 */
-                sWhere = sWhere + " and a.closedat is null and a.canceldat is null ";
+                if (comq1 == "") {
+                    sWhere = sWhere + " and a.closedat is null and a.canceldat is null ";
+                }
                 $("#dataGridMaster").datagrid('setWhere', sWhere);
             }
             else

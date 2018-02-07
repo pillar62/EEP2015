@@ -44,7 +44,6 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
     private XRLabel xrLabel67;
     private XRLabel xrLabel68;
     private XRLabel xrLabel4;
-    private XRBarCode xrBarCode1;
     private XRLabel xrLabel3;
     private XRLabel xrLabel5;
     private XRBarCode xrBarCode3;
@@ -124,6 +123,7 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
     private XRLabel xrLabel24;
     private XRLabel xrLabel25;
     private XRPictureBox xrPictureBox2;
+    private XRBarCode xrBarCode1;
     private int ii = 0;
     public RT3021R()
     {
@@ -1055,10 +1055,10 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel3.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.P01")});
             this.xrLabel3.Font = new System.Drawing.Font("標楷體", 10F);
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(4.681223F, 7.999986F);
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(4.681223F, 7.999939F);
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel3.SizeF = new System.Drawing.SizeF(180.7372F, 18.00002F);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(249.2524F, 18.00006F);
             this.xrLabel3.StylePriority.UseBorders = false;
             this.xrLabel3.StylePriority.UseFont = false;
             // 
@@ -1073,6 +1073,7 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             this.xrBarCode1.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
             this.xrBarCode1.SizeF = new System.Drawing.SizeF(174.9999F, 46.20502F);
             this.xrBarCode1.StylePriority.UseBorders = false;
+            code39Generator1.CalcCheckSum = false;
             code39Generator1.WideNarrowRatio = 3F;
             this.xrBarCode1.Symbology = code39Generator1;
             // 
@@ -1087,6 +1088,7 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             this.xrBarCode2.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
             this.xrBarCode2.SizeF = new System.Drawing.SizeF(240.625F, 46.20501F);
             this.xrBarCode2.StylePriority.UseBorders = false;
+            code39Generator2.CalcCheckSum = false;
             code39Generator2.WideNarrowRatio = 3F;
             this.xrBarCode2.Symbology = code39Generator2;
             // 
@@ -1095,12 +1097,12 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel4.AutoWidth = true;
             this.xrLabel4.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel4.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.CSNOTICEID01")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.CSNOTICEID01", "帳單編號：{0}")});
             this.xrLabel4.Font = new System.Drawing.Font("標楷體", 10F);
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(197.0003F, 9.999951F);
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(272.0003F, 9.999939F);
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel4.SizeF = new System.Drawing.SizeF(240.625F, 18.00002F);
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(165.625F, 18F);
             this.xrLabel4.StylePriority.UseBorders = false;
             this.xrLabel4.StylePriority.UseFont = false;
             // 
@@ -1115,6 +1117,7 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             this.xrBarCode3.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
             this.xrBarCode3.SizeF = new System.Drawing.SizeF(251.3609F, 46.20501F);
             this.xrBarCode3.StylePriority.UseBorders = false;
+            code39Generator3.CalcCheckSum = false;
             code39Generator3.WideNarrowRatio = 3F;
             this.xrBarCode3.Symbology = code39Generator3;
             // 
@@ -1162,6 +1165,7 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             this.xrBarCode5.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
             this.xrBarCode5.SizeF = new System.Drawing.SizeF(240.625F, 46.20501F);
             this.xrBarCode5.StylePriority.UseBorders = false;
+            code39Generator4.CalcCheckSum = false;
             code39Generator4.WideNarrowRatio = 3F;
             this.xrBarCode5.Symbology = code39Generator4;
             // 
@@ -1172,10 +1176,10 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel8.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.P02")});
             this.xrLabel8.Font = new System.Drawing.Font("標楷體", 10F);
-            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(4.681223F, 3.795115F);
+            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(4.681223F, 3.795105F);
             this.xrLabel8.Name = "xrLabel8";
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel8.SizeF = new System.Drawing.SizeF(180.7372F, 18.00002F);
+            this.xrLabel8.SizeF = new System.Drawing.SizeF(249.2524F, 18F);
             this.xrLabel8.StylePriority.UseBorders = false;
             this.xrLabel8.StylePriority.UseFont = false;
             // 
@@ -1186,10 +1190,10 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel9.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.CSNOTICEID02", "帳單編號：{0}")});
             this.xrLabel9.Font = new System.Drawing.Font("標楷體", 10F);
-            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(197.0003F, 5.795045F);
+            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(272.0003F, 5.795044F);
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel9.SizeF = new System.Drawing.SizeF(240.625F, 18.00002F);
+            this.xrLabel9.SizeF = new System.Drawing.SizeF(165.625F, 18F);
             this.xrLabel9.StylePriority.UseBorders = false;
             this.xrLabel9.StylePriority.UseFont = false;
             // 
@@ -1204,6 +1208,7 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             this.xrBarCode4.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
             this.xrBarCode4.SizeF = new System.Drawing.SizeF(174.9999F, 46.20502F);
             this.xrBarCode4.StylePriority.UseBorders = false;
+            code39Generator5.CalcCheckSum = false;
             code39Generator5.WideNarrowRatio = 3F;
             this.xrBarCode4.Symbology = code39Generator5;
             // 
@@ -1218,6 +1223,7 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             this.xrBarCode6.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
             this.xrBarCode6.SizeF = new System.Drawing.SizeF(251.3609F, 46.20501F);
             this.xrBarCode6.StylePriority.UseBorders = false;
+            code39Generator6.CalcCheckSum = false;
             code39Generator6.WideNarrowRatio = 3F;
             this.xrBarCode6.Symbology = code39Generator6;
             // 
@@ -1265,6 +1271,7 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             this.xrBarCode7.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
             this.xrBarCode7.SizeF = new System.Drawing.SizeF(174.9999F, 46.20502F);
             this.xrBarCode7.StylePriority.UseBorders = false;
+            code39Generator7.CalcCheckSum = false;
             code39Generator7.WideNarrowRatio = 3F;
             this.xrBarCode7.Symbology = code39Generator7;
             // 
@@ -1275,10 +1282,10 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel11.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.P03")});
             this.xrLabel11.Font = new System.Drawing.Font("標楷體", 10F);
-            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(6.283173F, 4.897526F);
+            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(6.283174F, 4.897522F);
             this.xrLabel11.Name = "xrLabel11";
             this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel11.SizeF = new System.Drawing.SizeF(180.7372F, 18.00002F);
+            this.xrLabel11.SizeF = new System.Drawing.SizeF(247.6505F, 18F);
             this.xrLabel11.StylePriority.UseBorders = false;
             this.xrLabel11.StylePriority.UseFont = false;
             // 
@@ -1289,10 +1296,10 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel12.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.CSNOTICEID03", "帳單編號：{0}")});
             this.xrLabel12.Font = new System.Drawing.Font("標楷體", 10F);
-            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(198.6022F, 7.897491F);
+            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(272.0003F, 7.897522F);
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel12.SizeF = new System.Drawing.SizeF(240.625F, 18.00002F);
+            this.xrLabel12.SizeF = new System.Drawing.SizeF(167.2269F, 18F);
             this.xrLabel12.StylePriority.UseBorders = false;
             this.xrLabel12.StylePriority.UseFont = false;
             // 
@@ -1307,6 +1314,7 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             this.xrBarCode8.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
             this.xrBarCode8.SizeF = new System.Drawing.SizeF(240.625F, 46.20501F);
             this.xrBarCode8.StylePriority.UseBorders = false;
+            code39Generator8.CalcCheckSum = false;
             code39Generator8.WideNarrowRatio = 3F;
             this.xrBarCode8.Symbology = code39Generator8;
             // 
@@ -1321,6 +1329,7 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             this.xrBarCode9.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 10, 0, 0, 100F);
             this.xrBarCode9.SizeF = new System.Drawing.SizeF(251.3609F, 46.20501F);
             this.xrBarCode9.StylePriority.UseBorders = false;
+            code39Generator9.CalcCheckSum = false;
             code39Generator9.WideNarrowRatio = 3F;
             this.xrBarCode9.Symbology = code39Generator9;
             // 

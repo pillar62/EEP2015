@@ -312,8 +312,8 @@
                 Title="用戶維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Panel" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="False" OnLoadSuccess="dgOnloadSuccess" OnSelect="MySelect">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="社區序號" Editor="infocombobox" FieldName="COMQ1" Format="" Visible="true" Width="120" EditorOptions="valueField:'COMQ1',textField:'COMN',remoteName:'sRT101.View_RTLessorAVSCmtyH',tableName:'View_RTLessorAVSCmtyH',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200"/>
-                    <JQTools:JQGridColumn Alignment="right" Caption="主線序號" Editor="numberbox" FieldName="LINEQ1" Format="" Visible="true" Width="50" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="客戶代號" Editor="text" FieldName="CUSID" Format="" MaxLength="15" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="主線序號" Editor="numberbox" FieldName="LINEQ1" Format="" Visible="False" Width="50" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="客戶代號" Editor="text" FieldName="CUSID" Format="" MaxLength="15" Visible="False" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="客戶名" Editor="text" FieldName="CUSNC" Format="" MaxLength="30" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="裝機地址" Editor="text" FieldName="RADDR2" Format="" MaxLength="60" Visible="true" Width="160" />
                     <JQTools:JQGridColumn Alignment="left" Caption="連絡手機" Editor="text" FieldName="MOBILE" Format="" MaxLength="30" Visible="true" Width="80" />
@@ -432,7 +432,7 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="可使用期數" Editor="numberbox" FieldName="PERIOD" Format="" maxlength="0" Width="200" Visible="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="調整日數" Editor="numberbox" FieldName="ADJUSTDAY" Format="" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="使用截止日" Editor="datebox" FieldName="DUEDAT" Format="yyyy/mm/dd" Width="200" EditorOptions="" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="退租日" Editor="datebox" FieldName="DROPDAT" Width="200" Format="yyyy/mm/dd" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="退租日" Editor="datebox" FieldName="DROPDAT" Width="200" Format="yyyy/mm/dd" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="備註" Editor="textarea" FieldName="MEMO" Format="" Width="500" EditorOptions="height:30" MaxLength="500" Span="2" />
                     </Columns>
                 </JQTools:JQDataForm>

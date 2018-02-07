@@ -131,6 +131,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sRT108", "CBBN\sRT108\sRT10
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sRT208", "CBBN\sRT208\sRT208.csproj", "{8EBC2857-A31E-494D-852C-9397AB0392A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sRT109", "CBBN\sRT109\sRT109.csproj", "{68C1A72F-7F95-477F-89D4-AE96AD3E0A34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -579,6 +581,14 @@ Global
 		{8EBC2857-A31E-494D-852C-9397AB0392A8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8EBC2857-A31E-494D-852C-9397AB0392A8}.Release|x86.ActiveCfg = Release|x86
 		{8EBC2857-A31E-494D-852C-9397AB0392A8}.Release|x86.Build.0 = Release|x86
+		{68C1A72F-7F95-477F-89D4-AE96AD3E0A34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68C1A72F-7F95-477F-89D4-AE96AD3E0A34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68C1A72F-7F95-477F-89D4-AE96AD3E0A34}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{68C1A72F-7F95-477F-89D4-AE96AD3E0A34}.Debug|x86.Build.0 = Debug|Any CPU
+		{68C1A72F-7F95-477F-89D4-AE96AD3E0A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68C1A72F-7F95-477F-89D4-AE96AD3E0A34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68C1A72F-7F95-477F-89D4-AE96AD3E0A34}.Release|x86.ActiveCfg = Release|Any CPU
+		{68C1A72F-7F95-477F-89D4-AE96AD3E0A34}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

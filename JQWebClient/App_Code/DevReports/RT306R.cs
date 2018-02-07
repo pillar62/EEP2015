@@ -125,7 +125,7 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel10.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "CustomSqlQuery.UNITAMT", "{0:#,#}")});
             this.xrLabel10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(404.9055F, 0F);
+            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(386.9055F, 0F);
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel10.SizeF = new System.Drawing.SizeF(89.58331F, 23F);
@@ -138,7 +138,7 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel9.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "CustomSqlQuery.SALEAMT", "{0:#,#}")});
             this.xrLabel9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(512.0112F, 0F);
+            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(492.0113F, 0F);
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel9.SizeF = new System.Drawing.SizeF(100F, 23F);
@@ -151,7 +151,7 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel8.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "CustomSqlQuery.QTY")});
             this.xrLabel8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(330.9471F, 0F);
+            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(310.9472F, 0F);
             this.xrLabel8.Name = "xrLabel8";
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel8.SizeF = new System.Drawing.SizeF(73.95831F, 23F);
@@ -174,7 +174,7 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             // 
             // TopMargin
             // 
-            this.TopMargin.HeightF = 64.58334F;
+            this.TopMargin.HeightF = 72.91666F;
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -215,10 +215,10 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel2.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "CustomSqlQuery.UNINO")});
             this.xrLabel2.Font = new System.Drawing.Font("標楷體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(89.4277F, 71.3835F);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(89.4277F, 71.38351F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(520.8335F, 16.74998F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(502.5835F, 16.74998F);
             this.xrLabel2.StylePriority.UseFont = false;
             // 
             // xrLabel6
@@ -244,7 +244,7 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(89.42771F, 53.66504F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel5.SizeF = new System.Drawing.SizeF(520.8334F, 16.74999F);
+            this.xrLabel5.SizeF = new System.Drawing.SizeF(502.5835F, 16.74999F);
             this.xrLabel5.StylePriority.UseFont = false;
             this.xrLabel5.Text = "xrLabel5";
             // 
@@ -265,7 +265,7 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel1.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "CustomSqlQuery.TAXSUM", "{0:#,#}")});
             this.xrLabel1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(483.7917F, 63.95837F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(468.0529F, 61.95836F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel1.SizeF = new System.Drawing.SizeF(123.9583F, 23F);
@@ -278,7 +278,7 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel11.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "CustomSqlQuery.SALESUM", "{0:#,#}")});
             this.xrLabel11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(483.7917F, 26.95835F);
+            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(468.0529F, 24.95834F);
             this.xrLabel11.Name = "xrLabel11";
             this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel11.SizeF = new System.Drawing.SizeF(123.9583F, 23F);
@@ -292,7 +292,7 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel12.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "CustomSqlQuery.TOTALSUM", "{0:#,#}")});
             this.xrLabel12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(483.7917F, 98.9584F);
+            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(468.0529F, 96.9584F);
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel12.SizeF = new System.Drawing.SizeF(123.9583F, 23F);
@@ -307,7 +307,7 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel13.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "CustomSqlQuery.TAXTYPE")});
             this.xrLabel13.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(212.7496F, 63.95834F);
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(197.0108F, 61.95836F);
             this.xrLabel13.Name = "xrLabel13";
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel13.SizeF = new System.Drawing.SizeF(17.70833F, 23F);
@@ -320,7 +320,7 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel14.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "CustomSqlQuery.TAXTYPE")});
             this.xrLabel14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(347.4581F, 63.95834F);
+            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(331.7193F, 61.95836F);
             this.xrLabel14.Name = "xrLabel14";
             this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel14.SizeF = new System.Drawing.SizeF(17.70834F, 23F);
@@ -333,7 +333,7 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel15.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "CustomSqlQuery.TAXTYPE")});
             this.xrLabel15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(461.6664F, 63.95834F);
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(445.9276F, 61.95836F);
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel15.SizeF = new System.Drawing.SizeF(17.70837F, 23F);
@@ -369,7 +369,7 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             // 
             this.l01.AutoWidth = true;
             this.l01.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.l01.LocationFloat = new DevExpress.Utils.PointFloat(548.5529F, 143.3033F);
+            this.l01.LocationFloat = new DevExpress.Utils.PointFloat(546.4695F, 133.0533F);
             this.l01.Name = "l01";
             this.l01.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.l01.SizeF = new System.Drawing.SizeF(17.70825F, 23.00001F);
@@ -380,7 +380,7 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             // 
             this.l02.AutoWidth = true;
             this.l02.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.l02.LocationFloat = new DevExpress.Utils.PointFloat(492.0112F, 143.3033F);
+            this.l02.LocationFloat = new DevExpress.Utils.PointFloat(489.9279F, 133.0533F);
             this.l02.Name = "l02";
             this.l02.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.l02.SizeF = new System.Drawing.SizeF(17.70834F, 23.00001F);
@@ -391,7 +391,7 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             // 
             this.l05.AutoWidth = true;
             this.l05.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.l05.LocationFloat = new DevExpress.Utils.PointFloat(302.5945F, 143.3033F);
+            this.l05.LocationFloat = new DevExpress.Utils.PointFloat(300.5112F, 133.0533F);
             this.l05.Name = "l05";
             this.l05.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.l05.SizeF = new System.Drawing.SizeF(17.70833F, 23.00001F);
@@ -402,7 +402,7 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             // 
             this.l04.AutoWidth = true;
             this.l04.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.l04.LocationFloat = new DevExpress.Utils.PointFloat(363.3444F, 143.3033F);
+            this.l04.LocationFloat = new DevExpress.Utils.PointFloat(361.261F, 133.0533F);
             this.l04.Name = "l04";
             this.l04.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.l04.SizeF = new System.Drawing.SizeF(17.70831F, 23.00001F);
@@ -413,7 +413,7 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             // 
             this.l03.AutoWidth = true;
             this.l03.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.l03.LocationFloat = new DevExpress.Utils.PointFloat(427.1777F, 143.3033F);
+            this.l03.LocationFloat = new DevExpress.Utils.PointFloat(425.0944F, 133.0533F);
             this.l03.Name = "l03";
             this.l03.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.l03.SizeF = new System.Drawing.SizeF(17.70828F, 23.00001F);
@@ -424,7 +424,7 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             // 
             this.l08.AutoWidth = true;
             this.l08.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.l08.LocationFloat = new DevExpress.Utils.PointFloat(110.0069F, 143.3033F);
+            this.l08.LocationFloat = new DevExpress.Utils.PointFloat(107.9236F, 133.0533F);
             this.l08.Name = "l08";
             this.l08.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.l08.SizeF = new System.Drawing.SizeF(17.70832F, 23.00001F);
@@ -435,7 +435,7 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             // 
             this.l07.AutoWidth = true;
             this.l07.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.l07.LocationFloat = new DevExpress.Utils.PointFloat(178.9235F, 143.3033F);
+            this.l07.LocationFloat = new DevExpress.Utils.PointFloat(176.8402F, 133.0533F);
             this.l07.Name = "l07";
             this.l07.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.l07.SizeF = new System.Drawing.SizeF(17.70834F, 23.00001F);
@@ -446,7 +446,7 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             // 
             this.l06.AutoWidth = true;
             this.l06.Font = new System.Drawing.Font("標楷體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.l06.LocationFloat = new DevExpress.Utils.PointFloat(238.5529F, 143.3033F);
+            this.l06.LocationFloat = new DevExpress.Utils.PointFloat(236.4696F, 133.0533F);
             this.l06.Name = "l06";
             this.l06.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.l06.SizeF = new System.Drawing.SizeF(17.70833F, 23.00001F);
@@ -479,7 +479,7 @@ public class RT306R : DevExpress.XtraReports.UI.XtraReport
             this.sqlDataSource1});
             this.DataMember = "CustomSqlQuery";
             this.DataSource = this.sqlDataSource1;
-            this.Margins = new System.Drawing.Printing.Margins(0, 0, 65, 5);
+            this.Margins = new System.Drawing.Printing.Margins(0, 0, 73, 5);
             this.PageHeight = 550;
             this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
             this.Version = "15.2";

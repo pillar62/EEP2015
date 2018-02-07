@@ -110,7 +110,9 @@
             //openImport("#dataGridMaster", 2, 0);
             var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var ss = row.BATCH;
-            parent.addTab("上傳續約文字檔", "https://service.seed.net.tw/proxy_portal.htm");
+            window.open("https://ebilling.tcb-bank.com.tw/eBillingMgr/index2.html", "合庫");
+            //parent.addTab("上傳續約文字檔", "http://www.tcb-bank.com.tw");
+//            parent.addTab("上傳續約文字檔", "https://service.seed.net.tw/proxy_portal.htm");
         }
 
         function fileuploadsuccess(value) {
@@ -128,6 +130,14 @@
             infofileUploadvalue.val()//取得文件名稱
             infofileUploadfile.val()//上傳路徑
 
+        }
+
+        function WriteToEXCEL(rowIndex, rowData) {
+            $("#JQDataGrid3").datagrid("getPanel").panel("setTitle", "");
+            var row = $("#dataGridMaster").datagrid("getSelected");//取得當前主檔中選中的那個Data
+            var BATCH = row.BATCH;
+            $("#JQDataGrid3").datagrid("setWhere", "C.BATCH='" + BATCH + "'"); //維護單 
+            exportGrid("#JQDataGrid3");
         }
     </script>
 </head>
@@ -158,9 +168,9 @@
                         OnClick="openQuery" Text="查詢" Visible="False" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="0.產生續約單" Visible="True" Icon="icon-view" OnClick="LinkRT3021" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="0.產生續約單(過期)" Visible="True" Icon="icon-view" OnClick="LinkRT3022" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="1.匯出續約文字檔" Visible="True" Icon="icon-view" OnClick="WriteToFile" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="1.匯出EXCEL" Visible="True" Icon="icon-view" OnClick="WriteToEXCEL" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="2.上傳續約文字檔" Visible="True" OnClick="fileUpLoad" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="3.匯入條碼檔" Visible="True" OnClick="btn5Click" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="3.匯入條碼檔" Visible="False" OnClick="btn5Click" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="4.列印續約單" Visible="True" OnClick="btn6Click" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="5.列印信封" Visible="True" OnClick="btn7Click" Icon="icon-print" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="用戶明細" Visible="True" OnClick="btn8Click" />
@@ -213,7 +223,39 @@
                 </Columns>
             </JQTools:JQDataGrid>
         </div>
-        <p>
+        <div id="plExcel"  style="display:none">
+            <JQTools:JQDataGrid ID="JQDataGrid3" runat="server" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="True" AutoApply="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="RT3023" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT302.RT3023" RowNumbers="True" Title="" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
+                <Columns>
+                    <JQTools:JQGridColumn Alignment="left" Caption="代收費用別" Editor="text" FieldName="代收費用別" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="期別" Editor="text" FieldName="期別" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="客戶編號" Editor="text" FieldName="客戶編號" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="姓名" Editor="text" FieldName="姓名" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="郵遞區號" Editor="text" FieldName="郵遞區號" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="地址" Editor="text" FieldName="地址" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="繳費期限" Editor="text" FieldName="繳費期限" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="超商代收期限" Editor="text" FieldName="超商代收期限" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="網路費" Editor="text" FieldName="網路費" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn>
+                </Columns>
+                <TooItems>
+                    <JQTools:JQToolItem Enabled="True" Icon="icon-add" ItemType="easyui-linkbutton" OnClick="insertItem" Text="Insert" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" Icon="icon-edit" ItemType="easyui-linkbutton" OnClick="updateItem" Text="Update" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" Icon="icon-remove" ItemType="easyui-linkbutton" OnClick="deleteItem" Text="Delete" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" Icon="icon-save" ItemType="easyui-linkbutton" OnClick="apply" Text="Apply" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" Icon="icon-cancel" ItemType="easyui-linkbutton" OnClick="cancel" Text="Cancel" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" Icon="icon-search" ItemType="easyui-linkbutton" OnClick="openQuery" Text="Query" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="Export" Visible="True" />
+                </TooItems>
+            </JQTools:JQDataGrid>
+        </div>
         <div id="plC"  style="display:none">
             <JQTools:JQDataGrid ID="JQDataGrid2" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" AutoApply="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="RT3021R" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="False" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT302.RT3021R" RowNumbers="True" Title="JQDataGrid" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="True">
                 <Columns>

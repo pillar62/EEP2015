@@ -118,8 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RT3023" type="System.Drawing.Point, System.Drawing">
+    <value>22, 415</value>
+  </data>
   <data name="若要在類別中加入元件，請從工具箱拖所需元件，並利用 [屬性] 視窗設定它們的屬性。若要建立類別的方法與事件，請按這裡切換到程式碼檢視。" type="System.Drawing.Point, System.Drawing">
-    <value>0, 362</value>
+    <value>0, 341</value>
   </data>
   <data name="serviceManager1" type="System.Drawing.Point, System.Drawing">
     <value>17, 134</value>
@@ -168,5 +171,11 @@
   </data>
   <data name="RT3028" type="System.Drawing.Point, System.Drawing">
     <value>122, 288</value>
+  </data>
+  <data name="RT302R" type="System.Drawing.Point, System.Drawing">
+    <value>17, 251</value>
+  </data>
+  <data name="RT3021R" type="System.Drawing.Point, System.Drawing">
+    <value>234, 262</value>
   </data>
 </root>
