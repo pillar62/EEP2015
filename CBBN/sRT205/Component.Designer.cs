@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Srvtools.Service service25 = new Srvtools.Service();
-            Srvtools.Service service26 = new Srvtools.Service();
-            Srvtools.Service service27 = new Srvtools.Service();
-            Srvtools.Service service28 = new Srvtools.Service();
-            Srvtools.KeyItem keyItem5 = new Srvtools.KeyItem();
+            Srvtools.Service service1 = new Srvtools.Service();
+            Srvtools.Service service2 = new Srvtools.Service();
+            Srvtools.Service service3 = new Srvtools.Service();
+            Srvtools.Service service4 = new Srvtools.Service();
+            Srvtools.KeyItem keyItem1 = new Srvtools.KeyItem();
             Srvtools.FieldAttr fieldAttr1 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr2 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr3 = new Srvtools.FieldAttr();
@@ -57,11 +57,14 @@
             Srvtools.FieldAttr fieldAttr21 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr22 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr23 = new Srvtools.FieldAttr();
-            Srvtools.KeyItem keyItem1 = new Srvtools.KeyItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Component));
             Srvtools.KeyItem keyItem2 = new Srvtools.KeyItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Component));
             Srvtools.KeyItem keyItem3 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem4 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem5 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem6 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem7 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem8 = new Srvtools.KeyItem();
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTFaqM = new Srvtools.InfoCommand(this.components);
@@ -75,6 +78,8 @@
             this.V_RT2051 = new Srvtools.InfoCommand(this.components);
             this.V_RT2052 = new Srvtools.InfoCommand(this.components);
             this.cmd = new Srvtools.InfoCommand(this.components);
+            this.R_2051 = new Srvtools.InfoCommand(this.components);
+            this.R_2052 = new Srvtools.InfoCommand(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTFaqM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_RTFaqM)).BeginInit();
@@ -84,25 +89,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.V_RT2051)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.V_RT2052)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.R_2051)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.R_2052)).BeginInit();
             // 
             // serviceManager1
             // 
-            service25.DelegateName = "smRT2055";
-            service25.NonLogin = false;
-            service25.ServiceName = "smRT2055";
-            service26.DelegateName = "smRT2056";
-            service26.NonLogin = false;
-            service26.ServiceName = "smRT2056";
-            service27.DelegateName = "smRT2057";
-            service27.NonLogin = false;
-            service27.ServiceName = "smRT2057";
-            service28.DelegateName = "smRT20531";
-            service28.NonLogin = false;
-            service28.ServiceName = "smRT20531";
-            this.serviceManager1.ServiceCollection.Add(service25);
-            this.serviceManager1.ServiceCollection.Add(service26);
-            this.serviceManager1.ServiceCollection.Add(service27);
-            this.serviceManager1.ServiceCollection.Add(service28);
+            service1.DelegateName = "smRT2055";
+            service1.NonLogin = false;
+            service1.ServiceName = "smRT2055";
+            service2.DelegateName = "smRT2056";
+            service2.NonLogin = false;
+            service2.ServiceName = "smRT2056";
+            service3.DelegateName = "smRT2057";
+            service3.NonLogin = false;
+            service3.ServiceName = "smRT2057";
+            service4.DelegateName = "smRT20531";
+            service4.NonLogin = false;
+            service4.ServiceName = "smRT20531";
+            this.serviceManager1.ServiceCollection.Add(service1);
+            this.serviceManager1.ServiceCollection.Add(service2);
+            this.serviceManager1.ServiceCollection.Add(service3);
+            this.serviceManager1.ServiceCollection.Add(service4);
             // 
             // InfoConnection1
             // 
@@ -121,8 +128,8 @@
             this.RTFaqM.EncodingBefore = "Windows-1252";
             this.RTFaqM.EncodingConvert = null;
             this.RTFaqM.InfoConnection = this.InfoConnection1;
-            keyItem5.KeyName = "CASENO";
-            this.RTFaqM.KeyFields.Add(keyItem5);
+            keyItem1.KeyName = "CASENO";
+            this.RTFaqM.KeyFields.Add(keyItem1);
             this.RTFaqM.MultiSetWhere = false;
             this.RTFaqM.Name = "RTFaqM";
             this.RTFaqM.NotificationAutoEnlist = false;
@@ -372,8 +379,8 @@
             this.View_RTFaqM.EncodingBefore = "Windows-1252";
             this.View_RTFaqM.EncodingConvert = null;
             this.View_RTFaqM.InfoConnection = this.InfoConnection1;
-            keyItem1.KeyName = "CASENO";
-            this.View_RTFaqM.KeyFields.Add(keyItem1);
+            keyItem2.KeyName = "CASENO";
+            this.View_RTFaqM.KeyFields.Add(keyItem2);
             this.View_RTFaqM.MultiSetWhere = false;
             this.View_RTFaqM.Name = "View_RTFaqM";
             this.View_RTFaqM.NotificationAutoEnlist = false;
@@ -398,8 +405,14 @@
             this.RT205.EncodingBefore = "Windows-1252";
             this.RT205.EncodingConvert = null;
             this.RT205.InfoConnection = this.InfoConnection1;
-            keyItem2.KeyName = "caseno";
-            this.RT205.KeyFields.Add(keyItem2);
+            keyItem3.KeyName = "caseno";
+            keyItem4.KeyName = "comtype";
+            keyItem5.KeyName = "ANGENCY";
+            keyItem6.KeyName = "leader";
+            this.RT205.KeyFields.Add(keyItem3);
+            this.RT205.KeyFields.Add(keyItem4);
+            this.RT205.KeyFields.Add(keyItem5);
+            this.RT205.KeyFields.Add(keyItem6);
             this.RT205.MultiSetWhere = false;
             this.RT205.Name = "RT205";
             this.RT205.NotificationAutoEnlist = false;
@@ -424,10 +437,10 @@
             this.RTFaqAdd.EncodingBefore = "Windows-1252";
             this.RTFaqAdd.EncodingConvert = null;
             this.RTFaqAdd.InfoConnection = this.InfoConnection1;
-            keyItem3.KeyName = "CASENO";
-            keyItem6.KeyName = "ENTRYNO";
-            this.RTFaqAdd.KeyFields.Add(keyItem3);
-            this.RTFaqAdd.KeyFields.Add(keyItem6);
+            keyItem7.KeyName = "CASENO";
+            keyItem8.KeyName = "ENTRYNO";
+            this.RTFaqAdd.KeyFields.Add(keyItem7);
+            this.RTFaqAdd.KeyFields.Add(keyItem8);
             this.RTFaqAdd.MultiSetWhere = false;
             this.RTFaqAdd.Name = "RTFaqAdd";
             this.RTFaqAdd.NotificationAutoEnlist = false;
@@ -570,6 +583,56 @@
             this.cmd.SiteControl = false;
             this.cmd.SiteFieldName = null;
             this.cmd.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // R_2051
+            // 
+            this.R_2051.CacheConnection = false;
+            this.R_2051.CommandText = "SELECT A.CODE, B.NAME \r\nFROM RTCode A\r\nLEFT JOIN RTEmployee B ON B.EMPLY=A.CODE\r\n" +
+    "WHERE A.KIND = \'S2\'";
+            this.R_2051.CommandTimeout = 30;
+            this.R_2051.CommandType = System.Data.CommandType.Text;
+            this.R_2051.DynamicTableName = false;
+            this.R_2051.EEPAlias = null;
+            this.R_2051.EncodingAfter = null;
+            this.R_2051.EncodingBefore = "Windows-1252";
+            this.R_2051.EncodingConvert = null;
+            this.R_2051.InfoConnection = this.InfoConnection1;
+            this.R_2051.MultiSetWhere = false;
+            this.R_2051.Name = "R_2051";
+            this.R_2051.NotificationAutoEnlist = false;
+            this.R_2051.SecExcept = null;
+            this.R_2051.SecFieldName = null;
+            this.R_2051.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.R_2051.SelectPaging = false;
+            this.R_2051.SelectTop = 0;
+            this.R_2051.SiteControl = false;
+            this.R_2051.SiteFieldName = null;
+            this.R_2051.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // R_2052
+            // 
+            this.R_2052.CacheConnection = false;
+            this.R_2052.CommandText = "SELECT A.CODE, B.NAME \r\nFROM RTCode A\r\nLEFT JOIN RTEmployee B ON B.EMPLY=A.CODE\r\n" +
+    "WHERE A.KIND = \'S3\'";
+            this.R_2052.CommandTimeout = 30;
+            this.R_2052.CommandType = System.Data.CommandType.Text;
+            this.R_2052.DynamicTableName = false;
+            this.R_2052.EEPAlias = null;
+            this.R_2052.EncodingAfter = null;
+            this.R_2052.EncodingBefore = "Windows-1252";
+            this.R_2052.EncodingConvert = null;
+            this.R_2052.InfoConnection = this.InfoConnection1;
+            this.R_2052.MultiSetWhere = false;
+            this.R_2052.Name = "R_2052";
+            this.R_2052.NotificationAutoEnlist = false;
+            this.R_2052.SecExcept = null;
+            this.R_2052.SecFieldName = null;
+            this.R_2052.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.R_2052.SelectPaging = false;
+            this.R_2052.SelectTop = 0;
+            this.R_2052.SiteControl = false;
+            this.R_2052.SiteFieldName = null;
+            this.R_2052.UpdatedRowSource = System.Data.UpdateRowSource.None;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTFaqM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_RTFaqM)).EndInit();
@@ -579,6 +642,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.V_RT2051)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.V_RT2052)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.R_2051)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.R_2052)).EndInit();
 
         }
 
@@ -597,5 +662,7 @@
         private Srvtools.InfoCommand V_RT2051;
         private Srvtools.InfoCommand V_RT2052;
         private Srvtools.InfoCommand cmd;
+        private Srvtools.InfoCommand R_2051;
+        private Srvtools.InfoCommand R_2052;
     }
 }

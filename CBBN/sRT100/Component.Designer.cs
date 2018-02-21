@@ -261,6 +261,7 @@
             this.RT20541 = new Srvtools.InfoCommand(this.components);
             this.RT20542 = new Srvtools.InfoCommand(this.components);
             this.RT20543 = new Srvtools.InfoCommand(this.components);
+            this.RT20544 = new Srvtools.InfoCommand(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCounty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCtyTown)).BeginInit();
@@ -297,6 +298,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RT20541)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT20542)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT20543)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT20544)).BeginInit();
             // 
             // InfoConnection1
             // 
@@ -2683,6 +2685,30 @@
             this.RT20543.SiteControl = false;
             this.RT20543.SiteFieldName = null;
             this.RT20543.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // RT20544
+            // 
+            this.RT20544.CacheConnection = false;
+            this.RT20544.CommandText = "SELECT NAME, EMPLY\r\nFROM RTEmployee\r\nWHERE TRAN2 <> \'10\' AND AREAID LIKE \'C%\'";
+            this.RT20544.CommandTimeout = 30;
+            this.RT20544.CommandType = System.Data.CommandType.Text;
+            this.RT20544.DynamicTableName = false;
+            this.RT20544.EEPAlias = null;
+            this.RT20544.EncodingAfter = null;
+            this.RT20544.EncodingBefore = "Windows-1252";
+            this.RT20544.EncodingConvert = null;
+            this.RT20544.InfoConnection = this.InfoConnection1;
+            this.RT20544.MultiSetWhere = false;
+            this.RT20544.Name = "RT20544";
+            this.RT20544.NotificationAutoEnlist = false;
+            this.RT20544.SecExcept = null;
+            this.RT20544.SecFieldName = null;
+            this.RT20544.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.RT20544.SelectPaging = false;
+            this.RT20544.SelectTop = 0;
+            this.RT20544.SiteControl = false;
+            this.RT20544.SiteFieldName = null;
+            this.RT20544.UpdatedRowSource = System.Data.UpdateRowSource.None;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCounty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCtyTown)).EndInit();
@@ -2719,6 +2745,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RT20541)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT20542)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT20543)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT20544)).EndInit();
 
         }
 
@@ -2778,5 +2805,6 @@
         private Srvtools.InfoCommand RT20541;
         private Srvtools.InfoCommand RT20542;
         private Srvtools.InfoCommand RT20543;
+        private Srvtools.InfoCommand RT20544;
     }
 }

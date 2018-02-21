@@ -136,7 +136,7 @@
     <value>393, 101</value>
   </metadata>
   <data name="RT205.CommandText" xml:space="preserve">
-    <value>select a.caseno, a.comtype, case when p.consignee ='12973008' then '原遠端戶' else n.groupnc end AS ANGENCY, n.leader
+    <value>select a.caseno, a.comtype,isnull(case when p.consignee ='12973008' then '原遠端戶' else n.groupnc end, '') AS ANGENCY, isnull(n.leader, '') as leader
 , b.codenc, convert(varchar(5), n.comq1)+case when n.lineq1=0 then '' else '-'+convert(varchar(5), n.lineq1) end COMLINE, n.comn, 
 c.dropdat, a.faqman, j.codenc, d.codenc, isnull(e.NAME,'') AS CUSNC, left(convert(varchar(25),a.rcvdat, 20), 16) AS RCVDATE
 , a.closedat, o.codenc, count(g.caseno) AS QT_CASE, isnull(k.shortnc,i.name) AS SNAME, 
@@ -183,6 +183,12 @@ case when l.finishnum &gt;0 then '' else 'Y' end , n.comq1, n.lineq1, c.cusid, a
   </metadata>
   <metadata name="cmd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>387, 157</value>
+  </metadata>
+  <metadata name="R_2051.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>513, 179</value>
+  </metadata>
+  <metadata name="R_2052.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>515, 221</value>
   </metadata>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>

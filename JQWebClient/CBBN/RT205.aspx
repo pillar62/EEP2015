@@ -66,10 +66,10 @@
                     RCVDATE = $("#RCVDATE_Query").datebox('getValue'); //受理時間迄
                     closedat = $("#closedat_Query").datebox('getValue'); //結案時間起
                     codenc3 = $("#codenc3_Query").datebox('getValue'); //結案時間迄
-                    CUSNC = $("#CUSNC_Query").val(); //受理人員
+                    CUSNC = $("#CUSNC_Query").combobox('getValue'); //受理人員
                     ANGENCY = $("#ANGENCY_Query").combobox('getValue'); //直經銷
                     codenc1 = $("#codenc1_Query").combobox('getValue'); //結案狀態
-                    SNAME = $("#SNAME_Query").val(); //預定施工人員
+                    SNAME = $("#SNAME_Query").combobox('getValue'); //預定施工人員
 
                     
                     if (comn != "")
@@ -273,10 +273,10 @@
                     <JQTools:JQQueryColumn AndOr="and" Caption="受理時間迄" Condition="=" DataType="datetime" Editor="datebox" FieldName="RCVDATE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="結案時間起" Condition="=" DataType="datetime" Editor="datebox" FieldName="closedat" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="結案時間迄" Condition="=" DataType="datetime" Editor="datebox" FieldName="codenc3" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="受理人員" Condition="%" DataType="string" Editor="text" FieldName="CUSNC" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="受理人員" Condition="%" DataType="string" Editor="infocombobox" FieldName="CUSNC" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" EditorOptions="valueField:'CODE',textField:'NAME',remoteName:'sRT205.R_2051',tableName:'R_2051',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="直經銷" Condition="%" DataType="string" Editor="infocombobox" EditorOptions="items:[{value:'0',text:'全部',selected:'false'},{value:'1',text:'直銷',selected:'false'},{value:'2',text:'經銷',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" FieldName="ANGENCY" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="結案狀態" Condition="%" DataType="string" Editor="infocombobox" EditorOptions="items:[{value:'0',text:'全部',selected:'false'},{value:'1',text:'未結案',selected:'true'},{value:'2',text:'已結案',selected:'false'},{value:'3',text:'未完工',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" FieldName="codenc1" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="預定施工人員" Condition="%" DataType="string" Editor="text" FieldName="SNAME" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="預定施工人員" Condition="%" DataType="string" Editor="infocombobox" FieldName="SNAME" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" EditorOptions="valueField:'NAME',textField:'NAME',remoteName:'sRT205.R_2052',tableName:'R_2052',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
                 </QueryColumns>
             </JQTools:JQDataGrid>
         </div>
