@@ -141,5 +141,28 @@ namespace sRT1043
                 return new object[] { 0, ex };
             }
         }
+
+        public object[] smRT10436(object[] objParam)
+        {
+            var ss = (string)objParam[0];
+            var sdata = ss.Split(',');
+            //開啟資料連接
+            IDbConnection conn = cmdRT10436.Connection;
+            conn.Open();
+            //設定輸入參數的值
+            try
+            {
+                cmdRT10436.InfoParameters[0].Value = sdata[0];
+                cmdRT10436.InfoParameters[1].Value = sdata[1];
+                cmdRT10436.InfoParameters[2].Value = sdata[2];
+                /*取得統計的結果，並將結果返回*/
+                double ii = cmdRT10436.ExecuteNonQuery();
+                return new object[] { 0, ii };
+            }
+            catch (Exception ex)
+            {
+                return new object[] { 0, ex };
+            }
+        }
     }
 }

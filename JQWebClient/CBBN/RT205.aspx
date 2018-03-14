@@ -15,7 +15,7 @@
         var flag = true;
 
         function dgOnloadSuccess() {
-
+            
             if (flag) {
                 var sWhere = " 1=1 ";
                 if (comq1 != "") {
@@ -35,23 +35,26 @@
                     sWhere = sWhere + " AND A.comtype='" + comtype + "'"
                 }
                 */
+            
                 if (comq1 == "") {
                     sWhere = sWhere + " and a.closedat is null and a.canceldat is null ";
                 }
                 $("#dataGridMaster").datagrid('setWhere', sWhere);
             }
-            else
-            {
-            }
+            
 
             flag = false;
-
+            
             if (flag == false) {
                 var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+                
                 var ss = row.caseno;
+                
                 if (ss == "") ss = "ZZZZZ";
+                
                 $("#FAQADD").datagrid('setWhere', "CASENO='" + ss + "'");
             }
+            
         }
 
         function queryGrid(dg) { //查詢后添加固定條件            
@@ -108,12 +111,7 @@
             $('#dataGridMaster').datagrid('reload');            
         }
 
-        function MySelect(rowIndex, rowData) {
-            var ss = rowData.caseno;
-            if (ss == "") ss = "ZZZZZ";
-            $("#FAQADD").datagrid('setWhere', "CASENO='" + ss + "'"); //追件單
-        }
-
+        
         function btnRT103Click(val) {
             var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var comq1 = row.comq1;
@@ -227,7 +225,7 @@
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
             <JQTools:JQDataGrid ID="dataGridMaster" data-options="pagination:true,view:commandview" RemoteName="sRT205.RT205" runat="server" AutoApply="False"
                 DataMember="RT205" Pagination="True" QueryTitle="查詢條件"
-                Title="客訴資料維護" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Panel" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="False" OnLoadSuccess="dgOnloadSuccess" OnSelect="MySelect">
+                Title="客訴資料維護" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Panel" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="False" OnLoadSuccess="dgOnloadSuccess">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="客訴單號" Editor="text" FieldName="caseno" Format="" MaxLength="10" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="方案別" Editor="text" FieldName="comtype" Format="" MaxLength="1" Width="120" Visible="False" />

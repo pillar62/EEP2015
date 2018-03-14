@@ -102,6 +102,14 @@
             var CANCELDAT = row.CANCELDAT; //作廢日期
             parent.addTab("超商未沖(Excel)", "CBBN/RT2044.aspx?CUSID=" + CUSID + "&BATCHNO=" + BATCHNO);
         }
+
+        function btn5Click(val) {
+            //var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var CUSID = "";
+            var BATCHNO = "";
+            var CANCELDAT = ""; //作廢日期
+            parent.addTab("轉入超商銷帳檔", "CBBN/RT2045.aspx");
+        }
     </script>
 </head>
 <body>
@@ -140,7 +148,8 @@
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="沖  帳" Visible="True" OnClick="btn1Click" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="沖帳明細" Visible="True" OnClick="btn2Click" Icon="icon-view" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="帳款明細" Visible="True" OnClick="btn3Click" Icon="icon-view" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="超商未沖(Excel)" Visible="True" OnClick="btn4Click" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="超商未沖(Excel)" Visible="True" OnClick="btn4Click" Icon="icon-excel" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn5Click" Text="轉入超商銷帳檔" Visible="True" Icon="icon-save" />
                 </TooItems>
                 <QueryColumns>
                     <JQTools:JQQueryColumn AndOr="and" Caption="社區序號" Condition="%" DataType="string" Editor="text" FieldName="COMQ1" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />

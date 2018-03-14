@@ -37,7 +37,7 @@
                 return false;
             }
             var ss = row.DROPDAT;
-            alert(ss);
+            
             if (ss != "" && ss != null) {
                 alert("客戶已退租，不可建立續約資料，請改用復機作業。");
                 return false;
@@ -56,7 +56,7 @@
             var row = $('#JQDataGrid1').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var ss = row.DUEDAT;
             var s2 = $("#JQDataForm1STRBILLINGDAT").datebox("getValue");
-            alert(s2);
+
             if (s2 < ss) {
                 alert("開始計費日不可小於客戶主檔到期日。");
                 return false;
@@ -104,7 +104,7 @@
             try {
                 var row1 = $('#JQDataGrid1').datagrid('getSelected');//用戶
                 var sWhere = "CUSID='" + CUSID + "' AND ENTRYNO=" + row.ENTRYNO + " and dropdat is null and unclosedat is null and closedat is null ";
-                alert(sWhere);
+
                 $("#JQDataGrid3").datagrid('setWhere', sWhere);
                 var row3 = $('#JQDataGrid3').datagrid('getSelected');//派工
             }
@@ -134,10 +134,12 @@
                 return false;
             }
 
+            /*
             if (row.PAYTYPE == "02") {
                 alert("繳費方式為現金付款時，必須由收款派工單產生應收帳款");
                 return false;
             }
+            */
 
             if (row1.STRBILLINGDAT == "" && row1.STRBILLINGDAT == null) {
                 alert("開始計費日空白時不可轉應收結案作業。");
@@ -325,8 +327,8 @@
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton" OnClick="viewItem" Text="瀏覽" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="匯出Excel" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn1Click" Text="收款派工" Visible="True" Icon="icon-edit" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn2Click" Text="轉應收結案" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn3Click" Text="返轉應收結案" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn2Click" Text="轉應收結案" Visible="True" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn3Click" Text="返轉應收結案" Visible="True" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn4Click" Text="應收應付" Visible="True" Icon="icon-view" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn5Click" Text="作　廢" Visible="True" Icon="icon-cut" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn6Click" Text="作廢返轉" Visible="True" Icon="icon-redo" />

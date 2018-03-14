@@ -85,7 +85,7 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="作廢日" Editor="text" FieldName="CANCELDAT" Width="90" Format="yyyy/mm/dd" />
                 </Columns>
                 <TooItems>
-                    <JQTools:JQToolItem Enabled="True" Icon="icon-search" ItemType="easyui-linkbutton" OnClick="openQuery" Text="Query" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" Icon="icon-search" ItemType="easyui-linkbutton" OnClick="openQuery" Text="Query" Visible="False" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="Export" Visible="True" />
                     <JQTools:JQToolItem Icon="icon-edit" ItemType="easyui-linkbutton"
                         OnClick="btn1Click" Text="沖  帳" Visible="True" />

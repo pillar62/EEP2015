@@ -34,6 +34,7 @@
             Srvtools.Service service3 = new Srvtools.Service();
             Srvtools.Service service4 = new Srvtools.Service();
             Srvtools.Service service5 = new Srvtools.Service();
+            Srvtools.Service service6 = new Srvtools.Service();
             Srvtools.KeyItem keyItem1 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem2 = new Srvtools.KeyItem();
             Srvtools.FieldAttr fieldAttr1 = new Srvtools.FieldAttr();
@@ -175,6 +176,9 @@
             Srvtools.InfoParameter infoParameter23 = new Srvtools.InfoParameter();
             Srvtools.InfoParameter infoParameter24 = new Srvtools.InfoParameter();
             Srvtools.InfoParameter infoParameter25 = new Srvtools.InfoParameter();
+            Srvtools.InfoParameter infoParameter26 = new Srvtools.InfoParameter();
+            Srvtools.InfoParameter infoParameter27 = new Srvtools.InfoParameter();
+            Srvtools.InfoParameter infoParameter28 = new Srvtools.InfoParameter();
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTLessorAVSCustCont = new Srvtools.InfoCommand(this.components);
@@ -192,6 +196,7 @@
             this.cmdRT10433 = new Srvtools.InfoCommand(this.components);
             this.cmdRT10435 = new Srvtools.InfoCommand(this.components);
             this.cmdRT10434 = new Srvtools.InfoCommand(this.components);
+            this.cmdRT10436 = new Srvtools.InfoCommand(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustCont)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustContHardware)).BeginInit();
@@ -205,6 +210,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT10433)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT10435)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT10434)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdRT10436)).BeginInit();
             // 
             // serviceManager1
             // 
@@ -223,11 +229,15 @@
             service5.DelegateName = "smRT10435";
             service5.NonLogin = false;
             service5.ServiceName = "smRT10435";
+            service6.DelegateName = "smRT10436";
+            service6.NonLogin = false;
+            service6.ServiceName = "smRT10436";
             this.serviceManager1.ServiceCollection.Add(service1);
             this.serviceManager1.ServiceCollection.Add(service2);
             this.serviceManager1.ServiceCollection.Add(service3);
             this.serviceManager1.ServiceCollection.Add(service4);
             this.serviceManager1.ServiceCollection.Add(service5);
+            this.serviceManager1.ServiceCollection.Add(service6);
             // 
             // InfoConnection1
             // 
@@ -1703,6 +1713,60 @@
             this.cmdRT10434.SiteControl = false;
             this.cmdRT10434.SiteFieldName = null;
             this.cmdRT10434.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // cmdRT10436
+            // 
+            this.cmdRT10436.CacheConnection = false;
+            this.cmdRT10436.CommandText = "usp_RTLessorAVSCustContTRNAR";
+            this.cmdRT10436.CommandTimeout = 30;
+            this.cmdRT10436.CommandType = System.Data.CommandType.StoredProcedure;
+            this.cmdRT10436.DynamicTableName = false;
+            this.cmdRT10436.EEPAlias = null;
+            this.cmdRT10436.EncodingAfter = null;
+            this.cmdRT10436.EncodingBefore = "Windows-1252";
+            this.cmdRT10436.EncodingConvert = null;
+            this.cmdRT10436.InfoConnection = this.InfoConnection1;
+            infoParameter26.InfoDbType = Srvtools.InfoDbType.VarChar;
+            infoParameter26.ParameterName = "cusid";
+            infoParameter26.Precision = ((byte)(0));
+            infoParameter26.Scale = ((byte)(0));
+            infoParameter26.Size = 15;
+            infoParameter26.SourceColumn = null;
+            infoParameter26.XmlSchemaCollectionDatabase = null;
+            infoParameter26.XmlSchemaCollectionName = null;
+            infoParameter26.XmlSchemaCollectionOwningSchema = null;
+            infoParameter27.InfoDbType = Srvtools.InfoDbType.Int;
+            infoParameter27.ParameterName = "entryno";
+            infoParameter27.Precision = ((byte)(0));
+            infoParameter27.Scale = ((byte)(0));
+            infoParameter27.Size = 0;
+            infoParameter27.SourceColumn = null;
+            infoParameter27.XmlSchemaCollectionDatabase = null;
+            infoParameter27.XmlSchemaCollectionName = null;
+            infoParameter27.XmlSchemaCollectionOwningSchema = null;
+            infoParameter28.InfoDbType = Srvtools.InfoDbType.VarChar;
+            infoParameter28.ParameterName = "usr";
+            infoParameter28.Precision = ((byte)(0));
+            infoParameter28.Scale = ((byte)(0));
+            infoParameter28.Size = 6;
+            infoParameter28.SourceColumn = null;
+            infoParameter28.XmlSchemaCollectionDatabase = null;
+            infoParameter28.XmlSchemaCollectionName = null;
+            infoParameter28.XmlSchemaCollectionOwningSchema = null;
+            this.cmdRT10436.InfoParameters.Add(infoParameter26);
+            this.cmdRT10436.InfoParameters.Add(infoParameter27);
+            this.cmdRT10436.InfoParameters.Add(infoParameter28);
+            this.cmdRT10436.MultiSetWhere = false;
+            this.cmdRT10436.Name = "cmdRT10436";
+            this.cmdRT10436.NotificationAutoEnlist = false;
+            this.cmdRT10436.SecExcept = null;
+            this.cmdRT10436.SecFieldName = null;
+            this.cmdRT10436.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.cmdRT10436.SelectPaging = false;
+            this.cmdRT10436.SelectTop = 0;
+            this.cmdRT10436.SiteControl = false;
+            this.cmdRT10436.SiteFieldName = null;
+            this.cmdRT10436.UpdatedRowSource = System.Data.UpdateRowSource.None;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustCont)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustContHardware)).EndInit();
@@ -1716,6 +1780,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT10433)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT10435)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT10434)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdRT10436)).EndInit();
 
         }
 
@@ -1738,5 +1803,6 @@
         private Srvtools.InfoCommand cmdRT10433;
         private Srvtools.InfoCommand cmdRT10435;
         private Srvtools.InfoCommand cmdRT10434;
+        private Srvtools.InfoCommand cmdRT10436;
     }
 }

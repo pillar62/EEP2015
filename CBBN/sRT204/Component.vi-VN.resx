@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cmd" type="System.Drawing.Point, System.Drawing">
+    <value>359, 64</value>
+  </data>
   <data name="若要在類別中加入元件，請從工具箱拖所需元件，並利用 [屬性] 視窗設定它們的屬性。若要建立類別的方法與事件，請按這裡切換到程式碼檢視。" type="System.Drawing.Point, System.Drawing">
     <value>0, 362</value>
   </data>
@@ -136,7 +139,10 @@
   <data name="View_RTLessorAVSCustAR" type="System.Drawing.Point, System.Drawing">
     <value>670, 17</value>
   </data>
-  <data name="infoCommand1" type="System.Drawing.Point, System.Drawing">
-    <value>264, 196</value>
+  <data name="cmRT204" type="System.Drawing.Point, System.Drawing">
+    <value>17, 212</value>
+  </data>
+  <data name="RT2044" type="System.Drawing.Point, System.Drawing">
+    <value>219, 67</value>
   </data>
 </root>

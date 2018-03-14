@@ -107,7 +107,7 @@
                 alert("當已作廢時，不可執行完工結案或未完工結案");
                 return false;
             }
-
+            /*
             if (row.CLOSEDAT != "" || row.UNCLOSEDAT != "") {
                 alert("此裝機派工單已完工結案或未完工結案，不可重複執行完工結案或未完工結案");
                 return false;
@@ -117,6 +117,7 @@
                 alert("此裝機派工單完工時，必須先輸入實際裝機人員或實際裝機經銷商");
                 return false;
             }
+            */
 
             $.ajax({
                 type: "POST",

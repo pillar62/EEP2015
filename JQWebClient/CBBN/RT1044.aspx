@@ -116,11 +116,11 @@
                 alert("應收金額為0者，不可產生應收帳款");
                 return false;
             }
-
+            /*
             if (row.PAYTYPE == "02") {
                 alert("繳費方式為現金付款時，必須由收款派工單產生應收帳款");
                 return false;
-            }
+            }*/
 
             if (row1.STRBILLINGDAT == "" && row1.STRBILLINGDAT == null) {
                 alert("開始計費日空白時不可轉應收結案作業。");

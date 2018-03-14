@@ -124,10 +124,10 @@
     <value>17, 134</value>
   </metadata>
   <metadata name="RTLessorAVSCustAR.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>490, 139</value>
+    <value>249, 153</value>
   </metadata>
   <metadata name="ucRTLessorAVSCustAR.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>476, 74</value>
+    <value>259, 120</value>
   </metadata>
   <metadata name="View_RTLessorAVSCustAR.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>670, 17</value>
@@ -153,6 +153,9 @@ LEFT OUTER JOIN RTCode g ON c.ARTYPE = g.CODE AND g.KIND = 'N2'
 WHERE (c.AMT &lt;&gt; c.REALAMT) and c.canceldat is null and cod2 like '%超商%' 
 ORDER BY c.CDAT desc </value>
   </data>
+  <metadata name="cmd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>359, 64</value>
+  </metadata>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>
