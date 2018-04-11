@@ -247,6 +247,12 @@ RTLessorAVSCustARDTL.L23 = RTAccountNo.L23
 where 1=1 
 ORDER BY RTLessorAVSCustARDTL.SEQ </value>
   </data>
+  <metadata name="cmdRT1043.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>350, 336</value>
+  </metadata>
+  <metadata name="cmd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>425, 443</value>
+  </metadata>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>

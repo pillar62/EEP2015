@@ -68,6 +68,8 @@
         //完工結案
         function btn3Click() {
             var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+
+            $("#JQDataGrid1").datagrid('setWhere', "CUSID='" + CUSID + "'"); //過濾用戶資料
             try
             {
                 var row1 = $('#JQDataGrid1').datagrid('getSelected');//取得當前主檔中選中的那個Data
@@ -76,12 +78,14 @@
             { alert(err); }
 
             var PRTNO = row.PRTNO;
-            if ((row1.DROPDAT != "" &&row1.DROPDAT != null) || (row1.CANCELDAT != "" && row1.CANCELDAT != null))
+
+            if ((row1.DROPDAT != "" && row1.DROPDAT != null) || (row1.CANCELDAT != "" && row1.CANCELDAT != null))
             {
                 alert("客戶已退租或作廢");
                 return false;
             }
-
+            
+            
             if (row1.RCVMONEY == 0)
             {
                 alert("應收金額=0 (無法轉應收帳款)");
@@ -93,22 +97,19 @@
                 return false;
             }
 
+            /*
             if (row1.BATCHNO != "") {
                 alert("己產生應收帳款");
                 return false;
             }
-
-            if (row1.FINISHDAT != "") {
-                alert("此客戶已完工結案，不可重複執行");
+            */
+                       
+            if (row.DROPDAT != "" && row.DROPDAT != null) {
+                alert("當已作廢時，不可執行完工結案或未完工結案" + row.DROPDAT);
                 return false;
             }
-
-            if (row.DROPDAT != "") {
-                alert("當已作廢時，不可執行完工結案或未完工結案");
-                return false;
-            }
-            /*
-            if (row.CLOSEDAT != "" || row.UNCLOSEDAT != "") {
+            
+            if ((row.closedat != "" && row.closedat != null) || (row.unclosedat != "" &&  row.unclosedat != null)) {
                 alert("此裝機派工單已完工結案或未完工結案，不可重複執行完工結案或未完工結案");
                 return false;
             }
@@ -117,8 +118,7 @@
                 alert("此裝機派工單完工時，必須先輸入實際裝機人員或實際裝機經銷商");
                 return false;
             }
-            */
-
+            
             $.ajax({
                 type: "POST",
                 url: '../handler/jqDataHandle.ashx?RemoteName=sRT1042.cmdRT10421', //連接的Server端，command
@@ -128,9 +128,11 @@
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("已完工結案，請點選重新整理!");
+                    $('#dataGridMaster').datagrid('reload');
+                    alert(data);
                 }
             });
+         
         }
 
         //未完工結案
@@ -166,7 +168,8 @@
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("未完工結案完成，請點選重新整理");
+                    $('#dataGridMaster').datagrid('reload');
+                    alert("未完工結案完成!");
                 }
             });
         }
@@ -204,7 +207,8 @@
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("結案返轉完成，請點選重新整理!");
+                    $('#dataGridMaster').datagrid('reload');
+                    alert("結案返轉完成!");
                 }
             });
         }
@@ -242,7 +246,8 @@
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("資料已作廢，請點選重新整理!");
+                    $('#dataGridMaster').datagrid('reload');
+                    alert("資料已作廢!");
                 }
             });
         }
@@ -275,7 +280,8 @@
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("資料已作廢返轉，請點選重新整理!");
+                    $('#dataGridMaster').datagrid('reload');
+                    alert("資料已作廢返轉!");
                 }
             });
         }
@@ -296,10 +302,12 @@
 
         function mySelect()
         {
-            //var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            //var PRTNO = row.PRTNO;
-            var sWhere = "CUSID='" + CUSID + "'";
-            $("#JQDataGrid1").datagrid('setWhere', sWhere);
+            if (flag == false) {
+                //var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+                //var PRTNO = row.PRTNO;
+                var sWhere = "CUSID='" + CUSID + "'";
+                $("#JQDataGrid1").datagrid('setWhere', sWhere);
+            }
         }
 
     </script>
@@ -310,7 +318,7 @@
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
             <JQTools:JQDataGrid ID="dataGridMaster" data-options="pagination:true,view:commandview" RemoteName="sRT1042.RT1042" runat="server" AutoApply="True"
                 DataMember="RT1042" Pagination="True" QueryTitle="Query"
-                Title="用戶裝機派工單資料維護" AllowDelete="False" AllowInsert="False" AllowUpdate="False" QueryMode="Fuzzy" AlwaysClose="True" AllowAdd="False" ViewCommandVisible="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="False" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" OnLoadSuccess="dgOnloadSuccess" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" EnableViewState="False" OnSelect="mySelect" ReportFileName="/DevReportForm/RT1042RF.aspx">
+                Title="用戶裝機派工單資料維護" AllowDelete="False" AllowInsert="False" AllowUpdate="False" QueryMode="Fuzzy" AlwaysClose="True" AllowAdd="False" ViewCommandVisible="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="False" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" OnLoadSuccess="dgOnloadSuccess" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" EnableViewState="False" ReportFileName="/DevReportForm/RT1042RF.aspx">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="用戶" Editor="infocombobox" FieldName="CUSID" Format="" MaxLength="15" Width="120" EditorOptions="valueField:'CUSID',textField:'CUSNC',remoteName:'sRT104.View_RTLessorAVSCust',tableName:'View_RTLessorAVSCust',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
                     <JQTools:JQGridColumn Alignment="left" Caption="主線" Editor="text" FieldName="comqline" Format="" MaxLength="0" Width="60" />
@@ -334,7 +342,7 @@
                 </Columns>
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
-                        OnClick="openQuery" Text="查詢" />
+                        OnClick="openQuery" Text="查詢" Visible="False" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btnIns" Text="新增" Visible="True" Icon="icon-add" ID="btnIns" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-edit" ItemType="easyui-linkbutton" OnClick="btnEdit" Text="修改" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-view" ItemType="easyui-linkbutton" OnClick="btnView" Text="檢視" Visible="True" />
@@ -392,4 +400,7 @@
         </div>
     </form>
 </body>
+<script>
+    $("#toolbardataGridMaster").css("'display', 'block'");
+</script>
 </html>

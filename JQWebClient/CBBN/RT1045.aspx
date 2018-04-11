@@ -122,14 +122,14 @@
         //退租結案
         function btn3Click() {
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            var PRTNO = row.PRTNO;
+            //var PRTNO = row.PRTNO;
             var ENTRYNO = row.ENTRYNO;
 
             $.ajax({
                 type: "POST",
                 url: '../handler/jqDataHandle.ashx?RemoteName=sRT1045.cmdRT10456', //連接的Server端，command
                 //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
-                data: "mode=method&method=" + "smRT10456" + "&parameters=" + CUSID + "," + ENTRYNO + "," + PRTNO + "," + usr,
+                data: "mode=method&method=" + "smRT10456" + "&parameters=" + CUSID + "," + ENTRYNO + "," +  usr,
                 cache: false,
                 async: false,
                 success: function (data) {
@@ -142,14 +142,14 @@
         //結案返轉
         function btn4Click() {
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            var PRTNO = row.PRTNO;
+//            var PRTNO = row.PRTNO;
             var ENTRYNO = row.ENTRYNO;
 
             $.ajax({
                 type: "POST",
                 url: '../handler/jqDataHandle.ashx?RemoteName=sRT1045.cmdRT10457', //連接的Server端，command
                 //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
-                data: "mode=method&method=" + "smRT10457" + "&parameters=" + CUSID + "," + ENTRYNO + "," + PRTNO + "," + usr,
+                data: "mode=method&method=" + "smRT10457" + "&parameters=" + CUSID + "," + ENTRYNO + "," + usr,
                 cache: false,
                 async: false,
                 success: function (data) {
@@ -162,7 +162,7 @@
         //作廢
         function btn5Click() {
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            var PRTNO = row.PRTNO;
+//            var PRTNO = row.PRTNO;
             var ENTRYNO = row.ENTRYNO;
 
             $.ajax({
@@ -266,8 +266,8 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="預定退租日" Editor="datebox" FieldName="ENDDAT" Format="yyyy/mm/dd" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="退租結案日" Editor="datebox" FieldName="FINISHDAT" Format="yyyy/mm/dd" Width="180" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="結案人員" Editor="infocombobox" FieldName="FUSR" Format="" maxlength="6" Width="180" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" ReadOnly="True" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="拆機工單" Editor="text" FieldName="SNDPRTNO" Format="" maxlength="12" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="拆機結案日" Editor="datebox" FieldName="SNDWORKCLOSE" Format="yyyy/mm/dd" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="拆機工單" Editor="text" FieldName="SNDPRTNO" Format="" maxlength="12" Width="180" Visible="False" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="拆機結案日" Editor="datebox" FieldName="SNDWORKCLOSE" Format="yyyy/mm/dd" Width="180" Visible="False" />
                         <JQTools:JQFormColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="CANCELDAT" Format="yyyy/mm/dd" Width="180" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="作廢人員" Editor="infocombobox" FieldName="CANCELUSR" Format="" maxlength="6" Width="180" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="建檔人員" Editor="infocombobox" FieldName="EUSR" Format="" maxlength="6" Width="180" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" ReadOnly="True" />
@@ -300,4 +300,7 @@
         </div>
     </form>
 </body>
+<script>
+    $("#toolbardataGridMaster").css("'display', 'block'");
+</script>
 </html>

@@ -35,23 +35,33 @@ namespace sRT1042
             //開啟資料連接
             IDbConnection conn = cmdRT10421.Connection;
             conn.Open();
+            string selectSql = "select * FROM RTLessorAVSCust WHERE CUSID='" + sdata[0] + "'";
+            cmd.CommandText = selectSql;
+            DataSet ds = cmd.ExecuteDataSet();
+            string tempperiod = ds.Tables[0].Rows[0]["period"].ToString();
+            int temprcvmoney = Convert.ToInt32(ds.Tables[0].Rows[0]["rcvmoney"].ToString());
+            int temppaytype = Convert.ToInt32(ds.Tables[0].Rows[0]["paytype"].ToString());
+            string tempcardno = ds.Tables[0].Rows[0]["CREDITCARDNO"].ToString();
+            string ss1 = "";
+
             //設定輸入參數的值
             try
             {
                 cmdRT10421.InfoParameters[0].Value = sdata[0];
                 cmdRT10421.InfoParameters[1].Value = sdata[1];
                 cmdRT10421.InfoParameters[2].Value = sdata[2];
-                cmdRT10421.InfoParameters[3].Value = sdata[3];
-                cmdRT10421.InfoParameters[4].Value = sdata[4];
-                cmdRT10421.InfoParameters[5].Value = sdata[5];
-                cmdRT10421.InfoParameters[6].Value = sdata[6];
+                cmdRT10421.InfoParameters[3].Value = tempperiod;
+                cmdRT10421.InfoParameters[4].Value = temprcvmoney;
+                cmdRT10421.InfoParameters[5].Value = temppaytype;
+                cmdRT10421.InfoParameters[6].Value = tempcardno;
                 /*取得統計的結果，並將結果返回*/
                 double ii = cmdRT10421.ExecuteNonQuery();
-                return new object[] { 0, ii };
+                ss1 = ii.ToString();
+                return new object[] { 0, "已完工結案!!" };
             }
             catch (Exception ex)
             {
-                return new object[] { 0, ex };
+                return new object[] { 0, "完工結案失敗!!"+ ss1};
             }
         }
 

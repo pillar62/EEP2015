@@ -281,10 +281,12 @@
 
         function mySelect()
         {
-            //var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            //var PRTNO = row.PRTNO;
-            var sWhere = "CUSID='" + CUSID + "'";
-            $("#JQDataGrid1").datagrid('setWhere', sWhere);
+            if (flag == false) {
+                //var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+                //var PRTNO = row.PRTNO;
+                var sWhere = "CUSID='" + CUSID + "'";
+                $("#JQDataGrid1").datagrid('setWhere', sWhere);
+            }
         }
 
     </script>

@@ -8,9 +8,11 @@
     <title></title>
     <script>
         function MySelect(rowIndex, rowData) {
-            var ss = rowData.CUSID;
-            $("#RTLessorAVSCustCont").datagrid('setWhere', "RTLessorAVSCustCont.cusid='" + ss + "'"); //客戶續約單
-            $("#RTLessorAVSCustAR").datagrid('setWhere', "RTLessorAVSCustAR.cusid='" + ss + "'"); //客戶應收付單 
+            if (flag == false) {
+                var ss = rowData.CUSID;
+                $("#RTLessorAVSCustCont").datagrid('setWhere', "RTLessorAVSCustCont.cusid='" + ss + "'"); //客戶續約單
+                $("#RTLessorAVSCustAR").datagrid('setWhere', "RTLessorAVSCustAR.cusid='" + ss + "'"); //客戶應收付單 
+            }
         }
 
         function btnRT205Click(val) {

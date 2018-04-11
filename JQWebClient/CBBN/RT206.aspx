@@ -9,8 +9,10 @@
     <script>
         var flag = true;
         function MySelect(rowIndex, rowData) {
-            var ss = rowData.INVNO;
-            $("#JQDataGrid1").datagrid('setWhere', "INVNO='" + ss + "'"); //發票明細
+            if (flag == false) {
+                var ss = rowData.INVNO;
+                $("#JQDataGrid1").datagrid('setWhere', "INVNO='" + ss + "'"); //發票明細
+            }
         }
         function dgOnloadSuccess() {
             flag = false;

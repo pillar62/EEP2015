@@ -49,6 +49,40 @@ namespace sRT1041
             }
         }
 
+        public object[] smRT1043(object[] objParam)
+        {
+            var ss = (string)objParam[0];
+            var sdata = ss.Split(',');
+            double iseq = 0;
+            //開啟資料連接
+            IDbConnection conn = cmd.Connection;
+            conn.Open();
+            string selectSql = " select max(entryno) as entryno FROM RTLessorAVSCustRepair WHERE CUSID='" + sdata[0] + "'";
+            
+            cmd.CommandText = selectSql;
+            DataSet ds = cmd.ExecuteDataSet();
+            if (ds.Tables[0].Rows[0]["entryno"].ToString() != "")
+            {
+                iseq = Int32.Parse(ds.Tables[0].Rows[0]["entryno"].ToString())+1;
+            }
+            else
+            {
+                iseq = 1;
+            }
+                //設定輸入參數的值
+            try
+            {
+                
+                /*取得統計的結果，並將結果返回*/
+                double ii =iseq;
+                return new object[] { 0, ii };
+            }
+            catch (Exception ex)
+            {
+                return new object[] { 0, ex };
+            }
+        }
+
         public object[] smRT104111(object[] objParam)
         {
             var ss = (string)objParam[0];

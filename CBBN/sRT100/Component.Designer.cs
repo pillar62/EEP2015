@@ -207,6 +207,9 @@
             Srvtools.KeyItem keyItem49 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem50 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem51 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem52 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem53 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem54 = new Srvtools.KeyItem();
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTCounty = new Srvtools.InfoCommand(this.components);
@@ -262,6 +265,7 @@
             this.RT20542 = new Srvtools.InfoCommand(this.components);
             this.RT20543 = new Srvtools.InfoCommand(this.components);
             this.RT20544 = new Srvtools.InfoCommand(this.components);
+            this.cmdRTBillCharge = new Srvtools.InfoCommand(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCounty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCtyTown)).BeginInit();
@@ -299,6 +303,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RT20542)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT20543)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT20544)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdRTBillCharge)).BeginInit();
             // 
             // InfoConnection1
             // 
@@ -2709,6 +2714,37 @@
             this.RT20544.SiteControl = false;
             this.RT20544.SiteFieldName = null;
             this.RT20544.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // cmdRTBillCharge
+            // 
+            this.cmdRTBillCharge.CacheConnection = false;
+            this.cmdRTBillCharge.CommandText = "SELECT A.*, B.PARM1\r\nFROM RTBillCharge A\r\nLEFT JOIN RTCode B ON B.KIND=\'L5\' AND B" +
+    ".CODE=A.CASETYPE";
+            this.cmdRTBillCharge.CommandTimeout = 30;
+            this.cmdRTBillCharge.CommandType = System.Data.CommandType.Text;
+            this.cmdRTBillCharge.DynamicTableName = false;
+            this.cmdRTBillCharge.EEPAlias = null;
+            this.cmdRTBillCharge.EncodingAfter = null;
+            this.cmdRTBillCharge.EncodingBefore = "Windows-1252";
+            this.cmdRTBillCharge.EncodingConvert = null;
+            this.cmdRTBillCharge.InfoConnection = this.InfoConnection1;
+            keyItem52.KeyName = "CASETYPE";
+            keyItem53.KeyName = "CASEKIND";
+            keyItem54.KeyName = "PAYCYCLE";
+            this.cmdRTBillCharge.KeyFields.Add(keyItem52);
+            this.cmdRTBillCharge.KeyFields.Add(keyItem53);
+            this.cmdRTBillCharge.KeyFields.Add(keyItem54);
+            this.cmdRTBillCharge.MultiSetWhere = false;
+            this.cmdRTBillCharge.Name = "cmdRTBillCharge";
+            this.cmdRTBillCharge.NotificationAutoEnlist = false;
+            this.cmdRTBillCharge.SecExcept = null;
+            this.cmdRTBillCharge.SecFieldName = null;
+            this.cmdRTBillCharge.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.cmdRTBillCharge.SelectPaging = false;
+            this.cmdRTBillCharge.SelectTop = 0;
+            this.cmdRTBillCharge.SiteControl = false;
+            this.cmdRTBillCharge.SiteFieldName = null;
+            this.cmdRTBillCharge.UpdatedRowSource = System.Data.UpdateRowSource.None;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCounty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCtyTown)).EndInit();
@@ -2746,6 +2782,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RT20542)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT20543)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT20544)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdRTBillCharge)).EndInit();
 
         }
 
@@ -2806,5 +2843,6 @@
         private Srvtools.InfoCommand RT20542;
         private Srvtools.InfoCommand RT20543;
         private Srvtools.InfoCommand RT20544;
+        private Srvtools.InfoCommand cmdRTBillCharge;
     }
 }

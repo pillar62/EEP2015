@@ -182,4 +182,7 @@
         </div>
     </form>
 </body>
+<script>
+    $("#toolbardataGridMaster").css("'display', 'block'");
+</script>
 </html>

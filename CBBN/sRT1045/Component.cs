@@ -323,22 +323,24 @@ namespace sRT1045
                 string ss1 = ds.Tables[0].Rows[0]["CANCELDAT"].ToString();
                 if (ss1 != "")
                 {
-                    return new object[] { 0, "當退租單已作廢時，不可重複執行" };
+                    return new object[] { 0, "當退租單已作廢時，不可結案!!" };
                 }
                 ss1 = ds.Tables[0].Rows[0]["FINISHDAT"].ToString();
                 if (ss1 != "")
                 {
-                    return new object[] { 0, "已退租單結案時，不可轉派工單" };
+                    return new object[] { 0, "已退租單結案時，不可重複執行" };
                 }
+                /*
                 ss1 = ds.Tables[0].Rows[0]["SNDPRTNO"].ToString();
                 if (ss1 == "")
                 {
                     return new object[] { 0, "此退租單尚未轉拆機派工單，派工單需結案後始可執行退租單結案作業" };
                 }
+                
                 if (ss1 != "" && ds.Tables[0].Rows[0]["SNDWORKCLOSE"].ToString() == "")
                 {
                     return new object[] { 0, "此退租單之拆機派工單尚未結案，不可執行退租單結案作業" };
-                }
+                }*/
 
                 if (ds1.Tables[0].Rows[0]["batchno"].ToString() == "" && ds.Tables[0].Rows[0]["DROPKIND"].ToString() == "02")
                 {
@@ -377,32 +379,39 @@ namespace sRT1045
             cmd.CommandText = selectSql;
             DataSet ds1 = cmd.ExecuteDataSet();
             String batchno = ds.Tables[0].Rows[0]["batchno"].ToString();
-            selectSql = "select * FROM RTLessorAVSCUSTAR WHERE CUSID='" + sdata[0] + "' AND batchno='" + batchno+ "'";
-            cmd.CommandText = selectSql;
-            DataSet ds2 = cmd.ExecuteDataSet();
+            if (batchno == "")
+            {
 
-            if (ds.Tables[0].Rows.Count > 0)
-            {
-                string ss1 = ds.Tables[0].Rows[0]["CANCELDAT"].ToString();
-                if (ss1 == "")
-                {
-                    return new object[] { 0, "此退租單尚未結案，不可執行結案返轉" };
-                }
             }
-            if (ds1.Tables[0].Rows.Count > 0)
+            else
             {
-                string ss1 = ds1.Tables[0].Rows[0]["dropdat"].ToString();
-                if (ss1 == "")
+                selectSql = "select * FROM RTLessorAVSCUSTAR WHERE CUSID='" + sdata[0] + "' AND batchno='" + batchno + "'";
+                cmd.CommandText = selectSql;
+                DataSet ds2 = cmd.ExecuteDataSet();
+
+                if (ds.Tables[0].Rows.Count > 0)
                 {
-                    return new object[] { 0, "此客戶目前並非退租狀態，不可執行退租結案返轉" };
+                    string ss1 = ds.Tables[0].Rows[0]["FINISHDAT"].ToString();
+                    if (ss1 == "")
+                    {
+                        return new object[] { 0, "此退租單尚未結案，不可執行結案返轉" };
+                    }
                 }
-            }
-            if (ds2.Tables[0].Rows.Count > 0)
-            {
-                string ss1 = ds2.Tables[0].Rows[0]["mdat"].ToString();
-                if (ss1 != "" && ds2.Tables[0].Rows[0]["realamt"].ToString() != "0")
+                if (ds1.Tables[0].Rows.Count > 0)
                 {
-                    return new object[] { 0, "此退租單之應收帳款已沖帳，不可執行結案返轉作業" };
+                    string ss1 = ds1.Tables[0].Rows[0]["dropdat"].ToString();
+                    if (ss1 == "")
+                    {
+                        return new object[] { 0, "此客戶目前並非退租狀態，不可執行退租結案返轉" };
+                    }
+                }
+                if (ds2.Tables[0].Rows.Count > 0)
+                {
+                    string ss1 = ds2.Tables[0].Rows[0]["mdat"].ToString();
+                    if (ss1 != "" && ds2.Tables[0].Rows[0]["realamt"].ToString() != "0")
+                    {
+                        return new object[] { 0, "此退租單之應收帳款已沖帳，不可執行結案返轉作業" };
+                    }
                 }
             }
             ReleaseConnection(GetClientInfo(ClientInfoType.LoginDB).ToString(), conn);
@@ -413,7 +422,7 @@ namespace sRT1045
                 cmdRT10457.InfoParameters[0].Value = sdata[0];
                 cmdRT10457.InfoParameters[1].Value = sdata[1];
                 cmdRT10457.InfoParameters[2].Value = sdata[2];
-                cmdRT10457.InfoParameters[3].Value = sdata[3];
+                
                 /*取得統計的結果，並將結果返回*/
                 double ii = cmdRT10457.ExecuteNonQuery();
                 return new object[] { 0, "退租結案返轉成功" };

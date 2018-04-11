@@ -32,6 +32,7 @@
             Srvtools.Service service1 = new Srvtools.Service();
             Srvtools.Service service2 = new Srvtools.Service();
             Srvtools.Service service3 = new Srvtools.Service();
+            Srvtools.Service service4 = new Srvtools.Service();
             Srvtools.KeyItem keyItem1 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem2 = new Srvtools.KeyItem();
             Srvtools.FieldAttr fieldAttr1 = new Srvtools.FieldAttr();
@@ -107,6 +108,8 @@
             this.cmdRT104112 = new Srvtools.InfoCommand(this.components);
             this.cmdRT1041121 = new Srvtools.InfoCommand(this.components);
             this.cmdRT104113 = new Srvtools.InfoCommand(this.components);
+            this.cmdRT1043 = new Srvtools.InfoCommand(this.components);
+            this.cmd = new Srvtools.InfoCommand(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustRepair)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_RTLessorAVSCustRepair)).BeginInit();
@@ -119,6 +122,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT104112)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT1041121)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT104113)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdRT1043)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmd)).BeginInit();
             // 
             // serviceManager1
             // 
@@ -131,9 +136,13 @@
             service3.DelegateName = "smRT104112";
             service3.NonLogin = false;
             service3.ServiceName = "smRT104112";
+            service4.DelegateName = "smRT1043";
+            service4.NonLogin = false;
+            service4.ServiceName = "smRT1043";
             this.serviceManager1.ServiceCollection.Add(service1);
             this.serviceManager1.ServiceCollection.Add(service2);
             this.serviceManager1.ServiceCollection.Add(service3);
+            this.serviceManager1.ServiceCollection.Add(service4);
             // 
             // InfoConnection1
             // 
@@ -847,6 +856,54 @@
             this.cmdRT104113.SiteControl = false;
             this.cmdRT104113.SiteFieldName = null;
             this.cmdRT104113.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // cmdRT1043
+            // 
+            this.cmdRT1043.CacheConnection = false;
+            this.cmdRT1043.CommandText = "";
+            this.cmdRT1043.CommandTimeout = 30;
+            this.cmdRT1043.CommandType = System.Data.CommandType.Text;
+            this.cmdRT1043.DynamicTableName = false;
+            this.cmdRT1043.EEPAlias = null;
+            this.cmdRT1043.EncodingAfter = null;
+            this.cmdRT1043.EncodingBefore = "Windows-1252";
+            this.cmdRT1043.EncodingConvert = null;
+            this.cmdRT1043.InfoConnection = this.InfoConnection1;
+            this.cmdRT1043.MultiSetWhere = false;
+            this.cmdRT1043.Name = "cmdRT1043";
+            this.cmdRT1043.NotificationAutoEnlist = false;
+            this.cmdRT1043.SecExcept = null;
+            this.cmdRT1043.SecFieldName = null;
+            this.cmdRT1043.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.cmdRT1043.SelectPaging = false;
+            this.cmdRT1043.SelectTop = 0;
+            this.cmdRT1043.SiteControl = false;
+            this.cmdRT1043.SiteFieldName = null;
+            this.cmdRT1043.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // cmd
+            // 
+            this.cmd.CacheConnection = false;
+            this.cmd.CommandText = "";
+            this.cmd.CommandTimeout = 30;
+            this.cmd.CommandType = System.Data.CommandType.Text;
+            this.cmd.DynamicTableName = false;
+            this.cmd.EEPAlias = null;
+            this.cmd.EncodingAfter = null;
+            this.cmd.EncodingBefore = "Windows-1252";
+            this.cmd.EncodingConvert = null;
+            this.cmd.InfoConnection = this.InfoConnection1;
+            this.cmd.MultiSetWhere = false;
+            this.cmd.Name = "cmd";
+            this.cmd.NotificationAutoEnlist = false;
+            this.cmd.SecExcept = null;
+            this.cmd.SecFieldName = null;
+            this.cmd.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.cmd.SelectPaging = false;
+            this.cmd.SelectTop = 0;
+            this.cmd.SiteControl = false;
+            this.cmd.SiteFieldName = null;
+            this.cmd.UpdatedRowSource = System.Data.UpdateRowSource.None;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustRepair)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_RTLessorAVSCustRepair)).EndInit();
@@ -859,6 +916,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT104112)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT1041121)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT104113)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdRT1043)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmd)).EndInit();
 
         }
 
@@ -879,5 +938,7 @@
         private Srvtools.InfoCommand cmdRT104112;
         private Srvtools.InfoCommand cmdRT1041121;
         private Srvtools.InfoCommand cmdRT104113;
+        private Srvtools.InfoCommand cmdRT1043;
+        private Srvtools.InfoCommand cmd;
     }
 }

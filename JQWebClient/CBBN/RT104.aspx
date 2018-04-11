@@ -38,7 +38,9 @@
         function btn2Click(val) {
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var ss = row.CUSID;
-            parent.addTab("用戶續約作業", "CBBN/RT1043.aspx?CUSID=" + ss);
+            var s1 = row.DUEDAT;
+            var s2 = row.COMTYPE;
+            parent.addTab("用戶續約作業", "CBBN/RT1043.aspx?CUSID=" + ss + "&COMPTYE=" + row.COMTYPE + "&DUEDAT=" + s1);
         }
 
         function btn3Click(val) {
@@ -160,13 +162,15 @@
 
         function MySelect(rowIndex, rowData)
         {
-            var ss = rowData.CUSID;
-            if (ss == "") ss = "ZZZZZ";
-            $("#V_RTLessorAVSCustFaqH").datagrid('setWhere', "A.cusid='" + ss + "'"); //維護單 
-            $("#RTLessorAVSCustCont").datagrid('setWhere', "RTLessorAVSCustCont.cusid='" + ss + "'"); //客戶續約單
-            $("#RTLessorAVSCustDrop").datagrid('setWhere', "RTLessorAVSCustDrop.cusid='" + ss + "'"); //客戶退租單 
-            $("#RTLessorAVSCustReturn").datagrid('setWhere', "RTLessorAVSCustReturn.cusid='" + ss + "'"); //客戶復機單 
-            $("#RTLessorAVSCustAR").datagrid('setWhere', "RTLessorAVSCustAR.cusid='" + ss + "'"); //客戶應收付單 
+            if (flag == false) {
+                var ss = rowData.CUSID;
+                if (ss == "") ss = "ZZZZZ";
+                $("#V_RTLessorAVSCustFaqH").datagrid('setWhere', "A.cusid='" + ss + "'"); //維護單 
+                $("#RTLessorAVSCustCont").datagrid('setWhere', "RTLessorAVSCustCont.cusid='" + ss + "'"); //客戶續約單
+                $("#RTLessorAVSCustDrop").datagrid('setWhere', "RTLessorAVSCustDrop.cusid='" + ss + "'"); //客戶退租單 
+                $("#RTLessorAVSCustReturn").datagrid('setWhere', "RTLessorAVSCustReturn.cusid='" + ss + "'"); //客戶復機單 
+                $("#RTLessorAVSCustAR").datagrid('setWhere', "RTLessorAVSCustAR.cusid='" + ss + "'"); //客戶應收付單 
+            }
         }
 
         function dgOnloadSuccess() {
@@ -406,7 +410,7 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="CANCELDAT" Format="yyyy/mm/dd" maxlength="0" Width="200" ReadOnly="False" />
                         <JQTools:JQFormColumn Alignment="left" Caption="作廢員" Editor="infocombobox" FieldName="CANCELUSR" Format="" Width="200" ReadOnly="False" MaxLength="6" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="用戶速率" Editor="text" FieldName="USERRATE" Format="" maxlength="10" Width="200" ReadOnly="False" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="繳費週期" Editor="inforefval" FieldName="PAYCYCLE" Format="" Width="200" ReadOnly="False" EditorOptions="title:'JQRefval',panelWidth:350,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M8'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代碼',textFieldCaption:'代碼名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" MaxLength="2" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="繳費週期" Editor="inforefval" FieldName="PAYCYCLE" Format="" Width="200" ReadOnly="False" EditorOptions="title:'JQRefval',panelWidth:350,remoteName:'sRT100.cmdRTBillCharge',tableName:'cmdRTBillCharge',columns:[],columnMatches:[{field:'PERIOD',value:'PERIOD'},{field:'RCVMONEY',value:'AMT'}],whereItems:[{field:'PARM1',value:'row[COMTYPE]'},{field:'CASEKIND',value:'row[CASEKIND]'}],valueField:'PAYCYCLE',textField:'MEMO',valueFieldCaption:'代碼',textFieldCaption:'備註',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" MaxLength="2" />
                         <JQTools:JQFormColumn Alignment="left" Caption="繳費方式" Editor="inforefval" FieldName="PAYTYPE" Format="" Width="200" EditorOptions="title:'JQRefval',panelWidth:350,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M9'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代碼',textFieldCaption:'代碼名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" MaxLength="2" />
                         <JQTools:JQFormColumn Alignment="left" Caption="當期收款金額" Editor="numberbox" FieldName="RCVMONEY" Format="" maxlength="0" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="信用卡種類" Editor="inforefval" FieldName="CREDITCARDTYPE" Format="" maxlength="2" Width="200" EditorOptions="title:'信用卡類別',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M6'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代碼',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
@@ -429,7 +433,7 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="報竣日" Editor="datebox" FieldName="DOCKETDAT" Format="yyyy/mm/dd" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="開始計費日" Editor="datebox" FieldName="STRBILLINGDAT" Format="yyyy/mm/dd" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="最近續約計費日" Editor="datebox" FieldName="NEWBILLINGDAT" Format="yyyy/mm/dd" maxlength="0" Width="200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="可使用期數" Editor="numberbox" FieldName="PERIOD" Format="" maxlength="0" Width="200" Visible="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="可使用期數" Editor="numberbox" FieldName="PERIOD" Format="" maxlength="0" Width="200" Visible="True" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="調整日數" Editor="numberbox" FieldName="ADJUSTDAY" Format="" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="使用截止日" Editor="datebox" FieldName="DUEDAT" Format="yyyy/mm/dd" Width="200" EditorOptions="" />
                         <JQTools:JQFormColumn Alignment="left" Caption="退租日" Editor="datebox" FieldName="DROPDAT" Width="200" Format="yyyy/mm/dd" ReadOnly="True" />

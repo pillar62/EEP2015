@@ -49,9 +49,11 @@
 
         function MySelect(rowIndex, rowData)
         {
-            var ss = rowData.CUSID;
-            if (ss == "") ss = "ZZZZZ";            
-            $("#dataRT205").datagrid('setWhere', "a.cusid='" + ss + "'");
+            if (flag == false) {
+                var ss = rowData.CUSID;
+                if (ss == "") ss = "ZZZZZ";
+                $("#dataRT205").datagrid('setWhere', "a.cusid='" + ss + "'");
+            }
         }
 
         function dgOnloadSuccess() {

@@ -108,6 +108,12 @@
             Srvtools.KeyItem keyItem14 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem15 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem16 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem17 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem18 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem19 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem20 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem21 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem22 = new Srvtools.KeyItem();
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTLessorAVSCustSndwork = new Srvtools.InfoCommand(this.components);
@@ -124,6 +130,7 @@
             this.cmdRT10425 = new Srvtools.InfoCommand(this.components);
             this.RT104221 = new Srvtools.InfoCommand(this.components);
             this.RT10424 = new Srvtools.InfoCommand(this.components);
+            this.cmd = new Srvtools.InfoCommand(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustSndwork)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_RTLessorAVSCustSndwork)).BeginInit();
@@ -137,6 +144,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT10425)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT104221)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT10424)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmd)).BeginInit();
             // 
             // serviceManager1
             // 
@@ -425,7 +433,7 @@
             fieldAttr29.CheckNull = false;
             fieldAttr29.DataField = "EUSR";
             fieldAttr29.DefaultMode = Srvtools.DefaultModeType.Insert;
-            fieldAttr29.DefaultValue = null;
+            fieldAttr29.DefaultValue = "_usercode";
             fieldAttr29.TrimLength = 0;
             fieldAttr29.UpdateEnable = true;
             fieldAttr29.WhereMode = true;
@@ -433,23 +441,23 @@
             fieldAttr30.CheckNull = false;
             fieldAttr30.DataField = "EDAT";
             fieldAttr30.DefaultMode = Srvtools.DefaultModeType.Insert;
-            fieldAttr30.DefaultValue = null;
+            fieldAttr30.DefaultValue = "_today";
             fieldAttr30.TrimLength = 0;
             fieldAttr30.UpdateEnable = true;
             fieldAttr30.WhereMode = true;
             fieldAttr31.CharSetNull = false;
             fieldAttr31.CheckNull = false;
             fieldAttr31.DataField = "UUSR";
-            fieldAttr31.DefaultMode = Srvtools.DefaultModeType.Insert;
-            fieldAttr31.DefaultValue = null;
+            fieldAttr31.DefaultMode = Srvtools.DefaultModeType.InsertAndUpdate;
+            fieldAttr31.DefaultValue = "_usercode";
             fieldAttr31.TrimLength = 0;
             fieldAttr31.UpdateEnable = true;
             fieldAttr31.WhereMode = true;
             fieldAttr32.CharSetNull = false;
             fieldAttr32.CheckNull = false;
             fieldAttr32.DataField = "UDAT";
-            fieldAttr32.DefaultMode = Srvtools.DefaultModeType.Insert;
-            fieldAttr32.DefaultValue = null;
+            fieldAttr32.DefaultMode = Srvtools.DefaultModeType.InsertAndUpdate;
+            fieldAttr32.DefaultValue = "_today";
             fieldAttr32.TrimLength = 0;
             fieldAttr32.UpdateEnable = true;
             fieldAttr32.WhereMode = true;
@@ -1052,6 +1060,42 @@
             this.RT10424.SiteControl = false;
             this.RT10424.SiteFieldName = null;
             this.RT10424.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // cmd
+            // 
+            this.cmd.CacheConnection = false;
+            this.cmd.CommandText = resources.GetString("cmd.CommandText");
+            this.cmd.CommandTimeout = 30;
+            this.cmd.CommandType = System.Data.CommandType.Text;
+            this.cmd.DynamicTableName = false;
+            this.cmd.EEPAlias = null;
+            this.cmd.EncodingAfter = null;
+            this.cmd.EncodingBefore = "Windows-1252";
+            this.cmd.EncodingConvert = null;
+            this.cmd.InfoConnection = this.InfoConnection1;
+            keyItem17.KeyName = "CUSID";
+            keyItem18.KeyName = "ENTRYNO";
+            keyItem19.KeyName = "PRTNO";
+            keyItem20.KeyName = "SEQ";
+            keyItem21.KeyName = "PRTNO1";
+            keyItem22.KeyName = "ENTRYNO1";
+            this.cmd.KeyFields.Add(keyItem17);
+            this.cmd.KeyFields.Add(keyItem18);
+            this.cmd.KeyFields.Add(keyItem19);
+            this.cmd.KeyFields.Add(keyItem20);
+            this.cmd.KeyFields.Add(keyItem21);
+            this.cmd.KeyFields.Add(keyItem22);
+            this.cmd.MultiSetWhere = false;
+            this.cmd.Name = "cmd";
+            this.cmd.NotificationAutoEnlist = false;
+            this.cmd.SecExcept = null;
+            this.cmd.SecFieldName = null;
+            this.cmd.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.cmd.SelectPaging = false;
+            this.cmd.SelectTop = 0;
+            this.cmd.SiteControl = false;
+            this.cmd.SiteFieldName = null;
+            this.cmd.UpdatedRowSource = System.Data.UpdateRowSource.None;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustSndwork)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_RTLessorAVSCustSndwork)).EndInit();
@@ -1065,6 +1109,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT10425)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT104221)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT10424)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmd)).EndInit();
 
         }
 
@@ -1086,5 +1131,6 @@
         private Srvtools.InfoCommand cmdRT10425;
         private Srvtools.InfoCommand RT104221;
         private Srvtools.InfoCommand RT10424;
+        private Srvtools.InfoCommand cmd;
     }
 }

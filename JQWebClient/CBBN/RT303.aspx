@@ -26,20 +26,24 @@
             parent.addTab("用戶應收應付帳款明細查詢-未沖用戶", "CBBN/RT3033.aspx?TYY=" + TYY + "&TMM=" + TMM);
         }
         function MySelectY(rowIndex, rowData) {
-            $('#JQDataGrid1').datagrid('getPanel').panel('setTitle', '用戶Excel表(年)');
-            var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            var TYY = row.TYY;
-            var TMM = row.TMM;
-            $("#JQDataGrid1").datagrid('setWhere', "a.TYY='" + TYY + "'"); //維護單 
-            exportGrid("#JQDataGrid1");
+            if (flag == false) {
+                $('#JQDataGrid1').datagrid('getPanel').panel('setTitle', '用戶Excel表(年)');
+                var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+                var TYY = row.TYY;
+                var TMM = row.TMM;
+                $("#JQDataGrid1").datagrid('setWhere', "a.TYY='" + TYY + "'"); //維護單 
+                exportGrid("#JQDataGrid1");
+            }
         }
         function MySelectM(rowIndex, rowData) {
-            $('#JQDataGrid1').datagrid('getPanel').panel('setTitle', '用戶Excel表(年月)');
-            var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            var TYY = row.TYY;
-            var TMM = row.TMM;
-            $("#JQDataGrid1").datagrid('setWhere', "a.TYY='" + TYY + "' and a.TMM=" + TMM); //維護單 
-            exportGrid("#JQDataGrid1");
+            if (flag == false) {
+                $('#JQDataGrid1').datagrid('getPanel').panel('setTitle', '用戶Excel表(年月)');
+                var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+                var TYY = row.TYY;
+                var TMM = row.TMM;
+                $("#JQDataGrid1").datagrid('setWhere', "a.TYY='" + TYY + "' and a.TMM=" + TMM); //維護單 
+                exportGrid("#JQDataGrid1");
+            }
         }
     </script>
 </head>
