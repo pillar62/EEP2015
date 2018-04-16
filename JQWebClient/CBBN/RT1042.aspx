@@ -310,6 +310,10 @@
             }
         }
 
+        function btnReloadClick() {
+            //$("#dataGridView").datagrid("setWhere", "");
+            $('#dataGridMaster').datagrid('reload');
+        }
     </script>
 </head>
 <body>
@@ -355,6 +359,7 @@
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn7Click" Text="作廢返轉" Visible="True" Icon="icon-redo" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn8Click" Text="設備明細" Visible="True" Icon="icon-view" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn9Click" Text="歷史異動" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btnReloadClick" Text="資料更新" Visible="True" Icon="icon-reload" />
                 </TooItems>
                 <QueryColumns>
                 </QueryColumns>

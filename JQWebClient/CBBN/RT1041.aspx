@@ -260,6 +260,10 @@
             });
         }
 
+        function btnReloadClick() {
+            //$("#dataGridView").datagrid("setWhere", "");
+            $('#dataGridView').datagrid('reload');
+        }
         /*
         $(document).ready(function () {
             alert("add now");
@@ -293,7 +297,7 @@
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton" OnClick="insertItem" Text="新增" />
                     <JQTools:JQToolItem Icon="icon-edit" ItemType="easyui-linkbutton" OnClick="updateItem" Text="修改" Visible="True" />
-                    <JQTools:JQToolItem Icon="icon-remove" ItemType="easyui-linkbutton" OnClick="deleteItem" Text="刪除" Visible="True"  />
+                    <JQTools:JQToolItem Icon="icon-remove" ItemType="easyui-linkbutton" OnClick="deleteItem" Text="刪除" Visible="False"  />
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton" OnClick="viewItem" Text="瀏覽" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="匯出Excel" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="轉應收結案" Visible="True" OnClick="btn1Click" Icon="icon-view" />
@@ -301,6 +305,7 @@
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="應收應付" Visible="True" OnClick="btn3Click" Icon="icon-view" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="作廢" Visible="True" OnClick="btn4Click" Icon="icon-view" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="作廢反轉" Visible="True" OnClick="btn5Click" Icon="icon-view" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btnReloadClick" Text="資料更新" Visible="True" Icon="icon-reload" />
                 </TooItems>
                 <QueryColumns>
                 </QueryColumns>
