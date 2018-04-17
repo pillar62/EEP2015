@@ -115,6 +115,10 @@
             var CUSID = row.CUSID;
             parent.addTab("用戶調整到期日資料異動查詢", "CBBN/RT10491.aspx?CUSID=" + CUSID);
         }
+
+        function btnReloadClick() {
+            $('#dataGridView').datagrid('reload');
+        }
     </script>
 
 </head>
@@ -147,6 +151,7 @@
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn3Click" Text="作　　廢" Visible="True" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn4Click" Text="作廢返轉" Visible="True" Icon="icon-undo" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn5Click" Text="歷史異動" Visible="True" Icon="icon-view" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btnReloadClick" Text="資料更新" Visible="True" Icon="icon-reload" />
                 </TooItems>
                 <QueryColumns>
                 </QueryColumns>

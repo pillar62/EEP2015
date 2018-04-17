@@ -6,7 +6,12 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+    <script>
 
+        function btnReloadClick() {
+            $('#dataGridView').datagrid('reload');
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -36,6 +41,7 @@
                     <JQTools:JQQueryColumn AndOr="and" Caption="年份" Condition="=" DataType="number" Editor="text" FieldName="INVYEAR" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="月份" Condition="=" DataType="number" Editor="text" FieldName="INVMONTH" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="發票字軌" Condition="%%" DataType="string" Editor="text" FieldName="INVTRACK" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btnReloadClick" Text="資料更新" Visible="True" Icon="icon-reload" />
                 </QueryColumns>
             </JQTools:JQDataGrid>
 

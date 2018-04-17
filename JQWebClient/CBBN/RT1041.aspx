@@ -261,7 +261,6 @@
         }
 
         function btnReloadClick() {
-            //$("#dataGridView").datagrid("setWhere", "");
             $('#dataGridView').datagrid('reload');
         }
         /*

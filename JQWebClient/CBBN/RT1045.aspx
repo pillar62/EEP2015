@@ -206,6 +206,11 @@
             var s2 = row.ENTRYNO;
             parent.addTab("用戶退租拆機派工單異動資料查詢", "CBBN/RT10459.aspx?CUSID=" + ss + "&ENTRYNO=" + s2);
         }
+
+        function btnReloadClick() {
+            //$("#dataGridView").datagrid("setWhere", "");
+            $('#dataGridView').datagrid('reload');
+        }
     </script>
 </head>
 <body>
@@ -251,6 +256,7 @@
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn5Click" Text="作　　廢" Visible="True" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn6Click" Text="作廢返轉" Visible="True" Icon="icon-undo" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn7Click" Text="歷史異動" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btnReloadClick" Text="資料更新" Visible="True" Icon="icon-reload" />
                 </TooItems>
                 <QueryColumns>
                 </QueryColumns>

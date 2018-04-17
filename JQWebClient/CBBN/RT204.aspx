@@ -110,6 +110,11 @@
             var CANCELDAT = ""; //作廢日期
             parent.addTab("轉入超商銷帳檔", "CBBN/RT2045.aspx");
         }
+
+
+        function btnReloadClick() {
+            $('#dataGridMaster').datagrid('reload');
+        }
     </script>
 </head>
 <body>
@@ -150,6 +155,7 @@
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="帳款明細" Visible="True" OnClick="btn3Click" Icon="icon-view" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="超商未沖(Excel)" Visible="True" OnClick="btn4Click" Icon="icon-excel" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn5Click" Text="轉入超商銷帳檔" Visible="True" Icon="icon-save" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btnReloadClick" Text="資料更新" Visible="True" Icon="icon-reload" />
                 </TooItems>
                 <QueryColumns>
                     <JQTools:JQQueryColumn AndOr="and" Caption="社區序號" Condition="%" DataType="string" Editor="text" FieldName="COMQ1" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />

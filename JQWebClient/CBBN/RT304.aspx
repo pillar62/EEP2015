@@ -14,6 +14,9 @@
             exportGrid("#JQDataGrid1");
         }
 
+        function btnReloadClick() {
+            $('#dataGridMaster').datagrid('reload');
+        }
     </script>
 </head>
 <body>
@@ -42,6 +45,7 @@
                         OnClick="openQuery" Text="查詢" Visible="False" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="結算檔匯入" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="列印Seednet未結算交易檔" Visible="True" OnClick="exportNot" Icon="icon-excel" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btnReloadClick" Text="資料更新" Visible="True" Icon="icon-reload" />
                 </TooItems>
                 <QueryColumns>
                     <JQTools:JQQueryColumn AndOr="and" Caption="帳單編號" Condition="%" DataType="string" Editor="text" FieldName="csnoticeid" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />

@@ -45,6 +45,11 @@
                 exportGrid("#JQDataGrid1");
             }
         }
+
+
+        function btnReloadClick() {
+            $('#dataGridMaster').datagrid('reload');
+        }
     </script>
 </head>
 <body>
@@ -72,6 +77,7 @@
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="全部用戶" Visible="True" Icon="icon-view" OnClick="LinkRT3031" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="已沖用戶" Visible="True" Icon="icon-view" OnClick="LinkRT3032" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="未沖用戶" Visible="True" Icon="icon-view" OnClick="LinkRT3033" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btnReloadClick" Text="資料更新" Visible="True" Icon="icon-reload" />
                 </TooItems>
                 <QueryColumns>
                     <JQTools:JQQueryColumn AndOr="and" Caption="帳款年度" Condition="=" DataType="string" Editor="text" FieldName="TYY" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />

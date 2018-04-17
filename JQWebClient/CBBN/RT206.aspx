@@ -27,6 +27,10 @@
             var ss = row.INVNO;
             parent.addTab("發票明細", "CBBN/RT2061.aspx?INVNO=" + ss);
         }
+
+        function btnReloadClick() {
+            $('#dataGridView').datagrid('reload');
+        }
     </script>
 
 </head>
@@ -58,6 +62,7 @@
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton" OnClick="viewItem" Text="瀏覽" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="匯出Excel" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-view" ItemType="easyui-linkbutton" OnClick="LinkRT2061" Text="發票明細" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btnReloadClick" Text="資料更新" Visible="True" Icon="icon-reload" />
                 </TooItems>
                 <QueryColumns>
                     <JQTools:JQQueryColumn AndOr="and" Caption="發票號碼" Condition="%" DataType="string" Editor="text" FieldName="INVNO" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="80" />

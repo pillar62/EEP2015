@@ -25,6 +25,11 @@
              var WhereString = "";
              exportDevReport("#dataGridMaster", "sRT306.cmdRT3061", "cmdRT3061", "~/CBBN/DevReportForm/RT306RF.aspx", WhereString);
          }
+
+
+         function btnReloadClick() {
+             $('#dataGridView').datagrid('reload');
+         }
     </script>
 </head>
 <body>
@@ -39,38 +44,24 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="發票抬頭" Editor="text" FieldName="INVTITLE" Width="90" />
                     <JQTools:JQGridColumn Alignment="left" Caption="統一編號" Editor="text" FieldName="UNINO" Width="90" />
                     <JQTools:JQGridColumn Alignment="left" Caption="檢查碼" Editor="text" FieldName="CHKNO" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="48">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="發票日期" Editor="text" FieldName="INVDAT" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90" Format="yyyy/mm/dd">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="稅別" Editor="text" FieldName="TAXTYPE" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="60">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="發票金額" Editor="text" FieldName="SALESUM" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="發票稅額" Editor="text" FieldName="TAXSUM" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="發票總額" Editor="text" FieldName="TOTALSUM" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="項次" Editor="text" FieldName="ENTRY" Frozen="False" IsNvarChar="False" MaxLength="10" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="40">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="產品名稱" Editor="text" FieldName="PRODNC" Frozen="False" IsNvarChar="False" MaxLength="100" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="100">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="列印批號" Editor="text" FieldName="BATCH" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="64">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="數量" Editor="text" FieldName="QTY" Frozen="False" IsNvarChar="False" MaxLength="10" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="60">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="單價" Editor="text" FieldName="UNITAMT" Frozen="False" IsNvarChar="False" MaxLength="15" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="60">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="銷售額" Editor="text" FieldName="SALEAMT" Frozen="False" IsNvarChar="False" MaxLength="10" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="60">
-                    </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="稅額" Editor="text" FieldName="TAXAMT" Frozen="False" IsNvarChar="False" MaxLength="10" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="60">
-                    </JQTools:JQGridColumn>
-                </Columns>
+                    </JQTools:JQGridColumn><JQTools:JQGridColumn Alignment="left" Caption="發票日期" Editor="text" FieldName="INVDAT" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90" Format="yyyy/mm/dd">
+                    </JQTools:JQGridColumn><JQTools:JQGridColumn Alignment="left" Caption="稅別" Editor="text" FieldName="TAXTYPE" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="60">
+                    </JQTools:JQGridColumn><JQTools:JQGridColumn Alignment="left" Caption="發票金額" Editor="text" FieldName="SALESUM" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn><JQTools:JQGridColumn Alignment="left" Caption="發票稅額" Editor="text" FieldName="TAXSUM" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn><JQTools:JQGridColumn Alignment="left" Caption="發票總額" Editor="text" FieldName="TOTALSUM" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
+                    </JQTools:JQGridColumn><JQTools:JQGridColumn Alignment="left" Caption="項次" Editor="text" FieldName="ENTRY" Frozen="False" IsNvarChar="False" MaxLength="10" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="40">
+                    </JQTools:JQGridColumn><JQTools:JQGridColumn Alignment="left" Caption="產品名稱" Editor="text" FieldName="PRODNC" Frozen="False" IsNvarChar="False" MaxLength="100" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="100">
+                    </JQTools:JQGridColumn><JQTools:JQGridColumn Alignment="left" Caption="列印批號" Editor="text" FieldName="BATCH" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="64">
+                    </JQTools:JQGridColumn><JQTools:JQGridColumn Alignment="left" Caption="數量" Editor="text" FieldName="QTY" Frozen="False" IsNvarChar="False" MaxLength="10" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="60">
+                    </JQTools:JQGridColumn><JQTools:JQGridColumn Alignment="left" Caption="單價" Editor="text" FieldName="UNITAMT" Frozen="False" IsNvarChar="False" MaxLength="15" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="60">
+                    </JQTools:JQGridColumn><JQTools:JQGridColumn Alignment="left" Caption="銷售額" Editor="text" FieldName="SALEAMT" Frozen="False" IsNvarChar="False" MaxLength="10" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="60">
+                    </JQTools:JQGridColumn><JQTools:JQGridColumn Alignment="left" Caption="稅額" Editor="text" FieldName="TAXAMT" Frozen="False" IsNvarChar="False" MaxLength="10" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="60">
+                    </JQTools:JQGridColumn></Columns>
                 <TooItems>
                     <JQTools:JQToolItem Enabled="True" Icon="icon-search" ItemType="easyui-linkbutton" OnClick="openQuery" Text="Query" Visible="False" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="Export" Visible="True" />
-                    
                     <JQTools:JQToolItem Enabled="True" Icon="icon-print" ItemType="easyui-linkbutton" OnClick="btnINVOClick" Text="列印發票" Visible="True" />
-                    
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btnReloadClick" Text="資料更新" Visible="True" Icon="icon-reload" />
                 </TooItems>
                 <QueryColumns>
                     <JQTools:JQQueryColumn AndOr="and" Caption="列印批次 :" Condition="=" DataType="string" Editor="text" FieldName="BATCH" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />

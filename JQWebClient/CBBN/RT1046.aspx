@@ -58,6 +58,11 @@
         function btn4Click(val) {
             alert("開始沖帳");
         }
+
+
+        function btnReloadClick() {
+            $('#dataGridMaster').datagrid('reload');
+        }
     </script>
 </head>
 <body>
@@ -91,6 +96,7 @@
                         OnClick="btn1Click" Text="沖  帳" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-view" ItemType="easyui-linkbutton" OnClick="btn2Click" Text="沖帳明細" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-view" ItemType="easyui-linkbutton" OnClick="btn3Click" Text="帳款明細" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btnReloadClick" Text="資料更新" Visible="True" Icon="icon-reload" />
                 </TooItems>
                 <QueryColumns>
                 </QueryColumns>
