@@ -60,10 +60,22 @@
                 syr = $("#DUEDAT_Query").combobox('getValue'); //年
                 smm = $("#DROPDAT_Query").combobox('getValue'); //月
                 spr = $("#cusnc_Query").combobox('getValue'); //期別
+                //var myDate = new Date(DUEDAT);
+                
                 if (spr == '1')
                 {
                     due1S = syr + '/' + smm + '/01';
-                    due1E = syr + '/' + smm + '/15';
+                    var sdt = new Date(due1S + ' 00:00:00');
+                    //將月份移至下個月份
+                    sdt.setMonth(sdt.getMonth() + 1);
+                    //設定為下個月份的第一天
+                    sdt.setDate(1);
+                    //將日期-1為當月的最後一天
+                    var dayOfMonth = sdt.getDate();
+                    sdt.setDate(dayOfMonth);
+                    due1S = sdt.getFullYear() + "/" + (sdt.getMonth() + 1) + "/01";
+
+                    due1E = sdt.getFullYear() + "/" + (sdt.getMonth() + 1) + '/15';
                 }
                 else
                 {
@@ -73,7 +85,9 @@
                     sdt.setMonth(sdt.getMonth()+1);
                     //設定為下個月份的第一天
                     sdt.setDate(1);
+                    due1S = sdt.getFullYear() + "/" + (sdt.getMonth() + 1) + "/16";
                     //將日期-1為當月的最後一天
+                    sdt.setMonth(sdt.getMonth()+1);
                     var dayOfMonth = sdt.getDate();
                     sdt.setDate(dayOfMonth - 1);
                     due1E = sdt.getFullYear() + "/" + (sdt.getMonth()+1) + "/" + sdt.getDate();

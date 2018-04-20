@@ -227,6 +227,6 @@ public class RT302R : DevExpress.XtraReports.UI.XtraReport
 
     private void xrLabel5_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
     {
-        xrLabel5.Text = xrLabel4.Text + " " + xrLabel5.Text;
+        
     }
 }

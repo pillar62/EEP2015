@@ -185,7 +185,7 @@ case when l.finishnum &gt;0 then '' else 'Y' end , n.comq1, n.lineq1, c.cusid, a
     <value>387, 157</value>
   </metadata>
   <metadata name="R_2051.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>513, 179</value>
+    <value>32, 310</value>
   </metadata>
   <metadata name="R_2052.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>515, 221</value>

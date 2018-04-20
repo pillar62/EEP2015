@@ -9,7 +9,8 @@
     <script>
         var CUSID = Request.getQueryStringByName2("CUSID");
         var COMTYPE = Request.getQueryStringByName2("COMTYPE");
-        var DUEDAT = Request.getQueryStringByName2("DUEDAT");        
+        var DUEDAT = Request.getQueryStringByName2("DUEDAT");
+        var SSTRDT = Request.getQueryStringByName2("DUEDAT");
         
         var flag = true;
         var usr = getClientInfo('_usercode');
@@ -40,8 +41,10 @@
                     sDT = sDT + "-" + myDate.getDate();
                 }
                     
-                $("#JQDataForm1STRBILLINGDAT").datebox('setValue', sDT);
-                $("#JQDataForm1ADJUSTDAY").val("0");
+                SSTRDT = sDT;
+                //$("#dataFormMasterSTRBILLINGDAT").datebox('setValue', sDT);
+                //$("#dataFormMasterADJUSTDAY").val("0");
+                $("#dataFormMasterCOMTYPE").val(COMTYPE);
                 return CUSID;
             }
         }
@@ -50,6 +53,20 @@
             
             if (DUEDAT != "") {
                 return DUEDAT;
+            }
+        }
+
+        function InsDefaultSTRDT() {
+
+            if (SSTRDT != "") {
+                return SSTRDT;
+            }
+        }
+
+        function InsDefaultCOMTYPE() {
+
+            if (COMTYPE != "") {
+                return COMTYPE;
             }
         }
 
@@ -67,6 +84,7 @@
         function dgMasterLoadSuccess()
         {
             $("#dataFormMasterCUSID").focus();
+            $("#dataFormMasterCOMTYPE").val(COMTYPE);
         }
 
         function dgOnInsert()
@@ -102,7 +120,7 @@
         {
             var row = $('#JQDataGrid1').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var ss = row.DUEDAT;
-            var s2 = $("#JQDataForm1STRBILLINGDAT").datebox("getValue");
+            var s2 = $("#dataFormMasterSTRBILLINGDAT").datebox("getValue");
 
             if (s2 < ss) {
                 alert("開始計費日不可小於客戶主檔到期日。");
@@ -377,7 +395,7 @@
                     <JQTools:JQToolItem Icon="icon-remove" ItemType="easyui-linkbutton" OnClick="deleteItem" Text="刪除" Visible="False"  />
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton" OnClick="viewItem" Text="瀏覽" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="匯出Excel" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn1Click" Text="收款派工" Visible="True" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn1Click" Text="收款派工" Visible="False" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn2Click" Text="轉應收結案" Visible="True" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn3Click" Text="返轉應收結案" Visible="True" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn4Click" Text="應收應付" Visible="True" Icon="icon-view" />
@@ -393,12 +411,12 @@
             <JQTools:JQDialog ID="JQDialog1" runat="server" BindingObjectID="dataFormMaster" Title="用戶續約作業" Width="927px">
                 <JQTools:JQDataForm ID="dataFormMaster" runat="server" DataMember="RTLessorAVSCustCont" HorizontalColumnsCount="2" RemoteName="sRT1043.RTLessorAVSCustCont" AlwaysReadOnly="False" Closed="False" ContinueAdd="False" disapply="False" DivFramed="False" DuplicateCheck="False" HorizontalGap="0" IsAutoPageClose="False" IsAutoPause="False" IsAutoSubmit="False" IsNotifyOFF="False" IsRejectNotify="False" IsRejectON="False" IsShowFlowIcon="False" ShowApplyButton="False" ValidateStyle="Hint" VerticalGap="0" OnApply="onapplycheck" OnLoadSuccess="dgMasterLoadSuccess" >
                     <Columns>
-                        <JQTools:JQFormColumn Alignment="left" Caption="用戶序號" Editor="inforefval" FieldName="CUSID" Format="" maxlength="15" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT104.View_RTLessorAVSCust',tableName:'View_RTLessorAVSCust',columns:[],columnMatches:[{field:'COMTYPE',value:'COMTYPE'}],whereItems:[],valueField:'CUSID',textField:'CUSNC',valueFieldCaption:'CUSID',textFieldCaption:'CUSNC',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" ReadOnly="False" OnBlur="" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="用戶序號" Editor="inforefval" FieldName="CUSID" Format="" maxlength="15" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT104.View_RTLessorAVSCust',tableName:'View_RTLessorAVSCust',columns:[],columnMatches:[],whereItems:[],valueField:'CUSID',textField:'CUSNC',valueFieldCaption:'CUSID',textFieldCaption:'CUSNC',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" ReadOnly="False" OnBlur="" />
                         <JQTools:JQFormColumn Alignment="left" Caption="項次" Editor="numberbox" FieldName="ENTRYNO" Format="" Width="180" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="續約申請日" Editor="datebox" FieldName="APPLYDAT" Format="yyyy/mm/dd" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="第二戶(含)以上" Editor="infocombobox" FieldName="SECONDCASE" Format="" maxlength="1" Width="180" EditorOptions="items:[{value:'Y',text:'是',selected:'false'},{value:'N',text:'否',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="資費" Editor="inforefval" FieldName="CASEKIND" Format="" maxlength="2" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'O9'},{field:'PARM1',value:'row[COMTYPE]'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="繳費週期" Editor="inforefval" FieldName="PAYCYCLE" Format="" Visible="true" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,remoteName:'sRT100.cmdRTBillCharge',tableName:'cmdRTBillCharge',columns:[],columnMatches:[{field:'PERIOD',value:'PERIOD'},{field:'AMT',value:'AMT'}],whereItems:[{field:'PARM1',value:'row[COMTYPE]'},{field:'CASEKIND',value:'row[CASEKIND]'}],valueField:'PAYCYCLE',textField:'MEMO',valueFieldCaption:'代碼',textFieldCaption:'備註',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" MaxLength="2" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="資費" Editor="inforefval" FieldName="CASEKIND" Format="" maxlength="2" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'O9'},{field:'PARM1',value:'client[InsDefaultCOMTYPE]'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="繳費週期" Editor="inforefval" FieldName="PAYCYCLE" Format="" Visible="true" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,remoteName:'sRT100.cmdRTBillCharge',tableName:'cmdRTBillCharge',columns:[],columnMatches:[{field:'PERIOD',value:'PERIOD'},{field:'AMT',value:'AMT'}],whereItems:[{field:'PARM1',value:'client[InsDefaultCOMTYPE]'},{field:'CASEKIND',value:'row[CASEKIND]'}],valueField:'PAYCYCLE',textField:'MEMO',valueFieldCaption:'代碼',textFieldCaption:'備註',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" MaxLength="2" />
                         <JQTools:JQFormColumn Alignment="left" Caption="繳費方式" Editor="inforefval" FieldName="PAYTYPE" Format="" MaxLength="2" Visible="true" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M9'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
                         <JQTools:JQFormColumn Alignment="left" Caption="應收金額" Editor="numberbox" FieldName="AMT" Format="" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="可使用期數" Editor="text" FieldName="PERIOD" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="True" Width="80" />
@@ -410,15 +428,16 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="信用卡有效(月)" Editor="text" FieldName="CREDITDUEM" Format="" maxlength="2" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="信用卡有效(年)" Editor="text" FieldName="CREDITDUEY" Format="" maxlength="2" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="COMTYPE" Editor="text" FieldName="COMTYPE" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="False" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="開始計費日" Editor="datebox" FieldName="STRBILLINGDAT" Format="yyyy/mm/dd" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="True" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="調整日數" Editor="text" FieldName="ADJUSTDAY" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="True" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="備註說明" Editor="textarea" EditorOptions="height:70" FieldName="MEMO" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="2" Visible="True" Width="500" />
                     </Columns>
                 </JQTools:JQDataForm>
                 <br />
                 用戶申請、異動及施工進度狀態<br /> &nbsp;
                 <JQTools:JQDataForm ID="JQDataForm1" runat="server" ChainDataFormID="dataFormMaster" DataMember="RTLessorAVSCustCont" RemoteName="sRT1043.RTLessorAVSCustCont" HorizontalColumnsCount="2" AlwaysReadOnly="False" Closed="False" ContinueAdd="False" disapply="False" DivFramed="False" DuplicateCheck="False" HorizontalGap="0" IsAutoPageClose="False" IsAutoPause="False" IsAutoSubmit="False" IsNotifyOFF="False" IsRejectNotify="False" IsRejectON="False" IsShowFlowIcon="False" ShowApplyButton="False" ValidateStyle="Hint" VerticalGap="0" OnLoadSuccess="dgMasterLoadSuccess">
                     <Columns>
-                        <JQTools:JQFormColumn Alignment="left" Caption="開始計費日" Editor="datebox" FieldName="STRBILLINGDAT" Format="yyyy/mm/dd" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="結案日期" Editor="datebox" FieldName="FINISHDAT" Format="yyyy/mm/dd" Width="180" ReadOnly="True" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="調整日數" Editor="numberbox" FieldName="ADJUSTDAY" Format="" Width="180" Visible="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="應收帳款產生日" Editor="datebox" FieldName="TARDAT" Format="yyyy/mm/dd" Width="180" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="應收帳款編號" Editor="text" FieldName="BATCHNO" Format="" Width="180" MaxLength="12" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="帳款產生人員" Editor="infocombobox" FieldName="TUSR" Format="" maxlength="6" Width="90" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" ReadOnly="True" />
@@ -426,23 +445,16 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="作廢人員" Editor="text" FieldName="CANCELUSR" Format="" Width="90" MaxLength="6" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="建檔日期" Editor="datebox" FieldName="EDAT" Format="yyyy/mm/dd" maxlength="0" Width="90" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="建檔員" Editor="infocombobox" FieldName="EUSR" Format="" Width="180" ReadOnly="True" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" MaxLength="6" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="修改日" Editor="datebox" FieldName="UDAT" Format="yyyy/mm/dd" maxlength="0" Width="90" ReadOnly="True" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="修改員" Editor="infocombobox" FieldName="UUSR" Format="" Width="180" ReadOnly="True" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" MaxLength="6" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="備註說明" Editor="textarea" FieldName="MEMO" Format="" maxlength="500" Width="300" EditorOptions="height:70" ReadOnly="False" Span="2" />
                     </Columns>
                 </JQTools:JQDataForm>
-                <JQTools:JQDefault ID="defaultMaster0" runat="server" BindingObjectID="JQDataForm1" EnableTheming="True">
-                    <Columns>
-                        <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefaultDUE" FieldName="STRBILLINGDAT" RemoteMethod="False" />
-                        <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="0" FieldName="ADJUSTDAY" RemoteMethod="False" />
-                    </Columns>
-                </JQTools:JQDefault>
                 <JQTools:JQAutoSeq ID="JQAutoSeq1" runat="server" BindingObjectID="dataFormMaster" FieldName="ENTRYNO" />
                 <JQTools:JQDefault ID="defaultMaster" runat="server" BindingObjectID="dataFormMaster" EnableTheming="True">
                     <Columns>
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefault" FieldName="CUSID" RemoteMethod="False" />
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="_today" FieldName="APPLYDAT" RemoteMethod="True" />
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="N" FieldName="SECONDCASE" RemoteMethod="False" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="0" FieldName="ADJUSTDAY" RemoteMethod="False" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefaultSTRDT" FieldName="STRBILLINGDAT" RemoteMethod="False" />
                     </Columns>
                 </JQTools:JQDefault>
                 <JQTools:JQValidate ID="validateMaster" runat="server" BindingObjectID="dataFormMaster" EnableTheming="True">

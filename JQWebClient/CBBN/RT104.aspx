@@ -40,7 +40,7 @@
             var ss = row.CUSID;
             var s1 = row.DUEDAT;
             var s2 = row.COMTYPE;
-            parent.addTab("用戶續約作業", "CBBN/RT1043.aspx?CUSID=" + ss + "&COMPTYE=" + row.COMTYPE + "&DUEDAT=" + s1);
+            parent.addTab("用戶續約作業", "CBBN/RT1043.aspx?CUSID=" + ss + "&COMTYPE=" + s2 + "&DUEDAT=" + s1);
         }
 
         function btn3Click(val) {

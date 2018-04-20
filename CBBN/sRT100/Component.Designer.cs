@@ -210,6 +210,9 @@
             Srvtools.KeyItem keyItem52 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem53 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem54 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem55 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem56 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem57 = new Srvtools.KeyItem();
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTCounty = new Srvtools.InfoCommand(this.components);
@@ -266,6 +269,8 @@
             this.RT20543 = new Srvtools.InfoCommand(this.components);
             this.RT20544 = new Srvtools.InfoCommand(this.components);
             this.cmdRTBillCharge = new Srvtools.InfoCommand(this.components);
+            this.RT205P5 = new Srvtools.InfoCommand(this.components);
+            this.USERS = new Srvtools.InfoCommand(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCounty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCtyTown)).BeginInit();
@@ -304,6 +309,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.RT20543)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT20544)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdRTBillCharge)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT205P5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.USERS)).BeginInit();
             // 
             // InfoConnection1
             // 
@@ -2745,6 +2752,60 @@
             this.cmdRTBillCharge.SiteControl = false;
             this.cmdRTBillCharge.SiteFieldName = null;
             this.cmdRTBillCharge.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // RT205P5
+            // 
+            this.RT205P5.CacheConnection = false;
+            this.RT205P5.CommandText = "SELECT CODE,CODENC FROM RTCODE \r\nWHERE KIND=\'P5\'\r\n and code > \'6\'";
+            this.RT205P5.CommandTimeout = 30;
+            this.RT205P5.CommandType = System.Data.CommandType.Text;
+            this.RT205P5.DynamicTableName = false;
+            this.RT205P5.EEPAlias = null;
+            this.RT205P5.EncodingAfter = null;
+            this.RT205P5.EncodingBefore = "Windows-1252";
+            this.RT205P5.EncodingConvert = null;
+            this.RT205P5.InfoConnection = this.InfoConnection1;
+            keyItem55.KeyName = "KIND";
+            keyItem56.KeyName = "CODE";
+            this.RT205P5.KeyFields.Add(keyItem55);
+            this.RT205P5.KeyFields.Add(keyItem56);
+            this.RT205P5.MultiSetWhere = false;
+            this.RT205P5.Name = "RT205P5";
+            this.RT205P5.NotificationAutoEnlist = false;
+            this.RT205P5.SecExcept = null;
+            this.RT205P5.SecFieldName = null;
+            this.RT205P5.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.RT205P5.SelectPaging = false;
+            this.RT205P5.SelectTop = 0;
+            this.RT205P5.SiteControl = false;
+            this.RT205P5.SiteFieldName = null;
+            this.RT205P5.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // USERS
+            // 
+            this.USERS.CacheConnection = false;
+            this.USERS.CommandText = "SELECT * FROM USERS";
+            this.USERS.CommandTimeout = 30;
+            this.USERS.CommandType = System.Data.CommandType.Text;
+            this.USERS.DynamicTableName = false;
+            this.USERS.EEPAlias = null;
+            this.USERS.EncodingAfter = null;
+            this.USERS.EncodingBefore = "Windows-1252";
+            this.USERS.EncodingConvert = null;
+            this.USERS.InfoConnection = this.InfoConnection1;
+            keyItem57.KeyName = "USERID";
+            this.USERS.KeyFields.Add(keyItem57);
+            this.USERS.MultiSetWhere = false;
+            this.USERS.Name = "USERS";
+            this.USERS.NotificationAutoEnlist = false;
+            this.USERS.SecExcept = null;
+            this.USERS.SecFieldName = null;
+            this.USERS.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.USERS.SelectPaging = false;
+            this.USERS.SelectTop = 0;
+            this.USERS.SiteControl = false;
+            this.USERS.SiteFieldName = null;
+            this.USERS.UpdatedRowSource = System.Data.UpdateRowSource.None;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCounty)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTCtyTown)).EndInit();
@@ -2783,6 +2844,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.RT20543)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT20544)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdRTBillCharge)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RT205P5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.USERS)).EndInit();
 
         }
 
@@ -2844,5 +2907,7 @@
         private Srvtools.InfoCommand RT20543;
         private Srvtools.InfoCommand RT20544;
         private Srvtools.InfoCommand cmdRTBillCharge;
+        private Srvtools.InfoCommand RT205P5;
+        private Srvtools.InfoCommand USERS;
     }
 }
