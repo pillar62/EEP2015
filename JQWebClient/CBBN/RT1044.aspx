@@ -8,6 +8,10 @@
     <title></title>
     <script>
         var CUSID = Request.getQueryStringByName2("CUSID");
+        var COMTYPE = Request.getQueryStringByName2("COMTYPE");
+        var DUEDAT = Request.getQueryStringByName2("DUEDAT");
+        var SSTRDT = Request.getQueryStringByName2("DUEDAT");
+
         var flag = true;
         var usr = getClientInfo('_usercode');
 
@@ -15,6 +19,33 @@
             if (CUSID != "") {
                 return CUSID;
             }
+        }
+
+        function InsDefaultDUE() {
+
+            if (DUEDAT != "") {
+                return DUEDAT;
+            }
+            else
+                return "";
+        }
+
+        function InsDefaultSTRDT() {
+
+            if (SSTRDT != "") {
+                return SSTRDT;
+            }
+            else
+               return "";
+        }
+
+        function InsDefaultCOMTYPE() {
+
+            if (COMTYPE != "") {
+                return COMTYPE;
+            }
+            else
+                return "";
         }
 
         function dgOnloadSuccess()
@@ -26,6 +57,11 @@
                 $("#JQDataGrid1").datagrid('setWhere', sWhere); //處理用戶資料
             }
             flag = false;
+        }
+
+        function dgMasterLoadSuccess() {
+            $("#dataFormMasterCUSID").focus();
+            $("#dataFormMasterCOMTYPE").val(COMTYPE);
         }
 
         function btn1Click(val) {
@@ -84,75 +120,19 @@
         //轉應收結案
         function btn2Click() {
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            try {
-                var row1 = $('#JQDataGrid1').datagrid('getSelected');//用戶
-                var sWhere = "CUSID='" + CUSID + "' AND ENTRYNO=" + row.ENTRYNO + " and dropdat is null and unclosedat is null and closedat is null ";
-                alert(sWhere);
-                $("#JQDataGrid3").datagrid('setWhere', sWhere);
-                var row3 = $('#JQDataGrid3').datagrid('getSelected');//派工
-            }
-            catch (err)
-            { alert(err); }
-
-            var PRTNO = row.PRTNO;
-            var entryno = row.ENTRYNO;
-
-            if (row.CANCELDAT != "" && row.CANCELDAT != null) {
-                alert("復機資料已作廢時，不可執行轉應收帳款作業");
-                return false;
-            }
-
-            if (row1.CANCELDAT != "" && row1.CANCELDAT != null) {
-                alert("客戶資料已作廢，必須作廢復機資料。");
-                return false;
-            }
-
-            if (row1.DROPDAT != "" && row1.DROPDAT != null) {
-                alert("客戶資料已退租，必須作廢復機資料。");
-                return false;
-            }
-
-            if (row.AMT == 0) {
-                alert("應收金額為0者，不可產生應收帳款");
-                return false;
-            }
-            /*
-            if (row.PAYTYPE == "02") {
-                alert("繳費方式為現金付款時，必須由收款派工單產生應收帳款");
-                return false;
-            }*/
-
-            if (row1.STRBILLINGDAT == "" && row1.STRBILLINGDAT == null) {
-                alert("開始計費日空白時不可轉應收結案作業。");
-                return false;
-            }
-
-            if (row1.BATCHNO != "") {
-                alert("己產生應收帳款");
-                return false;
-            }
-
-            if (row.DROPDAT != "" && row.DROPDAT != null) {
-                alert("當已作廢時，不可執行完工結案或未完工結案");
-                return false;
-            }
-
-            var rows = $('#JQDataGrid3').datagrid('getRows');
-
-            if (rows.length != 0) {
-                alert("此復機資料已存在收款派工單，必須由派工單進行結案作業。");
-                return false;
-            }
+            var CUSID = row.CUSID;
+            var ENTRYNO = row.ENTRYNO;
 
             $.ajax({
                 type: "POST",
                 url: '../handler/jqDataHandle.ashx?RemoteName=sRT1044.cmdRT10446', //連接的Server端，command
                 //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
-                data: "mode=method&method=" + "smRT10446" + "&parameters=" + CUSID + "," + entryno + "," + usr,
+                data: "mode=method&method=" + "smRT10446" + "&parameters=" + CUSID + "," + ENTRYNO + "," + usr,
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("用戶復機轉應收帳款成功，請點選重新整理!" + data);
+                    alert("用戶復機轉應收帳款成功!" + data);
+                    $('#dataGridView').datagrid('reload');
                 }
             });
         }
@@ -160,38 +140,20 @@
         //返轉應收結案
         function btn3Click() {
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            try {
-                var row1 = $('#JQDataGrid1').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            }
-            catch (err)
-            { alert(err); }
-
-            var PRTNO = row.PRTNO;
+            var CUSID = row.CUSID;
             var ENTRYNO = row.ENTRYNO;
-            if ((row1.DROPDAT != "" && row1.DROPDAT != null) || (row1.CANCELDAT != "" && row1.CANCELDAT != null)) {
-                alert("客戶已退租或作廢");
-                return false;
-            }
-
-            if ((row.CLOSEDAT != "" && row.CLOSEDAT != null) || (row.UNCLOSEDAT != "" && row.UNCLOSEDAT != null)) {
-                alert("此裝機派工單已完工結案或未完工結案，不可重複執行完工結案或未完工結案");
-                return false;
-            }
-
-            if (row.BONUSCLOSEYM != "" || row.STOCKCLOSEYM != "") {
-                alert("此裝機派工單已月結，不可異動");
-                return false;
-            }
+            var PRTNO = row.PRTNO;
 
             $.ajax({
                 type: "POST",
-                url: '../handler/jqDataHandle.ashx?RemoteName=sRT1044.cmdRT10442', //連接的Server端，command
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT1044.cmdRT10447', //連接的Server端，command
                 //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
-                data: "mode=method&method=" + "smRT10442" + "&parameters=" + CUSID + "," + ENTRYNO + "," + PRTNO + "," + usr,
+                data: "mode=method&method=" + "smRT10447" + "&parameters=" + CUSID + "," + ENTRYNO + "," + usr,
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("未完工結案完成，請點選重新整理");
+                    alert(data);
+                    $('#dataGridView').datagrid('reload');
                 }
             });
         }
@@ -292,7 +254,7 @@
                 DataMember="RTLessorAVSCustReturn" Pagination="True" QueryTitle="Query" EditDialogID="JQDialog1"
                 Title="用戶復機作業" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="False" OnLoadSuccess="dgOnloadSuccess">
                 <Columns>
-                    <JQTools:JQGridColumn Alignment="left" Caption="用戶" Editor="infocombobox" FieldName="CUSID" Format="" MaxLength="15" Visible="true" Width="120" EditorOptions="valueField:'CUSID',textField:'CUSNC',remoteName:'sRT104.View_RTLessorAVSCust',tableName:'View_RTLessorAVSCust',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="用戶" Editor="inforefval" FieldName="CUSID" Format="" MaxLength="15" Visible="true" Width="120" EditorOptions="valueField:'CUSID',textField:'CUSNC',remoteName:'sRT104.View_RTLessorAVSCust',tableName:'View_RTLessorAVSCust',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
                     <JQTools:JQGridColumn Alignment="right" Caption="項次" Editor="numberbox" FieldName="ENTRYNO" Format="" Visible="true" Width="60" />
                     <JQTools:JQGridColumn Alignment="left" Caption="復機申請日" Editor="datebox" FieldName="APPLYDAT" Format="yyyy/mm/dd" Visible="true" Width="90" />
                     <JQTools:JQGridColumn Alignment="left" Caption="開始計費日" Editor="datebox" FieldName="STRBILLINGDAT" Format="yyyy/mm/dd" MaxLength="0" Visible="true" Width="90" />
@@ -326,15 +288,15 @@
             </JQTools:JQDataGrid>
 
             <JQTools:JQDialog ID="JQDialog1" runat="server" BindingObjectID="dataFormMaster" Title="用戶復機作業" Width="786px">
-                <JQTools:JQDataForm ID="dataFormMaster" runat="server" DataMember="RTLessorAVSCustReturn" HorizontalColumnsCount="2" RemoteName="sRT1044.RTLessorAVSCustReturn" AlwaysReadOnly="False" Closed="False" ContinueAdd="False" disapply="False" DivFramed="False" DuplicateCheck="False" HorizontalGap="0" IsAutoPageClose="False" IsAutoPause="False" IsAutoSubmit="False" IsNotifyOFF="False" IsRejectNotify="False" IsRejectON="False" IsShowFlowIcon="False" ShowApplyButton="False" ValidateStyle="Hint" VerticalGap="0" >
+                <JQTools:JQDataForm ID="dataFormMaster" runat="server" DataMember="RTLessorAVSCustReturn" HorizontalColumnsCount="2" RemoteName="sRT1044.RTLessorAVSCustReturn" AlwaysReadOnly="False" Closed="False" ContinueAdd="False" disapply="False" DivFramed="False" DuplicateCheck="False" HorizontalGap="0" IsAutoPageClose="False" IsAutoPause="False" IsAutoSubmit="False" IsNotifyOFF="False" IsRejectNotify="False" IsRejectON="False" IsShowFlowIcon="False" ShowApplyButton="False" ValidateStyle="Hint" VerticalGap="0" OnLoadSuccess="dgMasterLoadSuccess" >
                     <Columns>
-                        <JQTools:JQFormColumn Alignment="left" Caption="用戶" Editor="infocombobox" FieldName="CUSID" Format="" MaxLength="15" Visible="true" Width="180" EditorOptions="valueField:'CUSID',textField:'CUSNC',remoteName:'sRT104.View_RTLessorAVSCust',tableName:'View_RTLessorAVSCust',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="用戶" Editor="inforefval" FieldName="CUSID" Format="" MaxLength="15" Visible="true" Width="180" EditorOptions="valueField:'CUSID',textField:'CUSNC',remoteName:'sRT104.View_RTLessorAVSCust',tableName:'View_RTLessorAVSCust',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="項次" Editor="numberbox" FieldName="ENTRYNO" Format="" Width="180" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="復機申請日" Editor="datebox" FieldName="APPLYDAT" Format="" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="應收金額" Editor="numberbox" FieldName="AMT" Format="" maxlength="0" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="方案類型" Editor="inforefval" FieldName="CASEKIND" Format="" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'O9'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" MaxLength="2" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="方案類型" Editor="inforefval" FieldName="CASEKIND" Format="" Width="180" EditorOptions="title:'資費方案',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'O9'},{field:'PARM1',value:'client[InsDefaultCOMTYPE]'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" MaxLength="2" />
                         <JQTools:JQFormColumn Alignment="left" Caption="復機費" Editor="numberbox" FieldName="RETURNMONEY" Format="" maxlength="0" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="繳費週期" Editor="inforefval" FieldName="PAYCYCLE" Format="" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M8'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" MaxLength="2" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="繳費週期" Editor="inforefval" FieldName="PAYCYCLE" Format="" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,remoteName:'sRT100.cmdRTBillCharge',tableName:'cmdRTBillCharge',columns:[],columnMatches:[{field:'PERIOD',value:'PERIOD'},{field:'AMT',value:'AMT'}],whereItems:[{field:'PARM1',value:'client[InsDefaultCOMTYPE]'},{field:'CASEKIND',value:'row[CASEKIND]'}],valueField:'PAYCYCLE',textField:'MEMO',valueFieldCaption:'代碼',textFieldCaption:'備註',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" MaxLength="2" />
                         <JQTools:JQFormColumn Alignment="left" Caption="繳費方式" Editor="inforefval" FieldName="PAYTYPE" Format="" Visible="true" Width="180" MaxLength="2" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M9'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
                         <JQTools:JQFormColumn Alignment="left" Caption="信用卡種類" Editor="inforefval" FieldName="CREDITCARDTYPE" Format="" MaxLength="2" Visible="true" Width="180" EditorOptions="title:'查詢',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M6'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
                         <JQTools:JQFormColumn Alignment="left" Caption="發卡銀行" Editor="inforefval" FieldName="CREDITBANK" Format="" maxlength="3" Width="180" EditorOptions="title:'查詢',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTBank',tableName:'RTBank',columns:[],columnMatches:[],whereItems:[{field:'CREDITCARD',value:'Y'}],valueField:'HEADNO',textField:'HEADNC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
@@ -348,23 +310,25 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="異動日期" Editor="datebox" FieldName="UDAT" Format="" maxlength="0" Width="180" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="異動人員" Editor="text" FieldName="UUSR" Format="" Width="180" ReadOnly="True" MaxLength="6" />
                         <JQTools:JQFormColumn Alignment="left" Caption="開始計費日" Editor="datebox" FieldName="STRBILLINGDAT" Format="" maxlength="0" Width="180" ReadOnly="False" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="結案日期" Editor="datebox" FieldName="FINISHDAT" Format="" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="結案日期" Editor="datebox" FieldName="FINISHDAT" Format="" Width="180" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="可用期數" Editor="numberbox" FieldName="PERIOD" Format="" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="調整天數" Editor="numberbox" FieldName="ADJUSTDAY" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="應收帳款產生日" Editor="datebox" FieldName="TARDAT" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="應收帳款編號" Editor="text" FieldName="BATCHNO" Format="" Width="180" MaxLength="12" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="帳款產生人員" Editor="text" FieldName="TUSR" Format="" maxlength="6" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="作廢日期" Editor="datebox" FieldName="CANCELDAT" Format="" maxlength="0" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="作廢人員" Editor="text" FieldName="CANCELUSR" Format="" Width="180" MaxLength="6" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="應收帳款產生日" Editor="datebox" FieldName="TARDAT" Format="" Width="180" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="應收帳款編號" Editor="text" FieldName="BATCHNO" Format="" Width="180" MaxLength="12" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="帳款產生人員" Editor="text" FieldName="TUSR" Format="" maxlength="6" Width="180" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="作廢日期" Editor="datebox" FieldName="CANCELDAT" Format="" maxlength="0" Width="180" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="作廢人員" Editor="text" FieldName="CANCELUSR" Format="" Width="180" MaxLength="6" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="備註說明" Editor="textarea" FieldName="MEMO" Format="" maxlength="500" Width="400" EditorOptions="height:80" Span="2" />
                         <JQTools:JQFormColumn Alignment="left" Caption="REALAMT" Editor="numberbox" FieldName="REALAMT" Format="" maxlength="0" Width="180" Span="1" Visible="False" />
                         <JQTools:JQFormColumn Alignment="left" Caption="MAXENTRYNO" Editor="numberbox" FieldName="MAXENTRYNO" Format="" Width="180" Visible="False" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="COMTYPE" Editor="text" FieldName="COMTYPE" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="False" Width="80" />
                     </Columns>
                 </JQTools:JQDataForm>
                 <JQTools:JQAutoSeq ID="JQAutoSeq1" runat="server" BindingObjectID="dataFormMaster" FieldName="ENTRYNO" />
                 <JQTools:JQDefault ID="defaultMaster" runat="server" BindingObjectID="dataFormMaster" EnableTheming="True">
                     <Columns>
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefault" FieldName="CUSID" RemoteMethod="False" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="0" FieldName="ADJUSTDAY" RemoteMethod="False" />
                     </Columns>
                 </JQTools:JQDefault>
                 <JQTools:JQValidate ID="validateMaster" runat="server" BindingObjectID="dataFormMaster" BorderStyle="NotSet" ClientIDMode="Inherit" Enabled="True" EnableTheming="True" EnableViewState="True" ViewStateMode="Inherit">

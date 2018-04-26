@@ -339,7 +339,7 @@ A.unclosedat, A.BONUSCLOSEYM, A.BONUSFINCHK, A.batchno, A.STOCKCLOSEYM, A.STOCKF
     <value>False</value>
   </metadata>
   <metadata name="RT10447.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>144, 561</value>
+    <value>161, 418</value>
   </metadata>
   <data name="RT10447.CommandText" xml:space="preserve">
     <value>SELECT   A.CUSID, A.ENTRYNO, A.SEQ, RTLESSORAVSCUST.CUSNC, 
@@ -366,6 +366,9 @@ RTCODE RTCODE_2 ON A.CHGCODE = RTCODE_2.CODE AND
 RTLESSORAVSCUST ON  A.CUSID = RTLESSORAVSCUST.CUSID 
 WHERE 1=1 ORDER BY SEQ </value>
   </data>
+  <metadata name="cmd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>363, 425</value>
+  </metadata>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>

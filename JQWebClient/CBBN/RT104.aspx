@@ -46,7 +46,9 @@
         function btn3Click(val) {
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var ss = row.CUSID;
-            parent.addTab("用戶復機作業", "CBBN/RT1044.aspx?CUSID=" + ss);
+            var s1 = row.DUEDAT;
+            var s2 = row.COMTYPE;
+            parent.addTab("用戶復機作業", "CBBN/RT1044.aspx?CUSID=" + ss + "&COMTYPE=" + s2 + "&DUEDAT=" + s1);
         }
 
         function btn4Click(val) {
@@ -389,10 +391,10 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="用戶(公司)名稱" Editor="text" FieldName="CUSNC" Format="" maxlength="30" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="用戶申請日" Editor="datebox" FieldName="APPLYDAT" Format="yyyy/mm/dd" maxlength="0" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="公關戶(Y)" Editor="infocombobox" FieldName="FREECODE" Format="" maxlength="1" Width="200" EditorOptions="items:[{value:'Y',text:'Y',selected:'false'},{value:'N',text:'N',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="身份證字號" Editor="text" FieldName="SOCIALID" Format="" MaxLength="10" Width="200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="室內電話" Editor="text" FieldName="CONTACTTEL" Format="" maxlength="30" Width="200" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="室內電話" Editor="text" FieldName="CONTACTTEL" Format="" MaxLength="30" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="連絡手機" Editor="text" FieldName="MOBILE" Format="" maxlength="30" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="第一證照別" Editor="inforefval" FieldName="IDNUMBERTYPE" Format="" maxlength="2" Width="200" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'J5'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代碼',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="第一證件號碼" Editor="text" FieldName="SOCIALID" Format="" maxlength="10" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="第二證照別" Editor="inforefval" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'L3'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代碼',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="SECONDIDTYPE" Format="" maxlength="2" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="第二證照號碼" Editor="text" FieldName="SECONDNO" Format="" maxlength="15" RowSpan="1" Span="1" Width="200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="生日" Editor="datebox" FieldName="BIRTHDAY" Format="yyyy/mm/dd" maxlength="0" Width="200" />
@@ -501,6 +503,7 @@
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="自動編號" FieldName="CUSID" RemoteMethod="False" />
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="_today" FieldName="EDAT" RemoteMethod="True" />
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="01" FieldName="CUSTSRC" RemoteMethod="True" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="N" FieldName="FREECODE" RemoteMethod="False" />
                     </Columns>
                 </JQTools:JQDefault>
                 <JQTools:JQValidate ID="validateMaster" runat="server" BindingObjectID="dataFormMaster" BorderStyle="NotSet" ClientIDMode="Inherit" Enabled="True" EnableTheming="True" EnableViewState="True" ViewStateMode="Inherit">

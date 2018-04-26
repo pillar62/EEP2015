@@ -39,7 +39,21 @@
                 if (comq1 == "") {
                     sWhere = sWhere + " and a.closedat is null and a.canceldat is null ";
                 }
+
                 $("#dataGridMaster").datagrid('setWhere', sWhere);
+                $(document).ready(function () {
+                    $('#dataGridMaster').datagrid({
+                        rowStyler: function (index, row) {
+                            if (row.CANCELDAT == null || row.CANCELDAT == "") {
+                                return 'color:black;';
+                            }
+                            else {
+                                return 'color:red; height:50px; font-size: 22px;';
+                            }
+
+                        }
+                    });
+                })
             }
             
 
@@ -53,8 +67,7 @@
                 if (ss == "") ss = "ZZZZZ";
                 
                 $("#FAQADD").datagrid('setWhere', "CASENO='" + ss + "'");
-            }
-            
+            }                
         }
 
         function queryGrid(dg) { //查詢后添加固定條件            
@@ -251,6 +264,8 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="cusid" Editor="text" FieldName="cusid" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80"></JQTools:JQGridColumn>
                     <JQTools:JQGridColumn Alignment="left" Caption="entryno" Editor="text" FieldName="entryno" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80">
                     </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="作廢時間" Editor="text" FieldName="CANCELDAT" Format="yyyy/mm/dd HH:MM:SS" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="80">
+                    </JQTools:JQGridColumn>
                 </Columns>
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton" OnClick="btn1Click" Text="新增" />
@@ -266,7 +281,7 @@
                 </TooItems>
                 <QueryColumns>
                     <JQTools:JQQueryColumn AndOr="and" Caption="社區名稱" Condition="%" DataType="string" Editor="text" FieldName="comn" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="用戶(公司)名稱" Condition="%" DataType="string" Editor="text" FieldName="faqman" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="聯絡人" Condition="%" DataType="string" Editor="text" FieldName="faqman" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="受理時間起" Condition="&gt;=" DataType="datetime" Editor="datebox" FieldName="dropdat" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="受理時間迄" Condition="=" DataType="datetime" Editor="datebox" FieldName="RCVDATE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="結案時間起" Condition="=" DataType="datetime" Editor="datebox" FieldName="closedat" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />

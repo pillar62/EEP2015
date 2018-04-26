@@ -246,7 +246,7 @@
             // RTLessorAVSCustCont
             // 
             this.RTLessorAVSCustCont.CacheConnection = false;
-            this.RTLessorAVSCustCont.CommandText = "SELECT dbo.[RTLessorAVSCustCont].* FROM dbo.[RTLessorAVSCustCont]";
+            this.RTLessorAVSCustCont.CommandText = "SELECT * FROM RTLessorAVSCustCont\r\nORDER BY STRBILLINGDAT DESC";
             this.RTLessorAVSCustCont.CommandTimeout = 30;
             this.RTLessorAVSCustCont.CommandType = System.Data.CommandType.Text;
             this.RTLessorAVSCustCont.DynamicTableName = false;

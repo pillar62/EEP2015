@@ -249,6 +249,7 @@
             this.cmdRT10448 = new Srvtools.InfoCommand(this.components);
             this.cmdRT10449 = new Srvtools.InfoCommand(this.components);
             this.RT10447 = new Srvtools.InfoCommand(this.components);
+            this.cmd = new Srvtools.InfoCommand(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustReturn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustReturnHardware)).BeginInit();
@@ -271,6 +272,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT10448)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT10449)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT10447)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmd)).BeginInit();
             // 
             // serviceManager1
             // 
@@ -2365,6 +2367,30 @@
             this.RT10447.SiteControl = false;
             this.RT10447.SiteFieldName = null;
             this.RT10447.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // cmd
+            // 
+            this.cmd.CacheConnection = false;
+            this.cmd.CommandText = "";
+            this.cmd.CommandTimeout = 30;
+            this.cmd.CommandType = System.Data.CommandType.Text;
+            this.cmd.DynamicTableName = false;
+            this.cmd.EEPAlias = null;
+            this.cmd.EncodingAfter = null;
+            this.cmd.EncodingBefore = "Windows-1252";
+            this.cmd.EncodingConvert = null;
+            this.cmd.InfoConnection = this.InfoConnection1;
+            this.cmd.MultiSetWhere = false;
+            this.cmd.Name = "cmd";
+            this.cmd.NotificationAutoEnlist = false;
+            this.cmd.SecExcept = null;
+            this.cmd.SecFieldName = null;
+            this.cmd.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.cmd.SelectPaging = false;
+            this.cmd.SelectTop = 0;
+            this.cmd.SiteControl = false;
+            this.cmd.SiteFieldName = null;
+            this.cmd.UpdatedRowSource = System.Data.UpdateRowSource.None;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustReturn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustReturnHardware)).EndInit();
@@ -2387,6 +2413,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT10448)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT10449)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT10447)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmd)).EndInit();
 
         }
 
@@ -2420,5 +2447,6 @@
         private Srvtools.InfoCommand cmdRT10448;
         private Srvtools.InfoCommand cmdRT10449;
         private Srvtools.InfoCommand RT10447;
+        private Srvtools.InfoCommand cmd;
     }
 }
