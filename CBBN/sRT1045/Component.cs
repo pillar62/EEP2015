@@ -452,10 +452,12 @@ namespace sRT1045
                     return new object[] { 0, "此用戶退租單資料已結案，不可作廢。(請改用結案返轉)" };
                 }
                 ss1 = ds.Tables[0].Rows[0]["SNDPRTNO"].ToString();
+                /*
                 if (ss1 != "")
                 {
                     return new object[] { 0, "用戶退租單資料已轉派工單，不可作廢。" };
                 }
+                */
                 ss1 = ds.Tables[0].Rows[0]["CANCELDAT"].ToString();
                 if (ss1 != "")
                 {

@@ -38,7 +38,7 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="負責人身份證字號" Editor="text" FieldName="cobossid" Format="" MaxLength="10" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="公司統編" Editor="text" FieldName="company_id" Format="" MaxLength="0" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="服務方案" Editor="text" FieldName="case_no" Format="" MaxLength="0" Width="80" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="優惠代碼" Editor="text" FieldName="dis_no" Format="" MaxLength="0" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="優惠代碼" Editor="text" FieldName="ID_DIS" Format="" MaxLength="0" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="用戶名稱" Editor="text" FieldName="cusnc" Format="" MaxLength="30" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="聯絡人證照類別" Editor="text" FieldName="codenc" Format="" MaxLength="0" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="聯絡人證照號碼" Editor="text" FieldName="socialid" Format="" MaxLength="10" Width="80" />

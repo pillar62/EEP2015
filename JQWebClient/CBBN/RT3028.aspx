@@ -39,6 +39,35 @@
             exportDevReport("#JQDataGrid1", "sRT302.RT302R", "RT302", "~/CBBN/DevReportForm/RT302RF.aspx", WhereString);
         }
 
+         //單一用戶重新產生續約資料
+        function btn4Click(val) {
+            var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
+            var ss = row.batch;
+            var CUSTID = row.CUSID;
+            var cusnm = row.cusnc;
+            var usr = getClientInfo('_usercode');
+            var aa = "確認重新產生 [" + ss + cusnm + "] 續約資料??";
+            var r = confirm(aa);
+            if (r == true) {
+                $.ajax({
+                    type: "POST",
+                    url: '../handler/jqDataHandle.ashx?RemoteName=sRT302.cmdRT3024', //連接的Server端，command
+                    //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                    data: "mode=method&method=" + "smRT3024" + "&parameters=" + ss + "," + CUSTID + "," + usr,
+                    cache: false,
+                    async: false,
+                    success: function (data) {
+                        alert(data);
+                        $('#dataGridMaster').datagrid('reload');
+                        $('#JQDataGrid2').datagrid('reload');
+                    }
+                });
+            } else {
+                alert("取消處理!!");
+            } 
+        }
+
+
         function dgOnloadSuccess() {
             if (flag) {
                 //查詢出該用戶的資料
@@ -82,6 +111,7 @@
                     <JQTools:JQToolItem Enabled="True" Icon="icon-print" ItemType="easyui-linkbutton" OnClick="btn1Click" Text="列印續約單" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-print" ItemType="easyui-linkbutton" OnClick="btn2Click" Text="列印信封" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="匯出至Excel" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" Icon="icon-redo" ItemType="easyui-linkbutton" OnClick="btn4Click" Text="重新產生續約資料" Visible="True" />
                 </TooItems>
                 <QueryColumns>
                     <JQTools:JQQueryColumn AndOr="and" Caption="用戶名稱" Condition="%" DataType="string" Editor="text" FieldName="b.cusnc" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />

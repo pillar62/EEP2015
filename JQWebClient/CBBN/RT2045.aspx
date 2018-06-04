@@ -7,11 +7,23 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <script>
+        var usr = getClientInfo('_usercode');
         function fileuploadsuccess(value) {
             alert("檔案[" + value + "]上傳成功!!");
             $('#JQFileUpload1').next().remove()
             initInfoFileUpload($('#JQFileUpload1'));
-            serverMethod(value);
+            $.ajax({
+                type: "POST",
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT302.cmdRT3025', //連接的Server端，command
+                //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                data: "mode=method&method=" + "smRT3025" + "&parameters=" + value + "," + usr,
+                cache: false,
+                async: false,
+                success: function (data) {
+                    alert(data);
+                    $('#dataGridMaster').datagrid('reload');
+                }
+            });
         }
         function serverMethod(value) {
 
@@ -105,10 +117,10 @@
             </JQTools:JQDataGrid>
         </div>
 
-        <JQTools:JQFileUpload ID="JQFileUpload1" runat="server" Filter="" ShowLocalFile="True" UpLoadFolder="excel" Width="500px" onSuccess="fileuploadsuccess" />
-
-        
-
+        <JQTools:JQFileUpload ID="JQFileUpload1" runat="server" Filter="" ShowLocalFile="True" UpLoadFolder="barcode" Width="500px" onSuccess="fileuploadsuccess" />
     </form>
 </body>
+<script>
+    $("#toolbardataGridMaster").css("'display', 'block'");
+</script>
 </html>

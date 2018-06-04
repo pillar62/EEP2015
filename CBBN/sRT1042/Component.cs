@@ -67,6 +67,7 @@ namespace sRT1042
 
         public object[] smRT10422(object[] objParam)
         {
+            //應收帳款結案反轉
             var ss = (string)objParam[0];
             var sdata = ss.Split(',');
             //開啟資料連接

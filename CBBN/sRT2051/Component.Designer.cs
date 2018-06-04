@@ -74,8 +74,8 @@
             // RTFaqM
             // 
             this.RTFaqM.CacheConnection = false;
-            this.RTFaqM.CommandText = "SELECT A.* , B.CASEKIND\r\nFROM RTFaqM A\r\nLEFT JOIN V_RT205 B ON B.CUSID=A.CUSID AN" +
-    "D B.COMQ1=A.COMQ1 AND B.comtype=A.COMTYPE ";
+            this.RTFaqM.CommandText = "SELECT A.* , B.*\r\nFROM RTFaqM A\r\nLEFT JOIN V_RT205 B ON B.CUSID=A.CUSID AND B.COM" +
+    "Q1=A.COMQ1";
             this.RTFaqM.CommandTimeout = 30;
             this.RTFaqM.CommandType = System.Data.CommandType.Text;
             this.RTFaqM.DynamicTableName = false;

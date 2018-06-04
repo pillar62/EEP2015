@@ -36,7 +36,7 @@
                 }
                 */
             
-                if (comq1 == "") {
+                if (cusid == ""){
                     sWhere = sWhere + " and a.closedat is null and a.canceldat is null ";
                 }
 
@@ -67,7 +67,53 @@
                 if (ss == "") ss = "ZZZZZ";
                 
                 $("#FAQADD").datagrid('setWhere', "CASENO='" + ss + "'");
+
+                ss = row.closedat;
+
+                if (ss != null) {
+                    $("#btnModify").hide();
+                }
+                else {
+                    $("#btnModify").show();
+                }
             }                
+        }
+        
+        /*
+        $(function () {
+            if (flag == false){
+                $('#dataGridMaster').datagrid(
+                {
+                    onClickRow: function (rowIndex, rowData) {
+                        var ss = rowData.closedat;
+                        
+                            alert(ss);
+                            if (ss != null || ss != "") {
+                                $("#btnModify").hide();
+                            }
+                            else {
+                                $("#btnModify").show();
+                            }
+
+                            ss = rowData.caseno;
+                            $("#FAQADD").datagrid('setWhere', "CASENO='" + ss + "'");
+                        }
+                    
+                });
+            }
+        })       
+        */
+        function SelectDG(rowIndex, rowData) {
+            if (flag == false) {
+                var ss = rowData.closedat;
+                
+                if (ss != null) {
+                    $("#btnModify").hide();
+                }
+                else {
+                    $("#btnModify").show();
+                }
+            }
         }
 
         function queryGrid(dg) { //查詢后添加固定條件            
@@ -89,28 +135,32 @@
 
                     
                     if (comn != "")
-                        where = where + " and n.comn like '%" + comn + "%'";
+                        where = where + " and R.comn like '%" + comn + "%'";
                     if (faqman != "")
                         where = where + " and a.faqman like '%" + faqman + "%'";
                     //
                     if (dropdat != "")
-                        where = where + " and a.RCVDAT >= '" + dropdat + "' ";
+                        where = where + " and a.RCVDAT >= '" + dropdat + " 00:00:00' ";
                     if (RCVDATE != "")
-                        where = where + " and  a.RCVDAT <= '" + RCVDATE + "' ";
+                        where = where + " and  a.RCVDAT <= '" + RCVDATE + " 23:59:59' ";
                     //
                     if (closedat!= "")
-                        where = where + " AND a.closedat >= '"+closedat+"' ";
+                        where = where + " AND a.closedat >= '"+closedat+" 00:00:00' ";
                     if (codenc3 != "")
-                        where = where + " AND a.closedat <= '" + codenc3 + "' ";
+                        where = where + " AND a.closedat <= '" + codenc3 + " 23:59:59' ";
                     if (CUSNC != "")
                         where = where + " AND a.rcvusr = '"+CUSNC+"' ";
                     if (ANGENCY != "0")
                         where = where + " and case n.groupnc when '' then '1' else '2' end = '"+ANGENCY+"' ";
-                   
+                    
                     if (codenc1 == 1)
                         where = where + " and a.closedat is null and a.canceldat is null ";
                     if (codenc1 == 2)
                         where = where + " and a.closedat is not null and a.canceldat is null ";
+                    if (codenc1 == 2)
+                        where = where + " and a.closedat is not null and a.canceldat is null ";
+                    if (codenc1 == 3)
+                        where = where + " and l.finishnum > 0 ";
                     //
                     if (SNAME != "")
                         where = where + " AND isnull(k.shortnc,i.name) = '"+SNAME+ "'";
@@ -128,7 +178,6 @@
         function btnRT103Click(val) {
             var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var comq1 = row.comq1;
-            var lineq1 = row.lineq1;
             parent.addTab("主線查詢", "CBBN/RT103.aspx?COMQ1=" + comq1);
         }
 
@@ -238,7 +287,7 @@
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
             <JQTools:JQDataGrid ID="dataGridMaster" data-options="pagination:true,view:commandview" RemoteName="sRT205.RT205" runat="server" AutoApply="False"
                 DataMember="RT205" Pagination="True" QueryTitle="查詢條件"
-                Title="客訴資料維護" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Panel" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="False" OnLoadSuccess="dgOnloadSuccess">
+                Title="客訴資料維護" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Panel" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="False" OnLoadSuccess="dgOnloadSuccess" OnSelect="SelectDG">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="客訴單號" Editor="text" FieldName="caseno" Format="" MaxLength="10" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="方案別" Editor="text" FieldName="comtype" Format="" MaxLength="1" Width="120" Visible="False" />
@@ -246,7 +295,7 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="業務" Editor="text" FieldName="leader" Format="" MaxLength="0" Width="60" />
                     <JQTools:JQGridColumn Alignment="left" Caption="方案別" Editor="text" FieldName="codenc" Format="" MaxLength="0" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="主線" Editor="text" FieldName="COMLINE" Format="" MaxLength="0" Width="40" Visible="False" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="社區名稱" Editor="text" FieldName="comn" Format="" MaxLength="0" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="社區名稱" Editor="text" FieldName="COMN" Format="" MaxLength="0" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="聯絡人" Editor="text" FieldName="faqman" Format="" Width="80" MaxLength="50" />
                     <JQTools:JQGridColumn Alignment="left" Caption="室內電話" Editor="datebox" FieldName="tel" Format="" MaxLength="0" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="聯絡手機" Editor="text" FieldName="MOBILE" MaxLength="0" Width="80" />
@@ -259,7 +308,7 @@
                     <JQTools:JQGridColumn Alignment="right" Caption="追件數" Editor="numberbox" FieldName="QT_CASE" Format="" MaxLength="0" Width="60" />
                     <JQTools:JQGridColumn Alignment="left" Caption="預定施工人" Editor="text" FieldName="SNAME" Format="" MaxLength="0" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="已完工" Editor="text" FieldName="finishnum" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="60" Format=""></JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="comq1" Editor="text" FieldName="comq1" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80"></JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="社區代號" Editor="text" FieldName="comq1" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80"></JQTools:JQGridColumn>
                     <JQTools:JQGridColumn Alignment="left" Caption="lineq1" Editor="text" FieldName="lineq1" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80"></JQTools:JQGridColumn>
                     <JQTools:JQGridColumn Alignment="left" Caption="cusid" Editor="text" FieldName="cusid" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80"></JQTools:JQGridColumn>
                     <JQTools:JQGridColumn Alignment="left" Caption="entryno" Editor="text" FieldName="entryno" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80">
@@ -269,7 +318,7 @@
                 </Columns>
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton" OnClick="btn1Click" Text="新增" />
-                    <JQTools:JQToolItem Icon="icon-edit" ItemType="easyui-linkbutton" OnClick="btn2Click" Text="更改" />
+                    <JQTools:JQToolItem Icon="icon-edit" ItemType="easyui-linkbutton" OnClick="btn2Click" Text="更改" ID="btnModify" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-view" ItemType="easyui-linkbutton" OnClick="btnViewClick" Text="瀏覽" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-view" ItemType="easyui-linkbutton" OnClick="btnRT103Click" Text="主線查詢" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn3Click" Text="追 件" Visible="True" Icon="icon-edit" />

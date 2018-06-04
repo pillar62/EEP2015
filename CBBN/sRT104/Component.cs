@@ -105,6 +105,66 @@ namespace sRT104
             }
         }
 
+        public object[] smRT104FAR(object[] objParam)
+        {
+            var ss = (string)objParam[0];
+            var sdata = ss.Split(',');
+            string COMTYPE;
+            //開啟資料連接
+            IDbConnection conn = cmd.Connection;
+            conn.Open();
+            string ZIP, sKEY;
+            string selectSql = " SELECT RTCtyTown.ZIP AS zip, RTLessorAVSCmtyH.COMTYPE  "
+                             + " FROM RTLessorAVSCmtyH "
+                             + " INNER JOIN RTCtyTown ON RTLessorAVSCmtyH.CUTID = RTCtyTown.CUTID AND RTLessorAVSCmtyH.TOWNSHIP = RTCtyTown.TOWNSHIP "
+                             + " where RTLessorAVSCmtyH.comq1 = " + sdata[0];
+            cmd.CommandText = selectSql;
+            DataSet ds = cmd.ExecuteDataSet();
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                ZIP = ds.Tables[0].Rows[0]["zip"].ToString();
+                COMTYPE = ds.Tables[0].Rows[0]["COMTYPE"].ToString();
+            }
+            else
+            {
+                ZIP = "";
+                COMTYPE = "";
+            }
+
+            string CMTYSEQ = sdata[0];
+            CMTYSEQ = CMTYSEQ.PadLeft(4, '0'); //社區編號左補零            
+
+            selectSql = "select max(MEMBERID) AS MEMBERID from RTLessorAVSCust where MEMBERID like 'FBB_" + ZIP + CMTYSEQ + "%' ";
+            cmd.CommandText = selectSql;
+            ds = cmd.ExecuteDataSet();
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                var MEMBERID = ds.Tables[0].Rows[0]["MEMBERID"].ToString();
+                if (MEMBERID=="")
+                    sKEY = "FBB_" + ZIP + CMTYSEQ + "001";
+                else
+                    sKEY = "FBB_" + ZIP + CMTYSEQ + MEMBERID.PadLeft(3, '0');
+            }
+            else
+            {
+                sKEY = "FBB_" + ZIP + CMTYSEQ + "001";
+            }
+            //設定輸入參數的值
+            try
+            {
+                if (COMTYPE == "B")
+                    return new object[] { 0,sKEY};
+                else
+                    return new object[] { 0, ""};
+            }
+            catch (Exception ex)
+            {
+                return new object[] { 0, "無法執行用戶申請作廢作業,錯誤訊息" + ex };
+            }
+        }
+
         private void ucRTLessorAVSCust_BeforeModify(object sender, UpdateComponentBeforeModifyEventArgs e)
         {
             //取得保證金序號 以及 報竣日

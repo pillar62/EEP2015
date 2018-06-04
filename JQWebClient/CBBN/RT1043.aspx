@@ -166,68 +166,9 @@
         //轉應收結案
         function btn2Click() {
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            try {
-                var row1 = $('#JQDataGrid1').datagrid('getSelected');//用戶
-                var sWhere = "CUSID='" + CUSID + "' AND ENTRYNO=" + row.ENTRYNO + " and dropdat is null and unclosedat is null and closedat is null ";
-
-                $("#JQDataGrid3").datagrid('setWhere', sWhere);
-                var row3 = $('#JQDataGrid3').datagrid('getSelected');//派工
-            }
-            catch (err)
-            { alert(err); }
-
             var PRTNO = row.PRTNO;
             var entryno = row.ENTRYNO;
-
-            if (row.CANCELDAT != "" && row.CANCELDAT != null) {
-                alert("續約資料已作廢時，不可執行轉應收帳款作業");
-                return false;
-            }
-
-            if (row1.CANCELDAT != "" && row1.CANCELDAT != null) {
-                alert("客戶資料已作廢，必須作廢續約資料。");
-                return false;
-            }
-
-            if (row1.DROPDAT != "" && row1.DROPDAT != null) {
-                alert("客戶資料已退租，必須作廢續約資料。");
-                return false;
-            }
-
-            if (row.AMT == 0) {
-                alert("應收金額為0者，不可產生應收帳款");
-                return false;
-            }
-
-            /*
-            if (row.PAYTYPE == "02") {
-                alert("繳費方式為現金付款時，必須由收款派工單產生應收帳款");
-                return false;
-            }
-            */
-
-            if (row1.STRBILLINGDAT == "" && row1.STRBILLINGDAT == null) {
-                alert("開始計費日空白時不可轉應收結案作業。");
-                return false;
-            }
-
-            if (row1.BATCHNO != "") {
-                alert("己產生應收帳款");
-                return false;
-            }
-
-            if (row.DROPDAT != "" && row.DROPDAT != null) {
-                alert("當已作廢時，不可執行完工結案或未完工結案");
-                return false;
-            }
-
-            var rows = $('#JQDataGrid3').datagrid('getRows');
-
-            if (rows.length != 0) {
-                alert("此續約資料已存在收款派工單，必須由派工單進行結案作業。");
-                return false;
-            }
-            
+          
             $.ajax({
                 type: "POST",
                 url: '../handler/jqDataHandle.ashx?RemoteName=sRT1043.cmdRT10436', //連接的Server端，command
@@ -236,7 +177,8 @@
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("用戶續約轉應收帳款成功，請點選重新整理!" + data);
+                    alert(data);
+                    $('#dataGridView').datagrid('reload');
                 }
             });
         }
@@ -244,38 +186,19 @@
         //返轉應收結案
         function btn3Click() {
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            try {
-                var row1 = $('#JQDataGrid1').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            }
-            catch (err)
-            { alert(err); }
-
             var PRTNO = row.PRTNO;
             var ENTRYNO = row.ENTRYNO;
-            if ((row1.DROPDAT != "" && row1.DROPDAT != null) || (row1.CANCELDAT != "" && row1.CANCELDAT != null)) {
-                alert("客戶已退租或作廢");
-                return false;
-            }
-
-            if ((row.CLOSEDAT != "" && row.CLOSEDAT != null) || (row.UNCLOSEDAT != "" && row.UNCLOSEDAT != null)) {
-                alert("此裝機派工單已完工結案或未完工結案，不可重複執行完工結案或未完工結案");
-                return false;
-            }
-
-            if (row.BONUSCLOSEYM != "" || row.STOCKCLOSEYM != "") {
-                alert("此裝機派工單已月結，不可異動");
-                return false;
-            }
 
             $.ajax({
                 type: "POST",
-                url: '../handler/jqDataHandle.ashx?RemoteName=sRT1042.cmdRT10422', //連接的Server端，command
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT1043.cmdRT10437', //連接的Server端，command
                 //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
-                data: "mode=method&method=" + "smRT10422" + "&parameters=" + CUSID + "," + ENTRYNO + "," + PRTNO + "," + usr,
+                data: "mode=method&method=" + "smRT10437" + "&parameters=" + CUSID + "," + ENTRYNO + "," + usr,
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("未完工結案完成，請點選重新整理");
+                    alert(data);
+                    $('#dataGridView').datagrid('reload');
                 }
             });
         }
@@ -291,29 +214,10 @@
         //作廢
         function btn5Click() {
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            try {
-                var row1 = $('#JQDataGrid1').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            }
-            catch (err)
-            { alert(err); }
 
             var PRTNO = row.PRTNO;
             var ENTRYNO = row.ENTRYNO;
 
-            if (row.DROPDAT != "" && row.DROPDAT != null) {
-                alert("此派工單已作廢，不可重覆執行作廢作業");
-                return false;
-            }
-
-            if ((row.BONUSCLOSEYM != "" && row.BONUSCLOSEYM != null) || (row.STOCKCLOSEYM != "" && row.STOCKCLOSEYM != null)) {
-                alert("此裝機派工單已月結，不可異動");
-                return false;
-            }
-
-            if ((row.closedat != "" && row.closedat != null) || (row.unclosedat != "" && row.unclosedat != null)) {
-                alert("此派工單已完工結案，不可作廢(欲作廢請先清除裝機完工日)");
-                return false;
-            }
 
             $.ajax({
                 type: "POST",
@@ -323,7 +227,8 @@
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("資料已作廢，請點選重新整理!");
+                    alert(data);
+                    $('#dataGridView').datagrid('reload');
                 }
             });
         }
@@ -335,11 +240,6 @@
             var PRTNO = row.PRTNO;
             var ENTRYNO = row.ENTRYNO;
 
-            if (row.CANCELDAT == "" || row.CANCELDAT == null) {
-                alert("此派工單尚未作廢，不可重覆執行作廢返轉作業");
-                return false;
-            }
-
             $.ajax({
                 type: "POST",
                 url: '../handler/jqDataHandle.ashx?RemoteName=sRT1043.cmdRT10439', //連接的Server端，command
@@ -348,7 +248,8 @@
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("資料已作廢返轉，請點選重新整理!");
+                    alert(data);
+                    $('#dataGridView').datagrid('reload');
                 }
             });
         }

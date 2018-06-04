@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <script>
+        var usr = getClientInfo('_usercode');
         function LinkRT3021(val) {
             var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var ss = row.COMQ1;
@@ -117,9 +118,21 @@
 
         function fileuploadsuccess(value) {
             //這個value值就是文件名。
-            alert(value);
             $('#JQFileUpload1').next().remove()
             initInfoFileUpload($('#JQFileUpload1'));
+            alert(value);
+            $.ajax({
+                type: "POST",
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT302.cmdRT3025', //連接的Server端，command
+                //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                data: "mode=method&method=" + "smRT3025" + "&parameters=" + value + "," + usr,
+                cache: false,
+                async: false,
+                success: function (data) {
+                    alert(data);
+                    $('#dataGridMaster').datagrid('reload');
+                }
+            });
         }
 
         function getFileUploadValue() {
@@ -177,7 +190,7 @@
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="3.匯入條碼檔" Visible="False" OnClick="btn5Click" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="4.列印續約單" Visible="True" OnClick="btn6Click" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="5.列印信封" Visible="True" OnClick="btn7Click" Icon="icon-print" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="用戶明細" Visible="True" OnClick="btn8Click" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="用戶明細" Visible="True" OnClick="btn8Click" Icon="icon-view" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btnReloadClick" Text="資料更新" Visible="True" Icon="icon-reload" />
                 </TooItems>
                 <QueryColumns>
@@ -185,10 +198,9 @@
                     <JQTools:JQQueryColumn AndOr="and" Caption="上傳檔案" Condition="%" DataType="string" Editor="infofileupload" FieldName="CUSNC3" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                 </QueryColumns>
             </JQTools:JQDataGrid>
-            <JQTools:JQFileUpload ID="JQFileUpload1" runat="server" BorderWidth="600px" FileSizeLimited="50000" ShowButton="True" ShowLocalFile="True" UpLoadFolder="barcode" Width="600px" onSuccess="fileuploadsuccess" />
         </div>
 
-        <div id="plLetter"  style="display:block">
+        <div id="plLetter"  style="display:none">
             <JQTools:JQDataGrid ID="JQDataGrid1" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" AutoApply="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="cmdRT302R" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="True" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT302.cmdRT302R" RowNumbers="True" Title="JQDataGrid" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="cusnc" Editor="text" FieldName="cusnc" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="90">
@@ -359,6 +371,9 @@
             </JQTools:JQDataGrid>
         </p>
         </div>
+        請指定超商代收款檔<p>
+            <JQTools:JQFileUpload ID="JQFileUpload1" runat="server" BorderWidth="600px" FileSizeLimited="50000" ShowButton="True" ShowLocalFile="True" UpLoadFolder="barcode" Width="600px" onSuccess="fileuploadsuccess" />
+        </p>
     </form>
 </body>
 <script>

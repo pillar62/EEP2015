@@ -954,18 +954,18 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             // xrRichText3
             // 
             this.xrRichText3.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrRichText3.Font = new System.Drawing.Font("標楷體", 14F);
-            this.xrRichText3.LocationFloat = new DevExpress.Utils.PointFloat(9.292707F, 10F);
+            this.xrRichText3.Font = new System.Drawing.Font("標楷體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.xrRichText3.LocationFloat = new DevExpress.Utils.PointFloat(9.292711F, 10F);
             this.xrRichText3.Name = "xrRichText3";
             this.xrRichText3.SerializableRtfString = resources.GetString("xrRichText3.SerializableRtfString");
-            this.xrRichText3.SizeF = new System.Drawing.SizeF(504.1285F, 72.91681F);
+            this.xrRichText3.SizeF = new System.Drawing.SizeF(504.1284F, 83F);
             this.xrRichText3.StylePriority.UseBorders = false;
             this.xrRichText3.StylePriority.UseFont = false;
             // 
             // xrShape1
             // 
             this.xrShape1.BorderWidth = 1F;
-            this.xrShape1.LocationFloat = new DevExpress.Utils.PointFloat(523.7416F, 45.41681F);
+            this.xrShape1.LocationFloat = new DevExpress.Utils.PointFloat(525.7416F, 46.41681F);
             this.xrShape1.Name = "xrShape1";
             this.xrShape1.Shape = shapeRectangle1;
             this.xrShape1.SizeF = new System.Drawing.SizeF(180.2084F, 37.5F);

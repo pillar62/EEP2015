@@ -26,6 +26,22 @@
             }
         }
 
+        function queryGrid(dg) { //查詢后添加固定條件
+            if ($(dg).attr('id') == 'dataGridView') {
+                var sWhere = $(dg).datagrid('getWhere');
+                if (sWhere == "")
+                {
+                    sWhere = " KIND='" + KIND + "'";
+                }
+                else
+                {
+                    sWhere = sWhere + " and KIND='" + KIND + "'";
+                }
+                
+                $(dg).datagrid('setWhere', sWhere);
+            }
+        }
+
     </script>
 
 </head>
@@ -40,6 +56,8 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="代號" Editor="text" FieldName="CODE" Format="" MaxLength="0" Visible="true" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="名稱" Editor="text" FieldName="CODENC" Format="" MaxLength="0" Visible="true" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="額外參數" Editor="text" FieldName="PARM1" Format="" MaxLength="0" Visible="true" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="排序" Editor="text" FieldName="ID_SORT" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="80">
+                    </JQTools:JQGridColumn>
                 </Columns>
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton"
@@ -56,6 +74,7 @@
                 <QueryColumns>
                     <JQTools:JQQueryColumn AndOr="and" Caption="代號" Condition="%" DataType="string" Editor="text" FieldName="CODE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="名稱" Condition="%" DataType="string" Editor="text" FieldName="CODENC" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="額外參數" Condition="%" DataType="string" Editor="text" FieldName="PARM1" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                 </QueryColumns>
             </JQTools:JQDataGrid>
 
@@ -66,6 +85,7 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="代號" Editor="text" FieldName="CODE" Format="" maxlength="0" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="名稱" Editor="text" FieldName="CODENC" Format="" maxlength="0" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="額外參數" Editor="text" FieldName="PARM1" Format="" maxlength="0" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="排序" Editor="text" FieldName="ID_SORT" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="True" Width="80" />
                     </Columns>
                 </JQTools:JQDataForm>
                 <JQTools:JQDefault ID="defaultMaster" runat="server" BindingObjectID="dataFormMaster" EnableTheming="True">

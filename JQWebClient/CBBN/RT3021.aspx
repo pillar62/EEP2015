@@ -112,7 +112,6 @@
             var smm = $("#DROPDAT_Query").combobox('getValue'); //月
             var sdd = $("#cusnc_Query").combobox('getValue'); //期別
             var usr = getClientInfo('_usercode');
-            alert(syr);
 
             $.ajax({
                 type: "POST",
@@ -176,7 +175,7 @@
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
                         OnClick="openQuery" Text="查詢" Visible="False" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="轉續約單" Visible="True" OnClick="serverMethod" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="轉續約單" Visible="True" OnClick="serverMethod" Icon="icon-edit" />
                 </TooItems>
                 <QueryColumns>
                     <JQTools:JQQueryColumn AndOr="and" Caption="續約年" Condition="&gt;=" DataType="string" Editor="infocombobox" EditorOptions="items:[{value:'2013',text:'2013',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" FieldName="DUEDAT" Format="yyyy/mm" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />

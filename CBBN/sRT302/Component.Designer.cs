@@ -32,6 +32,8 @@
             Srvtools.Service service1 = new Srvtools.Service();
             Srvtools.Service service2 = new Srvtools.Service();
             Srvtools.Service service3 = new Srvtools.Service();
+            Srvtools.Service service4 = new Srvtools.Service();
+            Srvtools.Service service5 = new Srvtools.Service();
             Srvtools.KeyItem keyItem1 = new Srvtools.KeyItem();
             Srvtools.FieldAttr fieldAttr1 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr2 = new Srvtools.FieldAttr();
@@ -76,6 +78,14 @@
             Srvtools.InfoParameter infoParameter7 = new Srvtools.InfoParameter();
             Srvtools.InfoParameter infoParameter8 = new Srvtools.InfoParameter();
             Srvtools.KeyItem keyItem12 = new Srvtools.KeyItem();
+            Srvtools.InfoParameter infoParameter9 = new Srvtools.InfoParameter();
+            Srvtools.InfoParameter infoParameter10 = new Srvtools.InfoParameter();
+            Srvtools.InfoParameter infoParameter11 = new Srvtools.InfoParameter();
+            Srvtools.InfoParameter infoParameter12 = new Srvtools.InfoParameter();
+            Srvtools.InfoParameter infoParameter13 = new Srvtools.InfoParameter();
+            Srvtools.InfoParameter infoParameter14 = new Srvtools.InfoParameter();
+            Srvtools.KeyItem keyItem13 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem14 = new Srvtools.KeyItem();
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTLessorAVSCustBillingPrt = new Srvtools.InfoCommand(this.components);
@@ -96,6 +106,9 @@
             this.RT3021R = new Srvtools.InfoCommand(this.components);
             this.RT3023 = new Srvtools.InfoCommand(this.components);
             this.cmdRT302R = new Srvtools.InfoCommand(this.components);
+            this.cmdRT3024 = new Srvtools.InfoCommand(this.components);
+            this.cmd = new Srvtools.InfoCommand(this.components);
+            this.cmdRT3025 = new Srvtools.InfoCommand(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustBillingPrt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustBillingPrtSub)).BeginInit();
@@ -111,6 +124,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.RT3021R)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT3023)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT302R)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdRT3024)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdRT3025)).BeginInit();
             // 
             // serviceManager1
             // 
@@ -123,9 +139,17 @@
             service3.DelegateName = "smRT3023";
             service3.NonLogin = false;
             service3.ServiceName = "smRT3023";
+            service4.DelegateName = "smRT3024";
+            service4.NonLogin = false;
+            service4.ServiceName = "smRT3024";
+            service5.DelegateName = "smRT3025";
+            service5.NonLogin = false;
+            service5.ServiceName = "smRT3025";
             this.serviceManager1.ServiceCollection.Add(service1);
             this.serviceManager1.ServiceCollection.Add(service2);
             this.serviceManager1.ServiceCollection.Add(service3);
+            this.serviceManager1.ServiceCollection.Add(service4);
+            this.serviceManager1.ServiceCollection.Add(service5);
             // 
             // InfoConnection1
             // 
@@ -821,6 +845,142 @@
             this.cmdRT302R.SiteControl = false;
             this.cmdRT302R.SiteFieldName = null;
             this.cmdRT302R.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // cmdRT3024
+            // 
+            this.cmdRT3024.CacheConnection = false;
+            this.cmdRT3024.CommandText = "usp_RTLessorAVSCustBillingPrtCtlTRNExeNS";
+            this.cmdRT3024.CommandTimeout = 30;
+            this.cmdRT3024.CommandType = System.Data.CommandType.StoredProcedure;
+            this.cmdRT3024.DynamicTableName = false;
+            this.cmdRT3024.EEPAlias = null;
+            this.cmdRT3024.EncodingAfter = null;
+            this.cmdRT3024.EncodingBefore = "Windows-1252";
+            this.cmdRT3024.EncodingConvert = null;
+            this.cmdRT3024.InfoConnection = this.InfoConnection1;
+            infoParameter9.InfoDbType = Srvtools.InfoDbType.VarChar;
+            infoParameter9.ParameterName = "batch";
+            infoParameter9.Precision = ((byte)(0));
+            infoParameter9.Scale = ((byte)(0));
+            infoParameter9.Size = 20;
+            infoParameter9.SourceColumn = null;
+            infoParameter9.XmlSchemaCollectionDatabase = null;
+            infoParameter9.XmlSchemaCollectionName = null;
+            infoParameter9.XmlSchemaCollectionOwningSchema = null;
+            infoParameter10.InfoDbType = Srvtools.InfoDbType.VarChar;
+            infoParameter10.ParameterName = "cusid";
+            infoParameter10.Precision = ((byte)(0));
+            infoParameter10.Scale = ((byte)(0));
+            infoParameter10.Size = 20;
+            infoParameter10.SourceColumn = null;
+            infoParameter10.XmlSchemaCollectionDatabase = null;
+            infoParameter10.XmlSchemaCollectionName = null;
+            infoParameter10.XmlSchemaCollectionOwningSchema = null;
+            infoParameter11.InfoDbType = Srvtools.InfoDbType.VarChar;
+            infoParameter11.ParameterName = "usr";
+            infoParameter11.Precision = ((byte)(0));
+            infoParameter11.Scale = ((byte)(0));
+            infoParameter11.Size = 6;
+            infoParameter11.SourceColumn = null;
+            infoParameter11.XmlSchemaCollectionDatabase = null;
+            infoParameter11.XmlSchemaCollectionName = null;
+            infoParameter11.XmlSchemaCollectionOwningSchema = null;
+            this.cmdRT3024.InfoParameters.Add(infoParameter9);
+            this.cmdRT3024.InfoParameters.Add(infoParameter10);
+            this.cmdRT3024.InfoParameters.Add(infoParameter11);
+            this.cmdRT3024.MultiSetWhere = false;
+            this.cmdRT3024.Name = "cmdRT3024";
+            this.cmdRT3024.NotificationAutoEnlist = false;
+            this.cmdRT3024.SecExcept = null;
+            this.cmdRT3024.SecFieldName = null;
+            this.cmdRT3024.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.cmdRT3024.SelectPaging = false;
+            this.cmdRT3024.SelectTop = 0;
+            this.cmdRT3024.SiteControl = false;
+            this.cmdRT3024.SiteFieldName = null;
+            this.cmdRT3024.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // cmd
+            // 
+            this.cmd.CacheConnection = false;
+            this.cmd.CommandText = "";
+            this.cmd.CommandTimeout = 30;
+            this.cmd.CommandType = System.Data.CommandType.Text;
+            this.cmd.DynamicTableName = false;
+            this.cmd.EEPAlias = null;
+            this.cmd.EncodingAfter = null;
+            this.cmd.EncodingBefore = "Windows-1252";
+            this.cmd.EncodingConvert = null;
+            this.cmd.InfoConnection = this.InfoConnection1;
+            this.cmd.MultiSetWhere = false;
+            this.cmd.Name = "cmd";
+            this.cmd.NotificationAutoEnlist = false;
+            this.cmd.SecExcept = null;
+            this.cmd.SecFieldName = null;
+            this.cmd.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.cmd.SelectPaging = false;
+            this.cmd.SelectTop = 0;
+            this.cmd.SiteControl = false;
+            this.cmd.SiteFieldName = null;
+            this.cmd.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // cmdRT3025
+            // 
+            this.cmdRT3025.CacheConnection = false;
+            this.cmdRT3025.CommandText = "select * from RTLessorAVSCustAR";
+            this.cmdRT3025.CommandTimeout = 30;
+            this.cmdRT3025.CommandType = System.Data.CommandType.Text;
+            this.cmdRT3025.DynamicTableName = false;
+            this.cmdRT3025.EEPAlias = null;
+            this.cmdRT3025.EncodingAfter = null;
+            this.cmdRT3025.EncodingBefore = "Windows-1252";
+            this.cmdRT3025.EncodingConvert = null;
+            this.cmdRT3025.InfoConnection = this.InfoConnection1;
+            infoParameter12.InfoDbType = Srvtools.InfoDbType.VarChar;
+            infoParameter12.ParameterName = "batch";
+            infoParameter12.Precision = ((byte)(0));
+            infoParameter12.Scale = ((byte)(0));
+            infoParameter12.Size = 20;
+            infoParameter12.SourceColumn = null;
+            infoParameter12.XmlSchemaCollectionDatabase = null;
+            infoParameter12.XmlSchemaCollectionName = null;
+            infoParameter12.XmlSchemaCollectionOwningSchema = null;
+            infoParameter13.InfoDbType = Srvtools.InfoDbType.VarChar;
+            infoParameter13.ParameterName = "cusid";
+            infoParameter13.Precision = ((byte)(0));
+            infoParameter13.Scale = ((byte)(0));
+            infoParameter13.Size = 20;
+            infoParameter13.SourceColumn = null;
+            infoParameter13.XmlSchemaCollectionDatabase = null;
+            infoParameter13.XmlSchemaCollectionName = null;
+            infoParameter13.XmlSchemaCollectionOwningSchema = null;
+            infoParameter14.InfoDbType = Srvtools.InfoDbType.VarChar;
+            infoParameter14.ParameterName = "usr";
+            infoParameter14.Precision = ((byte)(0));
+            infoParameter14.Scale = ((byte)(0));
+            infoParameter14.Size = 6;
+            infoParameter14.SourceColumn = null;
+            infoParameter14.XmlSchemaCollectionDatabase = null;
+            infoParameter14.XmlSchemaCollectionName = null;
+            infoParameter14.XmlSchemaCollectionOwningSchema = null;
+            this.cmdRT3025.InfoParameters.Add(infoParameter12);
+            this.cmdRT3025.InfoParameters.Add(infoParameter13);
+            this.cmdRT3025.InfoParameters.Add(infoParameter14);
+            keyItem13.KeyName = "CUSID";
+            keyItem14.KeyName = "BATCHNO";
+            this.cmdRT3025.KeyFields.Add(keyItem13);
+            this.cmdRT3025.KeyFields.Add(keyItem14);
+            this.cmdRT3025.MultiSetWhere = false;
+            this.cmdRT3025.Name = "cmdRT3025";
+            this.cmdRT3025.NotificationAutoEnlist = false;
+            this.cmdRT3025.SecExcept = null;
+            this.cmdRT3025.SecFieldName = null;
+            this.cmdRT3025.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.cmdRT3025.SelectPaging = false;
+            this.cmdRT3025.SelectTop = 0;
+            this.cmdRT3025.SiteControl = false;
+            this.cmdRT3025.SiteFieldName = null;
+            this.cmdRT3025.UpdatedRowSource = System.Data.UpdateRowSource.None;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustBillingPrt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustBillingPrtSub)).EndInit();
@@ -836,6 +996,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.RT3021R)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT3023)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT302R)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdRT3024)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdRT3025)).EndInit();
 
         }
 
@@ -861,5 +1024,8 @@
         private Srvtools.InfoCommand RT3021R;
         private Srvtools.InfoCommand RT3023;
         private Srvtools.InfoCommand cmdRT302R;
+        private Srvtools.InfoCommand cmdRT3024;
+        private Srvtools.InfoCommand cmd;
+        private Srvtools.InfoCommand cmdRT3025;
     }
 }

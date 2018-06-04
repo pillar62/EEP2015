@@ -13,7 +13,27 @@
         var glineq1 = Request.getQueryStringByName2("lineq1"); //個案編號
         var gcomq1 = Request.getQueryStringByName2("comq1"); //個案編號
         var gcusid = Request.getQueryStringByName2("cusid"); //個案編號
-
+        var sfaqman, stel, smobile;
+        if (gcusid != "") {
+            $.ajax({
+                type: "POST",
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT205.cmd', //連接的Server端，command
+                //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                data: "mode=method&method=" + "smRT2059" + "&parameters=" + gcusid,
+                cache: false,
+                async: false,
+                success: function (data) {
+                    var sr = data.split(",");
+                    sfaqman = sr[0];
+                    stel= sr[1];
+                    smobile = sr[2];
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status);
+                    alert(thrownError);
+                }
+            });
+        }
         var flag = true;
 
         function btnRT103Click(val) {
@@ -47,22 +67,62 @@
                 return gcomq1;
             }
         }
+
         function InsDefault4() {
-            if (gcusid != "") {
-                
-                return gcusid;
-            }
+            if (gcusid != "") {return gcusid;}
+        }
+
+        function InsDefault5() {
+            if (sfaqman != "") { return sfaqman; }
+        }
+
+        function InsDefault6() {
+            if (stel != "") { return stel; }
+        }
+
+        function InsDefault7() {
+            if (smobile != "") { return smobile; }
+        }
+
+        function InsCUS() {
+            var sCUSID = $('#dataFormMasterCUSID').refval('getValue');
+            
+            $.ajax({
+                type: "POST",
+                url: '../handler/jqDataHandle.ashx?RemoteName=sRT205.cmd', //連接的Server端，command
+                //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                data: "mode=method&method=" + "smRT2059" + "&parameters=" + sCUSID,
+                cache: false,
+                async: false,
+                success: function (data) {
+                    var sr = data.split(",");
+                    $('#dataFormMasterFAQMAN').val(sr[0]);
+                    $('#dataFormMasterTEL').val(sr[1]);
+                    $('#dataFormMasterMOBILE').val(sr[2]);
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status);
+                    alert(thrownError);
+                }
+            });
         }
 
         function dgOnloadSuccess() {
             if (flag) {
+                
                 //查詢出該用戶的資料
                 if (sMODE != ""){
                     if (sMODE != 'I') {
                         var sWhere = " A.CASENO='" + caseno + "'";
                         $("#dataGridView").datagrid('setWhere', sWhere);
                     }
-                    $("#dataGridView").datagrid("selectRow", 0);
+                    else
+                    {
+                        $("#dataGridView").datagrid("selectRow", 0);
+                    }
+
+
+                    //dgSelect();
                 }
                 else
                 {
@@ -73,6 +133,19 @@
             else
             {
             }
+            /*
+            if (flag == false) {
+                var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
+
+                var ss = row.CLOSEDAT;
+
+                if (ss != null) {
+                    $("#btnModify").hide();
+                }
+                else {
+                    $("#btnModify").show();
+                }
+            }*/
             flag = false;
         }
 
@@ -81,13 +154,18 @@
             $("#dataGridView").datagrid("reload");
         }
 
+        function GetEdit()
+        {
+            
+        }
+
         function getfocus()
         {
             $('#dataFormMasterCUSID').data("inforefval").refval.find("input.refval-text").focus();
             $('#dataFormMasterMEMO').focus();
         }
        
-        function dgSelect()
+        function dgSelect(rowIndex, rowData)
         {
             if (sMODE != "") {
                 setTimeout(function () {
@@ -117,9 +195,21 @@
             {
                 //alert("1");
             }
+
+            if (flag == false) {
+                var ss = rowData.CLOSEDAT;
+                
+                if (ss != null) {
+                    $("#btnModify").hide();
+                }
+                else {
+                    $("#btnModify").show();
+                }
+            }
         }
 
         function dataFormMaster_OnApplied(rows) {
+            
             //新增之後取得後端的鍵值資料後顯示新增的資料
             $("#dataGridView").datagrid("reload");
 
@@ -131,7 +221,7 @@
                 sWhere = sWhere + " or (caseno='" + ss + "') ";
             }
                         
-            $("#dataGridView").datagrid('setWhere', sWhere);
+            $("#dataGridView").datagrid('setWhere', sWhere);            
             
             /*
             $("#dataGridView").datagrid('setWhere', " 1 = 0 ");
@@ -154,7 +244,27 @@
         {
             window.parent.closeCurrentTab();
             alert("有資料異動請點選資料更新!!");
-        }
+        }        
+
+        /*
+        $(function () {
+           
+                $('#dataGridView').datagrid(
+                {
+                    onClickRow: function (rowIndex, rowData) {
+                        var ss = rowData.CLOSEDAT;
+
+                        if (ss != null || ss != "") {
+                            $("#btnModify").hide();
+                        }
+                        else {
+                            $("#btnModify").show();
+                        }
+                    }
+
+                });
+            }
+        )*/
     </script>
 </head>
 <body>
@@ -163,7 +273,7 @@
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" LocaleAuto="True" UseFlow="False" />
             <JQTools:JQDataGrid ID="dataGridView" data-options="pagination:true,view:commandview" RemoteName="sRT2051.RTFaqM" runat="server" AutoApply="True"
                 DataMember="RTFaqM" Pagination="True" QueryTitle="Query" EditDialogID="JQDialog1"
-                Title="客訴資料維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="False" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Fuzzy" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="False" OnLoadSuccess="dgOnloadSuccess" OnSelect="dgSelect">
+                Title="客訴資料維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="False" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Fuzzy" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="False" OnLoadSuccess="dgOnloadSuccess" OnSelect="dgSelect" OnInsert="InsCUS">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="客訴單號" Editor="text" FieldName="CASENO" MaxLength="10" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="方案別" Editor="inforefval" FieldName="COMTYPE" MaxLength="1" Visible="true" Width="80" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'P5'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'方案代號',textFieldCaption:'方案名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
@@ -188,7 +298,7 @@
                 </Columns>
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton" OnClick="insertItem" Text="新增" />
-                    <JQTools:JQToolItem Icon="icon-edit" ItemType="easyui-linkbutton" OnClick="updateItem" Text="修改" Visible="True" />
+                    <JQTools:JQToolItem Icon="icon-edit" ItemType="easyui-linkbutton" OnClick="updateItem" Text="修改" Visible="True" ID="btnModify" />
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton" OnClick="viewItem" Text="瀏覽" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="匯出Excel" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-cancel" ItemType="easyui-linkbutton" OnClick="cancel" Text="取消" Visible="True" />
@@ -210,8 +320,8 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="方案別" Editor="text" FieldName="comtypenc" maxlength="0" NewRow="False" ReadOnly="True" RowSpan="1" Span="1" Visible="False" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="方案別" Editor="inforefval" FieldName="COMTYPE" maxlength="1" ReadOnly="False" Visible="True" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RT205P5',tableName:'RT205P5',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'P5'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'CODE',textFieldCaption:'CODENC',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
                         <JQTools:JQFormColumn Alignment="left" Caption="資費" Editor="text" FieldName="CASEKIND" MaxLength="0" ReadOnly="True" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="客戶編號" Editor="inforefval" EditorOptions="title:'客戶查詢',panelWidth:350,panelHeight:200,remoteName:'sRT205.V_RT205',tableName:'V_RT205',columns:[],columnMatches:[{field:'comtypenc',value:'comtypenc'},{field:'belongnc',value:'belongnc'},{field:'salesnc',value:'salesnc'},{field:'comq',value:'comq'},{field:'comn',value:'comn'},{field:'LINETEL',value:'LINETEL'},{field:'gateway',value:'gateway'},{field:'CMTYIP',value:'PP'},{field:'linerate',value:'SPEED'},{field:'ARRIVEDAT',value:'ARRIVEDAT'},{field:'rcomdrop',value:'rcomdrop'},{field:'idslamip',value:'idslamip'},{field:'contacttel',value:'contacttel'},{field:'companytel',value:'companytel'},{field:'raddr',value:'raddr'},{field:'CUSTIP',value:'CUSTIP'},{field:'CASEKIND',value:'CASEKIND'},{field:'paycycle',value:'paycycle'},{field:'paytype',value:'paytype'},{field:'overdue',value:'overdue'},{field:'freecode',value:'freecode'},{field:'docketdat',value:'docketdat'},{field:'strbillingdat',value:'strbillingdat'},{field:'newbillingdat',value:'newbillingdat'},{field:'duedat',value:'duedat'},{field:'dropdat',value:'dropdat'},{field:'canceldat',value:'canceldat'},{field:'secondcase',value:'secondcase'},{field:'nciccusno',value:'nciccusno'},{field:'Sp499cons',value:'Sp499cons'},{field:'WtlApplyDat',value:'WtlApplyDat'},{field:'TEL',value:'HOME'},{field:'MOBILE',value:'MOBILE'},{field:'FAQMAN',value:'cusnc'},{field:'LINEQ1',value:'LINEQ1'},{field:'CUSTSRC',value:'CUSTSRC'}],whereItems:[{field:'COMQ1',value:'row[COMQ1]'}],valueField:'CUSID',textField:'cusnc',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="CUSID" MaxLength="15" NewRow="False" OnBlur="" ReadOnly="False" RowSpan="1" Span="1" Visible="True" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="用戶速率" Editor="text" FieldName="linerate" MaxLength="0" NewRow="False" ReadOnly="True" RowSpan="1" Span="1" Visible="True" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="客戶編號" Editor="inforefval" EditorOptions="title:'客戶查詢',panelWidth:350,panelHeight:200,remoteName:'sRT205.V_RT205',tableName:'V_RT205',columns:[],columnMatches:[{field:'comtypenc',value:'comtypenc'},{field:'belongnc',value:'belongnc'},{field:'salesnc',value:'salesnc'},{field:'comq',value:'comq'},{field:'comn',value:'comn'},{field:'LINETEL',value:'LINETEL'},{field:'gateway',value:'gateway'},{field:'CMTYIP',value:'PP'},{field:'LINERATE',value:'SPEED'},{field:'ARRIVEDAT',value:'ARRIVEDAT'},{field:'rcomdrop',value:'rcomdrop'},{field:'idslamip',value:'idslamip'},{field:'contacttel',value:'contacttel'},{field:'companytel',value:'companytel'},{field:'raddr',value:'raddr'},{field:'CUSTIP',value:'CUSTIP'},{field:'CASEKIND',value:'CASEKIND'},{field:'paycycle',value:'paycycle'},{field:'paytype',value:'paytype'},{field:'overdue',value:'overdue'},{field:'freecode',value:'freecode'},{field:'docketdat',value:'docketdat'},{field:'strbillingdat',value:'strbillingdat'},{field:'newbillingdat',value:'newbillingdat'},{field:'duedat',value:'duedat'},{field:'dropdat',value:'dropdat'},{field:'canceldat',value:'canceldat'},{field:'secondcase',value:'secondcase'},{field:'nciccusno',value:'nciccusno'},{field:'Sp499cons',value:'Sp499cons'},{field:'WtlApplyDat',value:'WtlApplyDat'},{field:'LINEQ1',value:'LINEQ1'},{field:'CUSTSRC',value:'CUSTSRC'}],whereItems:[{field:'COMQ1',value:'row[COMQ1]'}],valueField:'CUSID',textField:'cusnc',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,onSelect:InsCUS,selectOnly:true,capsLock:'none',fixTextbox:'false'" FieldName="CUSID" MaxLength="15" NewRow="False" OnBlur="" ReadOnly="False" RowSpan="1" Span="1" Visible="True" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="用戶速率" Editor="text" FieldName="LINERATE" MaxLength="0" NewRow="False" ReadOnly="True" RowSpan="1" Span="1" Visible="True" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="客戶來源" Editor="inforefval" EditorOptions="title:'客戶來源',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'Q3'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'CODE',textFieldCaption:'CODENC',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="CUSTSRC" MaxLength="2" NewRow="False" ReadOnly="True" RowSpan="1" Span="1" Visible="True" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="用戶IP" Editor="text" FieldName="CUSTIP" MaxLength="0" NewRow="False" ReadOnly="True" RowSpan="1" Span="1" Visible="True" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="轄區業務" Editor="text" FieldName="salesnc" MaxLength="0" NewRow="False" ReadOnly="True" RowSpan="1" Span="1" Visible="True" Width="180" />
@@ -252,6 +362,9 @@
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefault4" FieldName="CUSID" RemoteMethod="False" />
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="_usercode" FieldName="RCVUSR" RemoteMethod="False" />
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="_today2" FieldName="RCVDAT" RemoteMethod="False" />
+                        <JQTools:JQDefaultColumn CarryOn="False" RemoteMethod="False" DefaultMethod="InsDefault5" FieldName="FAQMAN" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefault6" FieldName="TEL" RemoteMethod="False" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefault7" FieldName="MOBILE" RemoteMethod="False" />
                     </Columns>
                 </JQTools:JQDefault>
                 <JQTools:JQValidate ID="validateMaster" runat="server" BindingObjectID="dataFormMaster" EnableTheming="True">

@@ -120,29 +120,7 @@
   <metadata name="sqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
-  <data name="customSqlQuery1.Sql" xml:space="preserve">
-    <value>select	CODENC, belongnc, rcvnc as amtnc, qty, rcvmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
-	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
-from 	V_RT307
-where 	rcvmoney &gt;0
-UNION
-select	CODENC, belongnc, setnc as amtnc, qty, setmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
-	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
-from 	V_RT307
-where 	setmoney &gt;0
-UNION
-select	CODENC, belongnc, gtnc as amtnc, qty, gtmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
-	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
-from 	V_RT307
-where 	gtmoney &gt;0
-UNION
-select	CODENC, belongnc, returnnc as amtnc, qty, returnmoney as amt, unino, invtitle, comn,  cusnc,  raddr, contacttel, 
-	docketdat, rcvmoneydat, strbillingdat, duedat, memo, gtserial
-from 	V_RT307
-where 	  	returnmoney &gt;0
-order  by  	rcvmoneydat, belongnc, comn, cusnc, amtnc</value>
-  </data>
   <data name="sqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
-    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZT0iQ09ERU5DIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImJlbG9uZ25jIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImFtdG5jIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InF0eSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9ImFtdCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9InVuaW5vIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImludnRpdGxlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9ImNvbW4iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iY3VzbmMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0icmFkZHIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iY29udGFjdHRlbCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJkb2NrZXRkYXQiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJyY3Ztb25leWRhdCIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9InN0cmJpbGxpbmdkYXQiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJkdWVkYXQiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJtZW1vIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Imd0c2VyaWFsIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjwvRGF0YVNldD4=</value>
+    <value>PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9IlF1ZXJ5Ij48RmllbGQgTmFtZT0iQ09ERU5DIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InBheXR5cGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iYmVsb25nbmMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0icXR5IiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0idW5pbm8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iaW52dGl0bGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ09NTiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDVVNOQyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJyYWRkciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDT05UQUNUVEVMIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRPQ0tFVERBVCIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9InJjdm1vbmV5ZGF0IiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iU1RSQklMTElOR0RBVCIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9ImR1ZWRhdCIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9Im1lbW8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0icGF5dHlwZTIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iY2FzZXR5cGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0icmN2bmMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0icmN2bW9uZXkiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJzZXRuYyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJzZXRtb25leSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Imd0bmMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iR1RNT05FWSIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9InJldHVybm5jIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9InJldHVybm1vbmV5IiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iZ3RzZXJpYWwiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
   </data>
 </root>

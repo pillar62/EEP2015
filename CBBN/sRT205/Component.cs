@@ -153,6 +153,7 @@ namespace sRT205
                 return new object[] { 0, "無法執行客訴單作廢作業,錯誤訊息：" + ex };
             }
         }
+
         public object[] smRT20531(object[] objParam)
         {
             var ss = (string)objParam[0];
@@ -184,6 +185,36 @@ namespace sRT205
             catch (Exception ex)
             {
                 return new object[] { 0, "無法執行追件作廢作業,錯誤訊息：" + ex };
+            }
+        }
+
+        public object[] smRT2059(object[] objParam)
+        {
+            var ss = (string)objParam[0];
+            var sdata = ss.Split(',');
+            //開啟資料連接
+            IDbConnection conn = cmd.Connection;
+            conn.Open();
+            string sSTR = "";
+            //設定輸入參數的值
+            try
+            {
+                string selectSql = "select CUSNC, CONTACTTEL, MOBILE FROM RTLessorAVSCust WHERE CUSID ='" + sdata[0] + "'";
+                cmd.CommandText = selectSql;
+                DataSet ds = cmd.ExecuteDataSet();
+
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    sSTR = ds.Tables[0].Rows[0]["CUSNC"].ToString() + "," + ds.Tables[0].Rows[0]["CONTACTTEL"].ToString() + "," + ds.Tables[0].Rows[0]["MOBILE"].ToString();
+                }
+                else
+                    sSTR = ",,";
+
+                return new object[] { 0, sSTR};
+            }
+            catch (Exception ex)
+            {
+                return new object[] { 0, sSTR};
             }
         }
 

@@ -33,6 +33,7 @@
             Srvtools.Service service2 = new Srvtools.Service();
             Srvtools.Service service3 = new Srvtools.Service();
             Srvtools.Service service4 = new Srvtools.Service();
+            Srvtools.Service service5 = new Srvtools.Service();
             Srvtools.KeyItem keyItem1 = new Srvtools.KeyItem();
             Srvtools.FieldAttr fieldAttr1 = new Srvtools.FieldAttr();
             Srvtools.FieldAttr fieldAttr2 = new Srvtools.FieldAttr();
@@ -106,10 +107,14 @@
             service4.DelegateName = "smRT20531";
             service4.NonLogin = false;
             service4.ServiceName = "smRT20531";
+            service5.DelegateName = "smRT2059";
+            service5.NonLogin = false;
+            service5.ServiceName = "smRT2059";
             this.serviceManager1.ServiceCollection.Add(service1);
             this.serviceManager1.ServiceCollection.Add(service2);
             this.serviceManager1.ServiceCollection.Add(service3);
             this.serviceManager1.ServiceCollection.Add(service4);
+            this.serviceManager1.ServiceCollection.Add(service5);
             // 
             // InfoConnection1
             // 

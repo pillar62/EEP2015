@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             Srvtools.Service service1 = new Srvtools.Service();
             Srvtools.Service service2 = new Srvtools.Service();
+            Srvtools.Service service3 = new Srvtools.Service();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Component));
             Srvtools.KeyItem keyItem1 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem2 = new Srvtools.KeyItem();
@@ -300,8 +301,12 @@
             service2.DelegateName = "smRT104C";
             service2.NonLogin = false;
             service2.ServiceName = "smRT104C";
+            service3.DelegateName = "smRT104FAR";
+            service3.NonLogin = false;
+            service3.ServiceName = "smRT104FAR";
             this.serviceManager1.ServiceCollection.Add(service1);
             this.serviceManager1.ServiceCollection.Add(service2);
+            this.serviceManager1.ServiceCollection.Add(service3);
             // 
             // InfoConnection1
             // 

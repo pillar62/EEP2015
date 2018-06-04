@@ -22,21 +22,21 @@
                 DataMember="RT310" Pagination="True" QueryTitle="查詢條件"
                 Title="社區列表" AllowDelete="False" AllowInsert="False" AllowUpdate="False" QueryMode="Panel" AlwaysClose="False" AllowAdd="False" ViewCommandVisible="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False">
                 <Columns>
-                    <JQTools:JQGridColumn Alignment="left" Caption="轄區" Editor="text" FieldName="areanc" Format="" MaxLength="0" Width="120" />
-                    <JQTools:JQGridColumn Alignment="right" Caption="社區序號" Editor="numberbox" FieldName="comq1" Format="" MaxLength="0" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="工程師" Editor="text" FieldName="salesnc" Format="" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="轄區" Editor="text" FieldName="areanc" Format="" MaxLength="0" Width="60" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="社區序號" Editor="numberbox" FieldName="comq1" Format="" MaxLength="0" Width="70" />
                     <JQTools:JQGridColumn Alignment="left" Caption="社區名稱" Editor="text" FieldName="comn" Format="" MaxLength="30" Width="120" />
-                    <JQTools:JQGridColumn Alignment="right" Caption="規模戶數" Editor="numberbox" FieldName="comcnt" Format="" Width="120" />
-                    <JQTools:JQGridColumn Alignment="right" Caption="主線數" Editor="numberbox" FieldName="linenum" Format="" Width="120" />
-                    <JQTools:JQGridColumn Alignment="right" Caption="用戶數" Editor="numberbox" FieldName="custnum" Format="" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="縣市" Editor="text" FieldName="cutnc" Format="" MaxLength="0" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="鄉鎮" Editor="text" FieldName="township" Format="" MaxLength="10" Width="120" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="社區地址" Editor="text" FieldName="raddr" Format="" MaxLength="60" Width="120" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="規模戶數" Editor="numberbox" FieldName="comcnt" Format="" Width="80" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="主線數" Editor="numberbox" FieldName="linenum" Format="" Width="60" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="用戶數" Editor="numberbox" FieldName="custnum" Format="" Width="60" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="縣市" Editor="text" FieldName="cutnc" Format="" MaxLength="0" Width="60" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="鄉鎮" Editor="text" FieldName="township" Format="" MaxLength="10" Width="60" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="社區地址" Editor="text" FieldName="raddr" Format="" MaxLength="60" Width="220" />
                 </Columns>
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
-                        OnClick="openQuery" Text="查詢" />
+                        OnClick="openQuery" Text="查詢" Visible="False" />
                     <JQTools:JQToolItem Enabled="True" Icon="icon-print" ItemType="easyui-linkbutton" OnClick="btnPrintClick" Text="列印" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="匯出Excel" Visible="True" />
                 </TooItems>
                 <QueryColumns>
                 </QueryColumns>

@@ -130,7 +130,8 @@
                 {
                     ss = " AND LINEQ1 = " + LINEQ1;
                 }
-                $("#dataGridView").datagrid('setWhere', "COMQ1='" + COMQ1 + "'" + ss);
+
+                $("#dataGridView").datagrid('setWhere', "COMQ1=" + COMQ1 + ss);
             }
 
             /*if (COMQ1 == "") {
@@ -156,6 +157,7 @@
         function OnLoadSuccess(val) {
             try {
                 var val = $('#dataFormMasterCUTID').combobox('getValue');
+
                 $('#dataFormMasterTOWNSHIP').combobox('setWhere', "CUTID = '" + val + "'");
             }
             catch (err) {
@@ -259,6 +261,7 @@
                     <JQTools:JQQueryColumn AndOr="and" Caption="作廢日迄" Condition="&lt;=" DataType="datetime" Editor="datebox" FieldName="CANCELDAT" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" Format="yyyy/mm/dd" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="社區名稱" Condition="=" DataType="string" Editor="text" FieldName="APPLYNAME" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="使用中" Condition="=" DataType="string" Editor="infocombobox" EditorOptions="items:[{value:'Y',text:'Y',selected:'false'},{value:'N',text:'N',selected:'false'},{value:'A',text:'全部',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" FieldName="AGREE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="光纖號碼" Condition="%%" DataType="string" Editor="text" FieldName="FIBERID" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                 </QueryColumns>
             </JQTools:JQDataGrid>
 

@@ -578,7 +578,7 @@
             // RTCode
             // 
             this.RTCode.CacheConnection = false;
-            this.RTCode.CommandText = "SELECT dbo.[RTCode].* FROM dbo.[RTCode]";
+            this.RTCode.CommandText = "SELECT * FROM RTCode\r\nORDER BY ID_SORT\r\n";
             this.RTCode.CommandTimeout = 30;
             this.RTCode.CommandType = System.Data.CommandType.Text;
             this.RTCode.DynamicTableName = false;
@@ -1778,7 +1778,7 @@
             // View_RTCode
             // 
             this.View_RTCode.CacheConnection = false;
-            this.View_RTCode.CommandText = "SELECT * FROM dbo.[RTCode]";
+            this.View_RTCode.CommandText = "SELECT * FROM dbo.[RTCode]\r\norder by id_sort";
             this.View_RTCode.CommandTimeout = 30;
             this.View_RTCode.CommandType = System.Data.CommandType.Text;
             this.View_RTCode.DynamicTableName = false;

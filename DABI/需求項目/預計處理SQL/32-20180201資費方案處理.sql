@@ -26,3 +26,5 @@ from RTBillCharge
 where CASETYPE = '07') a
 where casekind <> '' and CASETYPE+casekind + PAYCYCLE not in (select CASETYPE+casekind + PAYCYCLE from  RTBillCharge
 where CASETYPE = '07')
+
+ªôµn³Ó

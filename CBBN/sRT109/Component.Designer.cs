@@ -61,7 +61,7 @@
             // RTBillCharge
             // 
             this.RTBillCharge.CacheConnection = false;
-            this.RTBillCharge.CommandText = "SELECT dbo.[RTBillCharge].* FROM dbo.[RTBillCharge]";
+            this.RTBillCharge.CommandText = "SELECT * FROM RTBillCharge\r\nORDER BY ID_SORT";
             this.RTBillCharge.CommandTimeout = 30;
             this.RTBillCharge.CommandType = System.Data.CommandType.Text;
             this.RTBillCharge.DynamicTableName = false;
@@ -183,7 +183,7 @@
             this.ucRTBillCharge.FieldAttrs.Add(fieldAttr9);
             this.ucRTBillCharge.FieldAttrs.Add(fieldAttr10);
             this.ucRTBillCharge.LogInfo = null;
-            this.ucRTBillCharge.Name = null;
+            this.ucRTBillCharge.Name = "ucRTBillCharge";
             this.ucRTBillCharge.RowAffectsCheck = true;
             this.ucRTBillCharge.SelectCmd = this.RTBillCharge;
             this.ucRTBillCharge.SelectCmdForUpdate = null;

@@ -32,6 +32,8 @@
                     <JQTools:JQGridColumn Alignment="right" Caption="退租金額／每月(第二戶)" Editor="numberbox" FieldName="DROPAMT2" Format="" Visible="true" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="備註" Editor="text" FieldName="MEMO" Format="" MaxLength="50" Visible="true" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="BILLCOD" Editor="text" FieldName="BILLCOD" Format="" MaxLength="2" Visible="true" Width="120" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="排序" Editor="text" FieldName="ID_SORT" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="80">
+                    </JQTools:JQGridColumn>
                 </Columns>
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton"
@@ -61,6 +63,7 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="退租金額／每月(第二戶)" Editor="numberbox" FieldName="DROPAMT2" Format="" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="備註" Editor="text" FieldName="MEMO" Format="" maxlength="50" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="BILLCOD" Editor="text" FieldName="BILLCOD" Format="" maxlength="2" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="排序" Editor="text" FieldName="ID_SORT" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="True" Width="80" />
                     </Columns>
                 </JQTools:JQDataForm>
                 <JQTools:JQDefault ID="defaultMaster" runat="server" BindingObjectID="dataFormMaster" BorderStyle="NotSet" ClientIDMode="Inherit" Enabled="True" EnableTheming="True" EnableViewState="True" ViewStateMode="Inherit">
@@ -71,4 +74,7 @@
         </div>
     </form>
 </body>
+<script>
+    $("#toolbardataGridMaster").css("'display', 'block'");
+</script>
 </html>

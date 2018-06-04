@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="serviceManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 134</value>
+    <value>17, 95</value>
   </metadata>
   <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 212</value>
+    <value>17, 134</value>
   </metadata>
   <metadata name="RTLessorAVSCmtyH.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 173</value>
   </metadata>
   <metadata name="ucRTLessorAVSCmtyH.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
+    <value>17, 212</value>
   </metadata>
   <metadata name="View_RTLessorAVSCmtyH.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 56</value>
@@ -136,24 +136,20 @@
     <value>275, 69</value>
   </metadata>
   <data name="RT310.CommandText" xml:space="preserve">
-    <value>select f.areanc, isnull(isnull(h.shortnc, j.cusnc), '') as salesnc, a.comq1, a.comn, a.comcnt, 
-d.linenum, isnull(c.custnum,0) as custnum, k.cutnc, a.township, a.raddr 
+    <value>select a.cutid, f.areanc, a.comq1, a.comn, a.comcnt, d.linenum, isnull(c.custnum,0) as custnum, k.cutnc, a.township, a.raddr 
 from	RTLessorAvsCmtyH a 
 inner join RTLessorAvsCmtyLine b on a.comq1 = b.comq1 
-left outer join (select x.comq1, count(*) as custnum from rtLessorAvscmtyline x 
-	inner join rtLessorAvscust y on x.comq1 = y.comq1 and x.lineq1 = y.lineq1 
-	and y.freecode &lt;&gt;'Y' and y.dropdat is null and y.canceldat is null and (y.strbillingdat is not null or y.newbillingdat is not null) 
-	group by x.comq1) c on c.comq1 = a.comq1 
-left outer join (select comq1 , count(*) as linenum from rtLessorAvscmtyline where dropdat  is null and canceldat is null and hardwaredat is not null group by comq1) d on d.comq1 = a.comq1 
+left outer join (SELECT COMQ1, COUNT(B.CUSID) AS custnum FROM RTLessorAVSCust B WHERE ISNULL(DROPDAT,'')='' AND ISNULL(CANCELDAT, '') = '' group by comq1) c on c.comq1 = a.comq1 
+left outer join (select comq1 , count(*) as linenum from rtLessorAvscmtyline where ISNULL(DROPDAT,'')='' AND ISNULL(CANCELDAT, '') = '' group by comq1) d on d.comq1 = a.comq1 
 left outer join RTCtyTown e inner join RTArea f on f.areaid = e.areaid and f.areatype='3' on e.cutid = a.cutid and e.township = a.township 
 left outer join RTCode g on b.linerate = g.code and g.kind ='D3' 
 left outer join RTobj h on b.consignee = h.cusid 
 left outer join RTEmployee i inner join RTObj j on i.cusid = j.cusid on i.emply = b.salesid 
 left outer join RTCounty k on k.cutid = a.cutid 
-where	b.dropdat  is null and b.canceldat is null 
-group by f.areanc, isnull(isnull(h.shortnc, j.cusnc), ''), a.comq1, a.comn, a.comcnt, 
+where	b.dropdat  is null and b.canceldat is null --and a.comq1 = 368
+group by a.cutid, f.areanc, a.comq1, a.comn, a.comcnt, 
 	d.linenum, isnull(c.custnum,0), k.cutnc, a.township, a.raddr, e.areaid 
-order by e.areaid, 2, custnum desc </value>
+order by a.cutid, a.TOWNSHIP, a.COMQ1</value>
   </data>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
