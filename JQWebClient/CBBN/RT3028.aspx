@@ -47,13 +47,15 @@
             var cusnm = row.cusnc;
             var usr = getClientInfo('_usercode');
             var aa = "確認重新產生 [" + ss + cusnm + "] 續約資料??";
+            var ii = $('#cbmonth').val();
+            alert("繳款期限為續約到期日往後延["+ii+"]個月。");
             var r = confirm(aa);
             if (r == true) {
                 $.ajax({
                     type: "POST",
                     url: '../handler/jqDataHandle.ashx?RemoteName=sRT302.cmdRT3024', //連接的Server端，command
                     //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
-                    data: "mode=method&method=" + "smRT3024" + "&parameters=" + ss + "," + CUSTID + "," + usr,
+                    data: "mode=method&method=" + "smRT3024" + "&parameters=" + ss + "," + CUSTID + "," + usr + "," + ii,
                     cache: false,
                     async: false,
                     success: function (data) {
@@ -82,6 +84,13 @@
     <form id="form1" runat="server">
         <div>
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
+            <asp:Label ID="Label1" runat="server" Text="調整期限月數"></asp:Label>
+            <asp:DropDownList ID="cbmonth" runat="server">
+                <asp:ListItem Selected="True" Value="2">2個月</asp:ListItem>
+                <asp:ListItem Value="3">3個月</asp:ListItem>
+                <asp:ListItem Value="4">4個月</asp:ListItem>
+                <asp:ListItem Value="5">5個月</asp:ListItem>
+            </asp:DropDownList>
             <JQTools:JQDataGrid ID="dataGridMaster" data-options="pagination:true,view:commandview" RemoteName="sRT302.RT3028" runat="server" AutoApply="True"
                 DataMember="RT3028" Pagination="True" QueryTitle="查詢"
                 Title="每月續約帳單客戶明細查詢" AllowDelete="False" AllowInsert="False" AllowUpdate="False" QueryMode="Panel" AlwaysClose="True" AllowAdd="False" ViewCommandVisible="False" OnLoadSuccess="dgOnloadSuccess" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False">
@@ -160,7 +169,7 @@
             </JQTools:JQDataGrid>
         </div>
         <p>
-        <div id="plC" style="display:none"> <!-- style="display:none"-->
+            &nbsp;<div id="plC" style="display:none"> <!-- style="display:none"-->
             <JQTools:JQDataGrid ID="JQDataGrid2" runat="server" AllowAdd="False" AllowDelete="False" AllowUpdate="False" AlwaysClose="True" AutoApply="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DataMember="RT3021R" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" Pagination="False" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RemoteName="sRT302.RT3021R" RowNumbers="True" Title="JQDataGrid" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="True">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="上載批次" Editor="text" FieldName="BATCH" Frozen="False" IsNvarChar="False" MaxLength="8" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="16">

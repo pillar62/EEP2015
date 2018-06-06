@@ -89,6 +89,7 @@ namespace sRT302
                 cmdRT3024.InfoParameters[0].Value = sdata[0];
                 cmdRT3024.InfoParameters[1].Value = sdata[1];
                 cmdRT3024.InfoParameters[2].Value = sdata[2];
+                cmdRT3024.InfoParameters[3].Value = sdata[3];
                 /*取得統計的結果，並將結果返回*/
                 cmdRT3024.ExecuteDataSet();
                 return new object[] { 0, "續約資料處理成功" };
