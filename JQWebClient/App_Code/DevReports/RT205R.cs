@@ -754,7 +754,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             // xrLabel12
             // 
             this.xrLabel12.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.WtlApplyDat", "{0:yyyy/MM/dd}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.RCVNM", "{0:yyyy/MM/dd}")});
             this.xrLabel12.Font = new System.Drawing.Font("標楷體", 10F);
             this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(603.0435F, 300.5233F);
             this.xrLabel12.Name = "xrLabel12";
@@ -1444,7 +1444,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel75.StyleName = "FieldCaption";
             this.xrLabel75.StylePriority.UseFont = false;
             this.xrLabel75.StylePriority.UseForeColor = false;
-            this.xrLabel75.Text = "WTL申請日";
+            this.xrLabel75.Text = "受理人員";
             // 
             // xrLine11
             // 

@@ -11,6 +11,18 @@
         var LINEQ1 = Request.getQueryStringByName2("LINEQ1");
         var usr = getClientInfo('_usercode');
         
+        function Export(strXlsName, exportGrid) {
+            var f = $('<form action="/export.aspx" method="post" id="fm1"></form>');
+            var i = $('<input type="hidden" id="txtContent" name="txtContent" />');
+            var l = $('<input type="hidden" id="txtName" name="txtName" />');
+            i.val(ChangeToTable(exportGrid));
+            i.appendTo(f);
+            l.val(strXlsName);
+            l.appendTo(f);
+            f.appendTo(document.body).submit();
+            document.body.removeChild(f);
+        }
+
         var flag = true;
         var bIns = false;
         if (COMQ1 == "") {
@@ -21,6 +33,15 @@
             if (COMQ1 != "") {
                 return COMQ1;
             }
+        }
+
+        //轉excel
+        function btnCreateClick() {
+            //$('#dg').datagrid('toExcel', 'PI.xls');
+            alert("1");
+            Export('用戶明細.xls', $('#dataGridMaster'));
+            //exportGrid('#dg');
+            //exportGrid('#dataGridMaster');
         }
 
         function LinkRT1041(val) {
@@ -383,7 +404,7 @@
                     <JQTools:JQToolItem Icon="icon-edit" ItemType="easyui-linkbutton" OnClick="updateItem" Text="修改" Visible="True" />
                     <JQTools:JQToolItem Icon="icon-remove" ItemType="easyui-linkbutton" OnClick="deleteItem" Text="刪除" Visible="False"  />
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton" OnClick="viewItem" Text="瀏覽" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="匯出Excel" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="btnCreateClick" Text="匯出Excel" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="維修收款" Visible="True" OnClick="LinkRT1041" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="新戶入帳" Visible="True" OnClick="btn1Click" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="續約作業" Visible="True" OnClick="btn2Click" Icon="icon-edit" />
