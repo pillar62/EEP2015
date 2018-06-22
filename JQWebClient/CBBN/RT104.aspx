@@ -10,18 +10,96 @@
         var COMQ1 = Request.getQueryStringByName2("COMQ1");
         var LINEQ1 = Request.getQueryStringByName2("LINEQ1");
         var usr = getClientInfo('_usercode');
+
+        function ChangeToTable(printDatagrid) {
+            var tableString = '<table cellspacing="0" class="pb">';
+            var frozenColumns = printDatagrid.datagrid("options").frozenColumns; //  obtain frozenColumns object 
+            var columns = printDatagrid.datagrid("options").columns;  //  obtain columns object 
+            var nameList = new Array();
+
+            //  load title
+            if (typeof columns != 'undefined' && columns != '') {
+                $(columns).each(function (index) {
+                    tableString += '\n<tr>';
+                    if (typeof frozenColumns != 'undefined' && typeof frozenColumns[index] != 'undefined') {
+                        for (var i = 0; i < frozenColumns[index].length; ++i) {
+                            if (!frozenColumns[index][i].hidden) {
+                                tableString += '\n<th width="' + frozenColumns[index][i].width + '"';
+                                if (typeof frozenColumns[index][i].rowspan != 'undefined' && frozenColumns[index][i].rowspan > 1) {
+                                    tableString += ' rowspan="' + frozenColumns[index][i].rowspan + '"';
+                                }
+                                if (typeof frozenColumns[index][i].colspan != 'undefined' && frozenColumns[index][i].colspan > 1) {
+                                    tableString += ' colspan="' + frozenColumns[index][i].colspan + '"';
+                                }
+                                if (typeof frozenColumns[index][i].field != 'undefined' && frozenColumns[index][i].field != '') {
+                                    nameList.push(frozenColumns[index][i]);
+                                }
+                                tableString += '>' + frozenColumns[0][i].title + '</th>';
+                            }
+                        }
+                    }
+                    for (var i = 0; i < columns[index].length; ++i) {
+                        if (!columns[index][i].hidden) {
+                            tableString += '\n<th width="' + columns[index][i].width + '"';
+                            if (typeof columns[index][i].rowspan != 'undefined' && columns[index][i].rowspan > 1) {
+                                tableString += ' rowspan="' + columns[index][i].rowspan + '"';
+                            }
+                            if (typeof columns[index][i].colspan != 'undefined' && columns[index][i].colspan > 1) {
+                                tableString += ' colspan="' + columns[index][i].colspan + '"';
+                            }
+                            if (typeof columns[index][i].field != 'undefined' && columns[index][i].field != '') {
+                                nameList.push(columns[index][i]);
+                            }
+                            tableString += '>' + columns[index][i].title + '</th>';
+                        }
+                    }
+                    tableString += '\n</tr>';
+                });
+            }
+            //  Load content 
+            var rows = printDatagrid.datagrid("getRows"); //  This code is to get all the lines of the current page 
+            for (var i = 0; i < rows.length; ++i) {
+                tableString += '\n<tr>';
+                for (var j = 0; j < nameList.length; ++j) {
+                    var e = nameList[j].field.lastIndexOf('_0');
+
+                    tableString += '\n<td';
+                    if (nameList[j].align != 'undefined' && nameList[j].align != '') {
+                        tableString += ' style="text-align:' + nameList[j].align + ';"';
+                    }
+                    tableString += '>';
+                    if (e + 2 == nameList[j].field.length) {
+                        tableString += rows[i][nameList[j].field.substring(0, e)];
+                    }
+                    else
+                        tableString += rows[i][nameList[j].field];
+                    tableString += '</td>';
+                }
+                tableString += '\n</tr>';
+            }
+            tableString += '\n</table>';
+            return tableString;
+        }
+
         
         function Export(strXlsName, exportGrid) {
-            var f = $('<form action="/export.aspx" method="post" id="fm1"></form>');
+            var f = $('<form action="../export.aspx" method="post" id="fm1"></form>');
             var i = $('<input type="hidden" id="txtContent" name="txtContent" />');
             var l = $('<input type="hidden" id="txtName" name="txtName" />');
+            alert("1");
             i.val(ChangeToTable(exportGrid));
+            alert("1");
             i.appendTo(f);
+            alert("2");
             l.val(strXlsName);
+            alert("3");
             l.appendTo(f);
+            alert("4");
             f.appendTo(document.body).submit();
+            alert("5");
             document.body.removeChild(f);
         }
+        
 
         var flag = true;
         var bIns = false;
@@ -36,12 +114,18 @@
         }
 
         //轉excel
+        
         function btnCreateClick() {
             //$('#dg').datagrid('toExcel', 'PI.xls');
-            alert("1");
-            Export('用戶明細.xls', $('#dataGridMaster'));
+            Export('用戶明細', $('#dataGridView'));
             //exportGrid('#dg');
             //exportGrid('#dataGridMaster');
+        }
+
+        function btnExportExcelClick() {
+            var where = $('#dataGridView').datagrid('getWhere');
+            $('#dgEXCEL').datagrid('setWhere', where);
+            exportGrid('#dgEXCEL');
         }
 
         function LinkRT1041(val) {
@@ -404,7 +488,7 @@
                     <JQTools:JQToolItem Icon="icon-edit" ItemType="easyui-linkbutton" OnClick="updateItem" Text="修改" Visible="True" />
                     <JQTools:JQToolItem Icon="icon-remove" ItemType="easyui-linkbutton" OnClick="deleteItem" Text="刪除" Visible="False"  />
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton" OnClick="viewItem" Text="瀏覽" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="btnCreateClick" Text="匯出Excel" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="btnExportExcelClick" Text="匯出Excel" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="維修收款" Visible="True" OnClick="LinkRT1041" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="新戶入帳" Visible="True" OnClick="btn1Click" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="續約作業" Visible="True" OnClick="btn2Click" Icon="icon-edit" />
@@ -425,7 +509,7 @@
                     <JQTools:JQQueryColumn AndOr="and" Caption="社區名稱" Condition="%%" DataType="string" Editor="text" FieldName="B.COMN" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="用戶(公司)名稱" Condition="%%" DataType="string" Editor="text" FieldName="A.CUSNC" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="連絡手機" Condition="%%" DataType="string" Editor="text" FieldName="A.MOBILE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="裝機地址" Condition="%%" DataType="string" Editor="text" FieldName="A.RADDR2" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="裝機地址" Condition="%%" DataType="string" Editor="text" FieldName="C.ADDR" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="身份證號" Condition="%%" DataType="string" Editor="text" FieldName="A.SOCIALID" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="室內電話" Condition="%%" DataType="string" Editor="text" FieldName="A.CONTACTTEL" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="方案別" Condition="%" DataType="string" Editor="inforefval" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'P5'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="A.COMTYPE" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="140" />
@@ -434,7 +518,7 @@
             </JQTools:JQDataGrid>
 
             <JQTools:JQDialog ID="JQDialog1" runat="server" BindingObjectID="dataFormMaster" Title="用戶維護" Width="1000px">
-                <JQTools:JQDataForm ID="dataFormMaster" runat="server" DataMember="RTLessorAVSCust" HorizontalColumnsCount="3" RemoteName="sRT104.RTLessorAVSCust" AlwaysReadOnly="False" Closed="False" ContinueAdd="False" disapply="False" DivFramed="False" DuplicateCheck="False" HorizontalGap="0" IsAutoPageClose="False" IsAutoPause="False" IsAutoSubmit="False" IsNotifyOFF="False" IsRejectNotify="False" IsRejectON="False" IsShowFlowIcon="False" ShowApplyButton="True" ValidateStyle="Hint" VerticalGap="0" OnApplied="dataFormMaster_OnApplied" >
+                <JQTools:JQDataForm ID="dataFormMaster" runat="server" DataMember="RTLessorAVSCust" HorizontalColumnsCount="3" RemoteName="sRT104.RTLessorAVSCust" AlwaysReadOnly="False" Closed="False" ContinueAdd="False" disapply="False" DivFramed="False" DuplicateCheck="False" HorizontalGap="0" IsAutoPageClose="False" IsAutoPause="False" IsAutoSubmit="False" IsNotifyOFF="False" IsRejectNotify="False" IsRejectON="False" IsShowFlowIcon="False" ShowApplyButton="False" ValidateStyle="Hint" VerticalGap="0" OnApplied="dataFormMaster_OnApplied" >
 
                     <Columns>
                         <JQTools:JQFormColumn Alignment="left" Caption="社區序號" Editor="inforefval" EditorOptions="title:'社區查詢',panelWidth:350,panelHeight:200,remoteName:'sRT101.View_RTLessorAVSCmtyH',tableName:'View_RTLessorAVSCmtyH',columns:[],columnMatches:[{field:'COMTYPE',value:'COMTYPE'}],whereItems:[],valueField:'COMQ1',textField:'COMN',valueFieldCaption:'社區代號',textFieldCaption:'社區名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,onSelect:getMemberID,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="COMQ1" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="True" Width="200" Format="" />
@@ -771,6 +855,70 @@
                     <JQTools:JQDrillDownKeyFields FieldName="PRTNO" />
                 </KeyFields>
             </JQTools:JQDrillDown>
+            <div hidden="hidden">
+            <JQTools:JQDataGrid ID="dgEXCEL" data-options="pagination:true,view:commandview" RemoteName="sRT104.cmdRT104Excel" runat="server" AutoApply="True"
+                DataMember="cmdRT104Excel" Pagination="True" QueryTitle="查詢" EditDialogID="JQDialog1"
+                Title="用戶維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Panel" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="False" OnLoadSuccess="dgOnloadSuccess" OnSelect="MySelect">
+                <Columns>
+                    <JQTools:JQGridColumn Alignment="left" Caption="社區" Editor="text" FieldName="COMN" Format="" Visible="true" Width="120" EditorOptions=""/>
+                    <JQTools:JQGridColumn Alignment="right" Caption="主線序號" Editor="numberbox" FieldName="LINEQ1" Format="" Visible="False" Width="50" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="客戶代號" Editor="text" FieldName="CUSID" Format="" MaxLength="15" Visible="False" Width="80" EditorOptions="" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="客戶名" Editor="text" FieldName="CUSNC" Format="" MaxLength="30" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="縣市" Editor="text" FieldName="CUTNC" MaxLength="0" Visible="true" Width="80" EditorOptions="" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="鄉鎮市" Editor="text" FieldName="TOWNSHIP2" MaxLength="0" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="裝機地址" Editor="text" FieldName="RADDR2" MaxLength="60" Visible="true" Width="160" Format="" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="連絡手機" Editor="text" FieldName="MOBILE" Visible="True" Width="80" Format="" MaxLength="30" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="方案別" Editor="text" FieldName="CODENC" MaxLength="0" Visible="true" Width="80" EditorOptions="" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="資費" Editor="text" FieldName="CODENC1" Format="" MaxLength="2" Visible="true" Width="120" EditorOptions="" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="IP" Editor="text" FieldName="IP11" Format="" MaxLength="3" Visible="true" Width="100" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="用戶申請日" Editor="datebox" FieldName="APPLYDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="完工日" Editor="datebox" FieldName="FINISHDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="報竣日" Editor="datebox" FieldName="DOCKETDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="開始計費日" Editor="datebox" FieldName="STRBILLINGDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="最近續約計費日" Editor="datebox" FieldName="NEWBILLINGDAT" Format="yyyy/mm/dd" Visible="true" Width="80" MaxLength="0" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="到期日" Editor="datebox" FieldName="DUEDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="公關戶" Editor="text" FieldName="FREECODE" Format="" MaxLength="1" Visible="true" Width="60" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="退租日" Editor="datebox" FieldName="DROPDAT" Format="yyyy/mm/dd" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="80">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="CANCELDAT" Format="yyyy/mm/dd" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="80">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="客訴次數" Editor="text" FieldName="QT_CC" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="80">
+                    </JQTools:JQGridColumn>
+                </Columns>
+                <TooItems>
+                    <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton" OnClick="insertItem" Text="新增" />
+                    <JQTools:JQToolItem Icon="icon-edit" ItemType="easyui-linkbutton" OnClick="updateItem" Text="修改" Visible="True" />
+                    <JQTools:JQToolItem Icon="icon-remove" ItemType="easyui-linkbutton" OnClick="deleteItem" Text="刪除" Visible="False"  />
+                    <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton" OnClick="viewItem" Text="瀏覽" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="btnCreateClick" Text="匯出Excel" Visible="True" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="維修收款" Visible="True" OnClick="LinkRT1041" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="新戶入帳" Visible="True" OnClick="btn1Click" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="續約作業" Visible="True" OnClick="btn2Click" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="復機作業" Visible="True" OnClick="btn3Click" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="退租作業" Visible="True" OnClick="btn4Click" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="應收應付" Visible="True" OnClick="btn5Click" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="客服案件" Visible="True" OnClick="btn6Click" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="設備保管收據列印" Visible="False" OnClick="btn7Click" Icon="icon-print" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="用戶移動" Visible="False" OnClick="btn8Click" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="調整到期" Visible="True" OnClick="btn9Click" Icon="icon-edit "/>
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="設備查詢" Visible="False" OnClick="btn10Click" Icon="icon-view" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="作廢" Visible="True" OnClick="btn11Click" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="作廢反轉" Visible="True" OnClick="btn12Click" Icon="icon-undo" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" Text="歷史異動" Visible="False" OnClick="btn13Click" Icon="icon-view" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btnReloadClick" Text="資料更新" Visible="True" Icon="icon-reload" />
+                </TooItems>
+                <QueryColumns>
+                    <JQTools:JQQueryColumn AndOr="and" Caption="社區名稱" Condition="%%" DataType="string" Editor="text" FieldName="B.COMN" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="用戶(公司)名稱" Condition="%%" DataType="string" Editor="text" FieldName="A.CUSNC" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="連絡手機" Condition="%%" DataType="string" Editor="text" FieldName="A.MOBILE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="裝機地址" Condition="%%" DataType="string" Editor="text" FieldName="C.ADDR" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="身份證號" Condition="%%" DataType="string" Editor="text" FieldName="A.SOCIALID" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="室內電話" Condition="%%" DataType="string" Editor="text" FieldName="A.CONTACTTEL" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="方案別" Condition="%" DataType="string" Editor="inforefval" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'P5'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="A.COMTYPE" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="140" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="資費" Condition="=" DataType="string" Editor="inforefval" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'O9'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代碼',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="A.CASEKIND" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                </QueryColumns>
+            </JQTools:JQDataGrid>
+</div>
         </p>
     </form>
 </body>

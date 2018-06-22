@@ -37,7 +37,7 @@
             var ss = row.BATCH;
             $("#JQDataGrid1").datagrid('setWhere', "BATCH='" + ss + "'"); //維護單 
             var WhereString = "";
-            exportDevReport("#JQDataGrid1", "sRT302.cmdRT302R", "cmdRT302R", "~/CBBN/DevReportForm/RT302RF.aspx", WhereString);
+            exportDevReport("#JQDataGrid1", "sRT302.RT302R", "RT302", "~/CBBN/DevReportForm/RT302RF.aspx", WhereString);
         }
 
         function btn8Click(val) {

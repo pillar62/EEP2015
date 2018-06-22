@@ -276,6 +276,7 @@
             this.cmdRT104B = new Srvtools.InfoCommand(this.components);
             this.cmdRT104C = new Srvtools.InfoCommand(this.components);
             this.RT104D = new Srvtools.InfoCommand(this.components);
+            this.cmdRT104Excel = new Srvtools.InfoCommand(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCust)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustCont)).BeginInit();
@@ -292,6 +293,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT104B)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT104C)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT104D)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdRT104Excel)).BeginInit();
             // 
             // serviceManager1
             // 
@@ -2522,6 +2524,30 @@
             this.RT104D.SiteControl = false;
             this.RT104D.SiteFieldName = null;
             this.RT104D.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // cmdRT104Excel
+            // 
+            this.cmdRT104Excel.CacheConnection = false;
+            this.cmdRT104Excel.CommandText = resources.GetString("cmdRT104Excel.CommandText");
+            this.cmdRT104Excel.CommandTimeout = 30;
+            this.cmdRT104Excel.CommandType = System.Data.CommandType.Text;
+            this.cmdRT104Excel.DynamicTableName = false;
+            this.cmdRT104Excel.EEPAlias = null;
+            this.cmdRT104Excel.EncodingAfter = null;
+            this.cmdRT104Excel.EncodingBefore = "Windows-1252";
+            this.cmdRT104Excel.EncodingConvert = null;
+            this.cmdRT104Excel.InfoConnection = this.InfoConnection1;
+            this.cmdRT104Excel.MultiSetWhere = false;
+            this.cmdRT104Excel.Name = "cmdRT104Excel";
+            this.cmdRT104Excel.NotificationAutoEnlist = false;
+            this.cmdRT104Excel.SecExcept = null;
+            this.cmdRT104Excel.SecFieldName = null;
+            this.cmdRT104Excel.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.cmdRT104Excel.SelectPaging = false;
+            this.cmdRT104Excel.SelectTop = 0;
+            this.cmdRT104Excel.SiteControl = false;
+            this.cmdRT104Excel.SiteFieldName = null;
+            this.cmdRT104Excel.UpdatedRowSource = System.Data.UpdateRowSource.None;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCust)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustCont)).EndInit();
@@ -2538,6 +2564,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT104B)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT104C)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT104D)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdRT104Excel)).EndInit();
 
         }
 
@@ -2568,5 +2595,6 @@
         private Srvtools.InfoCommand cmdRT104B;
         private Srvtools.InfoCommand cmdRT104C;
         private Srvtools.InfoCommand RT104D;
+        private Srvtools.InfoCommand cmdRT104Excel;
     }
 }

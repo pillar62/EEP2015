@@ -89,12 +89,13 @@ public class RT302R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel4.AutoWidth = true;
             this.xrLabel4.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
             new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.rzone3")});
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(108.2329F, 10.00001F);
+            this.xrLabel4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(92.60788F, 10.00001F);
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel4.SizeF = new System.Drawing.SizeF(141.8162F, 18F);
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(141.8162F, 30.45832F);
+            this.xrLabel4.StylePriority.UseFont = false;
             this.xrLabel4.Text = "xrLabel4";
-            this.xrLabel4.Visible = false;
             // 
             // xrLabel5
             // 
