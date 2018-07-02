@@ -40,6 +40,7 @@
             var sMODE = "E";
             var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var PRTNO = row.PRTNO;
+            var ENTRYNO = row.ENTRYNO;            
             parent.addTab("用戶裝機派工單資料修改", "CBBN/RT104411.aspx?CUSID=" + CUSID + "&ENTRYNO = " + ENTRYNO + "&PRTNO=" + PRTNO + "&sMODE=" + sMODE);
         }
 

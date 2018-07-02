@@ -124,52 +124,52 @@
     <value>28, 31</value>
   </metadata>
   <metadata name="RTLessorAVSCustReturn.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>996, 470</value>
+    <value>364, 466</value>
   </metadata>
   <metadata name="ucRTLessorAVSCustReturn.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>996, 431</value>
+    <value>364, 427</value>
   </metadata>
   <metadata name="RTLessorAVSCustReturnHardware.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>990, 380</value>
+    <value>358, 376</value>
   </metadata>
   <metadata name="ucRTLessorAVSCustReturnHardware.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>990, 341</value>
+    <value>358, 337</value>
   </metadata>
   <metadata name="RTLessorAVSCustReturnSndWork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>987, 52</value>
+    <value>355, 48</value>
   </metadata>
   <metadata name="ucRTLessorAVSCustReturnSndWork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>976, 104</value>
+    <value>344, 100</value>
   </metadata>
   <metadata name="RTLessorCustRTNHardware.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>978, 287</value>
+    <value>346, 283</value>
   </metadata>
   <metadata name="ucRTLessorCustRTNHardware.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>978, 248</value>
+    <value>346, 244</value>
   </metadata>
   <metadata name="RTLessorAVSCustRTNHardwareDTL.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>964, 203</value>
+    <value>332, 199</value>
   </metadata>
   <metadata name="ucRTLessorAVSCustRTNHardwareDTL.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>961, 152</value>
+    <value>329, 148</value>
   </metadata>
   <metadata name="View_RTLessorAVSCustReturn.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>665, 205</value>
+    <value>779, 201</value>
   </metadata>
   <metadata name="View_RTLessorAVSCustReturnHardware.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>665, 166</value>
+    <value>779, 162</value>
   </metadata>
   <metadata name="View_RTLessorAVSCustReturnSndWork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>665, 127</value>
+    <value>779, 123</value>
   </metadata>
   <metadata name="View_RTLessorCustRTNHardware.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>665, 88</value>
+    <value>779, 84</value>
   </metadata>
   <metadata name="View_RTLessorAVSCustRTNHardwareDTL.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>659, 52</value>
+    <value>773, 48</value>
   </metadata>
   <metadata name="RT10441.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 212</value>
+    <value>28, 116</value>
   </metadata>
   <data name="RT10441.CommandText" xml:space="preserve">
     <value>SELECT A.CUSID, A.ENTRYNO, A.PRTNO,rtrim(convert(char(6),RTLessorAVScust.COMQ1)) +'-'+ rtrim(convert(char(6),RTLessorAVScust.lineQ1))  as comqline
@@ -181,13 +181,13 @@ A.DROPDAT ,SUM(CASE WHEN B.dropdat IS NULL AND B.QTY &gt; 0 THEN B.QTY ELSE 0 EN
 , SUM(CASE WHEN B.dropdat IS NULL AND RCVPRTNO &lt;&gt; '' AND B.rcvfinishdat IS NOT NULL THEN B.QTY ELSE 0 END) AS Column5, 
 SUM(CASE WHEN B.dropdat IS NULL AND B.QTY &gt; 0 THEN B.QTY ELSE 0 END) - 
 SUM(CASE WHEN B.dropdat IS NULL AND RCVPRTNO &lt;&gt; '' AND B.rcvfinishdat IS NOT NULL THEN B.QTY ELSE 0 END) Column6
-FROM RTLessorAVSCustContSNDWORK A LEFT OUTER JOIN RTObj RTObj_4 ON A.REALCONSIGNEE = RTObj_4.CUSID LEFT OUTER JOIN 
+FROM RTLessorAVSCustReturnSNDWORK A LEFT OUTER JOIN RTObj RTObj_4 ON A.REALCONSIGNEE = RTObj_4.CUSID LEFT OUTER JOIN 
 RTEmployee RTEmployee_2 INNER JOIN RTObj RTObj_3 ON RTEmployee_2.CUSID = RTObj_3.CUSID ON A.REALENGINEER = RTEmployee_2.EMPLY LEFT OUTER JOIN 
 RTObj RTObj_2 ON A.ASSIGNCONSIGNEE = RTObj_2.CUSID LEFT OUTER JOIN RTEmployee RTEmployee_1 INNER JOIN 
 RTObj RTObj_1 ON RTEmployee_1.CUSID = RTObj_1.CUSID ON A.ASSIGNENGINEER = RTEmployee_1.EMPLY LEFT OUTER JOIN 
 RTObj INNER JOIN RTEmployee ON RTObj.CUSID = RTEmployee.CUSID ON A.PRTUSR = RTEmployee.EMPLY left outer join RTLessorAVScust on 
 A.cusid=RTLessorAVScust.cusid LEFT OUTER JOIN 
-RTLessorAVSCustcontHARDWARE B ON A.cusid = B.CUSID AND 
+RTLessorAVSCustReturnHARDWARE B ON A.cusid = B.CUSID AND 
 A.PRTNO = B.PRTNO 
 where  1=1
 GROUP BY  A.CUSID, A.ENTRYNO, A.PRTNO, 
@@ -198,7 +198,7 @@ CASE WHEN RTOBJ_4.SHORTNC &lt;&gt; '' THEN RTOBJ_4.SHORTNC ELSE RTOBJ_3.CUSNC EN
 A.unclosedat, A.BONUSCLOSEYM, A.BONUSFINCHK, A.batchno, A.STOCKCLOSEYM, A.STOCKFINCHK, A.DROPDAT </value>
   </data>
   <metadata name="cmdRT10441.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 251</value>
+    <value>28, 155</value>
   </metadata>
   <metadata name="infoParameter1.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -225,7 +225,7 @@ A.unclosedat, A.BONUSCLOSEYM, A.BONUSFINCHK, A.batchno, A.STOCKCLOSEYM, A.STOCKF
     <value>False</value>
   </metadata>
   <metadata name="cmdRT10442.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 290</value>
+    <value>28, 194</value>
   </metadata>
   <metadata name="infoParameter9.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -240,7 +240,7 @@ A.unclosedat, A.BONUSCLOSEYM, A.BONUSFINCHK, A.batchno, A.STOCKCLOSEYM, A.STOCKF
     <value>False</value>
   </metadata>
   <metadata name="cmdRT10443.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 329</value>
+    <value>28, 233</value>
   </metadata>
   <metadata name="infoParameter13.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -258,7 +258,7 @@ A.unclosedat, A.BONUSCLOSEYM, A.BONUSFINCHK, A.batchno, A.STOCKCLOSEYM, A.STOCKF
     <value>False</value>
   </metadata>
   <metadata name="cmdRT10445.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>18, 406</value>
+    <value>29, 310</value>
   </metadata>
   <metadata name="infoParameter18.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -273,7 +273,7 @@ A.unclosedat, A.BONUSCLOSEYM, A.BONUSFINCHK, A.batchno, A.STOCKCLOSEYM, A.STOCKF
     <value>False</value>
   </metadata>
   <metadata name="cmdRT10444.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 368</value>
+    <value>28, 272</value>
   </metadata>
   <metadata name="infoParameter22.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -288,7 +288,7 @@ A.unclosedat, A.BONUSCLOSEYM, A.BONUSFINCHK, A.batchno, A.STOCKCLOSEYM, A.STOCKF
     <value>False</value>
   </metadata>
   <metadata name="cmdRT10446.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>20, 443</value>
+    <value>31, 347</value>
   </metadata>
   <metadata name="infoParameter26.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -300,7 +300,7 @@ A.unclosedat, A.BONUSCLOSEYM, A.BONUSFINCHK, A.batchno, A.STOCKCLOSEYM, A.STOCKF
     <value>False</value>
   </metadata>
   <metadata name="cmdRT10447.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>20, 482</value>
+    <value>31, 386</value>
   </metadata>
   <metadata name="infoParameter29.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -315,7 +315,7 @@ A.unclosedat, A.BONUSCLOSEYM, A.BONUSFINCHK, A.batchno, A.STOCKCLOSEYM, A.STOCKF
     <value>False</value>
   </metadata>
   <metadata name="cmdRT10448.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>21, 524</value>
+    <value>32, 428</value>
   </metadata>
   <metadata name="infoParameter33.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -327,7 +327,7 @@ A.unclosedat, A.BONUSCLOSEYM, A.BONUSFINCHK, A.batchno, A.STOCKCLOSEYM, A.STOCKF
     <value>False</value>
   </metadata>
   <metadata name="cmdRT10449.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>16, 561</value>
+    <value>27, 474</value>
   </metadata>
   <metadata name="infoParameter36.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -339,7 +339,7 @@ A.unclosedat, A.BONUSCLOSEYM, A.BONUSFINCHK, A.batchno, A.STOCKCLOSEYM, A.STOCKF
     <value>False</value>
   </metadata>
   <metadata name="RT10447.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>161, 418</value>
+    <value>172, 322</value>
   </metadata>
   <data name="RT10447.CommandText" xml:space="preserve">
     <value>SELECT   A.CUSID, A.ENTRYNO, A.SEQ, RTLESSORAVSCUST.CUSNC, 
@@ -367,7 +367,10 @@ RTLESSORAVSCUST ON  A.CUSID = RTLESSORAVSCUST.CUSID
 WHERE 1=1 ORDER BY SEQ </value>
   </data>
   <metadata name="cmd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>363, 425</value>
+    <value>172, 363</value>
+  </metadata>
+  <metadata name="autoNumber1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>603, 99</value>
   </metadata>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>

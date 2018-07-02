@@ -250,6 +250,7 @@
             this.cmdRT10449 = new Srvtools.InfoCommand(this.components);
             this.RT10447 = new Srvtools.InfoCommand(this.components);
             this.cmd = new Srvtools.InfoCommand(this.components);
+            this.autoNumber1 = new Srvtools.AutoNumber(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustReturn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustReturnHardware)).BeginInit();
@@ -2391,6 +2392,23 @@
             this.cmd.SiteControl = false;
             this.cmd.SiteFieldName = null;
             this.cmd.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // autoNumber1
+            // 
+            this.autoNumber1.Active = true;
+            this.autoNumber1.AutoNoID = "RT1044";
+            this.autoNumber1.Description = null;
+            this.autoNumber1.GetFixed = "getFix()";
+            this.autoNumber1.isNumFill = false;
+            this.autoNumber1.Name = "autoNumber1";
+            this.autoNumber1.Number = null;
+            this.autoNumber1.NumDig = 4;
+            this.autoNumber1.OldVersion = false;
+            this.autoNumber1.OverFlow = true;
+            this.autoNumber1.StartValue = 1;
+            this.autoNumber1.Step = 1;
+            this.autoNumber1.TargetColumn = "PRTNO";
+            this.autoNumber1.UpdateComp = this.ucRTLessorAVSCustReturnSndWork;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustReturn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustReturnHardware)).EndInit();
@@ -2448,5 +2466,6 @@
         private Srvtools.InfoCommand cmdRT10449;
         private Srvtools.InfoCommand RT10447;
         private Srvtools.InfoCommand cmd;
+        private Srvtools.AutoNumber autoNumber1;
     }
 }

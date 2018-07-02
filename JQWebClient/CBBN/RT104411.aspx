@@ -22,7 +22,8 @@
         function dgOnloadSuccess() {
             if (flag) {
                 //查詢出該用戶的資料
-                var sWhere = "CUSID='" + CUSID + "' AND PRTNO = '" + PRTNO + "'";
+                var sWhere = " PRTNO = '" + PRTNO + "'";
+ 
                 $("#dataGridView").datagrid('setWhere', sWhere);
                 $("#dataGridView").datagrid("selectRow", 0);
                 setTimeout(function () {
@@ -30,7 +31,9 @@
                         openForm('#JQDialog1', $('#dataGridView').datagrid('getSelected'), "inserted", 'Dialog');
                     }
                     else
-                    if (sMODE == 'E') {
+                        if (sMODE == 'E') {
+                            alert(sWhere);
+
                         openForm('#JQDialog1', $('#dataGridView').datagrid('getSelected'), "updated", 'Dialog');
                     }
                 }, 500);
@@ -52,9 +55,9 @@
         <div>
 
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
-            <JQTools:JQDataGrid ID="dataGridView" data-options="pagination:true,view:commandview" RemoteName="sRT1044.RTLessorAVSCustContSndwork" runat="server" AutoApply="True"
-                DataMember="RTLessorAVSCustContSndwork" Pagination="True" QueryTitle="Query" EditDialogID="JQDialog1"
-                Title="用戶復機裝機派工單資料維護" AllowAdd="False" AlwaysClose="True" OnDeleted="CloseTab" OnUpdated="CloseTab" OnLoadSuccess="dgOnloadSuccess" AllowDelete="True" AllowUpdate="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
+            <JQTools:JQDataGrid ID="dataGridView" data-options="pagination:true,view:commandview" RemoteName="sRT1044.RTLessorAVSCustReturnSndWork" runat="server" AutoApply="True"
+                DataMember="RTLessorAVSCustReturnSndWork" Pagination="True" QueryTitle="Query" EditDialogID="JQDialog1"
+                Title="用戶復機裝機派工單資料維護" AllowAdd="False" AlwaysClose="False" OnDeleted="CloseTab" OnUpdated="CloseTab" OnLoadSuccess="dgOnloadSuccess" AllowDelete="True" AllowUpdate="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="用戶" Editor="text" FieldName="CUSID" Format="" MaxLength="15" Visible="true" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="派工單號" Editor="text" FieldName="PRTNO" Format="" MaxLength="12" Visible="true" Width="120" />
@@ -101,7 +104,7 @@
             </JQTools:JQDataGrid>
 
             <JQTools:JQDialog ID="JQDialog1" runat="server" BindingObjectID="dataFormMaster" Title="用戶復機裝機派工單資料維護" EditMode="Dialog">
-                <JQTools:JQDataForm ID="dataFormMaster" runat="server" DataMember="RTLessorAVSCustContSndwork" HorizontalColumnsCount="2" RemoteName="sRT1044.RTLessorAVSCustContSndwork" OnApplied="CloseTab" OnCancel="CloseTab" IsAutoSubmit="False" AlwaysReadOnly="False" Closed="False" ContinueAdd="False" disapply="False" DivFramed="False" DuplicateCheck="False" HorizontalGap="0" IsAutoPageClose="False" IsAutoPause="False" IsNotifyOFF="False" IsRejectNotify="False" IsRejectON="False" IsShowFlowIcon="False" ShowApplyButton="False" ValidateStyle="Hint" VerticalGap="0" >
+                <JQTools:JQDataForm ID="dataFormMaster" runat="server" DataMember="RTLessorAVSCustReturnSndWork" HorizontalColumnsCount="2" RemoteName="sRT1044.RTLessorAVSCustReturnSndWork" OnApplied="CloseTab" OnCancel="CloseTab" IsAutoSubmit="False" AlwaysReadOnly="False" Closed="False" ContinueAdd="False" disapply="False" DivFramed="False" DuplicateCheck="False" HorizontalGap="0" IsAutoPageClose="False" IsAutoPause="False" IsNotifyOFF="False" IsRejectNotify="False" IsRejectON="False" IsShowFlowIcon="False" ShowApplyButton="False" ValidateStyle="Hint" VerticalGap="0" >
                     <Columns>
                         <JQTools:JQFormColumn Alignment="left" Caption="用戶" Editor="infocombobox" FieldName="CUSID" Format="" maxlength="15" Width="180" ReadOnly="True" EditorOptions="valueField:'CUSID',textField:'CUSNC',remoteName:'sRT104.View_RTLessorAVSCust',tableName:'View_RTLessorAVSCust',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
                         <JQTools:JQFormColumn Alignment="left" Caption="項次" Editor="numberbox" FieldName="ENTRYNO" maxlength="0" Width="80" ReadOnly="False" />

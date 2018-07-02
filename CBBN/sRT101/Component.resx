@@ -129,10 +129,13 @@
   <data name="RTLessorAVSCmtyH.CommandText" xml:space="preserve">
     <value>SELECT A.* 
 , (SELECT COUNT(B.LINEQ1) AS QT_LINE FROM RTLessorAVSCmtyLine B WHERE ISNULL(DROPDAT,'')='' AND ISNULL(CANCELDAT, '') = '' AND COMQ1=A.COMQ1) AS QT_LINE
-, B.QT_CUST
+, B.QT_CUST, C.CUTNC+A.TOWNSHIP+A.RADDR AS ADDR
 FROM RTLessorAVSCmtyH A
-LEFT JOIN  (SELECT COMQ1, COUNT(B.CUSID) AS QT_CUST FROM RTLessorAVSCust B WHERE ISNULL(DROPDAT,'')='' AND ISNULL(CANCELDAT, '') = '' 
-GROUP BY COMQ1) B ON B.COMQ1 = A.COMQ1</value>
+LEFT JOIN  (SELECT COMQ1, COUNT(B.CUSID) AS QT_CUST 
+FROM RTLessorAVSCust B WHERE ISNULL(DROPDAT,'')='' AND ISNULL(CANCELDAT, '') = '' 
+GROUP BY COMQ1) B ON B.COMQ1 = A.COMQ1
+LEFT JOIN RTCounty C ON C.CUTID=A.CUTID
+</value>
   </data>
   <metadata name="ucRTLessorAVSCmtyH.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>233, 204</value>
