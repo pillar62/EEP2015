@@ -78,6 +78,7 @@
                     //var rows = $.parseJSON(data);//將JSon轉會到Object類型提供給Grid顯示                    
                     //alert(data);
                     //window.open('../download/test1.txt', 'file download', config = 'height=500,width=500');
+                    alert(val);
                     window.location.href = "../handler/JqFileHandler2.ashx?File=" + val;
                     //myCSFunction();
                 }

@@ -1787,14 +1787,13 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             // xrLabel54
             // 
             this.xrLabel54.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.LINERATE")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.NM_LINERATE")});
             this.xrLabel54.Font = new System.Drawing.Font("標楷體", 10F);
             this.xrLabel54.LocationFloat = new DevExpress.Utils.PointFloat(603.0435F, 62.08337F);
             this.xrLabel54.Name = "xrLabel54";
             this.xrLabel54.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel54.SizeF = new System.Drawing.SizeF(120.04F, 14F);
             this.xrLabel54.StylePriority.UseFont = false;
-            this.xrLabel54.Text = "xrLabel54";
             // 
             // xrLabel55
             // 

@@ -5,6 +5,12 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using Srvtools;
+using System.Data;
+using System.IO;
+using Newtonsoft;
+using Newtonsoft.Json;
+using Srvtools;
+using System.Web;
 
 namespace sRT307
 {
@@ -20,6 +26,74 @@ namespace sRT307
             container.Add(this);
 
             InitializeComponent();
+        }
+
+        public object[] smRT3071(object[] objParam)
+        {
+            var ss = (string)objParam[0];
+            var sdata = ss.Split(',');
+            //開啟資料連接
+            IDbConnection conn = cmd.Connection;
+            conn.Open();
+            //設定輸入參數的值
+            try
+            {
+                //會員編號
+                string selectSql = @"SELECT KIND, CODE, CODENC FROM RTCode WHERE KIND='S4' AND CODE='1'";
+                cmd.CommandText = selectSql;
+                DataSet ds = cmd.ExecuteDataSet();
+                string P1 = ds.Tables[0].Rows[0]["CODENC"].ToString();
+                
+                //商店代號
+                selectSql = @"SELECT KIND, CODE, CODENC FROM RTCode WHERE KIND='S4' AND CODE='2'";
+                cmd.CommandText = selectSql;
+                ds = cmd.ExecuteDataSet();
+                string P2 = ds.Tables[0].Rows[0]["CODENC"].ToString();
+
+                selectSql = @"SELECT 'S,'+PRTNO+','+CASE 
+                            WHEN ISNULL(UNINO, '') = '' THEN 'B2C,,' + CUSNC + ',,' + raddr + ',,,,Y,'
+                            ELSE 'B2B,' + UNINO + ',' + invtitle + ',,' + raddr + ',,,,Y,' END + '1,5,' + Convert(varchar(50), Convert(FLOAT(50), ROUND(AMT / 1.05, 0)))
+                                        + ',' + Convert(varchar(50), Convert(FLOAT(50), AMT - ROUND(AMT / 1.05, 0))) + ',' + Convert(varchar(50), Convert(FLOAT(50), AMT))
+                                        + ',' + CASE WHEN CODENC = '信用卡' THEN RIGHT(CREDITCARDNO, 4) ELSE '' END AS S1,
+                            'I,' + PRTNO + ',' + amtnc + ',' + CAST(QTY AS VARCHAR(10)) + ',個,' + CAST(amt AS VARCHAR(10)) + ',' + CAST(amt AS VARCHAR(10)) AS S2
+                            FROM V_RT3071 WHERE AMTNC <> '保證金' and " + sdata[0];
+                cmd.CommandText = selectSql;
+                ds = cmd.ExecuteDataSet();
+                string js = string.Empty;
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    DateTime dt = DateTime.Now;
+                    var sfile = P2 + "_" + string.Format("{0:yyyyMMdd}", dt)+".txt";
+
+                    FileStream fileStream = new FileStream(@"c:\" + sfile, FileMode.Create);
+
+                    fileStream.Close();   //切記開了要關,不然會被佔用而無法修改喔!!!
+
+                    using (StreamWriter sw = new StreamWriter(@"..\JQWebClient\download\" + sfile))
+                    {
+                        js = "H,INVO,"+P1+","+P2+"," + string.Format("{0:yyyyMMdd}", DateTime.Now.Date) + "\r\n";
+                        for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                        {
+                            js = js + ds.Tables[0].Rows[i]["S1"].ToString() + "\r\n";
+                            if (i+1== ds.Tables[0].Rows.Count)
+                                js = js + ds.Tables[0].Rows[i]["S2"].ToString();
+                            else
+                                js = js + ds.Tables[0].Rows[i]["S2"].ToString() + "\r\n";
+                        }
+                        // 欲寫入的文字資料 ~
+                        sw.Write(js);
+                    }
+                    return new object[] { 0, sfile };
+                }
+                else
+                {
+                    return new object[] { 0, "N" };
+                }
+            }
+            catch (Exception ex)
+            {
+                return new object[] { 0, "無法執行電子發票轉出,錯誤訊息：" + ex };
+            }
         }
     }
 }

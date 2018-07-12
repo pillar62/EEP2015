@@ -148,6 +148,16 @@ where 1=1</value>
   <metadata name="cmdRT2054R.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>316, 145</value>
   </metadata>
+  <data name="cmdRT2054R.CommandText" xml:space="preserve">
+    <value>SELECT A.*, B.NM_LINERATE FROM V_RT205R A
+LEFT JOIN (SELECT A.LINERATE, A.COMQ1, B.CODENC AS NM_LINERATE
+FROM (
+SELECT MAX(LINERATE) AS LINERATE, COMQ1
+FROM RTLessorAVSCmtyLine A
+GROUP BY COMQ1) A
+LEFT JOIN RTCODE B ON B.KIND='D3' AND B.CODE=A.LINERATE
+) B ON B.COMQ1=A.COMQ1</value>
+  </data>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>

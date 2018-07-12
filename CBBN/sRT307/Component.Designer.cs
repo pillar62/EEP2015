@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Srvtools.Service service1 = new Srvtools.Service();
             Srvtools.KeyItem keyItem1 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem2 = new Srvtools.KeyItem();
             Srvtools.FieldAttr fieldAttr1 = new Srvtools.FieldAttr();
@@ -77,10 +78,19 @@
             this.ucRTLessorCustSndwork = new Srvtools.UpdateComponent(this.components);
             this.View_RTLessorCustSndwork = new Srvtools.InfoCommand(this.components);
             this.RT307 = new Srvtools.InfoCommand(this.components);
+            this.cmd = new Srvtools.InfoCommand(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorCustSndwork)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_RTLessorCustSndwork)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT307)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmd)).BeginInit();
+            // 
+            // serviceManager1
+            // 
+            service1.DelegateName = "smRT3071";
+            service1.NonLogin = false;
+            service1.ServiceName = "smRT3071";
+            this.serviceManager1.ServiceCollection.Add(service1);
             // 
             // InfoConnection1
             // 
@@ -515,10 +525,35 @@
             this.RT307.SiteControl = false;
             this.RT307.SiteFieldName = null;
             this.RT307.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // cmd
+            // 
+            this.cmd.CacheConnection = false;
+            this.cmd.CommandText = "";
+            this.cmd.CommandTimeout = 30;
+            this.cmd.CommandType = System.Data.CommandType.Text;
+            this.cmd.DynamicTableName = false;
+            this.cmd.EEPAlias = null;
+            this.cmd.EncodingAfter = null;
+            this.cmd.EncodingBefore = "Windows-1252";
+            this.cmd.EncodingConvert = null;
+            this.cmd.InfoConnection = this.InfoConnection1;
+            this.cmd.MultiSetWhere = false;
+            this.cmd.Name = "cmd";
+            this.cmd.NotificationAutoEnlist = false;
+            this.cmd.SecExcept = null;
+            this.cmd.SecFieldName = null;
+            this.cmd.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.cmd.SelectPaging = false;
+            this.cmd.SelectTop = 0;
+            this.cmd.SiteControl = false;
+            this.cmd.SiteFieldName = null;
+            this.cmd.UpdatedRowSource = System.Data.UpdateRowSource.None;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorCustSndwork)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_RTLessorCustSndwork)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT307)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmd)).EndInit();
 
         }
 
@@ -530,5 +565,6 @@
         private Srvtools.UpdateComponent ucRTLessorCustSndwork;
         private Srvtools.InfoCommand View_RTLessorCustSndwork;
         private Srvtools.InfoCommand RT307;
+        private Srvtools.InfoCommand cmd;
     }
 }

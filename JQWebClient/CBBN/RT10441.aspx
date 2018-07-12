@@ -55,67 +55,20 @@
         //完工結案
         function btn3Click() {
             var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            try
-            {
-                var row1 = $('#JQDataGrid1').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            }
-            catch (err)
-            { alert(err); }
-
+            
             var PRTNO = row.PRTNO;
             var ENTRYNO = row.ENTRYNO;
-            if ((row1.DROPDAT != "" && row1.DROPDAT != null) || (row1.CANCELDAT != "" && row1.CANCELDAT != null))
-            {
-                alert("客戶已退租或作廢");
-                return false;
-            }
-
-            if (row1.RCVMONEY == 0)
-            {
-                alert("應收金額=0 (無法轉應收帳款)");
-                return false;
-            }
-            
-            if (row1.STRBILLINGDAT == "") {
-                alert("完工結案時,開始計費日不可空白");
-                return false;
-            }
-
-            if (row1.BATCHNO != "") {
-                alert("己產生應收帳款");
-                return false;
-            }
-
-            if (row1.FINISHDAT != "") {
-                alert("此客戶已完工結案，不可重複執行");
-                return false;
-            }
-
-            if (row.DROPDAT != "") {
-                alert("當已作廢時，不可執行完工結案或未完工結案");
-                return false;
-            }
-
-            if (row.CLOSEDAT != "" || row.UNCLOSEDAT != "") {
-                alert("此裝機派工單已完工結案或未完工結案，不可重複執行完工結案或未完工結案");
-                return false;
-            }
-
-            if (row.REALENGINEER == "" && row.REALCONSIGNEE == "") {
-                alert("此裝機派工單完工時，必須先輸入實際裝機人員或實際裝機經銷商");
-                return false;
-            }
 
             $.ajax({
                 type: "POST",
                 url: '../handler/jqDataHandle.ashx?RemoteName=sRT1044.cmdRT10441', //連接的Server端，command
                 //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
-                data: "mode=method&method=" + "smRT10441" + "&parameters=" + CUSID  + "," + ENTRYNO + "," + PRTNO + "," + usr + "," + row1.PERIOD + "," + row1.RCVMONEY + ","
-                    + row1.PAYTYPE + "," + row1.CREDITCARDNO,
+                data: "mode=method&method=" + "smRT10441" + "&parameters=" + CUSID  + "," + ENTRYNO + "," + PRTNO + "," + usr,
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("已完工結案，請點選重新整理!");
+                    alert(data);
+                    $('#dataGridMaster').datagrid('reload');
                 }
             });
         }
@@ -123,28 +76,8 @@
         //未完工結案
         function btn4Click() {
             var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            try {
-                var row1 = $('#JQDataGrid1').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            }
-            catch (err)
-            { alert(err); }
-
             var PRTNO = row.PRTNO;
             var ENTRYNO = row.ENTRYNO;
-            if ((row1.DROPDAT != "" && row1.DROPDAT != null) || (row1.CANCELDAT != "" && row1.CANCELDAT != null)) {
-                alert("客戶已退租或作廢");
-                return false;
-            }
-
-            if ((row.CLOSEDAT != "" && row.CLOSEDAT != null) || (row.UNCLOSEDAT != "" && row.UNCLOSEDAT != null)) {
-                alert("此裝機派工單已完工結案或未完工結案，不可重複執行完工結案或未完工結案");
-                return false;
-            }
-
-            if (row.BONUSCLOSEYM != "" || row.STOCKCLOSEYM != "") {
-                alert("此裝機派工單已月結，不可異動");
-                return false;
-            }
 
             $.ajax({
                 type: "POST",
@@ -154,7 +87,8 @@
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("未完工結案完成，請點選重新整理");
+                    alert(data);
+                    $('#dataGridMaster').datagrid('reload');
                 }
             });
         }
@@ -162,29 +96,8 @@
         //結案返轉
         function btn5Click() {
             var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            try {
-                var row1 = $('#JQDataGrid1').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            }
-            catch (err)
-            { alert(err); }
-
             var PRTNO = row.PRTNO;
             var ENTRYNO = row.ENTRYNO;
-
-            if ((row1.DROPDAT != "" && row1.DROPDAT != null) || (row1.CANCELDAT != "" && row1.CANCELDAT != null)) {
-                alert("客戶已退租或作廢");
-                return false;
-            }
-
-            if ((row.BONUSCLOSEYM != "" && row.BONUSCLOSEYM != null) || (row.STOCKCLOSEYM != "" && row.STOCKCLOSEYM != null)) {
-                alert("此裝機派工單已月結，不可異動");
-                return false;
-            }
-
-            if (row.closedat == "" && row.unclosedat == "" && row.closedat == null && row.unclosedat == null) {
-                alert("此裝機派工單尚未結案，不可執行結案返轉作業");
-                return false;
-            }
 
             $.ajax({
                 type: "POST",
@@ -194,7 +107,8 @@
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("結案返轉完成，請點選重新整理!");
+                    alert(data);
+                    $('#dataGridMaster').datagrid('reload');
                 }
             });
         }
@@ -202,29 +116,9 @@
         //作廢
         function btn6Click() {
             var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            try {
-                var row1 = $('#JQDataGrid1').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            }
-            catch (err)
-            { alert(err); }
-
             var PRTNO = row.PRTNO;
             var ENTRYNO = row.ENTRYNO;
-            if (row.DROPDAT != "" && row.DROPDAT != null) {
-                alert("此派工單已作廢，不可重覆執行作廢作業");
-                return false;
-            }
-
-            if ((row.BONUSCLOSEYM != "" && row.BONUSCLOSEYM != null) || (row.STOCKCLOSEYM != "" && row.STOCKCLOSEYM != null)) {
-                alert("此裝機派工單已月結，不可異動");
-                return false;
-            }
-
-            if ((row.closedat != "" && row.closedat != null)|| (row.unclosedat != "" && row.unclosedat != null)) {
-                alert("此派工單已完工結案，不可作廢(欲作廢請先清除裝機完工日)");
-                return false;
-            }
-
+            
             $.ajax({
                 type: "POST",
                 url: '../handler/jqDataHandle.ashx?RemoteName=sRT1044.cmdRT10444', //連接的Server端，command
@@ -233,7 +127,8 @@
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("資料已作廢，請點選重新整理!");
+                    alert(data);
+                    $('#dataGridMaster').datagrid('reload');
                 }
             });
         }
@@ -241,24 +136,8 @@
         //作廢返轉
         function btn7Click() {
             var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            try {
-                var row1 = $('#JQDataGrid1').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            }
-            catch (err)
-            { alert(err); }
-
             var PRTNO = row.PRTNO;
-            var ENTRYNO = row.ENTRYNO;
-
-            if (row.DROPDAT == "" || row.DROPDAT == null) {
-                alert("此派工單尚未作廢，不可重覆執行作廢返轉作業");
-                return false;
-            }
-
-            if (row.BONUSCLOSEYM != "" && row.BONUSCLOSEYM != null) {
-                alert("當獎金計算年月已存在資料時表示該筆資料完工日期當月之獎金已結算,不可再作廢返轉");
-                return false;
-            }
+            var ENTRYNO = row.ENTRYNO;            
             
             $.ajax({
                 type: "POST",
@@ -268,7 +147,8 @@
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("資料已作廢返轉，請點選重新整理!");
+                    alert(data);
+                    $('#dataGridMaster').datagrid('reload');
                 }
             });
         }
@@ -329,10 +209,10 @@
                     <JQTools:JQToolItem Enabled="True" Icon="icon-edit" ItemType="easyui-linkbutton" OnClick="btnEdit" Text="修改" Visible="True" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn1Click" Text="物品領用單" Visible="True" Icon="icon-view" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn2Click" Text="列印" Visible="True" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn3Click" Text="完工結案" Visible="True" Icon="icon-view" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn4Click" Text="未完工結案" Visible="True" Icon="icon-view" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn3Click" Text="完工結案" Visible="True" Icon="icon-edit" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn4Click" Text="未完工結案" Visible="True" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn5Click" Text="結案返轉" Visible="True" Icon="icon-undo" />
-                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn6Click" Text="作廢" Visible="True" Icon="icon-view" />
+                    <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn6Click" Text="作廢" Visible="True" Icon="icon-edit" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn7Click" Text="作廢返轉" Visible="True" Icon="icon-redo" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn8Click" Text="設備明細" Visible="True" Icon="icon-view" />
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btn9Click" Text="歷史異動" Visible="True" Icon="icon-view" />

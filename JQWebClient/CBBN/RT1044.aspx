@@ -131,7 +131,7 @@
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("用戶復機轉應收帳款成功!" + data);
+                    alert(data);
                     $('#dataGridView').datagrid('reload');
                 }
             });
@@ -169,29 +169,8 @@
         //作廢
         function btn5Click() {
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            try {
-                var row1 = $('#JQDataGrid1').datagrid('getSelected');//取得當前主檔中選中的那個Data
-            }
-            catch (err)
-            { alert(err); }
-
             var PRTNO = row.PRTNO;
             var ENTRYNO = row.ENTRYNO;
-
-            if (row.DROPDAT != "" && row.DROPDAT != null) {
-                alert("此派工單已作廢，不可重覆執行作廢作業");
-                return false;
-            }
-
-            if ((row.BONUSCLOSEYM != "" && row.BONUSCLOSEYM != null) || (row.STOCKCLOSEYM != "" && row.STOCKCLOSEYM != null)) {
-                alert("此裝機派工單已月結，不可異動");
-                return false;
-            }
-
-            if ((row.closedat != "" && row.closedat != null) || (row.unclosedat != "" && row.unclosedat != null)) {
-                alert("此派工單已完工結案，不可作廢(欲作廢請先清除裝機完工日)");
-                return false;
-            }
 
             $.ajax({
                 type: "POST",
@@ -201,7 +180,8 @@
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("資料已作廢，請點選重新整理!");
+                    alert(data);
+                    $('#dataGridView').datagrid('reload');
                 }
             });
         }
@@ -209,14 +189,8 @@
         //作廢返轉
         function btn6Click() {
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
-
             var PRTNO = row.PRTNO;
             var ENTRYNO = row.ENTRYNO;
-
-            if (row.CANCELDAT == "" || row.CANCELDAT == null) {
-                alert("此派工單尚未作廢，不可重覆執行作廢返轉作業");
-                return false;
-            }
 
             $.ajax({
                 type: "POST",
@@ -226,7 +200,8 @@
                 cache: false,
                 async: false,
                 success: function (data) {
-                    alert("資料已作廢返轉，請點選重新整理!");
+                    alert(data);
+                    $('#dataGridView').datagrid('reload');
                 }
             });
         }
