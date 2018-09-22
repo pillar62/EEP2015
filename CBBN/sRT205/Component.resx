@@ -121,19 +121,19 @@
     <value>17, 56</value>
   </metadata>
   <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 485</value>
+    <value>169, 54</value>
   </metadata>
   <metadata name="RTFaqM.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 524</value>
+    <value>25, 137</value>
   </metadata>
   <metadata name="ucRTFaqM.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 563</value>
+    <value>22, 193</value>
   </metadata>
   <metadata name="View_RTFaqM.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 368</value>
+    <value>17, 95</value>
   </metadata>
   <metadata name="RT205.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 407</value>
+    <value>393, 101</value>
   </metadata>
   <data name="RT205.CommandText" xml:space="preserve">
     <value>select a.caseno, a.comtype,isnull(case when p.consignee ='12973008' then '原遠端戶' else n.groupnc end, '') AS ANGENCY, isnull(n.leader, '') as leader
@@ -152,7 +152,7 @@ left outer join RTEmployee e on e.emply = a.rcvusr
 left outer join RTFaqAdd g on g.caseno = a.caseno and g.canceldat is null 
 left outer join RTCode j on a.iobound = j.code and j.kind ='P8' 
 left outer join RTSndWork h inner join (select max(workno) as maxworkno, linkno from RTSndWork where canceldat is null 			
-and (worktype ='01' or worktype ='09') group by linkno) m on m.linkno = h.linkno and m.maxworkno = h.workno on h.linkno = a.caseno  
+ group by linkno) m on m.linkno = h.linkno and m.maxworkno = h.workno on h.linkno = a.caseno  
 left outer join RTEmployee i on i.emply = h.assigneng 
 left outer join RTObj k on k.cusid = h.assigncons 
 left outer join (select linkno, count(*) as finishnum from RTSndwork 
@@ -166,25 +166,25 @@ case when l.finishnum &gt;0 then '' else 'Y' end , a.comq1, a.lineq1, c.cusid, a
 , A.CANCELDAT order by left(convert(varchar(25), a.rcvdat, 20), 16) desc </value>
   </data>
   <metadata name="RTFaqAdd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
+    <value>511, 62</value>
   </metadata>
   <metadata name="ucRTFaqAdd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 290</value>
+    <value>508, 114</value>
   </metadata>
   <metadata name="autoNumber1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 446</value>
+    <value>10, 258</value>
   </metadata>
   <metadata name="V_RT205.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 134</value>
+    <value>198, 100</value>
   </metadata>
   <metadata name="V_RT2051.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 212</value>
+    <value>198, 141</value>
   </metadata>
   <metadata name="V_RT2052.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 251</value>
+    <value>194, 187</value>
   </metadata>
   <metadata name="cmd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 173</value>
+    <value>387, 157</value>
   </metadata>
   <metadata name="R_2051.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 329</value>

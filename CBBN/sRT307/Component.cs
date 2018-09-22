@@ -54,7 +54,9 @@ namespace sRT307
                             WHEN ISNULL(UNINO, '') = '' THEN 'B2C,,' + CUSNC + ',,' + raddr + ',,,,Y,'
                             ELSE 'B2B,' + UNINO + ',' + invtitle + ',,' + raddr + ',,,,Y,' END + '1,5,' + Convert(varchar(50), Convert(FLOAT(50), ROUND(AMT / 1.05, 0)))
                                         + ',' + Convert(varchar(50), Convert(FLOAT(50), AMT - ROUND(AMT / 1.05, 0))) + ',' + Convert(varchar(50), Convert(FLOAT(50), AMT))
-                                        + ',' + CASE WHEN CODENC = '信用卡' THEN RIGHT(CREDITCARDNO, 4) ELSE '' END AS S1,
+                                        + ',' + CASE WHEN CODENC = '信用卡' THEN '末四碼：'+RIGHT(CREDITCARDNO, 4) + '　' ELSE '' END 
+                                        + CASE WHEN ISNULL(STRBILLINGDAT, '') <> '' AND ISNULL(DUEDAT, '') <> '' 
+                                          THEN CONVERT(VARCHAR(10), ISNULL(STRBILLINGDAT, ''), 111) + '~' + CONVERT(VARCHAR(10), ISNULL(DUEDAT, ''), 111) ELSE '' END AS S1,
                             'I,' + PRTNO + ',' + amtnc + ',' + CAST(QTY AS VARCHAR(10)) + ',個,' + CAST(amt AS VARCHAR(10)) + ',' + CAST(amt AS VARCHAR(10)) AS S2
                             FROM V_RT3071 WHERE AMTNC <> '保證金' and " + sdata[0];
                 cmd.CommandText = selectSql;

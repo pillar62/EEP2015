@@ -248,6 +248,7 @@ order by a.comq1,a.lineq1,a.cusnc </value>
   </metadata>
   <data name="RT3028.CommandText" xml:space="preserve">
     <value>SELECT	a.noticeid, a.batch, case c.consignee when '' then '直銷' else '經銷' end as consignee, isnull(k.shortnc, m.cusnc) as shortnc, convert(varchar(5), a.comq1) +'-'+ convert(varchar(2), a.lineq1) as comlineq1, d.comn, b.cusnc, a.duedat, b.contacttel + case when b.contacttel&lt;&gt;'' and b.mobile&lt;&gt;'' then '&lt;br&gt;' else '' end + b.mobile as tel, isnull(e.cutnc,'')+b.township3+b.raddr3 as raddr, b.dropdat, b.strbillingdat, b.newbillingdat, h.codenc, g.codenc, j.codenc , A.CUSID
+, (select top 1 '1'+substring(CSBARCOD1,1,6) from RTLessorAVSCustBillingBarcode where NOTICEID=a.NOTICEID) as dd
 FROM	RTLessorAVSCustBillingPrtSub a 
 inner join RTLessorAVSCust b on a.comq1 = b.comq1 and a.lineq1 = b.lineq1 and a.cusid = b.cusid 
 inner join RTLessorAVSCmtyLine c on c.comq1 = b.comq1 and c.lineq1 = b.lineq1 
@@ -261,7 +262,7 @@ left outer join rtcode j on j.code = i.paytype and j.kind ='M9'
 left outer join RTObj k on k.cusid = c.consignee 
 left outer join RTEmployee l inner join RTObj m on m.cusid = l.cusid on l.emply = c.salesid
 WHERE b.freecode &lt;&gt;'Y' 
-ORDER BY b.duedat desc</value>
+ORDER BY a.batch desc, b.duedat desc</value>
   </data>
   <metadata name="RT302R.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 251</value>

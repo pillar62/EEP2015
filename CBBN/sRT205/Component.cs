@@ -42,7 +42,7 @@ namespace sRT205
                 string selectSql = "select * FROM RTFaqM WHERE caseno='" + sdata[0] + "'";
                 cmd.CommandText = selectSql;
                 DataSet ds = cmd.ExecuteDataSet();
-                selectSql = "select * FROM RTSndWork WHERE linkno='" + sdata[0] + "' and (worktype ='01' or worktype ='09') and canceldat is null and finishdat is null ";
+                selectSql = "select * FROM RTSndWork WHERE linkno='" + sdata[0] + "' and canceldat is null and finishdat is null ";
                 cmd.CommandText = selectSql;
                 DataSet yy = cmd.ExecuteDataSet();
 

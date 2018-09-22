@@ -43,11 +43,34 @@
         function btn4Click(val) {
             var row = $('#dataGridMaster').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var ss = row.batch;
+            var ddd = row.dd;
             var CUSTID = row.CUSID;
             var cusnm = row.cusnc;
             var usr = getClientInfo('_usercode');
             var aa = "確認重新產生 [" + ss + cusnm + "] 續約資料??";
             var ii = $('#cbmonth').val();
+            var dd = new Date();
+            var syy = dd.getYear()-11+"";
+            var smm = (dd.getMonth() + 1)+"";
+            var sdd = dd.getDate()+"";
+            var symd = "";
+            
+            if (smm.length == 1) { smm = "0" + smm; }
+            if (sdd.length == 1) { sdd = "0" + sdd; }
+            symd = syy + "" + smm + "" + sdd;
+            alert("繳款期限：["+ddd+"] 今天日期：["+symd+"]");
+            
+            
+            if (parseFloat(ddd) > parseFloat(symd))
+            {
+                var r = confirm("尚未過期，是否繼續重新產生??"); 
+                if (r == false) { return false; }
+            }
+            else
+            {
+                //alert("已經過期，請重新產生!!");
+            }
+
             alert("繳款期限為續約到期日往後延["+ii+"]個月。");
             var r = confirm(aa);
             if (r == true) {
@@ -86,6 +109,7 @@
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
             <asp:Label ID="Label1" runat="server" Text="調整期限月數"></asp:Label>
             <asp:DropDownList ID="cbmonth" runat="server">
+                <asp:ListItem Value="0">不調整</asp:ListItem>
                 <asp:ListItem Selected="True" Value="2">2個月</asp:ListItem>
                 <asp:ListItem Value="3">3個月</asp:ListItem>
                 <asp:ListItem Value="4">4個月</asp:ListItem>
@@ -112,6 +136,8 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="週期" Editor="text" FieldName="codenc1" Format="" MaxLength="0" Width="60" />
                     <JQTools:JQGridColumn Alignment="left" Caption="已收" Editor="text" FieldName="codenc2" Format="" MaxLength="0" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="客戶編號G+YYMMDD001(YY西元後二位)" Editor="text" FieldName="CUSID" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80">
+                    </JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="dd" Editor="text" FieldName="dd" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80">
                     </JQTools:JQGridColumn>
                 </Columns>
                 <TooItems>
