@@ -113,7 +113,8 @@
             // RTLessorAVSCustAdjDay
             // 
             this.RTLessorAVSCustAdjDay.CacheConnection = false;
-            this.RTLessorAVSCustAdjDay.CommandText = "SELECT dbo.[RTLessorAVSCustAdjDay].* FROM dbo.[RTLessorAVSCustAdjDay]";
+            this.RTLessorAVSCustAdjDay.CommandText = "SELECT dbo.[RTLessorAVSCustAdjDay].* FROM dbo.[RTLessorAVSCustAdjDay]\r\nORDER BY A" +
+    "DJCLOSEDAT DESC";
             this.RTLessorAVSCustAdjDay.CommandTimeout = 30;
             this.RTLessorAVSCustAdjDay.CommandType = System.Data.CommandType.Text;
             this.RTLessorAVSCustAdjDay.DynamicTableName = false;
