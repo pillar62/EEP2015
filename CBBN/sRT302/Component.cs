@@ -162,7 +162,7 @@ namespace sRT302
             int counter = 0;
             string line, sSRC, sBATCHNO;
             string sresult = "";
-            DataSet ds, ds1, ds2;
+            DataSet ds, ds1, ds2, ds3;
             string sDT = string.Format("{0:yyMMdd}", DateTime.Now.Date);
             //開啟資料連接
             IDbConnection conn = cmd.Connection;
@@ -230,22 +230,99 @@ namespace sRT302
                             cmd.CommandText = ssql;
                             ds2 = cmd.ExecuteDataSet();
 
-                            //新增帳款明細
-                            ssql = " INSERT INTO RTLessorAVSCustARDTL "
-                                 + " (CUSID, BATCHNO, SEQ, SYY, SMM, TYY, TMM, ITEMNC, PORM, AMT, REALAMT, CDAT, L14, L23)  "
-                                 + " select b.CUSID,'" + sBATCHNO + "' AS BATCHNO, 1 AS SEQ "
-                                 + " , DATEPART (YYYY, E.NEWBILLINGDAT) AS SYY, DATEPART(MM, E.NEWBILLINGDAT) AS SMM "
-                                 + " , DATEPART(YYYY, E.DUEDAT) AS TYY, DATEPART(MM, E.DUEDAT) AS TMM "
-                                 + " , B.BATCH + '　網路服務費(續約)' AS ITEMNC, '+' AS FORM, C.AMT, 0 AS REALAMT "
-                                 + " , GETDATE() AS CDAT, '4642' AS L14, '016' AS L23 "
-                                 + " from RTLessorAVSCustBillingBarcode A "
-                                 + " LEFT JOIN RTLessorAVSCustBillingPrtSub B ON B.NOTICEID = A.NOTICEID "
-                                 + " LEFT JOIN RTLessorAVSCust E ON E.CUSID = B.CUSID "
-                                 + " LEFT JOIN rtcode d on d.kind = 'L5' and d.PARM1 = E.comtype "
-                                 + " LEFT JOIN RTBillCharge c on c.CASETYPE = d.CODE AND c.CASEKIND = A.CASEKIND AND C.PAYCYCLE = A.PAYCYCLE "
-                                 + " where CSBARCOD1='" + sbar1 + "' and CSBARCOD2='" + sbar2 + "' and CSBARCOD3 ='" + sbar3 + "'";
+                            //查詢出資料後 要跑回圈將每一期資料寫入明細中
+                            ssql = " select b.CUSID,'" + sBATCHNO + "' AS BATCHNO,  C.PERIOD, 'AR' AS ARTYPE, C.AMT, '" + sSRC + "' AS COD1, '超商單號：'+A.CSBARCOD2 AS COD2"
+                                 + " , A.CSBARCOD1, A.CSBARCOD2, A.CSBARCOD3, GETDATE() "
+                                 + " , DATEPART (YYYY, E.NEWBILLINGDAT) AS SYY, DATEPART(MM, E.NEWBILLINGDAT) AS SMM, DATEPART(DD, E.NEWBILLINGDAT) AS SDD  "
+                                 + " , DATEPART(YYYY, E.DUEDAT) AS TYY, DATEPART(MM, E.DUEDAT) AS TMM , C.AMT / C.PERIOD as AM_AVG "
+                                 + "   from RTLessorAVSCustBillingBarcode A"
+                                 + " LEFT JOIN RTLessorAVSCustBillingPrtSub B ON B.NOTICEID=A.NOTICEID"
+                                 + " LEFT JOIN RTLessorAVSCust E ON E.CUSID=B.CUSID"
+                                 + " LEFT JOIN rtcode d on d.kind = 'L5' and d.PARM1=E.comtype"
+                                 + " LEFT JOIN RTBillCharge c on c.CASETYPE=d.CODE AND c.CASEKIND=A.CASEKIND AND C.PAYCYCLE=A.PAYCYCLE"
+                                 + " where CSBARCOD1='" + sbar1 + "' and CSBARCOD2='" + sbar2 + "' and CSBARCOD3 ='" + sbar3 + "'"; 
                             cmd.CommandText = ssql;
-                            ds2 = cmd.ExecuteDataSet();
+                            ds3 = cmd.ExecuteDataSet();
+
+                            for (int i = 0; i < ds3.Tables[0].Rows.Count; i++)
+                            {
+                                var ip = Convert.ToInt32(ds3.Tables[0].Rows[i]["PERIOD"].ToString());
+                                var iy = Convert.ToInt32(ds3.Tables[0].Rows[i]["SYY"].ToString());
+                                var im = Convert.ToInt32(ds3.Tables[0].Rows[i]["SMM"].ToString());
+                                var id = Convert.ToInt32(ds3.Tables[0].Rows[i]["SDD"].ToString());
+                                var iam = Convert.ToInt32(ds3.Tables[0].Rows[i]["AM_AVG"].ToString());
+                                var itolday = DateTime.DaysInMonth(iy, im);
+                                double iamv = 0;
+                                double ipre = 0;
+                                double rat = 0;                            
+
+                                //判斷期數
+                                for (int j = 0; j < ip; j++)
+                                {
+                                    im = im + 1;
+                                    if (im == 13)
+                                    {
+                                        iy = iy + 1;
+                                        im = 1;
+                                    }
+
+                                    if (id != 1 && j == 0)
+                                    {
+                                        rat = (itolday - id) *100 / itolday;
+                                        iamv = Math.Round(iam * rat / 100, 0);
+                                        ipre = iam - iamv;
+                                    }
+                                    else
+                                    {
+                                        iamv = iam;
+                                    }
+
+                                    //新增帳款明細
+                                    ssql = " INSERT INTO RTLessorAVSCustARDTL "
+                                         + " (CUSID, BATCHNO, SEQ, SYY, SMM, TYY, TMM, ITEMNC, PORM, AMT, REALAMT, CDAT, L14, L23)  "
+                                         + " select b.CUSID,'" + sBATCHNO + "' AS BATCHNO, "+j+" AS SEQ "
+                                         + " , DATEPART (YYYY, E.NEWBILLINGDAT) AS SYY, DATEPART(MM, E.NEWBILLINGDAT) AS SMM "
+                                         + " , "+iy+" AS TYY, "+im+" AS TMM "
+                                         + " , '"+iy+"'+'-'+'"+im+"' + '　網路服務費(續約)' AS ITEMNC, '+' AS FORM, "+iamv+", 0 AS REALAMT "
+                                         + " , GETDATE() AS CDAT, '4642' AS L14, '016' AS L23 "
+                                         + " from RTLessorAVSCustBillingBarcode A "
+                                         + " LEFT JOIN RTLessorAVSCustBillingPrtSub B ON B.NOTICEID = A.NOTICEID "
+                                         + " LEFT JOIN RTLessorAVSCust E ON E.CUSID = B.CUSID "
+                                         + " LEFT JOIN rtcode d on d.kind = 'L5' and d.PARM1 = E.comtype "
+                                         + " LEFT JOIN RTBillCharge c on c.CASETYPE = d.CODE AND c.CASEKIND = A.CASEKIND AND C.PAYCYCLE = A.PAYCYCLE "
+                                         + " where CSBARCOD1='" + sbar1 + "' and CSBARCOD2='" + sbar2 + "' and CSBARCOD3 ='" + sbar3 + "'";
+                                    cmd.CommandText = ssql;
+                                    ds2 = cmd.ExecuteDataSet();
+                                }
+
+                                if (ipre !=0)
+                                {
+                                    im = im + 1;
+                                    if (im == 13)
+                                    {
+                                        iy = iy + 1;
+                                        im = 1;
+                                    }
+                                    //新增帳款明細
+                                    ssql = " INSERT INTO RTLessorAVSCustARDTL "
+                                         + " (CUSID, BATCHNO, SEQ, SYY, SMM, TYY, TMM, ITEMNC, PORM, AMT, REALAMT, CDAT, L14, L23)  "
+                                         + " select b.CUSID,'" + sBATCHNO + "' AS BATCHNO, " + ip+1 + " AS SEQ "
+                                         + " , DATEPART (YYYY, E.NEWBILLINGDAT) AS SYY, DATEPART(MM, E.NEWBILLINGDAT) AS SMM "
+                                         + " , " + iy + " AS TYY, " + im + " AS TMM "
+                                         + " , '" + iy + "'+'-'+'" + im + "' + '　網路服務費(續約)' AS ITEMNC, '+' AS FORM, " + ipre + ", 0 AS REALAMT "
+                                         + " , GETDATE() AS CDAT, '4642' AS L14, '016' AS L23 "
+                                         + " from RTLessorAVSCustBillingBarcode A "
+                                         + " LEFT JOIN RTLessorAVSCustBillingPrtSub B ON B.NOTICEID = A.NOTICEID "
+                                         + " LEFT JOIN RTLessorAVSCust E ON E.CUSID = B.CUSID "
+                                         + " LEFT JOIN rtcode d on d.kind = 'L5' and d.PARM1 = E.comtype "
+                                         + " LEFT JOIN RTBillCharge c on c.CASETYPE = d.CODE AND c.CASEKIND = A.CASEKIND AND C.PAYCYCLE = A.PAYCYCLE "
+                                         + " where CSBARCOD1='" + sbar1 + "' and CSBARCOD2='" + sbar2 + "' and CSBARCOD3 ='" + sbar3 + "'";
+                                    cmd.CommandText = ssql;
+                                    ds2 = cmd.ExecuteDataSet();
+                                }
+                            }
+
+                            
 
                             //新增資料到續約資料檔中 RTLessorAVSCustCont
                             ssql = " INSERT INTO RTLessorAVSCustCont "
