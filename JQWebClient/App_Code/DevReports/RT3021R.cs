@@ -230,6 +230,7 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrTableRow6 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrRichText4 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrRichText3 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrShape1 = new DevExpress.XtraReports.UI.XRShape();
             this.xrTable1 = new DevExpress.XtraReports.UI.XRTable();
@@ -279,15 +280,14 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             this.FieldCaption = new DevExpress.XtraReports.UI.XRControlStyle();
             this.PageInfo = new DevExpress.XtraReports.UI.XRControlStyle();
             this.DataField = new DevExpress.XtraReports.UI.XRControlStyle();
-            this.xrRichText4 = new DevExpress.XtraReports.UI.XRRichText();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrRichText4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xrRichText4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -955,6 +955,17 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             this.xrTableCell5.Name = "xrTableCell5";
             this.xrTableCell5.Weight = 1D;
             // 
+            // xrRichText4
+            // 
+            this.xrRichText4.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrRichText4.Font = new System.Drawing.Font("標楷體", 14.1F);
+            this.xrRichText4.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 38.83337F);
+            this.xrRichText4.Name = "xrRichText4";
+            this.xrRichText4.SerializableRtfString = resources.GetString("xrRichText4.SerializableRtfString");
+            this.xrRichText4.SizeF = new System.Drawing.SizeF(491.7809F, 56.95831F);
+            this.xrRichText4.StylePriority.UseBorders = false;
+            this.xrRichText4.StylePriority.UseFont = false;
+            // 
             // xrRichText3
             // 
             this.xrRichText3.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1378,7 +1389,7 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrRichText2.BorderWidth = 2F;
-            this.xrRichText2.Font = new System.Drawing.Font("標楷體", 10F);
+            this.xrRichText2.Font = new System.Drawing.Font("標楷體", 9F);
             this.xrRichText2.LocationFloat = new DevExpress.Utils.PointFloat(7.807021F, 271.0834F);
             this.xrRichText2.Name = "xrRichText2";
             this.xrRichText2.SerializableRtfString = resources.GetString("xrRichText2.SerializableRtfString");
@@ -1550,17 +1561,6 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             this.DataField.ForeColor = System.Drawing.Color.Black;
             this.DataField.Name = "DataField";
             // 
-            // xrRichText4
-            // 
-            this.xrRichText4.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrRichText4.Font = new System.Drawing.Font("標楷體", 14.1F);
-            this.xrRichText4.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 38.83337F);
-            this.xrRichText4.Name = "xrRichText4";
-            this.xrRichText4.SerializableRtfString = resources.GetString("xrRichText4.SerializableRtfString");
-            this.xrRichText4.SizeF = new System.Drawing.SizeF(491.7809F, 56.95831F);
-            this.xrRichText4.StylePriority.UseBorders = false;
-            this.xrRichText4.StylePriority.UseFont = false;
-            // 
             // RT3021R
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1584,11 +1584,11 @@ public class RT3021R : DevExpress.XtraReports.UI.XtraReport
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrRichText4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xrRichText4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
     }
