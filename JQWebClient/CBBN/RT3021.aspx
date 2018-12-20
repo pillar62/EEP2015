@@ -98,7 +98,7 @@
 
                 if (where.length > 0) {
                     //取得查詢條件的值
-                    where = "a.DROPDAT is null and a.CANCELDAT is null and a.FINISHDAT is not null and a.freecode<>'Y' and b.DROPDAT is null and b.CANCELDAT is null ";
+                    where = "a.DROPDAT is null and a.CANCELDAT is null and a.FINISHDAT is not null and a.freecode<>'Y' and b.CANCELDAT is null ";
                     where = where + " and (a.duedat between '" + due1S + "' and '" + due1E + "' OR a.duedat between '" + due2S + "' and '" + due2E + "') ";
                 }
                 $(dg).datagrid('setWhere', where);
