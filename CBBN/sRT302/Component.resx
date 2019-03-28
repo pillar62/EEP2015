@@ -118,31 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="serviceManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 59</value>
+    <value>17, 134</value>
   </metadata>
   <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 143</value>
+    <value>17, 56</value>
   </metadata>
   <metadata name="RTLessorAVSCustBillingPrt.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 605</value>
+    <value>537, 188</value>
   </metadata>
   <metadata name="ucRTLessorAVSCustBillingPrt.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 185</value>
+    <value>591, 121</value>
   </metadata>
   <metadata name="RTLessorAVSCustBillingPrtSub.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 647</value>
+    <value>539, 353</value>
   </metadata>
   <metadata name="ucRTLessorAVSCustBillingPrtSub.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 857</value>
+    <value>574, 451</value>
   </metadata>
   <metadata name="idRTLessorAVSCustBillingPrt_RTLessorAVSCustBillingPrtSub.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 899</value>
+    <value>464, 277</value>
   </metadata>
   <metadata name="View_RTLessorAVSCustBillingPrt.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 101</value>
+    <value>17, 95</value>
   </metadata>
   <metadata name="RT302.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 941</value>
+    <value>17, 368</value>
   </metadata>
   <data name="RT302.CommandText" xml:space="preserve">
     <value>SELECT BATCH, DUEDATSB, DUEDATEB, DUEDATSA, DUEDATEA, CDAT, c.CUSNC, 
@@ -155,10 +155,10 @@ left outer join RTEmployee h inner join RTObj i on h.cusid =i.cusid on h.emply =
 ORDER BY BATCH DESC</value>
   </data>
   <metadata name="ucRT302.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 689</value>
+    <value>17, 290</value>
   </metadata>
   <metadata name="RT3021.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 227</value>
+    <value>124, 206</value>
   </metadata>
   <data name="RT3021.CommandText" xml:space="preserve">
     <value>SELECT a.comq1, a.lineq1, a.cusid, 
@@ -180,7 +180,7 @@ and b.CANCELDAT is null
  </value>
   </data>
   <metadata name="cmdRT3021.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 815</value>
+    <value>382, 347</value>
   </metadata>
   <metadata name="infoParameter1.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -195,13 +195,13 @@ and b.CANCELDAT is null
     <value>False</value>
   </metadata>
   <metadata name="cmdRT3022.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 773</value>
+    <value>216, 348</value>
   </metadata>
   <data name="cmdRT3022.CommandText" xml:space="preserve">
     <value> select a.batch, convert(varchar(7), convert(int, convert(varchar(8), dateadd(m, 2, a.duedat), 112)) - 19110000) +';'+ d.csnoticeid + ';' +  convert(varchar(3), datepart(yy, a.duedat) - 1911) + substring(convert(varchar(6), a.duedat, 12), 3, 2) + ';' +  convert(varchar(9), case b.secondcase when 'Y' then c.amt2 else c.amt end) + ';' +  d.cscusid + ';' +' ' + ';' +c.memo + ';' +b.cusnc + ';' as bcodesrc from RTLessorAvsCustBillingPrtSub a  inner join RTLessorAvsCust b on a.cusid = b.cusid inner join RTLessorAVSCustBillingBarcode d on d.noticeid = a.noticeid  inner join RTBillCharge c on c.casekind = d.casekind and c.paycycle = d.paycycle and c.casetype = '07'  where a.batch ='20170201'  order by b.comq1, b.lineq1, b.cusnc, c.paycycle</value>
   </data>
   <metadata name="RT3022.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 395</value>
+    <value>123, 250</value>
   </metadata>
   <data name="RT3022.CommandText" xml:space="preserve">
     <value>SELECT distinct a.comq1, a.lineq1, a.cusid, 
@@ -230,7 +230,7 @@ else DATEDiFF(d,getdate(),a.DUEDAT) end &lt; 0
 order by a.comq1,a.lineq1,a.cusnc </value>
   </data>
   <metadata name="cmdRT3023.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 731</value>
+    <value>217, 403</value>
   </metadata>
   <metadata name="infoParameter5.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -245,35 +245,17 @@ order by a.comq1,a.lineq1,a.cusnc </value>
     <value>False</value>
   </metadata>
   <metadata name="RT3028.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 521</value>
+    <value>122, 288</value>
   </metadata>
-  <data name="RT3028.CommandText" xml:space="preserve">
-    <value>SELECT	a.noticeid, a.batch, case c.consignee when '' then '直銷' else '經銷' end as consignee, isnull(k.shortnc, m.cusnc) as shortnc, convert(varchar(5), a.comq1) +'-'+ convert(varchar(2), a.lineq1) as comlineq1, d.comn, b.cusnc, a.duedat, b.contacttel + case when b.contacttel&lt;&gt;'' and b.mobile&lt;&gt;'' then '&lt;br&gt;' else '' end + b.mobile as tel, isnull(e.cutnc,'')+b.township3+b.raddr3 as raddr, b.dropdat, b.strbillingdat, b.newbillingdat, h.codenc, g.codenc, j.codenc , A.CUSID
-, (select top 1 '1'+substring(CSBARCOD1,1,6) from RTLessorAVSCustBillingBarcode where NOTICEID=a.NOTICEID) as dd
-FROM	RTLessorAVSCustBillingPrtSub a 
-inner join RTLessorAVSCust b on a.comq1 = b.comq1 and a.lineq1 = b.lineq1 and a.cusid = b.cusid 
-inner join RTLessorAVSCmtyLine c on c.comq1 = b.comq1 and c.lineq1 = b.lineq1 
-inner join RTLessorAVSCmtyH d on d.comq1 = c.comq1 
-left outer join RTCounty e on e.cutid = b.cutid3 
-left outer join RTCode g on g.code = a.paycycle and g.kind ='M8' 
-left outer join RTCode h on h.code = a.casekind and h.kind ='O9' 
-left outer join RTLessorAVSCustCont i on i.cusid = a.cusid and i.canceldat is null 
-	and i.strbillingdat = dateadd(d, 1, a.duedat) 
-left outer join rtcode j on j.code = i.paytype and j.kind ='M9' 
-left outer join RTObj k on k.cusid = c.consignee 
-left outer join RTEmployee l inner join RTObj m on m.cusid = l.cusid on l.emply = c.salesid
-WHERE b.freecode &lt;&gt;'Y' 
-ORDER BY a.batch desc, b.duedat desc</value>
-  </data>
   <metadata name="RT302R.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 311</value>
+    <value>17, 251</value>
   </metadata>
   <data name="RT302R.CommandText" xml:space="preserve">
     <value>SELECT b.cusnc, b.cusnc + case when len(b.cusnc)&gt;4 then ' 您好！' else ' 先生/女士您好！' end as mydear, a.duedat,d.comn, b.applydat, b.birthday, b.contacttel, b.mobile, b.socialid, b.email, g.codenc, b.rzone3, dateadd(d,1, a.duedat) as newBillingDat,case b.casekind when '01' then '2. 經濟型　　　□季繳(1,197元)　□半年繳(2,100元)　□年繳(4,000元)' when '02' then '2. 專業型　　　□季繳(1,410元)　□半年繳(2,700元)　□年繳(4,800元)' else '' end as payselect, '□' + h.codenc + ' -- ' + g.codenc+'('+ convert(varchar(6), b.rcvmoney) +'元)'  as casepay, isnull(e.cutnc, '')+ b.township2+b.raddr2 as addr2, isnull(f.cutnc, '')+ b.township3+b.raddr3 as addr3, a.cusid FROM RTLessorAVSCustBillingPrtSub a inner join RTLessorAVSCust b on a.comq1 = b.comq1 and a.lineq1 = b.lineq1 and a.cusid = b.cusid inner join RTLessorAVSCmtyLine c on b.comq1 = c.comq1 and b.lineq1 = c.lineq1 inner join RTLessorAVSCmtyH d on d.comq1 = c.comq1 left outer join RTCounty e on e.cutid = b.cutid2 left outer join RTCounty f on f.cutid = b.cutid3 left outer join RTCode g on g.code = b.paycycle and g.kind ='M8' left outer join RTCode h on h.code = b.casekind and h.kind ='O9' WHERE b.freecode&lt;&gt;'Y'  
 order by  A.CUSID</value>
   </data>
   <metadata name="RT3021R.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 353</value>
+    <value>234, 262</value>
   </metadata>
   <data name="RT3021R.CommandText" xml:space="preserve">
     <value>SELECT BATCH, b.cusnc, b.cusnc + case when len(b.cusnc)&gt;4 then ' 您好！' else ' 先生/女士您好！' end as mydear, a.duedat, d.comn, b.applydat, b.birthday, b.contacttel + ' / ' + b.mobile as contacttel
@@ -300,7 +282,7 @@ left outer join V_BARCODE K on K.NOTICEID=a.NOTICEID AND K.ITEMNO=3
 order by b.CUSID</value>
   </data>
   <metadata name="RT3023.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 563</value>
+    <value>22, 415</value>
   </metadata>
   <data name="RT3023.CommandText" xml:space="preserve">
     <value>SELECT C.BATCH, C.BATCH+'續約繳費' AS '代收費用別', CONVERT(VARCHAR(3), SUBSTRING(C.BATCH, 1,4)-1911) +SUBSTRING(C.BATCH,5, 2) AS '期別'
@@ -315,14 +297,14 @@ LEFT JOIN RTLessorAVSCustBillingPrtSub C ON C.NOTICEID=A.NOTICEID
 LEFT JOIN RTLessorAVSCust D ON D.CUSID=C.CUSID</value>
   </data>
   <metadata name="cmdRT302R.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 269</value>
+    <value>17, 290</value>
   </metadata>
   <data name="cmdRT302R.CommandText" xml:space="preserve">
     <value>SELECT  A.BATCH, b.cusnc, b.cusnc + case when len(b.cusnc)&gt;4 then ' 您好！' else ' 先生/女士您好！' end as mydear, a.duedat,d.comn, b.applydat, b.birthday, b.contacttel, b.mobile, b.socialid, b.email, g.codenc, b.rzone3, dateadd(d,1, a.duedat) as newBillingDat,case b.casekind when '01' then '2. 經濟型　　　□季繳(1,197元)　□半年繳(2,100元)　□年繳(4,000元)' when '02' then '2. 專業型　　　□季繳(1,410元)　□半年繳(2,700元)　□年繳(4,800元)' else '' end as payselect, '□' + h.codenc + ' -- ' + g.codenc+'('+ convert(varchar(6), b.rcvmoney) +'元)'  as casepay, b.raddr2 as addr2, b.raddr3 as addr3, a.cusid FROM RTLessorAVSCustBillingPrtSub a inner join RTLessorAVSCust b on a.comq1 = b.comq1 and a.lineq1 = b.lineq1 and a.cusid = b.cusid inner join RTLessorAVSCmtyLine c on b.comq1 = c.comq1 and b.lineq1 = c.lineq1 inner join RTLessorAVSCmtyH d on d.comq1 = c.comq1 left outer join RTCounty e on e.cutid = b.cutid2 left outer join RTCounty f on f.cutid = b.cutid3 left outer join RTCode g on g.code = b.paycycle and g.kind ='M8' left outer join RTCode h on h.code = b.casekind and h.kind ='O9' WHERE b.freecode&lt;&gt;'Y' 
 order by  A.CUSID</value>
   </data>
   <metadata name="cmdRT3024.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 437</value>
+    <value>17, 485</value>
   </metadata>
   <metadata name="infoParameter9.IsNullable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
@@ -337,7 +319,7 @@ order by  A.CUSID</value>
     <value>False</value>
   </metadata>
   <metadata name="cmd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 479</value>
+    <value>17, 524</value>
   </metadata>
   <metadata name="cmdRT3025.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>381, 448</value>

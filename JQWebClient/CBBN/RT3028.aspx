@@ -96,7 +96,7 @@
         function dgOnloadSuccess() {
             if (flag) {
                 //查詢出該用戶的資料
-                var sWhere = "A.BATCH='" + BATCH + "'";                
+                var sWhere = "BATCH='" + BATCH + "'";                
                 $("#dataGridMaster").datagrid('setWhere', sWhere);
             }
             flag = false;
@@ -139,6 +139,11 @@
                     </JQTools:JQGridColumn>
                     <JQTools:JQGridColumn Alignment="left" Caption="dd" Editor="text" FieldName="dd" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80">
                     </JQTools:JQGridColumn>
+<<<<<<< HEAD
+                    <JQTools:JQGridColumn Alignment="left" Caption="第二段條碼" Editor="text" FieldName="CSBARCOD2" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="380">
+                    </JQTools:JQGridColumn>
+=======
+>>>>>>> fe4568c2813342abd78e21ee1892054f1540b6d2
                 </Columns>
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
@@ -149,7 +154,8 @@
                     <JQTools:JQToolItem Enabled="True" Icon="icon-redo" ItemType="easyui-linkbutton" OnClick="btn4Click" Text="重新產生續約資料" Visible="True" />
                 </TooItems>
                 <QueryColumns>
-                    <JQTools:JQQueryColumn AndOr="and" Caption="用戶名稱" Condition="%" DataType="string" Editor="text" FieldName="b.cusnc" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="用戶名稱" Condition="%%" DataType="string" Editor="text" FieldName="cusnc" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="第二段條碼" Condition="%%" DataType="string" Editor="text" FieldName="CSBARCOD2" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="250" />
                 </QueryColumns>
             </JQTools:JQDataGrid>
         </div>

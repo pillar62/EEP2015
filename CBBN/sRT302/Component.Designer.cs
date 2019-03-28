@@ -728,7 +728,7 @@
             // RT3028
             // 
             this.RT3028.CacheConnection = false;
-            this.RT3028.CommandText = resources.GetString("RT3028.CommandText");
+            this.RT3028.CommandText = "SELECT * FROM VIEW_RT3028\r\nORDER BY batch desc, duedat desc";
             this.RT3028.CommandTimeout = 30;
             this.RT3028.CommandType = System.Data.CommandType.Text;
             this.RT3028.DynamicTableName = false;
