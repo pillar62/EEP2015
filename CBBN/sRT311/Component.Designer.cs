@@ -107,7 +107,6 @@
             Srvtools.FieldAttr fieldAttr74 = new Srvtools.FieldAttr();
             Srvtools.KeyItem keyItem3 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem4 = new Srvtools.KeyItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Component));
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTLessorAVSCmtyLine = new Srvtools.InfoCommand(this.components);
@@ -865,7 +864,7 @@
             // RT311
             // 
             this.RT311.CacheConnection = false;
-            this.RT311.CommandText = resources.GetString("RT311.CommandText");
+            this.RT311.CommandText = "select vIEW_RT311.* from vIEW_RT311";
             this.RT311.CommandTimeout = 30;
             this.RT311.CommandType = System.Data.CommandType.Text;
             this.RT311.DynamicTableName = false;
