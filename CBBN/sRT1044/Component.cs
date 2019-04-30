@@ -561,10 +561,10 @@ namespace sRT1044
                     return new object[] { 0, "開始計費日空白時不可轉應收結案作業。" };
                 }
 
-                if (ds.Tables[0].Rows[0]["paytype"].ToString() == "02")
-                {
-                    return new object[] { 0, "繳費方式為現金付款時，必須由收款派工單返轉應收帳款。" };
-                }
+                //if (ds.Tables[0].Rows[0]["paytype"].ToString() == "02")
+                //{
+                //    return new object[] { 0, "繳費方式為現金付款時，必須由收款派工單返轉應收帳款。" };
+                //}
 
                 if (ds.Tables[0].Rows[0]["batchno"].ToString() == "" || ds.Tables[0].Rows[0]["FINISHDAT"].ToString() == "")
                 {
