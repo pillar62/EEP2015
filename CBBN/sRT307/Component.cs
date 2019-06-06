@@ -49,10 +49,31 @@ namespace sRT307
                 cmd.CommandText = selectSql;
                 ds = cmd.ExecuteDataSet();
                 string P2 = ds.Tables[0].Rows[0]["CODENC"].ToString();
-
+                //發票明細錄(S開頭)
+                /*
+                 1、明細錄別(S)。
+                 2、商店自訂編號。
+                 3、發票種類。B2C或B2B
+                 4、買受人統一編號，B2C的時候帶空值
+                 5、買受人名稱。
+                 6、電子信箱。
+                 7、買受人地址。
+                 8、載具類別：0、手條條碼，1、自然人，2、智付寶載具。
+                 9、載具編號：放客戶代號。
+                 10、愛心碼
+                 11、索取紙本發票。
+                 ---第一行做到這邊。
+                 12、稅別
+                 13、稅率
+                 14、銷售合計
+                 15、稅額
+                 16、發票金額
+                 17、備註
+                 */
                 selectSql = @"SELECT 'S,'+PRTNO+','+CASE 
-                            WHEN ISNULL(UNINO, '') = '' THEN 'B2C,,' + CUSNC + ',' + EMAIL + ',' + raddr + ',,,,Y,'
-                            ELSE 'B2B,' + UNINO + ',' + invtitle + ',' + EMAIL + ',' + raddr + ',,,,Y,' END + '1,5,' + Convert(varchar(50), Convert(FLOAT(50), ROUND(AMT / 1.05, 0)))
+                            WHEN ISNULL(UNINO, '') = '' THEN 'B2C,,' + CUSNC + ',' + EMAIL + ',' + raddr + ',2,' + CUSID + ',,N,'
+                            ELSE 'B2B,' + UNINO + ',' + invtitle + ',' + EMAIL + ',' + raddr + ',,,,Y,' END 
+                                        + '1,5,' + Convert(varchar(50), Convert(FLOAT(50), ROUND(AMT / 1.05, 0)))
                                         + ',' + Convert(varchar(50), Convert(FLOAT(50), AMT - ROUND(AMT / 1.05, 0))) + ',' + Convert(varchar(50), Convert(FLOAT(50), AMT))
                                         + ',' + CASE WHEN CODENC = '信用卡' THEN '末四碼：'+RIGHT(CREDITCARDNO, 4) + '　' ELSE '' END 
                                         + CASE WHEN ISNULL(STRBILLINGDAT, '') <> '' AND ISNULL(DUEDAT, '') <> '' 
