@@ -70,8 +70,9 @@ namespace sRT307
                  16、發票金額
                  17、備註
                  */
-                selectSql = @"SELECT 'S,'+PRTNO+','+CASE 
-                            WHEN ISNULL(UNINO, '') = '' THEN 'B2C,,' + CUSNC + ',' + EMAIL + ',' + raddr + ',2,' + CUSID + ',,N,'
+                selectSql = @"SELECT 'S,'+ PRTNO +','+CASE 
+                            WHEN ISNULL(UNINO, '') = '' AND ISNULL(LTRIM(EMAIL), '') = '' THEN 'B2C,,' + CUSNC + ',' + 'invoice@cbbn.com.tw' + ',' + raddr + ',2,' + PICODE + ',,N,'
+                            WHEN ISNULL(UNINO, '') = '' THEN 'B2C,,' + CUSNC + ',' + EMAIL + ',' + raddr + ',2,' + PICODE + ',,N,'
                             ELSE 'B2B,' + UNINO + ',' + invtitle + ',' + EMAIL + ',' + raddr + ',,,,Y,' END 
                                         + '1,5,' + Convert(varchar(50), Convert(FLOAT(50), ROUND(AMT / 1.05, 0)))
                                         + ',' + Convert(varchar(50), Convert(FLOAT(50), AMT - ROUND(AMT / 1.05, 0))) + ',' + Convert(varchar(50), Convert(FLOAT(50), AMT))
