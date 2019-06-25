@@ -131,7 +131,7 @@
     <value>23, 221</value>
   </data>
   <data name="ucRTLessorAVSCustSndwork" type="System.Drawing.Point, System.Drawing">
-    <value>16, 294</value>
+    <value>104, 290</value>
   </data>
   <data name="View_RTLessorAVSCustSndwork" type="System.Drawing.Point, System.Drawing">
     <value>332, 54</value>
@@ -165,5 +165,11 @@
   </data>
   <data name="RT104221" type="System.Drawing.Point, System.Drawing">
     <value>481, 169</value>
+  </data>
+  <data name="RT10424" type="System.Drawing.Point, System.Drawing">
+    <value>484, 435</value>
+  </data>
+  <data name="cmd" type="System.Drawing.Point, System.Drawing">
+    <value>311, 328</value>
   </data>
 </root>

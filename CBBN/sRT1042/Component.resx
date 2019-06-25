@@ -127,7 +127,7 @@
     <value>23, 221</value>
   </metadata>
   <metadata name="ucRTLessorAVSCustSndwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>16, 294</value>
+    <value>104, 290</value>
   </metadata>
   <metadata name="View_RTLessorAVSCustSndwork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>332, 54</value>
@@ -137,7 +137,7 @@
   </metadata>
   <data name="RT1042.CommandText" xml:space="preserve">
     <value>SELECT RTLessorAVSCustSNDWORK.CUSID, RTLessorAVSCustSNDWORK.PRTNO,rtrim(convert(char(6),RTLessorAVScust.COMQ1)) +'-'+ rtrim(convert(char(6),RTLessorAVScust.lineQ1))  as comqline,
-RTLessorAVSCustSNDWORK.PRTNO, RTLessorAVSCustSNDWORK.SENDWORKDAT, 
+RTLessorAVSCustSNDWORK.SENDWORKDAT, 
 RTOBJ.CUSNC,CASE WHEN RTOBJ_2.SHORTNC &lt;&gt;'' THEN RTOBJ_2.SHORTNC ELSE RTOBJ_1.CUSNC END,CASE WHEN RTOBJ_4.SHORTNC &lt;&gt;'' THEN RTOBJ_4.SHORTNC ELSE RTOBJ_3.CUSNC END, 
 RTLessorAVSCustSNDWORK.closedat,RTLessorAVSCustSNDWORK.unclosedat,RTLessorAVSCustSNDWORK.BONUSCLOSEYM, RTLessorAVSCustSNDWORK.BONUSFINCHK,RTLessorAVSCustSNDWORK.batchno, 
 RTLessorAVSCustSNDWORK.STOCKCLOSEYM, RTLessorAVSCustSNDWORK.STOCKFINCHK, 
@@ -147,6 +147,7 @@ RCVPRTNO &lt;&gt; '' THEN RTLessorAVSCustHARDWARE.QTY ELSE 0 END), SUM(CASE WHEN
 AND RCVPRTNO &lt;&gt; '' AND RTLessorAVSCustHARDWARE.rcvfinishdat IS NOT NULL THEN RTLessorAVSCustHARDWARE.QTY ELSE 0 END), 
 SUM(CASE WHEN RTLessorAVSCustHARDWARE.dropdat IS NULL AND RTLessorAVSCustHARDWARE.QTY &gt; 0 THEN RTLessorAVSCustHARDWARE.QTY ELSE 0 END) - 
 SUM(CASE WHEN RTLessorAVSCustHARDWARE.dropdat IS NULL AND RCVPRTNO &lt;&gt; '' AND RTLessorAVSCustHARDWARE.rcvfinishdat IS NOT NULL THEN RTLessorAVSCustHARDWARE.QTY ELSE 0 END) 
+, RTLessorAVSCustSNDWORK.RCVMONEY 
 FROM RTLessorAVSCustSNDWORK LEFT OUTER JOIN RTObj RTObj_4 ON RTLessorAVSCustSNDWORK.REALCONSIGNEE = RTObj_4.CUSID LEFT OUTER JOIN 
 RTEmployee RTEmployee_2 INNER JOIN RTObj RTObj_3 ON RTEmployee_2.CUSID = RTObj_3.CUSID ON RTLessorAVSCustSNDWORK.REALENGINEER = RTEmployee_2.EMPLY LEFT OUTER JOIN 
 RTObj RTObj_2 ON RTLessorAVSCustSNDWORK.ASSIGNCONSIGNEE = RTObj_2.CUSID LEFT OUTER JOIN RTEmployee RTEmployee_1 INNER JOIN 
@@ -163,7 +164,8 @@ CASE WHEN RTOBJ_2.SHORTNC &lt;&gt; '' THEN RTOBJ_2.SHORTNC ELSE RTOBJ_1.CUSNC EN
 CASE WHEN RTOBJ_4.SHORTNC &lt;&gt; '' THEN RTOBJ_4.SHORTNC ELSE RTOBJ_3.CUSNC END, RTLessorAVSCustSNDWORK.closedat, 
 RTLessorAVSCustSNDWORK.unclosedat, RTLessorAVSCustSNDWORK.BONUSCLOSEYM, RTLessorAVSCustSNDWORK.BONUSFINCHK, 
 RTLessorAVSCustSNDWORK.batchno, RTLessorAVSCustSNDWORK.STOCKCLOSEYM, RTLessorAVSCustSNDWORK.STOCKFINCHK, 
-RTLessorAVSCustSNDWORK.DROPDAT </value>
+RTLessorAVSCustSNDWORK.DROPDAT, RTLessorAVSCustSNDWORK.RCVMONEY 
+</value>
   </data>
   <metadata name="autoNumber1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>56, 369</value>
@@ -297,7 +299,7 @@ where 1=1
 order by A.entryno </value>
   </data>
   <metadata name="RT10424.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 290</value>
+    <value>484, 435</value>
   </metadata>
   <data name="RT10424.CommandText" xml:space="preserve">
     <value>SELECT  A.CUSID,A.ENTRYNO,A.PRTNO, 

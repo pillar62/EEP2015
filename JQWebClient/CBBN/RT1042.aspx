@@ -86,9 +86,13 @@
             }
             
             
-            if (row1.RCVMONEY == 0)
-            {
-                alert("應收金額=0 (無法轉應收帳款)");
+            //if (row1.RCVMONEY == 0)
+            //{
+            //    alert("應收金額=0 (無法轉應收帳款)");
+            //    return false;
+            //}
+            if (row.RCVMONEY == 0) {
+                alert("當期收款金額=0 (無法轉應收帳款)");
                 return false;
             }
             
@@ -123,7 +127,7 @@
                 type: "POST",
                 url: '../handler/jqDataHandle.ashx?RemoteName=sRT1042.cmdRT10421', //連接的Server端，command
                 //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
-                data: "mode=method&method=" + "smRT10421" + "&parameters=" + CUSID + "," + PRTNO + "," + usr + "," + row1.PERIOD + "," + row1.RCVMONEY + ","
+                data: "mode=method&method=" + "smRT10421" + "&parameters=" + CUSID + "," + PRTNO + "," + usr + "," + row1.PERIOD + "," + row.RCVMONEY + ","
                     + row1.PAYTYPE + "," + row1.CREDITCARDNO,
                 cache: false,
                 async: false,
@@ -329,6 +333,8 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="派工單號" Editor="text" FieldName="PRTNO" Format="" MaxLength="12" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="完工日期" Editor="datebox" FieldName="SENDWORKDAT" Format="yyyy/mm/dd" MaxLength="0" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="列印人員" Editor="text" FieldName="CUSNC" Format="" Width="90" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="應繳金額" Editor="text" FieldName="RCVMONEY" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="120">
+                    </JQTools:JQGridColumn>
                     <JQTools:JQGridColumn Alignment="left" Caption="預定施工員" Editor="text" FieldName="Column1" Format="" MaxLength="0" Width="90" />
                     <JQTools:JQGridColumn Alignment="left" Caption="實際施工員" Editor="text" FieldName="Column2" Format="" MaxLength="0" Width="90" />
                     <JQTools:JQGridColumn Alignment="left" Caption="結案日" Editor="datebox" FieldName="closedat" Format="yyyy/mm/dd" MaxLength="0" Width="80" />

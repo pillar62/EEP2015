@@ -39,7 +39,8 @@ namespace sRT1042
             cmd.CommandText = selectSql;
             DataSet ds = cmd.ExecuteDataSet();
             string tempperiod = ds.Tables[0].Rows[0]["period"].ToString();
-            int temprcvmoney = Convert.ToInt32(ds.Tables[0].Rows[0]["rcvmoney"].ToString());
+            //int temprcvmoney = Convert.ToInt32(ds.Tables[0].Rows[0]["rcvmoney"].ToString());
+            int temprcvmoney = Convert.ToInt32(sdata[4].ToString());
             int temppaytype = Convert.ToInt32(ds.Tables[0].Rows[0]["paytype"].ToString());
             string tempcardno = ds.Tables[0].Rows[0]["CREDITCARDNO"].ToString();
             string ss1 = "";
@@ -61,6 +62,7 @@ namespace sRT1042
             }
             catch (Exception ex)
             {
+                ss1 = ex.Message.ToString();
                 return new object[] { 0, "完工結案失敗!!"+ ss1};
             }
         }

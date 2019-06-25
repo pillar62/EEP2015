@@ -69,6 +69,7 @@
             var SETAMT = row.SETAMT;
             var MOVEAMT = row.MOVEAMT;
             var EQUIPAMT = row.EQUIPAMT;
+            var GTAMT = row.GTAMT;
 
             if (rcvmoneydat != null && rcvmoneydat != "") {
                 alert("無收款日不可結案!!!");
@@ -90,7 +91,7 @@
                 return false;
             }
 
-            if (SETAMT == 0 && MOVEAMT == 0 && EQUIPAMT == 0)
+            if (SETAMT == 0 && MOVEAMT == 0 && EQUIPAMT == 0 && GTAMT == 0)
             {
                 alert("金額不可為0!");
                 return false;
@@ -130,6 +131,7 @@
             var SETAMT = row.SETAMT;
             var MOVEAMT = row.MOVEAMT;
             var EQUIPAMT = row.EQUIPAMT;
+            var GTAMT = row.GTAMT;
             if (QQ == 0)
             {
                 var MDAT = "";
@@ -161,7 +163,7 @@
                 return false;
             }
 
-            if (SETAMT == 0 && MOVEAMT == 0 && EQUIPAMT == 0) {
+            if (SETAMT == 0 && MOVEAMT == 0 && EQUIPAMT == 0 && GTAMT == 0) {
                 alert("金額不可為0!");
                 return false;
             }
@@ -287,6 +289,7 @@
                     <JQTools:JQGridColumn Alignment="right" Caption="設定費" Editor="numberbox" FieldName="SETAMT" Format="" Visible="true" Width="70" />
                     <JQTools:JQGridColumn Alignment="right" Caption="移機費" Editor="numberbox" FieldName="MOVEAMT" Format="" Visible="true" Width="70" />
                     <JQTools:JQGridColumn Alignment="right" Caption="設備費" Editor="numberbox" FieldName="EQUIPAMT" Format="" Visible="true" Width="70" />
+                    <JQTools:JQGridColumn Alignment="right" Caption="保證金" Editor="numberbox" FieldName="GTAMT" Format="" Visible="true" Width="70" />
                     <JQTools:JQGridColumn Alignment="left" Caption="應收帳款產生日" Editor="datebox" FieldName="TARDAT" Format="yyyy/mm/dd" Visible="true" Width="70" />
                     <JQTools:JQGridColumn Alignment="left" Caption="應收帳款編號" Editor="text" FieldName="BATCHNO" Format="" MaxLength="12" Visible="true" Width="70" />
                     <JQTools:JQGridColumn Alignment="left" Caption="結案日期" Editor="datebox" FieldName="FINISHDAT" Format="yyyy/mm/dd" Visible="true" Width="70" />
@@ -323,6 +326,7 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="設備費" Editor="numberbox" FieldName="EQUIPAMT" Format="" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="設定費" Editor="numberbox" FieldName="SETAMT" Format="" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="移機費" Editor="numberbox" FieldName="MOVEAMT" Format="" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="保證金" Editor="numberbox" FieldName="GTAMT" maxlength="0" Width="180" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="繳費方式" Editor="inforefval" FieldName="PAYTYPE" Format="" maxlength="2" Width="180" EditorOptions="title:'查詢',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M9'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
                         <JQTools:JQFormColumn Alignment="left" Caption="信用卡種類" Editor="inforefval" FieldName="CREDITCARDTYPE" Format="" maxlength="2" Width="180" EditorOptions="title:'查詢',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M6'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
                         <JQTools:JQFormColumn Alignment="left" Caption="發卡銀行" Editor="inforefval" FieldName="CREDITBANK" Format="" maxlength="3" Width="180" EditorOptions="title:'查詢',panelWidth:350,panelHeight:400,remoteName:'sRT100.RTBank',tableName:'RTBank',columns:[],columnMatches:[],whereItems:[{field:'CREDITCARD',value:'Y'}],valueField:'HEADNO',textField:'HEADNC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:true,capsLock:'none',fixTextbox:'false'" PlaceHolder="請用挑選" />
@@ -330,15 +334,15 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="持卡人姓名" Editor="text" FieldName="CREDITNAME" Format="" maxlength="30" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="信用卡有效期限(月)" Editor="text" FieldName="CREDITDUEM" Format="" maxlength="2" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="信用卡有效期限(年)" Editor="text" FieldName="CREDITDUEY" Format="" maxlength="2" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="結案日期" Editor="datebox" FieldName="FINISHDAT" Format="yyyy/mm/dd" maxlength="0" Width="180" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="結案日期" Editor="datebox" FieldName="FINISHDAT" Format="yyyy/mm/dd" Width="180" ReadOnly="True" maxlength="0" />
                         <JQTools:JQFormColumn Alignment="left" Caption="應收帳款產生日" Editor="datebox" FieldName="TARDAT" Format="yyyy/mm/dd" Width="180" ReadOnly="True" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="應收帳款編號" Editor="text" FieldName="BATCHNO" Format="" Width="180" MaxLength="12" ReadOnly="True" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="帳款產生人員" Editor="infocombobox" FieldName="TUSR" Format="" maxlength="6" Width="180" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="應收帳款編號" Editor="text" FieldName="BATCHNO" Format="" maxlength="12" Width="180" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="帳款產生人員" Editor="infocombobox" FieldName="TUSR" Format="" Width="180" ReadOnly="True" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" maxlength="6" />
                         <JQTools:JQFormColumn Alignment="left" Caption="作廢日期" Editor="datebox" FieldName="CANCELDAT" Format="yyyy/mm/dd" Width="180" ReadOnly="True" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="作廢人員" Editor="infocombobox" FieldName="CANCELUSR" Format="" Width="180" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" MaxLength="6" ReadOnly="True" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="備註說明" Editor="textarea" FieldName="MEMO" Format="" maxlength="500" Width="360" Span="2" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="修改日期" Editor="datebox" FieldName="UDAT" Format="yyyy/mm/dd" Width="180" maxlength="0" ReadOnly="True" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="修改人員" Editor="infocombobox" FieldName="UUSR" Format="" maxlength="6" Width="180" EditorOptions="valueField:'CUSID',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="作廢人員" Editor="infocombobox" FieldName="CANCELUSR" Format="" maxlength="6" Width="180" EditorOptions="valueField:'EMPLY',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="備註說明" Editor="textarea" FieldName="MEMO" Format="" Width="360" maxlength="500" Span="2" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="修改日期" Editor="datebox" FieldName="UDAT" Format="yyyy/mm/dd" maxlength="0" Width="180" ReadOnly="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="修改人員" Editor="infocombobox" EditorOptions="valueField:'CUSID',textField:'NAME',remoteName:'sRT100.RTEmployee',tableName:'RTEmployee',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" FieldName="UUSR" Format="" maxlength="6" ReadOnly="True" Width="180" />
                     </Columns>
                 </JQTools:JQDataForm>
                 <JQTools:JQAutoSeq ID="JQAutoSeq1" runat="server" BindingObjectID="dataGridView" FieldName="ENTRYNO" NumDig="1" />
