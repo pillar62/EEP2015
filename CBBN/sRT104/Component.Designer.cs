@@ -2279,7 +2279,7 @@
             // V_RTLessorAVSCustAR
             // 
             this.V_RTLessorAVSCustAR.CacheConnection = false;
-            this.V_RTLessorAVSCustAR.CommandText = resources.GetString("V_RTLessorAVSCustAR.CommandText");
+            this.V_RTLessorAVSCustAR.CommandText = "SELECT * FROM V_RTLessorAVSCUSTAR\r\nORDER BY CDAT ";
             this.V_RTLessorAVSCustAR.CommandTimeout = 30;
             this.V_RTLessorAVSCustAR.CommandType = System.Data.CommandType.Text;
             this.V_RTLessorAVSCustAR.DynamicTableName = false;

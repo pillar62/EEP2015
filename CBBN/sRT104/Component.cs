@@ -141,11 +141,15 @@ namespace sRT104
 
             if (ds.Tables[0].Rows.Count > 0)
             {
-                var MEMBERID = ds.Tables[0].Rows[0]["MEMBERID"].ToString();
+                var MEMBERID = ds.Tables[0].Rows[0]["MEMBERID"].ToString().Replace("FBB_" + ZIP + CMTYSEQ, "");
                 if (MEMBERID=="")
                     sKEY = "FBB_" + ZIP + CMTYSEQ + "001";
                 else
+                {
+                    MEMBERID = (int.Parse(MEMBERID) + 1).ToString();
                     sKEY = "FBB_" + ZIP + CMTYSEQ + MEMBERID.PadLeft(3, '0');
+
+                }
             }
             else
             {

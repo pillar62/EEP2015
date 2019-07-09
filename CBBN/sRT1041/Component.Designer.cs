@@ -571,7 +571,7 @@
             // V_RTLessorAVSCUSTAR
             // 
             this.V_RTLessorAVSCUSTAR.CacheConnection = false;
-            this.V_RTLessorAVSCUSTAR.CommandText = "SELECT * FROM RTLessorAVSCUSTAR";
+            this.V_RTLessorAVSCUSTAR.CommandText = "SELECT * FROM V_RTLessorAVSCUSTAR";
             this.V_RTLessorAVSCUSTAR.CommandTimeout = 30;
             this.V_RTLessorAVSCUSTAR.CommandType = System.Data.CommandType.Text;
             this.V_RTLessorAVSCUSTAR.DynamicTableName = false;
