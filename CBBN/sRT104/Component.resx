@@ -433,6 +433,9 @@ LEFT OUTER JOIN RTCode F ON F.KIND='O9' AND F.CODE=A.CASEKIND
 WHERE 1=1
 order by ISNULL(A.DROPDAT, '')+ISNULL(A.CANCELDAT, ''), A.IP11</value>
   </data>
+  <metadata name="V_RTLessorAVSCust.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>622, 498</value>
+  </metadata>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>
   </metadata>

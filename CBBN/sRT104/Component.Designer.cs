@@ -251,6 +251,9 @@
             Srvtools.InfoParameter infoParameter8 = new Srvtools.InfoParameter();
             Srvtools.KeyItem keyItem25 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem26 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem27 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem28 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem29 = new Srvtools.KeyItem();
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTLessorAVSCust = new Srvtools.InfoCommand(this.components);
@@ -277,6 +280,7 @@
             this.cmdRT104C = new Srvtools.InfoCommand(this.components);
             this.RT104D = new Srvtools.InfoCommand(this.components);
             this.cmdRT104Excel = new Srvtools.InfoCommand(this.components);
+            this.V_RTLessorAVSCust = new Srvtools.InfoCommand(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCust)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustCont)).BeginInit();
@@ -294,6 +298,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT104C)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT104D)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT104Excel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.V_RTLessorAVSCust)).BeginInit();
             // 
             // serviceManager1
             // 
@@ -2548,6 +2553,36 @@
             this.cmdRT104Excel.SiteControl = false;
             this.cmdRT104Excel.SiteFieldName = null;
             this.cmdRT104Excel.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // V_RTLessorAVSCust
+            // 
+            this.V_RTLessorAVSCust.CacheConnection = false;
+            this.V_RTLessorAVSCust.CommandText = "SELECT * FROM V_RTLessorAVSCust";
+            this.V_RTLessorAVSCust.CommandTimeout = 30;
+            this.V_RTLessorAVSCust.CommandType = System.Data.CommandType.Text;
+            this.V_RTLessorAVSCust.DynamicTableName = false;
+            this.V_RTLessorAVSCust.EEPAlias = null;
+            this.V_RTLessorAVSCust.EncodingAfter = null;
+            this.V_RTLessorAVSCust.EncodingBefore = "Windows-1252";
+            this.V_RTLessorAVSCust.EncodingConvert = null;
+            this.V_RTLessorAVSCust.InfoConnection = this.InfoConnection1;
+            keyItem27.KeyName = "COMQ1";
+            keyItem28.KeyName = "LINEQ1";
+            keyItem29.KeyName = "CUSID";
+            this.V_RTLessorAVSCust.KeyFields.Add(keyItem27);
+            this.V_RTLessorAVSCust.KeyFields.Add(keyItem28);
+            this.V_RTLessorAVSCust.KeyFields.Add(keyItem29);
+            this.V_RTLessorAVSCust.MultiSetWhere = false;
+            this.V_RTLessorAVSCust.Name = "V_RTLessorAVSCust";
+            this.V_RTLessorAVSCust.NotificationAutoEnlist = false;
+            this.V_RTLessorAVSCust.SecExcept = null;
+            this.V_RTLessorAVSCust.SecFieldName = null;
+            this.V_RTLessorAVSCust.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.V_RTLessorAVSCust.SelectPaging = false;
+            this.V_RTLessorAVSCust.SelectTop = 0;
+            this.V_RTLessorAVSCust.SiteControl = false;
+            this.V_RTLessorAVSCust.SiteFieldName = null;
+            this.V_RTLessorAVSCust.UpdatedRowSource = System.Data.UpdateRowSource.None;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCust)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTLessorAVSCustCont)).EndInit();
@@ -2565,6 +2600,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT104C)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RT104D)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdRT104Excel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.V_RTLessorAVSCust)).EndInit();
 
         }
 
@@ -2596,5 +2632,6 @@
         private Srvtools.InfoCommand cmdRT104C;
         private Srvtools.InfoCommand RT104D;
         private Srvtools.InfoCommand cmdRT104Excel;
+        private Srvtools.InfoCommand V_RTLessorAVSCust;
     }
 }

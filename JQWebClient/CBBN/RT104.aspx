@@ -454,8 +454,8 @@
     <form id="form1" runat="server">
         <div>
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
-            <JQTools:JQDataGrid ID="dataGridView" data-options="pagination:true,view:commandview" RemoteName="sRT104.RTLessorAVSCust" runat="server" AutoApply="True"
-                DataMember="RTLessorAVSCust" Pagination="True" QueryTitle="查詢" EditDialogID="JQDialog1"
+            <JQTools:JQDataGrid ID="dataGridView" data-options="pagination:true,view:commandview" RemoteName="sRT104.V_RTLessorAVSCust" runat="server" AutoApply="True"
+                DataMember="V_RTLessorAVSCust" Pagination="True" QueryTitle="查詢" EditDialogID="JQDialog1"
                 Title="用戶維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Panel" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="False" OnLoadSuccess="dgOnloadSuccess" OnSelect="MySelect">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="社區序號" Editor="infocombobox" FieldName="COMQ1" Format="" Visible="true" Width="120" EditorOptions="valueField:'COMQ1',textField:'COMN',remoteName:'sRT101.View_RTLessorAVSCmtyH',tableName:'View_RTLessorAVSCmtyH',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200"/>
@@ -506,14 +506,15 @@
                     <JQTools:JQToolItem Enabled="True" ItemType="easyui-linkbutton" OnClick="btnReloadClick" Text="資料更新" Visible="True" Icon="icon-reload" />
                 </TooItems>
                 <QueryColumns>
-                    <JQTools:JQQueryColumn AndOr="and" Caption="社區名稱" Condition="%%" DataType="string" Editor="text" FieldName="B.COMN" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="用戶(公司)名稱" Condition="%%" DataType="string" Editor="text" FieldName="A.CUSNC" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="連絡手機" Condition="%%" DataType="string" Editor="text" FieldName="A.MOBILE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="裝機地址" Condition="%%" DataType="string" Editor="text" FieldName="C.ADDR" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="身份證號" Condition="%%" DataType="string" Editor="text" FieldName="A.SOCIALID" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="室內電話" Condition="%%" DataType="string" Editor="text" FieldName="A.CONTACTTEL" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="社區名稱" Condition="%%" DataType="string" Editor="text" FieldName="COMN" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="用戶(公司)名稱" Condition="%%" DataType="string" Editor="text" FieldName="CUSNC" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="連絡手機" Condition="%%" DataType="string" Editor="text" FieldName="MOBILE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="裝機地址" Condition="%%" DataType="string" Editor="text" FieldName="ADDR" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="身份證號" Condition="%%" DataType="string" Editor="text" FieldName="SOCIALID" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="室內電話" Condition="%%" DataType="string" Editor="text" FieldName="CONTACTTEL" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="方案別" Condition="%" DataType="string" Editor="inforefval" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'P5'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="A.COMTYPE" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="140" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="資費" Condition="=" DataType="string" Editor="inforefval" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'O9'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代碼',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="A.CASEKIND" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="篩選已過期(未作廢/退租)" Condition="=" DataType="string" Editor="infooptions" EditorOptions="title:'JQOptions',panelWidth:300,remoteName:'',tableName:'',valueField:'',textField:'',columnCount:2,multiSelect:false,openDialog:true,selectAll:false,selectOnly:false,items:[{text:'過期',value:'Y'},{text:'正常',value:''},{text:'作廢或退租',value:'E'}]" FieldName="EXPIRED_YN" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                 </QueryColumns>
             </JQTools:JQDataGrid>
 

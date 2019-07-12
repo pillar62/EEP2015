@@ -57,7 +57,7 @@
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var BATCHNO = row.BATCHNO;
             var CUSID = row.CUSID;
-            $("#JQDataGrid1").datagrid('setWhere', "CUSID='" + CUSID + "' AND BATCHNO='" + BATCHNO + "'"); //過濾用戶資料
+            $("#JQDataGrid1").datagrid('setWhere', "CUSID='" + CUSID + "'"); //過濾用戶資料
             var row1 = $('#JQDataGrid1').datagrid('getSelected');
             
             var ENTRYNO = row.ENTRYNO;
@@ -116,7 +116,7 @@
             var row = $('#dataGridView').datagrid('getSelected');//取得當前主檔中選中的那個Data
             var BATCHNO = row.BATCHNO;
             var CUSID = row.CUSID;
-            $("#JQDataGrid1").datagrid('setWhere', "CUSID='" + CUSID + "' AND BATCHNO='" + BATCHNO + "'"); //過濾用戶資料
+            $("#JQDataGrid1").datagrid('setWhere', "CUSID='" + CUSID+"'"); //過濾用戶資料
             var row1 = $('#JQDataGrid1').datagrid('getSelected'); //用戶資料
             var row2 = $('#JQDataGrid2').datagrid('getSelected'); //應收付資料
             var data = $("#JQDataGrid2").datagrid('getData');

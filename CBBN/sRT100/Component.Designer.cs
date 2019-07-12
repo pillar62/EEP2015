@@ -1918,7 +1918,7 @@
             // View_RTEmployee
             // 
             this.View_RTEmployee.CacheConnection = false;
-            this.View_RTEmployee.CommandText = "SELECT * FROM dbo.[RTEmployee]";
+            this.View_RTEmployee.CommandText = "SELECT * FROM VIEW_RTEMPLOYEE";
             this.View_RTEmployee.CommandTimeout = 30;
             this.View_RTEmployee.CommandType = System.Data.CommandType.Text;
             this.View_RTEmployee.DynamicTableName = false;
