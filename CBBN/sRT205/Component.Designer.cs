@@ -66,6 +66,8 @@
             Srvtools.KeyItem keyItem6 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem7 = new Srvtools.KeyItem();
             Srvtools.KeyItem keyItem8 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem9 = new Srvtools.KeyItem();
+            Srvtools.KeyItem keyItem10 = new Srvtools.KeyItem();
             this.serviceManager1 = new Srvtools.ServiceManager(this.components);
             this.InfoConnection1 = new Srvtools.InfoConnection(this.components);
             this.RTFaqM = new Srvtools.InfoCommand(this.components);
@@ -81,6 +83,7 @@
             this.cmd = new Srvtools.InfoCommand(this.components);
             this.R_2051 = new Srvtools.InfoCommand(this.components);
             this.R_2052 = new Srvtools.InfoCommand(this.components);
+            this.RTCODE_P7 = new Srvtools.InfoCommand(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTFaqM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_RTFaqM)).BeginInit();
@@ -92,6 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.R_2051)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.R_2052)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RTCODE_P7)).BeginInit();
             // 
             // serviceManager1
             // 
@@ -638,6 +642,34 @@
             this.R_2052.SiteControl = false;
             this.R_2052.SiteFieldName = null;
             this.R_2052.UpdatedRowSource = System.Data.UpdateRowSource.None;
+            // 
+            // RTCODE_P7
+            // 
+            this.RTCODE_P7.CacheConnection = false;
+            this.RTCODE_P7.CommandText = "SELECT DISTINCT CODE, CODENC FROM RTCODE WHERE KIND = \'P7\' ORDER BY CODE\r\n";
+            this.RTCODE_P7.CommandTimeout = 30;
+            this.RTCODE_P7.CommandType = System.Data.CommandType.Text;
+            this.RTCODE_P7.DynamicTableName = false;
+            this.RTCODE_P7.EEPAlias = null;
+            this.RTCODE_P7.EncodingAfter = null;
+            this.RTCODE_P7.EncodingBefore = "Windows-1252";
+            this.RTCODE_P7.EncodingConvert = null;
+            this.RTCODE_P7.InfoConnection = this.InfoConnection1;
+            keyItem9.KeyName = "KIND";
+            keyItem10.KeyName = "CODE";
+            this.RTCODE_P7.KeyFields.Add(keyItem9);
+            this.RTCODE_P7.KeyFields.Add(keyItem10);
+            this.RTCODE_P7.MultiSetWhere = false;
+            this.RTCODE_P7.Name = "RTCODE_P7";
+            this.RTCODE_P7.NotificationAutoEnlist = false;
+            this.RTCODE_P7.SecExcept = null;
+            this.RTCODE_P7.SecFieldName = null;
+            this.RTCODE_P7.SecStyle = Srvtools.SecurityStyle.ssByNone;
+            this.RTCODE_P7.SelectPaging = false;
+            this.RTCODE_P7.SelectTop = 0;
+            this.RTCODE_P7.SiteControl = false;
+            this.RTCODE_P7.SiteFieldName = null;
+            this.RTCODE_P7.UpdatedRowSource = System.Data.UpdateRowSource.None;
             ((System.ComponentModel.ISupportInitialize)(this.InfoConnection1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RTFaqM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.View_RTFaqM)).EndInit();
@@ -649,6 +681,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cmd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.R_2051)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.R_2052)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RTCODE_P7)).EndInit();
 
         }
 
@@ -669,5 +702,6 @@
         private Srvtools.InfoCommand cmd;
         private Srvtools.InfoCommand R_2051;
         private Srvtools.InfoCommand R_2052;
+        private Srvtools.InfoCommand RTCODE_P7;
     }
 }

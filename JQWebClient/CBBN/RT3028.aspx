@@ -114,6 +114,13 @@
                 <asp:ListItem Value="3">3個月</asp:ListItem>
                 <asp:ListItem Value="4">4個月</asp:ListItem>
                 <asp:ListItem Value="5">5個月</asp:ListItem>
+                <asp:ListItem Value="6">6個月</asp:ListItem>
+                <asp:ListItem Value="7">7個月</asp:ListItem>
+                <asp:ListItem Value="8">8個月</asp:ListItem>
+                <asp:ListItem Value="9">9個月</asp:ListItem>
+                <asp:ListItem>10個月</asp:ListItem>
+                <asp:ListItem Value="11">11個月</asp:ListItem>
+                <asp:ListItem Value="12">12個月</asp:ListItem>
             </asp:DropDownList>
             <JQTools:JQDataGrid ID="dataGridMaster" data-options="pagination:true,view:commandview" RemoteName="sRT302.RT3028" runat="server" AutoApply="True"
                 DataMember="RT3028" Pagination="True" QueryTitle="查詢"
@@ -139,11 +146,9 @@
                     </JQTools:JQGridColumn>
                     <JQTools:JQGridColumn Alignment="left" Caption="dd" Editor="text" FieldName="dd" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80">
                     </JQTools:JQGridColumn>
-<<<<<<< HEAD
+
                     <JQTools:JQGridColumn Alignment="left" Caption="第二段條碼" Editor="text" FieldName="CSBARCOD2" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="380">
                     </JQTools:JQGridColumn>
-=======
->>>>>>> fe4568c2813342abd78e21ee1892054f1540b6d2
                 </Columns>
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-search" ItemType="easyui-linkbutton"
