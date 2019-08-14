@@ -877,8 +877,8 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="鄉鎮市" Editor="text" FieldName="TOWNSHIP2" MaxLength="0" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="裝機地址" Editor="text" FieldName="RADDR2" MaxLength="60" Visible="true" Width="160" Format="" />
                     <JQTools:JQGridColumn Alignment="left" Caption="連絡手機" Editor="text" FieldName="MOBILE" Visible="True" Width="80" Format="" MaxLength="30" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="方案別" Editor="text" FieldName="CODENC" MaxLength="0" Visible="true" Width="80" EditorOptions="" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="資費" Editor="text" FieldName="CODENC1" Format="" MaxLength="2" Visible="true" Width="120" EditorOptions="" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="方案別" Editor="text" FieldName="COMTYPENM" MaxLength="0" Visible="true" Width="80" EditorOptions="" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="資費" Editor="text" FieldName="CASEKINDNM" Format="" MaxLength="2" Visible="true" Width="120" EditorOptions="" />
                     <JQTools:JQGridColumn Alignment="left" Caption="IP" Editor="text" FieldName="IP11" Format="" MaxLength="3" Visible="true" Width="100" />
                     <JQTools:JQGridColumn Alignment="left" Caption="用戶申請日" Editor="datebox" FieldName="APPLYDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="完工日" Editor="datebox" FieldName="FINISHDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
