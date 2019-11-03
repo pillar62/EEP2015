@@ -9,7 +9,8 @@
     <script>
         var caseno = Request.getQueryStringByName2("caseno"); //個案編號
         var sMODE = Request.getQueryStringByName2("sMODE");
-        var gcomtype = "7";//Request.getQueryStringByName2("comtype"); //個案編號
+        //var gcomtype = "7";//Request.getQueryStringByName2("comtype"); //個案編號
+        var gcomtype = Request.getQueryStringByName2("comtype"); //個案編號
         var glineq1 = Request.getQueryStringByName2("lineq1"); //個案編號
         var gcomq1 = Request.getQueryStringByName2("comq1"); //個案編號
         var gcusid = Request.getQueryStringByName2("cusid"); //個案編號

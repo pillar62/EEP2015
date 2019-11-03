@@ -150,6 +150,11 @@
             $('#dataGridView').datagrid('reload');
         }
     </script>
+    <style>
+        #dataFormMasterCONSTRUCTIONMEMO{
+            height: 350px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -234,6 +239,7 @@
                         <JQTools:JQFormColumn Alignment="left" Caption="修改員" Editor="text" FieldName="UUSR" Format="" Width="180" MaxLength="6" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="修改日" Editor="datebox" FieldName="UDAT" maxlength="0" Width="180" Format="" ReadOnly="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="個案別" Editor="inforefval" EditorOptions="title:'方案別',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'P5'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代碼',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" FieldName="COMTYPE" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="False" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="工程備註" Editor="textarea" FieldName="CONSTRUCTIONMEMO" MaxLength="0" NewRow="True" ReadOnly="False" RowSpan="50" Span="3" Visible="True" Width="700" />
                     </Columns>
                 </JQTools:JQDataForm>
                 <JQTools:JQDefault ID="defaultMaster" runat="server" BindingObjectID="dataFormMaster" EnableTheming="True">

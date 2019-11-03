@@ -151,7 +151,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
     private XRLabel xrLabel3;
     private XRLabel xrLabel2;
     private XRLabel xrLabel1;
-    private XRShape xrShape70;
     private XRLabel xrLabel18;
     private XRLabel xrLabel25;
     private XRLabel xrLabel24;
@@ -187,6 +186,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
     private XRTableCell xrTableCell8;
     private XRTableCell xrTableCell9;
     private XRTableCell xrTableCell10;
+    private XRLabel xrLabel38;
 
     /// <summary>
     /// Required designer variable.
@@ -226,7 +226,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             System.Resources.ResourceManager resources = global::Resources.RT205R.ResourceManager;
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraReports.UI.XRLabel xrLabel56;
-            DevExpress.XtraPrinting.Shape.ShapeRectangle shapeRectangle1 = new DevExpress.XtraPrinting.Shape.ShapeRectangle();
             DevExpress.XtraPrinting.Shape.ShapeLine shapeLine1 = new DevExpress.XtraPrinting.Shape.ShapeLine();
             DevExpress.XtraPrinting.Shape.ShapeLine shapeLine2 = new DevExpress.XtraPrinting.Shape.ShapeLine();
             DevExpress.XtraPrinting.Shape.ShapeLine shapeLine3 = new DevExpress.XtraPrinting.Shape.ShapeLine();
@@ -307,7 +306,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrShape70 = new DevExpress.XtraReports.UI.XRShape();
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
@@ -468,6 +466,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.FieldCaption = new DevExpress.XtraReports.UI.XRControlStyle();
             this.PageInfo = new DevExpress.XtraReports.UI.XRControlStyle();
             this.DataField = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.xrLabel38 = new DevExpress.XtraReports.UI.XRLabel();
             xrLabel56 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -681,15 +680,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel21.StylePriority.UseFont = false;
             this.xrLabel21.StylePriority.UseForeColor = false;
             this.xrLabel21.Text = "工程師：";
-            // 
-            // xrShape70
-            // 
-            this.xrShape70.BorderWidth = 2F;
-            this.xrShape70.LocationFloat = new DevExpress.Utils.PointFloat(2.208614F, 47.99995F);
-            this.xrShape70.Name = "xrShape70";
-            this.xrShape70.Shape = shapeRectangle1;
-            this.xrShape70.SizeF = new System.Drawing.SizeF(722.9166F, 159.375F);
-            this.xrShape70.StylePriority.UseBorderWidth = false;
             // 
             // xrLabel18
             // 
@@ -1910,10 +1900,10 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             // pageFooterBand1
             // 
             this.pageFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel38,
             this.xrLabel19,
             this.xrPageInfo2,
             this.xrLabel24,
-            this.xrShape70,
             this.xrLabel21,
             this.xrLabel23,
             this.xrLabel25});
@@ -1934,7 +1924,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel19.StylePriority.UseFont = false;
             this.xrLabel19.StylePriority.UseForeColor = false;
             this.xrLabel19.StylePriority.UseTextAlignment = false;
-            this.xrLabel19.Text = "派工處理措施";
+            this.xrLabel19.Text = "工程備註";
             this.xrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrPageInfo2
@@ -2340,6 +2330,22 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.DataField.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.DataField.ForeColor = System.Drawing.Color.Black;
             this.DataField.Name = "DataField";
+            // 
+            // xrLabel38
+            // 
+            this.xrLabel38.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel38.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.CONSTRUCTIONMEMO")});
+            this.xrLabel38.Font = new System.Drawing.Font("標楷體", 10F);
+            this.xrLabel38.LocationFloat = new DevExpress.Utils.PointFloat(2.208614F, 47.99995F);
+            this.xrLabel38.Multiline = true;
+            this.xrLabel38.Name = "xrLabel38";
+            this.xrLabel38.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel38.SizeF = new System.Drawing.SizeF(724.7916F, 149.0417F);
+            this.xrLabel38.StylePriority.UseBorders = false;
+            this.xrLabel38.StylePriority.UseFont = false;
             // 
             // RT205R
             // 
