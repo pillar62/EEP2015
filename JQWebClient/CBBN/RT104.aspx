@@ -246,6 +246,26 @@
                     }
                 });
             }
+            //帶入預設的第一條主線編號
+            if (COMQ1 != "") {
+                $.ajax({
+                    type: "POST",
+                    url: '../handler/jqDataHandle.ashx?RemoteName=sRT104.cmd', //連接的Server端，command
+                    //method后的參數為server的Method名稱  parameters后為端的到后端的參數這裡傳入選中資料的CustomerID欄位
+                    data: "mode=method&method=" + "smRT104GetLINEQ1" + "&parameters=" + COMQ1,
+                    cache: false,
+                    async: false,
+                    success: function (data) {
+                        $('#dataFormMasterLINEQ1').refval('setValue', data);
+                        return data;
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        alert(xhr.status);
+                        alert(thrownError);
+                    }
+                });
+            }
+
         }
 
         //作廢返轉

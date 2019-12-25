@@ -36,11 +36,11 @@ namespace sRT104
             //開啟資料連接
             IDbConnection conn = cmdRT104B.Connection;
             conn.Open();
-            string selectSql = "select * FROM RTLessorAVSCUST WHERE comq1=" + sdata[0] + " and lineq1 = "+ sdata[1] + " and CUSID ='" + sdata[2] + "'";
+            string selectSql = "select * FROM RTLessorAVSCUST WHERE comq1=" + sdata[0] + " and lineq1 = " + sdata[1] + " and CUSID ='" + sdata[2] + "'";
             cmd.CommandText = selectSql;
             DataSet ds = cmd.ExecuteDataSet();
             if (ds.Tables[0].Rows.Count > 0)
-            {                
+            {
                 if (ds.Tables[0].Rows[0]["FINISHDAT"].ToString() != "")
                 {
                     return new object[] { 0, "此用戶已完工，不可作廢。" };
@@ -142,7 +142,7 @@ namespace sRT104
             if (ds.Tables[0].Rows.Count > 0)
             {
                 var MEMBERID = ds.Tables[0].Rows[0]["MEMBERID"].ToString().Replace("FBB_" + ZIP + CMTYSEQ, "");
-                if (MEMBERID=="")
+                if (MEMBERID == "")
                     sKEY = "FBB_" + ZIP + CMTYSEQ + "001";
                 else
                 {
@@ -159,9 +159,42 @@ namespace sRT104
             try
             {
                 if (COMTYPE == "B")
-                    return new object[] { 0,sKEY};
+                    return new object[] { 0, sKEY };
                 else
-                    return new object[] { 0, ""};
+                    return new object[] { 0, "" };
+            }
+            catch (Exception ex)
+            {
+                return new object[] { 0, "無法執行用戶申請作廢作業,錯誤訊息" + ex };
+            }
+        }
+
+        public object[] smRT104GetLINEQ1(object[] objParam)
+        {
+            var ss = (string)objParam[0];
+            var sdata = ss.Split(',');
+            string LINEQ1 = "";
+            //開啟資料連接
+            IDbConnection conn = cmd.Connection;
+            conn.Open();
+            string selectSql = " SELECT LINEQ1 FROM RTLessorAVSCmtyLine"
+                             + " WHERE COMQ1 = " + sdata[0];
+            cmd.CommandText = selectSql;
+            DataSet ds = cmd.ExecuteDataSet();
+
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                LINEQ1 = ds.Tables[0].Rows[0]["LINEQ1"].ToString();
+            }
+            else
+            {
+                LINEQ1 = "";
+            }
+
+            //設定輸入參數的值
+            try
+            {
+                return new object[] { 0, LINEQ1 };
             }
             catch (Exception ex)
             {
@@ -173,21 +206,21 @@ namespace sRT104
         {
             //取得保證金序號 以及 報竣日
             string sgtserial = ucRTLessorAVSCust.GetFieldCurrentValue("GTSERIAL").ToString(); //保證金序號
-            string sDOCKETDAT  = ucRTLessorAVSCust.GetFieldCurrentValue("DOCKETDAT").ToString();; //報竣日
+            string sDOCKETDAT = ucRTLessorAVSCust.GetFieldCurrentValue("DOCKETDAT").ToString(); ; //報竣日
             string sFINISHDAT = ucRTLessorAVSCust.GetFieldCurrentValue("FINISHDAT").ToString();//完工日
             string sSTRBILLINGDAT = ucRTLessorAVSCust.GetFieldCurrentValue("STRBILLINGDAT").ToString(); //開始計費日
             string sGTMONEY = ucRTLessorAVSCust.GetFieldCurrentValue("GTMONEY").ToString(); //保證金 金額
             double dGTMONEY = 0;
 
             string ss = "";
-            if (sFINISHDAT!="" && (sDOCKETDAT == "" || sSTRBILLINGDAT == ""))
+            if (sFINISHDAT != "" && (sDOCKETDAT == "" || sSTRBILLINGDAT == ""))
             {
                 DateTime dDT = Convert.ToDateTime(ucRTLessorAVSCust.GetFieldCurrentValue("FINISHDAT"));
                 ss = Convert.ToString(dDT.AddDays(7));
-                
+
                 //判斷 如果完工日不為空白 且竣工日或是開始計費日為空白 就要押完工日+七天 作為報竣日 及 開始計費日
                 if (sDOCKETDAT == "")
-                {                    
+                {
                     ucRTLessorAVSCust.SetFieldValue("DOCKETDAT", ss);
                     sDOCKETDAT = ss;
                 }
@@ -231,7 +264,7 @@ namespace sRT104
                         ss = ss1.Substring(3, 9);
                         ss = (Convert.ToInt64(ss) + 1).ToString();
                         ss = "000000000" + ss;
-                        ss = "AVS" + ss.Substring(ss.Length-9, 9);
+                        ss = "AVS" + ss.Substring(ss.Length - 9, 9);
                     }
                 }
                 ucRTLessorAVSCust.SetFieldValue("GTSERIAL", ss);
@@ -268,7 +301,7 @@ namespace sRT104
             }
 
             //判斷 如果保證金金額欄位="" 就給0 不然就轉換成數字
-            if (sGTMONEY!="")
+            if (sGTMONEY != "")
             {
                 dGTMONEY = Convert.ToInt64(sGTMONEY);
             }
@@ -305,6 +338,6 @@ namespace sRT104
                 }
                 ucRTLessorAVSCust.SetFieldValue("GTSERIAL", ss);
             }
-        }    
+        }
     }
 }
