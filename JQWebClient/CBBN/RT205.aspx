@@ -132,7 +132,8 @@
                     ANGENCY = $("#ANGENCY_Query").combobox('getValue'); //直經銷
                     codenc1 = $("#codenc1_Query").combobox('getValue'); //結案狀態
                     SNAME = $("#SNAME_Query").combobox('getValue'); //預定施工人員
-                    
+                    tel = $("#tel_Query").val(); //室內電話
+                    MOBILE = $("#MOBILE_Query").val(); //聯絡手機
                     CODEP7 = $("#CODEP7_Query").combogrid('getValue'); //社區名稱
                     if (CODEP7 != "")
                         where = where + " and D.CODE = '" + CODEP7 + "'";
@@ -167,7 +168,15 @@
                         where = where + " and l.finishnum > 0 ";
                     //
                     if (SNAME != "")
-                        where = where + " AND isnull(k.shortnc,i.name) = '"+SNAME+ "'";
+                        where = where + " AND isnull(k.shortnc,i.name) = '" + SNAME + "'";
+
+                    if (tel != "") {
+                        where = where + " AND a.tel like '%" + tel + "%'";
+                    }
+                    if (MOBILE != "") {
+                        where = where + " AND a.MOBILE like '%" + MOBILE + "%'";
+                    }
+
                 }
                 //alert(where);
                 $(dg).datagrid('setWhere', where);
@@ -336,6 +345,8 @@
                 <QueryColumns>
                     <JQTools:JQQueryColumn AndOr="and" Caption="社區名稱" Condition="%" DataType="string" Editor="text" FieldName="comn" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="聯絡人" Condition="%" DataType="string" Editor="text" FieldName="faqman" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="室內電話" Condition="%%" DataType="string" Editor="text" FieldName="tel" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="聯絡手機" Condition="%%" DataType="string" Editor="text" FieldName="MOBILE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="受理時間起" Condition="&gt;=" DataType="datetime" Editor="datebox" FieldName="dropdat" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="受理時間迄" Condition="=" DataType="datetime" Editor="datebox" FieldName="RCVDATE" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="客訴原因" Condition="=" DataType="string" Editor="infocombogrid" EditorOptions="panelWidth:350,valueField:'CODE',textField:'CODENC',remoteName:'sRT205.RTCODE_P7',tableName:'RTCODE_P7',valueFieldCaption:'CODENC',textFieldCaption:'CODENC',selectOnly:false,checkData:false,columns:[{field:'CODE',title:'代碼',width:80,align:'left',sortable:false},{field:'CODENC',title:'報修原因',width:150,align:'left',sortable:false}],cacheRelationText:false,multiple:false" FieldName="CODEP7" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
