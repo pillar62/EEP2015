@@ -15,6 +15,9 @@
         if (COMQ1 == "") {
             flag = false;
         }
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
 
         function dgOnloadSuccess() {
             if (flag) {

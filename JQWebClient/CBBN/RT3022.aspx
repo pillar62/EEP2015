@@ -9,6 +9,10 @@
     <script>
         var flag = true;
 
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
         function OnLoadSuccess()
         {
             if (flag)

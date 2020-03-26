@@ -48,6 +48,10 @@
                 return "";
         }
 
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
         function dgOnloadSuccess()
         {
             if (flag) {

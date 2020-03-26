@@ -30,6 +30,10 @@
             }
         }
 
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
         function dgOnloadSuccess() {
             if (flag) {
                 $("#dataGridView").datagrid('setWhere', "COMQ1='" + COMQ1 + "' AND LINEQ1 ='" + LINEQ1 + "'");

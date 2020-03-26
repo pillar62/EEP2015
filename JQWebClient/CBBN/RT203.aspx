@@ -34,6 +34,10 @@
             parent.addTab("主線派工", "CBBN/RT203.aspx?COMQ1=" + ss + "&LINEQ1=" + s1);
         }
 
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
         function dgOnloadSuccess() {
             if (flag) {
                 $("#dataGridView").datagrid('setWhere', "COMQ1='" + COMQ1 + "' AND LINEQ1 ='"+LINEQ1+"'");

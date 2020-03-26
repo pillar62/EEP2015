@@ -11,6 +11,10 @@
         var flag = true;
         var usr = getClientInfo('_usercode');
 
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
         function dgOnloadSuccess()
         {
             if (flag) {

@@ -10,7 +10,9 @@
         var COMQ1 = Request.getQueryStringByName2("COMQ1");
         var LINEQ1 = Request.getQueryStringByName2("LINEQ1");
         var flag = true;
-
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
         function dgOnloadSuccess() {
             if (flag) {
                 $("#dataGridMaster").datagrid('setWhere', "COMQ1='" + COMQ1 + "' AND LINEQ1=" + LINEQ1);

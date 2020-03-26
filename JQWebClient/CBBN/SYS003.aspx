@@ -11,6 +11,10 @@
         
         var flag = true;
 
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
         function dgOnloadSuccess() {
             if (flag) {
                 var sWhere = "KIND='" + KIND + "'";

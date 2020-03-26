@@ -71,6 +71,10 @@
             parent.addTab("撤線作業", "CBBN/RT103Z.aspx?COMQ1=" + ss + "&LINEQ1=" + s1);
         }
 
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
         function dgOnloadSuccess() {
             alert("2");
             if (flag)

@@ -29,6 +29,10 @@
             }
         }
 
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
         function dgOnloadSuccess() {
             if (flag) {
                 var sWhere = "COMQ1='" + COMQ1 + "'";

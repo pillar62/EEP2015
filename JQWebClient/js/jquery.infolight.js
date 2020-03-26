@@ -2211,6 +2211,11 @@ $.extend($.fn.datagrid.methods, {
             var queryParams = $(this).datagrid('options').queryParams;
             var queryWord = {whereString: where};
             queryParams.queryWord = $.toJSONString(queryWord);
+            //20200326 James加上判斷autoload的屬性
+            if ($(this).datagrid('options').autoLoad == false) {
+                $(this).datagrid('options').autoLoad = true;
+            }
+            //James加上判斷autoload的屬性
             if ($(this).datagrid('options').url == '') {
                 var remoteName = getInfolightOption($(this)).remoteName;
                 var tableName = getInfolightOption($(this)).tableName;
@@ -3054,6 +3059,14 @@ function initInfoDataGrid(datagrid, parentTableName, parentRow) {
         onExpandRow: onExpandRow,
         fitColumns: fitColumns,
         onHeaderContextMenu: onHeaderContextMenu,
+        //20200326James 這裡加上判斷是否autoLoad
+        autoLoad: !((alwaysClose != undefined) && (alwaysClose == true)) || (parentTableName != undefined),
+        onBeforeLoad: function () {
+
+            //alert($(this).datagrid('options').autoLoad);
+            return $(this).datagrid('options').autoLoad;
+        },
+        //James 這裡加上判斷是否autoLoad
         onLoadSuccess: function (data) {
             $.fn.Error.errorCode = 0;
             if (data.keys != undefined && data.keys.length > 0) {

@@ -14,6 +14,11 @@
                 $("#JQDataGrid1").datagrid('setWhere', "INVNO='" + ss + "'"); //發票明細
             }
         }
+
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
         function dgOnloadSuccess() {
             flag = false;
 

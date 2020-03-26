@@ -33,6 +33,12 @@
             return ii;
         }
 
+
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
+
         function dgOnloadSuccess()
         {
             

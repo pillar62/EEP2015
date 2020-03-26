@@ -17,6 +17,10 @@
             }
         }
 
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
         function dgOnloadSuccess() {
             if (flag) {
                 //查詢出該用戶的資料

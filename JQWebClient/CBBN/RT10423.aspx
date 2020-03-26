@@ -219,6 +219,11 @@
             parent.addTab("用戶派工單安裝設備異動資料查詢", "CBBN/RT104235.aspx?CUSID=" + CUSID + "&PRTNO=" + PRTNO + "&ENTRYNO=" + ENTRYNO);
         }
 
+
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
         function dgOnloadSuccess() {
             if (flag) {
                 //查詢出該用戶的資料

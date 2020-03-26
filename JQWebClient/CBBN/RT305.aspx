@@ -13,6 +13,10 @@
         var usr = getClientInfo('_usercode');
         var flag = true;
 
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
         function dgOnloadSuccess() {
             if (flag) {
                 var sWhere = " A.COMQ1='" + COMQ1 + "'";

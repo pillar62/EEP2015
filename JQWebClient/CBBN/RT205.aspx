@@ -14,6 +14,10 @@
         var cusid = Request.getQueryStringByName2("cusid"); //個案編號
         var flag = true;
 
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
         function dgOnloadSuccess() {
             
             if (flag) {
@@ -41,19 +45,7 @@
                 }
 
                 $("#dataGridMaster").datagrid('setWhere', sWhere);
-                $(document).ready(function () {
-                    $('#dataGridMaster').datagrid({
-                        rowStyler: function (index, row) {
-                            if (row.CANCELDAT == null || row.CANCELDAT == "") {
-                                return 'color:black;';
-                            }
-                            else {
-                                return 'color:red; height:50px; font-size: 22px;';
-                            }
 
-                        }
-                    });
-                })
             }
             
 
@@ -78,7 +70,20 @@
                 }
             }                
         }
-        
+        $(document).ready(function () {
+            $('#dataGridMaster').datagrid({
+                rowStyler: function (index, row) {
+                    if (row.CANCELDAT == null || row.CANCELDAT == "") {
+                        return 'color:black;';
+                    }
+                    else {
+                        return 'color:red; height:50px; font-size: 22px;';
+                    }
+
+                }
+            });
+            dgOnloadSuccess();
+        })
         /*
         $(function () {
             if (flag == false){

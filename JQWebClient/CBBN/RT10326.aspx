@@ -16,6 +16,10 @@
             flag = false;
         }
 
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
         function dgOnloadSuccess() {
             if (flag) {
                 var sWhere = " A.COMQ1='" + COMQ1 + "'";

@@ -12,6 +12,7 @@
         var usr = getClientInfo('_usercode');
         
         var flag = true;
+
         if (COMQ1 == "") {
             flag = false;
         }
@@ -116,6 +117,9 @@
             parent.addTab("用戶異動資料查詢", "CBBN/RT10311.aspx?COMQ1=" + ss + "&LINEQ1=" + s1);
         }
 
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
 
         function dgOnloadSuccess() {
             if (flag) {

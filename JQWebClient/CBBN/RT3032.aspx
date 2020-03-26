@@ -14,6 +14,10 @@
             flag = false;
         }
 
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
         function dgOnloadSuccess() {
             if (flag) {
                 $("#dataGridMaster").datagrid('setWhere', " TYY='" + TYY + "' AND TMM ='" + TMM + "'");

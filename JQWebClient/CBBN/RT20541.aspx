@@ -11,7 +11,11 @@
         var usr = getClientInfo('_usercode');
         var workno = Request.getQueryStringByName2("workno"); //個案編號
         var flag = true;
-        
+
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
         function dgOnloadSuccess() {
 
             $("#querydataGridMaster").find(".infosysbutton-cl").hide();

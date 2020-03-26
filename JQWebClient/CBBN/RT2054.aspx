@@ -17,6 +17,10 @@
 
         var flag = true;
 
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
         function InsDefault() {
             if (caseno != "") {
                 return caseno;
@@ -27,21 +31,30 @@
             if (flag) {
                 //查詢出該用戶的資料
                 var sWhere = " LINKNO='" + caseno + "'";
-                $("#dataGridView").datagrid('setWhere', sWhere);
+                if (caseno != null) {
+                    $("#dataGridView").datagrid('setWhere', sWhere);
+                }
                 flag = false;
             }
             flag = false;
 
             if (flag == false) {
                 var row = $("#dataGridView").datagrid("getSelected");//取得當前主檔中選中的那個Data
-                ss = row.FINISHDAT;
-
-                if (ss != null) {
+                if (row == null)
+                {
                     $("#btnModify").hide();
                 }
                 else {
-                    $("#btnModify").show();
+                    ss = row.FINISHDAT;
+
+                    if (ss != null) {
+                        $("#btnModify").hide();
+                    }
+                    else {
+                        $("#btnModify").show();
+                    }
                 }
+
             }
         }
 
