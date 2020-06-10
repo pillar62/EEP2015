@@ -172,7 +172,7 @@ namespace sRT1043
             {
                 if (RSXX.Tables[0].Rows[0]["CANCELDAT"].ToString() != "")
                 {
-                    return new object[] { 0, "約資料已作廢時，不可執行轉應收結案作業。" };
+                    return new object[] { 0, "續約資料已作廢時，不可執行轉應收結案作業。" };
                 }
 
                 if (RSXX.Tables[0].Rows[0]["strbillingdat"].ToString() == "")

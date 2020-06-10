@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <script>
-        var CUSID = Request.getQueryStringByName2("CUSID");
+        var CUSID = Request.getQueryStringByName2("CUSID");        
         var flag = true;
         var usr = getClientInfo('_usercode');
 
@@ -17,17 +17,24 @@
             }
         }
 
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
         function dgOnloadSuccess()
         {
+
             if (flag) {
+                //alert(CUSID);
                 //查詢出該用戶的資料
                 var sWhere = "RTLessorAVSCustSNDWORK.CUSID='" + CUSID + "'";
                 $("#dataGridMaster").datagrid('setWhere', sWhere);
                 var row = $("#dataGridView").datagrid("selectRow", 0);
                 $("#JQDataGrid1").datagrid('setWhere', "CUSID='" + CUSID + "'"); //過濾用戶資料
                 $("#JQDataGrid2").datagrid('setWhere', "CUSID='" + CUSID + "' AND PRTNO='" + row.PRTNO + "'"); //過濾用戶資料
+                flag = false;
             }
-            flag = false;
+            
         }
 
         function btnIns(val) {
@@ -326,7 +333,12 @@
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
             <JQTools:JQDataGrid ID="dataGridMaster" data-options="pagination:true,view:commandview" RemoteName="sRT1042.RT1042" runat="server" AutoApply="True"
                 DataMember="RT1042" Pagination="True" QueryTitle="Query"
-                Title="用戶裝機派工單資料維護" AllowDelete="False" AllowInsert="False" AllowUpdate="False" QueryMode="Fuzzy" AlwaysClose="True" AllowAdd="False" ViewCommandVisible="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="False" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" OnLoadSuccess="dgOnloadSuccess" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" EnableViewState="False" ReportFileName="/DevReportForm/RT1042RF.aspx">
+                Title="用戶裝機派工單資料維護" 
+                AllowDelete="False" AllowInsert="False" AllowUpdate="False" QueryMode="Fuzzy" AlwaysClose="True" AllowAdd="False" 
+                ViewCommandVisible="False" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" 
+                EditMode="Dialog" EditOnEnter="False" InsertCommandVisible="False" MultiSelect="False" NotInitGrid="False" 
+                OnLoadSuccess="dgOnloadSuccess" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" 
+                QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" EnableViewState="False" ReportFileName="/DevReportForm/RT1042RF.aspx">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="用戶" Editor="infocombobox" FieldName="CUSID" Format="" MaxLength="15" Width="120" EditorOptions="valueField:'CUSID',textField:'CUSNC',remoteName:'sRT104.View_RTLessorAVSCust',tableName:'View_RTLessorAVSCust',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
                     <JQTools:JQGridColumn Alignment="left" Caption="主線" Editor="text" FieldName="comqline" Format="" MaxLength="0" Width="60" />

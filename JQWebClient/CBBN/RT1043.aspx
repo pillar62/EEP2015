@@ -15,6 +15,10 @@
         var flag = true;
         var usr = getClientInfo('_usercode');
 
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
         function InsDefault() {
             if (CUSID != "") {
                 
@@ -69,6 +73,8 @@
                 return COMTYPE;
             }
         }
+
+        
 
         function dgOnloadSuccess()
         {

@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="serviceManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 134</value>
+    <value>28, 65</value>
   </metadata>
   <metadata name="InfoConnection1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 212</value>
+    <value>28, 26</value>
   </metadata>
   <metadata name="RTSndWork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 251</value>
+    <value>521, 131</value>
   </metadata>
   <data name="RTSndWork.CommandText" xml:space="preserve">
     <value>select a.*, g.comtype, h.comn, g.faqman
@@ -134,29 +134,34 @@ left outer join HBAdslCmty h on g.comtype = h.comtype and g.comq1 = h.comq1 and 
 where 1=1</value>
   </data>
   <metadata name="ucRTSndWork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 290</value>
+    <value>520, 86</value>
   </metadata>
   <metadata name="View_RTSndWork.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 56</value>
+    <value>511, 37</value>
   </metadata>
   <metadata name="cmd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 95</value>
+    <value>354, 49</value>
   </metadata>
   <metadata name="autoNumber1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 173</value>
+    <value>641, 131</value>
   </metadata>
   <metadata name="cmdRT2054R.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>316, 145</value>
   </metadata>
   <data name="cmdRT2054R.CommandText" xml:space="preserve">
-    <value>SELECT A.*, B.NM_LINERATE FROM V_RT205R A
-LEFT JOIN (SELECT A.LINERATE, A.COMQ1, B.CODENC AS NM_LINERATE
+    <value>SELECT A.*, B.NM_LINERATE
+, C.COTIN, C.PORT, C.COTOUT, C.DUEDAT, C.YN_COLINE
+FROM V_RT205R A
+LEFT JOIN 
+(
+SELECT A.LINERATE, A.COMQ1, B.CODENC AS NM_LINERATE
 FROM (
 SELECT MAX(LINERATE) AS LINERATE, COMQ1
 FROM RTLessorAVSCmtyLine A
 GROUP BY COMQ1) A
 LEFT JOIN RTCODE B ON B.KIND='D3' AND B.CODE=A.LINERATE
-) B ON B.COMQ1=A.COMQ1</value>
+) B ON B.COMQ1=A.COMQ1
+LEFT JOIN RTLessorAVSCust C ON C.CUSID = A.CUSID</value>
   </data>
   <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>False</value>

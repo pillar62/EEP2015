@@ -439,6 +439,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel31 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel63 = new DevExpress.XtraReports.UI.XRLabel();
             this.pageFooterBand1 = new DevExpress.XtraReports.UI.PageFooterBand();
+            this.xrLabel38 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.reportHeaderBand1 = new DevExpress.XtraReports.UI.ReportHeaderBand();
@@ -466,7 +467,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.FieldCaption = new DevExpress.XtraReports.UI.XRControlStyle();
             this.PageInfo = new DevExpress.XtraReports.UI.XRControlStyle();
             this.DataField = new DevExpress.XtraReports.UI.XRControlStyle();
-            this.xrLabel38 = new DevExpress.XtraReports.UI.XRLabel();
             xrLabel56 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
@@ -766,7 +766,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             // xrLabel10
             // 
             this.xrLabel10.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.overdue")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.DUEDAT", "{0:yyyy/MM/dd HH:mm}")});
             this.xrLabel10.Font = new System.Drawing.Font("標楷體", 10F);
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(603.0435F, 242.0834F);
             this.xrLabel10.Name = "xrLabel10";
@@ -777,7 +777,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             // xrLabel9
             // 
             this.xrLabel9.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.dropdat", "{0:yyyy/MM/dd}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.YN_COLINE", "{0:yyyy/MM/dd}")});
             this.xrLabel9.Font = new System.Drawing.Font("標楷體", 10F);
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(603.0435F, 209.5833F);
             this.xrLabel9.Name = "xrLabel9";
@@ -788,7 +788,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             // xrLabel8
             // 
             this.xrLabel8.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.duedat", "{0:yyyy/MM/dd}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.COTOUT", "{0:yyyy/MM/dd}")});
             this.xrLabel8.Font = new System.Drawing.Font("標楷體", 10F);
             this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(603.0421F, 179.0833F);
             this.xrLabel8.Name = "xrLabel8";
@@ -799,7 +799,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             // xrLabel6
             // 
             this.xrLabel6.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.strbillingdat", "{0:yyyy/MM/dd}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.PORT", "{0:yyyy/MM/dd}")});
             this.xrLabel6.Font = new System.Drawing.Font("標楷體", 10F);
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(603.0435F, 150.2533F);
             this.xrLabel6.Name = "xrLabel6";
@@ -1472,7 +1472,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel73.StyleName = "FieldCaption";
             this.xrLabel73.StylePriority.UseFont = false;
             this.xrLabel73.StylePriority.UseForeColor = false;
-            this.xrLabel73.Text = "欠拆";
+            this.xrLabel73.Text = "到期日";
             // 
             // xrLine9
             // 
@@ -1491,7 +1491,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel72.StyleName = "FieldCaption";
             this.xrLabel72.StylePriority.UseFont = false;
             this.xrLabel72.StylePriority.UseForeColor = false;
-            this.xrLabel72.Text = "退租日";
+            this.xrLabel72.Text = "共線";
             // 
             // xrLine8
             // 
@@ -1510,7 +1510,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel69.StyleName = "FieldCaption";
             this.xrLabel69.StylePriority.UseFont = false;
             this.xrLabel69.StylePriority.UseForeColor = false;
-            this.xrLabel69.Text = "到期日";
+            this.xrLabel69.Text = "C端";
             // 
             // xrLabel70
             // 
@@ -1523,7 +1523,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel70.StyleName = "FieldCaption";
             this.xrLabel70.StylePriority.UseFont = false;
             this.xrLabel70.StylePriority.UseForeColor = false;
-            this.xrLabel70.Text = "計費日";
+            this.xrLabel70.Text = "B端";
             // 
             // xrLabel71
             // 
@@ -1536,7 +1536,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel71.StyleName = "FieldCaption";
             this.xrLabel71.StylePriority.UseFont = false;
             this.xrLabel71.StylePriority.UseForeColor = false;
-            this.xrLabel71.Text = "報竣日";
+            this.xrLabel71.Text = "A端";
             // 
             // xrLabel68
             // 
@@ -1766,7 +1766,7 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             // xrLabel48
             // 
             this.xrLabel48.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.docketdat", "{0:yyyy/MM/dd}")});
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.COTIN", "{0:yyyy/MM/dd}")});
             this.xrLabel48.Font = new System.Drawing.Font("標楷體", 10F);
             this.xrLabel48.LocationFloat = new DevExpress.Utils.PointFloat(603.0421F, 119.0833F);
             this.xrLabel48.Name = "xrLabel48";
@@ -1910,6 +1910,22 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.pageFooterBand1.HeightF = 282.2917F;
             this.pageFooterBand1.LockedInUserDesigner = true;
             this.pageFooterBand1.Name = "pageFooterBand1";
+            // 
+            // xrLabel38
+            // 
+            this.xrLabel38.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel38.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
+            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.CONSTRUCTIONMEMO")});
+            this.xrLabel38.Font = new System.Drawing.Font("標楷體", 10F);
+            this.xrLabel38.LocationFloat = new DevExpress.Utils.PointFloat(2.208614F, 47.99995F);
+            this.xrLabel38.Multiline = true;
+            this.xrLabel38.Name = "xrLabel38";
+            this.xrLabel38.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel38.SizeF = new System.Drawing.SizeF(724.7916F, 149.0417F);
+            this.xrLabel38.StylePriority.UseBorders = false;
+            this.xrLabel38.StylePriority.UseFont = false;
             // 
             // xrLabel19
             // 
@@ -2330,22 +2346,6 @@ public class RT205R : DevExpress.XtraReports.UI.XtraReport
             this.DataField.Font = new System.Drawing.Font("Times New Roman", 10F);
             this.DataField.ForeColor = System.Drawing.Color.Black;
             this.DataField.Name = "DataField";
-            // 
-            // xrLabel38
-            // 
-            this.xrLabel38.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrLabel38.DataBindings.AddRange(new DevExpress.XtraReports.UI.XRBinding[] {
-            new DevExpress.XtraReports.UI.XRBinding("Text", null, "Query.CONSTRUCTIONMEMO")});
-            this.xrLabel38.Font = new System.Drawing.Font("標楷體", 10F);
-            this.xrLabel38.LocationFloat = new DevExpress.Utils.PointFloat(2.208614F, 47.99995F);
-            this.xrLabel38.Multiline = true;
-            this.xrLabel38.Name = "xrLabel38";
-            this.xrLabel38.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel38.SizeF = new System.Drawing.SizeF(724.7916F, 149.0417F);
-            this.xrLabel38.StylePriority.UseBorders = false;
-            this.xrLabel38.StylePriority.UseFont = false;
             // 
             // RT205R
             // 
