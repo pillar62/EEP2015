@@ -622,13 +622,13 @@
                     </Columns>
                 </JQTools:JQDataForm>
 
-                <JQTools:JQDataGrid ID="dataGridDetail" runat="server" AutoApply="False" DataMember="RTLessorAVSCustReturn" Pagination="False" ParentObjectID="dataFormMaster" RemoteName="sRT104.RTLessorAVSCust" Title="明細資料" AlwaysClose="True" Visible="False" >
+                <JQTools:JQDataGrid ID="dataGridDetail" runat="server" AutoApply="False" DataMember="RTLessorAVSCustReturn" Pagination="False" ParentObjectID="dataFormMaster" RemoteName="sRT104.RTLessorAVSCust" Title="明細資料" AlwaysClose="True" AllowAdd="True" AllowDelete="True" AllowUpdate="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True" >
                     <Columns>
                         <JQTools:JQGridColumn Alignment="left" Caption="CUSID" Editor="text" FieldName="CUSID" Format="" Width="120" />
                         <JQTools:JQGridColumn Alignment="right" Caption="ENTRYNO" Editor="numberbox" FieldName="ENTRYNO" Format="" Width="120" />
-                        <JQTools:JQGridColumn Alignment="left" Caption="APPLYDAT" Editor="datebox" FieldName="APPLYDAT" Format="" Width="120" />
+                        <JQTools:JQGridColumn Alignment="left" Caption="APPLYDAT" Editor="datebox" FieldName="APPLYDAT" Format="yyyy.mm.dd" Width="120" />
                         <JQTools:JQGridColumn Alignment="left" Caption="PAYCYCLE" Editor="text" FieldName="PAYCYCLE" Format="" Width="120" />
-                        <JQTools:JQGridColumn Alignment="right" Caption="PERIOD" Editor="numberbox" FieldName="PERIOD" Format="" Width="120" />
+                        <JQTools:JQGridColumn Alignment="right" Caption="PERIOD" Editor="datebox" FieldName="PERIOD" Format="" Width="120" EditorOptions="dateFormat:'nvarchar',showTimeSpinner:false,showSeconds:true,editable:true" />
                         <JQTools:JQGridColumn Alignment="left" Caption="SECONDCASE" Editor="text" FieldName="SECONDCASE" Format="" Width="120" />
                         <JQTools:JQGridColumn Alignment="right" Caption="AMT" Editor="numberbox" FieldName="AMT" Format="" Width="120" />
                         <JQTools:JQGridColumn Alignment="left" Caption="PAYTYPE" Editor="text" FieldName="PAYTYPE" Format="" Width="120" />
