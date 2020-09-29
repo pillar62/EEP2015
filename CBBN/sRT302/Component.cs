@@ -355,7 +355,8 @@ namespace sRT302
             }
             catch (Exception ex)
             {
-                return new object[] { 0, "無法執行產生應收付帳款轉入資料作業,錯誤訊息"+ ex};
+                //return new object[] { 0, "無法執行產生應收付帳款轉入資料作業,錯誤訊息" + cmd.CommandText };
+                return new object[] { 0, "無法執行產生應收付帳款轉入資料作業,錯誤訊息" + ex + ", sql語法：" + cmd.CommandText };
             }
         }
     }

@@ -489,20 +489,22 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="縣市" Editor="infocombogrid" FieldName="CUTID2" MaxLength="0" Visible="true" Width="80" EditorOptions="valueField:'CUTID',textField:'CUTNC',remoteName:'sRT100.View_RTCounty',tableName:'View_RTCounty',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,onSelect:FilterTown2,panelHeight:200" />
                     <JQTools:JQGridColumn Alignment="left" Caption="鄉鎮市" Editor="text" FieldName="TOWNSHIP2" MaxLength="0" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="裝機地址" Editor="text" FieldName="RADDR2" MaxLength="60" Visible="true" Width="160" Format="" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="連絡手機" Editor="text" FieldName="MOBILE" Visible="True" Width="80" Format="" MaxLength="30" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="室內電話" Editor="text" FieldName="CONTACTTEL" Visible="True" Width="120" MaxLength="0" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="連絡手機" Editor="text" FieldName="MOBILE" MaxLength="30" Visible="true" Width="80" Format="" />
                     <JQTools:JQGridColumn Alignment="left" Caption="方案別" Editor="inforefval" FieldName="COMTYPE" MaxLength="0" Visible="true" Width="80" EditorOptions="title:'方案別',panelWidth:350,panelHeight:200,remoteName:'sRT100.RT104P5',tableName:'RT104P5',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'P5'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'個案代號',textFieldCaption:'個案名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
                     <JQTools:JQGridColumn Alignment="left" Caption="資費" Editor="inforefval" FieldName="CASEKIND" Format="" MaxLength="2" Visible="true" Width="120" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.View_RTCode',tableName:'View_RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'O9'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'CODE',textFieldCaption:'CODENC',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="IP" Editor="text" FieldName="IP11" Format="" MaxLength="3" Visible="true" Width="100" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="IP" Editor="text" FieldName="IP11" Format="" Visible="true" Width="100" MaxLength="3" />
                     <JQTools:JQGridColumn Alignment="left" Caption="用戶申請日" Editor="datebox" FieldName="APPLYDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="完工日" Editor="datebox" FieldName="FINISHDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="報竣日" Editor="datebox" FieldName="DOCKETDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="開始計費日" Editor="datebox" FieldName="STRBILLINGDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="最近續約計費日" Editor="datebox" FieldName="NEWBILLINGDAT" Format="yyyy/mm/dd" Visible="true" Width="80" MaxLength="0" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="到期日" Editor="datebox" FieldName="DUEDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="公關戶" Editor="text" FieldName="FREECODE" Format="" MaxLength="1" Visible="true" Width="60" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="開始計費日" Editor="datebox" FieldName="STRBILLINGDAT" Format="yyyy/mm/dd" Visible="true" Width="80" MaxLength="0" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="最近續約計費日" Editor="datebox" FieldName="NEWBILLINGDAT" Format="yyyy/mm/dd" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="到期日" Editor="datebox" FieldName="DUEDAT" Format="yyyy/mm/dd" MaxLength="0" Visible="true" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="公關戶" Editor="text" FieldName="FREECODE" Format="" Frozen="False" IsNvarChar="False" MaxLength="1" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="60">
+                    </JQTools:JQGridColumn>
                     <JQTools:JQGridColumn Alignment="left" Caption="退租日" Editor="datebox" FieldName="DROPDAT" Format="yyyy/mm/dd" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="80">
                     </JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="CANCELDAT" Format="yyyy/mm/dd" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="80">
+                    <JQTools:JQGridColumn Alignment="left" Caption="作廢日" Editor="datebox" FieldName="CANCELDAT" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="80" Format="yyyy/mm/dd">
                     </JQTools:JQGridColumn>
                     <JQTools:JQGridColumn Alignment="left" Caption="客訴次數" Editor="text" FieldName="QT_CC" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="80">
                     </JQTools:JQGridColumn>
@@ -622,7 +624,7 @@
                     </Columns>
                 </JQTools:JQDataForm>
 
-                <JQTools:JQDataGrid ID="dataGridDetail" runat="server" AutoApply="False" DataMember="RTLessorAVSCustReturn" Pagination="False" ParentObjectID="dataFormMaster" RemoteName="sRT104.RTLessorAVSCust" Title="明細資料" AlwaysClose="True" AllowAdd="True" AllowDelete="True" AllowUpdate="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True" >
+                <JQTools:JQDataGrid ID="dataGridDetail" runat="server" AutoApply="False" DataMember="RTLessorAVSCustReturn" Pagination="False" ParentObjectID="dataFormMaster" RemoteName="sRT104.RTLessorAVSCust" Title="明細資料" AlwaysClose="True" AllowAdd="True" AllowDelete="True" AllowUpdate="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="True" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTitle="Query" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="True" ViewCommandVisible="True" Visible="False" >
                     <Columns>
                         <JQTools:JQGridColumn Alignment="left" Caption="CUSID" Editor="text" FieldName="CUSID" Format="" Width="120" />
                         <JQTools:JQGridColumn Alignment="right" Caption="ENTRYNO" Editor="numberbox" FieldName="ENTRYNO" Format="" Width="120" />
@@ -674,6 +676,7 @@
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="_today" FieldName="EDAT" RemoteMethod="True" />
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="01" FieldName="CUSTSRC" RemoteMethod="True" />
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="N" FieldName="FREECODE" RemoteMethod="False" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="_usercode" FieldName="EUSR" RemoteMethod="False" />
                     </Columns>
                 </JQTools:JQDefault>
                 <JQTools:JQValidate ID="validateMaster" runat="server" BindingObjectID="dataFormMaster" BorderStyle="NotSet" ClientIDMode="Inherit" Enabled="True" EnableTheming="True" EnableViewState="True" ViewStateMode="Inherit">

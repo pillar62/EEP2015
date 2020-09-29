@@ -370,7 +370,6 @@
                     <JQTools:JQToolItem Enabled="True" Icon="icon-excel" ItemType="easyui-linkbutton" OnClick="exportGrid" Text="Export" Visible="True" />
                 </TooItems>
             </JQTools:JQDataGrid>
-        </p>
         </div>
         請指定超商代收款檔<p>
             <JQTools:JQFileUpload ID="JQFileUpload1" runat="server" BorderWidth="600px" FileSizeLimited="50000" ShowButton="True" ShowLocalFile="True" UpLoadFolder="barcode" Width="600px" onSuccess="fileuploadsuccess" />
