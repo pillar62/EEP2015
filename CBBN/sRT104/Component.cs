@@ -211,6 +211,11 @@ namespace sRT104
             string sSTRBILLINGDAT = ucRTLessorAVSCust.GetFieldCurrentValue("STRBILLINGDAT").ToString(); //開始計費日
             string sGTMONEY = ucRTLessorAVSCust.GetFieldCurrentValue("GTMONEY").ToString(); //保證金 金額
             double dGTMONEY = 0;
+            //修改人員、修改者
+            string sNow = DateTime.Now.Date.ToString("yyyyMMdd");
+            string UUSR = this.GetClientInfo(ClientInfoType.LoginUser).ToString();
+            ucRTLessorAVSCust.SetFieldValue("UDAT", DateTime.Now);
+            ucRTLessorAVSCust.SetFieldValue("UUSR", UUSR);
 
             string ss = "";
             if (sFINISHDAT != "" && (sDOCKETDAT == "" || sSTRBILLINGDAT == ""))
