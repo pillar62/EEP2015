@@ -93,17 +93,17 @@
                 return false;
             }
 
-            if (DROPDAT != null && DROPDAT != "") {
-                alert("客戶已經退租!!");
-                return false;
-            }
+            //if (DROPDAT != null && DROPDAT != "") {
+            //    alert("客戶已經退租!!");
+            //    return false;
+            //}
 
             if (SETAMT == 0 && MOVEAMT == 0 && EQUIPAMT == 0 && GTAMT == 0)
             {
                 alert("金額不可為0!");
                 return false;
             }
-
+            
             $.ajax({
                 type: "POST",
                 url: '../handler/jqDataHandle.ashx?RemoteName=sRT1041.cmdRT1041', //連接的Server端，command
