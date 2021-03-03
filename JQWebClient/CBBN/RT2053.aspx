@@ -11,22 +11,27 @@
         var flag = true;
         var usr = getClientInfo('_usercode');
 
+        $(document).ready(function () {
+            dgOnloadSuccess();
+        })
+
         function InsDefault() {
             if (caseno != "") {
                 return caseno;
             }
         }
 
-        $(document).ready(function () {
-            dgOnloadSuccess();
-        })
 
         function dgOnloadSuccess()
         {
+            //alert($("#dataGridView").datagrid('options').autoLoad);
             if (flag) {
                 //查詢出該用戶的資料
+
                 var sWhere = "caseno='" + caseno + "'";
-                $("#dataGridView").datagrid('setWhere', sWhere);                
+                //$("#dataGridView").datagrid('setWhere', '1=0');
+                $("#dataGridView").datagrid('setWhere', sWhere);
+                flag = false;
             }
             flag = false;
         }
@@ -72,7 +77,8 @@
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
             <JQTools:JQDataGrid ID="dataGridView" data-options="pagination:true,view:commandview" RemoteName="sRT205.RTFaqAdd" runat="server" AutoApply="True"
                 DataMember="RTFaqAdd" Pagination="True" QueryTitle="Query" EditDialogID="JQDialog1"
-                Title="客訴追件維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="False" OnLoadSuccess="dgOnloadSuccess">
+                Title="客訴追件維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="False" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" 
+                QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="False">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="客訴單號+聯絡人" Editor="inforefval" FieldName="CASENO" Format="" MaxLength="10" Visible="true" Width="120" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT205.View_RTFaqM',tableName:'View_RTFaqM',columns:[{field:'CASENO',title:'客訴單號',width:80,align:'left',table:'',isNvarChar:false,queryCondition:''},{field:'FAQMAN',title:'報修聯絡人',width:80,align:'left',table:'',isNvarChar:false,queryCondition:''}],columnMatches:[],whereItems:[],valueField:'CASENO',textField:'FAQMAN',valueFieldCaption:'CASENO',textFieldCaption:'單號+聯絡人',cacheRelationText:false,checkData:false,showValueAndText:true,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
                     <JQTools:JQGridColumn Alignment="left" Caption="項次" Editor="text" FieldName="ENTRYNO" Format="" Visible="False" Width="30" />

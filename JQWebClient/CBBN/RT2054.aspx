@@ -28,6 +28,7 @@
         }
 
         function dgOnloadSuccess() {
+            //alert($("#dataGridView").datagrid('options').autoLoad);
             if (flag) {
                 //查詢出該用戶的資料
                 var sWhere = " LINKNO='" + caseno + "'";
@@ -176,7 +177,7 @@
             <JQTools:JQScriptManager ID="JQScriptManager1" runat="server" />
             <JQTools:JQDataGrid ID="dataGridView" data-options="pagination:true,view:commandview" RemoteName="sRT2054.RTSndWork" runat="server" AutoApply="True"
                 DataMember="RTSndWork" Pagination="True" QueryTitle="Query" EditDialogID="JQDialog1"
-                Title="客訴派工單維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="False" OnLoadSuccess="dgOnloadSuccess" OnSelect="MySelect">
+                Title="客訴派工單維護" AllowAdd="True" AllowDelete="True" AllowUpdate="True" AlwaysClose="True" BufferView="False" CheckOnSelect="True" ColumnsHibeable="False" DeleteCommandVisible="False" DuplicateCheck="False" EditMode="Dialog" EditOnEnter="True" InsertCommandVisible="True" MultiSelect="False" NotInitGrid="False" PageList="10,20,30,40,50" PageSize="10" QueryAutoColumn="False" QueryLeft="" QueryMode="Window" QueryTop="" RecordLock="False" RecordLockMode="None" RowNumbers="True" TotalCaption="Total:" UpdateCommandVisible="False" ViewCommandVisible="False" OnSelect="MySelect">
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="派工單號" Editor="text" FieldName="WORKNO" Format="" MaxLength="12" Visible="true" Width="120" />
                     <JQTools:JQGridColumn Alignment="left" Caption="客訴單號" Editor="text" FieldName="LINKNO" Format="" MaxLength="15" Visible="true" Width="120" />
