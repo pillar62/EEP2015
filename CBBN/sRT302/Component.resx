@@ -218,7 +218,8 @@ inner join RTLessorAVSCustBillingPrtsub on RTLessorAVSCustBillingPrt.batch=RTLes
 inner join RTLessorAVSCust a on a.cusid=RTLessorAVSCustBillingPrtsub.cusid and a.canceldat is null 
 inner join RTLessorAVSCmtyLine b on a.COMQ1 = b.COMQ1 and a.LINEQ1 = b.LINEQ1 
 inner join RTLessorAVSCmtyH c on a.COMQ1 = c.COMQ1 
-left outer join RTLessorAVSCustcont g on g.cusid=RTLessorAVSCustBillingPrtsub.cusid 
+left outer join RTLessorAVSCustcont g on g.cusid=RTLessorAVSCustBillingPrtsub.cusid  
+and g.CSNOTICEID = RTLessorAVSCustBillingPrtsub.NOTICEID
 left outer join rtcode e on a.paycycle=e.code and e.kind='M8' 
 left outer join rtcode f on a.paytype=f.code and f.kind='M9' 
 left outer join rtcode i on i.code = g.paytype and i.kind ='M9' 

@@ -315,8 +315,8 @@
                 <Columns>
                     <JQTools:JQGridColumn Alignment="left" Caption="客訴單號" Editor="text" FieldName="caseno" Format="" MaxLength="10" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="方案別" Editor="text" FieldName="comtype" Format="" MaxLength="1" Width="120" Visible="False" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="經銷" Editor="text" FieldName="ANGENCY" Format="" MaxLength="0" Width="60" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="業務" Editor="text" FieldName="leader" Format="" MaxLength="0" Width="60" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="經銷" Editor="text" FieldName="ANGENCY" Format="" MaxLength="0" Width="60" Visible="False" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="業務" Editor="text" FieldName="leader" Format="" MaxLength="0" Width="60" Visible="False" />
                     <JQTools:JQGridColumn Alignment="left" Caption="方案別" Editor="text" FieldName="codenc" Format="" MaxLength="0" Width="80" />
                     <JQTools:JQGridColumn Alignment="left" Caption="主線" Editor="text" FieldName="COMLINE" Format="" MaxLength="0" Width="40" Visible="False" />
                     <JQTools:JQGridColumn Alignment="left" Caption="社區名稱" Editor="text" FieldName="COMN" Format="" MaxLength="0" Width="120" />
@@ -330,11 +330,13 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="結案時間" Editor="datebox" FieldName="closedat" Format="yyyy/mm/dd HH:MM" MaxLength="0" Width="90" />
                     <JQTools:JQGridColumn Alignment="left" Caption="客戶來源" Editor="text" FieldName="codenc3" Format="" Width="120" Visible="False" />
                     <JQTools:JQGridColumn Alignment="right" Caption="追件數" Editor="numberbox" FieldName="QT_CASE" Format="" MaxLength="0" Width="60" />
-                    <JQTools:JQGridColumn Alignment="left" Caption="預定施工人" Editor="text" FieldName="SNAME" Format="" MaxLength="0" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="派工日期" Editor="text" FieldName="SNDWRKDAT" Format="yyyy/mm/dd" MaxLength="0" Width="80" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="實際施工人" Editor="text" FieldName="SNAME" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="80" Format=""></JQTools:JQGridColumn>
                     <JQTools:JQGridColumn Alignment="left" Caption="已完工" Editor="text" FieldName="finishnum" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="60" Format=""></JQTools:JQGridColumn>
                     <JQTools:JQGridColumn Alignment="left" Caption="社區代號" Editor="text" FieldName="comq1" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80"></JQTools:JQGridColumn>
                     <JQTools:JQGridColumn Alignment="left" Caption="lineq1" Editor="text" FieldName="lineq1" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80"></JQTools:JQGridColumn>
-                    <JQTools:JQGridColumn Alignment="left" Caption="cusid" Editor="text" FieldName="cusid" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80"></JQTools:JQGridColumn>
+                    <JQTools:JQGridColumn Alignment="left" Caption="cusid" Editor="text" FieldName="cusid" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80">
+                    </JQTools:JQGridColumn>
                     <JQTools:JQGridColumn Alignment="left" Caption="entryno" Editor="text" FieldName="entryno" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80">
                     </JQTools:JQGridColumn>
                     <JQTools:JQGridColumn Alignment="left" Caption="作廢時間" Editor="text" FieldName="CANCELDAT" Format="yyyy/mm/dd HH:MM:SS" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="True" Width="80">
@@ -365,7 +367,7 @@
                     <JQTools:JQQueryColumn AndOr="and" Caption="受理人員" Condition="%" DataType="string" Editor="infocombobox" FieldName="CUSNC" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" EditorOptions="valueField:'CODE',textField:'NAME',remoteName:'sRT205.R_2051',tableName:'R_2051',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="直經銷" Condition="%" DataType="string" Editor="infocombobox" EditorOptions="items:[{value:'0',text:'全部',selected:'false'},{value:'1',text:'直銷',selected:'false'},{value:'2',text:'經銷',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" FieldName="ANGENCY" IsNvarChar="False" NewLine="True" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
                     <JQTools:JQQueryColumn AndOr="and" Caption="結案狀態" Condition="%" DataType="string" Editor="infocombobox" EditorOptions="items:[{value:'0',text:'全部',selected:'false'},{value:'1',text:'未結案',selected:'true'},{value:'2',text:'已結案',selected:'false'},{value:'3',text:'未完工',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" FieldName="codenc1" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" />
-                    <JQTools:JQQueryColumn AndOr="and" Caption="預定施工人員" Condition="%" DataType="string" Editor="infocombobox" FieldName="SNAME" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" EditorOptions="valueField:'NAME',textField:'NAME',remoteName:'sRT205.R_2052',tableName:'R_2052',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
+                    <JQTools:JQQueryColumn AndOr="and" Caption="實際施工人員" Condition="%" DataType="string" Editor="infocombobox" FieldName="SNAME" IsNvarChar="False" NewLine="False" RemoteMethod="False" RowSpan="0" Span="0" Width="125" EditorOptions="valueField:'NAME',textField:'NAME',remoteName:'sRT205.R_2052',tableName:'R_2052',pageSize:'-1',checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
                 </QueryColumns>
             </JQTools:JQDataGrid>
         </div>

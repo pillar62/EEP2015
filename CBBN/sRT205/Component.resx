@@ -142,7 +142,7 @@ c.dropdat, a.faqman, j.codenc, d.codenc, isnull(e.NAME,'') AS CUSNC, left(conver
 , a.closedat, o.codenc, count(g.caseno) AS QT_CASE, isnull(k.shortnc,i.name) AS SNAME, 
 case when l.finishnum &gt; 0 then '' else 'Y' end as finishnum , a.comq1, a.lineq1, c.cusid, 0 AS entryno, a.tel, a.MOBILE 
 , a.rcvusr, A.CANCELDAT
-, D.CODE AS CODEP7
+, D.CODE AS CODEP7, H.SNDWRKDAT
 from RTFaqM a left outer join RTCode b on a.comtype = b.code and b.kind ='P5' 
 left outer join V_RT205 c on a.comtype = c.comtype and a.comq1 = c.comq1 and a.lineq1 = c.lineq1 and a.cusid = c.cusid --and a.entryno = c.entryno 
 left outer join V_RT2051 n on a.comtype = n.comtype and a.comq1 = n.comq1 and a.lineq1 = n.lineq1 
@@ -154,7 +154,7 @@ left outer join RTFaqAdd g on g.caseno = a.caseno and g.canceldat is null
 left outer join RTCode j on a.iobound = j.code and j.kind ='P8' 
 left outer join RTSndWork h inner join (select max(workno) as maxworkno, linkno from RTSndWork where canceldat is null 			
  group by linkno) m on m.linkno = h.linkno and m.maxworkno = h.workno on h.linkno = a.caseno  
-left outer join RTEmployee i on i.emply = h.assigneng 
+left outer join RTEmployee i on i.emply = h.FINISHENG 
 left outer join RTObj k on k.cusid = h.assigncons 
 left outer join (select linkno, count(*) as finishnum from RTSndwork 
  where finishdat is null and canceldat is null 
@@ -164,7 +164,7 @@ where a.caseno &gt; ''
  group by a.caseno, l.finishnum, a.rcvusr, a.comtype, case when p.consignee ='12973008' then '原遠端戶' else n.groupnc end, n.leader, b.codenc, convert(varchar(5), n.comq1)+case when n.lineq1=0 then '' else '-'+convert(varchar(5), n.lineq1) end, n.comn, 
 a.faqman, c.dropdat, j.codenc, d.codenc, isnull(E.NAME,''), left(convert(varchar(25), a.rcvdat, 20), 16), a.closedat, o.codenc, isnull(k.shortnc,i.name), 
 case when l.finishnum &gt;0 then '' else 'Y' end , a.comq1, a.lineq1, c.cusid, a.tel, a.MOBILE, r.COMN
-, A.CANCELDAT, D.CODE
+, A.CANCELDAT, D.CODE, H.SNDWRKDAT
 order by left(convert(varchar(25), a.rcvdat, 20), 16) desc </value>
   </data>
   <metadata name="RTFaqAdd.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -189,10 +189,10 @@ order by left(convert(varchar(25), a.rcvdat, 20), 16) desc </value>
     <value>387, 157</value>
   </metadata>
   <metadata name="R_2051.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 329</value>
+    <value>17, 368</value>
   </metadata>
   <metadata name="R_2052.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>515, 221</value>
+    <value>17, 407</value>
   </metadata>
   <metadata name="RTCODE_P7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>111, 329</value>
