@@ -18,6 +18,7 @@
                     + " and d.TMM = datepart(m, dateadd(d, -1,'" +FINISHDAT+ "')) "
                     + " and (a.dropdat is null  or a.dropdat >= dateadd(m, -1, '"+FINISHDAT+ "'))";
                 }
+                alert(where);
                 $(dg).datagrid('setWhere', where);
             }
         }
