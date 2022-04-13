@@ -8,10 +8,22 @@
     <title></title>
     <script>
         var CUSID = Request.getQueryStringByName2("CUSID");
-        var COMTYPE = Request.getQueryStringByName2("COMTYPE");
+        var COMTYPE = Request.getQueryStringByName2("COMTYPE"); //方案別
         var DUEDAT = Request.getQueryStringByName2("DUEDAT");
         var SSTRDT = Request.getQueryStringByName2("DUEDAT");
-        
+        //20220411 新增預設值參數
+        var CASEKIND = Request.getQueryStringByName2("CASEKIND"); //資費
+        var PAYCYCLE = Request.getQueryStringByName2("PAYCYCLE"); //繳費週期
+        var PAYTYPE = Request.getQueryStringByName2("PAYTYPE"); //繳費方式
+        var CREDITCARDTYPE = Request.getQueryStringByName2("CREDITCARDTYPE"); //信用卡種類
+        var CREDITBANK = Request.getQueryStringByName2("CREDITBANK"); //發卡銀行
+        var CREDITCARDNO = Request.getQueryStringByName2("CREDITCARDNO"); //卡號
+        var CREDITNAME = Request.getQueryStringByName2("CREDITNAME"); //持卡人姓名
+        var CREDITDUEM = Request.getQueryStringByName2("CREDITDUEM"); //有效月
+        var CREDITDUEY = Request.getQueryStringByName2("CREDITDUEY"); //有效年
+        var RCVMONEY = Request.getQueryStringByName2("RCVMONEY"); //應收款
+        var PERIOD = Request.getQueryStringByName2("PERIOD"); //使用期數
+
         var flag = true;
         var usr = getClientInfo('_usercode');
 
@@ -48,7 +60,7 @@
                 SSTRDT = sDT;
                 //$("#dataFormMasterSTRBILLINGDAT").datebox('setValue', sDT);
                 //$("#dataFormMasterADJUSTDAY").val("0");
-                $("#dataFormMasterCOMTYPE").val(COMTYPE);
+                //$("#dataFormMasterCOMTYPE").val(COMTYPE);
                 return CUSID;
             }
         }
@@ -66,15 +78,90 @@
                 return SSTRDT;
             }
         }
-
+        //方案
         function InsDefaultCOMTYPE() {
 
             if (COMTYPE != "") {
                 return COMTYPE;
             }
         }
+        //資費
+        function InsDefaultCASEKIND() {
 
-        
+            if (CASEKIND != "") {
+                return CASEKIND;
+            }
+        }
+        //繳費週期
+        function InsDefaultPAYCYCLE() {
+
+            if (PAYCYCLE != "") {
+                return PAYCYCLE;
+            }
+        }
+        //繳費方式
+        function InsDefaultPAYTYPE() {
+
+            if (PAYTYPE != "") {
+                return PAYTYPE;
+            }
+        }
+        //信用卡種類
+        function InsDefaultCREDITCARDTYPE() {
+
+            if (CREDITCARDTYPE != "") {
+                return CREDITCARDTYPE;
+            }
+        }
+        //發卡銀行
+        function InsDefaultCREDITBANK() {
+
+            if (CREDITBANK != "") {
+                return CREDITBANK;
+            }
+        }
+        //卡號
+        function InsDefaultCREDITCARDNO() {
+
+            if (CREDITCARDNO != "") {
+                return CREDITCARDNO;
+            }
+        }
+        //持卡人姓名
+        function InsDefaultCREDITNAME() {
+
+            if (CREDITNAME != "") {
+                return CREDITNAME;
+            }
+        }
+        //有效月
+        function InsDefaultCREDITDUEM() {
+
+            if (CREDITDUEM != "") {
+                return CREDITDUEM;
+            }
+        }
+        //有效年
+        function InsDefaultCREDITDUEY() {
+
+            if (CREDITDUEY != "") {
+                return CREDITDUEY;
+            }
+        }
+        //應收款
+        function InsDefaultRCVMONEY() {
+
+            if (RCVMONEY != "") {
+                return RCVMONEY;
+            }
+        }
+        //使用週期
+        function InsDefaultPERIOD() {
+
+            if (PERIOD != "") {
+                return PERIOD;
+            }
+        }
 
         function dgOnloadSuccess()
         {
@@ -90,7 +177,14 @@
         function dgMasterLoadSuccess()
         {
             $("#dataFormMasterCUSID").focus();
-            $("#dataFormMasterCOMTYPE").val(COMTYPE);
+            //$("#dataFormMasterCOMTYPE").val(COMTYPE);
+        }
+        //用在選單篩選
+        function MenuDefaultCOMTYPE() {
+            var aCOMTYPE = $("#dataFormMasterCOMTYPE").refval('getValue');
+            if (aCOMTYPE != "") {
+                return aCOMTYPE;
+            }
         }
 
         function dgOnInsert()
@@ -295,6 +389,8 @@
                     <JQTools:JQGridColumn Alignment="left" Caption="帳款編號" Editor="text" FieldName="BATCHNO" Format="" MaxLength="12" Visible="true" Width="90" />
                     <JQTools:JQGridColumn Alignment="left" Caption="結案日期" Editor="datebox" FieldName="FINISHDAT" Format="yyyy/mm/dd" MaxLength="0" Visible="true" Width="90" />
                     <JQTools:JQGridColumn Alignment="left" Caption="作廢日期" Editor="datebox" FieldName="CANCELDAT" Format="yyyy/mm/dd" MaxLength="0" Visible="true" Width="90" />
+                    <JQTools:JQGridColumn Alignment="left" Caption="方案別" Editor="text" FieldName="COMTYPE" Frozen="False" IsNvarChar="False" MaxLength="0" QueryCondition="" ReadOnly="False" Sortable="False" Visible="False" Width="80">
+                    </JQTools:JQGridColumn>
                 </Columns>
                 <TooItems>
                     <JQTools:JQToolItem Icon="icon-add" ItemType="easyui-linkbutton" OnClick="insertItem" Text="新增" />
@@ -320,24 +416,24 @@
                     <Columns>
                         <JQTools:JQFormColumn Alignment="left" Caption="用戶序號" Editor="inforefval" FieldName="CUSID" Format="" maxlength="15" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT104.View_RTLessorAVSCust',tableName:'View_RTLessorAVSCust',columns:[],columnMatches:[],whereItems:[],valueField:'CUSID',textField:'CUSNC',valueFieldCaption:'CUSID',textFieldCaption:'CUSNC',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:true,capsLock:'none',fixTextbox:'true'" ReadOnly="False" OnBlur="" />
                         <JQTools:JQFormColumn Alignment="left" Caption="項次" Editor="numberbox" FieldName="ENTRYNO" Format="" Width="180" ReadOnly="True" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="續約申請日" Editor="datebox" FieldName="APPLYDAT" Format="yyyy/mm/dd" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="方案別" Editor="inforefval" FieldName="COMTYPE" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="True" Width="180" EditorOptions="title:'方案別選擇',panelWidth:350,remoteName:'sRT100.RT104P5',tableName:'RT104P5',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'P5'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'方案代號',textFieldCaption:'方案名稱',cacheRelationText:true,checkData:true,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="續約申請日" Editor="datebox" FieldName="APPLYDAT" Format="yyyy/mm/dd" Width="180" NewRow="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="第二戶(含)以上" Editor="infocombobox" FieldName="SECONDCASE" Format="" maxlength="1" Width="180" EditorOptions="items:[{value:'Y',text:'是',selected:'false'},{value:'N',text:'否',selected:'false'}],checkData:false,selectOnly:false,cacheRelationText:false,panelHeight:200" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="資費" Editor="inforefval" FieldName="CASEKIND" Format="" maxlength="2" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'O9'},{field:'PARM1',value:'client[InsDefaultCOMTYPE]'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="繳費週期" Editor="inforefval" FieldName="PAYCYCLE" Format="" Visible="true" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,remoteName:'sRT100.cmdRTBillCharge',tableName:'cmdRTBillCharge',columns:[],columnMatches:[{field:'PERIOD',value:'PERIOD'},{field:'AMT',value:'AMT'}],whereItems:[{field:'PARM1',value:'client[InsDefaultCOMTYPE]'},{field:'CASEKIND',value:'row[CASEKIND]'}],valueField:'PAYCYCLE',textField:'MEMO',valueFieldCaption:'代碼',textFieldCaption:'備註',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" MaxLength="2" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="繳費方式" Editor="inforefval" FieldName="PAYTYPE" Format="" MaxLength="2" Visible="true" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M9'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="應收金額" Editor="numberbox" FieldName="AMT" Format="" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="可使用期數" Editor="text" FieldName="PERIOD" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="True" Width="80" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="資費" Editor="inforefval" FieldName="CASEKIND" Format="" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'O9'},{field:'PARM1',value:'client[MenuDefaultCOMTYPE]'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" MaxLength="2" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="繳費週期" Editor="inforefval" FieldName="PAYCYCLE" Format="" MaxLength="2" Visible="true" Width="180" EditorOptions="title:'選擇繳費週期',panelWidth:350,remoteName:'sRT100.cmdRTBillCharge',tableName:'cmdRTBillCharge',columns:[],columnMatches:[{field:'PERIOD',value:'PERIOD'},{field:'AMT',value:'AMT'}],whereItems:[{field:'PARM1',value:'client[MenuDefaultCOMTYPE]'},{field:'CASEKIND',value:'row[CASEKIND]'}],valueField:'PAYCYCLE',textField:'MEMO',valueFieldCaption:'代碼',textFieldCaption:'備註',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="繳費方式" Editor="inforefval" FieldName="PAYTYPE" Format="" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M9'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" MaxLength="2" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="True" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="應收金額" Editor="numberbox" FieldName="AMT" Width="180" Format="" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="可使用期數" Editor="text" FieldName="PERIOD" Width="80" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="True" />
                         <JQTools:JQFormColumn Alignment="left" Caption="收款日期" Editor="datebox" FieldName="RCVMONEYDAT" Format="yyyy/mm/dd" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="信用卡種類" Editor="inforefval" FieldName="CREDITCARDTYPE" Format="" maxlength="2" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTCode',tableName:'RTCode',columns:[],columnMatches:[],whereItems:[{field:'KIND',value:'M6'}],valueField:'CODE',textField:'CODENC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" />
                         <JQTools:JQFormColumn Alignment="left" Caption="發卡銀行" Editor="inforefval" FieldName="CREDITBANK" Format="" maxlength="3" Width="180" EditorOptions="title:'JQRefval',panelWidth:350,panelHeight:200,remoteName:'sRT100.RTBank',tableName:'RTBank',columns:[],columnMatches:[],whereItems:[{field:'CREDITCARD',value:'Y'}],valueField:'HEADNO',textField:'HEADNC',valueFieldCaption:'代號',textFieldCaption:'名稱',cacheRelationText:false,checkData:false,showValueAndText:false,dialogCenter:false,selectOnly:false,capsLock:'none',fixTextbox:'false'" OnBlur="請用挑選指定" />
                         <JQTools:JQFormColumn Alignment="left" Caption="卡號" Editor="text" FieldName="CREDITCARDNO" Format="" maxlength="16" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="持卡人姓名" Editor="text" FieldName="CREDITNAME" Format="" maxlength="30" Width="180" />
                         <JQTools:JQFormColumn Alignment="left" Caption="信用卡有效(月)" Editor="text" FieldName="CREDITDUEM" Format="" maxlength="2" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="信用卡有效(年)" Editor="text" FieldName="CREDITDUEY" Format="" maxlength="2" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="COMTYPE" Editor="text" FieldName="COMTYPE" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="False" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="開始計費日" Editor="datebox" FieldName="STRBILLINGDAT" Format="yyyy/mm/dd" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="True" Width="180" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="信用卡有效(年)" Editor="text" FieldName="CREDITDUEY" MaxLength="2" Width="180" Format="" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="開始計費日" Editor="datebox" FieldName="STRBILLINGDAT" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="True" Width="180" Format="yyyy/mm/dd" />
                         <JQTools:JQFormColumn Alignment="left" Caption="調整日數" Editor="text" FieldName="ADJUSTDAY" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="1" Visible="True" Width="180" />
-                        <JQTools:JQFormColumn Alignment="left" Caption="備註說明" Editor="textarea" EditorOptions="height:70" FieldName="MEMO" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="2" Visible="True" Width="500" />
+                        <JQTools:JQFormColumn Alignment="left" Caption="備註說明" Editor="textarea" FieldName="MEMO" MaxLength="0" NewRow="False" ReadOnly="False" RowSpan="1" Span="2" Visible="True" Width="500" EditorOptions="height:70" />
                     </Columns>
                 </JQTools:JQDataForm>
                 <br />
@@ -362,6 +458,16 @@
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="N" FieldName="SECONDCASE" RemoteMethod="False" />
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="0" FieldName="ADJUSTDAY" RemoteMethod="False" />
                         <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefaultSTRDT" FieldName="STRBILLINGDAT" RemoteMethod="False" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefaultCASEKIND" FieldName="CASEKIND" RemoteMethod="False" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefaultPAYTYPE" FieldName="PAYTYPE" RemoteMethod="False" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefaultCREDITCARDTYPE" FieldName="CREDITCARDTYPE" RemoteMethod="False" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefaultCREDITBANK" FieldName="CREDITBANK" RemoteMethod="False" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefaultCREDITCARDNO" FieldName="CREDITCARDNO" RemoteMethod="False" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefaultCREDITNAME" FieldName="CREDITNAME" RemoteMethod="False" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefaultCREDITDUEM" FieldName="CREDITDUEM" RemoteMethod="False" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefaultCREDITDUEY" FieldName="CREDITDUEY" RemoteMethod="False" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultMethod="InsDefaultCOMTYPE" FieldName="COMTYPE" RemoteMethod="False" />
+                        <JQTools:JQDefaultColumn CarryOn="False" DefaultValue="_today" FieldName="RCVMONEYDAT" RemoteMethod="True" />
                     </Columns>
                 </JQTools:JQDefault>
                 <JQTools:JQValidate ID="validateMaster" runat="server" BindingObjectID="dataFormMaster" EnableTheming="True">

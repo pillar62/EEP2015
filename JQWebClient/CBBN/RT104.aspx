@@ -145,7 +145,32 @@
             var ss = row.CUSID;
             var s1 = row.DUEDAT;
             var s2 = row.COMTYPE;
-            parent.addTab("用戶續約作業", "CBBN/RT1043.aspx?CUSID=" + ss + "&COMTYPE=" + s2 + "&DUEDAT=" + s1);
+            //20220411 新增續約作業參數
+            var CASEKIND = row.CASEKIND; //資費
+            var PAYCYCLE = row.PAYCYCLE; //繳費週期
+            var PAYTYPE = row.PAYTYPE; //繳費方式
+            var CREDITCARDTYPE = row.CREDITCARDTYPE; //信用卡種類
+            var CREDITBANK = row.CREDITBANK; //發卡銀行
+            var CREDITCARDNO = row.CREDITCARDNO; //卡號
+            var CREDITNAME = row.CREDITNAME; //持卡人姓名
+            var CREDITDUEM = row.CREDITDUEM; //有效月
+            var CREDITDUEY = row.CREDITDUEY; //有效年     
+            var RCVMONEY = row.RCVMONEY;//收款金額
+            var PERIOD = row.PERIOD;//使用期數
+            
+            parent.addTab("用戶續約作業", "CBBN/RT1043.aspx?CUSID=" + ss + "&COMTYPE=" + s2 + "&DUEDAT=" + s1
+                            + "&CASEKIND=" + CASEKIND
+                            + "&PAYCYCLE=" + PAYCYCLE
+                            + "&PAYTYPE=" + PAYTYPE
+                            + "&CREDITCARDTYPE=" + CREDITCARDTYPE
+                            + "&CREDITBANK=" + CREDITBANK
+                            + "&CREDITCARDNO=" + CREDITCARDNO
+                            + "&CREDITNAME=" + CREDITNAME
+                            + "&CREDITDUEM=" + CREDITDUEM
+                            + "&CREDITDUEY=" + CREDITDUEY
+                            + "&RCVMONEY=" + RCVMONEY
+                            + "&PERIOD=" + PERIOD);
+            //parent.addTab("用戶續約作業", "CBBN/RT1043.aspx?CUSID=" + ss + "&COMTYPE=" + s2 + "&DUEDAT=" + s1);
         }
 
         function btn3Click(val) {
